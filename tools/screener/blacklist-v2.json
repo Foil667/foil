@@ -1,0 +1,1042 @@
+{
+  "4663:0x52bc38a022a2834b14b71b895b295106659203b0": {
+    "reason": "rug-check 4663:0x52bc38a022a2834b14b71b895b295106659203b0\ntarget scanned : 0x52bc38a022a2834b14b71b895b295106659203b0 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:00:48.180Z"
+  },
+  "4663:0xe9212e3ad53fe79c9fde2211e7980492edd75901": {
+    "reason": "rug-check 4663:0xe9212e3ad53fe79c9fde2211e7980492edd75901\ntarget scanned : 0xe9212e3ad53fe79c9fde2211e7980492edd75901 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] heuristic:owner-controlle",
+    "at": "2026-09-24T19:00:48.180Z"
+  },
+  "4663:0x58daec3116aae6d93017baaea7749052e8a04fa7": {
+    "reason": "rug-check 4663:0x58daec3116aae6d93017baaea7749052e8a04fa7\ntarget scanned : 0x58daec3116aae6d93017baaea7749052e8a04fa7 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: oo deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables. --> src/PositionManager.sol:325:75: | 325 | _modifyLiquidity(info, poolKey, liquid",
+    "at": "2026-09-24T19:00:48.180Z"
+  },
+  "4663:0xf3b19fed4466c27d8cafd9d4b81595609c1cc711": {
+    "reason": "rug-check 4663:0xf3b19fed4466c27d8cafd9d4b81595609c1cc711\ntarget scanned : 0xf3b19fed4466c27d8cafd9d4b81595609c1cc711 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function setMintPrice() is external but owner-gated — owner can mint arbitrarily (supply-inflation rug risk).\n[HIGH] heuristic:owner-withdraw-sweep\n  Function withdraw() is owner-gat",
+    "at": "2026-09-24T19:00:48.180Z"
+  },
+  "4663:0x1bf05140dc6c892c4253bde437fbd7008d00760e": {
+    "reason": "rug-check 4663:0x1bf05140dc6c892c4253bde437fbd7008d00760e\ntarget scanned : 0x1bf05140dc6c892c4253bde437fbd7008d00760e (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:00:48.180Z"
+  },
+  "4663:0x2e4765372a9b8e7775502cbab373b3eff6772ab7": {
+    "reason": "rug-check 4663:0x2e4765372a9b8e7775502cbab373b3eff6772ab7\ntarget scanned : 0x2e4765372a9b8e7775502cbab373b3eff6772ab7 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:00:48.180Z"
+  },
+  "4663:0x6020bd20c3ca4894507dc5832c0e371198ee9445": {
+    "reason": "rug-check 4663:0x6020bd20c3ca4894507dc5832c0e371198ee9445\ntarget scanned : 0x6020bd20c3ca4894507dc5832c0e371198ee9445 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:05:50.561Z"
+  },
+  "4663:0x79176c55140f9dbaa01574aaf33c050c396bec20": {
+    "reason": "rug-check 4663:0x79176c55140f9dbaa01574aaf33c050c396bec20\ntarget scanned : 0x79176c55140f9dbaa01574aaf33c050c396bec20 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:05:50.561Z"
+  },
+  "4663:0x19bf66c97c48a78c389a36c6196b154ad7d066c1": {
+    "reason": "rug-check 4663:0x19bf66c97c48a78c389a36c6196b154ad7d066c1\ntarget scanned : 0x19bf66c97c48a78c389a36c6196b154ad7d066c1 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:05:50.561Z"
+  },
+  "4663:0x200697dcd0be13e2d9ae3918e265b78edf8597e4": {
+    "reason": "rug-check 4663:0x200697dcd0be13e2d9ae3918e265b78edf8597e4\ntarget scanned : 0x200697dcd0be13e2d9ae3918e265b78edf8597e4 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:10:49.839Z"
+  },
+  "4663:0x84eabceb43ed69056809b3d140ccebe09b2f0442": {
+    "reason": "rug-check 4663:0x84eabceb43ed69056809b3d140ccebe09b2f0442\ntarget scanned : 0x84eabceb43ed69056809b3d140ccebe09b2f0442 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:10:49.839Z"
+  },
+  "4663:0x986bb18d5505b0c066e512fc2f07f5e44d785908": {
+    "reason": "rug-check 4663:0x986bb18d5505b0c066e512fc2f07f5e44d785908\ntarget scanned : 0x986bb18d5505b0c066e512fc2f07f5e44d785908 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:10:49.839Z"
+  },
+  "8453:0x827922686190790b37229fd06084350e74485b72": {
+    "reason": "rug-check 8453:0x827922686190790b37229fd06084350e74485b72\ntarget scanned : 0x827922686190790b37229fd06084350e74485b72 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/periphery/base/PeripheryPayments.sol#50-62) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/periphery/base/PeripheryPayments.sol#60)  [src:sourcify]\n[INFO] heuristic:public-",
+    "at": "2026-09-24T19:10:49.839Z"
+  },
+  "8453:0x03a520b32c04bf3beef7beb72e919cf822ed34f1": {
+    "reason": "rug-check 8453:0x03a520b32c04bf3beef7beb72e919cf822ed34f1\ntarget scanned : 0x03a520b32c04bf3beef7beb72e919cf822ed34f1 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/base/PeripheryPayments.sol#52-69) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/base/PeripheryPayments.sol#67)  [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function",
+    "at": "2026-09-24T19:10:49.839Z"
+  },
+  "8453:0x03c4738ee98ae44591e1a4a4f3cab6641d95dd9a": {
+    "reason": "rug-check 8453:0x03c4738ee98ae44591e1a4a4f3cab6641d95dd9a\ntarget scanned : 0x03c4738ee98ae44591e1a4a4f3cab6641d95dd9a (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function reclaim() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes",
+    "at": "2026-09-24T19:10:49.839Z"
+  },
+  "4663:0x2dafb4c7db99596c1aa5d9b02d6862f8d2a9ed07": {
+    "reason": "rug-check 4663:0x2dafb4c7db99596c1aa5d9b02d6862f8d2a9ed07\ntarget scanned : 0x2dafb4c7db99596c1aa5d9b02d6862f8d2a9ed07 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:15:47.355Z"
+  },
+  "4663:0x0c8c2bb93b66a58d2fec29cd3e92d77868377e33": {
+    "reason": "rug-check 4663:0x0c8c2bb93b66a58d2fec29cd3e92d77868377e33\ntarget scanned : 0x0c8c2bb93b66a58d2fec29cd3e92d77868377e33 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:15:47.355Z"
+  },
+  "4663:0x73991a25c818bf1f1128deaab1492d45638de0d3": {
+    "reason": "rug-check 4663:0x73991a25c818bf1f1128deaab1492d45638de0d3\ntarget scanned : 0x73991a25c818bf1f1128deaab1492d45638de0d3 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/base/PeripheryPayments.sol#52-69) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/base/PeripheryPayments.sol#67)  [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function",
+    "at": "2026-09-24T19:15:47.355Z"
+  },
+  "8453:0x96cebb59b00109dc8c4de1a9a94d9fad658fee46": {
+    "reason": "rug-check 8453:0x96cebb59b00109dc8c4de1a9a94d9fad658fee46\ntarget scanned : 0x7311B46D12219f21080A84BaA1505E0683E9De99 (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x7311B46D12219f21080A84BaA1505E0683E9De99 (resolved via blockscout-implementations, name TokenERC721Amex). Whoever controls the proxy admin can replace this code.\n[HIGH] slither:arbitrary-send-erc20\n  CurrencyTransferLib.safeTransferERC20(address,addres",
+    "at": "2026-09-24T19:15:47.355Z"
+  },
+  "8453:0xe1f8cd9ac4e4a65f54f38a5cdafca44f6dd68b53": {
+    "reason": "rug-check 8453:0xe1f8cd9ac4e4a65f54f38a5cdafca44f6dd68b53\ntarget scanned : 0xe1f8cd9ac4e4a65f54f38a5cdafca44f6dd68b53 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/periphery/base/PeripheryPayments.sol#50-62) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/periphery/base/PeripheryPayments.sol#60)  [src:sourcify]\n[INFO] heuristic:public-",
+    "at": "2026-09-24T19:20:47.828Z"
+  },
+  "4663:0x4d90f60909c4d176f84e51c40ac2534d477ecf67": {
+    "reason": "rug-check 4663:0x4d90f60909c4d176f84e51c40ac2534d477ecf67\ntarget scanned : 0x4d90f60909c4d176f84e51c40ac2534d477ecf67 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: ppelin-contracts/contracts/utils/Bytes.sol:168:13: | 168 | mcopy(add(add(buffer, 0x20), pos), add(add(replacement, 0x20), offset), length) | ^^^^^ Error: Function \"mcopy\" not found. --> lib/openzeppelin-contracts/contracts/utils/Bytes.sol:195:17:",
+    "at": "2026-09-24T19:25:46.852Z"
+  },
+  "8453:0xa990c6a764b73bf43cee5bb40339c3322fb9d55f": {
+    "reason": "rug-check 8453:0xa990c6a764b73bf43cee5bb40339c3322fb9d55f\ntarget scanned : 0xa990c6a764b73bf43cee5bb40339c3322fb9d55f (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/periphery/base/PeripheryPayments.sol#50-62) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/periphery/base/PeripheryPayments.sol#60)  [src:sourcify]\n[INFO] heuristic:public-",
+    "at": "2026-09-24T19:25:46.852Z"
+  },
+  "4663:0x1c7a4e5083ef769d51e0e2098fb3d42b2b46e845": {
+    "reason": "rug-check 4663:0x1c7a4e5083ef769d51e0e2098fb3d42b2b46e845\ntarget scanned : 0x1c7a4e5083ef769d51e0e2098fb3d42b2b46e845 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:30:47.280Z"
+  },
+  "4663:0x793d153597d515f603eb8a85635e0de91f1b309a": {
+    "reason": "rug-check 4663:0x793d153597d515f603eb8a85635e0de91f1b309a\ntarget scanned : 0x793d153597d515f603eb8a85635e0de91f1b309a (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T19:30:47.280Z"
+  },
+  "8453:0x7c5f5a4bbd8fd63184577525326123b519429bdc": {
+    "reason": "rug-check 8453:0x7c5f5a4bbd8fd63184577525326123b519429bdc\ntarget scanned : 0x7c5f5a4bbd8fd63184577525326123b519429bdc (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: oo deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables. --> src/PositionManager.sol:325:75: | 325 | _modifyLiquidity(info, poolKey, liquid",
+    "at": "2026-09-24T19:30:47.280Z"
+  },
+  "4663:0x197d313860606f078e62e77ba5b362900292f21e": {
+    "reason": "rug-check 4663:0x197d313860606f078e62e77ba5b362900292f21e\ntarget scanned : 0x197d313860606f078e62e77ba5b362900292f21e (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:00:47.781Z"
+  },
+  "4663:0x6b7f4536d0dc54e53607b61a16fdb823454e61bc": {
+    "reason": "rug-check 4663:0x6b7f4536d0dc54e53607b61a16fdb823454e61bc\ntarget scanned : 0x6b7f4536d0dc54e53607b61a16fdb823454e61bc (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:00:47.781Z"
+  },
+  "8453:0xda3983e1ea25051b242ec0df4acf18e68d08a212": {
+    "reason": "rug-check 8453:0xda3983e1ea25051b242ec0df4acf18e68d08a212\ntarget scanned : 0xda3983e1ea25051b242ec0df4acf18e68d08a212 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x1 (heuristic scan, no source). Contract may be destroyable — funds/tokens could be locked or the rug pulled by killing it. [bytecode second opini",
+    "at": "2026-09-24T20:00:47.781Z"
+  },
+  "4663:0xe0a49e75a5aba55edc28e8a6947e6a39c013c187": {
+    "reason": "rug-check 4663:0xe0a49e75a5aba55edc28e8a6947e6a39c013c187\ntarget scanned : 0xe0a49e75a5aba55edc28e8a6947e6a39c013c187 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:05:47.715Z"
+  },
+  "4663:0xcc1badc42d9a7f435fd62b341e8ead4e6dd888db": {
+    "reason": "rug-check 4663:0xcc1badc42d9a7f435fd62b341e8ead4e6dd888db\ntarget scanned : 0xcc1badc42d9a7f435fd62b341e8ead4e6dd888db (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:20:48.011Z"
+  },
+  "4663:0x835b22020141d5177f417a0930febe4eda0cc890": {
+    "reason": "rug-check 4663:0x835b22020141d5177f417a0930febe4eda0cc890\ntarget scanned : 0x835b22020141d5177f417a0930febe4eda0cc890 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:20:48.011Z"
+  },
+  "4663:0x982c2c43bb505e79dca607105473271f970d1dc3": {
+    "reason": "rug-check 4663:0x982c2c43bb505e79dca607105473271f970d1dc3\ntarget scanned : 0x982c2c43bb505e79dca607105473271f970d1dc3 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:30:47.230Z"
+  },
+  "4663:0x32433c6455fdd295b1cb223963dd1bd5fc3c2c41": {
+    "reason": "rug-check 4663:0x32433c6455fdd295b1cb223963dd1bd5fc3c2c41\ntarget scanned : 0x32433c6455fdd295b1cb223963dd1bd5fc3c2c41 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:30:47.230Z"
+  },
+  "4663:0x575bf5c0192c2116ec61d6efab3c8b1d7faf4d02": {
+    "reason": "rug-check 4663:0x575bf5c0192c2116ec61d6efab3c8b1d7faf4d02\ntarget scanned : 0x575bf5c0192c2116ec61d6efab3c8b1d7faf4d02 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:35:47.308Z"
+  },
+  "4663:0xa3c9cc3e9814861b7d9917ca6ae4e3ef7fb496c7": {
+    "reason": "rug-check 4663:0xa3c9cc3e9814861b7d9917ca6ae4e3ef7fb496c7\ntarget scanned : 0xa3c9cc3e9814861b7d9917ca6ae4e3ef7fb496c7 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:40:47.255Z"
+  },
+  "4663:0x469b85200dff41b7e689f830763a3fa8fcdbf30b": {
+    "reason": "rug-check 4663:0x469b85200dff41b7e689f830763a3fa8fcdbf30b\ntarget scanned : 0x469b85200dff41b7e689f830763a3fa8fcdbf30b (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:40:47.255Z"
+  },
+  "4663:0xddc788de8b1a2d66fd741a670eaa6e6062156008": {
+    "reason": "rug-check 4663:0xddc788de8b1a2d66fd741a670eaa6e6062156008\ntarget scanned : 0xddc788de8b1a2d66fd741a670eaa6e6062156008 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T20:40:47.255Z"
+  },
+  "8453:0x877f82ccdc9f5b44d88172423e60b8e3fbde815f": {
+    "reason": "rug-check 8453:0x877f82ccdc9f5b44d88172423e60b8e3fbde815f\ntarget scanned : 0x877f82ccdc9f5b44d88172423e60b8e3fbde815f (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-24T20:45:47.862Z"
+  },
+  "8453:0x94e59fcf2ecadeb67535140b6a549dad9a02e7d9": {
+    "reason": "rug-check 8453:0x94e59fcf2ecadeb67535140b6a549dad9a02e7d9\ntarget scanned : 0x94e59fcf2ecadeb67535140b6a549dad9a02e7d9 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:CREATE2\n  Runtime ",
+    "at": "2026-09-24T20:45:47.862Z"
+  },
+  "8453:0x4878aab87486debae4e6731b2a543c27edcbefd5": {
+    "reason": "rug-check 8453:0x4878aab87486debae4e6731b2a543c27edcbefd5\ntarget scanned : 0x4878aab87486debae4e6731b2a543c27edcbefd5 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-24T20:50:48.266Z"
+  },
+  "4663:0x07f44c47743a2f36414a82b9f558ecfcf0eedcef": {
+    "reason": "rug-check 4663:0x07f44c47743a2f36414a82b9f558ecfcf0eedcef\ntarget scanned : 0x07f44c47743a2f36414a82b9f558ecfcf0eedcef (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/periphery/base/PeripheryPayments.sol#50-62) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/periphery/base/PeripheryPayments.sol#60)  [src:sourcify]\n[INFO] heuristic:public-",
+    "at": "2026-09-24T21:00:46.876Z"
+  },
+  "4663:0x382aca2af69dcecd97d966d79eb7939c6076532d": {
+    "reason": "rug-check 4663:0x382aca2af69dcecd97d966d79eb7939c6076532d\ntarget scanned : 0x382aca2af69dcecd97d966d79eb7939c6076532d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:00:46.876Z"
+  },
+  "4663:0xada0134ca44ed9c68c4149d7a35aff8893c01462": {
+    "reason": "rug-check 4663:0xada0134ca44ed9c68c4149d7a35aff8893c01462\ntarget scanned : 0xada0134ca44ed9c68c4149d7a35aff8893c01462 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:05:46.675Z"
+  },
+  "8453:0x1195cf65f83b3a5768f3c496d3a05ad6412c64b7": {
+    "reason": "rug-check 8453:0x1195cf65f83b3a5768f3c496d3a05ad6412c64b7\ntarget scanned : 0x22311757b9F99Fc85b7959E1ba2859847F699954 (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x22311757b9F99Fc85b7959E1ba2859847F699954 (resolved via blockscout-implementations, name CUBE). Whoever controls the proxy admin can replace this code.\n[HIGH] slither:arbitrary-send-eth\n  CUBE._processNativePayouts(CUBE.CubeData) (src/CUBE.sol#543-588) ",
+    "at": "2026-09-24T21:05:46.675Z"
+  },
+  "8453:0x12af106ead99bf775d5b9b7d10f36c5139093aaa": {
+    "reason": "rug-check 8453:0x12af106ead99bf775d5b9b7d10f36c5139093aaa\ntarget scanned : 0x12af106ead99bf775d5b9b7d10f36c5139093aaa (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-24T21:05:46.675Z"
+  },
+  "4663:0x3fa79c81f378fc446dbbd308f4157bcd3094adc7": {
+    "reason": "rug-check 4663:0x3fa79c81f378fc446dbbd308f4157bcd3094adc7\ntarget scanned : 0x3fa79c81f378fc446dbbd308f4157bcd3094adc7 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:30:51.335Z"
+  },
+  "4663:0x4556b89032cc7183078f4c019a588cdfbea921e2": {
+    "reason": "rug-check 4663:0x4556b89032cc7183078f4c019a588cdfbea921e2\ntarget scanned : 0x4556b89032cc7183078f4c019a588cdfbea921e2 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:30:51.335Z"
+  },
+  "4663:0x6dbf2df636963be4f6b479a24f525b31646b04da": {
+    "reason": "rug-check 4663:0x6dbf2df636963be4f6b479a24f525b31646b04da\ntarget scanned : 0x6dbf2df636963be4f6b479a24f525b31646b04da (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:30:51.335Z"
+  },
+  "4663:0x2ce00ad062373cbd5b7ce70c92d5090be8ce6b89": {
+    "reason": "rug-check 4663:0x2ce00ad062373cbd5b7ce70c92d5090be8ce6b89\ntarget scanned : 0x2ce00ad062373cbd5b7ce70c92d5090be8ce6b89 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:30:51.335Z"
+  },
+  "4663:0xd8d343d57dbe25568fc02bc926f933b5c773443c": {
+    "reason": "rug-check 4663:0xd8d343d57dbe25568fc02bc926f933b5c773443c\ntarget scanned : 0xd8d343d57dbe25568fc02bc926f933b5c773443c (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:40:57.362Z"
+  },
+  "4663:0xefb0f76e9bdd6f3349b3e3257c9a013ffbccf9fc": {
+    "reason": "rug-check 4663:0xefb0f76e9bdd6f3349b3e3257c9a013ffbccf9fc\ntarget scanned : 0xefb0f76e9bdd6f3349b3e3257c9a013ffbccf9fc (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:40:57.362Z"
+  },
+  "4663:0x49be85cac42de65455448f705baec9f64aa55f71": {
+    "reason": "rug-check 4663:0x49be85cac42de65455448f705baec9f64aa55f71\ntarget scanned : 0x49be85cac42de65455448f705baec9f64aa55f71 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:45:47.136Z"
+  },
+  "4663:0x36e030b3d42ab5645bd8ece373b8a44fe8e55d67": {
+    "reason": "rug-check 4663:0x36e030b3d42ab5645bd8ece373b8a44fe8e55d67\ntarget scanned : 0x36e030b3d42ab5645bd8ece373b8a44fe8e55d67 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:50:48.379Z"
+  },
+  "4663:0x8004a169fb4a3325136eb29fa0ceb6d2e539a432": {
+    "reason": "rug-check 4663:0x8004a169fb4a3325136eb29fa0ceb6d2e539a432\ntarget scanned : 0x8004a169fb4a3325136eb29fa0ceb6d2e539a432 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: g(contract_parser, i) ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ File \"/home/hatch/workspace/nft-god/rug-check/.venv/lib/python3.12/site-packages/slither/solc_parsing/slither_compilation_unit_solc.py\", line 488, in resolve_remapping_and_r",
+    "at": "2026-09-24T21:55:47.220Z"
+  },
+  "4663:0xa156332f2c0b29d1470983cdc2aef6479514d37a": {
+    "reason": "rug-check 4663:0xa156332f2c0b29d1470983cdc2aef6479514d37a\ntarget scanned : 0xa156332f2c0b29d1470983cdc2aef6479514d37a (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T21:55:47.220Z"
+  },
+  "8453:0xe83cb96905c6cb0cec8545776b80fb29c4df27ab": {
+    "reason": "rug-check 8453:0xe83cb96905c6cb0cec8545776b80fb29c4df27ab\ntarget scanned : 0xe83cb96905c6cb0cec8545776b80fb29c4df27ab (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-24T21:55:47.220Z"
+  },
+  "4663:0x6322f9a31267d070b13d6ad2e4dcc6d1b4e18917": {
+    "reason": "rug-check 4663:0x6322f9a31267d070b13d6ad2e4dcc6d1b4e18917\ntarget scanned : 0x6322f9a31267d070b13d6ad2e4dcc6d1b4e18917 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:00:47.616Z"
+  },
+  "4663:0xa0a4d70047d1265fe968c1d8589c6b26e45f4358": {
+    "reason": "rug-check 4663:0xa0a4d70047d1265fe968c1d8589c6b26e45f4358\ntarget scanned : 0xa0a4d70047d1265fe968c1d8589c6b26e45f4358 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:15:47.270Z"
+  },
+  "4663:0x729b34fb770d03ca96955b27ec8ad8c2613b46c5": {
+    "reason": "rug-check 4663:0x729b34fb770d03ca96955b27ec8ad8c2613b46c5\ntarget scanned : 0x729b34fb770d03ca96955b27ec8ad8c2613b46c5 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:15:47.270Z"
+  },
+  "4663:0x0f4b9cc7f028e905d82117fa5fedd4b03bb67b69": {
+    "reason": "rug-check 4663:0x0f4b9cc7f028e905d82117fa5fedd4b03bb67b69\ntarget scanned : 0x0f4b9cc7f028e905d82117fa5fedd4b03bb67b69 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:15:47.270Z"
+  },
+  "8453:0xb597771c74a96ae346eedbfbe85ba1d3bc089dd2": {
+    "reason": "rug-check 8453:0xb597771c74a96ae346eedbfbe85ba1d3bc089dd2\ntarget scanned : 0xb597771c74a96ae346eedbfbe85ba1d3bc089dd2 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-24T22:20:48.870Z"
+  },
+  "8453:0xb0a03434991ad8c2c9bae46595bb7c1f530c1dcd": {
+    "reason": "rug-check 8453:0xb0a03434991ad8c2c9bae46595bb7c1f530c1dcd\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-24T22:25:47.277Z"
+  },
+  "8453:0xe9ddc18913bb803f733e5bd2ea7cdc2f75574f8b": {
+    "reason": "rug-check 8453:0xe9ddc18913bb803f733e5bd2ea7cdc2f75574f8b\ntarget scanned : 0xe9ddc18913bb803f733e5bd2ea7cdc2f75574f8b (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-24T22:25:47.277Z"
+  },
+  "4663:0xed0e1497dc2c7b3172214da39c45a754beff2bf5": {
+    "reason": "rug-check 4663:0xed0e1497dc2c7b3172214da39c45a754beff2bf5\ntarget scanned : 0xed0e1497dc2c7b3172214da39c45a754beff2bf5 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:35:47.282Z"
+  },
+  "4663:0x796c5447c32cd11a29a9da8f238ba236a2b724d8": {
+    "reason": "rug-check 4663:0x796c5447c32cd11a29a9da8f238ba236a2b724d8\ntarget scanned : 0x796c5447c32cd11a29a9da8f238ba236a2b724d8 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:35:47.282Z"
+  },
+  "4663:0x13e9b711e7ce146d8e357da8de8817f1d38698ff": {
+    "reason": "rug-check 4663:0x13e9b711e7ce146d8e357da8de8817f1d38698ff\ntarget scanned : 0x13e9b711e7ce146d8e357da8de8817f1d38698ff (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:40:47.807Z"
+  },
+  "4663:0x6ea30f623eab13e5638b0d8de3f5b7b5c166686d": {
+    "reason": "rug-check 4663:0x6ea30f623eab13e5638b0d8de3f5b7b5c166686d\ntarget scanned : 0x6ea30f623eab13e5638b0d8de3f5b7b5c166686d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T22:40:47.807Z"
+  },
+  "4663:0xca41f713c9064c97fbbbee0f48637ad8e4baf4f5": {
+    "reason": "rug-check 4663:0xca41f713c9064c97fbbbee0f48637ad8e4baf4f5\ntarget scanned : 0xca41f713c9064c97fbbbee0f48637ad8e4baf4f5 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T23:00:47.847Z"
+  },
+  "8453:0x020fef3b184d38d77056d08a64a9a453dce12077": {
+    "reason": "rug-check 8453:0x020fef3b184d38d77056d08a64a9a453dce12077\ntarget scanned : 0x020fef3b184d38d77056d08a64a9a453dce12077 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-24T23:00:47.847Z"
+  },
+  "4663:0x22fbdd2d834d0513a276803b8430ca4040185e01": {
+    "reason": "rug-check 4663:0x22fbdd2d834d0513a276803b8430ca4040185e01\ntarget scanned : 0x22fbdd2d834d0513a276803b8430ca4040185e01 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T23:15:47.330Z"
+  },
+  "4663:0xd7e2afc43af4b28ad08d6bb8fddbcfced5742c3f": {
+    "reason": "rug-check 4663:0xd7e2afc43af4b28ad08d6bb8fddbcfced5742c3f\ntarget scanned : 0xd7e2afc43af4b28ad08d6bb8fddbcfced5742c3f (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T23:15:47.330Z"
+  },
+  "4663:0x98019336b09377d227cbf3e22eab87506215eb4c": {
+    "reason": "rug-check 4663:0x98019336b09377d227cbf3e22eab87506215eb4c\ntarget scanned : 0x98019336b09377d227cbf3e22eab87506215eb4c (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T23:40:50.512Z"
+  },
+  "4663:0x354a4c578967f76e95a45825758732dd3383d326": {
+    "reason": "rug-check 4663:0x354a4c578967f76e95a45825758732dd3383d326\ntarget scanned : 0x354a4c578967f76e95a45825758732dd3383d326 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-24T23:50:50.318Z"
+  },
+  "4663:0xf409876268b418f185441294f91e7eb19e5bf0fb": {
+    "reason": "rug-check 4663:0xf409876268b418f185441294f91e7eb19e5bf0fb\ntarget scanned : 0xf409876268b418f185441294f91e7eb19e5bf0fb (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T00:00:48.466Z"
+  },
+  "4663:0x548f16847c65d2eb445255e05885fe33e0475eff": {
+    "reason": "rug-check 4663:0x548f16847c65d2eb445255e05885fe33e0475eff\ntarget scanned : 0x548f16847c65d2eb445255e05885fe33e0475eff (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T00:00:48.466Z"
+  },
+  "4663:0xf09adf51428906782bdb8c404c09cb6987b07d30": {
+    "reason": "rug-check 4663:0xf09adf51428906782bdb8c404c09cb6987b07d30\ntarget scanned : 0xf09adf51428906782bdb8c404c09cb6987b07d30 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T00:05:47.326Z"
+  },
+  "4663:0xca6da9c4ea9cd6488f303510fc055eae43dad496": {
+    "reason": "rug-check 4663:0xca6da9c4ea9cd6488f303510fc055eae43dad496\ntarget scanned : 0xca6da9c4ea9cd6488f303510fc055eae43dad496 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T00:25:47.032Z"
+  },
+  "8453:0x9e20ab7480cf57f503271e46ce8a3c0ad4387904": {
+    "reason": "rug-check 8453:0x9e20ab7480cf57f503271e46ce8a3c0ad4387904\ntarget scanned : 0x217408f1D10DE7031088a45D8b9b24C5D4713a11 (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x217408f1D10DE7031088a45D8b9b24C5D4713a11 (resolved via blockscout-implementations, name NFT). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [s",
+    "at": "2026-09-25T00:30:47.014Z"
+  },
+  "4663:0x592e7140ce99a375f31055ad7d5a846334205e27": {
+    "reason": "rug-check 4663:0x592e7140ce99a375f31055ad7d5a846334205e27\ntarget scanned : 0x592e7140ce99a375f31055ad7d5a846334205e27 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T00:45:47.953Z"
+  },
+  "4663:0x36a2b99c721f59f704b26e65746952d3f75e8e4a": {
+    "reason": "rug-check 4663:0x36a2b99c721f59f704b26e65746952d3f75e8e4a\ntarget scanned : 0x36a2b99c721f59f704b26e65746952d3f75e8e4a (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T00:55:47.452Z"
+  },
+  "4663:0xe638b00c979508b9081ab1693afc05dd5947e7f8": {
+    "reason": "rug-check 4663:0xe638b00c979508b9081ab1693afc05dd5947e7f8\ntarget scanned : 0xe638b00c979508b9081ab1693afc05dd5947e7f8 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T01:05:47.015Z"
+  },
+  "4663:0xd025a97683c156d46dbd123a73bf43b284c2b95c": {
+    "reason": "rug-check 4663:0xd025a97683c156d46dbd123a73bf43b284c2b95c\ntarget scanned : 0xd025a97683c156d46dbd123a73bf43b284c2b95c (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T01:25:46.379Z"
+  },
+  "4663:0x18c20a5118d957aa2d436e9b90789698ce5b361d": {
+    "reason": "rug-check 4663:0x18c20a5118d957aa2d436e9b90789698ce5b361d\ntarget scanned : 0x18c20a5118d957aa2d436e9b90789698ce5b361d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T01:25:46.379Z"
+  },
+  "4663:0xa7a0e89681bdd6f763c5feee1ea5aa0cd5a17d83": {
+    "reason": "rug-check 4663:0xa7a0e89681bdd6f763c5feee1ea5aa0cd5a17d83\ntarget scanned : 0xa7a0e89681bdd6f763c5feee1ea5aa0cd5a17d83 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T01:25:46.379Z"
+  },
+  "4663:0x8ad07d5030d341617bf3d503e9c50bbb9d4c60ff": {
+    "reason": "rug-check 4663:0x8ad07d5030d341617bf3d503e9c50bbb9d4c60ff\ntarget scanned : 0x8ad07d5030d341617bf3d503e9c50bbb9d4c60ff (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T01:45:46.662Z"
+  },
+  "4663:0x70cfc7d21eaf425ce0a12d2be3b81c7974166e36": {
+    "reason": "rug-check 4663:0x70cfc7d21eaf425ce0a12d2be3b81c7974166e36\ntarget scanned : 0x70cfc7d21eaf425ce0a12d2be3b81c7974166e36 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T01:45:46.662Z"
+  },
+  "4663:0x85caa0d5ca4896ab68c012372283311bfc9e1fea": {
+    "reason": "rug-check 4663:0x85caa0d5ca4896ab68c012372283311bfc9e1fea\ntarget scanned : 0x85caa0d5ca4896ab68c012372283311bfc9e1fea (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T02:05:47.110Z"
+  },
+  "4663:0x70512570fb4f1aaeb0302427fe51457005766933": {
+    "reason": "rug-check 4663:0x70512570fb4f1aaeb0302427fe51457005766933\ntarget scanned : 0x70512570fb4f1aaeb0302427fe51457005766933 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T02:15:48.164Z"
+  },
+  "4663:0x384d681c67e78edefde9b53978cae627c15ba870": {
+    "reason": "rug-check 4663:0x384d681c67e78edefde9b53978cae627c15ba870\ntarget scanned : 0x384d681c67e78edefde9b53978cae627c15ba870 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mintSeaDrop() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] heuristic:owner-co",
+    "at": "2026-09-25T02:20:46.581Z"
+  },
+  "8453:0x8004a169fb4a3325136eb29fa0ceb6d2e539a432": {
+    "reason": "rug-check 8453:0x8004a169fb4a3325136eb29fa0ceb6d2e539a432\ntarget scanned : 0x7274e874CA62410a93Bd8bf61c69d8045E399c02 (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x7274e874CA62410a93Bd8bf61c69d8045E399c02 (resolved via blockscout-implementations, name IdentityRegistryUpgradeable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors an",
+    "at": "2026-09-25T02:25:47.664Z"
+  },
+  "4663:0xd4d54a11627dc2382f0f103b825b5ee93e2407a0": {
+    "reason": "rug-check 4663:0xd4d54a11627dc2382f0f103b825b5ee93e2407a0\ntarget scanned : 0xd4d54a11627dc2382f0f103b825b5ee93e2407a0 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T02:35:47.594Z"
+  },
+  "4663:0xc7805d6c3baa86cf9d94b44d17f68a205a493450": {
+    "reason": "rug-check 4663:0xc7805d6c3baa86cf9d94b44d17f68a205a493450\ntarget scanned : 0xc7805d6c3baa86cf9d94b44d17f68a205a493450 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T03:20:48.054Z"
+  },
+  "8453:0x8b8693ce3fb893426c70bf52858ae58fdfbdc085": {
+    "reason": "rug-check 8453:0x8b8693ce3fb893426c70bf52858ae58fdfbdc085\ntarget scanned : 0x2f8Adb76e74aCaea23E10EA46462d55313D01BdF (bytecode only)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x2f8Adb76e74aCaea23E10EA46462d55313D01BdF (resolved via blockscout-implementations). Whoever controls the proxy admin can replace this code.\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heur",
+    "at": "2026-09-25T03:20:48.054Z"
+  },
+  "4663:0xb5ff894ac4f34a362557c652865eed8a432da804": {
+    "reason": "rug-check 4663:0xb5ff894ac4f34a362557c652865eed8a432da804\ntarget scanned : 0xb5ff894ac4f34a362557c652865eed8a432da804 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T03:35:47.358Z"
+  },
+  "4663:0xe07c272b6546ee4a9a39073dc45c0a1ad03a944e": {
+    "reason": "rug-check 4663:0xe07c272b6546ee4a9a39073dc45c0a1ad03a944e\ntarget scanned : 0xe07c272b6546ee4a9a39073dc45c0a1ad03a944e (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T03:45:47.785Z"
+  },
+  "4663:0xbaaeb531083314d439dc30452020df183938b685": {
+    "reason": "rug-check 4663:0xbaaeb531083314d439dc30452020df183938b685\ntarget scanned : 0xbaaeb531083314d439dc30452020df183938b685 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T03:45:47.785Z"
+  },
+  "4663:0x730cc058bd82b458d2d0af472f8006d7fcc7c4f1": {
+    "reason": "rug-check 4663:0x730cc058bd82b458d2d0af472f8006d7fcc7c4f1\ntarget scanned : 0x730cc058bd82b458d2d0af472f8006d7fcc7c4f1 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T03:45:47.785Z"
+  },
+  "8453:0x0f912dcc88a4b7ddae1ab2c69c1c0a0f850e4a67": {
+    "reason": "rug-check 8453:0x0f912dcc88a4b7ddae1ab2c69c1c0a0f850e4a67\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T03:50:47.122Z"
+  },
+  "4663:0xe0c05a42c7490122999797499a90cbd63ff1a5dc": {
+    "reason": "rug-check 4663:0xe0c05a42c7490122999797499a90cbd63ff1a5dc\ntarget scanned : 0xe0c05a42c7490122999797499a90cbd63ff1a5dc (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:00:46.516Z"
+  },
+  "4663:0xb280b51ce529368d4fc64d52d910c83907973754": {
+    "reason": "rug-check 4663:0xb280b51ce529368d4fc64d52d910c83907973754\ntarget scanned : 0xb280b51ce529368d4fc64d52d910c83907973754 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:00:46.516Z"
+  },
+  "4663:0xcab7450cd33e34e026eda9b1ff534bf676246080": {
+    "reason": "rug-check 4663:0xcab7450cd33e34e026eda9b1ff534bf676246080\ntarget scanned : 0xcab7450cd33e34e026eda9b1ff534bf676246080 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:06:44.272Z"
+  },
+  "4663:0x5add5541540c3854df6419687a169420d37001f2": {
+    "reason": "rug-check 4663:0x5add5541540c3854df6419687a169420d37001f2\ntarget scanned : 0x5add5541540c3854df6419687a169420d37001f2 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:15:46.945Z"
+  },
+  "4663:0x7088512abc31a55a78b89032fef9a57dd06d2659": {
+    "reason": "rug-check 4663:0x7088512abc31a55a78b89032fef9a57dd06d2659\ntarget scanned : 0x7088512abc31a55a78b89032fef9a57dd06d2659 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:20:46.895Z"
+  },
+  "4663:0xaf2fc7b763d3b06428d02396b44b84002e6256d9": {
+    "reason": "rug-check 4663:0xaf2fc7b763d3b06428d02396b44b84002e6256d9\ntarget scanned : 0xaf2fc7b763d3b06428d02396b44b84002e6256d9 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:35:46.688Z"
+  },
+  "4663:0x962b42e27d1f8e438b856c01d5f615ba2abda35f": {
+    "reason": "rug-check 4663:0x962b42e27d1f8e438b856c01d5f615ba2abda35f\ntarget scanned : 0x962b42e27d1f8e438b856c01d5f615ba2abda35f (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:35:46.688Z"
+  },
+  "4663:0xa7b78b8d27a2286fe6192d88ffcd485bcde263f9": {
+    "reason": "rug-check 4663:0xa7b78b8d27a2286fe6192d88ffcd485bcde263f9\ntarget scanned : 0xa7b78b8d27a2286fe6192d88ffcd485bcde263f9 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T04:40:46.841Z"
+  },
+  "4663:0x9badb30c242e6b0e3136bc56d4c54c58b138bb74": {
+    "reason": "rug-check 4663:0x9badb30c242e6b0e3136bc56d4c54c58b138bb74\ntarget scanned : 0x9badb30c242e6b0e3136bc56d4c54c58b138bb74 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T05:10:46.109Z"
+  },
+  "4663:0xe448fbf5bd91eec8ae7ff054c5da250377372641": {
+    "reason": "rug-check 4663:0xe448fbf5bd91eec8ae7ff054c5da250377372641\ntarget scanned : 0xe448fbf5bd91eec8ae7ff054c5da250377372641 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T05:10:46.109Z"
+  },
+  "8453:0x847f3f46e4e76f7d537196896769c5e8bd424b5b": {
+    "reason": "rug-check 8453:0x847f3f46e4e76f7d537196896769c5e8bd424b5b\ntarget scanned : 0x847f3f46e4e76f7d537196896769c5e8bd424b5b (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function setMinter() is external but owner-gated — owner can mint arbitrarily (supply-inflation rug risk).\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no a",
+    "at": "2026-09-25T05:15:46.629Z"
+  },
+  "4663:0xcc8048f5d2dc16070f87566ff6a0de89aff8b6ef": {
+    "reason": "rug-check 4663:0xcc8048f5d2dc16070f87566ff6a0de89aff8b6ef\ntarget scanned : 0xcc8048f5d2dc16070f87566ff6a0de89aff8b6ef (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T05:40:45.890Z"
+  },
+  "4663:0x717b4ce9b096504f06d278e925e52432e0ff89ae": {
+    "reason": "rug-check 4663:0x717b4ce9b096504f06d278e925e52432e0ff89ae\ntarget scanned : 0x717b4ce9b096504f06d278e925e52432e0ff89ae (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T05:40:45.890Z"
+  },
+  "4663:0x861430b8552ce96d8369a09398b1f3038c3df009": {
+    "reason": "rug-check 4663:0x861430b8552ce96d8369a09398b1f3038c3df009\ntarget scanned : 0x861430b8552ce96d8369a09398b1f3038c3df009 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T05:47:42.771Z"
+  },
+  "8453:0x7c7ce03e87428ff54d6727c37bd99a8d2d1d48e1": {
+    "reason": "rug-check 8453:0x7c7ce03e87428ff54d6727c37bd99a8d2d1d48e1\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T05:47:42.771Z"
+  },
+  "4663:0x8ed7ffdcacfe067c589d52535e786ccdea8f8154": {
+    "reason": "rug-check 4663:0x8ed7ffdcacfe067c589d52535e786ccdea8f8154\ntarget scanned : 0x8ed7ffdcacfe067c589d52535e786ccdea8f8154 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T05:55:49.178Z"
+  },
+  "4663:0xf165a47004538966f59c9704cc5525ee49a0ffdc": {
+    "reason": "rug-check 4663:0xf165a47004538966f59c9704cc5525ee49a0ffdc\ntarget scanned : 0xf165a47004538966f59c9704cc5525ee49a0ffdc (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T06:05:46.716Z"
+  },
+  "4663:0xc02ceb3d5e275893ff7b5fd4a505cf4bb6b9cf9e": {
+    "reason": "rug-check 4663:0xc02ceb3d5e275893ff7b5fd4a505cf4bb6b9cf9e\ntarget scanned : 0xc02ceb3d5e275893ff7b5fd4a505cf4bb6b9cf9e (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T06:10:46.550Z"
+  },
+  "4663:0x5b9513fe8baea6665a5ebf9547eb693872663a6f": {
+    "reason": "rug-check 4663:0x5b9513fe8baea6665a5ebf9547eb693872663a6f\ntarget scanned : 0x5b9513fe8baea6665a5ebf9547eb693872663a6f (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T06:10:46.550Z"
+  },
+  "4663:0x5a325a45eb1264e677763a405cf599fc8bc884d8": {
+    "reason": "rug-check 4663:0x5a325a45eb1264e677763a405cf599fc8bc884d8\ntarget scanned : 0x5a325a45eb1264e677763a405cf599fc8bc884d8 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T06:20:45.793Z"
+  },
+  "4663:0x0c0308e932fc3a0badd89fb46bd85e574ce4ee4d": {
+    "reason": "rug-check 4663:0x0c0308e932fc3a0badd89fb46bd85e574ce4ee4d\ntarget scanned : 0x0c0308e932fc3a0badd89fb46bd85e574ce4ee4d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T06:55:50.594Z"
+  },
+  "4663:0xcf77fe9f881d6374312c93d427ef6fd3de1ffb49": {
+    "reason": "rug-check 4663:0xcf77fe9f881d6374312c93d427ef6fd3de1ffb49\ntarget scanned : 0xcf77fe9f881d6374312c93d427ef6fd3de1ffb49 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T07:00:46.779Z"
+  },
+  "8453:0x08a360755ef5a37f5f03d3ded1bf7f111f871c66": {
+    "reason": "rug-check 8453:0x08a360755ef5a37f5f03d3ded1bf7f111f871c66\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T07:15:49.215Z"
+  },
+  "4663:0x081bc4fe71980dec60b6e8a2173621b34a111ecb": {
+    "reason": "rug-check 4663:0x081bc4fe71980dec60b6e8a2173621b34a111ecb\ntarget scanned : 0x081bc4fe71980dec60b6e8a2173621b34a111ecb (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T07:35:50.932Z"
+  },
+  "4663:0xf0f8c058c91525a6df72ce15d77d7f9f0461dcbb": {
+    "reason": "rug-check 4663:0xf0f8c058c91525a6df72ce15d77d7f9f0461dcbb\ntarget scanned : 0xf0f8c058c91525a6df72ce15d77d7f9f0461dcbb (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function setMinter() is external but owner-gated — owner can mint arbitrarily (supply-inflation rug risk).\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no a",
+    "at": "2026-09-25T07:35:50.932Z"
+  },
+  "4663:0x607867542ac26b197914542132078f1a6d8c88ba": {
+    "reason": "rug-check 4663:0x607867542ac26b197914542132078f1a6d8c88ba\ntarget scanned : 0x607867542ac26b197914542132078f1a6d8c88ba (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:05:45.753Z"
+  },
+  "4663:0x653ebb30e68a84825c2b0377e2ba6f1b6940ce31": {
+    "reason": "rug-check 4663:0x653ebb30e68a84825c2b0377e2ba6f1b6940ce31\ntarget scanned : 0x653ebb30e68a84825c2b0377e2ba6f1b6940ce31 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:10:46.387Z"
+  },
+  "4663:0x8d6f575e8e5f4531f6011194f2c5429929ec310a": {
+    "reason": "rug-check 4663:0x8d6f575e8e5f4531f6011194f2c5429929ec310a\ntarget scanned : 0x8d6f575e8e5f4531f6011194f2c5429929ec310a (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:10:46.387Z"
+  },
+  "4663:0x8e25bdefddfa82619a22519fd369f1ba24e92f2d": {
+    "reason": "rug-check 4663:0x8e25bdefddfa82619a22519fd369f1ba24e92f2d\ntarget scanned : 0x8e25bdefddfa82619a22519fd369f1ba24e92f2d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:10:46.387Z"
+  },
+  "4663:0x82f9ae0ebaadb42e704b8491613498e8c0657718": {
+    "reason": "rug-check 4663:0x82f9ae0ebaadb42e704b8491613498e8c0657718\ntarget scanned : 0x82f9ae0ebaadb42e704b8491613498e8c0657718 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:10:46.387Z"
+  },
+  "4663:0x383c33a7a1bdfd059f22209f8e0af4331be512db": {
+    "reason": "rug-check 4663:0x383c33a7a1bdfd059f22209f8e0af4331be512db\ntarget scanned : 0x383c33a7a1bdfd059f22209f8e0af4331be512db (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:15:47.190Z"
+  },
+  "8453:0x30b16b185a003edc0e2a2ddeaea681389e79cecd": {
+    "reason": "rug-check 8453:0x30b16b185a003edc0e2a2ddeaea681389e79cecd\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T08:20:46.288Z"
+  },
+  "4663:0xd4ff7bd65cb9beadfc15f941d7d02c56013efeb4": {
+    "reason": "rug-check 4663:0xd4ff7bd65cb9beadfc15f941d7d02c56013efeb4\ntarget scanned : 0xd4ff7bd65cb9beadfc15f941d7d02c56013efeb4 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:26:47.074Z"
+  },
+  "4663:0x25febd4cdf96777f790e648932bfa3f6ceca1e9d": {
+    "reason": "rug-check 4663:0x25febd4cdf96777f790e648932bfa3f6ceca1e9d\ntarget scanned : 0x25febd4cdf96777f790e648932bfa3f6ceca1e9d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:26:47.074Z"
+  },
+  "4663:0x2da11a6f211199f48ba7a0905ee3723670767ae3": {
+    "reason": "rug-check 4663:0x2da11a6f211199f48ba7a0905ee3723670767ae3\ntarget scanned : 0x2da11a6f211199f48ba7a0905ee3723670767ae3 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:30:46.859Z"
+  },
+  "8453:0x64875c09a699d683aa3f3a1f0543e6a4e85c3637": {
+    "reason": "rug-check 8453:0x64875c09a699d683aa3f3a1f0543e6a4e85c3637\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T08:30:46.859Z"
+  },
+  "4663:0x81c41598e590fc63aa372e846b7aff322b8db686": {
+    "reason": "rug-check 4663:0x81c41598e590fc63aa372e846b7aff322b8db686\ntarget scanned : 0x81c41598e590fc63aa372e846b7aff322b8db686 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T08:40:45.767Z"
+  },
+  "4663:0xc93d861f09af02c0397fbe76f9495f14e62c9b23": {
+    "reason": "rug-check 4663:0xc93d861f09af02c0397fbe76f9495f14e62c9b23\ntarget scanned : 0xc93d861f09af02c0397fbe76f9495f14e62c9b23 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T09:00:46.722Z"
+  },
+  "8453:0x7d2891b11cf3cd83c313c2b53a015ad8a0790d3d": {
+    "reason": "rug-check 8453:0x7d2891b11cf3cd83c313c2b53a015ad8a0790d3d\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T09:00:46.722Z"
+  },
+  "4663:0x64499bcc4a2289437686ed6f5e0b6b84f7e2bb66": {
+    "reason": "rug-check 4663:0x64499bcc4a2289437686ed6f5e0b6b84f7e2bb66\ntarget scanned : 0x64499bcc4a2289437686ed6f5e0b6b84f7e2bb66 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T09:10:46.514Z"
+  },
+  "4663:0x34f6fe77f8aa323b9da273841ac698cad745b463": {
+    "reason": "rug-check 4663:0x34f6fe77f8aa323b9da273841ac698cad745b463\ntarget scanned : 0x34f6fe77f8aa323b9da273841ac698cad745b463 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T09:10:46.514Z"
+  },
+  "4663:0x8da9a1f34e0a911511576c90ddbb99df5b6ab69f": {
+    "reason": "rug-check 4663:0x8da9a1f34e0a911511576c90ddbb99df5b6ab69f\ntarget scanned : 0x8da9a1f34e0a911511576c90ddbb99df5b6ab69f (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T09:20:46.171Z"
+  },
+  "4663:0x9b993d064a76219811a86bb0a6ecc7212dac4e98": {
+    "reason": "rug-check 4663:0x9b993d064a76219811a86bb0a6ecc7212dac4e98\ntarget scanned : 0x9b993d064a76219811a86bb0a6ecc7212dac4e98 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T09:55:46.244Z"
+  },
+  "4663:0x2bf9b2f4988d65bb54f9d9faff4a09af69c0ddd6": {
+    "reason": "rug-check 4663:0x2bf9b2f4988d65bb54f9d9faff4a09af69c0ddd6\ntarget scanned : 0x2bf9b2f4988d65bb54f9d9faff4a09af69c0ddd6 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  ",
+    "at": "2026-09-25T10:05:46.474Z"
+  },
+  "4663:0xa5ebc52ce63936204f9a5789878a03740e5dfda4": {
+    "reason": "rug-check 4663:0xa5ebc52ce63936204f9a5789878a03740e5dfda4\ntarget scanned : 0xa5ebc52ce63936204f9a5789878a03740e5dfda4 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T10:05:46.474Z"
+  },
+  "4663:0xb52860ad506c3d38dd6429c7c55a9ed5ce389aa0": {
+    "reason": "rug-check 4663:0xb52860ad506c3d38dd6429c7c55a9ed5ce389aa0\ntarget scanned : 0xb52860ad506c3d38dd6429c7c55a9ed5ce389aa0 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T10:10:46.248Z"
+  },
+  "8453:0x54581dc0182b5bef7eeb5997bd3ba5e618ecf6ed": {
+    "reason": "rug-check 8453:0x54581dc0182b5bef7eeb5997bd3ba5e618ecf6ed\ntarget scanned : 0x54581dc0182b5bef7eeb5997bd3ba5e618ecf6ed (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:blockscout]\n[MEDIUM] heuristic:public-free-mint\n  Function mintSeaDrop() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-o",
+    "at": "2026-09-25T10:25:46.497Z"
+  },
+  "4663:0x480b5476dcac18d37de31ea94af4540b15fad92c": {
+    "reason": "rug-check 4663:0x480b5476dcac18d37de31ea94af4540b15fad92c\ntarget scanned : 0x480b5476dcac18d37de31ea94af4540b15fad92c (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T10:45:46.716Z"
+  },
+  "8453:0x30cb0b9b576f984363d1625f93ceb573323caf63": {
+    "reason": "rug-check 8453:0x30cb0b9b576f984363d1625f93ceb573323caf63\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T10:45:46.716Z"
+  },
+  "4663:0xaac2db2729c3e72dcee273f6909029c9da8bf141": {
+    "reason": "rug-check 4663:0xaac2db2729c3e72dcee273f6909029c9da8bf141\ntarget scanned : 0xaac2db2729c3e72dcee273f6909029c9da8bf141 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T11:00:48.075Z"
+  },
+  "8453:0x9ee160e7fdc5395b2a13bb91bd0e8694f9312a3f": {
+    "reason": "rug-check 8453:0x9ee160e7fdc5395b2a13bb91bd0e8694f9312a3f\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T11:00:48.075Z"
+  },
+  "8453:0xbf3fa3444f5af76f1dc232f024df0ac907498ae3": {
+    "reason": "rug-check 8453:0xbf3fa3444f5af76f1dc232f024df0ac907498ae3\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-25T11:00:48.075Z"
+  },
+  "4663:0x448562a5b9f051c5fe6bed0b5b26b537031db760": {
+    "reason": "rug-check 4663:0x448562a5b9f051c5fe6bed0b5b26b537031db760\ntarget scanned : 0x448562a5b9f051c5fe6bed0b5b26b537031db760 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T11:05:45.899Z"
+  },
+  "4663:0x23a5f1534a1dde6e5d110cd9869a3f3753e04ec4": {
+    "reason": "rug-check 4663:0x23a5f1534a1dde6e5d110cd9869a3f3753e04ec4\ntarget scanned : 0x23a5f1534a1dde6e5d110cd9869a3f3753e04ec4 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T11:20:46.173Z"
+  },
+  "4663:0xdb121edb8fc7ab4484f7aae14bb542ee7c0a625d": {
+    "reason": "rug-check 4663:0xdb121edb8fc7ab4484f7aae14bb542ee7c0a625d\ntarget scanned : 0xdb121edb8fc7ab4484f7aae14bb542ee7c0a625d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T11:30:46.376Z"
+  },
+  "8453:0x46a15b0b27311cedf172ab29e4f4766fbe7f4364": {
+    "reason": "rug-check 8453:0x46a15b0b27311cedf172ab29e4f4766fbe7f4364\ntarget scanned : 0x46a15b0b27311cedf172ab29e4f4766fbe7f4364 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/base/PeripheryPayments.sol#52-69) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/base/PeripheryPayments.sol#67)  [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function",
+    "at": "2026-09-25T12:00:46.565Z"
+  },
+  "4663:0x6393fbd9a8bbc8317f85650df5618c1c779b7f62": {
+    "reason": "rug-check 4663:0x6393fbd9a8bbc8317f85650df5618c1c779b7f62\ntarget scanned : 0x6393fbd9a8bbc8317f85650df5618c1c779b7f62 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T12:05:46.149Z"
+  },
+  "4663:0xa03d48fc554a0c64bbcaae6a800336367a693aea": {
+    "reason": "rug-check 4663:0xa03d48fc554a0c64bbcaae6a800336367a693aea\ntarget scanned : 0xa03d48fc554a0c64bbcaae6a800336367a693aea (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T12:30:46.334Z"
+  },
+  "4663:0xd3fa40c3ee2aa62250848eaa6aa01e1c5e899e21": {
+    "reason": "rug-check 4663:0xd3fa40c3ee2aa62250848eaa6aa01e1c5e899e21\ntarget scanned : 0xd3fa40c3ee2aa62250848eaa6aa01e1c5e899e21 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T12:30:46.334Z"
+  },
+  "4663:0xfe8a9aa8d323de85d86167cd800620efdfd49ccd": {
+    "reason": "rug-check 4663:0xfe8a9aa8d323de85d86167cd800620efdfd49ccd\ntarget scanned : 0xfe8a9aa8d323de85d86167cd800620efdfd49ccd (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T12:35:46.580Z"
+  },
+  "4663:0x4ee9b2f71ef5e74b5d987fc5aec1ffa42ff18360": {
+    "reason": "rug-check 4663:0x4ee9b2f71ef5e74b5d987fc5aec1ffa42ff18360\ntarget scanned : 0x4ee9b2f71ef5e74b5d987fc5aec1ffa42ff18360 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T12:50:46.816Z"
+  },
+  "4663:0x4093ec841289f50d1722f04ad4b407002c735be6": {
+    "reason": "rug-check 4663:0x4093ec841289f50d1722f04ad4b407002c735be6\ntarget scanned : 0x4093ec841289f50d1722f04ad4b407002c735be6 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T12:55:46.752Z"
+  },
+  "4663:0x4ef751972293ff6299c75b3451e899a8f0209675": {
+    "reason": "rug-check 4663:0x4ef751972293ff6299c75b3451e899a8f0209675\ntarget scanned : 0x4ef751972293ff6299c75b3451e899a8f0209675 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T12:55:46.752Z"
+  },
+  "4663:0xb1e38c41b597025b12e03080d4a2c82bd5cf74f6": {
+    "reason": "rug-check 4663:0xb1e38c41b597025b12e03080d4a2c82bd5cf74f6\ntarget scanned : 0xb1e38c41b597025b12e03080d4a2c82bd5cf74f6 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T13:00:47.105Z"
+  },
+  "4663:0x20ecfed87b59004caca5a94e9d7cc6e56f91ec1b": {
+    "reason": "rug-check 4663:0x20ecfed87b59004caca5a94e9d7cc6e56f91ec1b\ntarget scanned : 0x20ecfed87b59004caca5a94e9d7cc6e56f91ec1b (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T13:05:46.458Z"
+  },
+  "4663:0x29ddb616eca26b3049e5a28a8e4f5c78e5ae5423": {
+    "reason": "rug-check 4663:0x29ddb616eca26b3049e5a28a8e4f5c78e5ae5423\ntarget scanned : 0x29ddb616eca26b3049e5a28a8e4f5c78e5ae5423 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T13:25:47.451Z"
+  },
+  "4663:0x9130f705c5f6f58366350194adc966dd2cec4507": {
+    "reason": "rug-check 4663:0x9130f705c5f6f58366350194adc966dd2cec4507\ntarget scanned : 0x9130f705c5f6f58366350194adc966dd2cec4507 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T13:30:48.335Z"
+  },
+  "4663:0x96d521298073091eab5282379c6262036f456652": {
+    "reason": "rug-check 4663:0x96d521298073091eab5282379c6262036f456652\ntarget scanned : 0x96d521298073091eab5282379c6262036f456652 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T13:35:46.954Z"
+  },
+  "4663:0x3a4eda4e06cea70110f5795871b45b8bbf16ba24": {
+    "reason": "rug-check 4663:0x3a4eda4e06cea70110f5795871b45b8bbf16ba24\ntarget scanned : 0x3a4eda4e06cea70110f5795871b45b8bbf16ba24 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T13:45:49.641Z"
+  },
+  "8453:0xa88a945c8c92a3f3d5959d7661bca9100622baa2": {
+    "reason": "rug-check 8453:0xa88a945c8c92a3f3d5959d7661bca9100622baa2\ntarget scanned : 0xa88a945c8c92a3f3d5959d7661bca9100622baa2 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: t found. --> @openzeppelin/contracts/utils/Bytes.sol:168:13: | 168 | mcopy(add(add(buffer, 0x20), pos), add(add(replacement, 0x20), offset), length) | ^^^^^ Error: Function \"mcopy\" not found. --> @openzeppelin/contracts/utils/Bytes.sol:195:17: | ",
+    "at": "2026-09-25T13:50:47.692Z"
+  },
+  "4663:0x797aeab7b59e04997583b0da15fbd7af819a46de": {
+    "reason": "rug-check 4663:0x797aeab7b59e04997583b0da15fbd7af819a46de\ntarget scanned : 0x797aeab7b59e04997583b0da15fbd7af819a46de (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T13:55:46.913Z"
+  },
+  "4663:0x1c34e7aee3de13a9de4219d4f41a8a3ae0962b39": {
+    "reason": "rug-check 4663:0x1c34e7aee3de13a9de4219d4f41a8a3ae0962b39\ntarget scanned : 0x1c34e7aee3de13a9de4219d4f41a8a3ae0962b39 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:00:48.128Z"
+  },
+  "4663:0x5bc30b219b5303bf71f59b09411392201310e848": {
+    "reason": "rug-check 4663:0x5bc30b219b5303bf71f59b09411392201310e848\ntarget scanned : 0x5bc30b219b5303bf71f59b09411392201310e848 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:00:48.128Z"
+  },
+  "4663:0xe3a1188972f1f669bbc168c19564cc00b019de8c": {
+    "reason": "rug-check 4663:0xe3a1188972f1f669bbc168c19564cc00b019de8c\ntarget scanned : 0xe3a1188972f1f669bbc168c19564cc00b019de8c (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:00:48.128Z"
+  },
+  "4663:0x3a9feb385d73182f0fc2f9657939ae93c12ec1af": {
+    "reason": "rug-check 4663:0x3a9feb385d73182f0fc2f9657939ae93c12ec1af\ntarget scanned : 0x3a9feb385d73182f0fc2f9657939ae93c12ec1af (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:10:47.428Z"
+  },
+  "4663:0xc1802db0b9564d369b6ae772b6a717a375e3a050": {
+    "reason": "rug-check 4663:0xc1802db0b9564d369b6ae772b6a717a375e3a050\ntarget scanned : 0xc1802db0b9564d369b6ae772b6a717a375e3a050 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:10:47.428Z"
+  },
+  "4663:0x732bff77c49f622065ed1ab8abe6d916161f1410": {
+    "reason": "rug-check 4663:0x732bff77c49f622065ed1ab8abe6d916161f1410\ntarget scanned : 0x732bff77c49f622065ed1ab8abe6d916161f1410 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:10:47.428Z"
+  },
+  "4663:0x38359de7b936072083b88e07faf1f1d23bd6c2cb": {
+    "reason": "rug-check 4663:0x38359de7b936072083b88e07faf1f1d23bd6c2cb\ntarget scanned : 0x38359de7b936072083b88e07faf1f1d23bd6c2cb (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:18:32.732Z"
+  },
+  "4663:0x43eb5d70b75d4ce43134e74fc20e86513ee8406a": {
+    "reason": "rug-check 4663:0x43eb5d70b75d4ce43134e74fc20e86513ee8406a\ntarget scanned : 0x43eb5d70b75d4ce43134e74fc20e86513ee8406a (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] heuristic:owner-controlle",
+    "at": "2026-09-25T14:29:14.620Z"
+  },
+  "4663:0xfb76153f0c5ec545af5add63660aff1bb8061359": {
+    "reason": "rug-check 4663:0xfb76153f0c5ec545af5add63660aff1bb8061359\ntarget scanned : 0xfb76153f0c5ec545af5add63660aff1bb8061359 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:33:43.069Z"
+  },
+  "4663:0xabec9d4c8f2b6de6cba74db8c533496efeb25ca4": {
+    "reason": "rug-check 4663:0xabec9d4c8f2b6de6cba74db8c533496efeb25ca4\ntarget scanned : 0xabec9d4c8f2b6de6cba74db8c533496efeb25ca4 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:33:43.069Z"
+  },
+  "4663:0xb6c97217a340463be5955fb51ce6269c6babfb65": {
+    "reason": "rug-check 4663:0xb6c97217a340463be5955fb51ce6269c6babfb65\ntarget scanned : 0xb6c97217a340463be5955fb51ce6269c6babfb65 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:33:43.069Z"
+  },
+  "4663:0xb1003738227c28d47fe74da5247b1d0e0d94cf36": {
+    "reason": "rug-check 4663:0xb1003738227c28d47fe74da5247b1d0e0d94cf36\ntarget scanned : 0xb1003738227c28d47fe74da5247b1d0e0d94cf36 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:45:47.952Z"
+  },
+  "4663:0x7cf6f81193ddfff206b074f0fcfc84668e3f07db": {
+    "reason": "rug-check 4663:0x7cf6f81193ddfff206b074f0fcfc84668e3f07db\ntarget scanned : 0x7cf6f81193ddfff206b074f0fcfc84668e3f07db (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:45:47.952Z"
+  },
+  "4663:0x97b43550270c9249330224b712473edee91a61d3": {
+    "reason": "rug-check 4663:0x97b43550270c9249330224b712473edee91a61d3\ntarget scanned : 0x97b43550270c9249330224b712473edee91a61d3 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:45:47.952Z"
+  },
+  "4663:0x3e4c524537c7695d765bbedf40eec384a013ba0b": {
+    "reason": "rug-check 4663:0x3e4c524537c7695d765bbedf40eec384a013ba0b\ntarget scanned : 0x3e4c524537c7695d765bbedf40eec384a013ba0b (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:50:47.049Z"
+  },
+  "4663:0xe483ee4480bf10ad6a9ed16e1b96cd61c849f0cf": {
+    "reason": "rug-check 4663:0xe483ee4480bf10ad6a9ed16e1b96cd61c849f0cf\ntarget scanned : 0xe483ee4480bf10ad6a9ed16e1b96cd61c849f0cf (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:50:47.049Z"
+  },
+  "4663:0x207beee0e3a731ba7b64f2d84da173ad09077c82": {
+    "reason": "rug-check 4663:0x207beee0e3a731ba7b64f2d84da173ad09077c82\ntarget scanned : 0x207beee0e3a731ba7b64f2d84da173ad09077c82 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:50:47.049Z"
+  },
+  "4663:0x729a6c83a0f8f8dc0bbcf28ca083dbd934b5c480": {
+    "reason": "rug-check 4663:0x729a6c83a0f8f8dc0bbcf28ca083dbd934b5c480\ntarget scanned : 0x729a6c83a0f8f8dc0bbcf28ca083dbd934b5c480 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:50:47.049Z"
+  },
+  "4663:0x22e1085682a9f658c52f760276b297b1827985d7": {
+    "reason": "rug-check 4663:0x22e1085682a9f658c52f760276b297b1827985d7\ntarget scanned : 0x22e1085682a9f658c52f760276b297b1827985d7 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:55:49.297Z"
+  },
+  "4663:0xde4ab78e0084117ff259cbc402a5ed1460851e8c": {
+    "reason": "rug-check 4663:0xde4ab78e0084117ff259cbc402a5ed1460851e8c\ntarget scanned : 0xde4ab78e0084117ff259cbc402a5ed1460851e8c (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T14:55:49.297Z"
+  },
+  "4663:0xacec57c468b437bc4c182a52b240e047918316e9": {
+    "reason": "rug-check 4663:0xacec57c468b437bc4c182a52b240e047918316e9\ntarget scanned : 0xacec57c468b437bc4c182a52b240e047918316e9 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:00:47.153Z"
+  },
+  "4663:0xc2c120b46dae966fb13f6d5817780be371a02375": {
+    "reason": "rug-check 4663:0xc2c120b46dae966fb13f6d5817780be371a02375\ntarget scanned : 0xc2c120b46dae966fb13f6d5817780be371a02375 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:00:47.153Z"
+  },
+  "4663:0x3b0b79e16200135fc165b6cd07461060e5e31ec5": {
+    "reason": "rug-check 4663:0x3b0b79e16200135fc165b6cd07461060e5e31ec5\ntarget scanned : 0x3b0b79e16200135fc165b6cd07461060e5e31ec5 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:06:04.751Z"
+  },
+  "4663:0xb06d83ae39ab700944bf2ce422ffa8bc3c3e4314": {
+    "reason": "rug-check 4663:0xb06d83ae39ab700944bf2ce422ffa8bc3c3e4314\ntarget scanned : 0xb06d83ae39ab700944bf2ce422ffa8bc3c3e4314 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:06:04.751Z"
+  },
+  "4663:0x672052fe45e72a7d5cd1f6699931f9b07673d26d": {
+    "reason": "rug-check 4663:0x672052fe45e72a7d5cd1f6699931f9b07673d26d\ntarget scanned : 0x672052fe45e72a7d5cd1f6699931f9b07673d26d (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:12:16.998Z"
+  },
+  "8453:0x20246ec3480ea5999bede1889be33d3866f0c905": {
+    "reason": "rug-check 8453:0x20246ec3480ea5999bede1889be33d3866f0c905\ntarget scanned : 0x20246ec3480ea5999bede1889be33d3866f0c905 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-25T15:12:16.998Z"
+  },
+  "4663:0xd8e7fc44f1b64eca26e49c07cb2ebf12aeb4db34": {
+    "reason": "rug-check 4663:0xd8e7fc44f1b64eca26e49c07cb2ebf12aeb4db34\ntarget scanned : 0xd8e7fc44f1b64eca26e49c07cb2ebf12aeb4db34 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:17:05.022Z"
+  },
+  "4663:0x28e6171e714ac366d3ff6def9bc6c125e2a41238": {
+    "reason": "rug-check 4663:0x28e6171e714ac366d3ff6def9bc6c125e2a41238\ntarget scanned : 0x28e6171e714ac366d3ff6def9bc6c125e2a41238 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:17:05.022Z"
+  },
+  "4663:0xb73cd4e6c53f9a86c572370a4aebe798891ee5ce": {
+    "reason": "rug-check 4663:0xb73cd4e6c53f9a86c572370a4aebe798891ee5ce\ntarget scanned : 0xb73cd4e6c53f9a86c572370a4aebe798891ee5ce (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  ",
+    "at": "2026-09-25T15:17:05.022Z"
+  },
+  "4663:0xff1754862113becac369ce19187f4f4dd924a3b8": {
+    "reason": "rug-check 4663:0xff1754862113becac369ce19187f4f4dd924a3b8\ntarget scanned : 0xff1754862113becac369ce19187f4f4dd924a3b8 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:25:49.727Z"
+  },
+  "4663:0xde6e54937516b8e1f61a5570600b3649e552a79f": {
+    "reason": "rug-check 4663:0xde6e54937516b8e1f61a5570600b3649e552a79f\ntarget scanned : 0xde6e54937516b8e1f61a5570600b3649e552a79f (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:25:49.727Z"
+  },
+  "8453:0x151380bdb35190debf5d8a19efd33332cbbc884b": {
+    "reason": "rug-check 8453:0x151380bdb35190debf5d8a19efd33332cbbc884b\ntarget scanned : 0x151380bdb35190debf5d8a19efd33332cbbc884b (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-25T15:25:49.727Z"
+  },
+  "8453:0x7ef74b198bfda084ce97fe26b49fb5303fb4d881": {
+    "reason": "rug-check 8453:0x7ef74b198bfda084ce97fe26b49fb5303fb4d881\ntarget scanned : 0x7ef74b198bfda084ce97fe26b49fb5303fb4d881 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] bytecode:SELFDESTRUCT\n  Run",
+    "at": "2026-09-25T15:25:49.727Z"
+  },
+  "4663:0xb17c4185d74bb321efd8e36c1f0b6b59131b6e82": {
+    "reason": "rug-check 4663:0xb17c4185d74bb321efd8e36c1f0b6b59131b6e82\ntarget scanned : 0xb17c4185d74bb321efd8e36c1f0b6b59131b6e82 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:30:47.822Z"
+  },
+  "4663:0x09872b0e5613c5b86c551c006e28325c3f761b0b": {
+    "reason": "rug-check 4663:0x09872b0e5613c5b86c551c006e28325c3f761b0b\ntarget scanned : 0x09872b0e5613c5b86c551c006e28325c3f761b0b (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:35:47.344Z"
+  },
+  "4663:0x98fb212642121c734ef0cb2d4e4ac06869522189": {
+    "reason": "rug-check 4663:0x98fb212642121c734ef0cb2d4e4ac06869522189\ntarget scanned : 0x98fb212642121c734ef0cb2d4e4ac06869522189 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T15:35:47.344Z"
+  },
+  "8453:0x777ba0c8c045c36ada96d1ccb2e535d6b81e2675": {
+    "reason": "rug-check 8453:0x777ba0c8c045c36ada96d1ccb2e535d6b81e2675\ntarget scanned : 0x777ba0c8c045c36ada96d1ccb2e535d6b81e2675 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-25T15:40:48.005Z"
+  },
+  "8453:0x84917aa296966dbcbf2de0b0573977568d5cfbb9": {
+    "reason": "rug-check 8453:0x84917aa296966dbcbf2de0b0573977568d5cfbb9\ntarget scanned : 0x84917aa296966dbcbf2de0b0573977568d5cfbb9 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] bytecode:SELFDESTRUCT\n  Run",
+    "at": "2026-09-25T15:40:48.005Z"
+  },
+  "8453:0xd84c2c16194d3157ecb47ae74d082ff2ac88100d": {
+    "reason": "rug-check 8453:0xd84c2c16194d3157ecb47ae74d082ff2ac88100d\ntarget scanned : 0xd84c2c16194d3157ecb47ae74d082ff2ac88100d (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] bytecode:SELFDESTRUCT\n  Run",
+    "at": "2026-09-25T15:40:48.005Z"
+  },
+  "8453:0x7243922475050cb4db84b0157d101d41edd85e62": {
+    "reason": "rug-check 8453:0x7243922475050cb4db84b0157d101d41edd85e62\ntarget scanned : 0xF922bbdD29767Fc5F4C19e53e295B7eefDE113BA (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0xF922bbdD29767Fc5F4C19e53e295B7eefDE113BA (resolved via blockscout-implementations, name PumpBoxNFT). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no iss",
+    "at": "2026-09-25T15:55:47.339Z"
+  },
+  "4663:0x7aca427baf3362021efd5004bb34b3e985f608d6": {
+    "reason": "rug-check 4663:0x7aca427baf3362021efd5004bb34b3e985f608d6\ntarget scanned : 0x7aca427baf3362021efd5004bb34b3e985f608d6 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:00:47.058Z"
+  },
+  "4663:0x07819442108914bac2a53bb95d1859d5e28fa824": {
+    "reason": "rug-check 4663:0x07819442108914bac2a53bb95d1859d5e28fa824\ntarget scanned : 0x07819442108914bac2a53bb95d1859d5e28fa824 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:10:47.291Z"
+  },
+  "4663:0x84a54973375ebc17c91e7cc125cc6f2df6183ec7": {
+    "reason": "rug-check 4663:0x84a54973375ebc17c91e7cc125cc6f2df6183ec7\ntarget scanned : 0x84a54973375ebc17c91e7cc125cc6f2df6183ec7 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:20:47.204Z"
+  },
+  "4663:0x3cf59b88bae87d6c6c2fde7a1b022d92bc1b91d8": {
+    "reason": "rug-check 4663:0x3cf59b88bae87d6c6c2fde7a1b022d92bc1b91d8\ntarget scanned : 0x3cf59b88bae87d6c6c2fde7a1b022d92bc1b91d8 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] heuristic:owner-controlle",
+    "at": "2026-09-25T16:20:47.204Z"
+  },
+  "4663:0x2a1e9fce818bd873485cd85b1f0400bfa2a7ce52": {
+    "reason": "rug-check 4663:0x2a1e9fce818bd873485cd85b1f0400bfa2a7ce52\ntarget scanned : 0x2a1e9fce818bd873485cd85b1f0400bfa2a7ce52 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:20:47.204Z"
+  },
+  "4663:0xe6885e267b8cc7c13f78297ef609c500a4b88710": {
+    "reason": "rug-check 4663:0xe6885e267b8cc7c13f78297ef609c500a4b88710\ntarget scanned : 0xe6885e267b8cc7c13f78297ef609c500a4b88710 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:30:48.359Z"
+  },
+  "4663:0x7ef331263af361bb3d4b29cf95a65bbb4eba6686": {
+    "reason": "rug-check 4663:0x7ef331263af361bb3d4b29cf95a65bbb4eba6686\ntarget scanned : 0x7ef331263af361bb3d4b29cf95a65bbb4eba6686 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:30:48.359Z"
+  },
+  "4663:0xceb32f97757522cacf12f06bdf414a588ac7b1b5": {
+    "reason": "rug-check 4663:0xceb32f97757522cacf12f06bdf414a588ac7b1b5\ntarget scanned : 0xceb32f97757522cacf12f06bdf414a588ac7b1b5 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:30:48.359Z"
+  },
+  "8453:0xb6d588d619b94fcc3ee239d34bf99a77afa94a64": {
+    "reason": "rug-check 8453:0xb6d588d619b94fcc3ee239d34bf99a77afa94a64\ntarget scanned : 0xb6d588d619b94fcc3ee239d34bf99a77afa94a64 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcodes\n  He",
+    "at": "2026-09-25T16:35:47.590Z"
+  },
+  "4663:0x31fb46972e8df9d349d0897558bed84eb6080367": {
+    "reason": "rug-check 4663:0x31fb46972e8df9d349d0897558bed84eb6080367\ntarget scanned : 0x31fb46972e8df9d349d0897558bed84eb6080367 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:40:47.004Z"
+  },
+  "4663:0x5993f038e9851ea15345b89468541688c7a213c8": {
+    "reason": "rug-check 4663:0x5993f038e9851ea15345b89468541688c7a213c8\ntarget scanned : 0x5993f038e9851ea15345b89468541688c7a213c8 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:40:47.004Z"
+  },
+  "4663:0x059830793540d33ac8b428c1febb47d409ca4d10": {
+    "reason": "rug-check 4663:0x059830793540d33ac8b428c1febb47d409ca4d10\ntarget scanned : 0x059830793540d33ac8b428c1febb47d409ca4d10 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:40:47.004Z"
+  },
+  "4663:0x5f61d3a1dc6ca852ad1c799cd7cb15b79176a6b0": {
+    "reason": "rug-check 4663:0x5f61d3a1dc6ca852ad1c799cd7cb15b79176a6b0\ntarget scanned : 0x5f61d3a1dc6ca852ad1c799cd7cb15b79176a6b0 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:40:47.004Z"
+  },
+  "4663:0x3ddafa572c5b60592cd5b1a19c4483f2d87f0d06": {
+    "reason": "rug-check 4663:0x3ddafa572c5b60592cd5b1a19c4483f2d87f0d06\ntarget scanned : 0x3ddafa572c5b60592cd5b1a19c4483f2d87f0d06 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:46:02.145Z"
+  },
+  "4663:0x051e1882e2d42a497488a0954df44fd11ccf9ef0": {
+    "reason": "rug-check 4663:0x051e1882e2d42a497488a0954df44fd11ccf9ef0\ntarget scanned : 0x051e1882e2d42a497488a0954df44fd11ccf9ef0 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:50:47.459Z"
+  },
+  "4663:0x5433e1c2d3398378b80d8159b76ecba6ae188730": {
+    "reason": "rug-check 4663:0x5433e1c2d3398378b80d8159b76ecba6ae188730\ntarget scanned : 0x5433e1c2d3398378b80d8159b76ecba6ae188730 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T16:55:48.373Z"
+  },
+  "4663:0xe46781703ac102a9544aa8c0956fc578312c6f69": {
+    "reason": "rug-check 4663:0xe46781703ac102a9544aa8c0956fc578312c6f69\ntarget scanned : 0xe46781703ac102a9544aa8c0956fc578312c6f69 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T17:00:48.130Z"
+  },
+  "4663:0x389e3ffe0f8651fec7e9435953a03d2850cc6f98": {
+    "reason": "rug-check 4663:0x389e3ffe0f8651fec7e9435953a03d2850cc6f98\ntarget scanned : 0x389e3ffe0f8651fec7e9435953a03d2850cc6f98 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T17:00:48.130Z"
+  },
+  "4663:0xb70111c931becefcb7dd2b021a59809c2928fb14": {
+    "reason": "rug-check 4663:0xb70111c931becefcb7dd2b021a59809c2928fb14\ntarget scanned : 0xb70111c931becefcb7dd2b021a59809c2928fb14 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-eth\n  PoSwaifus._distribute(uint256) (PoSwaifus.sol#860-875) sends eth to arbitrary user Dangerous calls: - (ok,None) = treasury.call{value: toTreasury}() (PoSwaifus.sol#872)  [src:sourcify]\n[HIGH] heuristic:unrestricted-withdraw\n  Function withdraw() is external, NOT owner-gated, and moves funds out — anyo",
+    "at": "2026-09-25T17:10:48.247Z"
+  },
+  "4663:0x76777514f5abcf041aa406b25785f7392716a354": {
+    "reason": "rug-check 4663:0x76777514f5abcf041aa406b25785f7392716a354\ntarget scanned : 0x76777514f5abcf041aa406b25785f7392716a354 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owner-controlled-mint\n  Function delegateMint() is external but owner-gated — owner can mint arb",
+    "at": "2026-09-25T18:15:47.179Z"
+  },
+  "8453:0xadf139f8c3251528a181583834cc31251eeedca9": {
+    "reason": "rug-check 8453:0xadf139f8c3251528a181583834cc31251eeedca9\ntarget scanned : 0xed8365c3FC6e6e31131633b4ED03223704F12B91 (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0xed8365c3FC6e6e31131633b4ED03223704F12B91 (resolved via blockscout-implementations, name ByteNFT). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues",
+    "at": "2026-09-25T18:30:48.189Z"
+  },
+  "4663:0x56f05b14d2e572e9ec220e30e861f12c691af965": {
+    "reason": "rug-check 4663:0x56f05b14d2e572e9ec220e30e861f12c691af965\ntarget scanned : 0x56f05b14d2e572e9ec220e30e861f12c691af965 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T19:05:49.049Z"
+  },
+  "4663:0xd6eeac7a2305c26fcc1877ecedc6750216f70cd0": {
+    "reason": "rug-check 4663:0xd6eeac7a2305c26fcc1877ecedc6750216f70cd0\ntarget scanned : 0xd6eeac7a2305c26fcc1877ecedc6750216f70cd0 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mintFor() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] heuristic:owner-contro",
+    "at": "2026-09-25T19:45:47.056Z"
+  },
+  "4663:0x586a2b208f82f57f4544656dc32a184b33cf2957": {
+    "reason": "rug-check 4663:0x586a2b208f82f57f4544656dc32a184b33cf2957\ntarget scanned : 0x586a2b208f82f57f4544656dc32a184b33cf2957 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-eth\n  NobodyHome._pay(address) (.sol#5561-5564) sends eth to arbitrary user Dangerous calls: - (ok,None) = to.call{value: address(this).balance}() (.sol#5562)  [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[MEDIUM] heuristic:publ",
+    "at": "2026-09-25T20:01:58.364Z"
+  },
+  "4663:0xe62a5f67516dbdba2aa28b1512c8ff44e42cb5c3": {
+    "reason": "rug-check 4663:0xe62a5f67516dbdba2aa28b1512c8ff44e42cb5c3\ntarget scanned : 0xe62a5f67516dbdba2aa28b1512c8ff44e42cb5c3 (verified source)\nverdict        : FLAGGED\n\n[HIGH] slither:arbitrary-send-erc20\n  PeripheryPayments.pay(address,address,address,uint256) (contracts/base/PeripheryPayments.sol#54-68) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(token,payer,recipient,value) (contracts/base/PeripheryPayments.sol#66)  [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function",
+    "at": "2026-09-25T20:07:28.669Z"
+  },
+  "4663:0xa237f30b01421f706a09cd46435a0e82ca3ef623": {
+    "reason": "rug-check 4663:0xa237f30b01421f706a09cd46435a0e82ca3ef623\ntarget scanned : 0xa237f30b01421f706a09cd46435a0e82ca3ef623 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable tar",
+    "at": "2026-09-25T20:31:25.662Z"
+  },
+  "4663:0xf2c72d4ea4b3d54652df182eda49b082678d02e3": {
+    "reason": "rug-check 4663:0xf2c72d4ea4b3d54652df182eda49b082678d02e3\ntarget scanned : 0xf2c72d4ea4b3d54652df182eda49b082678d02e3 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x1 (heuristic scan, no source). Contract may be destroyable — funds/tokens could be locked or the rug pulle",
+    "at": "2026-09-25T21:15:47.440Z"
+  },
+  "4663:0xd71500d59ab6eb99ca7074efd042b8baee9bf2b2": {
+    "reason": "rug-check 4663:0xd71500d59ab6eb99ca7074efd042b8baee9bf2b2\ntarget scanned : 0xd71500d59ab6eb99ca7074efd042b8baee9bf2b2 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function setMintOpen() is external but owner-gated — owner can mint arbitrarily (supply-inflation rug risk).\n[INFO] bytecode:clean-opcodes\n  Heuristic opcode scan found no SELFDESTRU",
+    "at": "2026-09-25T21:20:47.440Z"
+  },
+  "4663:0xd10cd9471227eae0abb6e91addec4cf01054e0b6": {
+    "reason": "rug-check 4663:0xd10cd9471227eae0abb6e91addec4cf01054e0b6\ntarget scanned : 0xd10cd9471227eae0abb6e91addec4cf01054e0b6 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: oo deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables. --> src/VoicreditsRenderer.sol:208:76: | 208 | '\"image\":\"data:image/svg+xml;base64",
+    "at": "2026-09-25T23:00:47.216Z"
+  },
+  "4663:0x76a1a25ca4527e5ef2e2504dd5fe8a34155abaf9": {
+    "reason": "rug-check 4663:0x76a1a25ca4527e5ef2e2504dd5fe8a34155abaf9\ntarget scanned : 0x76a1a25ca4527e5ef2e2504dd5fe8a34155abaf9 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:tx-origin-auth\n  Function validateTransfer() uses tx.origin for authorization — phishable and unsafe in composable contexts.\n[MEDIUM] heuristic:public-free-mint\n  Function claim() is external with no acce",
+    "at": "2026-09-25T23:20:47.220Z"
+  },
+  "4663:0x3e1cbdab3057a08547495bb0ebca9dd8504c808d": {
+    "reason": "rug-check 4663:0x3e1cbdab3057a08547495bb0ebca9dd8504c808d\ntarget scanned : 0x3e1cbdab3057a08547495bb0ebca9dd8504c808d (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owner-controlled-mint\n  Function setMintPaused() is external but owner-gated — owner can mint ar",
+    "at": "2026-09-26T00:45:47.253Z"
+  },
+  "4663:0x5637c6673c35e7d89ba4ad02aeb57e350f949342": {
+    "reason": "rug-check 4663:0x5637c6673c35e7d89ba4ad02aeb57e350f949342\ntarget scanned : 0x5637c6673c35e7d89ba4ad02aeb57e350f949342 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: .InvalidCompilation: Invalid solc compilation Error: Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables. --> contracts/CroqArt.",
+    "at": "2026-09-26T00:50:46.964Z"
+  },
+  "4663:0x87f708bcdceb2b9363bb35ba468291697863731b": {
+    "reason": "rug-check 4663:0x87f708bcdceb2b9363bb35ba468291697863731b\ntarget scanned : 0x87f708bcdceb2b9363bb35ba468291697863731b (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function setMinter() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opcod",
+    "at": "2026-09-26T01:00:47.297Z"
+  },
+  "8453:0x3b3554e8af62badb5dc4bc8b76b935288b73abf7": {
+    "reason": "rug-check 8453:0x3b3554e8af62badb5dc4bc8b76b935288b73abf7\ntarget scanned : 0x76f33cBe93A3247192F480F1b5493332a627106e (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x76f33cBe93A3247192F480F1b5493332a627106e (resolved via blockscout-implementations, name NftReceipt). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no iss",
+    "at": "2026-09-26T02:50:47.824Z"
+  },
+  "4663:0x076815c57a1d8384ef794f99eff5d47759af36c8": {
+    "reason": "rug-check 4663:0x076815c57a1d8384ef794f99eff5d47759af36c8\ntarget scanned : 0x076815c57a1d8384ef794f99eff5d47759af36c8 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:tx-origin-auth\n  Function validateTransfer() uses tx.origin for authorization — phishable and unsafe in composable contexts.\n[MEDIUM] heuristic:public-free-mint\n  Function claimFree() is external with no ",
+    "at": "2026-09-26T03:45:47.031Z"
+  },
+  "4663:0xc21df1bb620ebe7f5ae0144df50de28ce0d47ae7": {
+    "reason": "rug-check 4663:0xc21df1bb620ebe7f5ae0144df50de28ce0d47ae7\ntarget scanned : 0xc21df1bb620ebe7f5ae0144df50de28ce0d47ae7 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable target. [bytecode second opinion]\n\nFlagged",
+    "at": "2026-09-26T05:05:47.005Z"
+  },
+  "8453:0xf558cf0b79d5827bb988a469a9bc68bc493e3e29": {
+    "reason": "rug-check 8453:0xf558cf0b79d5827bb988a469a9bc68bc493e3e29\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-26T07:00:46.426Z"
+  },
+  "8453:0x205f39b60bc784afd5513207a34058e097c9b871": {
+    "reason": "rug-check 8453:0x205f39b60bc784afd5513207a34058e097c9b871\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-26T11:10:46.600Z"
+  },
+  "8453:0xc909a19e3ce11841d46e9206f5fd9fe2bc9b36b5": {
+    "reason": "rug-check 8453:0xc909a19e3ce11841d46e9206f5fd9fe2bc9b36b5\ntarget scanned : 0x9fF96012e027A05bc77d2Eb25436CBeDfd3776D4 (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x9fF96012e027A05bc77d2Eb25436CBeDfd3776D4 (resolved via blockscout-implementations, name PyramidV4Escrow). Whoever controls the proxy admin can replace this code.\n[HIGH] slither:arbitrary-send-eth\n  PyramidV4Escrow.withdraw() (contracts/upgrades/pyramid",
+    "at": "2026-09-26T11:31:12.290Z"
+  },
+  "4663:0x1c9b8f5717e72ae5c0e73e64794d79d09048b156": {
+    "reason": "rug-check 4663:0x1c9b8f5717e72ae5c0e73e64794d79d09048b156\ntarget scanned : 0x1c9b8f5717e72ae5c0e73e64794d79d09048b156 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owner-controlled-mint\n  Function delegateMint() is external but owner-gated — owner can mint arb",
+    "at": "2026-09-26T11:50:46.944Z"
+  },
+  "8453:0x86ec03f015c8b6e96577aa9e5fce041b11fe74c9": {
+    "reason": "rug-check 8453:0x86ec03f015c8b6e96577aa9e5fce041b11fe74c9\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-26T12:30:47.360Z"
+  },
+  "8453:0x525662d014d05cd83ae3200af49e7890ca8bc5f3": {
+    "reason": "rug-check 8453:0x525662d014d05cd83ae3200af49e7890ca8bc5f3\ntarget scanned : 0x525662d014d05cd83ae3200af49e7890ca8bc5f3 (bytecode only)\nverdict        : FLAGGED\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x2 (heuristic scan, no source). Contract may be destroyable — funds/tokens could be locked or the rug pulle",
+    "at": "2026-09-26T12:30:47.360Z"
+  },
+  "8453:0xb6f4cea5576df4bee3e41a5bdd412ce3e58a0b08": {
+    "reason": "rug-check 8453:0xb6f4cea5576df4bee3e41a5bdd412ce3e58a0b08\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-26T13:00:47.662Z"
+  },
+  "4663:0x18d4d831ca89672126172b73ba05f5a318ad5a72": {
+    "reason": "rug-check 4663:0x18d4d831ca89672126172b73ba05f5a318ad5a72\ntarget scanned : 0x18d4d831ca89672126172b73ba05f5a318ad5a72 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x2 with no proxy markers (heuristic scan, no source). Executed code may come from an untrusted/swapable target. [bytecode second opinion]\n\nFlagged",
+    "at": "2026-09-26T13:26:00.591Z"
+  },
+  "8453:0xf1b90d25e284a1b04be41778a7b0467fcc50dd43": {
+    "reason": "rug-check 8453:0xf1b90d25e284a1b04be41778a7b0467fcc50dd43\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-26T13:30:47.456Z"
+  },
+  "8453:0x5b51cf49cb48617084ef35e7c7d7a21914769ff1": {
+    "reason": "rug-check 8453:0x5b51cf49cb48617084ef35e7c7d7a21914769ff1\ntarget scanned : 0x5b51cf49cb48617084ef35e7c7d7a21914769ff1 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is public with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[HIGH] heuristic:owner-controlled-",
+    "at": "2026-09-26T13:40:47.423Z"
+  },
+  "8453:0xd6dca2d133f824d455e88349b61c1f639e3526cf": {
+    "reason": "rug-check 8453:0xd6dca2d133f824d455e88349b61c1f639e3526cf\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace this code.\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and rep",
+    "at": "2026-09-26T14:45:47.703Z"
+  },
+  "4663:0xae4a232ff07611761343e97821688853f70deb5d": {
+    "reason": "rug-check 4663:0xae4a232ff07611761343e97821688853f70deb5d\ntarget scanned : 0xae4a232ff07611761343e97821688853f70deb5d (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function delegateMint() is external but owner-gated — owner can mint arbitrarily (supply-inflation rug risk).\n[INFO] bytecode:clean-opcodes\n  Heuristic opcode scan found no SELFDESTR",
+    "at": "2026-09-26T15:28:56.007Z"
+  },
+  "4663:0x7562811ce6ae19abf90a5a98b4349fec68da6786": {
+    "reason": "rug-check 4663:0x7562811ce6ae19abf90a5a98b4349fec68da6786\ntarget scanned : 0x7562811ce6ae19abf90a5a98b4349fec68da6786 (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function delegateMint() is external but owner-gated — owner can mint arbitrarily (supply-inflation rug risk).\n[INFO] bytecode:clean-opcodes\n  Heuristic opcode scan found no SELFDESTR",
+    "at": "2026-09-26T15:48:16.557Z"
+  },
+  "4663:0x5d8acde2d212865900a5fab3ec3f245f02c1017c": {
+    "reason": "rug-check 4663:0x5d8acde2d212865900a5fab3ec3f245f02c1017c\ntarget scanned : 0x5d8acde2d212865900a5fab3ec3f245f02c1017c (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function setMinter() is external but owner-gated — owner can mint arbitrarily (supply-inflation rug risk).\n[HIGH] heuristic:owner-withdraw-sweep\n  Function rescue() is owner-gated an",
+    "at": "2026-09-26T15:53:36.633Z"
+  },
+  "4663:0x273d6e6f6e0ca91fd6dab44dca092147251faadd": {
+    "reason": "rug-check 4663:0x273d6e6f6e0ca91fd6dab44dca092147251faadd\ntarget scanned : 0x273d6e6f6e0ca91fd6dab44dca092147251faadd (verified source)\nverdict        : FLAGGED\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mintSeaDrop() is external with no access control and no payment check — anyone can mint (dilution risk; also matches free-mint-hunter target profile).\n[INFO] bytecode:clean-opc",
+    "at": "2026-09-26T16:30:48.945Z"
+  }
+}

@@ -1,0 +1,362 @@
+{
+  "generatedAt": "2026-09-24T17:42:54.536Z",
+  "chain": "robinhood",
+  "chainId": 4663,
+  "readOnly": true,
+  "dry": true,
+  "coverage": [
+    "DEGRADED: OpenSea drops API unavailable (HTTP 401: {\"errors\":[\"Missing an API Key, which is required for this request.\"]}). Signal 1 (upcoming drops, hours early) and the drops-API legs of signals 2/3 are offline. Onchain legs below still work; no scores are fabricated for missing data.",
+    "DEGRADED: contract source-verification unavailable (Sourcify 404s for chain 4663; Blockscout API is Cloudflare-gated). Legitimacy is scored on onchain name()/symbol() only.",
+    "OK: eth_getLogs scanned blocks 71553564..71556564 (3000 blocks, ~5 min window), 4708 mint Transfer events from 0x0.",
+    "skip 0x0bd7d308f8e1639fab988df18a8011f41eacad73: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0xd9d674b04a72affe00e06385535eaac10b988fca: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0xd5ccf02a38fa65d843eebebe6bc3ffc2687c8063: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0xbeeff033f34c046626b8d0a041844c5d1a5409dd: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0x791229e3ebd6cfdc3d8157f48722684173c29ad9: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0x803b4ff6234224b14b89d97b859863d0c528b5a7: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0xc57aa24860b56eae71e1e3e6d558d9c3f238d07c: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0x4fdbdaf4800fc28c22a967d23a343acce34315a4: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0x8db244f6bf052571f4e0c6065b700e714092d4b6: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0x8cf7bae9ac9d3e8bf81debcd2b6171335b0d7fc3: not ERC-721/1155 (likely ERC-20 or nonstandard)",
+    "skip 0xf973b83766e8d93d67e0c1e8eb4b25f2b6b91e06: not ERC-721/1155 (likely ERC-20 or nonstandard)"
+  ],
+  "minScore": 30,
+  "alerts": [
+    {
+      "name": "JeanPhil Punks",
+      "symbol": "JEANPUNKS",
+      "contract": "0x49be85cac42de65455448f705baec9f64aa55f71",
+      "standard": "ERC721",
+      "score": 80,
+      "breakdown": {
+        "uniqueMinters_30": 30,
+        "velocity_20": 20,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 0
+      },
+      "risk": {
+        "whaleShare": 0.046,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "upcoming",
+      "free": "no",
+      "priceWei": "400000000000000",
+      "price": "0.0004 ETH",
+      "startTime": "2026-09-24T17:45:09.000Z",
+      "endTime": "2026-09-28T17:45:09.000Z",
+      "seaDrop": true,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 409,
+        "uniqueMinters": 409,
+        "mintsPerHour": 4875.5,
+        "sampleTokenId": "1564"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0x49be85cac42de65455448f705baec9f64aa55f71/1564",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0x49be85cac42de65455448f705baec9f64aa55f71"
+      }
+    },
+    {
+      "name": "Tessa",
+      "symbol": "Tessa",
+      "contract": "0xbca2555613b7627b6c6f4fdae5a7ef9eab1a5c35",
+      "standard": "ERC721",
+      "score": 74.3,
+      "breakdown": {
+        "uniqueMinters_30": 4.4,
+        "velocity_20": 20,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 20
+      },
+      "risk": {
+        "whaleShare": 0.141,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "live",
+      "free": "yes",
+      "priceWei": "0",
+      "price": "0 ETH",
+      "startTime": "2026-09-24T17:38:48.000Z",
+      "endTime": "2026-09-24T17:43:48.000Z",
+      "seaDrop": true,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 142,
+        "uniqueMinters": 29,
+        "mintsPerHour": 1692.7,
+        "sampleTokenId": "1"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0xbca2555613b7627b6c6f4fdae5a7ef9eab1a5c35/1",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0xbca2555613b7627b6c6f4fdae5a7ef9eab1a5c35"
+      }
+    },
+    {
+      "name": "Uniswap v4 Positions NFT",
+      "symbol": "UNI-V4-POSM",
+      "contract": "0x58daec3116aae6d93017baaea7749052e8a04fa7",
+      "standard": "ERC721",
+      "score": 64.2,
+      "breakdown": {
+        "uniqueMinters_30": 8.3,
+        "velocity_20": 20,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 6
+      },
+      "risk": {
+        "whaleShare": 0.265,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "unknown (direct mint)",
+      "free": "unknown",
+      "priceWei": null,
+      "price": "unknown",
+      "startTime": null,
+      "endTime": null,
+      "seaDrop": false,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 98,
+        "uniqueMinters": 55,
+        "mintsPerHour": 1168.2,
+        "sampleTokenId": "3216544"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0x58daec3116aae6d93017baaea7749052e8a04fa7/3216544",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0x58daec3116aae6d93017baaea7749052e8a04fa7"
+      }
+    },
+    {
+      "name": "BAKKA BOT",
+      "symbol": "ba",
+      "contract": "0xee9a62feae9940a3c2316ff192da2589d905040f",
+      "standard": "ERC721",
+      "score": 63.5,
+      "breakdown": {
+        "uniqueMinters_30": 2,
+        "velocity_20": 11.5,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 20
+      },
+      "risk": {
+        "whaleShare": 0.345,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "live",
+      "free": "yes",
+      "priceWei": "0",
+      "price": "0 ETH",
+      "startTime": "2026-09-24T17:37:19.000Z",
+      "endTime": "2026-09-25T17:38:19.000Z",
+      "seaDrop": true,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 29,
+        "uniqueMinters": 13,
+        "mintsPerHour": 345.7,
+        "sampleTokenId": "1"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0xee9a62feae9940a3c2316ff192da2589d905040f/1",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0xee9a62feae9940a3c2316ff192da2589d905040f"
+      }
+    },
+    {
+      "name": "CryptoP0ns",
+      "symbol": "CPons",
+      "contract": "0xe1dd28bb9c61dac72f7a47f0a2c712eb4976ec2f",
+      "standard": "ERC721",
+      "score": 61.5,
+      "breakdown": {
+        "uniqueMinters_30": 11.6,
+        "velocity_20": 20,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 0
+      },
+      "risk": {
+        "whaleShare": 0.078,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "upcoming",
+      "free": "no",
+      "priceWei": "380000000000000",
+      "price": "0.00038 ETH",
+      "startTime": "2026-09-24T18:30:00.000Z",
+      "endTime": "2026-09-25T04:30:00.000Z",
+      "seaDrop": true,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 77,
+        "uniqueMinters": 77,
+        "mintsPerHour": 917.9,
+        "sampleTokenId": "1836"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0xe1dd28bb9c61dac72f7a47f0a2c712eb4976ec2f/1836",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0xe1dd28bb9c61dac72f7a47f0a2c712eb4976ec2f"
+      }
+    },
+    {
+      "name": "up Position NFT",
+      "symbol": "UP-POS",
+      "contract": "0x07f44c47743a2f36414a82b9f558ecfcf0eedcef",
+      "standard": "ERC721",
+      "score": 52.2,
+      "breakdown": {
+        "uniqueMinters_30": 2.7,
+        "velocity_20": 13.5,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 6
+      },
+      "risk": {
+        "whaleShare": 0.206,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "unknown (direct mint)",
+      "free": "unknown",
+      "priceWei": null,
+      "price": "unknown",
+      "startTime": null,
+      "endTime": null,
+      "seaDrop": false,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 34,
+        "uniqueMinters": 18,
+        "mintsPerHour": 405.3,
+        "sampleTokenId": "186418"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0x07f44c47743a2f36414a82b9f558ecfcf0eedcef/186418",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0x07f44c47743a2f36414a82b9f558ecfcf0eedcef"
+      }
+    },
+    {
+      "name": "HOODY MOODY",
+      "symbol": "MOOD",
+      "contract": "0xf3b19fed4466c27d8cafd9d4b81595609c1cc711",
+      "standard": "ERC721",
+      "score": 41.5,
+      "breakdown": {
+        "uniqueMinters_30": 1.5,
+        "velocity_20": 4,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 6
+      },
+      "risk": {
+        "whaleShare": 0.2,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "unknown (direct mint)",
+      "free": "unknown",
+      "priceWei": null,
+      "price": "unknown",
+      "startTime": null,
+      "endTime": null,
+      "seaDrop": false,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 10,
+        "uniqueMinters": 10,
+        "mintsPerHour": 119.2,
+        "sampleTokenId": "7"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0xf3b19fed4466c27d8cafd9d4b81595609c1cc711/7",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0xf3b19fed4466c27d8cafd9d4b81595609c1cc711"
+      }
+    },
+    {
+      "name": "NEON ONI",
+      "symbol": "NEONONI",
+      "contract": "0x2dafb4c7db99596c1aa5d9b02d6862f8d2a9ed07",
+      "standard": "ERC721",
+      "score": 39.3,
+      "breakdown": {
+        "uniqueMinters_30": 2.6,
+        "velocity_20": 6.8,
+        "age_15": 15,
+        "legitimacy_15": 15,
+        "freeConfidence_20": 0
+      },
+      "risk": {
+        "whaleShare": 0.118,
+        "vetoApplied": false,
+        "vetoFactor": 1
+      },
+      "phase": "upcoming",
+      "free": "no",
+      "priceWei": "4000000000000000",
+      "price": "0.004 ETH",
+      "startTime": "2026-09-24T23:08:29.000Z",
+      "endTime": "2026-10-01T23:08:29.000Z",
+      "seaDrop": true,
+      "signals": [
+        "live-mint",
+        "new-collection"
+      ],
+      "observed": {
+        "windowBlocks": 3000,
+        "windowMinutes": 5,
+        "mints": 17,
+        "uniqueMinters": 17,
+        "mintsPerHour": 202.6,
+        "sampleTokenId": "184"
+      },
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0x2dafb4c7db99596c1aa5d9b02d6862f8d2a9ed07/184",
+        "blockscout": "https://robinhoodchain.blockscout.com/address/0x2dafb4c7db99596c1aa5d9b02d6862f8d2a9ed07"
+      }
+    }
+  ]
+}

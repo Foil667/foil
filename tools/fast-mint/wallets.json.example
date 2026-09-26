@@ -1,0 +1,12 @@
+[
+  {
+    "label": "foil",
+    "apiKeyEnvVar": "BANKR_API_KEY_FOIL",
+    "address": "0x6573682faee72a4a96e791ba262439f1df3a268d"
+  },
+  {
+    "label": "foil-2",
+    "apiKeyEnvVar": "BANKR_API_KEY_FOIL_2",
+    "address": "0xREPLACE_WITH_SECOND_WALLET_ADDRESS"
+  }
+]

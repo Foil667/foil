@@ -1,8 +1,0 @@
-{
-  "schema_version": "hatch.probe_ui_session.v1",
-  "socket": "/home/hatch/workspace/ts-spaces/nft-mint-site-demo/.harness/probe-ui/sock",
-  "slug": "nft-mint-site-demo",
-  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-1377cede-9e60-4716-9f27-b6e2ce2f94c5/",
-  "audit_session_id": "7616e43d-8745-4528-81af-3fb5cd29c218",
-  "pid": 1973
-}

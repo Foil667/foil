@@ -1,8 +1,0 @@
-{
-  "runtime": "static",
-  "platformVersion": 15,
-  "entry": "index.html",
-  "name": "Tinfoil Scan — Foil's free wallet drainer checker",
-  "slug": "tinfoil-scan-foil-s-free-wallet-drainer-checker",
-  "managedCronJobs": []
-}

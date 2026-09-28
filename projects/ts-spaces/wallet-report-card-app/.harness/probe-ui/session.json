@@ -1,8 +1,0 @@
-{
-  "schema_version": "hatch.probe_ui_session.v1",
-  "socket": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/probe-ui/sock",
-  "slug": "wallet-report-card-app",
-  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-cf9ed416-af3f-4e4b-8acc-7670157594b2/",
-  "audit_session_id": "515b1748-5478-43cf-967c-3f18543fe4f7",
-  "pid": 8562
-}

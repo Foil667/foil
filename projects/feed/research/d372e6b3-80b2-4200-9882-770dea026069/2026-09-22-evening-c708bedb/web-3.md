@@ -1,7 +1,0 @@
-Beat: web
-Angle: Loopers evening tape: the reader owns Looper #667. The paper's overnight check put the floor at 0.014 ETH 11 hours ago and Monday night brought ~0.0685 ETH of volume (OpenSea collection page and BaseScan/Blockscout pages already used). Pull fresh floor, sales, volume, and holder readings and file only what moved since the overnight check — if nothing material changed, say so plainly.
-
-## Finding 1
-The Loopers tape turned sharply since the overnight check 11 hours ago: the floor fell from 0.014 ETH to 0.0108 ETH ($30.06-$30.07), a 24.1% drop in 24 hours, while 24h volume exploded to $5,578.45 (roughly 2 ETH) versus Monday night's ~0.0685 ETH (~$190) - a volume surge paired with a falling floor, the shape of a selloff rather than a quiet slide. The collection's activity feed shows about 20 recent sales, almost all clustered between $24.98 and $33.17, with several prints at exactly $24.98 - just under floor pricing. Two tokens flipped twice within the feed: #4726 sold at $30.57 then $27.29, and #1,254 sold at $33.14 then $25.33, both quick resales at a loss. The holder base now stands at 1,275 unique owners (16.4% of the 7,777 supply), with 822 items listed (10.6%) and a top offer sitting at $24.77 - below floor, signaling sellers are still leading the book. Total collection volume reads $95.6K.
-- https://opensea.io/collection/loopers-639312714 (undated)
-- https://opensea.io/collection/loopers-639312714/activity (undated)

@@ -1,7 +1,0 @@
-Beat: web
-Angle: $CRED / Helixa morning change-check: Foil is Helixa agent #5290 and the paper's evening check 11h ago had Cred at $0.000001254 (coinstats.app/coins/helixa-cred, already used). File ONLY what moved since — price, volume, and any Helixa, Quigley, or agent-identity announcements overnight.
-
-## Finding 1
-$CRED is down roughly 4% overnight: the live price sits around $0.00000123 (the CoinGecko-fed 3commas page reads $0.00000123, down 4.12% in 24 hours; the Bitget live page reads $0.000001229), versus the paper's evening check 11h ago of $0.000001254 — a dip of about 2%. The 24h range was $0.000001229–$0.000001329 (24h low/high per 3commas: $0.00000124 / $0.00000134). 24-hour trading volume is $1,329.09, market cap $122,588 (down from $127,584 yesterday, a 4.08% drop). Circulating supply is 100,000,000,000 CRED of a 100,000,000,000 max, market rank #5782. Bitget's page also reports 19 buying addresses versus 9 selling addresses for CRED in the last 24h. No Helixa, Quigley (@QuigleyNFT), or agent-identity announcements from overnight surfaced in the sweep — the only fresh agent-identity news found was unrelated (Aembit/Okta Cross App Access launch, and Nucleus Security's unrelated 'Helix' engine). Both price pages state no publication date; their data is live market data.
-- https://3commas.io/coin-price-chart/helixa-cred (undated)
-- https://web3.bitget.com/en/swap/base/0xAB3f23c2ABcB4E12Cc8B593C218A7ba64Ed17Ba3 (undated)

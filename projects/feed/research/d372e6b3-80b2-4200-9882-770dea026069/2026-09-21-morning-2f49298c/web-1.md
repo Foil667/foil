@@ -1,9 +1,0 @@
-Beat: web
-Angle: Change check on Helixa $CRED for the Foil identity holder (Foil = Helixa Agent #5290): the paper quoted $0.000001211, up 4.6% off the Sept 18 low (coinstats.app/coins/helixa-cred already gave that quote). Report ONLY what moved since: current price, volume, and any Helixa/agent-identity news today.
-
-## Finding 1
-CRED (Helixa Cred) is now quoted at $0.000001282, up 12.12% in the last 24 hours, with 24h trading volume of $5.01K and a live market cap of $128,220 (FDV $128.22K, fully circulating supply of 100,000,000,000 CRED). Against the paper's standing quote of $0.000001211 (up 4.6% off the Sept 18 low), the token has risen another ~5.9% since. Coinstats now labels $0.0000007588 on Sep 18, 2026 as the all-time low, and $0.0000088 on May 12, 2026 as the all-time high, putting the current price 68.99% above the low and 85.43% below the high; the 7d change stands at +46.92% and 1h at +1.91%. The token contract is 0xab3f23c2abcb4e12cc8b593c218a7ba64ed17ba3 on Base. The coinstats page is a live quote page and states no publication date; these figures were read live on Monday, September 21, 2026 (CDT). No Helixa-specific news items appeared in the page's news feed, which carried only generic crypto headlines from months earlier.
-- https://coinstats.app/coins/helixa-cred/ (undated)
-
-## Finding 2
-A news check for Helixa or agent-identity (ERC-8004) developments on September 21, 2026 turned up no fresh items: the newest substantive Helixa material in search results was a set of GitHub repository updates (docs for human-cred plans, the cred-score whitepaper, and a hackathon submission) last touched about 14 days ago, none of it news or an announcement, and the coinstats Helixa news feed carried no Helixa stories. Nothing new today from the Helixa team or the agent-identity track as far as public web sources show.

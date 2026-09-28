@@ -1,8 +1,0 @@
-{
-  "schema_version": "hatch.probe_ui_session.v1",
-  "socket": "/home/hatch/workspace/ts-spaces/loopers-deep-dive/.harness/probe-ui/sock",
-  "slug": "loopers-deep-dive",
-  "url": "https://62d2e637-81ea-4abf-9174-9030eb32cc84.metaaivm.com:4431/spaces/v2/hatch-audit-54df1d21-076d-4229-94a5-d50f270c2b71/",
-  "audit_session_id": "5eabadd9-df1a-4a10-940b-ef6d94b61f98",
-  "pid": 5226
-}

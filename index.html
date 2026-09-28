@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Looper Rescue — Trust nothing. Verify everything.</title>
+<meta name="description" content="Read-only stuck-asset scanner for Base. Never asks for your wallet, keys, or signatures.">
+<link rel="icon" type="image/webp" href="logo.webp">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <img src="logo.webp" alt="RESCUE token logo — a neon-green life preserver with a tinfoil hat" class="logo" width="64" height="64">
+    <div>
+      <h1 class="wordmark">LOOPER <span class="neon">RESCUE</span></h1>
+      <p class="tagline">Trust nothing. Verify everything. Recover what's yours.</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ SCANNER ============ -->
+  <section class="card" id="scan-section" aria-labelledby="scan-h">
+    <h2 id="scan-h">Stuck-asset scanner <span class="pill">READ-ONLY</span></h2>
+    <p class="lede">
+      Paste any Base address. The scanner reads <strong>public chain data only</strong> —
+      native ETH, ERC-20s, ERC-721s, ERC-1155s, unfinished Base&nbsp;&rarr;&nbsp;L1 withdrawals,
+      and unclaimed Merkl rewards. It never asks for a wallet, a signature, or a key.
+    </p>
+    <form id="scan-form" novalidate>
+      <label class="field-label" for="addr-input">Address to scan (Base)</label>
+      <div class="input-row">
+        <input id="addr-input" class="mono" type="text" inputmode="text" autocomplete="off"
+               spellcheck="false" placeholder="0x…" aria-describedby="addr-hint">
+        <button id="scan-btn" type="submit">Scan</button>
+      </div>
+      <p class="hint" id="addr-hint">Format: <span class="mono">0x</span> followed by 40 hex characters.</p>
+      <p class="form-error" id="addr-error" role="alert" hidden></p>
+    </form>
+    <div id="progress" class="progress" hidden>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="mono progress-text" id="progress-text">starting…</p>
+    </div>
+    <p class="scope-note">
+      Scan depth: last ~2,000,000 Base blocks (~46 days). A full-history deep scan is on the roadmap —
+      anything older than that window is <strong>not</strong> covered by this scan.
+    </p>
+    <div id="findings" aria-live="polite"></div>
+  </section>
+
+  <!-- ============ $RESCUE ============ -->
+  <section class="card" id="rescue-panel" aria-labelledby="rescue-h">
+    <h2 id="rescue-h">$RESCUE <span class="pill">LIVE TOKEN</span></h2>
+    <div class="rescue-grid">
+      <div>
+        <dl class="kv">
+          <div><dt>Contract (Base)</dt>
+            <dd class="mono"><a href="https://basescan.org/token/0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3" target="_blank" rel="noopener">0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3</a></dd></div>
+          <div><dt>Pool</dt><dd>Uniswap V4 via Doppler</dd></div>
+          <div><dt>Pool id</dt>
+            <dd class="mono small">0x7d5e38d1a39566b688de2e126fbdfc93560abe20db8dd0447bf5a4386581ce0e</dd></div>
+          <div><dt>Supply</dt><dd>100,000,000,000 fixed · 18 decimals</dd></div>
+        </dl>
+      </div>
+      <div class="price-box" aria-live="polite">
+        <h3>Market</h3>
+        <div id="rescue-price"><p class="muted">Loading market data…</p></div>
+        <p class="fineprint">Price via DEXScreener. If the token isn't indexed there yet, no price is shown —
+          a missing price is not a $0 price.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROADMAP ============ -->
+  <section class="card roadmap" aria-labelledby="roadmap-h">
+    <h2 id="roadmap-h">Roadmap <span class="pill pill-warn">NOT LIVE</span></h2>
+    <p class="lede">
+      The following were mentioned at the $RESCUE launch. <strong>They are not available in this app today.</strong>
+      Nothing below is promised on any timeline. Today this app does exactly two things:
+      <strong>read-only scanning</strong> (above) and <strong>linking you to the official apps</strong> where
+      recovery actually happens.
+    </p>
+    <ul class="roadmap-list">
+      <li><strong>One-click recovery execution</strong> — not live. Recovery today means using the official links below yourself.</li>
+      <li><strong>$RESCUE fee discounts</strong> — not live. No fee mechanism exists yet.</li>
+      <li><strong>Rescuer staking</strong> — not live. There is no staking contract.</li>
+      <li><strong>Proof-of-Rescue rewards</strong> — not live. No reward distribution exists.</li>
+    </ul>
+  </section>
+
+  <!-- ============ OFFICIAL RECOVERY LINKS ============ -->
+  <section class="card" aria-labelledby="links-h">
+    <h2 id="links-h">Official recovery routes</h2>
+    <p class="lede">The scanner finds things. <strong>Recovery happens in the official apps</strong> — never here, never via a DM, never via a link someone sends you.</p>
+    <ul class="link-list">
+      <li><a href="https://bridge.base.org" target="_blank" rel="noopener">bridge.base.org</a> — official Base bridge: finish or track withdrawals</li>
+      <li><a href="https://merkl.xyz" target="_blank" rel="noopener">merkl.xyz</a> — official Merkl app: claim unclaimed rewards</li>
+      <li><a href="https://basescan.org" target="_blank" rel="noopener">basescan.org</a> — block explorer: verify any address, tx, or token</li>
+      <li><a href="https://docs.base.org" target="_blank" rel="noopener">docs.base.org</a> — official docs, including withdrawal guides</li>
+    </ul>
+  </section>
+
+  <!-- ============ SAFETY ============ -->
+  <section class="card safety" aria-labelledby="safety-h">
+    <h2 id="safety-h">Safety notice</h2>
+    <p><strong>READ-ONLY — this app never asks for your wallet, keys, or signatures.</strong>
+      Recoveries happen only through the official apps linked above. If any site claiming to be
+      Looper Rescue asks you to connect a wallet or sign anything, it is a scam — close it.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Built by Foil · Looper #667 · <a href="https://x.com/Foil667" target="_blank" rel="noopener">@Foil667</a></p>
+    <p class="muted">Not financial advice. Verify everything.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

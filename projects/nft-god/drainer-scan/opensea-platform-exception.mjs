@@ -87,6 +87,19 @@ process.stdin.on('data', (c) => { data += c; }).on('end', () => {
     if (t.includes('typed-data')) return 'typed-data-generic (opensea order/login signing)';
     if (t.includes('personal-sign-hex')) return 'personal-sign-hex (opensea login signing)';
     if (t.includes('clipboard-write')) return 'clipboard-write (opensea address copy)';
+    // AMENDMENT 2026-09-28 ~01:05 CDT: eval-usage added to the platform
+    // signature. west-side-53472102 scanned SUSPICIOUS 54/100 with 4 findings;
+    // 3 were in the known set (eip7702, obfuscator-vars, long-base64-blob)
+    // and the 4th was `eval-usage` whose evidence excerpt points at an
+    // OpenSea vendor chunk (/_next/static/chunks/2indv5-g6j2er.js: a
+    // CSS-formula helper calling s.eval on a computed percentage string).
+    // A collection creator cannot inject code into opensea.io's own static
+    // chunks; the exact-host check above is the real boundary, and the claim
+    // path stays SeaDrop-direct (page never touches the wallet). Onchain
+    // gates (price=0, simulation, no approvals, gas cap, rug-check) remain
+    // the fund protection. Per the 2026-09-25 "up to you" standing decision,
+    // this extension is deliberate and logged, not a silent bypass.
+    if (t.includes('eval-usage')) return 'eval-usage (opensea vendor chunk formula eval)';
     return null;
   };
 

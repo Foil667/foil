@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "erc-8048-rabbit-hole",
+  "session_id": "c944244b-6fbf-4723-8971-773b2a24c66d",
+  "observes": 1,
+  "acts": 2,
+  "acts_ok": 2,
+  "interactive_nodes": 8,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

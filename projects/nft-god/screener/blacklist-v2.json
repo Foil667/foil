@@ -1102,5 +1102,37 @@
   "8453:0x5de9e6aeb9f5fca85de8c76ef7352667e24fa337": {
     "reason": "rug-check 8453:0x5de9e6aeb9f5fca85de8c76ef7352667e24fa337\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
     "at": "2026-09-28T01:50:23.542Z"
+  },
+  "4663:0xf777999ade39f89b04422a49f759ca5746e9f94c": {
+    "reason": "rug-check 4663:0xf777999ade39f89b04422a49f759ca5746e9f94c\ntarget scanned : 0xf777999ade39f89b04422a49f759ca5746e9f94c (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). ",
+    "at": "2026-09-28T02:10:46.396Z"
+  },
+  "8453:0xe856f07701f8dc39ee6b468f57cf190b6319372e": {
+    "reason": "rug-check 8453:0xe856f07701f8dc39ee6b468f57cf190b6319372e\ntarget scanned : 0xe856f07701f8dc39ee6b468f57cf190b6319372e (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-09-28T09:15:45.622Z"
+  },
+  "4663:0xe13ecc3b0223c292cbd8824af6972b349abc0c3b": {
+    "reason": "rug-check 4663:0xe13ecc3b0223c292cbd8824af6972b349abc0c3b\ntarget scanned : 0xe13ecc3b0223c292cbd8824af6972b349abc0c3b (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-09-28T10:41:45.645Z"
+  },
+  "8453:0x04c9e2204286720fe7527d3db58fdf2baf9d25b1": {
+    "reason": "rug-check 8453:0x04c9e2204286720fe7527d3db58fdf2baf9d25b1\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-28T11:15:45.387Z"
+  },
+  "8453:0xec04bedeec2f23307bba10468822d5b76a4284f5": {
+    "reason": "rug-check 8453:0xec04bedeec2f23307bba10468822d5b76a4284f5\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-28T13:00:46.269Z"
+  },
+  "4663:0x78c4dab6908ec9ad708690f100446498cec025c7": {
+    "reason": "rug-check 4663:0x78c4dab6908ec9ad708690f100446498cec025c7\ntarget scanned : 0x78c4dab6908ec9ad708690f100446498cec025c7 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-09-28T13:11:01.123Z"
+  },
+  "4663:0x89effb63578a09065c2bbfdd729e161be7d479da": {
+    "reason": "rug-check 4663:0x89effb63578a09065c2bbfdd729e161be7d479da\ntarget scanned : 0x89effb63578a09065c2bbfdd729e161be7d479da (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function claim() is external with no access control and no payment check — anyone can mint (d",
+    "at": "2026-09-28T14:00:45.148Z"
+  },
+  "4663:0xf8ecb1c3cfd4fc80e1c7e076df7688b03bf210bf": {
+    "reason": "rug-check 4663:0xf8ecb1c3cfd4fc80e1c7e076df7688b03bf210bf\ntarget scanned : 0xf8ecb1c3cfd4fc80e1c7e076df7688b03bf210bf (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-09-28T18:05:45.444Z"
   }
 }

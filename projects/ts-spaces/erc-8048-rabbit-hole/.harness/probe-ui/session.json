@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/erc-8048-rabbit-hole/.harness/probe-ui/sock",
+  "slug": "erc-8048-rabbit-hole",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-48c8f103-86d3-4ac4-83bb-926f0b263b37/",
+  "audit_session_id": "c944244b-6fbf-4723-8971-773b2a24c66d",
+  "pid": 16237
+}

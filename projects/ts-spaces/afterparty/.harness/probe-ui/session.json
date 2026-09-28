@@ -2,7 +2,7 @@
   "schema_version": "hatch.probe_ui_session.v1",
   "socket": "/home/hatch/workspace/ts-spaces/afterparty/.harness/probe-ui/sock",
   "slug": "afterparty",
-  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-08ba669d-0852-4765-8e17-b40a8c245b01/",
-  "audit_session_id": "fa353df3-85df-4c41-80cf-01915f934405",
-  "pid": 11739
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-05dcf720-66ae-460a-8202-81c3eb4d06fd/",
+  "audit_session_id": "3d36fc75-931e-474e-ad57-48356d1cb2f2",
+  "pid": 16935
 }

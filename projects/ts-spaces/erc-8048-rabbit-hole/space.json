@@ -1,0 +1,8 @@
+{
+  "runtime": "static",
+  "platformVersion": 15,
+  "entry": "index.html",
+  "name": "ERC-8048 Rabbit Hole",
+  "slug": "erc-8048-rabbit-hole",
+  "managedCronJobs": []
+}

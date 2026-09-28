@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "inspection_id": "5f4d3bca-cadf-4f9b-a1f9-9cafc173ee4f",
+  "slug": "afterparty",
+  "verbatim_request": "Gets stuck in the wall\n\nAdd more levels with increasing difficulty, different plot's and locations\n\nBoss sprites\n\nAbility to choose anti villain anti hero or hero or villain. I love what you've done. Make it better",
+  "diagnosis_outcome": "repair",
+  "state": "evidence_collected",
+  "created_at_ms": 1790561053578,
+  "inspector_agent_id": "98a15e59-c514-4ffe-b9e2-e350e9252a1c",
+  "inspector_message_id": "a3cbe6e8-b5eb-42cb-95fa-dfb7431db735",
+  "snapshot": {
+    "slug": "afterparty",
+    "current_build_id": "a654f02b-4efb-48c5-8779-37cf7649ed97",
+    "source_tree_fingerprint": "0c389fbbbe4b027285e742f257f5f00df6c34e4a2008ef5187acfc63828d7925",
+    "source_files": [
+      "assets/characters.png",
+      "assets/characters.webp",
+      "assets/props.png",
+      "assets/props.webp",
+      "index.html",
+      "space.json"
+    ],
+    "published_manifests": [
+      {
+        "path": ".space-build/manifest.json",
+        "exists": true,
+        "sha256": "d167da64165063a49a6f1c3ac58581363c506362779fdad11e583ebf51df2def",
+        "entrypoint": "index.html",
+        "entrypoint_exists": true
+      },
+      {
+        "path": ".space-build-cvm/manifest.json",
+        "exists": true,
+        "sha256": "b1335663d06b869959e9d1dd14d13c366064085efbc2f2d52fdde52372614f5c",
+        "entrypoint": "index.html",
+        "entrypoint_exists": true
+      }
+    ]
+  },
+  "evidence_path": "/home/hatch/workspace/space-inspections/5f4d3bca-cadf-4f9b-a1f9-9cafc173ee4f/evidence.json"
+}

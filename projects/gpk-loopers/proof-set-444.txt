@@ -1,0 +1,6 @@
+#667: MATCH traits_checked=7 mismatches=0 image=ok
+#5043: MATCH traits_checked=7 mismatches=0 image=ok
+#4571: MATCH traits_checked=7 mismatches=0 image=ok
+#5936: MATCH traits_checked=7 mismatches=0 image=ok (re-fetched; earlier mismatch was a bad OpenSea response, dataset confirmed correct)
+#1505: MATCH traits_checked=7 mismatches=0 image=ok
+#7378: MATCH traits_checked=7 mismatches=0 image=ok

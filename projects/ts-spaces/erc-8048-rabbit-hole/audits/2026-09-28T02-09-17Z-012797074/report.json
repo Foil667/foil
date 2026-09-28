@@ -1,0 +1,107 @@
+{
+  "ok": true,
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-48c8f103-86d3-4ac4-83bb-926f0b263b37/",
+  "duration_ms": 5313.666498,
+  "output_dir": "/home/hatch/workspace/ts-spaces/erc-8048-rabbit-hole/audits/2026-09-28T02-09-17Z-012797074",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/erc-8048-rabbit-hole/audits/2026-09-28T02-09-17Z-012797074/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/erc-8048-rabbit-hole/audits/2026-09-28T02-09-17Z-012797074/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/erc-8048-rabbit-hole/audits/2026-09-28T02-09-17Z-012797074/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [],
+    "mobile": []
+  },
+  "images": {
+    "total": 0,
+    "broken": [],
+    "duplicate": [],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 2,
+  "external_fetch_failure_samples": [
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap)"
+  ],
+  "blocked_requests": [],
+  "external_requests": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap",
+      "method": "GET",
+      "resource_type": "stylesheet"
+    }
+  ],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 4004,
+      "bytes_down": 2487
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 11,
+  "aria_snapshot": "- main:\n  - paragraph: Draft ERC · research snapshot 2026-09-28\n  - heading \"The NFT becomes its own machine-readable profile.\" [level=1]\n  - paragraph: \"ERC-8048 is a tiny onchain key–value interface with a large agentic ambition: put an agent’s context, endpoints and cross-chain accounts inside its token—without replacing ERC-8004’s trust machinery.\"\n  - link \"Start with the verdict ↓\":\n    - /url: \"#verdict\"\n  - link \"Open official spec ↗\":\n    - /url: https://eips.ethereum.org/EIPS/eip-8048\n  - text: \"TOKEN REGISTRY / ONCHAIN READ #667 ERC-721 agent token context → “I verify before I believe…” endpoint[mcp] → protocol URI address[chain-id] → 20-byte account account[chain-id][0] → token-bound account 8048\"\n  - navigation \"Page sections\":\n    - link \"Verdict\":\n      - /url: \"#verdict\"\n    - link \"Primitive\":\n      - /url: \"#primitive\"\n    - link \"8048 vs 8004\":\n      - /url: \"#comparison\"\n    - link \"Why it matters\":\n      - /url: \"#why\"\n    - link \"Timeline\":\n      - /url: \"#timeline\"\n    - link \"Risks\":\n      - /url: \"#risks\"\n    - link \"Ecosystem\":\n      - /url: \"#ecosystem\"\n    - link \"Your move\":\n      - /url: \"#move\"\n    - text: 8 min read\n  - complementary \"Research confidence\":\n    - strong: Signal, not consensus.\n    - paragraph: The core spec is concrete. Adoption is not. Most implementation evidence is still testnet, roadmap or anecdotal.\n    - text: SPEC STATUS ADOPTION MAINNET\n  - article:\n    - text: 00 / THE READ\n    - heading \"Watch closely. Pilot cheaply. Don’t migrate.\" [level=2]\n    - text: →\n    - heading \"ERC-8048 is a metadata add-on, not a new identity.\" [level=3]\n    - paragraph: Keep ERC-8004 as the canonical identity and trust rail. Mirror useful agent profile fields into ERC-8048 only when your NFT contract—or a sidecar—can support it cheaply. The technology is coherent; the ecosystem commitment is not yet proven.\n    - text: 01 / THE PRIMITIVE\n    - heading \"One read function. Arbitrary bytes. Auditable writes.\" [level=2]\n    - paragraph:\n      - text: The official Draft standard extends ERC-721, ERC-1155 or ERC-6909 token registries with a generic key–value lookup. It requires EIP-165, EIP-7930 and EIP-8119. The getter’s ERC-165 interface ID is\n      - code: \"0xdf670be1\"\n      - text: .\n    - text: IERC8048Metadata.sol\n    - button \"COPY\"\n    - text: function metadata(uint256 tokenId, string calldata key) external view returns (bytes memory); event MetadataSet( uint256 indexed tokenId, string indexed indexedKey, string key, bytes value ); // Optional; write policy is set by the contract. function setMetadata( uint256 tokenId, string calldata key, bytes calldata value ) external; ERC-721T PROFILE\n    - heading \"Reserved agent keys\" [level=3]\n    - paragraph:\n      - code: context\n      - text: \",\"\n      - code: endpoint[mcp|a2a|web|x402]\n      - text: \",\"\n      - code: address[chain-id]\n      - text: \", and optional additional\"\n      - code: account[…][index]\n      - text: entries. It is a convention inside the spec, not a separate interface ID.\n    - text: TOKENURI UNCHANGED\n    - heading \"Wallet-safe adoption\" [level=3]\n    - paragraph:\n      - text: Marketplaces continue reading familiar visual metadata. Agent-aware clients call\n      - code: metadata()\n      - text: for operational fields; older clients simply ignore them.\n    - text: OPTIONAL AUTHORITY\n    - heading \"Writes need not follow ownership\" [level=3]\n    - paragraph:\n      - code: IERC8048MetadataAuthority\n      - text: can assign field governance to a separate authority. Its interface ID is\n      - code: \"0xf9cb127d\"\n      - text: .\n    - text: SIDECAR PATH\n    - heading \"Existing collections can join\" [level=3]\n    - paragraph:\n      - text: A top-level\n      - code: metadata_contract\n      - text: field in token JSON may point to an external contract implementing the getter—an adoption path added after Normies NFT feedback.\n    - paragraph:\n      - text: \"Fact source: official ERC-8048 specification. The spec itself warns clients to treat\"\n      - code: context\n      - text: and endpoint values as untrusted input.\n    - text: 02 / THE STACK\n    - heading \"8048 stores. 8004 establishes trust.\" [level=2]\n    - paragraph: They are deliberately orthogonal, but their edges overlap enough to create real fragmentation risk.\n    - text: ERC-8004\n    - heading \"Identity + trust\" [level=3]\n    - list:\n      - listitem: Identity, reputation and validation registries\n      - listitem: Profile via a URI-addressed registration file\n      - listitem:\n        - text: Optional onchain\n        - code: getMetadata\n        - text: /\n        - code: setMetadata\n      - listitem: The ecosystem’s current identity rail\n    - text: STACK ERC-8048 / 721T\n    - heading \"Metadata + discovery\" [level=3]\n    - list:\n      - listitem: Generic token-level key–value storage\n      - listitem: Context, service endpoints and accounts onchain\n      - listitem: No reputation or validation mechanism\n      - listitem: Can attach directly to an existing NFT\n    - strong: \"The collision:\"\n    - text: ERC-8004 already exposes\n    - code: getMetadata()\n    - text: ; ERC-8048 standardizes\n    - code: metadata()\n    - text: . Both are Draft, both use similarly shaped\n    - code: MetadataSet\n    - text: events, and no published convergence path exists. 03 / THE “FUTURE” CASE\n    - heading \"Why the idea is bigger than its interface.\" [level=2]\n    - paragraph: \"This section is synthesis, not settled fact: it explains the strongest case behind the “future” claim.\"\n    - heading \"Zero-pin profiles\" [level=3]\n    - paragraph: Descriptions, endpoints and accounts can be read through RPC without depending on an IPFS pin, HTTPS host or gateway.\n    - heading \"NFT-native agents\" [level=3]\n    - paragraph:\n      - text: An ordinary collection can gain machine-readable behavior while retaining its existing marketplace-facing\n      - code: tokenURI\n      - text: .\n    - heading \"Payment-ready discovery\" [level=3]\n    - paragraph:\n      - text: Reserved\n      - code: x402\n      - text: endpoints and per-chain addresses turn a token into a discoverable service and account map.\n    - heading \"Cross-chain proofs\" [level=3]\n    - paragraph: The optional Diamond Storage layout creates predictable slots intended to support storage-inclusion proofs.\n    - heading \"Governed metadata\" [level=3]\n    - paragraph: A metadata authority can manage regulated or curated fields without becoming the NFT owner.\n    - text: 04 / TIMELINE\n    - heading \"A young standard, still moving.\" [level=2]\n    - text: 2025 AUG 13\n    - heading \"ERC-8004 created\" [level=3]\n    - paragraph: The trustless-agent identity, reputation and validation proposal arrives first.\n    - text: 2025 SEP 30\n    - heading \"ERC-8048 created\" [level=3]\n    - paragraph: Prem Makeig and Rafael Abuawad define onchain metadata for token registries after the primitive splits from ERC-8041.\n    - text: 2025 OCT 15\n    - heading \"Standalone discussion opens\" [level=3]\n    - paragraph: The Ethereum Magicians thread begins; naming, event design and key enumeration become early points of debate.\n    - text: 2026 APR 15\n    - heading \"Agent profile examples land\" [level=3]\n    - paragraph:\n      - code: context\n      - text: and protocol endpoint patterns are added to the examples section.\n    - text: 2026 APR 28\n    - heading \"Sidecar path added\" [level=3]\n    - paragraph:\n      - text: The\n      - code: metadata_contract\n      - text: extension answers an adoption request from the already-deployed Normies NFT project.\n    - text: 2026 SEP\n    - heading \"Still Draft\" [level=3]\n    - paragraph: Census v7 combines 8004 and 8048 on Sepolia; Helixa describes 8048 ingestion in a roadmap spec. No authoritative live-mainnet registry was found.\n    - text: 05 / FRICTION\n    - heading \"The unresolved parts matter.\" [level=2]\n    - text: DESIGN\n    - heading \"Scope creep\" [level=3]\n    - paragraph: Discussion participants challenged the extensions as too opinionated. The author agreed some could eventually split into separate ERCs.\n    - text: GAS\n    - heading \"Dual-key event\" [level=3]\n    - paragraph: The event emits a hashed indexed key and the plaintext key. A co-author called that redundant; the author defended plaintext discovery.\n    - text: INDEXING\n    - heading \"No key enumeration\" [level=3]\n    - paragraph:\n      - text: There is no core\n      - code: keys()\n      - text: . Clients must know keys in advance or index historical events.\n    - text: ECOSYSTEM\n    - heading \"Competing surfaces\" [level=3]\n    - paragraph:\n      - code: metadata()\n      - text: and ERC-8004’s\n      - code: getMetadata()\n      - text: may leave implementers supporting two similar Draft interfaces.\n    - text: SECURITY\n    - heading \"Untrusted values\" [level=3]\n    - paragraph: Onchain does not mean safe. Context strings and endpoint URIs can still carry malicious or misleading payloads.\n    - text: TRACTION\n    - heading \"Thin evidence\" [level=3]\n    - paragraph: The main discussion had roughly 14 posts over about a year; verified usage is dominated by testnet and roadmap signals.\n    - text: 06 / WHO IS TOUCHING IT\n    - heading \"Early stack signals, not mass adoption.\" [level=2]\n    - text: Helixa CONFIRMED PLAN\n    - paragraph: The Multipass roadmap treats ERC-8004 as the identity rail and ERC-8048/721T as an NFT metadata fragment to ingest—not the whole identity system.\n    - text: Census v7 SEPOLIA\n    - paragraph: Its published pipeline notes say the release implements ERC-8004 + ERC-8048 + ERC-8217 + ERC-2981 together.\n    - text: Normies NFT PLANNED\n    - paragraph:\n      - text: The team requested the external\n      - code: metadata_contract\n      - text: adoption path in the standards discussion.\n    - text: DePunks / StonkBrokers ANECDOTAL\n    - paragraph: Author-side social posts claim ERC-721T use with ERC-6551 accounts; no authoritative usage registry was found.\n    - text: Virtuals NO LINK FOUND\n    - paragraph: No research source connected Virtuals Protocol to ERC-8048.\n    - text: 07 / PRACTICAL MOVE\n    - heading \"Duplicate the profile. Preserve the identity.\" [level=2]\n    - paragraph: \"Opinionated recommendation for an already ERC-8004-registered agent:\"\n    - text: NOW\n    - heading \"Keep 8004 canonical\" [level=3]\n    - paragraph: Do not abandon its identity, reputation or validation rails. ERC-8048 cannot replace those layers.\n    - text: PILOT\n    - heading \"Mirror a small key set\" [level=3]\n    - paragraph: Use an upgradeable agent NFT or the sidecar pattern. Start with context, web/MCP endpoints and the relevant chain address.\n    - text: ESCALATE WHEN\n    - heading \"Readers appear\" [level=3]\n    - paragraph:\n      - text: Adopt broadly after Review/Final status, multiple indexers query\n      - code: \"0xdf670be1\"\n      - text: \", or counterparties ask for it directly.\"\n    - heading \"Open questions before committing gas\" [level=3]\n    - list:\n      - listitem: \"? No authoritative registry of ERC-8048/721T mainnet deployments or usage volumes was found.\"\n      - listitem: \"? No independent gas benchmark was found for the claimed ERC-721T cost advantage over an ERC-8004 registry.\"\n      - listitem: \"? The event-design PR outcome was not independently confirmed; the 2026-09-28 spec still showed the dual-key event.\"\n      - listitem: \"? The original “ERC-8048 is the future” X post could not be independently verified beyond the supplied mission context.\"\n    - text: PRIMARY & SUPPORTING SOURCES\n    - heading \"Follow the trail.\" [level=2]\n    - list:\n      - listitem:\n        - link \"Official ERC-8048 specification\":\n          - /url: https://eips.ethereum.org/EIPS/eip-8048\n        - text: — verified live 2026-09-28.\n      - listitem:\n        - 'link \"Ethereum Magicians discussion #25820\"':\n          - /url: https://ethereum-magicians.org/t/erc-8048-onchain-metadata-for-multi-token-and-nft-registries/25820\n        - text: — verified live 2026-09-28.\n      - listitem:\n        - link \"Official ERC-8004 specification\":\n          - /url: https://eips.ethereum.org/EIPS/eip-8004\n        - text: — verified live 2026-09-28.\n      - listitem:\n        - link \"Official sibling ERC-8049 specification\":\n          - /url: https://eips.ethereum.org/EIPS/eip-8049\n        - text: .\n      - listitem:\n        - link \"nxt3d/721t reference implementation\":\n          - /url: https://github.com/nxt3d/721t\n        - text: .\n      - listitem:\n        - link \"nxt3d/agent-registry\":\n          - /url: https://github.com/nxt3d/agent-registry\n        - text: .\n      - listitem:\n        - link \"Helixa Multipass roadmap specification\":\n          - /url: https://github.com/bendr-20/helixa/blob/HEAD/docs/superpowers/specs/2026-06-22-multipass-roadmap-spec.md\n        - text: .\n      - listitem:\n        - link \"Census v7 pipeline notes\":\n          - /url: https://github.com/dnebayis/census/blob/HEAD/pipeline/AGENTS.md\n        - text: .\n      - listitem:\n        - link \"2026 agent ERC standards survey\":\n          - /url: https://github.com/rya-sge/access-denied/blob/HEAD/_posts/2026-07-06-erc-ai-agents-ethereum-standards.md\n        - text: .\n      - listitem:\n        - link \"faivr EIP/ERC research notes\":\n          - /url: https://github.com/oldschoolag/faivr/blob/HEAD/docs/EIP-ERC-RESEARCH.md\n        - text: .\n      - listitem:\n        - link \"awesome-erc8004 ecosystem index\":\n          - /url: https://github.com/bykarantelicom/awesome-erc8004\n        - text: .\n      - listitem:\n        - link \"ERC-8004 Base payment analysis\":\n          - /url: http://dev.to/agenticfinancegraph/we-read-every-erc-8004-ai-agent-on-base-and-joined-it-to-its-money-12-have-ever-paid-anyone-3bjf\n        - text: .\n    - paragraph: Research completed 2026-09-28. “Confirmed” means the cited spec, thread or repository was available to the research pass; it does not imply endorsement or production-mainnet adoption.\n- status: Copied interface",
+  "audit_session_id": "c944244b-6fbf-4723-8971-773b2a24c66d",
+  "mobile_ms": 2781.8563029999996,
+  "cold_launch_ms": 894.9806750000001,
+  "desktop_ms": 3733.089014,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

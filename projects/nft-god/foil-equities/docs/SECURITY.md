@@ -48,3 +48,44 @@ investigate the wallets, resume only when clean.
 - [ ] Tokenized stock token addresses per chain (RH: native equities; Base: B20)
 - [ ] Royalty enforcement check on target marketplaces
 - [ ] Pause switch on Activation (for T-alert response)
+
+## $RESCUE rail threats (added 2026-09-28)
+
+| # | Threat | How it would work | Mitigation (in code) |
+|---|--------|-------------------|----------------------|
+| T9 | $RESCUE EMA oracle gaming | Same shape as T1: pump RESCUE/WETH, then activate at the "20% discount" with inflated $RESCUE | `Activation.sol`: $RESCUE priced on its own EMA (`rescuePriceAvg`), NOT spot. Spot (from `_spotPrice(RESCUE)`) must sit within 25% of the EMA or the tx reverts (`PriceDeviation`). Discount applies to the average. Both rails share the engine and the 25%/20%-EMA constants. |
+| T10 | $RESCUE spot-adapter divergence | A per-chain `_spotPrice(RESCUE)` override reads a thin/gamed pool and drifts the EMA | Adapters are per-chain, deployed separately, and must be audited before mainnet (see pre-mainnet checklist: concrete `_spotPrice` oracle adapters now cover BOTH discount tokens). The live watch (below) covers the RESCUE pool too. |
+| T11 | "Burn" that isn't | Assuming $RESCUE implements `burn()` when it doesn't (Doppler/Uniswap V4 launch) | No burn() assumption anywhere on the RESCUE rail — the burn half goes to the dead address via plain `safeTransfer`. $RESCUE's 50% burn is economic (supply removed from circulation), not mechanical. |
+
+## Agent-wallet threats (added 2026-09-28)
+
+- **EIP-1271 = owner-key authority.** Whoever holds the NFT's owner key can
+  sign AS the agent (the TBA). Owner-key hygiene IS agent-identity hygiene:
+  a compromised holder key means a compromised agent voice. Treat the NFT
+  like a hardware-wallet seed — lose the key, lose the agent.
+- **Nobody can register your TBA out from under you.**
+  `registerAsAgent` reverts unless `msg.sender` is the current NFT owner, so
+  an attacker can't pre-register someone else's bound wallet into a rogue
+  identity registry entry.
+- **Activation-reset-on-transfer also resets agent control.** When the NFT
+  moves, the old owner's signatures stop validating (EIP-1271 always reads
+  the CURRENT owner) and any ERC-8004 registration the old owner made must
+  be re-done by the new owner if they want the agent identity active. There
+  is no lingering control — but also no automatic continuity.
+- **`registerAsAgent` target risk.** The registry address is a caller-supplied
+  arg; a malicious/compromised registry could emit misleading registration
+  events or trap funds if `register(string)` were payable. Mitigations: no
+  value is forwarded in the call; the official ERC-8004 registry address is
+  hardcoded in the frontend/deploy docs (not onchain); verify the registry
+  before calling. Do not register against unknown registries.
+- **TBA is value-bearing.** Bound wallets will hold tokenized stocks from the
+  drip. `execute()` is owner-gated, but any contract the owner approves
+  through the TBA inherits full control — same phishing surface as any
+  wallet. No broad approvals from TBAs, ever.
+
+## Live watch (extended 2026-09-28)
+
+`scripts/watch-cred-lp.mjs` now watches a pool LIST: the CRED/WETH pool
+(unchanged) plus the $RESCUE/WETH pool (auto-resolved via GeckoTerminal; if
+unresolvable the script stays CRED-only and prints a TODO). Same alert
+thresholds per pool; state is tracked per pool.

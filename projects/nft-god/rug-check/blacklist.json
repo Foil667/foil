@@ -1558,5 +1558,41 @@
     "contract": "0x09561e944506d7ff001ded897d8c405b6fcea4e9",
     "reason": "heuristic:public-free-mint; heuristic:owner-controlled-mint; bytecode:SELFDESTRUCT",
     "ts": "2026-09-28T00:42:16.721Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0xf777999ade39f89b04422a49f759ca5746e9f94c",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-09-28T02:12:36.509Z"
+  },
+  {
+    "chainId": "8453",
+    "contract": "0xe856f07701f8dc39ee6b468f57cf190b6319372e",
+    "reason": "heuristic:owner-controlled-mint; heuristic:owner-withdraw-sweep",
+    "ts": "2026-09-28T09:18:13.247Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0xe13ecc3b0223c292cbd8824af6972b349abc0c3b",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-09-28T10:43:38.534Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x78c4dab6908ec9ad708690f100446498cec025c7",
+    "reason": "heuristic:owner-controlled-mint",
+    "ts": "2026-09-28T12:59:36.306Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x89effb63578a09065c2bbfdd729e161be7d479da",
+    "reason": "heuristic:public-free-mint; heuristic:owner-controlled-mint",
+    "ts": "2026-09-28T14:03:00.195Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0xf8ecb1c3cfd4fc80e1c7e076df7688b03bf210bf",
+    "reason": "heuristic:owner-controlled-mint; heuristic:owner-withdraw-sweep",
+    "ts": "2026-09-28T18:08:32.508Z"
   }
 ]

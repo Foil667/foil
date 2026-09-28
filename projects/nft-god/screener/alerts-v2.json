@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T01:50:23.542Z",
+  "generatedAt": "2026-09-28T18:30:47.305Z",
   "readOnly": true,
   "dry": false,
   "chains": [
@@ -7,64 +7,20 @@
     "base"
   ],
   "coverage": [
-    "OK: base scanned blocks 51885288..51885438 (~5 min), 1477 mint events.",
-    "OK: robinhood scanned blocks 74413859..74416859 (~5 min), 2132 mint events.",
-    "OK: OpenSea drops API returned 3 upcoming drops.",
+    "OK: base scanned blocks 51915300..51915450 (~5 min), 1826 mint events.",
+    "DEGRADED: robinhood eth_getLogs failed (RPC eth_getLogs: {\"code\":429,\"message\":\"Too Many Requests\"}).",
+    "OK: OpenSea drops API returned 6 upcoming drops.",
     "OK: Zora timed-sale strategy quiet in window (0 events).",
     "STUB: Solana candy-machine monitor not configured — needs a Helius websocket (no key on file, no signup performed). Solana coverage OFFLINE. Code path: scanSolanaStub() in screener-v2.mjs.",
-    "STUB: mempool websocket watch not configured — needs Alchemy/QuickNode/Helius WS (no signups performed). Mempool signal OFFLINE. Code path: mempoolWatchStub() in screener-v2.mjs.",
-    "rug-check clean: robinhood:0xb487cd4e680643ddd57b4427181576c9c9529ad8",
-    "RUG-CHECK FLAGGED base:0x5de9e6aeb9f5fca85de8c76ef7352667e24fa337 — blacklisted, never execute. Reason: rug-check 8453:0x5de9e6aeb9f5fca85de8c76ef7352667e24fa337\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED"
+    "STUB: mempool websocket watch not configured — needs Alchemy/QuickNode/Helius WS (no signups performed). Mempool signal OFFLINE. Code path: mempoolWatchStub() in screener-v2.mjs."
   ],
   "minScore": 60,
   "counts": {
-    "candidates": 22,
+    "candidates": 16,
     "execute": 0,
-    "verify": 1,
-    "watch": 6,
-    "blocked": 15
+    "verify": 0,
+    "watch": 10,
+    "blocked": 6
   },
-  "alerts": [
-    {
-      "chain": "robinhood",
-      "chainId": 4663,
-      "contract": "0xb487cd4e680643ddd57b4427181576c9c9529ad8",
-      "standard": "ERC721",
-      "ifaceVia": "erc165",
-      "name": "Sky Suites",
-      "symbol": "SKSTS",
-      "source": "onchain-mints",
-      "mints": 5,
-      "uniqueMinters": 5,
-      "mintsPerHour": 59.40594059405941,
-      "mintsPerMin": 0.9900990099009901,
-      "whaleShare": 0.4,
-      "verified": null,
-      "priceWei": "0",
-      "price": "0 ETH",
-      "ageHours": 0.4938888888888889,
-      "phase": "upcoming",
-      "sampleTokenId": "107",
-      "links": {
-        "opensea": "https://opensea.io/assets/robinhood/0xb487cd4e680643ddd57b4427181576c9c9529ad8/107",
-        "explorer": "https://robinhoodchain.blockscout.com/address/0xb487cd4e680643ddd57b4427181576c9c9529ad8"
-      },
-      "score": 71.88,
-      "breakdown": {
-        "uniqueMintersRatio": 100,
-        "velocity": 9.9,
-        "contractAge": 99.31,
-        "verifiedSocials": 60,
-        "priceSanity": 100,
-        "holderConcentration": 60
-      },
-      "multipliers": [],
-      "tier": "verify",
-      "rugCheck": {
-        "status": "clean",
-        "detail": "rug-check 4663:0xb487cd4e680643ddd57b4427181576c9c9529ad8\ntarget scanned : 0xb487cd4e680643ddd57b4427181576c9c9529ad8 (bytecode only)\nverdict        : CLEAN\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[INFO] bytecode:minimal-proxy-eip1167\n  EIP-1167 minimal proxy (runtime 45 bytes, implementati",
-        "exitCode": 0
-      }
-    }
-  ]
+  "alerts": []
 }

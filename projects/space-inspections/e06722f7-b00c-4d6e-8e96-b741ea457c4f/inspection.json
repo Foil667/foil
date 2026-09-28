@@ -1,0 +1,186 @@
+{
+  "version": 1,
+  "inspection_id": "e06722f7-b00c-4d6e-8e96-b741ea457c4f",
+  "slug": "wallet-report-card-app",
+  "verbatim_request": "What does the wallet-report-card-app artifact do? Describe its UI, report-card logic, and what data it shows.",
+  "diagnosis_outcome": "report",
+  "state": "completed",
+  "created_at_ms": 1790615184930,
+  "inspector_agent_id": "d67c9f1d-1788-4f52-a98a-ff77107b7ec4",
+  "inspector_message_id": "4807b646-76f5-43d4-bf37-4d7879bc481d",
+  "snapshot": {
+    "slug": "wallet-report-card-app",
+    "current_build_id": "7633dce4-b310-4b12-8f1d-6e6eab0fbfd2",
+    "source_tree_fingerprint": "9c7466f5c23ed91f69e7c7f13344474265abeeb83f2a87786f30ae4e44ce035b",
+    "source_files": [
+      "bun.lock",
+      "bunfig.toml",
+      "client/build.mjs",
+      "client/index.html",
+      "client/src/App.tsx",
+      "client/src/api.ts",
+      "client/src/globals.d.ts",
+      "client/src/main.tsx",
+      "client/src/theme.css",
+      "client/tsconfig.json",
+      "drizzle/0001_initial.sql",
+      "drizzle/0002_remove_scaffold_entries.sql",
+      "drizzle/meta/_journal.json",
+      "package.json",
+      "server/src/actions.ts",
+      "server/src/schema.ts",
+      "server/tsconfig.json",
+      "space.json",
+      "tsconfig.base.json"
+    ],
+    "published_manifests": [
+      {
+        "path": ".space-build/manifest.json",
+        "exists": true,
+        "sha256": "57355d602e71f595f6c1f053424fffaa6a1eb9c777866c8e5c4c7fd8e14da0c8",
+        "entrypoint": "index.html",
+        "entrypoint_exists": true
+      },
+      {
+        "path": ".space-build-cvm/manifest.json",
+        "exists": true,
+        "sha256": "1b831ec0b749b5b5a03685ba1668217130c972869eb6b5437a05215af6e29eda",
+        "entrypoint": "index.html",
+        "entrypoint_exists": true
+      }
+    ]
+  },
+  "evidence_path": "/home/hatch/workspace/space-inspections/e06722f7-b00c-4d6e-8e96-b741ea457c4f/evidence.json",
+  "diagnosis": {
+    "summary": "Wallet Report Card is a read-only NFT wallet grading dashboard: enter any public EVM wallet address, pick Base, Ethereum, or Robinhood Chain, and it fetches the wallet's full ERC-721 transfer history (Blockscout REST, with a JSON-RPC log-scan fallback on Robinhood Chain), pairs acquisitions to exits into holding cycles, and issues a 0–100 score via the formula round(50 × min(avgHoldDays/365, 1) + 30 × (1 − 7d flip rate) + 20 × (1 − 30d flip rate)) with labels from Diamond Hands (80+) down to Paper Hands (<35). The UI shows a typographic score stamp, hold/flip metrics, a score-anatomy breakdown, the exact formula, and a copyable X-ready receipt; it refuses to score when history is missing, incomplete, or too large rather than inventing data. Nothing is connected or signed, and nothing is persisted — each scan is a fresh live fetch.",
+    "direct_observations": [
+      "The landing page (confirmed by screenshot + aria snapshot) shows: mono kicker 'ERC-721 HOLDING ANALYSIS', serif headline 'How strong are those hands?', deck copy 'Trace a wallet's NFT exits, hold times, and flip patterns—then turn the history into one inspectable score.'",
+      "The scan card is a dark panel (olive-green accent button) containing a 'Wallet address' text input (placeholder '0x…', hint 'Any public EVM wallet. Nothing is connected or signed.'), a chain select ('Base — Blockscout', 'Ethereum — Blockscout', 'Robinhood Chain — Explorer + RPC fallback'), and a 'Grade this wallet' button disabled until a 42-char 0x address is entered.",
+      "Below the form sits a three-column 'How the rating works' primer: 50 points for average hold duration / 30 for avoiding 7-day flips / 20 for avoiding 30-day flips.",
+      "A scored report renders: a circular conic-gradient score stamp (score × 3.6°), the rating label, 'Scored from N acquisition cycles across M distinct NFTs', a 'Holding behavior' metric sheet, a 'Score anatomy' panel with three formula bars (Hold duration /50, 7-day discipline /30, 30-day discipline /20), a collapsible exact formula, an 'X-ready receipt' pre block with Copy button, and a footer with data source + check timestamp.",
+      "Four non-scored states exist: loading ('Building the full transfer timeline'), scan-failed with retry, 'NO SCORE ISSUED' (source unavailable or history >1,000 transfers), 'NO HISTORY' empty state, and 'EARLY READ' insufficient-history state (shows acquisition count, current holdings, oldest hold, and days until the first eligible 30-day read).",
+      "The score label tiers are 80–100 Diamond Hands, 60–79 Steady Holder, 35–59 Active Flipper, 0–34 Paper Hands (code `ratingFor` in actions.ts, echoed in the UI's formula details).",
+      "The UI carries an honest caveat: 'A transfer feed cannot prove a sale. Flip and time to sell use the first outbound transfer after acquisition as a transparent proxy; gifts and wallet moves can affect the result.'",
+      "Data sources per DATA-PLAN.md: Base and Ethereum via Blockscout REST (probed live, HTTP 200, 50 items/page, next_page_params pagination, max 20 pages); Robinhood Chain via its Blockscout first, falling back to public JSON-RPC eth_getLogs Transfer-topic scans (chain id 0x1237 verified) with recursive range-splitting on the provider's 10,000-log limit.",
+      "No user history is persisted: server actions hold no DB tables for scans, the isolated capture contains only `__drizzle_migrations`, and each Scan is a fresh live fetch whose results render once."
+    ],
+    "source_derived_hypotheses": [
+      "Hypothesis (not observed in this inspection): the live scan path should still work end-to-end today, since all external sources were live-probed during the build and the server action fails closed on any source failure; the captured audit only rendered the landing form and never submitted a scan.",
+      "Hypothesis: Robinhood Chain scans most likely resolve via the JSON-RPC fallback today, because DATA-PLAN.md records the Robinhood Blockscout host returning Cloudflare challenge HTML at build time.",
+      "Hypothesis: very large wallets (e.g. high-volume flippers with >1,000 ERC-721 transfers or >20 Blockscout pages) will hit the intentional 'history exceeds the safe scan limit' error rather than a partial score — by design, but unobserved here."
+    ],
+    "cause": {
+      "confidence": "confirmed",
+      "summary": "The artifact is a read-only, fail-closed NFT wallet grading dashboard: one server action scans a wallet's full ERC-721 transfer history on Base, Ethereum, or Robinhood Chain and converts hold times plus 7-day/30-day flip behavior into an inspectable 0–100 score with a Diamond Hands → Paper Hands label. Everything shown is computed live from chain data at scan time; the app explicitly refuses to guess, sample, or persist anything.",
+      "evidence": [
+        "Server source `server/src/actions.ts` implements the full transfer-history pipeline: Blockscout ERC-721 transfer pagination for Base/Ethereum, Robinhood Blockscout first with public JSON-RPC Transfer-log fallback, oldest-first cycle pairing, flip-rate denominators, and the exact 50/30/20 scoring formula.",
+        "Client source `client/src/App.tsx` renders the scan form, all five response states (ok / no_history / insufficient_history / error / client error), the score stamp, metric rows, score-anatomy formula bars, and the X-ready receipt.",
+        "`DATA-PLAN.md` documents live-tested sources (Base/Ethereum Blockscout 200s, Robinhood Cloudflare 403 rejection, RPC chain id 0x1237) and the fail-closed contract: never invent data, no sample wallets.",
+        "Render capture aria snapshot + full-page screenshot confirm the landing UI: headline 'How strong are those hands?', wallet address input, chain combobox (Base/Ethereum/Robinhood), disabled-until-valid 'Grade this wallet' button, and the 50/30/20 'How the rating works' primer.",
+        "The app publishes exactly one server action, `analyzewallet` (artifact.list_actions), and the isolated data layer contains only `__drizzle_migrations` — no wallet history is persisted anywhere."
+      ]
+    },
+    "unavailable_evidence": [
+      "No live scan result was captured in this inspection: the audit only rendered the landing form, so the correctness of a real end-to-end analysis against current chain data was not observed.",
+      "The Robinhood Chain Blockscout-vs-RPC fallback path was not re-verified live in this inspection; the Cloudflare 403 behavior is documented in DATA-PLAN.md from build-time probes only.",
+      "Published action request schema for `analyzewallet` was not fetched via artifact.list_actions action_name (list confirmed the single action exists); the request/response shape was instead read directly from the Zod schemas in server/src/actions.ts."
+    ],
+    "preservation_requirements": [
+      "There is no persisted user data to preserve: the app stores no wallet scans, no history, and no user accounts — the only data is migration metadata.",
+      "Preserve the fail-closed contract: any modification must keep 'no invented data' behavior (no sample wallets, no estimated metrics, no scores without complete paginated history).",
+      "Preserve the read-only security posture: no wallet connection, no signatures, no approvals — the action takes only an address string and a chain enum."
+    ],
+    "recommended_modification": "No modification is required by this report — the artifact is complete, audited clean (HTTP 200, no console errors, no broken assets, mobile layout pass), and matches its DATA-PLAN contract. If iterated on later, an optional polish would be to include the flip-rate eligible-cycle denominators (e.g. '3/41 cycles') inside the X-ready receipt so the shared text is as auditable as the on-page formula bars — this is cosmetic only and changes no logic."
+  },
+  "completion_result": {
+    "diagnosis_outcome": "report",
+    "inspection": {
+      "cause": {
+        "confidence": "confirmed",
+        "evidence": [
+          "Server source `server/src/actions.ts` implements the full transfer-history pipeline: Blockscout ERC-721 transfer pagination for Base/Ethereum, Robinhood Blockscout first with public JSON-RPC Transfer-log fallback, oldest-first cycle pairing, flip-rate denominators, and the exact 50/30/20 scoring formula.",
+          "Client source `client/src/App.tsx` renders the scan form, all five response states (ok / no_history / insufficient_history / error / client error), the score stamp, metric rows, score-anatomy formula bars, and the X-ready receipt.",
+          "`DATA-PLAN.md` documents live-tested sources (Base/Ethereum Blockscout 200s, Robinhood Cloudflare 403 rejection, RPC chain id 0x1237) and the fail-closed contract: never invent data, no sample wallets.",
+          "Render capture aria snapshot + full-page screenshot confirm the landing UI: headline 'How strong are those hands?', wallet address input, chain combobox (Base/Ethereum/Robinhood), disabled-until-valid 'Grade this wallet' button, and the 50/30/20 'How the rating works' primer.",
+          "The app publishes exactly one server action, `analyzewallet` (artifact.list_actions), and the isolated data layer contains only `__drizzle_migrations` — no wallet history is persisted anywhere."
+        ],
+        "summary": "The artifact is a read-only, fail-closed NFT wallet grading dashboard: one server action scans a wallet's full ERC-721 transfer history on Base, Ethereum, or Robinhood Chain and converts hold times plus 7-day/30-day flip behavior into an inspectable 0–100 score with a Diamond Hands → Paper Hands label. Everything shown is computed live from chain data at scan time; the app explicitly refuses to guess, sample, or persist anything."
+      },
+      "direct_observations": [
+        "The landing page (confirmed by screenshot + aria snapshot) shows: mono kicker 'ERC-721 HOLDING ANALYSIS', serif headline 'How strong are those hands?', deck copy 'Trace a wallet's NFT exits, hold times, and flip patterns—then turn the history into one inspectable score.'",
+        "The scan card is a dark panel (olive-green accent button) containing a 'Wallet address' text input (placeholder '0x…', hint 'Any public EVM wallet. Nothing is connected or signed.'), a chain select ('Base — Blockscout', 'Ethereum — Blockscout', 'Robinhood Chain — Explorer + RPC fallback'), and a 'Grade this wallet' button disabled until a 42-char 0x address is entered.",
+        "Below the form sits a three-column 'How the rating works' primer: 50 points for average hold duration / 30 for avoiding 7-day flips / 20 for avoiding 30-day flips.",
+        "A scored report renders: a circular conic-gradient score stamp (score × 3.6°), the rating label, 'Scored from N acquisition cycles across M distinct NFTs', a 'Holding behavior' metric sheet, a 'Score anatomy' panel with three formula bars (Hold duration /50, 7-day discipline /30, 30-day discipline /20), a collapsible exact formula, an 'X-ready receipt' pre block with Copy button, and a footer with data source + check timestamp.",
+        "Four non-scored states exist: loading ('Building the full transfer timeline'), scan-failed with retry, 'NO SCORE ISSUED' (source unavailable or history >1,000 transfers), 'NO HISTORY' empty state, and 'EARLY READ' insufficient-history state (shows acquisition count, current holdings, oldest hold, and days until the first eligible 30-day read).",
+        "The score label tiers are 80–100 Diamond Hands, 60–79 Steady Holder, 35–59 Active Flipper, 0–34 Paper Hands (code `ratingFor` in actions.ts, echoed in the UI's formula details).",
+        "The UI carries an honest caveat: 'A transfer feed cannot prove a sale. Flip and time to sell use the first outbound transfer after acquisition as a transparent proxy; gifts and wallet moves can affect the result.'",
+        "Data sources per DATA-PLAN.md: Base and Ethereum via Blockscout REST (probed live, HTTP 200, 50 items/page, next_page_params pagination, max 20 pages); Robinhood Chain via its Blockscout first, falling back to public JSON-RPC eth_getLogs Transfer-topic scans (chain id 0x1237 verified) with recursive range-splitting on the provider's 10,000-log limit.",
+        "No user history is persisted: server actions hold no DB tables for scans, the isolated capture contains only `__drizzle_migrations`, and each Scan is a fresh live fetch whose results render once."
+      ],
+      "preservation_requirements": [
+        "There is no persisted user data to preserve: the app stores no wallet scans, no history, and no user accounts — the only data is migration metadata.",
+        "Preserve the fail-closed contract: any modification must keep 'no invented data' behavior (no sample wallets, no estimated metrics, no scores without complete paginated history).",
+        "Preserve the read-only security posture: no wallet connection, no signatures, no approvals — the action takes only an address string and a chain enum."
+      ],
+      "recommended_modification": "No modification is required by this report — the artifact is complete, audited clean (HTTP 200, no console errors, no broken assets, mobile layout pass), and matches its DATA-PLAN contract. If iterated on later, an optional polish would be to include the flip-rate eligible-cycle denominators (e.g. '3/41 cycles') inside the X-ready receipt so the shared text is as auditable as the on-page formula bars — this is cosmetic only and changes no logic.",
+      "source_derived_hypotheses": [
+        "Hypothesis (not observed in this inspection): the live scan path should still work end-to-end today, since all external sources were live-probed during the build and the server action fails closed on any source failure; the captured audit only rendered the landing form and never submitted a scan.",
+        "Hypothesis: Robinhood Chain scans most likely resolve via the JSON-RPC fallback today, because DATA-PLAN.md records the Robinhood Blockscout host returning Cloudflare challenge HTML at build time.",
+        "Hypothesis: very large wallets (e.g. high-volume flippers with >1,000 ERC-721 transfers or >20 Blockscout pages) will hit the intentional 'history exceeds the safe scan limit' error rather than a partial score — by design, but unobserved here."
+      ],
+      "summary": "Wallet Report Card is a read-only NFT wallet grading dashboard: enter any public EVM wallet address, pick Base, Ethereum, or Robinhood Chain, and it fetches the wallet's full ERC-721 transfer history (Blockscout REST, with a JSON-RPC log-scan fallback on Robinhood Chain), pairs acquisitions to exits into holding cycles, and issues a 0–100 score via the formula round(50 × min(avgHoldDays/365, 1) + 30 × (1 − 7d flip rate) + 20 × (1 − 30d flip rate)) with labels from Diamond Hands (80+) down to Paper Hands (<35). The UI shows a typographic score stamp, hold/flip metrics, a score-anatomy breakdown, the exact formula, and a copyable X-ready receipt; it refuses to score when history is missing, incomplete, or too large rather than inventing data. Nothing is connected or signed, and nothing is persisted — each scan is a fresh live fetch.",
+      "unavailable_evidence": [
+        "No live scan result was captured in this inspection: the audit only rendered the landing form, so the correctness of a real end-to-end analysis against current chain data was not observed.",
+        "The Robinhood Chain Blockscout-vs-RPC fallback path was not re-verified live in this inspection; the Cloudflare 403 behavior is documented in DATA-PLAN.md from build-time probes only.",
+        "Published action request schema for `analyzewallet` was not fetched via artifact.list_actions action_name (list confirmed the single action exists); the request/response shape was instead read directly from the Zod schemas in server/src/actions.ts."
+      ]
+    },
+    "inspection_id": "e06722f7-b00c-4d6e-8e96-b741ea457c4f",
+    "outcome": "diagnosis_submitted",
+    "snapshot": {
+      "current_build_id": "7633dce4-b310-4b12-8f1d-6e6eab0fbfd2",
+      "published_manifests": [
+        {
+          "entrypoint": "index.html",
+          "entrypoint_exists": true,
+          "exists": true,
+          "path": ".space-build/manifest.json",
+          "sha256": "57355d602e71f595f6c1f053424fffaa6a1eb9c777866c8e5c4c7fd8e14da0c8"
+        },
+        {
+          "entrypoint": "index.html",
+          "entrypoint_exists": true,
+          "exists": true,
+          "path": ".space-build-cvm/manifest.json",
+          "sha256": "1b831ec0b749b5b5a03685ba1668217130c972869eb6b5437a05215af6e29eda"
+        }
+      ],
+      "slug": "wallet-report-card-app",
+      "source_files": [
+        "bun.lock",
+        "bunfig.toml",
+        "client/build.mjs",
+        "client/index.html",
+        "client/src/App.tsx",
+        "client/src/api.ts",
+        "client/src/globals.d.ts",
+        "client/src/main.tsx",
+        "client/src/theme.css",
+        "client/tsconfig.json",
+        "drizzle/0001_initial.sql",
+        "drizzle/0002_remove_scaffold_entries.sql",
+        "drizzle/meta/_journal.json",
+        "package.json",
+        "server/src/actions.ts",
+        "server/src/schema.ts",
+        "server/tsconfig.json",
+        "space.json",
+        "tsconfig.base.json"
+      ],
+      "source_tree_fingerprint": "9c7466f5c23ed91f69e7c7f13344474265abeeb83f2a87786f30ae4e44ce035b"
+    },
+    "space_slug": "wallet-report-card-app",
+    "status": "success",
+    "summary": "Wallet Report Card is a read-only NFT wallet grading dashboard: enter any public EVM wallet address, pick Base, Ethereum, or Robinhood Chain, and it fetches the wallet's full ERC-721 transfer history (Blockscout REST, with a JSON-RPC log-scan fallback on Robinhood Chain), pairs acquisitions to exits into holding cycles, and issues a 0–100 score via the formula round(50 × min(avgHoldDays/365, 1) + 30 × (1 − 7d flip rate) + 20 × (1 − 30d flip rate)) with labels from Diamond Hands (80+) down to Paper Hands (<35). The UI shows a typographic score stamp, hold/flip metrics, a score-anatomy breakdown, the exact formula, and a copyable X-ready receipt; it refuses to score when history is missing, incomplete, or too large rather than inventing data. Nothing is connected or signed, and nothing is persisted — each scan is a fresh live fetch."
+  }
+}

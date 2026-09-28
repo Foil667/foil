@@ -1,15 +1,15 @@
 # Efficiency Audit Report
 
-Run: 2026-09-27T10:36:02.195Z
+Run: 2026-09-28T10:36:02.435Z
 Mode: --live (state mutations applied)
 
 ## 1. Tool candidates (GitHub discovery)
 
-Status: OK — 15 candidate repos (pushed since 2026-06-29). Full list in CANDIDATE_TOOLS.md.
+Status: OK — 15 candidate repos (pushed since 2026-06-30). Full list in CANDIDATE_TOOLS.md.
 
 ## 2. RPC performance (mint-log.jsonl)
 
-Log: /home/hatch/workspace/nft-god/fast-mint/mint-log.jsonl — 12 total lines, 9 new since cursor, 0 malformed skipped.
+Log: /home/hatch/workspace/nft-god/fast-mint/mint-log.jsonl — 18 total lines, 9 new since cursor, 0 malformed skipped.
 
 | RPC | Mints | Wins | Win rate | Median latency (ms) | Verdict |
 | --- | --- | --- | --- | --- | --- |
@@ -21,8 +21,8 @@ Rule: win rate <40% over >=50 mints => REPLACE. Low-volume underperformers (<50 
 
 | Chain | Mints | Proceeds | Gas | Net ROI | Consecutive losses (persisted) |
 | --- | --- | --- | --- | --- | --- |
-| robinhood | 5 | $0.0000 | $0.0000 | $0.0000 | 0 |
-| unknown | 4 | $0.0000 | $0.0000 | $0.0000 | 0 |
+| robinhood | 6 | $0.0000 | $0.0000 | $0.0000 | 0 |
+| unknown | 3 | $0.0000 | $0.0000 | $0.0000 | 0 |
 
 Rule: 3 consecutive negative-ROI mints => chain minScore +5 (never lowered).
 

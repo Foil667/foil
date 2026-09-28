@@ -69,6 +69,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/88c4358e1686bed52a235ec0e7d6f4/8c88c4358e1686bed52a235ec0e7d6f4.png"
  },
  {
+  "token_id": 3987,
+  "name": "Looper #3987",
+  "traits": {
+   "Eyes": "Human Hazel",
+   "Risk": "Disciplined",
+   "Skin": "Human Warm",
+   "Mouth": "Red Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Channel Three Halo",
+   "Head Layer": "Grimy Black Beanie",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "Crystal Ball",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/aef2bb477f2e6d478679e8f175ff67/6caef2bb477f2e6d478679e8f175ff67.png"
+ },
+ {
   "token_id": 2567,
   "name": "Looper #2567",
   "traits": {
@@ -281,6 +305,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/4af45bdb0bb8da4c4bc1d5dac88616/2a4af45bdb0bb8da4c4bc1d5dac88616.png"
+ },
+ {
+  "token_id": 2549,
+  "name": "Looper #2549",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Disciplined",
+   "Skin": "Human Light",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Thriller Red Jacket",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Loop Cathedral Core",
+   "Head Layer": "Emerald Green Cornrows",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "signal hunting",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/b722872ae023a52d8a317e4ed9657f/b9b722872ae023a52d8a317e4ed9657f.png"
  },
  {
   "token_id": 580,
@@ -568,6 +616,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e91c43a3836d5e78ddd2c6997cdb95/dfe91c43a3836d5e78ddd2c6997cdb95.png"
  },
  {
+  "token_id": 6217,
+  "name": "Looper #6217",
+  "traits": {
+   "Eyes": "Inferno Glow",
+   "Risk": "Hazardous",
+   "Skin": "Chrome",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "CRT Tape Tee Black",
+   "Eyewear": "None",
+   "Overlay": "Molten Gold Prism",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Bright Layer File Browser",
+   "Head Layer": "Pure Electric Plasma Cornrows",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/15cf99e1179dd9fcd0d8877f93c67f/2b15cf99e1179dd9fcd0d8877f93c67f.png"
+ },
+ {
   "token_id": 7282,
   "name": "Looper #7282",
   "traits": {
@@ -614,6 +685,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/72881bbb1e0ed939ea09a79a995d5d/7872881bbb1e0ed939ea09a79a995d5d.png"
+ },
+ {
+  "token_id": 5041,
+  "name": "Looper #5041",
+  "traits": {
+   "Eyes": "Human Blue",
+   "Risk": "Hazardous",
+   "Skin": "Holo",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Grok Has Money Hoodie",
+   "Eyewear": "None",
+   "Overlay": "Crushed Spectrum Plate",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Hamburger Data Center Meme",
+   "Head Layer": "Messy Black Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/cbde1bb7422004cbad9c938a56d8e8/14cbde1bb7422004cbad9c938a56d8e8.png"
  },
  {
   "token_id": 1609,
@@ -828,6 +922,54 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/964ebabb542ecbda6ac26920719fe2/75964ebabb542ecbda6ac26920719fe2.png"
  },
  {
+  "token_id": 574,
+  "name": "Looper #574",
+  "traits": {
+   "Eyes": "Spiral Signal",
+   "Risk": "Hazardous",
+   "Skin": "Glitch",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Base Patch Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Token Eclipse Orbit",
+   "Head Layer": "Flaky Metallic Gold Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/330b7c05f9b3ed4d3e7d2bae6dd50a/08330b7c05f9b3ed4d3e7d2bae6dd50a.png"
+ },
+ {
+  "token_id": 2315,
+  "name": "Looper #2315",
+  "traits": {
+   "Eyes": "Glitch Cross",
+   "Risk": "Disciplined",
+   "Skin": "Zombie",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "CRT Tape Tee",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Bankr Cred Printout Wall",
+   "Head Layer": "Brown Cornrows",
+   "Agent Class": "Mercenary / Fixer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Trader / Broker",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/ba8d4623c1f7ce3b8c1c93b7ceec86/c0ba8d4623c1f7ce3b8c1c93b7ceec86.png"
+ },
+ {
   "token_id": 1677,
   "name": "Looper #1677",
   "traits": {
@@ -876,6 +1018,54 @@
   "image": "https://i2c.seadn.io/base/0x8004a169fb4a3325136eb29fa0ceb6d2e539a432/431f9972e805113935e79dfefcc1b0/70431f9972e805113935e79dfefcc1b0.png"
  },
  {
+  "token_id": 6324,
+  "name": "Looper #6324",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Aggressive",
+   "Skin": "Holo",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Based Department Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Skate Rink Covenant",
+   "Head Layer": "Black Cornrows",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/8e1a3285fdc590a81e22d06a327941/098e1a3285fdc590a81e22d06a327941.png"
+ },
+ {
+  "token_id": 3505,
+  "name": "Looper #3505",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Disciplined",
+   "Skin": "Ghost",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Base Patch Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Daylight Agent Desk",
+   "Head Layer": "Cherry Red Cornrows",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "tool routing",
+   "Secondary Class": "Researcher / Archivist",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/f5801552a8e97473c2ec7b3bab5769/b5f5801552a8e97473c2ec7b3bab5769.png"
+ },
+ {
   "token_id": 923,
   "name": "Looper #923",
   "traits": {
@@ -898,6 +1088,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/ff832ce35f7bd17cf9b5ab275148ff/d7ff832ce35f7bd17cf9b5ab275148ff.png"
+ },
+ {
+  "token_id": 3474,
+  "name": "Looper #3474",
+  "traits": {
+   "Eyes": "Gold Coin",
+   "Risk": "Hazardous",
+   "Skin": "Crystal",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Thriller Red Jacket",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Fake OpenSea Agent Grid",
+   "Head Layer": "Cosmic Cornrows",
+   "Agent Class": "Mercenary / Fixer",
+   "Held Object": "Walkie Talkie",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "survival",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/9bb617eb9ac961a14fd8dd745f9b7a/039bb617eb9ac961a14fd8dd745f9b7a.png"
  },
  {
   "token_id": 967,
@@ -1421,6 +1635,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/ba89c848aa23ad4380715628e5cb80/7aba89c848aa23ad4380715628e5cb80.png"
  },
  {
+  "token_id": 1765,
+  "name": "Looper #1765",
+  "traits": {
+   "Eyes": "Target Stars",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Based Department Tee Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Pastel OpenSea Grid",
+   "Head Layer": "Generated Tinfoil Hat Dark Brown Hair",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Diplomat / Connector",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/95fa35f810e0e38ad832b118c09155/8095fa35f810e0e38ad832b118c09155.png"
+ },
+ {
   "token_id": 269,
   "name": "Looper #269",
   "traits": {
@@ -1558,6 +1796,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/150d5d083cda1e15880272b1d5bf2a/a3150d5d083cda1e15880272b1d5bf2a.png"
+ },
+ {
+  "token_id": 4916,
+  "name": "Looper #4916",
+  "traits": {
+   "Eyes": "Robot Eyes",
+   "Risk": "Disciplined",
+   "Skin": "Holo",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Thriller Red Jacket",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Y2K Loading Wormhole",
+   "Head Layer": "Platinum Cornrows",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d7e96af3b570465dded1809591f76f/9cd7e96af3b570465dded1809591f76f.png"
  },
  {
   "token_id": 7214,
@@ -1914,6 +2176,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/13ac793c9a3847468aedec54906e92/c513ac793c9a3847468aedec54906e92.png"
  },
  {
+  "token_id": 4354,
+  "name": "Looper #4354",
+  "traits": {
+   "Eyes": "Glitch Cross",
+   "Risk": "Aggressive",
+   "Skin": "Circuit",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Grok Has Money Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Loop God Mode",
+   "Head Layer": "Bleach Blond Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/346f09d69a5a7f2a9c3ddb009da672/d5346f09d69a5a7f2a9c3ddb009da672.png"
+ },
+ {
   "token_id": 7489,
   "name": "Looper #7489",
   "traits": {
@@ -1983,6 +2269,54 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/a23e9c6dd4ba918641506bcb5e2709/34a23e9c6dd4ba918641506bcb5e2709.png"
+ },
+ {
+  "token_id": 4209,
+  "name": "Looper #4209",
+  "traits": {
+   "Eyes": "Human Brown",
+   "Risk": "Aggressive",
+   "Skin": "Holo",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Cybermall Command Halo",
+   "Head Layer": "Flaky Metallic Gold Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/ef655b13c57281e90677ceb7f3d97e/0def655b13c57281e90677ceb7f3d97e.png"
+ },
+ {
+  "token_id": 6283,
+  "name": "Looper #6283",
+  "traits": {
+   "Eyes": "Human Green",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Base Patch Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "CRT Phosphor Halo",
+   "Head Layer": "Gold Skater Mop",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Researcher / Archivist",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e2287f7357b8e330bb5d6d977b398f/39e2287f7357b8e330bb5d6d977b398f.png"
  },
  {
   "token_id": 1648,
@@ -2129,6 +2463,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e5771f772127114cf12b3ed60a77c5/c6e5771f772127114cf12b3ed60a77c5.png"
  },
  {
+  "token_id": 2226,
+  "name": "Looper #2226",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Aggressive",
+   "Skin": "Circuit",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Grok Has Money Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Analog TV God Mode",
+   "Head Layer": "Pure Electric Plasma Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e8bc9814bacdb69318737c69867152/83e8bc9814bacdb69318737c69867152.png"
+ },
+ {
   "token_id": 6916,
   "name": "Looper #6916",
   "traits": {
@@ -2201,6 +2559,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/caddf55a45a9ea34b1f6473fbba80d/86caddf55a45a9ea34b1f6473fbba80d.png"
  },
  {
+  "token_id": 1488,
+  "name": "Looper #1488",
+  "traits": {
+   "Eyes": "Human Hazel",
+   "Risk": "Disciplined",
+   "Skin": "Human Light",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "CRT Tape Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Pastel OpenSea Grid",
+   "Head Layer": "Midnight Blue Cornrows",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/5632a3d06ff361fd16007dace2e84f/5d5632a3d06ff361fd16007dace2e84f.png"
+ },
+ {
   "token_id": 2866,
   "name": "Looper #2866",
   "traits": {
@@ -2270,6 +2652,78 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/673b7801d5d76793b988753a534ad8/9e673b7801d5d76793b988753a534ad8.png"
+ },
+ {
+  "token_id": 6360,
+  "name": "Looper #6360",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Disciplined",
+   "Skin": "Ghost",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Dialup Loop Gate",
+   "Head Layer": "Mint Shag",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/63a9810fdc1699d006c247dad0f17e/2463a9810fdc1699d006c247dad0f17e.png"
+ },
+ {
+  "token_id": 5797,
+  "name": "Looper #5797",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Hazardous",
+   "Skin": "Holo",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Human Machine Covenant",
+   "Head Layer": "Generated Tinfoil Hat Copper Hair",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "OpenClaw Terminal",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Trader / Broker",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/2602e29d4c2754aa9983ec10b329ef/a82602e29d4c2754aa9983ec10b329ef.png"
+ },
+ {
+  "token_id": 1239,
+  "name": "Looper #1239",
+  "traits": {
+   "Eyes": "Human Hazel",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Pepperidge Farm AI Add Meme",
+   "Head Layer": "Messy Black Shag",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e36997166c287f8d1a78aeceb1132c/09e36997166c287f8d1a78aeceb1132c.png"
  },
  {
   "token_id": 647,
@@ -2462,6 +2916,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/7e5db586f39e22ec4f0d9bf9215cb1/3d7e5db586f39e22ec4f0d9bf9215cb1.png"
  },
  {
+  "token_id": 5043,
+  "name": "Looper #5043",
+  "traits": {
+   "Eyes": "Inferno Glow",
+   "Risk": "Aggressive",
+   "Skin": "Chrome",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "PS2 Street Minimap",
+   "Head Layer": "Generated Tinfoil Hat Bleach Blond Hair",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/6f41b7c03a7fe6ea9657059aa05dce/966f41b7c03a7fe6ea9657059aa05dce.png"
+ },
+ {
   "token_id": 3728,
   "name": "Looper #3728",
   "traits": {
@@ -2507,6 +2985,30 @@
    "Foreground Scraps": "Smoke Wisps"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d7f125fcb57ffdebb590e38edc223f/10d7f125fcb57ffdebb590e38edc223f.png"
+ },
+ {
+  "token_id": 4036,
+  "name": "Looper #4036",
+  "traits": {
+   "Eyes": "Human Green",
+   "Risk": "Aggressive",
+   "Skin": "Holo",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Late Night BBS Halo",
+   "Head Layer": "Rust Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/cf403d46dfcb03b8e8deefcd0c42ad/b5cf403d46dfcb03b8e8deefcd0c42ad.png"
  },
  {
   "token_id": 6500,
@@ -2604,6 +3106,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/1cbd3f15166f8cd5106a89ff1042e5/7f1cbd3f15166f8cd5106a89ff1042e5.png"
  },
  {
+  "token_id": 7486,
+  "name": "Looper #7486",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Aggressive",
+   "Skin": "Holo",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Thriller Red Jacket",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Laserdisc Sun Gate",
+   "Head Layer": "Bleach Shag",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "signal hunting",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/0ec61e2f9e5309798d7c528c36e5cb/ac0ec61e2f9e5309798d7c528c36e5cb.png"
+ },
+ {
   "token_id": 942,
   "name": "Looper #942",
   "traits": {
@@ -2671,6 +3196,29 @@
    "Foreground Scraps": "Smoke Wisps"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/08c816d41a8fa556e65c5fb0b12daa/ab08c816d41a8fa556e65c5fb0b12daa.png"
+ },
+ {
+  "token_id": 5245,
+  "name": "Looper #5245",
+  "traits": {
+   "Eyes": "Glitch Cross",
+   "Risk": "Disciplined",
+   "Skin": "Gold Foil",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "Grok Has Money Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Trashy Desktop Queue",
+   "Head Layer": "Cobalt Skater Mop",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/df3462953ab65d069838373bfca084/bedf3462953ab65d069838373bfca084.png"
  },
  {
   "token_id": 3464,
@@ -2862,6 +3410,53 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/2aa464f7efb2f59f3b5d98246b8481/7d2aa464f7efb2f59f3b5d98246b8481.png"
  },
  {
+  "token_id": 3189,
+  "name": "Looper #3189",
+  "traits": {
+   "Eyes": "Glitch Cross",
+   "Risk": "Hazardous",
+   "Skin": "Crystal",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Base Patch Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "Mario",
+   "Autonomy": "Extreme",
+   "Background": "Skate Rink Covenant",
+   "Head Layer": "Generated Tinfoil Hat Midnight Blue Hair",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "survival",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/5b0c92ae007b5066bd1a50585532c6/e55b0c92ae007b5066bd1a50585532c6.png"
+ },
+ {
+  "token_id": 7145,
+  "name": "Looper #7145",
+  "traits": {
+   "Eyes": "Inferno Glow",
+   "Risk": "Aggressive",
+   "Skin": "Human Warm",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Tactical Harness Top",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Big Terminal Receipt Desk",
+   "Head Layer": "Glitch Magenta Cornrows",
+   "Agent Class": "Mercenary / Fixer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "field runner",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/900c8c6962d79aebb08a8f23462821/26900c8c6962d79aebb08a8f23462821.png"
+ },
+ {
   "token_id": 5648,
   "name": "Looper #5648",
   "traits": {
@@ -3026,6 +3621,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/fdd8f1dcce930fdef516e8a391e0a5/09fdd8f1dcce930fdef516e8a391e0a5.png"
  },
  {
+  "token_id": 1912,
+  "name": "Looper #1912",
+  "traits": {
+   "Eyes": "Glitch Cross",
+   "Risk": "Hazardous",
+   "Skin": "Gold Foil",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Base Patch Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Fantasy MMO Bank Tabs",
+   "Head Layer": "Taped Paper Crown With Hair",
+   "Agent Class": "CEO / Operator",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "tool routing",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/4a4406d80cfe53b9b26e4bc89e0450/504a4406d80cfe53b9b26e4bc89e0450.png"
+ },
+ {
   "token_id": 3331,
   "name": "Looper #3331",
   "traits": {
@@ -3142,6 +3761,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e15c99e33a88d0369e4329bbb50d58/d0e15c99e33a88d0369e4329bbb50d58.png"
+ },
+ {
+  "token_id": 802,
+  "name": "Looper #802",
+  "traits": {
+   "Eyes": "Prism Diamond",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "OpenClaw Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Garage PC Singularity",
+   "Head Layer": "Rust Shag",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "signal hunting",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/615910fadcb9635f82012962ea3cb5/ac615910fadcb9635f82012962ea3cb5.png"
  },
  {
   "token_id": 3780,
@@ -3356,6 +3998,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/6da152a37b014c03a2920ec4bc6728/7d6da152a37b014c03a2920ec4bc6728.png"
  },
  {
+  "token_id": 4618,
+  "name": "Looper #4618",
+  "traits": {
+   "Eyes": "Human Green",
+   "Risk": "Disciplined",
+   "Skin": "Circuit",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Grok Has Money Hoodie Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Daylight Agent Desk",
+   "Head Layer": "Mint Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/a319581bc903d6d34348134302d979/85a319581bc903d6d34348134302d979.png"
+ },
+ {
   "token_id": 7024,
   "name": "Looper #7024",
   "traits": {
@@ -3426,6 +4092,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/3041fc018d6671a555d1d484506030/0c3041fc018d6671a555d1d484506030.png"
+ },
+ {
+  "token_id": 2368,
+  "name": "Looper #2368",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Hazardous",
+   "Skin": "Lava",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Cred Report Side Panels",
+   "Head Layer": "Generated Tinfoil Hat Dark Brown Hair",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/ea3134f4f460656106dbd11faae367/61ea3134f4f460656106dbd11faae367.png"
  },
  {
   "token_id": 3170,
@@ -3594,6 +4283,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/df32bf2a133fe47bb66c3ea133ac01/4edf32bf2a133fe47bb66c3ea133ac01.png"
  },
  {
+  "token_id": 3314,
+  "name": "Looper #3314",
+  "traits": {
+   "Eyes": "Gold Coin",
+   "Risk": "Aggressive",
+   "Skin": "Human Deep",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Base Patch Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Fake OpenSea Agent Grid",
+   "Head Layer": "Generated Tinfoil Hat Midnight Blue Hair",
+   "Agent Class": "CEO / Operator",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "tool routing",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/932ed4b73cf6dafbfc575e0160a1c6/61932ed4b73cf6dafbfc575e0160a1c6.png"
+ },
+ {
   "token_id": 5266,
   "name": "Looper #5266",
   "traits": {
@@ -3685,6 +4398,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/3fbe739b9fd9bc3bf4ba9964bcf410/f73fbe739b9fd9bc3bf4ba9964bcf410.png"
+ },
+ {
+  "token_id": 3740,
+  "name": "Looper #3740",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Disciplined",
+   "Skin": "Human Deep",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Bankr Hoodie Bish",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Layer Picker Window",
+   "Head Layer": "Glitch Magenta Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "dealflow operator",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/0144aca2626a5ab5f6aaa7173f82ff/2b0144aca2626a5ab5f6aaa7173f82ff.png"
  },
  {
   "token_id": 4410,
@@ -3806,6 +4543,53 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/5aa869829fa41639a66fdecff6df3d/3a5aa869829fa41639a66fdecff6df3d.png"
  },
  {
+  "token_id": 1740,
+  "name": "Looper #1740",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Disciplined",
+   "Skin": "Chrome",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "OpenClaw Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Browser Tabs Agent Search",
+   "Head Layer": "Mint Shag",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "agent operator",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/40ed6e4d8c26c6df44f3dd126f3d79/2640ed6e4d8c26c6df44f3dd126f3d79.png"
+ },
+ {
+  "token_id": 3926,
+  "name": "Looper #3926",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Hazardous",
+   "Skin": "Zombie",
+   "Mouth": "Red Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "Nyan Cat",
+   "Autonomy": "Extreme",
+   "Background": "Dreamcast Loop Gate",
+   "Head Layer": "Copper Cornrows",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/b2bef426797f3b9f5e176505e1865e/92b2bef426797f3b9f5e176505e1865e.png"
+ },
+ {
   "token_id": 1768,
   "name": "Looper #1768",
   "traits": {
@@ -3828,6 +4612,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/dc88a111714b4e3468d87a38a81bd9/c5dc88a111714b4e3468d87a38a81bd9.png"
+ },
+ {
+  "token_id": 6212,
+  "name": "Looper #6212",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Aggressive",
+   "Skin": "Machine",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Neural Storm Portal",
+   "Head Layer": "Mint Shag",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/310586399be75721c829df0520db46/75310586399be75721c829df0520db46.png"
  },
  {
   "token_id": 5519,
@@ -3947,6 +4755,53 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/bd731382d389047491a0d281aa945f/b4bd731382d389047491a0d281aa945f.png"
+ },
+ {
+  "token_id": 1128,
+  "name": "Looper #1128",
+  "traits": {
+   "Eyes": "Human Brown",
+   "Risk": "Disciplined",
+   "Skin": "Zombie",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Whiteboard Bug Hunt",
+   "Head Layer": "Midnight Blue Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/5f567de2a2f62068c0133e878deec4/365f567de2a2f62068c0133e878deec4.png"
+ },
+ {
+  "token_id": 4421,
+  "name": "Looper #4421",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Disciplined",
+   "Skin": "Human Light",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "CRT Tape Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Swarm Command Halo",
+   "Head Layer": "Mint Shag",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/3995e50c3e063880fba0220bc41f7c/823995e50c3e063880fba0220bc41f7c.png"
  },
  {
   "token_id": 2118,
@@ -4162,6 +5017,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/2dbfffec443559ab4c44559cecbcc2/652dbfffec443559ab4c44559cecbcc2.png"
  },
  {
+  "token_id": 1999,
+  "name": "Looper #1999",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Disciplined",
+   "Skin": "Holo",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Agent File Explosion",
+   "Head Layer": "Emerald Green Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/8ad588385e8e35d94a0ccee2413136/d18ad588385e8e35d94a0ccee2413136.png"
+ },
+ {
   "token_id": 5633,
   "name": "Looper #5633",
   "traits": {
@@ -4232,6 +5111,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/589bcae8b80508195e49736ca7df3a/f7589bcae8b80508195e49736ca7df3a.png"
+ },
+ {
+  "token_id": 4628,
+  "name": "Looper #4628",
+  "traits": {
+   "Eyes": "Human Green",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Browser Tabs Agent Search",
+   "Head Layer": "Generated Tinfoil Hat Midnight Blue Hair",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Trader / Broker",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/c64cc2654b72883a0bb8f4c527c12e/e9c64cc2654b72883a0bb8f4c527c12e.png"
  },
  {
   "token_id": 7258,
@@ -4330,6 +5233,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/2a656f6c4fa734c80d4c3b3b04be60/392a656f6c4fa734c80d4c3b3b04be60.png"
  },
  {
+  "token_id": 7653,
+  "name": "Looper #7653",
+  "traits": {
+   "Eyes": "Laser Eyes",
+   "Risk": "Aggressive",
+   "Skin": "Glitch",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Grok Has Money Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Comic Shop Reactor",
+   "Head Layer": "Bald",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/0aca9e1e193727cac4069414c2a710/c90aca9e1e193727cac4069414c2a710.png"
+ },
+ {
   "token_id": 7477,
   "name": "Looper #7477",
   "traits": {
@@ -4352,6 +5278,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e3cafbda53b26c0c4610e989040313/1de3cafbda53b26c0c4610e989040313.png"
+ },
+ {
+  "token_id": 6453,
+  "name": "Looper #6453",
+  "traits": {
+   "Eyes": "Gold Coin",
+   "Risk": "Aggressive",
+   "Skin": "Glitch",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "Based Department Tee Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "Terminator",
+   "Autonomy": "Extreme",
+   "Background": "Comic Shop Reactor",
+   "Head Layer": "Brown Cornrows",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/9ad5fb74885e0f85da4dab4f17852a/cb9ad5fb74885e0f85da4dab4f17852a.png"
  },
  {
   "token_id": 4500,
@@ -4754,6 +5703,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/896c9edeeb811a77afded79827b25a/87896c9edeeb811a77afded79827b25a.png"
  },
  {
+  "token_id": 5573,
+  "name": "Looper #5573",
+  "traits": {
+   "Eyes": "Scanner Slit",
+   "Risk": "Hazardous",
+   "Skin": "Gold Foil",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Base Patch Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Agent Singularity Ring",
+   "Head Layer": "Flaky Metallic Gold Cornrows",
+   "Agent Class": "CEO / Operator",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "tool routing",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d6648405e41c2ad3c7daab7b246f5d/efd6648405e41c2ad3c7daab7b246f5d.png"
+ },
+ {
   "token_id": 377,
   "name": "Looper #377",
   "traits": {
@@ -4799,6 +5772,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/eae6afe460f9b484929b25f1b3f10f/faeae6afe460f9b484929b25f1b3f10f.png"
+ },
+ {
+  "token_id": 1733,
+  "name": "Looper #1733",
+  "traits": {
+   "Eyes": "Human Hazel",
+   "Risk": "Hazardous",
+   "Skin": "Lava",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Neural Storm Portal",
+   "Head Layer": "Rust Shag",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d5fea7917bec83364d6c128d1efae8/b7d5fea7917bec83364d6c128d1efae8.png"
  },
  {
   "token_id": 1379,
@@ -4917,6 +5914,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/f1ba5abb0fb4d33ec12a770b0b2822/64f1ba5abb0fb4d33ec12a770b0b2822.png"
  },
  {
+  "token_id": 4571,
+  "name": "Looper #4571",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Aggressive",
+   "Skin": "Gold Foil",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Fix The Timeline Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Pepperidge Farm AI Add Meme",
+   "Head Layer": "Rust Shag",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/02d405c909a66f71d9ade1f055bea1/8702d405c909a66f71d9ade1f055bea1.png"
+ },
+ {
   "token_id": 3167,
   "name": "Looper #3167",
   "traits": {
@@ -4939,6 +5959,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/fe5925ea43aeb381a15f9f8a6bd15f/e5fe5925ea43aeb381a15f9f8a6bd15f.png"
+ },
+ {
+  "token_id": 3815,
+  "name": "Looper #3815",
+  "traits": {
+   "Eyes": "Robot Eyes",
+   "Risk": "Aggressive",
+   "Skin": "Human Light",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Fix The Timeline Tee",
+   "Eyewear": "None",
+   "Overlay": "Dense Star Cardstock",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Dream Machine Cathedral",
+   "Head Layer": "Electric Cyan Cornrows",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x8004a169fb4a3325136eb29fa0ceb6d2e539a432/e82c0d89575d414ca27475273ef2f2/11e82c0d89575d414ca27475273ef2f2.png"
  },
  {
   "token_id": 1298,
@@ -5035,6 +6079,146 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/befbf369eba3e2bcc0955bf7a78f4a/a8befbf369eba3e2bcc0955bf7a78f4a.png"
  },
  {
+  "token_id": 3968,
+  "name": "Looper #3968",
+  "traits": {
+   "Eyes": "Twin Moons",
+   "Risk": "Aggressive",
+   "Skin": "Human Light",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Loop God Mode",
+   "Head Layer": "Copper Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/a2378259719cfad88228e210de2c71/6aa2378259719cfad88228e210de2c71.png"
+ },
+ {
+  "token_id": 5500,
+  "name": "Looper #5500",
+  "traits": {
+   "Eyes": "Human Hazel",
+   "Risk": "Disciplined",
+   "Skin": "Human Light",
+   "Mouth": "Red Pill Tongue Mouth",
+   "Outfit": "CRT Tape Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Late Night BBS Halo",
+   "Head Layer": "Bleach Shag",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d057ed24c47cb306064ade1dbcd61f/e4d057ed24c47cb306064ade1dbcd61f.png"
+ },
+ {
+  "token_id": 6823,
+  "name": "Looper #6823",
+  "traits": {
+   "Eyes": "Human Brown",
+   "Risk": "Disciplined",
+   "Skin": "Zombie",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Sticky Commands Desk",
+   "Head Layer": "Bleach Skater Mop",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/97eb6d4f95f3d82c1610c260e0da68/7897eb6d4f95f3d82c1610c260e0da68.png"
+ },
+ {
+  "token_id": 4659,
+  "name": "Looper #4659",
+  "traits": {
+   "Eyes": "Gold Coin",
+   "Risk": "Disciplined",
+   "Skin": "Human Light",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Based Department Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Agent Cafe Counter",
+   "Head Layer": "Generated Tinfoil Hat Dark Brown Hair",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/5c3c33c5535671d140f88dd410362a/dd5c3c33c5535671d140f88dd410362a.png"
+ },
+ {
+  "token_id": 1085,
+  "name": "Looper #1085",
+  "traits": {
+   "Eyes": "Target Stars",
+   "Risk": "Disciplined",
+   "Skin": "Human Warm",
+   "Mouth": "Red Pill Tongue Mouth",
+   "Outfit": "Base Patch Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Laundromat Terminal",
+   "Head Layer": "Bleach Blond Cornrows",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "people reading",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/ca94956a3c6db7b14f0bc8c9bd9d6b/19ca94956a3c6db7b14f0bc8c9bd9d6b.png"
+ },
+ {
+  "token_id": 7515,
+  "name": "Looper #7515",
+  "traits": {
+   "Eyes": "Human Blue",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "Cyan Magenta Mesh",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Cybermall Command Halo",
+   "Head Layer": "Grimy Black Beanie",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/f5c32954a48ed40a95be8c96cf3943/acf5c32954a48ed40a95be8c96cf3943.png"
+ },
+ {
   "token_id": 4550,
   "name": "Looper #4550",
   "traits": {
@@ -5057,6 +6241,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/b215a0c4139cd6a19310c0d49e8c11/37b215a0c4139cd6a19310c0d49e8c11.png"
+ },
+ {
+  "token_id": 1992,
+  "name": "Looper #1992",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Disciplined",
+   "Skin": "Zombie",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Whiteboard Graph Room",
+   "Head Layer": "Chestnut Skater Mop",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/042c700d6d209c10020c964618726d/a0042c700d6d209c10020c964618726d.png"
  },
  {
   "token_id": 4968,
@@ -5200,6 +6407,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/87c2076b75631ef240ecc32fcb28a3/4187c2076b75631ef240ecc32fcb28a3.png"
  },
  {
+  "token_id": 464,
+  "name": "Looper #464",
+  "traits": {
+   "Eyes": "Robot Eyes",
+   "Risk": "Aggressive",
+   "Skin": "Zombie",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Gray",
+   "Eyewear": "Wireframe Glasses",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Trashy Desktop Queue",
+   "Head Layer": "Generated Tinfoil Hat Dark Brown Hair",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/9a95e56c25e0679d3ba01d39ef9cb9/219a95e56c25e0679d3ba01d39ef9cb9.png"
+ },
+ {
   "token_id": 827,
   "name": "Looper #827",
   "traits": {
@@ -5338,6 +6568,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/fe36e823e8f84a3d5f53dff634056a/8cfe36e823e8f84a3d5f53dff634056a.png"
+ },
+ {
+  "token_id": 5315,
+  "name": "Looper #5315",
+  "traits": {
+   "Eyes": "Human Green",
+   "Risk": "Disciplined",
+   "Skin": "Human Deep",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "Fix The Timeline Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Windows 95 Wormhole",
+   "Head Layer": "Platinum Cornrows",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/8a8a1e49a52abe80e787715ef2481c/fa8a8a1e49a52abe80e787715ef2481c.png"
  },
  {
   "token_id": 4646,
@@ -5479,6 +6733,54 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/48081f1992a4173a27fc69a0940f42/b748081f1992a4173a27fc69a0940f42.png"
  },
  {
+  "token_id": 909,
+  "name": "Looper #909",
+  "traits": {
+   "Eyes": "Laser Eyes",
+   "Risk": "Disciplined",
+   "Skin": "Crystal",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "CRT Tape Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Attention Wormhole",
+   "Head Layer": "Rose Shag",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/9f3a0b4bd67a1d8204209050d06b97/3f9f3a0b4bd67a1d8204209050d06b97.png"
+ },
+ {
+  "token_id": 7188,
+  "name": "Looper #7188",
+  "traits": {
+   "Eyes": "Prism Diamond",
+   "Risk": "Aggressive",
+   "Skin": "Lava",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Big Terminal Receipt Desk",
+   "Head Layer": "Black Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/135d4c5d33d526de4bddfbea561668/07135d4c5d33d526de4bddfbea561668.png"
+ },
+ {
   "token_id": 3497,
   "name": "Looper #3497",
   "traits": {
@@ -5525,6 +6827,54 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/9f02a75bdf7836cd9cef23f3bae989/3d9f02a75bdf7836cd9cef23f3bae989.png"
+ },
+ {
+  "token_id": 2317,
+  "name": "Looper #2317",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Disciplined",
+   "Skin": "Circuit",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Tactical Harness Top",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Bright Layer File Browser",
+   "Head Layer": "Grimy Black Beanie",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "field runner",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/246770f114e7f711840f45c1a8a753/a7246770f114e7f711840f45c1a8a753.png"
+ },
+ {
+  "token_id": 4485,
+  "name": "Looper #4485",
+  "traits": {
+   "Eyes": "Prism Diamond",
+   "Risk": "Hazardous",
+   "Skin": "Lava",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Fix The Timeline Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "Acid Rainbow Burst",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Agent Palm Terminal",
+   "Head Layer": "Generated Tinfoil Hat Midnight Blue Hair",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/5042079e1aa23158e1bbebbf0cb8f5/5c5042079e1aa23158e1bbebbf0cb8f5.png"
  },
  {
   "token_id": 4266,
@@ -5598,6 +6948,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/655332b7f420d2fe807170800b5e62/7f655332b7f420d2fe807170800b5e62.png"
  },
  {
+  "token_id": 1731,
+  "name": "Looper #1731",
+  "traits": {
+   "Eyes": "Gold Coin",
+   "Risk": "Disciplined",
+   "Skin": "Ghost",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Based Department Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Agent Cafe Counter",
+   "Head Layer": "Midnight Blue Cornrows",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d09179412a84697f29aa66c45739c9/4cd09179412a84697f29aa66c45739c9.png"
+ },
+ {
   "token_id": 4746,
   "name": "Looper #4746",
   "traits": {
@@ -5619,6 +6992,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/b6df99f489a6c7ac6adeac2482a7f3/0eb6df99f489a6c7ac6adeac2482a7f3.png"
+ },
+ {
+  "token_id": 5686,
+  "name": "Looper #5686",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Sticky Commands Desk",
+   "Head Layer": "Generated Tinfoil Hat Dark Brown Hair",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/2d2439abeca32596863e1b40f25102/162d2439abeca32596863e1b40f25102.png"
  },
  {
   "token_id": 246,
@@ -6093,6 +7490,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/bf532af5bc75afb0126c94f3c29427/f8bf532af5bc75afb0126c94f3c29427.png"
  },
  {
+  "token_id": 6450,
+  "name": "Looper #6450",
+  "traits": {
+   "Eyes": "Human Brown",
+   "Risk": "Disciplined",
+   "Skin": "Chrome",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "CRT Tape Tee",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "Nyan Cat",
+   "Autonomy": "Extreme",
+   "Background": "Laundromat Terminal",
+   "Head Layer": "Flaky Metallic Gold Cornrows",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "analog archivist",
+   "Secondary Class": "Diplomat / Connector",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/ec5db31bac71c3d427c1f2289a87ff/72ec5db31bac71c3d427c1f2289a87ff.png"
+ },
+ {
   "token_id": 4696,
   "name": "Looper #4696",
   "traits": {
@@ -6375,6 +7796,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/81fa701596520af58509b48f40022a/bb81fa701596520af58509b48f40022a.png"
  },
  {
+  "token_id": 2972,
+  "name": "Looper #2972",
+  "traits": {
+   "Eyes": "Laser Eyes",
+   "Risk": "Disciplined",
+   "Skin": "Holo",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "Based Department Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Training Tape Covenant",
+   "Head Layer": "Mint Skater Mop",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/498dc8238496d64c4bd2a93d6dcac0/29498dc8238496d64c4bd2a93d6dcac0.png"
+ },
+ {
   "token_id": 7223,
   "name": "Looper #7223",
   "traits": {
@@ -6443,6 +7888,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/c4a1c25cce56f99ccff711836a24ce/4ec4a1c25cce56f99ccff711836a24ce.png"
+ },
+ {
+  "token_id": 4924,
+  "name": "Looper #4924",
+  "traits": {
+   "Eyes": "Glitch Cross",
+   "Risk": "Disciplined",
+   "Skin": "Holo",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Grok Has Money Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Fantasy MMO Inventory Dock",
+   "Head Layer": "Brown Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/31140b7d38561855e5d0553d5fdc5f/6631140b7d38561855e5d0553d5fdc5f.png"
  },
  {
   "token_id": 7466,
@@ -6682,6 +8151,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/35fd990e1406f774c7c8e746329bb2/5a35fd990e1406f774c7c8e746329bb2.png"
  },
  {
+  "token_id": 5971,
+  "name": "Looper #5971",
+  "traits": {
+   "Eyes": "Human Brown",
+   "Risk": "Aggressive",
+   "Skin": "Lava",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "CRT Tape Tee Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "MCP Router Side Logs",
+   "Head Layer": "Mint Skater Mop",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "Magic 8 Ball",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/6be4479a26bdefec38c4b3bdc13920/b16be4479a26bdefec38c4b3bdc13920.png"
+ },
+ {
   "token_id": 2637,
   "name": "Looper #2637",
   "traits": {
@@ -6775,6 +8267,52 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/c6141e2a8ca2e813eb439f02fbf41d/edc6141e2a8ca2e813eb439f02fbf41d.png"
  },
  {
+  "token_id": 3690,
+  "name": "Looper #3690",
+  "traits": {
+   "Eyes": "Human Blue",
+   "Risk": "Disciplined",
+   "Skin": "Human Deep",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Grok Has Money Hoodie White",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Skate Rink Covenant",
+   "Head Layer": "Rust Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d2e11c45d315241f99fd34fa57f549/cfd2e11c45d315241f99fd34fa57f549.png"
+ },
+ {
+  "token_id": 7710,
+  "name": "Looper #7710",
+  "traits": {
+   "Eyes": "Gold Coin",
+   "Risk": "Disciplined",
+   "Skin": "Machine",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Grok Has Money Hoodie Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "Spider-Man",
+   "Autonomy": "High",
+   "Background": "PS2 Street Minimap",
+   "Head Layer": "Bleach Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/60a4b6c02dc026817a004d77754f05/9360a4b6c02dc026817a004d77754f05.png"
+ },
+ {
   "token_id": 5650,
   "name": "Looper #5650",
   "traits": {
@@ -6797,6 +8335,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/9b3f16240176a9379375acf96c6f8c/6e9b3f16240176a9379375acf96c6f8c.png"
+ },
+ {
+  "token_id": 6401,
+  "name": "Looper #6401",
+  "traits": {
+   "Eyes": "Spiral Signal",
+   "Risk": "Aggressive",
+   "Skin": "Holo",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Base Patch Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Neural Storm Portal",
+   "Head Layer": "Bleach Skater Mop",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "signal hunting",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/0e1877e7333235dd437557a1a19560/b60e1877e7333235dd437557a1a19560.png"
  },
  {
   "token_id": 6829,
@@ -6846,6 +8407,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/a11ab620342099fa28ad20b1513d55/62a11ab620342099fa28ad20b1513d55.png"
  },
  {
+  "token_id": 664,
+  "name": "Looper #664",
+  "traits": {
+   "Eyes": "Human Hazel",
+   "Risk": "Aggressive",
+   "Skin": "Machine",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Based Department Tee Black",
+   "Eyewear": "None",
+   "Overlay": "Cyan Magenta Mesh",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "PS2 Street Minimap",
+   "Head Layer": "Rose Shag",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/a105c8bc345f5d8a36e1d758309334/c3a105c8bc345f5d8a36e1d758309334.png"
+ },
+ {
   "token_id": 7305,
   "name": "Looper #7305",
   "traits": {
@@ -6867,6 +8451,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/916e4721d84792085a8d627a2b97db/2d916e4721d84792085a8d627a2b97db.png"
+ },
+ {
+  "token_id": 6233,
+  "name": "Looper #6233",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Disciplined",
+   "Skin": "Circuit",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Fix The Timeline Tee Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Agent Ops Cockpit",
+   "Head Layer": "Right Facing Trucker Cap",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/34f50614b4621013a82a142fdc0529/2334f50614b4621013a82a142fdc0529.png"
  },
  {
   "token_id": 2451,
@@ -6891,6 +8498,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/8cee932e710c6180c857ac886cfbcc/d88cee932e710c6180c857ac886cfbcc.png"
+ },
+ {
+  "token_id": 1879,
+  "name": "Looper #1879",
+  "traits": {
+   "Eyes": "Human Blue",
+   "Risk": "Disciplined",
+   "Skin": "Zombie",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "CRT Tape Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Red Light Hatch",
+   "Head Layer": "Royal Purple Cornrows",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/4dc21e04672f0cfff2d70a5e14f998/dc4dc21e04672f0cfff2d70a5e14f998.png"
  },
  {
   "token_id": 436,
@@ -7034,6 +8665,78 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/736c536f376855fe6ab3b05bb2a5f8/0f736c536f376855fe6ab3b05bb2a5f8.png"
  },
  {
+  "token_id": 5285,
+  "name": "Looper #5285",
+  "traits": {
+   "Eyes": "Human Hazel",
+   "Risk": "Aggressive",
+   "Skin": "Ghost",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Hamburger Data Center Meme",
+   "Head Layer": "Right Facing Trucker Cap",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Creator / Propagandist",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/a844cd35186334484df1598af7a49d/69a844cd35186334484df1598af7a49d.png"
+ },
+ {
+  "token_id": 556,
+  "name": "Looper #556",
+  "traits": {
+   "Eyes": "Target Stars",
+   "Risk": "Disciplined",
+   "Skin": "Chrome",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Fix The Timeline Tee Black",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Channel Three Halo",
+   "Head Layer": "Gold Shag",
+   "Agent Class": "Builder / Engineer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "debugging",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/c38e393acdb831d163d575dc6067b4/3dc38e393acdb831d163d575dc6067b4.png"
+ },
+ {
+  "token_id": 4584,
+  "name": "Looper #4584",
+  "traits": {
+   "Eyes": "Robot Eyes",
+   "Risk": "Disciplined",
+   "Skin": "Ghost",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Based Department Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Agent Ops Cockpit",
+   "Head Layer": "Brown Cornrows",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/a3141056e7df90704b885f0fefbe61/1ba3141056e7df90704b885f0fefbe61.png"
+ },
+ {
   "token_id": 4059,
   "name": "Looper #4059",
   "traits": {
@@ -7081,6 +8784,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/08b07a47549ce795814d17200fdbb2/eb08b07a47549ce795814d17200fdbb2.png"
  },
  {
+  "token_id": 6178,
+  "name": "Looper #6178",
+  "traits": {
+   "Eyes": "Glitch Cross",
+   "Risk": "Aggressive",
+   "Skin": "Lava",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Based Department Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Laserdisc Sun Gate",
+   "Head Layer": "Bald",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/4b75e4981fbadcb37074cc9762986f/154b75e4981fbadcb37074cc9762986f.png"
+ },
+ {
   "token_id": 931,
   "name": "Looper #931",
   "traits": {
@@ -7103,6 +8830,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e9b5f542316b1d42a82230ebc6d9ed/7ae9b5f542316b1d42a82230ebc6d9ed.png"
+ },
+ {
+  "token_id": 5439,
+  "name": "Looper #5439",
+  "traits": {
+   "Eyes": "Target Stars",
+   "Risk": "Aggressive",
+   "Skin": "Crystal",
+   "Mouth": "Lime Pill Tongue Mouth",
+   "Outfit": "Thriller Red Jacket",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Agent Receipt Wall",
+   "Head Layer": "Chestnut Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/dfa6c4a2a7043906760eed6cefb912/b3dfa6c4a2a7043906760eed6cefb912.png"
  },
  {
   "token_id": 2461,
@@ -7198,6 +8949,29 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/3e918a5d952df82ce2ffaaa796dec6/dc3e918a5d952df82ce2ffaaa796dec6.png"
+ },
+ {
+  "token_id": 142,
+  "name": "Looper #142",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Disciplined",
+   "Skin": "Ghost",
+   "Mouth": "Tape Mouth",
+   "Outfit": "Tactical Harness Top",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Yard Sale Token Orbit",
+   "Head Layer": "Bleach Shag",
+   "Agent Class": "Mercenary / Fixer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "field runner",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/143fb213cbae78469b6cf77ffe9981/63143fb213cbae78469b6cf77ffe9981.png"
  },
  {
   "token_id": 4551,
@@ -7364,6 +9138,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/8c77ceb49e47a98bec63092b4ddeac/378c77ceb49e47a98bec63092b4ddeac.png"
  },
  {
+  "token_id": 4000,
+  "name": "Looper #4000",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Hazardous",
+   "Skin": "Glitch",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Loop Cathedral Core",
+   "Head Layer": "Chestnut Shag",
+   "Agent Class": "Seer / Signal Hunter",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Trader / Broker",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/3002475daab52ba4df1e429a2de614/1f3002475daab52ba4df1e429a2de614.png"
+ },
+ {
   "token_id": 7220,
   "name": "Looper #7220",
   "traits": {
@@ -7386,6 +9184,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/1391b375feffd052b9df85a323d0ba/8b1391b375feffd052b9df85a323d0ba.png"
+ },
+ {
+  "token_id": 348,
+  "name": "Looper #348",
+  "traits": {
+   "Eyes": "Dead Pixel",
+   "Risk": "Aggressive",
+   "Skin": "Zombie",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "CRT Tape Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Cred Report Side Panels",
+   "Head Layer": "Chestnut Shag",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/416ae2f5a88a27adf7ee221e633115/c0416ae2f5a88a27adf7ee221e633115.png"
  },
  {
   "token_id": 4502,
@@ -7716,6 +9538,54 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/9afa34b1b59f9e1cb6ef766793861c/579afa34b1b59f9e1cb6ef766793861c.png"
  },
  {
+  "token_id": 248,
+  "name": "Looper #248",
+  "traits": {
+   "Eyes": "Human Blue",
+   "Risk": "Disciplined",
+   "Skin": "Chrome",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Base Patch Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Arcade Token Orbit",
+   "Head Layer": "Cherry Red Cornrows",
+   "Agent Class": "Mercenary / Fixer",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "tool routing",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/b17d8de30caf274164e5752f920307/8bb17d8de30caf274164e5752f920307.png"
+ },
+ {
+  "token_id": 7391,
+  "name": "Looper #7391",
+  "traits": {
+   "Eyes": "Laser Eyes",
+   "Risk": "Disciplined",
+   "Skin": "Human Warm",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Grok Has Money Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Sticky Commands Desk",
+   "Head Layer": "Mint Skater Mop",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Builder / Engineer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/306a87257d69c9ed422a6640313543/d8306a87257d69c9ed422a6640313543.png"
+ },
+ {
   "token_id": 6275,
   "name": "Looper #6275",
   "traits": {
@@ -7740,6 +9610,52 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/3d5fe825569b7521150d7fd6cd3978/0e3d5fe825569b7521150d7fd6cd3978.png"
  },
  {
+  "token_id": 7170,
+  "name": "Looper #7170",
+  "traits": {
+   "Eyes": "Human Brown",
+   "Risk": "Disciplined",
+   "Skin": "Circuit",
+   "Mouth": "Red Pill Tongue Mouth",
+   "Outfit": "Based Department Tee Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "OpenClaw Operator Chat",
+   "Head Layer": "Electric Cyan Cornrows",
+   "Agent Class": "Diplomat / Connector",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x8004a169fb4a3325136eb29fa0ceb6d2e539a432/5237a7a397c0c0ecd94152919aa9e1/a75237a7a397c0c0ecd94152919aa9e1.png"
+ },
+ {
+  "token_id": 5089,
+  "name": "Looper #5089",
+  "traits": {
+   "Eyes": "Gold Coin",
+   "Risk": "Hazardous",
+   "Skin": "Glitch",
+   "Mouth": "Cigar Mouth",
+   "Outfit": "Grok Has Money Hoodie",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Amber Pod Bay",
+   "Head Layer": "Glitch Magenta Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/971aa5c8ac5a0efae698680a745461/fb971aa5c8ac5a0efae698680a745461.png"
+ },
+ {
   "token_id": 3274,
   "name": "Looper #3274",
   "traits": {
@@ -7761,6 +9677,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/13f480131a26e33740f459eb25aca5/2313f480131a26e33740f459eb25aca5.png"
+ },
+ {
+  "token_id": 7527,
+  "name": "Looper #7527",
+  "traits": {
+   "Eyes": "Inferno Glow",
+   "Risk": "Disciplined",
+   "Skin": "Crystal",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "Grok Has Money Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Agent Diff Border",
+   "Head Layer": "Brown Cornrows",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/41d0970cf2d9151c3b077dc241270c/3041d0970cf2d9151c3b077dc241270c.png"
  },
  {
   "token_id": 5398,
@@ -8000,6 +9940,30 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/80b8312c7183bd96b6d4da9b7cf6d1/3780b8312c7183bd96b6d4da9b7cf6d1.png"
  },
  {
+  "token_id": 5259,
+  "name": "Looper #5259",
+  "traits": {
+   "Eyes": "Robot Eyes",
+   "Risk": "Aggressive",
+   "Skin": "Ghost",
+   "Mouth": "Cigarette Mouth",
+   "Outfit": "Grok Has Money Hoodie Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Windows 95 Wormhole",
+   "Head Layer": "Cobalt Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e1f5a4d85cdc1e84e2929fe27152a9/29e1f5a4d85cdc1e84e2929fe27152a9.png"
+ },
+ {
   "token_id": 2025,
   "name": "Looper #2025",
   "traits": {
@@ -8117,6 +10081,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/92117a7f1d17fbcdea77031fd7d326/c992117a7f1d17fbcdea77031fd7d326.png"
+ },
+ {
+  "token_id": 2651,
+  "name": "Looper #2651",
+  "traits": {
+   "Eyes": "Inferno Glow",
+   "Risk": "Aggressive",
+   "Skin": "Human Deep",
+   "Mouth": "Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Fake OpenSea Agent Grid",
+   "Head Layer": "Right Facing Trucker Cap",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Secondary Class": "Mercenary / Fixer",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/e29578ba2219c5a98c4ede26e02a53/e7e29578ba2219c5a98c4ede26e02a53.png"
  },
  {
   "token_id": 1497,
@@ -8238,6 +10226,29 @@
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/fafc0a5141f59ebbb10051ef705adc/40fafc0a5141f59ebbb10051ef705adc.png"
  },
  {
+  "token_id": 7222,
+  "name": "Looper #7222",
+  "traits": {
+   "Eyes": "Laser Eyes",
+   "Risk": "Disciplined",
+   "Skin": "Machine",
+   "Mouth": "Smiley Pill Tongue Mouth",
+   "Outfit": "Grok Has Money Hoodie Gray",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "High",
+   "Background": "Node Monitor Room",
+   "Head Layer": "Cobalt Shag",
+   "Agent Class": "Trader / Broker",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "market making",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/d624a99b0bcd93a4beda6ff78d8ca4/ddd624a99b0bcd93a4beda6ff78d8ca4.png"
+ },
+ {
   "token_id": 6762,
   "name": "Looper #6762",
   "traits": {
@@ -8331,6 +10342,30 @@
    "Foreground Scraps": "None"
   },
   "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/40a1eb0e6cdcc39a5719fcfe97b86b/1840a1eb0e6cdcc39a5719fcfe97b86b.png"
+ },
+ {
+  "token_id": 2882,
+  "name": "Looper #2882",
+  "traits": {
+   "Eyes": "Red Alert",
+   "Risk": "Disciplined",
+   "Skin": "Human Light",
+   "Mouth": "Crooked Open Mouth",
+   "Outfit": "CRT Tape Tee Blue",
+   "Eyewear": "None",
+   "Overlay": "None",
+   "Artifact": "None",
+   "Autonomy": "Extreme",
+   "Background": "Recursive Sun Gate",
+   "Head Layer": "Generated Tinfoil Hat Dirty Green Hair",
+   "Agent Class": "Researcher / Archivist",
+   "Held Object": "None",
+   "Codex Version": "looper-trait-personality-matrix-v02",
+   "Specialization": "record keeping",
+   "Secondary Class": "Seer / Signal Hunter",
+   "Foreground Scraps": "None"
+  },
+  "image": "https://i2c.seadn.io/base/0x1649cd37f4748807b4882fc48765ba0b2affa94a/09bfac0c828904588097c9206a81ff/d109bfac0c828904588097c9206a81ff.png"
  },
  {
   "token_id": 1011,

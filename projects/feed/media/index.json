@@ -144,14 +144,6 @@
       "version": "a049a8eb50894a26cf4730bb9845e7a7db701141e6f83207de81de4947c20857",
       "source_url": "https://opensea.io/collection/loopers-639312714/opengraph-image?ts=29835666"
     },
-    "3eb4aa6bf86a350c183e12b3f506d8cc4fc7e5bb2f5db0896cfdd0cf4b1363fa": {
-      "path": "workspace/feed/media/3p/de60bade42493e7e6e5dc41892ddb21f8f1dd2758c3d34003feb4217b6369b43/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 321264,
-      "modified_ms": 1789959515401,
-      "version": "80eee1fc4980b5328026d0c816ef38d1a311b74bce225610a1e23e8a94950851",
-      "source_url": "https://fbdfurqh55jjxjwf.public.blob.vercel-storage.com/blog/robinhood-chain-4-5m-daily-fees-400-ethereum-september-2026.webp"
-    },
     "41755b91480097dfc8e669af36cc319453dab449c3bf3d225ad3bb32f57ec0ce": {
       "path": "workspace/feed/media/3p/6347322e7fac45ca58d165fed1a0f7e2875b7b9ed697a71453fa844687b98a5b/hero.png",
       "mime_type": "image/png",
@@ -191,6 +183,14 @@
       "modified_ms": 1790190051405,
       "version": "8610539acd902de0df17a547a6726b837b5092b4b4157496c413e20efef48420",
       "source_url": "https://pbs.twimg.com/media/HS6Cf0HXoAE-s9U?format=webp&name=large"
+    },
+    "57e9cdf0c9db1c031f960986246220dea2179c5ed435f7fd774e0e04dbaeb60f": {
+      "path": "workspace/feed/media/3p/acf032ff69025159d929f4ba9ded3f66aeca4428c1a376f4a975a5911a1e4f18/hero.png",
+      "mime_type": "image/png",
+      "size_bytes": 1725755,
+      "modified_ms": 1790564241894,
+      "version": "4d720b25e6ec1e49b470705c6077fa7b01d6e6741966e9f4a9ba1dfd84c69aaf",
+      "source_url": "https://static.wixstatic.com/media/95db9b_6344da6adf3c474b959e5ea0a99c72a5~mv2.png/v1/fill/w_1000,h_744,al_c,q_90,usm_0.66_1.00_0.01/95db9b_6344da6adf3c474b959e5ea0a99c72a5~mv2.png"
     },
     "598d711991bb219d7196977c760bfa74c365e915a545f9aea971d8a34ddb763a": {
       "path": "workspace/feed/media/3p/112743be817242be5939f349b06a19fe6aa22f36be4fd344065fe7974b04078e/hero.jpg",
@@ -312,6 +312,14 @@
       "version": "37cc37dd924ac6cc833c61df25fb90ab912277caf5e560440e6a72f3fca9e7ad",
       "source_url": "https://appeco.galxe.com/galxe/space/questthumbnail/galaxy/rootstock/188009a5-75b6-4238-a8fa-eecf12338c12.png"
     },
+    "ac6cb9ede6cd4a27f3dfc1fd991f667fc8f1eb02fc2c2214b16f845e68612087": {
+      "path": "workspace/feed/media/3p/b73f5a9cd96b800f0681d9801fda752f0ab99f9b372e68704ccccdf72bc4ba9e/hero.webp",
+      "mime_type": "image/webp",
+      "size_bytes": 46518,
+      "modified_ms": 1790605263305,
+      "version": "de45b15dc5231183f1ffee3cbacf6d25fa028611e91b9d0e2b6a6983599163e9",
+      "source_url": "https://media.crypto.news/2026/09/Screenshot-2026-09-26-114531.webp"
+    },
     "acb00b1c39f5fe4f8462ae11a3226507ec969e830ce28377096086417f6f4bf8": {
       "path": "workspace/feed/media/3p/7f9766ddb916a8382a3aa1b1e650f61a2a3d4de410bd5e0ac1516e34a2d6700b/hero.jpg",
       "mime_type": "image/jpeg",
@@ -344,14 +352,6 @@
       "version": "fa6e629fb1a74661ec63bd2fb7541e47fd83b3dd7c736216b6180fe72da15c10",
       "source_url": "https://pbs.twimg.com/media/HS6H7QqWoAATKj5?format=webp&name=large"
     },
-    "be694c01f10c3f2a9373cefafabafc9e69830c0a38f7c3754181d8ea02a6f2c0": {
-      "path": "workspace/feed/media/3p/d4deec132b828c3fb3c4909cb2592746916b5a8a1b362e0452e4ac1ad9da65f6/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 70055,
-      "modified_ms": 1789967931485,
-      "version": "99618fa4676c0fd12f060db698adc6570902a7d93ea63a3c96573e4ef775a283",
-      "source_url": "https://content.coinpaprika.com/api/files/pbc_3500197394/ofx6sewxdq45a10/w0005_v1_erc_8004_at_a_glance_kol9m1qwh1.png"
-    },
     "bf3ccb1dedbed3ac8667c09a514aee898b9f2f59db00d616153a5a880b86a0b3": {
       "path": "workspace/feed/media/3p/e3a8eca7480239fcb51e789125ef3d6da336849edbd15804f08a59d649d078ab/hero.png",
       "mime_type": "image/png",
@@ -376,14 +376,6 @@
       "version": "2ea1f517873e9b464f9fff33a64f327451f0cb6d5b39dc9a46e207902a663cdb",
       "source_url": "https://static.news.bitcoin.com/wp-content/uploads/2026/09/north-capital-deal-expands-moonpays-tokenized-securities-ambitions.jpg"
     },
-    "cf6b42455cbead9e00d8eade0ed9848c752e0df8b60370d9c8d8e7faf142a31a": {
-      "path": "workspace/feed/media/3p/1a37d4610d58172161d675d6e20a5bf2df5bb613799fc6e548a330d211beff88/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 15973,
-      "modified_ms": 1789967931253,
-      "version": "134563c488530726ed3b32465626aca1bf866111a4cce3382ff1a2c1fc86bede",
-      "source_url": "https://static.cryptobriefing.com/wp-content/uploads/2026/09/18150044/library-robinhood-share-price-rallies-9-after-sec-greenights-tok.png"
-    },
     "d305c541c7ace884420bb92583cc8b1f7255e2aea71fe34eaa98446032efc8ed": {
       "path": "workspace/feed/media/3p/7c92f3ae8d60cbdeac7ff67523a5b3d7be31a4d98d133f51bf50e1da6eacda1d/hero.jpg",
       "mime_type": "image/jpeg",
@@ -392,13 +384,13 @@
       "version": "46e60563a7e17d2b4dd46b78a1cbd282d12a39e4e58e900cfeed7c8a8298d7f8",
       "source_url": "https://pub-6c7bc4b7453240baa9859169ffb3a6b1.r2.dev/uploads/8a5a277d334dd42b3acf15df19532a8faace18da.jpg"
     },
-    "d46ea3164291eed7b0a79d5f4445728a5cf110dc34c5fdc81b989b41e3af4eff": {
-      "path": "workspace/feed/media/3p/c1eb5547981937b355af9ea80786915e6cc0fcd5da5425a7247a7d38d2a04858/hero.png",
+    "d54814497034a3941e08a5c5d477cd24ba74dedc788e8aaefd135337c01efa88": {
+      "path": "workspace/feed/media/3p/7a050000099fd15427e3a3cc31f55c089a2581624a205a3c516a502502a77263/hero.png",
       "mime_type": "image/png",
-      "size_bytes": 692099,
-      "modified_ms": 1789967932251,
-      "version": "d7873c2f6b90609301d736b41b2cec999362862c6b50b9fb6120f9d3dc009b73",
-      "source_url": "https://opensea.io/collection/loopers-639312714/opengraph-image?ts=29832781"
+      "size_bytes": 638472,
+      "modified_ms": 1790564241852,
+      "version": "722922b9f9f9d797456019d895c5eac39fefde4222516c6b57b776677fd1966d",
+      "source_url": "https://static.wixstatic.com/media/95db9b_ddbc285d81104cb0a93e29b967cbf37a~mv2.png/v1/fill/w_980,h_428,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/95db9b_ddbc285d81104cb0a93e29b967cbf37a~mv2.png"
     },
     "d7ab8ef2e07fad85f3d094e5888c61760a6d9306296edb52d33b06ad34524bc6": {
       "path": "workspace/feed/media/3p/f4b9633685adb4210b0dab64e63f3ae68b4d205c59c269378650b1871a2a7461/hero.jpg",
@@ -440,6 +432,14 @@
       "version": "a070dbaebdb3b1d416cf92de9e457278bb4b851bf3fa0d58ced501f91c7c217b",
       "source_url": "https://blogger.googleusercontent.com/img/a/AVvXsEjEGSFlVjVPhgx9mqcUankjqww3DjN92zQe4foCZSd_Vvn069y-U8IHNG3PD-LlkNFI02Fbdc4fBvzqb36_JaCAGjWMMQbC06biVQNaYX7ZZ9ZlgrRF1_f1vyG5zUWA3Ipz6kkwYpumLgKQmDOEphnZo4fLsqsD0Rvrk0a1GcPGJrYlnQ9kz3dJOgHesqM=w640-h356"
     },
+    "eb7821e6dd37fea2f7ccd951536a3107df9d5ee60d0d88d3fa51e67f8090570f": {
+      "path": "workspace/feed/media/3p/7e0e1496f0acd9b650089ed4d59d4cd810c06b0705149ccc52fe1995bac435e5/hero.webp",
+      "mime_type": "image/webp",
+      "size_bytes": 50418,
+      "modified_ms": 1790605263307,
+      "version": "d87d718e249940c1338124cd5c7984a8948cf06087658d01de10b635fd51b2bc",
+      "source_url": "https://media.crypto.news/2026/09/Screenshot-2026-09-26-114518.webp"
+    },
     "ec306706cdc5a7518dfeed054f411bb886c4512c89861449e5b48777ceb252b2": {
       "path": "workspace/feed/media/3p/8d438388d35b5579b41bebb2f39396d0848a1cea49789fe71d2b0035ab1930d2/hero.png",
       "mime_type": "image/png",
@@ -448,14 +448,6 @@
       "version": "30d4802aa558a2798eed6a59a38a97142181d491794cdad6c2909bc89809eea7",
       "source_url": "https://rockinhoods.com/og/mint?v=5"
     },
-    "f3e16c4902eb65b4b7487173a7cf1dbf0eb88402db4c72fb11dd785a5d85ed47": {
-      "path": "workspace/feed/media/3p/a0b8d85569bb64e830860e380d0eb73dafebca2c0e2762c87f849a80a513ca80/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 262636,
-      "modified_ms": 1789967931333,
-      "version": "a10709b8797b57050a0accf99c6c755e7e267effc909b2fb602a71cfdc9bf3e7",
-      "source_url": "https://res.cloudinary.com/dcgpkzhwh/image/upload/v1788777635/yourweb3guy/media/ncxzfbx9ebvdo8vwvykr.png"
-    },
     "f53d396838bf778908f6fb5abeb68473a32c32baec1bfab8b821ca8fc3cae169": {
       "path": "workspace/feed/media/3p/a1c648ef17c8f2fb310cae1ba9cda18e96ba59657027dbf85e335e31543e2583/hero.jpg",
       "mime_type": "image/jpeg",
@@ -463,14 +455,6 @@
       "modified_ms": 1790410575182,
       "version": "20952f6d1c4fd147d211da655e8637aa94c312d852e20a7e71f1b97a3152133d",
       "source_url": "https://vamps.wtf/media/video/vamps-promo-poster-1280.jpg"
-    },
-    "fdedaf8f66e53fe4b08d7b5189ee9cdad9463c692fb0be036ad9eb921bc0726c": {
-      "path": "workspace/feed/media/3p/73d52a9bb0da29bd8d351c2cb12c081c048ba39e8c1e0459920d87455349165e/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 119332,
-      "modified_ms": 1789987822567,
-      "version": "e65c35546e3ef95a6b30dde5d275c6420e3e82204ae58716d7ec6137bec55630",
-      "source_url": "https://files.tradersunion.com/images/regional-news/custom-by-date/2026/09/21/3406455.jpg"
     },
     "fe9f827003e4485f7f9d871fc1feaea524aa5adf68320becadc4db164c3328f6": {
       "path": "workspace/feed/media/3p/18fd912eac707ef1f1635681fc91e198dc3db6b580557f5af9070007de2cebac/hero.png",

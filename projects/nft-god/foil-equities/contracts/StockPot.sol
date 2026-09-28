@@ -136,7 +136,7 @@ contract StockPot is Ownable {
             address[] memory path = new address[](2);
             path[0] = address(USDC);
             path[1] = stockTokens[s];
-            USDC.safeApprove(address(dexRouter), perStock);
+            USDC.forceApprove(address(dexRouter), perStock);
             // NOTE: minOut must be derived from an oracle in production; the
             // caller-supplied slippage bound is relative to the router quote.
             // Pre-audit placeholder: 0 with explicit caller bound is NOT safe —

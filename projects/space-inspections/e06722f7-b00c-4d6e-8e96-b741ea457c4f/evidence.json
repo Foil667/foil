@@ -1,0 +1,510 @@
+{
+  "artifact_files": [
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/last_audit.json",
+      "size_bytes": 162
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/last_build.json",
+      "size_bytes": 49
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/plan.json",
+      "size_bytes": 7276
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/probe-ui/databases/0c91afe9-83e9-4b4b-963d-d9b34e2ca62a/app.db",
+      "size_bytes": 12288
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/probe-ui/session.json",
+      "size_bytes": 363
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/probe-ui/summary.json",
+      "size_bytes": 276
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build-cvm/index.html",
+      "size_bytes": 399483
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build-cvm/manifest.json",
+      "size_bytes": 296
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build/assets/index-9snw9jra.css",
+      "size_bytes": 17816
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build/assets/index-sfryhmh9.js",
+      "size_bytes": 229280
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build/index.html",
+      "size_bytes": 756
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build/manifest.json",
+      "size_bytes": 210
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/DATA-PLAN.md",
+      "size_bytes": 6202
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/probe-network.json",
+      "size_bytes": 278
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/report.json",
+      "size_bytes": 3396
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/screenshot-full.png",
+      "size_bytes": 58667
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/screenshot-mobile.png",
+      "size_bytes": 162956
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/screenshot.png",
+      "size_bytes": 58667
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/act-001.png",
+      "size_bytes": 61524
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/act-002.png",
+      "size_bytes": 83265
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/act-003.png",
+      "size_bytes": 83590
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/act-004.png",
+      "size_bytes": 83724
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/act-005.png",
+      "size_bytes": 98680
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/act-006.png",
+      "size_bytes": 88182
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/act-007.png",
+      "size_bytes": 87405
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-001.png",
+      "size_bytes": 58667
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-002.png",
+      "size_bytes": 83265
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-003.png",
+      "size_bytes": 83265
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-004.png",
+      "size_bytes": 83265
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-005.png",
+      "size_bytes": 83590
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-006.png",
+      "size_bytes": 83724
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-007.png",
+      "size_bytes": 98680
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-008.png",
+      "size_bytes": 74562
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-009.png",
+      "size_bytes": 74562
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/observe-010.png",
+      "size_bytes": 88182
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/probe-network.json",
+      "size_bytes": 424
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/report.json",
+      "size_bytes": 3410
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/screenshot-full.png",
+      "size_bytes": 58667
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/screenshot-mobile.png",
+      "size_bytes": 162956
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-24-34Z-213359141/screenshot.png",
+      "size_bytes": 58667
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/bun.lock",
+      "size_bytes": 19189
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/bunfig.toml",
+      "size_bytes": 497
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/build.mjs",
+      "size_bytes": 361
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/index.html",
+      "size_bytes": 662
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/src/App.tsx",
+      "size_bytes": 13716
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/src/api.ts",
+      "size_bytes": 935
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/src/globals.d.ts",
+      "size_bytes": 24
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/src/main.tsx",
+      "size_bytes": 1151
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/src/theme.css",
+      "size_bytes": 11910
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/tsconfig.json",
+      "size_bytes": 430
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/drizzle/0001_initial.sql",
+      "size_bytes": 118
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/drizzle/0002_remove_scaffold_entries.sql",
+      "size_bytes": 30
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/drizzle/meta/_journal.json",
+      "size_bytes": 349
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/package.json",
+      "size_bytes": 956
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/server/src/actions.ts",
+      "size_bytes": 23069
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/server/src/schema.ts",
+      "size_bytes": 159
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/server/tsconfig.json",
+      "size_bytes": 343
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/space.json",
+      "size_bytes": 185
+    },
+    {
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/tsconfig.base.json",
+      "size_bytes": 635
+    }
+  ],
+  "artifact_paths": [
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/space.json"
+    },
+    {
+      "exists": false,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/index.html"
+    },
+    {
+      "exists": true,
+      "kind": "directory",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/src"
+    },
+    {
+      "exists": true,
+      "kind": "directory",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/server/src"
+    },
+    {
+      "exists": false,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/migrations"
+    },
+    {
+      "exists": true,
+      "kind": "directory",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/drizzle"
+    },
+    {
+      "exists": false,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/assets"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/package.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/bun.lock"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/bunfig.toml"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/tsconfig.base.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/index.html"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/build.mjs"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/client/tsconfig.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/server/tsconfig.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build/manifest.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.space-build-cvm/manifest.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/plan.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/DATA-PLAN.md"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/last_build.json"
+    },
+    {
+      "exists": true,
+      "kind": "file",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/.harness/last_audit.json"
+    },
+    {
+      "exists": true,
+      "kind": "directory",
+      "path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits"
+    }
+  ],
+  "catalog": {
+    "archived": false,
+    "archived_at": null,
+    "construction_status": "succeeded",
+    "current_build_id": "7633dce4-b310-4b12-8f1d-6e6eab0fbfd2",
+    "has_server_actions": true,
+    "runtime": "typescript",
+    "shared_publicly": false
+  },
+  "data": {
+    "tables": [
+      {
+        "name": "__drizzle_migrations",
+        "primary_key_columns": [
+          "id"
+        ],
+        "row_count": 2,
+        "schema_sql": "CREATE TABLE \"__drizzle_migrations\" (\n\t\t\tid SERIAL PRIMARY KEY,\n\t\t\thash text NOT NULL,\n\t\t\tcreated_at numeric\n\t\t)"
+      }
+    ]
+  },
+  "inspection_id": "e06722f7-b00c-4d6e-8e96-b741ea457c4f",
+  "render_capture": {
+    "aria_snapshot": "- main:\n  - paragraph: ERC-721 HOLDING ANALYSIS\n  - heading \"How strong are those hands?\" [level=1]\n  - paragraph: Trace a wallet’s NFT exits, hold times, and flip patterns—then turn the history into one inspectable score.\n  - text: Wallet address\n  - textbox \"Wallet address\"\n  - text: Any public EVM wallet. Nothing is connected or signed. Chain\n  - combobox \"Chain\":\n    - option \"Base — Blockscout\" [selected]\n    - option \"Ethereum — Blockscout\"\n    - option \"Robinhood Chain — Explorer + RPC fallback\"\n  - button \"Grade this wallet\" [disabled]\n  - region \"How the rating works\":\n    - text: \"50\"\n    - paragraph: points for average hold duration\n    - text: \"30\"\n    - paragraph: points for avoiding 7-day flips\n    - text: \"20\"\n    - paragraph: points for avoiding 30-day flips",
+    "audit_path": "shared-concurrent",
+    "audit_session_id": "70285b18-a62a-4eed-abac-0fd4c3aff14a",
+    "blocked_affordances": [],
+    "blocked_requests": [],
+    "broken_assets": [],
+    "browser_launches": 1,
+    "clipped": {
+      "desktop": [],
+      "mobile": []
+    },
+    "cold_launch_ms": 438.700705,
+    "console_errors": [],
+    "console_warnings": [],
+    "desktop_ms": 2653.095012,
+    "diagnostics": {
+      "audit_path": "shared-concurrent",
+      "concurrent_desktop_retry": false,
+      "concurrent_mobile_retry": false,
+      "concurrent_ran": true,
+      "nav_retries": 0,
+      "shared_launch_failed": false
+    },
+    "duration_ms": 4219.692623,
+    "egress_lockdown": false,
+    "external_fetch_failure_samples": [],
+    "external_fetch_failures": 0,
+    "external_requests": [],
+    "external_requests_dropped": 0,
+    "external_requests_dropped_data_bearing": 0,
+    "horizontal_scrollers": [],
+    "images": {
+      "broken": [],
+      "duplicate": [],
+      "external_blocked": {
+        "count": 0,
+        "sample": []
+      },
+      "failed_requests": [],
+      "sample_urls": [],
+      "total": 0,
+      "unstable": [],
+      "verdict": "pass"
+    },
+    "interactive_nodes": 3,
+    "mobile_layout": {
+      "overflow_px": 0,
+      "scroll_width": 390,
+      "verdict": "pass",
+      "viewport_width": 390,
+      "widest_selector": null
+    },
+    "mobile_ms": 2719.8369650000004,
+    "nav_status": 200,
+    "notary_mint_ms": 0,
+    "ok": true,
+    "output_dir": "/home/hatch/workspace/space-inspections/e06722f7-b00c-4d6e-8e96-b741ea457c4f/captures/render",
+    "text_issues": [],
+    "transport_connections": [
+      {
+        "bytes_down": 2486,
+        "bytes_up": 4004,
+        "connects": 2,
+        "host": "artifact-capture.invalid",
+        "port": 443
+      }
+    ],
+    "transport_ledger_active": true,
+    "transport_overflow": 0,
+    "transport_udp_attempts": 0,
+    "unexplained_transport_hosts": [],
+    "unreachable_controls": {
+      "desktop": [],
+      "mobile": []
+    },
+    "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-0fc72427-5404-49e3-ad33-e6f37b3a7d49/",
+    "viewports": {
+      "desktop": {
+        "fullpage_screenshot_path": "/home/hatch/workspace/space-inspections/e06722f7-b00c-4d6e-8e96-b741ea457c4f/captures/render/screenshot-full.png",
+        "height": 900,
+        "screenshot_path": "/home/hatch/workspace/space-inspections/e06722f7-b00c-4d6e-8e96-b741ea457c4f/captures/render/screenshot.png",
+        "width": 1440
+      },
+      "mobile": {
+        "height": 844,
+        "screenshot_path": "/home/hatch/workspace/space-inspections/e06722f7-b00c-4d6e-8e96-b741ea457c4f/captures/render/screenshot-mobile.png",
+        "width": 390
+      }
+    }
+  },
+  "slug": "wallet-report-card-app",
+  "snapshot": {
+    "current_build_id": "7633dce4-b310-4b12-8f1d-6e6eab0fbfd2",
+    "published_manifests": [
+      {
+        "entrypoint": "index.html",
+        "entrypoint_exists": true,
+        "exists": true,
+        "path": ".space-build/manifest.json",
+        "sha256": "57355d602e71f595f6c1f053424fffaa6a1eb9c777866c8e5c4c7fd8e14da0c8"
+      },
+      {
+        "entrypoint": "index.html",
+        "entrypoint_exists": true,
+        "exists": true,
+        "path": ".space-build-cvm/manifest.json",
+        "sha256": "1b831ec0b749b5b5a03685ba1668217130c972869eb6b5437a05215af6e29eda"
+      }
+    ],
+    "slug": "wallet-report-card-app",
+    "source_files": [
+      "bun.lock",
+      "bunfig.toml",
+      "client/build.mjs",
+      "client/index.html",
+      "client/src/App.tsx",
+      "client/src/api.ts",
+      "client/src/globals.d.ts",
+      "client/src/main.tsx",
+      "client/src/theme.css",
+      "client/tsconfig.json",
+      "drizzle/0001_initial.sql",
+      "drizzle/0002_remove_scaffold_entries.sql",
+      "drizzle/meta/_journal.json",
+      "package.json",
+      "server/src/actions.ts",
+      "server/src/schema.ts",
+      "server/tsconfig.json",
+      "space.json",
+      "tsconfig.base.json"
+    ],
+    "source_tree_fingerprint": "9c7466f5c23ed91f69e7c7f13344474265abeeb83f2a87786f30ae4e44ce035b"
+  },
+  "unavailable_evidence": [],
+  "version": 1
+}

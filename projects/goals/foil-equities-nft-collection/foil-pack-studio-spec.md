@@ -37,3 +37,25 @@ Vibe-style sealed card packs on Robinhood Chain, Looper-universe themed.
 ## Open taps (user)
 1. Quigley blessing for the Looper pack — user's relationship, user's tap.
 2. Final names for B and C.
+
+## Shared agent-ready + $RESCUE infra (added 2026-09-28)
+
+All studio collections share the same onchain backbone:
+
+- **Agent-ready FoilAccount:** every NFT's ERC-6551 bound wallet
+  (`foil-equities/contracts/FoilAccount.sol`) is an EIP-1271 signer for the
+  current NFT owner (raw-hash or eth_sign-prefixed recovery) and can
+  register itself as an ERC-8004 agent in one owner-gated call —
+  `registerAsAgent(identityRegistry, agentURI)`. Agent flow per NFT:
+  mint -> TBA -> registerAsAgent -> EIP-1271 signing. Transfers hand over
+  agent control; the new owner re-registers if desired.
+- **$RESCUE activation rail:** `Activation.activateWithRESCUE(tokenId,
+  maxSlippageBps)` pays the one-time activation in $RESCUE
+  (`0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3`, Base, 18dp) at the same 20%
+  discount as $CRED ($8 at EMA). 50% to the dead address (no `burn()`
+  assumption — $RESCUE is a Doppler/UniV4 launch), 50% swapped to USDC ->
+  StockPot. Same EMA anti-gaming (25% deviation band). Base-only; disabled
+  on Robinhood Chain via `address(0)`. LP watch script now tracks the
+  RESCUE/WETH pool alongside CRED/WETH (auto-resolves via GeckoTerminal).
+- Contracts remain **unaudited drafts** — nothing deploys without the user's
+  explicit approval per the standing rule.

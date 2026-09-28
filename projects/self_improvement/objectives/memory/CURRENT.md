@@ -1,7 +1,7 @@
 ---
 objective_id: memory
-run_id: sirun_3f52d7a6705843ad8ea41fc8a5e10d2a
-created_at: 2026-09-28T01:39:49.098495231+00:00
+run_id: sirun_7aa04267be014d5e957bbdd83aa021eb
+created_at: 2026-09-28T18:09:55.433249031+00:00
 card_id: memory
 worker_outcome: changed
 ---
@@ -14,7 +14,7 @@ is a framework-owned projection only.
 
 ## Run
 
-- Reason: idle-session internalization after 1236s quiet window
+- Reason: baseline cadence self-improvement run
 - Request origin: internal.self_improvement
 - Cadence: hourly
 - Worker outcome: changed

@@ -1,9 +1,9 @@
 ---
 objective_id: studying
-run_id: sirun_1f8defe5a623404bbe447feb8fad484b
-created_at: 2026-09-27T13:28:25.012421711+00:00
+run_id: sirun_b5e6d18f00b94111a69e4c2888673de3
+created_at: 2026-09-28T13:34:11.735358486+00:00
 card_id: goals_studying
-worker_outcome: insufficient
+worker_outcome: changed
 ---
 
 # Studying
@@ -17,5 +17,5 @@ is a framework-owned projection only.
 - Reason: baseline cadence self-improvement run
 - Request origin: internal.self_improvement
 - Cadence: daily
-- Worker outcome: insufficient
-- Subagents spawned: 4
+- Worker outcome: changed
+- Subagents spawned: 3

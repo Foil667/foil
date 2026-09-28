@@ -1,0 +1,327 @@
+{
+  "ok": true,
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-1377cede-9e60-4716-9f27-b6e2ce2f94c5/",
+  "duration_ms": 8572.922168,
+  "output_dir": "/home/hatch/workspace/ts-spaces/nft-mint-site-demo/audits/2026-09-28T00-50-24Z-595364329",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/nft-mint-site-demo/audits/2026-09-28T00-50-24Z-595364329/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/nft-mint-site-demo/audits/2026-09-28T00-50-24Z-595364329/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/nft-mint-site-demo/audits/2026-09-28T00-50-24Z-595364329/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [
+      {
+        "tag": "span",
+        "text": "NO DISCORD ◆ GO OUTSIDE",
+        "kind": "past_viewport",
+        "overflow_px": 90,
+        "bbox": [
+          1301,
+          900,
+          229,
+          37
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "UTILITY: LOOKS EXPENSIVE ◆",
+        "kind": "past_viewport",
+        "overflow_px": 341,
+        "bbox": [
+          1530,
+          900,
+          251,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 313,
+        "bbox": [
+          1745,
+          912,
+          8,
+          13
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "CONTRACT NOT WRITTEN BY GOBLINS ◆",
+        "kind": "past_viewport",
+        "overflow_px": 645,
+        "bbox": [
+          1781,
+          900,
+          304,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 617,
+        "bbox": [
+          2049,
+          912,
+          8,
+          13
+        ]
+      }
+    ],
+    "mobile": [
+      {
+        "tag": "span",
+        "text": "NO DISCORD ◆ GO OUTSIDE",
+        "kind": "past_viewport",
+        "overflow_px": 82,
+        "bbox": [
+          244,
+          1167,
+          229,
+          37
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "UTILITY: LOOKS EXPENSIVE ◆",
+        "kind": "past_viewport",
+        "overflow_px": 333,
+        "bbox": [
+          472,
+          1167,
+          251,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 305,
+        "bbox": [
+          688,
+          1179,
+          8,
+          13
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "CONTRACT NOT WRITTEN BY GOBLINS ◆",
+        "kind": "past_viewport",
+        "overflow_px": 637,
+        "bbox": [
+          723,
+          1167,
+          304,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 609,
+        "bbox": [
+          992,
+          1179,
+          8,
+          13
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "NO ROADMAP ◆ THE ROAD IS GONE",
+        "kind": "past_viewport",
+        "overflow_px": 911,
+        "bbox": [
+          1027,
+          1167,
+          274,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 755,
+        "bbox": [
+          1138,
+          1179,
+          8,
+          13
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "NO DISCORD ◆ GO OUTSIDE",
+        "kind": "past_viewport",
+        "overflow_px": 1139,
+        "bbox": [
+          1301,
+          1167,
+          229,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 1029,
+        "bbox": [
+          1411,
+          1179,
+          8,
+          13
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "UTILITY: LOOKS EXPENSIVE ◆",
+        "kind": "past_viewport",
+        "overflow_px": 1390,
+        "bbox": [
+          1529,
+          1167,
+          251,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 1362,
+        "bbox": [
+          1745,
+          1179,
+          8,
+          13
+        ]
+      },
+      {
+        "tag": "span",
+        "text": "CONTRACT NOT WRITTEN BY GOBLINS ◆",
+        "kind": "past_viewport",
+        "overflow_px": 1694,
+        "bbox": [
+          1780,
+          1167,
+          304,
+          37
+        ]
+      },
+      {
+        "tag": "i",
+        "text": "◆",
+        "kind": "past_viewport",
+        "overflow_px": 1666,
+        "bbox": [
+          2048,
+          1179,
+          8,
+          13
+        ]
+      }
+    ]
+  },
+  "images": {
+    "total": 1,
+    "broken": [],
+    "duplicate": [],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [
+      "https://artifact-capture.invalid/spaces/v2/hatch-audit-1377cede-9e60-4716-9f27-b6e2ce2f94c5/assets/media-generation-void-relic-hero-0-a2e00e79-0445-4e79-b39f-9cf86b6f5c0f.png"
+    ],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 2,
+  "external_fetch_failure_samples": [
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap)"
+  ],
+  "blocked_requests": [],
+  "external_requests": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap",
+      "method": "GET",
+      "resource_type": "stylesheet"
+    }
+  ],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 3940,
+      "bytes_down": 2489
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 7,
+  "aria_snapshot": "- text: TESTNET ARCHIVE // COLLECTION 01\n- 'button \"SFX: OFF\"'\n- text: ● SIGNAL FOUND\n- main:\n  - region \"VOID/ RELICS\":\n    - text: \"ACCESS WINDOW: OPEN\"\n    - heading \"VOID/ RELICS\" [level=1]\n    - paragraph:\n      - text: 2,222 sentinels recovered from a dead network. Every mask holds one last machine memory.\n      - emphasis: Probably cursed.\n    - text: Supply\n    - strong: 2,222\n    - text: Mint price\n    - strong: 0.022 ETH\n    - text: Limit\n    - strong: 05 / wallet\n    - link \"ENTER THE TERMINAL ↓\":\n      - /url: \"#mint\"\n    - 'figure \"THE NIGHT WARDEN MASK: OBSIDIAN MEMORY: PROTECTED\"':\n      - img \"Pixel-art chrome jackal sentinel with orange eyes and teal circuitry in a dark machine archive\"\n      - text: \"CURSOR SCANNER // ACTIVE SPECIMEN // 0001 THE NIGHT WARDEN MASK: OBSIDIAN MEMORY: PROTECTED\"\n  - text: 01 // ACQUIRE\n  - heading \"Feed the machine.\" [level=2]\n  - paragraph: Choose a quantity, spin the rarity scanner, and inspect the transaction. No wallet. No signature. No expensive lesson.\n  - paragraph: MAX 5, BECAUSE HOARDING JPEG GHOSTS IS A PERSONAL PROBLEM.\n  - text: MINT.TERMINAL NETWORK // DEMO Quantity\n  - button \"Decrease quantity\": −\n  - text: \"1\"\n  - button \"Increase quantity\": +\n  - text: PRICE / RELIC 0.022 ETH EST. NETWORK FEE CALCULATED IN WALLET TOTAL 0.022 ETH\n  - button \"SUMMON THE JPEG →\"\n  - paragraph: Portfolio concept only. Contract address, wallet connection, and live minting are intentionally disabled. The scanner is entertainment, not an actual rarity roll.\n  - text: 02 // VERY SERIOUS PROTOCOL\n  - heading \"Bonk the void.\" [level=2]\n  - paragraph: Peer-reviewed research confirms big red buttons should be pressed. Your score lives only until this tab closes, like most alpha.\n  - text: \"LOCAL BONKS:\"\n  - strong: \"0\"\n  - button \"BONK THE VOID\"\n  - text: NO TOKEN. NO REWARD. PURE NUMBER-GO-UP TECHNOLOGY.\n  - time: 00:00\n  - paragraph: Signal woke up angry. ARCHIVE NOTE // VERIFIED VIBES ONLY\n  - time: 00:22\n  - paragraph: Warden asked who sold the bottom. EVERYONE LOOKED AWAY\n  - time: 04:04\n  - paragraph: Roadmap file not found. FEATURE, NOT BUG\n  - time: 06:67\n  - paragraph: Someone typed “wen” into the reactor. CONTAINMENT PENDING\n  - text: 03 // DIAGNOSTIC\n  - heading \"Which relic owns you?\" [level=2]\n  - paragraph: Three critical questions. Zero scientific value. One suspiciously accurate archive assignment.\n  - paragraph: \"The chart drops 40%. You:\"\n  - button \"Zoom out and cope\"\n  - button \"Buy more. Obviously.\"\n  - button \"Declare it a long-term hold\"\n  - text: 04 // SIGNAL MAP\n  - heading \"Built from the ruins.\" [level=2]\n  - paragraph: A visual system designed for collectors to understand rarity at a glance—without burying the art under a spreadsheet.\n  - text: A.01 Obsidian mask Heat-forged shell with dormant tactical memory. 4.2% E.09 Ember optics Dual-spectrum vision from the archive war. 8.8% C.14 Teal circuit Uncorrupted signal path; origin unknown. 12.6% R.03 Crimson mantle Field-worn cloth from the last relay station. 6.1% 05 // QUESTIONS NOBODY ASKED\n  - heading \"Fine print, loud.\" [level=2]\n  - group: Is this a live mint? +\n  - group: What is the utility? +\n  - group: Wen roadmap? +\n  - group: Did goblins write the contract? +\n  - blockquote: Mint pages should feel like the world they unlock.\n  - paragraph: Not a template with a JPEG dropped in. Art direction, collection logic, mobile behavior, transaction states, accessibility, and edge cases—all designed as one system.\n- contentinfo: VOID RELICS // FICTIONAL COLLECTION CONCEPT DESIGN + FRONT-END BUILD // 2026",
+  "audit_session_id": "7616e43d-8745-4528-81af-3fb5cd29c218",
+  "mobile_ms": 3486.95806,
+  "cold_launch_ms": 3453.810479,
+  "desktop_ms": 4222.869762,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

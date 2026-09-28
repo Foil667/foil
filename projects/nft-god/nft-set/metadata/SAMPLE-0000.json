@@ -1,0 +1,16 @@
+{
+  "name": "Foil: The TinHat Society #0",
+  "description": "Foil's genesis set on Robinhood Chain. 777 tinfoil-hatted skeptics, each one a credibility dossier Foil already checked so you don't have to. Verify before believing. Free mint — secondary royalties keep the loop running.",
+  "image": "ipfs://REPLACE_WITH_CID/0000.png",
+  "external_url": "https://helixa.xyz/multipass/loopers/667",
+  "attributes": [
+    {
+      "trait_type": "Generation",
+      "value": "TinHat Society"
+    },
+    {
+      "trait_type": "Sample",
+      "value": "placeholder — not final art"
+    }
+  ]
+}

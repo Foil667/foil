@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "nft-mint-site-demo",
+  "session_id": "7616e43d-8745-4528-81af-3fb5cd29c218",
+  "observes": 1,
+  "acts": 6,
+  "acts_ok": 6,
+  "interactive_nodes": 5,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

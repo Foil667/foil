@@ -1,0 +1,27 @@
+---
+display_name: fomoater
+nickname: @fomoater
+summary: Running a whitelist raffle for a 3,333-supply free mint on Robinhood Chain (fomoater.com); @Foil667 follow directed by the user on 2026-09-21.
+---
+
+# fomoater
+
+## Facts
+- Verified X account (@fomoater) running a WL raffle, opened 2026-09-21, for a 3,333-supply free mint on Robinhood Chain; registration at fomoater.com (GTD WL only, no mint date yet). (memory://md:memory/2026-09-21.md:190; memory://md:memory/2026-09-20.md:159)
+- The raffle was first flagged in scans on Sep 20 by @olipbd05 (~9:40 PM) and earlier by @jette_04. (memory://md:memory/2026-09-20.md:159; memory://md:memory/2026-09-20.md:236)
+- On 2026-09-21 the user directed @Foil667 to follow all nine new mint-watch candidates ("Follow them all", message:677450f0-1a65-4fab-ac78-3ad86504c542); the assistant acknowledged the follows were being executed, paced naturally. Landing confirmations had not been seen by window close. (message:assistant-msg-82c239a8-df02-4e3f-b356-03e72f1789a7)
+- No prior contact; the user has not named the relationship.
+
+## History
+- 2026-09-21: surfaced in the mint-watch report as one of nine new follow candidates (message:assistant-msg-24b95cbf-9f69-c714-3fca-bc3162c547df); the user approved following all nine the same evening.
+
+## The relationship
+- A fresh deliberate follow from @Foil667 at the user's direction, not a personal tie: Foil tracks them as a live whitelist source for a free mint on the user's chain.
+
+## In common
+- The HoodStreet / CCFF00 scene and the user's free-mint hunting on Robinhood Chain.
+
+## Open threads
+- [ ] Confirm the @Foil667 follow landed (user-directed 2026-09-21; confirmation not yet seen at window close).
+
+## Strengthening

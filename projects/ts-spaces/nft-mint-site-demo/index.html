@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>VOID RELICS — Mint Terminal</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;600;700&display=swap');
+
+    :root {
+      color-scheme: light dark;
+      --bg:#e8ece8; --paper:#f7f9f5; --ink:#101512; --muted:#505b55; --line:#aab4ad;
+      --signal:#c94720; --terminal:#153d2a; --terminal-ink:#a8ffbf; --shadow:rgba(16,21,18,.18);
+      --grid:rgba(20,55,39,.1); --soft:#dce4dd; --acid:#70da8c;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#090c0a; --paper:#111612; --ink:#edf3ed; --muted:#aab5ae; --line:#364139;
+        --signal:#ff6939; --terminal:#a8ffbf; --terminal-ink:#07130b; --shadow:rgba(0,0,0,.52);
+        --grid:rgba(168,255,191,.055); --soft:#172019; --acid:#a8ffbf;
+      }
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; min-width:320px; color:var(--ink); font-family:"IBM Plex Sans",sans-serif;
+      background:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px),var(--bg);
+      background-size:32px 32px;
+    }
+    button,input { font:inherit; }
+    button { -webkit-tap-highlight-color:transparent; }
+    a { color:inherit; }
+    .frame { width:min(1260px,calc(100% - 44px)); margin:0 auto; }
+    .mono { font-family:"IBM Plex Mono",monospace; }
+    .topline { display:flex; justify-content:space-between; align-items:center; min-height:58px; border-bottom:1px solid var(--line); font:600 11px/1 "IBM Plex Mono",monospace; letter-spacing:.12em; }
+    .topline span:last-child { color:var(--signal); }
+    .sound { border:0; border-bottom:1px solid currentColor; padding:2px 0; color:inherit; background:none; font:inherit; letter-spacing:inherit; cursor:pointer; }
+    .sound:hover,.sound:focus-visible { color:var(--signal); outline:none; }
+
+    .hero { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(400px,.92fr); border-bottom:1px solid var(--line); min-height:calc(100vh - 58px); }
+    .copy { padding:clamp(52px,7vw,106px) clamp(28px,5vw,80px) 64px 0; display:flex; flex-direction:column; justify-content:space-between; border-right:1px solid var(--line); }
+    .eyebrow { display:flex; align-items:center; gap:12px; color:var(--signal); font:600 12px/1 "IBM Plex Mono",monospace; letter-spacing:.09em; }
+    .pulse { width:8px; height:8px; background:currentColor; animation:pulse 1.8s steps(2) infinite; }
+    @keyframes pulse { 50% { opacity:.25; } }
+    h1 { margin:26px 0 20px; max-width:760px; font:400 clamp(64px,10.2vw,142px)/.78 "Archivo Black",sans-serif; letter-spacing:-.075em; text-transform:uppercase; }
+    h1 .slash { color:var(--signal); }
+    .lede { max-width:650px; margin:0; font-size:clamp(18px,2vw,25px); line-height:1.35; font-weight:600; }
+    .lede em { color:var(--signal); font-style:normal; }
+    .hero-foot { margin-top:64px; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); margin-bottom:34px; border-top:1px solid var(--line); }
+    .stat { padding:18px 14px 0 0; }
+    .stat + .stat { border-left:1px solid var(--line); padding-left:18px; }
+    .stat small { display:block; color:var(--muted); font:500 10px/1.2 "IBM Plex Mono",monospace; text-transform:uppercase; letter-spacing:.1em; }
+    .stat strong { display:block; margin-top:8px; font:600 clamp(18px,2vw,27px)/1 "IBM Plex Mono",monospace; }
+
+    .art-panel { --x:50%; --y:50%; position:relative; overflow:hidden; background:#08100b; min-height:620px; cursor:crosshair; }
+    .art-panel img { width:100%; height:100%; object-fit:cover; display:block; transform:scale(1.015); transition:transform .5s ease; }
+    .art-panel:hover img { transform:scale(1.045); }
+    .art-panel::before { content:""; position:absolute; z-index:1; inset:0; pointer-events:none; background:radial-gradient(circle 150px at var(--x) var(--y),rgba(168,255,191,.22),transparent 70%); mix-blend-mode:screen; }
+    .art-panel::after { content:""; position:absolute; z-index:1; inset:0; pointer-events:none; background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,rgba(0,0,0,.14) 4px); mix-blend-mode:multiply; }
+    .art-id { position:absolute; z-index:2; right:18px; top:18px; padding:10px 12px; color:#d5ffe0; background:rgba(4,12,7,.8); border:1px solid rgba(168,255,191,.42); font:500 11px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; }
+    .art-caption { position:absolute; z-index:2; left:18px; bottom:18px; right:18px; display:flex; justify-content:space-between; align-items:flex-end; gap:16px; color:#fff; text-shadow:0 2px 15px #000; font:500 11px/1.35 "IBM Plex Mono",monospace; }
+    .art-caption b { font-size:18px; letter-spacing:.04em; }
+    .scan-label { position:absolute; z-index:2; left:18px; top:18px; color:#a8ffbf; font:500 10px/1 "IBM Plex Mono",monospace; opacity:0; transition:opacity .2s; }
+    .art-panel:hover .scan-label { opacity:1; }
+
+    .ticker { overflow:hidden; border-bottom:1px solid var(--line); background:var(--ink); color:var(--bg); }
+    @media (prefers-color-scheme:dark) { .ticker { background:#edf3ed; color:#101512; } }
+    .ticker-track { width:max-content; display:flex; animation:marquee 26s linear infinite; }
+    .ticker span { padding:13px 28px; font:600 11px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; white-space:nowrap; }
+    .ticker i { color:var(--signal); font-style:normal; }
+    @keyframes marquee { to { transform:translateX(-50%); } }
+
+    .terminal-section,.play-section,.quiz-section { padding:clamp(70px,9vw,120px) 0; border-bottom:1px solid var(--line); }
+    .section-grid { display:grid; grid-template-columns:.72fr 1.28fr; gap:clamp(36px,8vw,120px); align-items:start; }
+    .section-index { color:var(--signal); font:600 12px/1 "IBM Plex Mono",monospace; letter-spacing:.1em; }
+    h2 { margin:16px 0 18px; font:700 clamp(36px,6vw,72px)/.95 "IBM Plex Sans",sans-serif; letter-spacing:-.055em; }
+    .section-copy { color:var(--muted); font-size:17px; line-height:1.6; max-width:470px; }
+    .fine { color:var(--muted); font:500 11px/1.5 "IBM Plex Mono",monospace; }
+
+    .mint-box { background:var(--ink); color:var(--bg); box-shadow:14px 14px 0 var(--signal); }
+    @media (prefers-color-scheme:dark) { .mint-box { background:#edf3ed; color:#101512; } }
+    .mint-head { padding:18px 22px; display:flex; justify-content:space-between; border-bottom:1px solid currentColor; font:600 11px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; }
+    .mint-body { padding:clamp(24px,5vw,46px); }
+    .quantity-label { display:block; margin-bottom:13px; font:600 11px/1 "IBM Plex Mono",monospace; letter-spacing:.1em; text-transform:uppercase; }
+    .counter { display:grid; grid-template-columns:56px 1fr 56px; border:2px solid currentColor; }
+    .counter button { appearance:none; border:0; background:transparent; color:inherit; font:600 28px/1 "IBM Plex Mono",monospace; cursor:pointer; min-height:60px; }
+    .counter button:hover,.counter button:focus-visible { background:var(--signal); color:#fff; outline:none; }
+    .count { display:grid; place-items:center; border-inline:2px solid currentColor; font:600 24px/1 "IBM Plex Mono",monospace; }
+    .calc { margin:28px 0; }
+    .calc-row { display:flex; justify-content:space-between; gap:18px; padding:10px 0; border-bottom:1px dashed currentColor; font:500 13px/1.2 "IBM Plex Mono",monospace; }
+    .calc-row:last-child { border-bottom:0; padding-top:18px; font-size:18px; font-weight:600; }
+    .preview-btn { width:100%; min-height:62px; border:0; color:var(--terminal-ink); background:var(--terminal); font:600 14px/1 "IBM Plex Mono",monospace; letter-spacing:.06em; cursor:pointer; }
+    .preview-btn:hover,.preview-btn:focus-visible { filter:brightness(1.12); outline:3px solid var(--signal); outline-offset:3px; }
+    .preview-btn[disabled] { cursor:wait; filter:saturate(.5); }
+    .slot { display:none; margin:20px 0 0; padding:18px; border:2px solid currentColor; background:var(--soft); color:var(--ink); }
+    .slot.visible { display:block; }
+    .slot-reel { overflow:hidden; height:54px; border-block:1px solid currentColor; }
+    .slot-word { height:54px; display:grid; place-items:center; font:600 18px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; }
+    .slot-word.spinning { animation:jitter .11s steps(2) infinite; }
+    @keyframes jitter { 50% { transform:translateY(-7px); opacity:.55; } }
+    .receipt { display:none; margin-top:12px; font:500 12px/1.65 "IBM Plex Mono",monospace; }
+    .receipt.visible { display:block; }
+    .receipt b { color:var(--signal); }
+    .disclaimer { margin:15px 0 0; opacity:.72; font:400 11px/1.5 "IBM Plex Mono",monospace; }
+
+    .play-grid { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr); gap:18px; }
+    .clicker { position:relative; min-height:440px; overflow:hidden; border:2px solid var(--ink); background:var(--soft); display:grid; place-items:center; padding:28px; isolation:isolate; }
+    .clicker::before { content:""; position:absolute; inset:-40%; z-index:-1; background:repeating-conic-gradient(from 0deg,var(--grid) 0 8deg,transparent 8deg 22deg); animation:spin 30s linear infinite; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .core { width:min(260px,70vw); aspect-ratio:1; border:0; border-radius:50%; color:#fff; background:var(--signal); cursor:pointer; box-shadow:0 18px 0 #742813,0 26px 38px var(--shadow); font:400 clamp(29px,4vw,48px)/.9 "Archivo Black",sans-serif; transform:translateY(-5px); }
+    .core:active,.core.popped { transform:translateY(9px); box-shadow:0 4px 0 #742813,0 10px 20px var(--shadow); }
+    .click-total { position:absolute; left:18px; top:18px; font:600 12px/1 "IBM Plex Mono",monospace; }
+    .click-note { position:absolute; left:18px; right:18px; bottom:16px; color:var(--muted); text-align:center; font:500 11px/1.5 "IBM Plex Mono",monospace; }
+    .signal-log { border-top:3px solid var(--ink); }
+    .log-row { display:grid; grid-template-columns:74px 1fr; gap:16px; padding:18px 0; border-bottom:1px solid var(--line); }
+    .log-row time { color:var(--signal); font:600 11px/1.3 "IBM Plex Mono",monospace; }
+    .log-row p { margin:0; font-size:15px; line-height:1.35; }
+    .log-row small { display:block; margin-top:5px; color:var(--muted); font:500 10px/1.4 "IBM Plex Mono",monospace; }
+
+    .quiz-card { border:2px solid var(--ink); background:var(--paper); box-shadow:10px 10px 0 var(--ink); padding:clamp(24px,5vw,48px); }
+    .quiz-progress { display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin-bottom:34px; }
+    .quiz-progress span { height:5px; background:var(--line); }
+    .quiz-progress span.on { background:var(--signal); }
+    .quiz-question { margin:0 0 24px; font-size:clamp(25px,3vw,38px); line-height:1.1; font-weight:700; }
+    .answers { display:grid; gap:10px; }
+    .answer { min-height:54px; padding:13px 16px; border:1px solid var(--ink); color:var(--ink); background:transparent; text-align:left; cursor:pointer; font-weight:600; }
+    .answer:hover,.answer:focus-visible { color:var(--paper); background:var(--ink); outline:3px solid var(--signal); outline-offset:2px; }
+    .quiz-result { display:none; }
+    .quiz-result.visible { display:block; }
+    .quiz-result h3 { margin:4px 0 14px; color:var(--signal); font:400 clamp(38px,5vw,64px)/.9 "Archivo Black",sans-serif; }
+    .quiz-result p { max-width:560px; font-size:18px; line-height:1.55; }
+    .reset-btn { border:0; border-bottom:1px solid currentColor; padding:3px 0; color:var(--signal); background:none; cursor:pointer; font:600 11px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; }
+
+    .traits-section { padding:clamp(70px,9vw,120px) 0; }
+    .trait-list { border-top:3px solid var(--ink); }
+    .trait { display:grid; grid-template-columns:72px 1.2fr 1fr 70px; gap:18px; align-items:center; padding:22px 0; border-bottom:1px solid var(--line); transition:padding .2s,background .2s; }
+    .trait:hover { padding-left:12px; padding-right:12px; background:var(--soft); }
+    .trait-num,.trait-rarity { font:500 11px/1 "IBM Plex Mono",monospace; }
+    .trait-name { font-size:clamp(19px,2vw,27px); font-weight:700; }
+    .trait-note { color:var(--muted); font-size:14px; line-height:1.4; }
+    .trait-rarity { color:var(--signal); text-align:right; }
+    .faq { margin-top:72px; display:grid; grid-template-columns:.72fr 1.28fr; gap:clamp(36px,8vw,120px); }
+    .faq-list { border-top:3px solid var(--ink); }
+    details { border-bottom:1px solid var(--line); }
+    summary { display:flex; justify-content:space-between; gap:20px; padding:20px 0; cursor:pointer; font-size:18px; font-weight:700; list-style:none; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:"+"; color:var(--signal); font-family:"IBM Plex Mono",monospace; }
+    details[open] summary::after { content:"−"; }
+    details p { margin:0 0 22px; color:var(--muted); line-height:1.6; }
+    .manifesto { margin-top:90px; display:grid; grid-template-columns:1fr 1fr; gap:50px; align-items:end; }
+    blockquote { margin:0; font:700 clamp(32px,5vw,64px)/1.02 "IBM Plex Sans",sans-serif; letter-spacing:-.045em; }
+    .manifesto p { margin:0; color:var(--muted); font-size:16px; line-height:1.7; }
+    footer { border-top:1px solid var(--line); padding:24px 0 38px; display:flex; justify-content:space-between; gap:20px; color:var(--muted); font:500 10px/1.4 "IBM Plex Mono",monospace; letter-spacing:.06em; }
+    .burst { position:fixed; z-index:20; pointer-events:none; color:var(--signal); font:600 12px/1 "IBM Plex Mono",monospace; animation:float .7s ease-out forwards; }
+    @keyframes float { to { transform:translateY(-70px) rotate(-8deg); opacity:0; } }
+
+    @media (max-width:820px) {
+      .frame { width:min(100% - 28px,680px); }
+      .topline span:first-child { max-width:58%; line-height:1.4; }
+      .hero { display:flex; flex-direction:column; min-height:auto; }
+      .copy { min-height:620px; padding:54px 0 38px; border-right:0; }
+      h1 { font-size:clamp(68px,22vw,112px); }
+      .art-panel { min-height:min(110vw,680px); border-top:1px solid var(--line); }
+      .section-grid,.faq { grid-template-columns:1fr; }
+      .mint-box { box-shadow:8px 8px 0 var(--signal); }
+      .play-grid { grid-template-columns:1fr; }
+      .clicker { min-height:390px; }
+      .manifesto { grid-template-columns:1fr; gap:24px; }
+    }
+    @media (max-width:520px) {
+      .copy { min-height:570px; }
+      .stats { grid-template-columns:1fr; }
+      .stat { padding:14px 0; border-bottom:1px solid var(--line); }
+      .stat + .stat { border-left:0; padding-left:0; }
+      .hero-foot { margin-top:42px; }
+      .trait { grid-template-columns:44px 1fr auto; gap:10px; }
+      .trait-note { grid-column:2/4; }
+      .art-caption { align-items:flex-start; flex-direction:column; }
+      .mint-head { align-items:flex-start; gap:10px; flex-direction:column; }
+      .calc-row { font-size:11px; }
+      footer { flex-direction:column; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      .pulse,.ticker-track,.clicker::before,.slot-word.spinning { animation:none; }
+      .art-panel img { transition:none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame topline" aria-label="Collection status">
+    <span>TESTNET ARCHIVE // COLLECTION 01</span>
+    <span><button class="sound" id="sound" type="button" aria-pressed="false">SFX: OFF</button> &nbsp; ● SIGNAL FOUND</span>
+  </div>
+
+  <main>
+    <section class="frame hero" aria-labelledby="hero-title">
+      <div class="copy">
+        <div>
+          <div class="eyebrow"><span class="pulse" aria-hidden="true"></span>ACCESS WINDOW: OPEN</div>
+          <h1 id="hero-title">VOID<span class="slash">/</span><br>RELICS</h1>
+          <p class="lede">2,222 sentinels recovered from a dead network. Every mask holds one last machine memory. <em>Probably cursed.</em></p>
+        </div>
+        <div class="hero-foot">
+          <div class="stats" aria-label="Collection details">
+            <div class="stat"><small>Supply</small><strong>2,222</strong></div>
+            <div class="stat"><small>Mint price</small><strong>0.022 ETH</strong></div>
+            <div class="stat"><small>Limit</small><strong>05 / wallet</strong></div>
+          </div>
+          <a href="#mint" class="eyebrow">ENTER THE TERMINAL ↓</a>
+        </div>
+      </div>
+      <figure class="art-panel" id="artPanel">
+        <img src="assets/media-generation-void-relic-hero-0-a2e00e79-0445-4e79-b39f-9cf86b6f5c0f.png" alt="Pixel-art chrome jackal sentinel with orange eyes and teal circuitry in a dark machine archive" />
+        <span class="scan-label">CURSOR SCANNER // ACTIVE</span>
+        <div class="art-id">SPECIMEN // 0001</div>
+        <figcaption class="art-caption"><b>THE NIGHT WARDEN</b><span>MASK: OBSIDIAN<br>MEMORY: PROTECTED</span></figcaption>
+      </figure>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">
+      <span>NO ROADMAP <i>◆</i> THE ROAD IS GONE</span><span>NO DISCORD <i>◆</i> GO OUTSIDE</span><span>UTILITY: LOOKS EXPENSIVE <i>◆</i></span><span>CONTRACT NOT WRITTEN BY GOBLINS <i>◆</i></span>
+      <span>NO ROADMAP <i>◆</i> THE ROAD IS GONE</span><span>NO DISCORD <i>◆</i> GO OUTSIDE</span><span>UTILITY: LOOKS EXPENSIVE <i>◆</i></span><span>CONTRACT NOT WRITTEN BY GOBLINS <i>◆</i></span>
+    </div></div>
+
+    <section class="terminal-section" id="mint">
+      <div class="frame section-grid">
+        <div>
+          <div class="section-index">01 // ACQUIRE</div>
+          <h2>Feed the machine.</h2>
+          <p class="section-copy">Choose a quantity, spin the rarity scanner, and inspect the transaction. No wallet. No signature. No expensive lesson.</p>
+          <p class="fine">MAX 5, BECAUSE HOARDING JPEG GHOSTS IS A PERSONAL PROBLEM.</p>
+        </div>
+        <div class="mint-box" aria-label="Mint transaction preview">
+          <div class="mint-head"><span>MINT.TERMINAL</span><span>NETWORK // DEMO</span></div>
+          <div class="mint-body">
+            <span class="quantity-label">Quantity</span>
+            <div class="counter">
+              <button id="minus" type="button" aria-label="Decrease quantity">−</button>
+              <div class="count" id="count" aria-live="polite">1</div>
+              <button id="plus" type="button" aria-label="Increase quantity">+</button>
+            </div>
+            <div class="calc">
+              <div class="calc-row"><span>PRICE / RELIC</span><span>0.022 ETH</span></div>
+              <div class="calc-row"><span>EST. NETWORK FEE</span><span>CALCULATED IN WALLET</span></div>
+              <div class="calc-row"><span>TOTAL</span><span id="total">0.022 ETH</span></div>
+            </div>
+            <button class="preview-btn" id="preview" type="button">SUMMON THE JPEG →</button>
+            <div class="slot" id="slot" aria-live="polite">
+              <span class="quantity-label">Rarity scanner</span>
+              <div class="slot-reel"><div class="slot-word" id="slotWord">SCANNING...</div></div>
+              <div class="receipt" id="receipt" role="status"><b>SIMULATION READY</b><br><span id="receiptText"></span><br>No wallet was connected and no transaction was sent.</div>
+            </div>
+            <p class="disclaimer">Portfolio concept only. Contract address, wallet connection, and live minting are intentionally disabled. The scanner is entertainment, not an actual rarity roll.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="play-section">
+      <div class="frame section-grid">
+        <div>
+          <div class="section-index">02 // VERY SERIOUS PROTOCOL</div>
+          <h2>Bonk the void.</h2>
+          <p class="section-copy">Peer-reviewed research confirms big red buttons should be pressed. Your score lives only until this tab closes, like most alpha.</p>
+        </div>
+        <div class="play-grid">
+          <div class="clicker" id="clicker">
+            <div class="click-total">LOCAL BONKS: <strong id="bonks">0</strong></div>
+            <button class="core" id="core" type="button">BONK<br>THE VOID</button>
+            <div class="click-note" id="bonkNote">NO TOKEN. NO REWARD. PURE NUMBER-GO-UP TECHNOLOGY.</div>
+          </div>
+          <div class="signal-log" aria-label="Archive signal log">
+            <div class="log-row"><time>00:00</time><p>Signal woke up angry.<small>ARCHIVE NOTE // VERIFIED VIBES ONLY</small></p></div>
+            <div class="log-row"><time>00:22</time><p>Warden asked who sold the bottom.<small>EVERYONE LOOKED AWAY</small></p></div>
+            <div class="log-row"><time>04:04</time><p>Roadmap file not found.<small>FEATURE, NOT BUG</small></p></div>
+            <div class="log-row"><time>06:67</time><p>Someone typed “wen” into the reactor.<small>CONTAINMENT PENDING</small></p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quiz-section">
+      <div class="frame section-grid">
+        <div>
+          <div class="section-index">03 // DIAGNOSTIC</div>
+          <h2>Which relic owns you?</h2>
+          <p class="section-copy">Three critical questions. Zero scientific value. One suspiciously accurate archive assignment.</p>
+        </div>
+        <div class="quiz-card" id="quizCard">
+          <div id="quizPanel">
+            <div class="quiz-progress" aria-label="Question progress"><span class="on"></span><span></span><span></span></div>
+            <p class="quiz-question" id="quizQuestion">The chart drops 40%. You:</p>
+            <div class="answers" id="answers"></div>
+          </div>
+          <div class="quiz-result" id="quizResult" role="status">
+            <span class="quantity-label">Archive match complete</span>
+            <h3 id="resultName">THE NIGHT WARDEN</h3>
+            <p id="resultCopy"></p>
+            <button class="reset-btn" id="resetQuiz" type="button">RUN THE BAD SCIENCE AGAIN ↻</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="traits-section">
+      <div class="frame section-grid">
+        <div>
+          <div class="section-index">04 // SIGNAL MAP</div>
+          <h2>Built from the ruins.</h2>
+          <p class="section-copy">A visual system designed for collectors to understand rarity at a glance—without burying the art under a spreadsheet.</p>
+        </div>
+        <div class="trait-list" aria-label="Featured traits">
+          <div class="trait"><span class="trait-num">A.01</span><span class="trait-name">Obsidian mask</span><span class="trait-note">Heat-forged shell with dormant tactical memory.</span><span class="trait-rarity">4.2%</span></div>
+          <div class="trait"><span class="trait-num">E.09</span><span class="trait-name">Ember optics</span><span class="trait-note">Dual-spectrum vision from the archive war.</span><span class="trait-rarity">8.8%</span></div>
+          <div class="trait"><span class="trait-num">C.14</span><span class="trait-name">Teal circuit</span><span class="trait-note">Uncorrupted signal path; origin unknown.</span><span class="trait-rarity">12.6%</span></div>
+          <div class="trait"><span class="trait-num">R.03</span><span class="trait-name">Crimson mantle</span><span class="trait-note">Field-worn cloth from the last relay station.</span><span class="trait-rarity">6.1%</span></div>
+        </div>
+      </div>
+
+      <div class="frame faq">
+        <div><div class="section-index">05 // QUESTIONS NOBODY ASKED</div><h2>Fine print, loud.</h2></div>
+        <div class="faq-list">
+          <details><summary>Is this a live mint?</summary><p>No. It is a front-end concept with a transaction simulator. No wallet is connected and nothing leaves the page.</p></details>
+          <details><summary>What is the utility?</summary><p>You may look at the art, bonk the void, and briefly feel something. Ambitious, we know.</p></details>
+          <details><summary>Wen roadmap?</summary><p>The archive ate it. This fictional collection has no promised roadmap, team allocation, or future benefits.</p></details>
+          <details><summary>Did goblins write the contract?</summary><p>There is no contract here. The goblins remain available for consulting.</p></details>
+        </div>
+      </div>
+
+      <div class="frame manifesto">
+        <blockquote>Mint pages should feel like the world they unlock.</blockquote>
+        <p>Not a template with a JPEG dropped in. Art direction, collection logic, mobile behavior, transaction states, accessibility, and edge cases—all designed as one system.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="frame">
+    <span>VOID RELICS // FICTIONAL COLLECTION CONCEPT</span>
+    <span>DESIGN + FRONT-END BUILD // 2026</span>
+  </footer>
+
+  <script>
+    (function () {
+      var count=1, soundOn=false, audio=null, bonks=0, quizIndex=0, quizScore=0;
+      var countEl=document.getElementById('count');
+      var totalEl=document.getElementById('total');
+      var slot=document.getElementById('slot');
+      var slotWord=document.getElementById('slotWord');
+      var receipt=document.getElementById('receipt');
+      var receiptText=document.getElementById('receiptText');
+      var preview=document.getElementById('preview');
+      var rarities=['COMMON // STILL Handsome','RARE // QUESTIONABLE LIQUIDITY','MYTHIC // MOM IS PROUD','CURSED // DO NOT LICK'];
+
+      function beep(freq,duration,type) {
+        if(!soundOn) return;
+        try {
+          audio=audio||new (window.AudioContext||window.webkitAudioContext)();
+          if(audio.state==='suspended') audio.resume();
+          var osc=audio.createOscillator(), gain=audio.createGain();
+          osc.type=type||'square'; osc.frequency.value=freq;
+          gain.gain.setValueAtTime(.045,audio.currentTime);
+          gain.gain.exponentialRampToValueAtTime(.001,audio.currentTime+duration);
+          osc.connect(gain); gain.connect(audio.destination); osc.start(); osc.stop(audio.currentTime+duration);
+        } catch(e) {}
+      }
+      function render() {
+        countEl.textContent=count;
+        totalEl.textContent=(count*.022).toFixed(3)+' ETH';
+        slot.classList.remove('visible'); receipt.classList.remove('visible');
+      }
+      document.getElementById('minus').addEventListener('click',function(){ count=Math.max(1,count-1); beep(140,.05); render(); });
+      document.getElementById('plus').addEventListener('click',function(){ count=Math.min(5,count+1); beep(240,.05); render(); });
+      preview.addEventListener('click',function(){
+        slot.classList.add('visible'); receipt.classList.remove('visible'); preview.disabled=true;
+        slotWord.classList.add('spinning');
+        var ticks=0;
+        var timer=setInterval(function(){ slotWord.textContent=rarities[ticks%rarities.length]; beep(100+ticks*18,.025); ticks++; },90);
+        setTimeout(function(){
+          clearInterval(timer); slotWord.classList.remove('spinning');
+          slotWord.textContent=rarities[(count*3+bonks)%rarities.length];
+          receiptText.textContent=count+' relic'+(count>1?'s':'')+' × 0.022 ETH = '+(count*.022).toFixed(3)+' ETH.';
+          receipt.classList.add('visible'); preview.disabled=false; beep(420,.16,'sawtooth');
+        },900);
+      });
+      document.getElementById('sound').addEventListener('click',function(){
+        soundOn=!soundOn; this.textContent='SFX: '+(soundOn?'ON':'OFF'); this.setAttribute('aria-pressed',String(soundOn)); beep(320,.08);
+      });
+
+      var art=document.getElementById('artPanel');
+      art.addEventListener('pointermove',function(e){
+        var r=art.getBoundingClientRect();
+        art.style.setProperty('--x',((e.clientX-r.left)/r.width*100)+'%');
+        art.style.setProperty('--y',((e.clientY-r.top)/r.height*100)+'%');
+      });
+
+      var core=document.getElementById('core');
+      var notes=['THE VOID FELT THAT.','NUMBER WENT UP. THESIS COMPLETE.','BONK CONFIRMED ON ZERO CHAINS.','WHALE BEHAVIOR DETECTED.','ABSOLUTELY NO YIELD GENERATED.'];
+      core.addEventListener('click',function(e){
+        bonks++; document.getElementById('bonks').textContent=bonks.toLocaleString();
+        document.getElementById('bonkNote').textContent=notes[bonks%notes.length];
+        core.classList.add('popped'); setTimeout(function(){ core.classList.remove('popped'); },90); beep(90+Math.min(bonks,20)*5,.07);
+        var b=document.createElement('span'); b.className='burst'; b.textContent='+'+(bonks%10===0?'10X ALPHA':'1 BONK'); b.style.left=e.clientX+'px'; b.style.top=e.clientY+'px'; document.body.appendChild(b); setTimeout(function(){ b.remove(); },720);
+      });
+
+      var questions=[
+        {q:'The chart drops 40%. You:',a:[['Zoom out and cope',1],['Buy more. Obviously.',2],['Declare it a long-term hold',0]]},
+        {q:'Pick your sacred artifact:',a:[['A hardware wallet',1],['A screenshot of the ATH',0],['The group chat mute button',2]]},
+        {q:'Your final transmission says:',a:[['gm',0],['wen',2],['I verified the contract',1]]}
+      ];
+      var answers=document.getElementById('answers');
+      function drawQuiz(){
+        document.getElementById('quizQuestion').textContent=questions[quizIndex].q;
+        var bars=document.querySelectorAll('.quiz-progress span');
+        for(var i=0;i<bars.length;i++) bars[i].classList.toggle('on',i<=quizIndex);
+        answers.innerHTML='';
+        questions[quizIndex].a.forEach(function(item){
+          var btn=document.createElement('button'); btn.className='answer'; btn.type='button'; btn.textContent=item[0];
+          btn.addEventListener('click',function(){ quizScore+=item[1]; quizIndex++; beep(210+quizIndex*70,.06); if(quizIndex<questions.length){drawQuiz();}else{showResult();} });
+          answers.appendChild(btn);
+        });
+      }
+      function showResult(){
+        var results=[['THE EXIT LIQUIDITY','Beautiful, optimistic, and always somehow holding the bag. The archive respects your service.'],['THE NIGHT WARDEN','Suspicious eyebrows. Cold storage. You read the permissions twice and still do not trust them. Correct.'],['THE CHAOS ROUTER','No map, no brakes, five tabs minting. You do not find alpha; alpha files a noise complaint.']];
+        var r=results[Math.min(2,Math.floor(quizScore/2))];
+        document.getElementById('quizPanel').style.display='none';
+        document.getElementById('resultName').textContent=r[0]; document.getElementById('resultCopy').textContent=r[1];
+        document.getElementById('quizResult').classList.add('visible'); beep(520,.18,'sawtooth');
+      }
+      document.getElementById('resetQuiz').addEventListener('click',function(){
+        quizIndex=0; quizScore=0; document.getElementById('quizPanel').style.display='block'; document.getElementById('quizResult').classList.remove('visible'); drawQuiz();
+      });
+      drawQuiz();
+    }());
+  </script>
+</body>
+</html>

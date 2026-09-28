@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/foil-s-mint-board/.harness/probe-ui/sock",
+  "slug": "foil-s-mint-board",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-8f4272c1-189c-4329-8c0d-93d80ec18b9b/",
+  "audit_session_id": "56fc8254-3637-49ba-9ae0-059ac3fe5e94",
+  "pid": 5268
+}

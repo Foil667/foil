@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "tinfoil-scan-foil-s-free-wallet-drainer-checker",
+  "session_id": "a3c7458b-08e0-427b-afc8-bbeb78f449aa",
+  "observes": 2,
+  "acts": 2,
+  "acts_ok": 2,
+  "interactive_nodes": 2,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

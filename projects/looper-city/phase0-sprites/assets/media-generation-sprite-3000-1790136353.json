@@ -1,0 +1,4 @@
+{
+  "text": "{\"error_format_version\":1,\"error\":{\"code\":\"policy_denied\",\"retryable\":false,\"detail\":\"The request was blocked by content policy.\",\"downstream_status\":403}}",
+  "attachments": []
+}

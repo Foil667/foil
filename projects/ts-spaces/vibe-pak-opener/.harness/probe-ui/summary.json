@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "vibe-pak-opener",
+  "session_id": "99987ef7-b901-4816-b00a-40eeafcd9140",
+  "observes": 3,
+  "acts": 8,
+  "acts_ok": 8,
+  "interactive_nodes": 6,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

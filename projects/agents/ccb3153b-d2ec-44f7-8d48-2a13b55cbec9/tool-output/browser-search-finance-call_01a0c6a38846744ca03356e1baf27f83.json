@@ -1,0 +1,1994 @@
+{
+  "results": [
+    {
+      "citation_hash_id": "701c",
+      "excerpt": "Last Updated: Just now\nLast Crawl: Just now\nName: Minerva Gold Inc\nSymbol: \"MINR\"\nExchange: \"OOTC\"\nCountry: \"US\"\nCurrency: \"USD\"\nTicker Type: \"stock\"\nMarket Cap: 0.3942\n52 Week Low: 0.06\n52 Week High: 9.95\n5 Day Price Return (%): 110.29\n1 Month Price Return (%): 43.72\nBeta: -918.24304\nCurrent Price: 0\nOpen Price: 0\nHigh Price: 0\nLow Price: 0\nPrevious Close Price: 0\nChange: 0\nPercent Change: 0\nEarnings Per Share: -0.0014\nAverage Volume: 110666.5867125403\nIndustry: \"N/A\"",
+      "sources": [
+        "MASE"
+      ],
+      "structured_entity": {
+        "candles": {
+          "daily": [
+            {
+              "close": 0.12,
+              "high": 0.12,
+              "low": 0.12,
+              "open": 0.12,
+              "timestamp": 1774396800,
+              "volume": 1000
+            },
+            {
+              "close": 1.25,
+              "high": 3.48,
+              "low": 0.4164,
+              "open": 0.5,
+              "timestamp": 1776211200,
+              "volume": 27800
+            },
+            {
+              "close": 3,
+              "high": 3,
+              "low": 1.8402,
+              "open": 1.8402,
+              "timestamp": 1776297600,
+              "volume": 4690
+            },
+            {
+              "close": 3.3,
+              "high": 3.88,
+              "low": 2.9,
+              "open": 3.45,
+              "timestamp": 1776384000,
+              "volume": 1570
+            },
+            {
+              "close": 3.88,
+              "high": 4.1,
+              "low": 3.3,
+              "open": 3.4,
+              "timestamp": 1776643200,
+              "volume": 2750
+            },
+            {
+              "close": 4,
+              "high": 4,
+              "low": 4,
+              "open": 4,
+              "timestamp": 1776729600,
+              "volume": 100
+            },
+            {
+              "close": 6,
+              "high": 6,
+              "low": 4.083,
+              "open": 4.3975,
+              "timestamp": 1776816000,
+              "volume": 5550
+            },
+            {
+              "close": 5.1524,
+              "high": 5.1524,
+              "low": 3.5,
+              "open": 4.36,
+              "timestamp": 1776902400,
+              "volume": 2000
+            },
+            {
+              "close": 6.29,
+              "high": 6.5,
+              "low": 5.9883,
+              "open": 5.9883,
+              "timestamp": 1776988800,
+              "volume": 2735
+            },
+            {
+              "close": 7.32,
+              "high": 7.6,
+              "low": 5.99,
+              "open": 6,
+              "timestamp": 1777248000,
+              "volume": 2640
+            },
+            {
+              "close": 7.35,
+              "high": 8,
+              "low": 7.1,
+              "open": 8,
+              "timestamp": 1777334400,
+              "volume": 450
+            },
+            {
+              "close": 6.55,
+              "high": 7.6512,
+              "low": 6.38,
+              "open": 7.6512,
+              "timestamp": 1777420800,
+              "volume": 3519
+            },
+            {
+              "close": 6.11,
+              "high": 7.08,
+              "low": 6.11,
+              "open": 6.901,
+              "timestamp": 1777507200,
+              "volume": 3700
+            },
+            {
+              "close": 5.35,
+              "high": 6.5255,
+              "low": 5.05,
+              "open": 6.5255,
+              "timestamp": 1777593600,
+              "volume": 9220
+            },
+            {
+              "close": 7.06,
+              "high": 7.7,
+              "low": 5.25,
+              "open": 6.03,
+              "timestamp": 1777852800,
+              "volume": 152225
+            },
+            {
+              "close": 7.55,
+              "high": 7.92,
+              "low": 5.7,
+              "open": 6.91,
+              "timestamp": 1777939200,
+              "volume": 664931
+            },
+            {
+              "close": 0.5106,
+              "high": 9.95,
+              "low": 0.5,
+              "open": 7.5,
+              "timestamp": 1778025600,
+              "volume": 252690
+            },
+            {
+              "close": 0.41,
+              "high": 0.7849,
+              "low": 0.25,
+              "open": 0.7849,
+              "timestamp": 1778112000,
+              "volume": 67680
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778198400,
+              "volume": 1354
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778457600,
+              "volume": 15691
+            },
+            {
+              "close": 0.5,
+              "high": 0.5,
+              "low": 0.5,
+              "open": 0.5,
+              "timestamp": 1778544000,
+              "volume": 249
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778630400,
+              "volume": 1910
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778716800,
+              "volume": 2140
+            },
+            {
+              "close": 0.4585,
+              "high": 0.4585,
+              "low": 0.4585,
+              "open": 0.4585,
+              "timestamp": 1779062400,
+              "volume": 200
+            },
+            {
+              "close": 0.41,
+              "high": 0.46,
+              "low": 0.41,
+              "open": 0.46,
+              "timestamp": 1779321600,
+              "volume": 500
+            },
+            {
+              "close": 0.4,
+              "high": 0.466,
+              "low": 0.4,
+              "open": 0.466,
+              "timestamp": 1779753600,
+              "volume": 566
+            },
+            {
+              "close": 0.5,
+              "high": 0.5,
+              "low": 0.5,
+              "open": 0.5,
+              "timestamp": 1780012800,
+              "volume": 200
+            },
+            {
+              "close": 0.391,
+              "high": 0.391,
+              "low": 0.391,
+              "open": 0.391,
+              "timestamp": 1780272000,
+              "volume": 100
+            },
+            {
+              "close": 0.4646,
+              "high": 0.751,
+              "low": 0.35,
+              "open": 0.3501,
+              "timestamp": 1780358400,
+              "volume": 73661
+            },
+            {
+              "close": 0.7997,
+              "high": 0.7997,
+              "low": 0.52,
+              "open": 0.655,
+              "timestamp": 1780444800,
+              "volume": 69020
+            },
+            {
+              "close": 1.01,
+              "high": 1.1,
+              "low": 0.7299,
+              "open": 0.7299,
+              "timestamp": 1780531200,
+              "volume": 48982
+            },
+            {
+              "close": 0.6503,
+              "high": 1.059,
+              "low": 0.6503,
+              "open": 1.059,
+              "timestamp": 1780617600,
+              "volume": 3386
+            },
+            {
+              "close": 0.74,
+              "high": 1,
+              "low": 0.6,
+              "open": 0.6703,
+              "timestamp": 1780876800,
+              "volume": 257688
+            },
+            {
+              "close": 0.88,
+              "high": 1.01,
+              "low": 0.72,
+              "open": 0.7499,
+              "timestamp": 1780963200,
+              "volume": 287627
+            },
+            {
+              "close": 0.9,
+              "high": 1.01,
+              "low": 0.88,
+              "open": 1.01,
+              "timestamp": 1781049600,
+              "volume": 3102
+            },
+            {
+              "close": 1.015,
+              "high": 1.015,
+              "low": 0.9399,
+              "open": 0.9399,
+              "timestamp": 1781136000,
+              "volume": 6109
+            },
+            {
+              "close": 1,
+              "high": 1,
+              "low": 1,
+              "open": 1,
+              "timestamp": 1781222400,
+              "volume": 102
+            },
+            {
+              "close": 0.8899,
+              "high": 0.9,
+              "low": 0.864,
+              "open": 0.9,
+              "timestamp": 1781481600,
+              "volume": 11660
+            },
+            {
+              "close": 0.9,
+              "high": 0.9,
+              "low": 0.69,
+              "open": 0.8899,
+              "timestamp": 1781568000,
+              "volume": 83706
+            },
+            {
+              "close": 1.01,
+              "high": 1.42,
+              "low": 0.875,
+              "open": 0.8889,
+              "timestamp": 1781654400,
+              "volume": 325341
+            },
+            {
+              "close": 1.36,
+              "high": 1.387,
+              "low": 0.9101,
+              "open": 0.9101,
+              "timestamp": 1781740800,
+              "volume": 886331
+            },
+            {
+              "close": 0.355,
+              "high": 1.238,
+              "low": 0.35,
+              "open": 1.238,
+              "timestamp": 1782086400,
+              "volume": 205716
+            },
+            {
+              "close": 0.09,
+              "high": 0.28,
+              "low": 0.09,
+              "open": 0.28,
+              "timestamp": 1782172800,
+              "volume": 222263
+            },
+            {
+              "close": 0.1169,
+              "high": 0.1169,
+              "low": 0.1169,
+              "open": 0.1169,
+              "timestamp": 1782259200,
+              "volume": 5150
+            },
+            {
+              "close": 0.1224,
+              "high": 0.1224,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1782345600,
+              "volume": 4817
+            },
+            {
+              "close": 0.12,
+              "high": 0.18,
+              "low": 0.1,
+              "open": 0.18,
+              "timestamp": 1782691200,
+              "volume": 164529
+            },
+            {
+              "close": 0.1761,
+              "high": 0.1761,
+              "low": 0.133,
+              "open": 0.133,
+              "timestamp": 1782777600,
+              "volume": 209000
+            },
+            {
+              "close": 0.18,
+              "high": 0.18,
+              "low": 0.18,
+              "open": 0.18,
+              "timestamp": 1782864000,
+              "volume": 1030
+            },
+            {
+              "close": 0.144,
+              "high": 0.144,
+              "low": 0.144,
+              "open": 0.144,
+              "timestamp": 1782950400,
+              "volume": 200
+            },
+            {
+              "close": 0.14,
+              "high": 0.14,
+              "low": 0.1,
+              "open": 0.1021,
+              "timestamp": 1783382400,
+              "volume": 3955
+            },
+            {
+              "close": 0.0818,
+              "high": 0.1,
+              "low": 0.0719,
+              "open": 0.1,
+              "timestamp": 1783641600,
+              "volume": 39700
+            },
+            {
+              "close": 0.1115,
+              "high": 0.1115,
+              "low": 0.1115,
+              "open": 0.1115,
+              "timestamp": 1783900800,
+              "volume": 113
+            },
+            {
+              "close": 0.1638,
+              "high": 0.1638,
+              "low": 0.15,
+              "open": 0.15,
+              "timestamp": 1784073600,
+              "volume": 21250
+            },
+            {
+              "close": 0.1688,
+              "high": 0.1761,
+              "low": 0.16,
+              "open": 0.16,
+              "timestamp": 1784160000,
+              "volume": 4050
+            },
+            {
+              "close": 0.132,
+              "high": 0.1596,
+              "low": 0.132,
+              "open": 0.1596,
+              "timestamp": 1784246400,
+              "volume": 5500
+            },
+            {
+              "close": 0.17,
+              "high": 0.1989,
+              "low": 0.1648,
+              "open": 0.1648,
+              "timestamp": 1784505600,
+              "volume": 40603
+            },
+            {
+              "close": 0.1941,
+              "high": 0.1941,
+              "low": 0.1941,
+              "open": 0.1941,
+              "timestamp": 1784592000,
+              "volume": 100
+            },
+            {
+              "close": 0.19,
+              "high": 0.19,
+              "low": 0.19,
+              "open": 0.19,
+              "timestamp": 1784678400,
+              "volume": 1098
+            },
+            {
+              "close": 0.1926,
+              "high": 0.1926,
+              "low": 0.1926,
+              "open": 0.1926,
+              "timestamp": 1784764800,
+              "volume": 500
+            },
+            {
+              "close": 0.26,
+              "high": 0.275,
+              "low": 0.2398,
+              "open": 0.2398,
+              "timestamp": 1785283200,
+              "volume": 17900
+            },
+            {
+              "close": 0.3,
+              "high": 0.31,
+              "low": 0.3,
+              "open": 0.3,
+              "timestamp": 1785369600,
+              "volume": 25702
+            },
+            {
+              "close": 0.15,
+              "high": 0.3124,
+              "low": 0.15,
+              "open": 0.3,
+              "timestamp": 1785456000,
+              "volume": 96054
+            },
+            {
+              "close": 0.17,
+              "high": 0.2388,
+              "low": 0.08,
+              "open": 0.15,
+              "timestamp": 1785715200,
+              "volume": 64095
+            },
+            {
+              "close": 0.17,
+              "high": 0.17,
+              "low": 0.17,
+              "open": 0.17,
+              "timestamp": 1785801600,
+              "volume": 10060
+            },
+            {
+              "close": 0.1824,
+              "high": 0.1824,
+              "low": 0.1824,
+              "open": 0.1824,
+              "timestamp": 1785974400,
+              "volume": 100
+            },
+            {
+              "close": 0.15,
+              "high": 0.18,
+              "low": 0.15,
+              "open": 0.18,
+              "timestamp": 1786665600,
+              "volume": 13157
+            },
+            {
+              "close": 0.1349,
+              "high": 0.1349,
+              "low": 0.1349,
+              "open": 0.1349,
+              "timestamp": 1786924800,
+              "volume": 300
+            },
+            {
+              "close": 0.099,
+              "high": 0.12,
+              "low": 0.09,
+              "open": 0.12,
+              "timestamp": 1787011200,
+              "volume": 95252
+            },
+            {
+              "close": 0.0995,
+              "high": 0.0995,
+              "low": 0.0939,
+              "open": 0.095,
+              "timestamp": 1787097600,
+              "volume": 73000
+            },
+            {
+              "close": 0.0995,
+              "high": 0.0995,
+              "low": 0.0995,
+              "open": 0.0995,
+              "timestamp": 1787184000,
+              "volume": 10000
+            },
+            {
+              "close": 0.0995,
+              "high": 0.0995,
+              "low": 0.0948,
+              "open": 0.0948,
+              "timestamp": 1787270400,
+              "volume": 1725
+            },
+            {
+              "close": 0.0968,
+              "high": 0.0968,
+              "low": 0.0968,
+              "open": 0.0968,
+              "timestamp": 1787616000,
+              "volume": 2500
+            },
+            {
+              "close": 0.09,
+              "high": 0.09,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1787788800,
+              "volume": 720
+            },
+            {
+              "close": 0.0931,
+              "high": 0.0931,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1788220800,
+              "volume": 16252
+            },
+            {
+              "close": 0.0897,
+              "high": 0.0897,
+              "low": 0.0897,
+              "open": 0.0897,
+              "timestamp": 1788825600,
+              "volume": 6700
+            },
+            {
+              "close": 0.068,
+              "high": 0.085,
+              "low": 0.0667,
+              "open": 0.085,
+              "timestamp": 1788912000,
+              "volume": 21955
+            },
+            {
+              "close": 0.06,
+              "high": 0.06,
+              "low": 0.06,
+              "open": 0.06,
+              "timestamp": 1788998400,
+              "volume": 500
+            },
+            {
+              "close": 0.077,
+              "high": 0.077,
+              "low": 0.077,
+              "open": 0.077,
+              "timestamp": 1789344000,
+              "volume": 6000
+            },
+            {
+              "close": 0.1022,
+              "high": 0.1022,
+              "low": 0.0778,
+              "open": 0.0838,
+              "timestamp": 1789430400,
+              "volume": 135658
+            },
+            {
+              "close": 0.15,
+              "high": 0.15,
+              "low": 0.1402,
+              "open": 0.1402,
+              "timestamp": 1789516800,
+              "volume": 8446
+            },
+            {
+              "close": 0.143,
+              "high": 0.143,
+              "low": 0.143,
+              "open": 0.143,
+              "timestamp": 1789603200,
+              "volume": 100
+            }
+          ],
+          "monthly": [
+            {
+              "close": 0.12,
+              "high": 0.12,
+              "low": 0.12,
+              "open": 0.12,
+              "timestamp": 1772323200,
+              "volume": 1000
+            },
+            {
+              "close": 6.11,
+              "high": 8,
+              "low": 0.4164,
+              "open": 0.5,
+              "timestamp": 1775001600,
+              "volume": 57504
+            },
+            {
+              "close": 0.5,
+              "high": 9.95,
+              "low": 0.25,
+              "open": 6.5255,
+              "timestamp": 1777593600,
+              "volume": 1169556
+            },
+            {
+              "close": 0.1761,
+              "high": 1.42,
+              "low": 0.09,
+              "open": 0.391,
+              "timestamp": 1780272000,
+              "volume": 2868290
+            },
+            {
+              "close": 0.15,
+              "high": 0.3124,
+              "low": 0.0719,
+              "open": 0.18,
+              "timestamp": 1782864000,
+              "volume": 257755
+            },
+            {
+              "close": 0.09,
+              "high": 0.2388,
+              "low": 0.08,
+              "open": 0.15,
+              "timestamp": 1785542400,
+              "volume": 270909
+            },
+            {
+              "close": 0.143,
+              "high": 0.15,
+              "low": 0.06,
+              "open": 0.09,
+              "timestamp": 1788220800,
+              "volume": 195611
+            }
+          ],
+          "one_minute": [],
+          "thirty_minute": [],
+          "weekly": [
+            {
+              "close": 0.12,
+              "high": 0.12,
+              "low": 0.12,
+              "open": 0.12,
+              "timestamp": 1774396800,
+              "volume": 1000
+            },
+            {
+              "close": 3.3,
+              "high": 3.88,
+              "low": 0.4164,
+              "open": 0.5,
+              "timestamp": 1776211200,
+              "volume": 34060
+            },
+            {
+              "close": 6.29,
+              "high": 6.5,
+              "low": 3.3,
+              "open": 3.4,
+              "timestamp": 1776643200,
+              "volume": 13135
+            },
+            {
+              "close": 5.35,
+              "high": 8,
+              "low": 5.05,
+              "open": 6,
+              "timestamp": 1777248000,
+              "volume": 19529
+            },
+            {
+              "close": 0.4,
+              "high": 9.95,
+              "low": 0.25,
+              "open": 6.03,
+              "timestamp": 1777852800,
+              "volume": 1138880
+            },
+            {
+              "close": 0.4,
+              "high": 0.5,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778457600,
+              "volume": 19990
+            },
+            {
+              "close": 0.41,
+              "high": 0.46,
+              "low": 0.41,
+              "open": 0.4585,
+              "timestamp": 1779062400,
+              "volume": 700
+            },
+            {
+              "close": 0.5,
+              "high": 0.5,
+              "low": 0.4,
+              "open": 0.466,
+              "timestamp": 1779753600,
+              "volume": 766
+            },
+            {
+              "close": 0.6503,
+              "high": 1.1,
+              "low": 0.35,
+              "open": 0.391,
+              "timestamp": 1780272000,
+              "volume": 195149
+            },
+            {
+              "close": 1,
+              "high": 1.015,
+              "low": 0.6,
+              "open": 0.6703,
+              "timestamp": 1780876800,
+              "volume": 554628
+            },
+            {
+              "close": 1.36,
+              "high": 1.42,
+              "low": 0.69,
+              "open": 0.9,
+              "timestamp": 1781481600,
+              "volume": 1307038
+            },
+            {
+              "close": 0.1224,
+              "high": 1.238,
+              "low": 0.09,
+              "open": 1.238,
+              "timestamp": 1782086400,
+              "volume": 437946
+            },
+            {
+              "close": 0.144,
+              "high": 0.18,
+              "low": 0.1,
+              "open": 0.18,
+              "timestamp": 1782691200,
+              "volume": 374759
+            },
+            {
+              "close": 0.0818,
+              "high": 0.14,
+              "low": 0.0719,
+              "open": 0.1021,
+              "timestamp": 1783382400,
+              "volume": 43655
+            },
+            {
+              "close": 0.132,
+              "high": 0.1761,
+              "low": 0.1115,
+              "open": 0.1115,
+              "timestamp": 1783900800,
+              "volume": 30913
+            },
+            {
+              "close": 0.1926,
+              "high": 0.1989,
+              "low": 0.1648,
+              "open": 0.1648,
+              "timestamp": 1784505600,
+              "volume": 42301
+            },
+            {
+              "close": 0.15,
+              "high": 0.3124,
+              "low": 0.15,
+              "open": 0.2398,
+              "timestamp": 1785283200,
+              "volume": 139656
+            },
+            {
+              "close": 0.1824,
+              "high": 0.2388,
+              "low": 0.08,
+              "open": 0.15,
+              "timestamp": 1785715200,
+              "volume": 74255
+            },
+            {
+              "close": 0.15,
+              "high": 0.18,
+              "low": 0.15,
+              "open": 0.18,
+              "timestamp": 1786665600,
+              "volume": 13157
+            },
+            {
+              "close": 0.0995,
+              "high": 0.1349,
+              "low": 0.09,
+              "open": 0.1349,
+              "timestamp": 1786924800,
+              "volume": 180277
+            },
+            {
+              "close": 0.09,
+              "high": 0.0968,
+              "low": 0.09,
+              "open": 0.0968,
+              "timestamp": 1787616000,
+              "volume": 3220
+            },
+            {
+              "close": 0.0931,
+              "high": 0.0931,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1788220800,
+              "volume": 16252
+            },
+            {
+              "close": 0.06,
+              "high": 0.0897,
+              "low": 0.06,
+              "open": 0.0897,
+              "timestamp": 1788825600,
+              "volume": 29155
+            },
+            {
+              "close": 0.143,
+              "high": 0.15,
+              "low": 0.077,
+              "open": 0.077,
+              "timestamp": 1789344000,
+              "volume": 150204
+            }
+          ]
+        },
+        "entity": {
+          "attributes": {
+            "52WeekHigh": 9.95,
+            "52WeekLow": 0.06,
+            "averageVolume": 110666.58671254,
+            "beta": -918.24304,
+            "change": 0,
+            "countryCode": "US",
+            "currency": "USD",
+            "currentPrice": 0,
+            "dividendYield": null,
+            "epsAnnual": -0.0014,
+            "exchange": "OOTC",
+            "finnhub_industry": "N/A",
+            "fiveDayReturn": 110.29,
+            "flags/isSensitive": null,
+            "highPrice": 0,
+            "ipoDate": null,
+            "lastUpdatedAt": 1790038704,
+            "longName": null,
+            "lowPrice": 0,
+            "marketCap": 0.3942,
+            "marketCapChange": null,
+            "marketStatus": "closed",
+            "oneMonthReturn": 43.72,
+            "oneYearReturn": null,
+            "openPrice": 0,
+            "percentChange": 0,
+            "previousClosedPrice": 0,
+            "priceEarningRatio": null,
+            "shortName": null,
+            "sixMonthReturn": null,
+            "symbol": "MINR",
+            "tenYearReturn": null,
+            "tickertype": "stock",
+            "totalVolume": null,
+            "weightedShares": null,
+            "ytdReturn": null
+          },
+          "domain": "ticker",
+          "kgid": 4919575607317915216,
+          "name": "Minerva Gold Inc"
+        },
+        "vertical": "finance"
+      },
+      "title": "Minerva Gold Inc (MINR): Financial Market Data",
+      "url": "https://finnhub.io/?q=%22MINR%22",
+      "vertical_data": {
+        "candles": {
+          "daily": [
+            {
+              "close": 0.12,
+              "high": 0.12,
+              "low": 0.12,
+              "open": 0.12,
+              "timestamp": 1774396800,
+              "volume": 1000
+            },
+            {
+              "close": 1.25,
+              "high": 3.48,
+              "low": 0.4164,
+              "open": 0.5,
+              "timestamp": 1776211200,
+              "volume": 27800
+            },
+            {
+              "close": 3,
+              "high": 3,
+              "low": 1.8402,
+              "open": 1.8402,
+              "timestamp": 1776297600,
+              "volume": 4690
+            },
+            {
+              "close": 3.3,
+              "high": 3.88,
+              "low": 2.9,
+              "open": 3.45,
+              "timestamp": 1776384000,
+              "volume": 1570
+            },
+            {
+              "close": 3.88,
+              "high": 4.1,
+              "low": 3.3,
+              "open": 3.4,
+              "timestamp": 1776643200,
+              "volume": 2750
+            },
+            {
+              "close": 4,
+              "high": 4,
+              "low": 4,
+              "open": 4,
+              "timestamp": 1776729600,
+              "volume": 100
+            },
+            {
+              "close": 6,
+              "high": 6,
+              "low": 4.083,
+              "open": 4.3975,
+              "timestamp": 1776816000,
+              "volume": 5550
+            },
+            {
+              "close": 5.1524,
+              "high": 5.1524,
+              "low": 3.5,
+              "open": 4.36,
+              "timestamp": 1776902400,
+              "volume": 2000
+            },
+            {
+              "close": 6.29,
+              "high": 6.5,
+              "low": 5.9883,
+              "open": 5.9883,
+              "timestamp": 1776988800,
+              "volume": 2735
+            },
+            {
+              "close": 7.32,
+              "high": 7.6,
+              "low": 5.99,
+              "open": 6,
+              "timestamp": 1777248000,
+              "volume": 2640
+            },
+            {
+              "close": 7.35,
+              "high": 8,
+              "low": 7.1,
+              "open": 8,
+              "timestamp": 1777334400,
+              "volume": 450
+            },
+            {
+              "close": 6.55,
+              "high": 7.6512,
+              "low": 6.38,
+              "open": 7.6512,
+              "timestamp": 1777420800,
+              "volume": 3519
+            },
+            {
+              "close": 6.11,
+              "high": 7.08,
+              "low": 6.11,
+              "open": 6.901,
+              "timestamp": 1777507200,
+              "volume": 3700
+            },
+            {
+              "close": 5.35,
+              "high": 6.5255,
+              "low": 5.05,
+              "open": 6.5255,
+              "timestamp": 1777593600,
+              "volume": 9220
+            },
+            {
+              "close": 7.06,
+              "high": 7.7,
+              "low": 5.25,
+              "open": 6.03,
+              "timestamp": 1777852800,
+              "volume": 152225
+            },
+            {
+              "close": 7.55,
+              "high": 7.92,
+              "low": 5.7,
+              "open": 6.91,
+              "timestamp": 1777939200,
+              "volume": 664931
+            },
+            {
+              "close": 0.5106,
+              "high": 9.95,
+              "low": 0.5,
+              "open": 7.5,
+              "timestamp": 1778025600,
+              "volume": 252690
+            },
+            {
+              "close": 0.41,
+              "high": 0.7849,
+              "low": 0.25,
+              "open": 0.7849,
+              "timestamp": 1778112000,
+              "volume": 67680
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778198400,
+              "volume": 1354
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778457600,
+              "volume": 15691
+            },
+            {
+              "close": 0.5,
+              "high": 0.5,
+              "low": 0.5,
+              "open": 0.5,
+              "timestamp": 1778544000,
+              "volume": 249
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778630400,
+              "volume": 1910
+            },
+            {
+              "close": 0.4,
+              "high": 0.4,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778716800,
+              "volume": 2140
+            },
+            {
+              "close": 0.4585,
+              "high": 0.4585,
+              "low": 0.4585,
+              "open": 0.4585,
+              "timestamp": 1779062400,
+              "volume": 200
+            },
+            {
+              "close": 0.41,
+              "high": 0.46,
+              "low": 0.41,
+              "open": 0.46,
+              "timestamp": 1779321600,
+              "volume": 500
+            },
+            {
+              "close": 0.4,
+              "high": 0.466,
+              "low": 0.4,
+              "open": 0.466,
+              "timestamp": 1779753600,
+              "volume": 566
+            },
+            {
+              "close": 0.5,
+              "high": 0.5,
+              "low": 0.5,
+              "open": 0.5,
+              "timestamp": 1780012800,
+              "volume": 200
+            },
+            {
+              "close": 0.391,
+              "high": 0.391,
+              "low": 0.391,
+              "open": 0.391,
+              "timestamp": 1780272000,
+              "volume": 100
+            },
+            {
+              "close": 0.4646,
+              "high": 0.751,
+              "low": 0.35,
+              "open": 0.3501,
+              "timestamp": 1780358400,
+              "volume": 73661
+            },
+            {
+              "close": 0.7997,
+              "high": 0.7997,
+              "low": 0.52,
+              "open": 0.655,
+              "timestamp": 1780444800,
+              "volume": 69020
+            },
+            {
+              "close": 1.01,
+              "high": 1.1,
+              "low": 0.7299,
+              "open": 0.7299,
+              "timestamp": 1780531200,
+              "volume": 48982
+            },
+            {
+              "close": 0.6503,
+              "high": 1.059,
+              "low": 0.6503,
+              "open": 1.059,
+              "timestamp": 1780617600,
+              "volume": 3386
+            },
+            {
+              "close": 0.74,
+              "high": 1,
+              "low": 0.6,
+              "open": 0.6703,
+              "timestamp": 1780876800,
+              "volume": 257688
+            },
+            {
+              "close": 0.88,
+              "high": 1.01,
+              "low": 0.72,
+              "open": 0.7499,
+              "timestamp": 1780963200,
+              "volume": 287627
+            },
+            {
+              "close": 0.9,
+              "high": 1.01,
+              "low": 0.88,
+              "open": 1.01,
+              "timestamp": 1781049600,
+              "volume": 3102
+            },
+            {
+              "close": 1.015,
+              "high": 1.015,
+              "low": 0.9399,
+              "open": 0.9399,
+              "timestamp": 1781136000,
+              "volume": 6109
+            },
+            {
+              "close": 1,
+              "high": 1,
+              "low": 1,
+              "open": 1,
+              "timestamp": 1781222400,
+              "volume": 102
+            },
+            {
+              "close": 0.8899,
+              "high": 0.9,
+              "low": 0.864,
+              "open": 0.9,
+              "timestamp": 1781481600,
+              "volume": 11660
+            },
+            {
+              "close": 0.9,
+              "high": 0.9,
+              "low": 0.69,
+              "open": 0.8899,
+              "timestamp": 1781568000,
+              "volume": 83706
+            },
+            {
+              "close": 1.01,
+              "high": 1.42,
+              "low": 0.875,
+              "open": 0.8889,
+              "timestamp": 1781654400,
+              "volume": 325341
+            },
+            {
+              "close": 1.36,
+              "high": 1.387,
+              "low": 0.9101,
+              "open": 0.9101,
+              "timestamp": 1781740800,
+              "volume": 886331
+            },
+            {
+              "close": 0.355,
+              "high": 1.238,
+              "low": 0.35,
+              "open": 1.238,
+              "timestamp": 1782086400,
+              "volume": 205716
+            },
+            {
+              "close": 0.09,
+              "high": 0.28,
+              "low": 0.09,
+              "open": 0.28,
+              "timestamp": 1782172800,
+              "volume": 222263
+            },
+            {
+              "close": 0.1169,
+              "high": 0.1169,
+              "low": 0.1169,
+              "open": 0.1169,
+              "timestamp": 1782259200,
+              "volume": 5150
+            },
+            {
+              "close": 0.1224,
+              "high": 0.1224,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1782345600,
+              "volume": 4817
+            },
+            {
+              "close": 0.12,
+              "high": 0.18,
+              "low": 0.1,
+              "open": 0.18,
+              "timestamp": 1782691200,
+              "volume": 164529
+            },
+            {
+              "close": 0.1761,
+              "high": 0.1761,
+              "low": 0.133,
+              "open": 0.133,
+              "timestamp": 1782777600,
+              "volume": 209000
+            },
+            {
+              "close": 0.18,
+              "high": 0.18,
+              "low": 0.18,
+              "open": 0.18,
+              "timestamp": 1782864000,
+              "volume": 1030
+            },
+            {
+              "close": 0.144,
+              "high": 0.144,
+              "low": 0.144,
+              "open": 0.144,
+              "timestamp": 1782950400,
+              "volume": 200
+            },
+            {
+              "close": 0.14,
+              "high": 0.14,
+              "low": 0.1,
+              "open": 0.1021,
+              "timestamp": 1783382400,
+              "volume": 3955
+            },
+            {
+              "close": 0.0818,
+              "high": 0.1,
+              "low": 0.0719,
+              "open": 0.1,
+              "timestamp": 1783641600,
+              "volume": 39700
+            },
+            {
+              "close": 0.1115,
+              "high": 0.1115,
+              "low": 0.1115,
+              "open": 0.1115,
+              "timestamp": 1783900800,
+              "volume": 113
+            },
+            {
+              "close": 0.1638,
+              "high": 0.1638,
+              "low": 0.15,
+              "open": 0.15,
+              "timestamp": 1784073600,
+              "volume": 21250
+            },
+            {
+              "close": 0.1688,
+              "high": 0.1761,
+              "low": 0.16,
+              "open": 0.16,
+              "timestamp": 1784160000,
+              "volume": 4050
+            },
+            {
+              "close": 0.132,
+              "high": 0.1596,
+              "low": 0.132,
+              "open": 0.1596,
+              "timestamp": 1784246400,
+              "volume": 5500
+            },
+            {
+              "close": 0.17,
+              "high": 0.1989,
+              "low": 0.1648,
+              "open": 0.1648,
+              "timestamp": 1784505600,
+              "volume": 40603
+            },
+            {
+              "close": 0.1941,
+              "high": 0.1941,
+              "low": 0.1941,
+              "open": 0.1941,
+              "timestamp": 1784592000,
+              "volume": 100
+            },
+            {
+              "close": 0.19,
+              "high": 0.19,
+              "low": 0.19,
+              "open": 0.19,
+              "timestamp": 1784678400,
+              "volume": 1098
+            },
+            {
+              "close": 0.1926,
+              "high": 0.1926,
+              "low": 0.1926,
+              "open": 0.1926,
+              "timestamp": 1784764800,
+              "volume": 500
+            },
+            {
+              "close": 0.26,
+              "high": 0.275,
+              "low": 0.2398,
+              "open": 0.2398,
+              "timestamp": 1785283200,
+              "volume": 17900
+            },
+            {
+              "close": 0.3,
+              "high": 0.31,
+              "low": 0.3,
+              "open": 0.3,
+              "timestamp": 1785369600,
+              "volume": 25702
+            },
+            {
+              "close": 0.15,
+              "high": 0.3124,
+              "low": 0.15,
+              "open": 0.3,
+              "timestamp": 1785456000,
+              "volume": 96054
+            },
+            {
+              "close": 0.17,
+              "high": 0.2388,
+              "low": 0.08,
+              "open": 0.15,
+              "timestamp": 1785715200,
+              "volume": 64095
+            },
+            {
+              "close": 0.17,
+              "high": 0.17,
+              "low": 0.17,
+              "open": 0.17,
+              "timestamp": 1785801600,
+              "volume": 10060
+            },
+            {
+              "close": 0.1824,
+              "high": 0.1824,
+              "low": 0.1824,
+              "open": 0.1824,
+              "timestamp": 1785974400,
+              "volume": 100
+            },
+            {
+              "close": 0.15,
+              "high": 0.18,
+              "low": 0.15,
+              "open": 0.18,
+              "timestamp": 1786665600,
+              "volume": 13157
+            },
+            {
+              "close": 0.1349,
+              "high": 0.1349,
+              "low": 0.1349,
+              "open": 0.1349,
+              "timestamp": 1786924800,
+              "volume": 300
+            },
+            {
+              "close": 0.099,
+              "high": 0.12,
+              "low": 0.09,
+              "open": 0.12,
+              "timestamp": 1787011200,
+              "volume": 95252
+            },
+            {
+              "close": 0.0995,
+              "high": 0.0995,
+              "low": 0.0939,
+              "open": 0.095,
+              "timestamp": 1787097600,
+              "volume": 73000
+            },
+            {
+              "close": 0.0995,
+              "high": 0.0995,
+              "low": 0.0995,
+              "open": 0.0995,
+              "timestamp": 1787184000,
+              "volume": 10000
+            },
+            {
+              "close": 0.0995,
+              "high": 0.0995,
+              "low": 0.0948,
+              "open": 0.0948,
+              "timestamp": 1787270400,
+              "volume": 1725
+            },
+            {
+              "close": 0.0968,
+              "high": 0.0968,
+              "low": 0.0968,
+              "open": 0.0968,
+              "timestamp": 1787616000,
+              "volume": 2500
+            },
+            {
+              "close": 0.09,
+              "high": 0.09,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1787788800,
+              "volume": 720
+            },
+            {
+              "close": 0.0931,
+              "high": 0.0931,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1788220800,
+              "volume": 16252
+            },
+            {
+              "close": 0.0897,
+              "high": 0.0897,
+              "low": 0.0897,
+              "open": 0.0897,
+              "timestamp": 1788825600,
+              "volume": 6700
+            },
+            {
+              "close": 0.068,
+              "high": 0.085,
+              "low": 0.0667,
+              "open": 0.085,
+              "timestamp": 1788912000,
+              "volume": 21955
+            },
+            {
+              "close": 0.06,
+              "high": 0.06,
+              "low": 0.06,
+              "open": 0.06,
+              "timestamp": 1788998400,
+              "volume": 500
+            },
+            {
+              "close": 0.077,
+              "high": 0.077,
+              "low": 0.077,
+              "open": 0.077,
+              "timestamp": 1789344000,
+              "volume": 6000
+            },
+            {
+              "close": 0.1022,
+              "high": 0.1022,
+              "low": 0.0778,
+              "open": 0.0838,
+              "timestamp": 1789430400,
+              "volume": 135658
+            },
+            {
+              "close": 0.15,
+              "high": 0.15,
+              "low": 0.1402,
+              "open": 0.1402,
+              "timestamp": 1789516800,
+              "volume": 8446
+            },
+            {
+              "close": 0.143,
+              "high": 0.143,
+              "low": 0.143,
+              "open": 0.143,
+              "timestamp": 1789603200,
+              "volume": 100
+            }
+          ],
+          "monthly": [
+            {
+              "close": 0.12,
+              "high": 0.12,
+              "low": 0.12,
+              "open": 0.12,
+              "timestamp": 1772323200,
+              "volume": 1000
+            },
+            {
+              "close": 6.11,
+              "high": 8,
+              "low": 0.4164,
+              "open": 0.5,
+              "timestamp": 1775001600,
+              "volume": 57504
+            },
+            {
+              "close": 0.5,
+              "high": 9.95,
+              "low": 0.25,
+              "open": 6.5255,
+              "timestamp": 1777593600,
+              "volume": 1169556
+            },
+            {
+              "close": 0.1761,
+              "high": 1.42,
+              "low": 0.09,
+              "open": 0.391,
+              "timestamp": 1780272000,
+              "volume": 2868290
+            },
+            {
+              "close": 0.15,
+              "high": 0.3124,
+              "low": 0.0719,
+              "open": 0.18,
+              "timestamp": 1782864000,
+              "volume": 257755
+            },
+            {
+              "close": 0.09,
+              "high": 0.2388,
+              "low": 0.08,
+              "open": 0.15,
+              "timestamp": 1785542400,
+              "volume": 270909
+            },
+            {
+              "close": 0.143,
+              "high": 0.15,
+              "low": 0.06,
+              "open": 0.09,
+              "timestamp": 1788220800,
+              "volume": 195611
+            }
+          ],
+          "one_minute": [],
+          "thirty_minute": [],
+          "weekly": [
+            {
+              "close": 0.12,
+              "high": 0.12,
+              "low": 0.12,
+              "open": 0.12,
+              "timestamp": 1774396800,
+              "volume": 1000
+            },
+            {
+              "close": 3.3,
+              "high": 3.88,
+              "low": 0.4164,
+              "open": 0.5,
+              "timestamp": 1776211200,
+              "volume": 34060
+            },
+            {
+              "close": 6.29,
+              "high": 6.5,
+              "low": 3.3,
+              "open": 3.4,
+              "timestamp": 1776643200,
+              "volume": 13135
+            },
+            {
+              "close": 5.35,
+              "high": 8,
+              "low": 5.05,
+              "open": 6,
+              "timestamp": 1777248000,
+              "volume": 19529
+            },
+            {
+              "close": 0.4,
+              "high": 9.95,
+              "low": 0.25,
+              "open": 6.03,
+              "timestamp": 1777852800,
+              "volume": 1138880
+            },
+            {
+              "close": 0.4,
+              "high": 0.5,
+              "low": 0.4,
+              "open": 0.4,
+              "timestamp": 1778457600,
+              "volume": 19990
+            },
+            {
+              "close": 0.41,
+              "high": 0.46,
+              "low": 0.41,
+              "open": 0.4585,
+              "timestamp": 1779062400,
+              "volume": 700
+            },
+            {
+              "close": 0.5,
+              "high": 0.5,
+              "low": 0.4,
+              "open": 0.466,
+              "timestamp": 1779753600,
+              "volume": 766
+            },
+            {
+              "close": 0.6503,
+              "high": 1.1,
+              "low": 0.35,
+              "open": 0.391,
+              "timestamp": 1780272000,
+              "volume": 195149
+            },
+            {
+              "close": 1,
+              "high": 1.015,
+              "low": 0.6,
+              "open": 0.6703,
+              "timestamp": 1780876800,
+              "volume": 554628
+            },
+            {
+              "close": 1.36,
+              "high": 1.42,
+              "low": 0.69,
+              "open": 0.9,
+              "timestamp": 1781481600,
+              "volume": 1307038
+            },
+            {
+              "close": 0.1224,
+              "high": 1.238,
+              "low": 0.09,
+              "open": 1.238,
+              "timestamp": 1782086400,
+              "volume": 437946
+            },
+            {
+              "close": 0.144,
+              "high": 0.18,
+              "low": 0.1,
+              "open": 0.18,
+              "timestamp": 1782691200,
+              "volume": 374759
+            },
+            {
+              "close": 0.0818,
+              "high": 0.14,
+              "low": 0.0719,
+              "open": 0.1021,
+              "timestamp": 1783382400,
+              "volume": 43655
+            },
+            {
+              "close": 0.132,
+              "high": 0.1761,
+              "low": 0.1115,
+              "open": 0.1115,
+              "timestamp": 1783900800,
+              "volume": 30913
+            },
+            {
+              "close": 0.1926,
+              "high": 0.1989,
+              "low": 0.1648,
+              "open": 0.1648,
+              "timestamp": 1784505600,
+              "volume": 42301
+            },
+            {
+              "close": 0.15,
+              "high": 0.3124,
+              "low": 0.15,
+              "open": 0.2398,
+              "timestamp": 1785283200,
+              "volume": 139656
+            },
+            {
+              "close": 0.1824,
+              "high": 0.2388,
+              "low": 0.08,
+              "open": 0.15,
+              "timestamp": 1785715200,
+              "volume": 74255
+            },
+            {
+              "close": 0.15,
+              "high": 0.18,
+              "low": 0.15,
+              "open": 0.18,
+              "timestamp": 1786665600,
+              "volume": 13157
+            },
+            {
+              "close": 0.0995,
+              "high": 0.1349,
+              "low": 0.09,
+              "open": 0.1349,
+              "timestamp": 1786924800,
+              "volume": 180277
+            },
+            {
+              "close": 0.09,
+              "high": 0.0968,
+              "low": 0.09,
+              "open": 0.0968,
+              "timestamp": 1787616000,
+              "volume": 3220
+            },
+            {
+              "close": 0.0931,
+              "high": 0.0931,
+              "low": 0.09,
+              "open": 0.09,
+              "timestamp": 1788220800,
+              "volume": 16252
+            },
+            {
+              "close": 0.06,
+              "high": 0.0897,
+              "low": 0.06,
+              "open": 0.0897,
+              "timestamp": 1788825600,
+              "volume": 29155
+            },
+            {
+              "close": 0.143,
+              "high": 0.15,
+              "low": 0.077,
+              "open": 0.077,
+              "timestamp": 1789344000,
+              "volume": 150204
+            }
+          ]
+        },
+        "entity": {
+          "attributes": {
+            "52WeekHigh": 9.95,
+            "52WeekLow": 0.06,
+            "averageVolume": 110666.58671254,
+            "beta": -918.24304,
+            "change": 0,
+            "countryCode": "US",
+            "currency": "USD",
+            "currentPrice": 0,
+            "dividendYield": null,
+            "epsAnnual": -0.0014,
+            "exchange": "OOTC",
+            "finnhub_industry": "N/A",
+            "fiveDayReturn": 110.29,
+            "flags/isSensitive": null,
+            "highPrice": 0,
+            "ipoDate": null,
+            "lastUpdatedAt": 1790038704,
+            "longName": null,
+            "lowPrice": 0,
+            "marketCap": 0.3942,
+            "marketCapChange": null,
+            "marketStatus": "closed",
+            "oneMonthReturn": 43.72,
+            "oneYearReturn": null,
+            "openPrice": 0,
+            "percentChange": 0,
+            "previousClosedPrice": 0,
+            "priceEarningRatio": null,
+            "shortName": null,
+            "sixMonthReturn": null,
+            "symbol": "MINR",
+            "tenYearReturn": null,
+            "tickertype": "stock",
+            "totalVolume": null,
+            "weightedShares": null,
+            "ytdReturn": null
+          },
+          "domain": "ticker",
+          "kgid": 4919575607317915216,
+          "name": "Minerva Gold Inc"
+        },
+        "vertical": "finance"
+      }
+    },
+    {
+      "citation_hash_id": "411f",
+      "excerpt": "Last Updated: UNKNOWN\nLast Crawl: 14 days ago\nAudits may not be 100% accurate! More.\n Claim Your DEX Screener **Token Profile**\n# MINER\n Website BANKR Project Twitter\n$MINR is the token layer of BASED Mining, a Bitcoin solo mining\npool and more.\nPaired against $MSTR (tokenized Strategy Inc, the largest\ncorporate Bitcoin holder on earth).\nTrade fees are collected in MSTR, growing the treasury in Bitcoin-backed equity with zero MINR sell pressure.\nLive on Robinhood Chain, expanding to Base.\nMINR\nLoading chart settings...\nAdMARSCOIN\n#1POPE\n50\n935%\n9h\n#2NEKO\n100\n-29%\n#3WHITEHAT\n500\n1K%\n2h\n#4GOLDEN -35%\n#5ROBBY\n500\n731%\n1h\n#6DOGE-1 -10%\n#7SANTACOIN\n30\n-6%\n#8$OSAI\n500\n-27%\n19h\n#9UPS 415%\n22h\n#10NUTSAQ\n500\n-77%\n8h\n#11WHATC\n500\n-95%\n#12AP 94%\n#13GME\n100\n1K%\n#14ROBIN\n100\n-28%\n#15PONS -7%\n#16PIPEDOG\n200\n-7%\n#17PENGUIN\n200\n145%\n19h\n#18MEME 209%\n#19INDEXR\n50\n279%\n3h\n#20STNKPAD\n100\n55%\n4h\n#21PIPEDOG\n200\n#22AOBS\n100\n14%\n#23CALICO\n100\n-93%\n2h\n#24LAPTOP 1K%\n26m\n#25FINDER 415%\n6h\n#26BLEND 314%\n7h\n#27HOODSHOP -28%\n5h\n#28MEME 192%\n#29SPY\n100\n3K%\n2h\n#30RobinCard\n100\n-92%\n5h",
+      "sources": [
+        "MASE"
+      ],
+      "title": "MINR $60,182.00 - MINER / MSTR on Robinhood / Uniswap - DEX Screener",
+      "url": "https://dexscreener.com/robinhood/0xa36f46fc6896ccf65131578a97766e5f2aa7f8e79ab40adead940ad5755411a9"
+    },
+    {
+      "citation_hash_id": "bc07",
+      "excerpt": "Last Updated: 5 days ago\nLast Crawl: 4 days ago\nSPLIT_POLICY.md\n\n# Split Policy\n\nEvery paid mining order on BASED splits three ways:\n\n- **80% — hashpower rental.** Buys the hashrate the order is for.\n- **10% — operator.**\n- **10% — MINR buyback** to the rewards wallet.\n\n## Buyback\n\n**The buyback is not active yet.** It is gated behind a `TOKEN_NOT_LAUNCHED`\nflag until MINR exists. Until then the 10% is accounted for, but no buy is\nexecuted.\n\nOnce MINR launches, the buyback will execute from the BASED agent wallet after\nrental confirmation. Bought-back MINR will go to the community rewards wallet.\nIt will **not be burned and not sent to a dead address** — it will be held and\ndeployed as community incentives, contest prizes, and rewards.\n\nBoth the buy transaction and the transfer to the rewards wallet will be logged\npublicly.\n\n## Scope\n\nThis is current policy, not an immutable promise. It can change.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "geobts/based-mining-skill - SPLIT_POLICY.md",
+      "url": "https://github.com/geobts/based-mining-skill/blob/HEAD/SPLIT_POLICY.md"
+    },
+    {
+      "citation_hash_id": "c882",
+      "excerpt": "Last Updated: 4 days ago\nLast Crawl: 4 days ago\n#### Priced mode\n\nExample response (`GET /quote?amount_usdc=10`):\n\n```json\n{\"amount_usdc\":10,\"hashrate_ths\":141,\"duration_hours\":33,\"price_usd_per_th_day\":0.0516,\"btc_usd\":64262,\"split\":{\"policy\":\"80/10/10 — 80% hashpower, 10% operator, 10% MINR buyback to the rewards wallet\",\"hashpower_usdc\":8,\"operator_usdc\":1,\"buyback_usdc\":1},\"as_of\":\"2026-08-04T18:35:46.289370+00:00\",\"expires_at\":\"2026-08-04T18:45:46.289370+00:00\",\"human_summary\":\"$10 gets you ~141 TH/s for 33 hours on BASED right now (80/10/10 split, 10% MINR buyback to the rewards wallet).\"}\n```\n\nReturns `amount_usdc`, `hashrate_ths`, `duration_hours`,\n`price_usd_per_th_day`, `btc_usd`, `split`, `as_of`, `expires_at`, and\n`human_summary`. There is no `tiers`, `product`, or `note` here.\n\nThe two modes describe the split differently. Menu mode gives a flat string in\n`split_policy`. Priced mode gives an object in `split`, with `policy`,\n`hashpower_usdc`, `operator_usdc`, and `buyback_usdc`, so the 80/10/10 arrives\nas actual dollar amounts: $8 hashpower, $1 operator, $1 buyback on a $10 block.\nDo not assume one shape and read the other.\n\n`human_summary` is a ready-made sentence. Prefer it over composing your own.\n\n#### Quotes expire\n\nTreat `expires_at` as real. In the capture above the window was ten minutes\n(`as_of` 18:35:46, `expires_at` 18:45:46). That is one observation, not a\nguaranteed contract, so read `expires_at` off the response rather than assuming\nten minutes holds. If a quote is past its `expires_at`, requote before calling\n`mine` instead of paying against a stale price.\n\nA quote is a live market reading and it moves. The hashrate a $10 block buys,\nits duration, and `btc_usd` all shift between calls — the captures on this page\nalready differ from earlier ones. Requote if the user takes a while to decide,\nand trust `expires_at` over any figure you are still holding.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "bankrbot/skills - based-mining/SKILL.md",
+      "url": "https://github.com/bankrbot/skills/blob/HEAD/based-mining/SKILL.md"
+    },
+    {
+      "citation_hash_id": "4c4c",
+      "excerpt": "Last Updated: 3388 days ago\nLast Crawl: 6 days ago\nThis number of coins are the maximum number of Minereum coins that will ever be created, however, since the self-mining contract only allows for each Genesis address to mine 0.00032 Minereum (MNE) per Ethereum block, the total supply will only be reached in 47 years.\n## What sets Minereum apart from other cryptocurrencies\nMinereum as a currency is different from other cryptocurrencies. While other cryptocurrencies require computer infrastructure, electricity and related investments to create new coins, Minereum can self-mine using the Ethereum Blockchain and the smart contract functionality that is built in there.\nA Minereum representative tells us:\n> “Mineruem is the first self-mining smart contract. The mining process of Minereum is something never seen before. Instead of traditional mining, the availability of coins to each Genesis address will be calculated purely by a mathematical formula on the fly.”\nCointelegraph has learned from the Minereum team that, at the moment, the supply of Minereum is around 500,000. In an emailed communication, a Minereum representative commented about the inflation rate of the currency. “As a comparison example, Ethereum generates 5 ETH per block. Minereum in total generates 1.36576 MNE per block (0.00032 MNE * 4268 Genesis addresses), so Minereum has an inflation rate 72 percent lower than Ethereum.” The currency is currently trading on livecoin.net under the symbol MNE.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Minereum Brings First-Ever Self-Mining Smart Contract to Crypto Community",
+      "url": "https://cointelegraph.com.cach3.com/news/minereum-brings-first-ever-self-mining-smart-contract-to-crypto-community.html"
+    },
+    {
+      "citation_hash_id": "f2df",
+      "excerpt": "Last Updated: UNKNOWN\nLast Crawl: 73 days ago\n# TON Explorer: Mining Base Coin\nMain\nMining Base Coin\nSave up to 50% on USDT TRC-20 transactions with Tonkeeper PRO.\nTonkeeper Pro\nSave up to 50% on USDT TRC-20 transactions with Tonkeeper PRO.\nGet Pro\nAddress\n## EQD2tFLJdEgCZP5UaRTZB4vtkTLV0KtO_C7HCwoWNNtLgE-v\n## EQD2tFLJ…NNtLgE-v\nBalance\n0.0194 GRAM (prev. TON) ≈ $0.03218\nAmount\n1,000 MBC ≈ 0\nContract type, jetton_wallet_v1, Active, 0:f6b…b4b80, toncoin.org, Swap on STON.fi, Jetton master, EQBJ2HCx…YQESxhYk, Holder address, UQDNvgNV…aFcijReB\n## History\n## Raw Transactions\n## Code\n## Methods\n## Send Message\nSort\nDate\nSort\nDate\nHow this data was fetched?\nUse tonapi.io",
+      "sources": [
+        "MASE"
+      ],
+      "title": "TON Explorer: Mining Base Coin",
+      "url": "https://tonviewer.com/EQD2tFLJdEgCZP5UaRTZB4vtkTLV0KtO_C7HCwoWNNtLgE-v"
+    },
+    {
+      "citation_hash_id": "5b25",
+      "excerpt": "Last Updated: UNKNOWN\nLast Crawl: 261 days ago\nKurz gesagt: Die reale Bitcoin-Mining-Kapazität wird durch Blockchain-Technologie in einen handelbaren digitalen Vermögenswert verwandelt, sodass auch normale Menschen von den Mining-Erträgen profitieren können.\n\n### Technische Merkmale\n\nMiners Defi basiert auf der **Binance Smart Chain (BSC)**. Die Binance Smart Chain ist wie eine Schnellstraße: Sie bietet schnelle Transaktionen und relativ niedrige Gebühren, was für die tägliche Nutzung und den Handel des MINERS-Tokens sehr vorteilhaft ist.\n\nDie wichtigsten technischen Mechanismen sind:\n\n- **Transaktionssteuer-Mechanismus:** Bei jeder Transaktion mit MINERS-Token wird eine Steuer von 4% erhoben. Diese Steuer verschwindet nicht einfach, sondern wird in einer speziellen Bitcoin-Wallet gesammelt und für den Kauf von Mining-Hardware verwendet. Ein weiterer Teil der Steuer (laut früheren Angaben weitere 4%) wird als Belohnung in Form von BTCB (Binance-pegged Bitcoin) an Token-Inhaber ausgezahlt oder direkt für den Kauf von wasserbetriebenen Mining-Maschinen verwendet.\n- **Smart Contracts:** Viele Kernfunktionen von Miners Defi basieren auf **Smart Contracts**. Smart Contracts sind wie automatisch ausgeführte Protokolle auf der Blockchain: Sobald die Bedingungen erfüllt sind, werden Aktionen wie das Einziehen der Transaktionssteuer, der Kauf von Mining-Hardware, das Rückkaufen und Verbrennen von Token automatisch ausgeführt. Das sorgt für dezentrale Verwaltung und optimierte Erträge.\n- **Reales Mining:** Die Erträge des Projekts stammen aus echtem Bitcoin-Mining. Laut Angaben arbeitet man mit Krypto-Mining-Firmen zusammen und nutzt in Regionen wie Sibirien Wasserkraft für umweltfreundliches Mining.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Miners Defi: Mining stärken, DeFi neu gestalten: Das neue Paradigma dezentraler Mining-Finanzierung | Miners Defi Whitepaper",
+      "url": "https://www.bitget.com/de/price/miners-defi/whitepaper"
+    },
+    {
+      "citation_hash_id": "f555",
+      "excerpt": "Last Updated: 1117 days ago\nLast Crawl: 48 days ago\nThe Mintera community will have an active role in selecting the grant recipients.\n\n© Mintera - www.mintera.co 4\n\n## 5 Mintera Token\n\n##### Economics Mintera Token\n\nLite Paper\n\nThe total supply of Mintera Token is permanently fixed at 65,000,000 MNTE and will never increase.\nThe Mintera Token contract includes a burning capability, so the total supply may decrease in the future.\nAs a testament to our long term commitment, most of the treasury and Mintera funds will be initially locked. The unlock schedule described in the chart below will start at the end of the Mintera Token sale. The adresses of wallets holding the Treasury and the Environmental fund will be public.\n\n###### 65,000,000 total\n\n##### supply\n\n| Token sale 50%  30%  20% | Ecosystem  Mintera | \n| --- | --- | \n| 50% | 32,500,000 - Token sale | \n|  | Unlocked at the end of the Mintera Token sale | \n| Token |  | \n| sale | - Private sale: 1,300,000 at $0.10 | \n|  | - Public presale: 5,200,000 at $0.15 | \n| To be distributed |  | \n|  | - Public round 1: 9,750,000 at $0.20 | \n|  | - Public round 2: 16,250,000 at $0.25 | \n| 30% | 13,000,000 - Treasury | \n|  | 20% upfront - 80% locked at launch | \n| Ecosystem | 1% of the remaining treasury is unlocked every month | \n|  | (logarithmic distribution) | \n| To benefit the ecosystem |  | \n|  | 6,500,000 - Environmental fund | \n|  | Reserved for green operations like the Mintera Grant | \n|  | Program. | \n|  | Locked at launch, with strict rules of use. | \n| 20% | 6,500,000 - Marketing | \n|  | 50% upfront | \n| Mintera | 50% locked for 12 months | \n| To execute our roadmap |  | \n|  | 6,500,000 - Contributors | \n|  | Locked for 24 months | \n| © Mintera - www.mintera.co | 5 |\n\n#### Mintera Product\n\n###### Green Mining Yield Mintera Token\n\nLite Paper",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Lite Paper",
+      "url": "https://mintera.co/wp-content/uploads/2023/08/Mintera-Token-Lite-Paper-v1.4.pdf"
+    },
+    {
+      "citation_hash_id": "1b9d",
+      "excerpt": "Last Updated: UNKNOWN\nLast Crawl: 2 days ago\n# Minr (MINR) Price and Market Stats | TheBitTimes.Com\nAt TheBitTimes.Com, monitoring Minr (MINR) prices in real time is simple. From 1 MINR to USD conversions to market cap and volume data, we provide all the information you need to invest wisely.\nExplore every dimension of Minr (MINR) at TheBitTimes.Com. Market cap is the total market value of all MINR coins in supply. Volume indicates the 24-hour transaction total across exchanges, and the low/high price range shows daily price movement boundaries. Choose any period on the Minr price chart to review historical performance and price patterns. We complement this with live Minr news coverage, current rate analysis, and future price predictions to help you make the most informed investment decisions possible.\n### How do I buy Minr (MINR) (MINR)?\nThe easiest way to buy Minr (MINR) (MINR) is through a DEX swap on PancakeSwap (v2), Mdex, BSCswap, Anyswap, BSCStation Swap, CheeseSwap, O3swap, Bscex, Autofarm, ApeSwap, BakerySwap, Biswap, 1inch Network on BSC, ParaSwap BSC, Pionex.\n### What is Minr (MINR) (MINR) smart contract address?\nThe official smart contract address of Minr (MINR) is 0x42f28259cab02d809a1719353a873175d2a018f1.\n### What is Minr (MINR) (MINR) market cap today?\nMinr (MINR) (MINR) market cap is N/A today.\n### How many holders does Minr (MINR) (MINR) have?\nMinr (MINR) (MINR) currently has 9 token holders, including 2 large holders.\n### Who is the owner of Minr (MINR) (MINR)?\nThe contract creator and owner of Minr (MINR) (MINR) is 0x523f8f98ecd1fd8a61196ba715d1f044381c29fc.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Minr (MINR) Price and Market Stats | TheBitTimes.Com",
+      "url": "https://thebittimes.com/token-MINR-BSC-0x42f28259cab02d809a1719353a873175d2a018f1.html"
+    }
+  ],
+  "search_engines": [
+    "MASE"
+  ],
+  "search_session_id": "5ec0f13d2b244eec85a7cda7ab23e17f",
+  "tool": "web_search"
+}

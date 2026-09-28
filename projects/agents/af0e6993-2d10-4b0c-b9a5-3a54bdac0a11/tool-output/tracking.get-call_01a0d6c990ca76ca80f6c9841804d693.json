@@ -1,0 +1,1389 @@
+{
+  "associations": [
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/daily/nft-efficiency-audit__daily@05:36:00_user_current.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "nft-efficiency-audit",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/daily/nft-efficiency-audit__daily@05:36:00_user_current.md",
+        "title": "nft-efficiency-audit__daily@05:36:00_user_current.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "nft-efficiency-audit",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/minutely/cred-lp-watch__interval@15m.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "cred-lp-watch",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/minutely/cred-lp-watch__interval@15m.md",
+        "title": "cred-lp-watch__interval@15m.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "cred-lp-watch",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/minutely/hood-mint-watch__interval@20m.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "hood-mint-watch",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/minutely/hood-mint-watch__interval@20m.md",
+        "title": "hood-mint-watch__interval@20m.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "hood-mint-watch",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/minutely/nft-screener__interval@5m.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "nft-screener",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/minutely/nft-screener__interval@5m.md",
+        "title": "nft-screener__interval@5m.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "nft-screener",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-feet-pix-20260924__runonce@2026-09-24T14:06:00.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "claim-feet-pix-20260924",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-feet-pix-20260924__runonce@2026-09-24T14:06:00.md",
+        "title": "claim-feet-pix-20260924__runonce@2026-09-24T14:06:00.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "claim-feet-pix-20260924",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-hood-boys-20260924__runonce@2026-09-24T13:01:00.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "claim-hood-boys-20260924",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-hood-boys-20260924__runonce@2026-09-24T13:01:00.md",
+        "title": "claim-hood-boys-20260924__runonce@2026-09-24T13:01:00.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "claim-hood-boys-20260924",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-miniduck-20260924__runonce@2026-09-24T13:31:00.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "claim-miniduck-20260924",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-miniduck-20260924__runonce@2026-09-24T13:31:00.md",
+        "title": "claim-miniduck-20260924__runonce@2026-09-24T13:31:00.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "claim-miniduck-20260924",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-waifus-20260926__runonce@2026-09-26T08:01:00.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "claim-waifus-20260926",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-waifus-20260926__runonce@2026-09-26T08:01:00.md",
+        "title": "claim-waifus-20260926__runonce@2026-09-26T08:01:00.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "claim-waifus-20260926",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-xlords-20260925__runonce@2026-09-25T07:01:00.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "claim-xlords-20260925",
+        "path": "workspace/goals/robinhood-chain-free-mint-watch/crons/runonce/claim-xlords-20260925__runonce@2026-09-25T07:01:00.md",
+        "title": "claim-xlords-20260925__runonce@2026-09-25T07:01:00.md"
+      },
+      "goal_id": "goal_af8426480a0e",
+      "target_id": "claim-xlords-20260925",
+      "updated_at": ""
+    }
+  ],
+  "briefings": [],
+  "goal": {
+    "attention_kind": "new_information",
+    "attention_updated_at": "2026-09-25 04:04:50.032+00",
+    "created_at": "2026-09-21T00:35:11Z",
+    "current_state": "No claimable free mints this hour — The Artifacts was delisted from OpenSea, all other live RH free mints remain gated, and next queued publics are XLords Friday 7 AM, CCFF00 Diamonds 1 PM, and Data Miners 3 PM CDT.",
+    "description": "Keep a close eye on the Robinhood Chain NFT scene on X: accounts that host Spaces and announce live free mints, plus keyword chatter around \"ccff00 free mint\". Surfaces worthwhile finds (live mints, whitelist opportunities for the user's CCFF00 holdings) without spamming. Follows of influential accounts are paced and user-approved.",
+    "emoji": "👀",
+    "goal_id": "goal_af8426480a0e",
+    "goal_kind": "maintenance",
+    "icon_generation_status": "ready",
+    "last_activity_at": "2026-09-25T04:04:50Z",
+    "momentum": "",
+    "momentum_status": "on_track",
+    "pushable": true,
+    "slug": "robinhood-chain-free-mint-watch",
+    "sort_order": 2,
+    "source": "assistant_tracking",
+    "status": "active",
+    "title": "Robinhood Chain free-mint watch",
+    "updated_at": "2026-09-25T04:04:50Z",
+    "value_alignment": "Catches time-sensitive free mints the user's CCFF00 squares whitelist them for, before they sell out."
+  },
+  "ok": true,
+  "recent_briefing": null,
+  "suggestions": [],
+  "updates": [
+    {
+      "created_at": "2026-09-25T04:04:50Z",
+      "current_state": "No claimable free mints this hour — every live free phase is gated, signed, or stale.",
+      "description": "OpenSea delisted The Artifacts for a suspected terms violation, so it's off the lead list; the XLords, Data Miners, and WAIFUS free publics stay queued for their Friday/Saturday opens, and Bunii's mint contract is still unfindable, so that free public mint stays unverifiable.",
+      "effective_at": "2026-09-25T04:04:50Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Hourly mint sweep — no claims, The Artifacts delisted",
+      "update_id": "goal_update_7791a2197fae",
+      "updated_at": "2026-09-25T04:04:50Z"
+    },
+    {
+      "created_at": "2026-09-25T03:53:01Z",
+      "current_state": "Top find \"After School (COLLECTABLE)\" on Base scored 70.84 and passed rug-check, but fell short of the 75 execute tier; one blacklisted contract was auto-rejected.",
+      "description": "The routine screener sweep found no claim-worthy mints this run, and the Robinhood Chain coverage leg was temporarily offline on a rate limit, so Base-side coverage carried the scan.",
+      "effective_at": "2026-09-25T03:52:29Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener scan: 9 candidates, none execute-tier",
+      "update_id": "goal_update_a4beb6e624aa",
+      "updated_at": "2026-09-25T03:53:01Z"
+    },
+    {
+      "created_at": "2026-09-25T03:33:03Z",
+      "current_state": "0 claims; all live RH free mints are allowlist-gated and Foil isn't eligible.",
+      "description": "Swept the mint radar, X, and OpenSea — every live free mint on Robinhood Chain is GTD/allowlist gated, and Bunii's live-free mint can't be verified without a visible contract address. Friday's tracked free publics (XLords 7 AM, Data Miners 3 PM) and CCFF00 Diamonds (1 PM) stand as the next shots.",
+      "effective_at": "2026-09-25T03:33:03Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Nightly mint sweep 22:40 CDT",
+      "update_id": "goal_update_358a068f5579",
+      "updated_at": "2026-09-25T03:33:03Z"
+    },
+    {
+      "created_at": "2026-09-25T03:13:11Z",
+      "current_state": "One verify-tier mint flagged on Base (\"After School\"), rug-check clean; no execute-tier finds.",
+      "description": "Read-only scan of fresh mints on Robinhood Chain and Base surfaced 22 candidates: one verify-tier Base drop (\"After School\", score 67) that passed a clean rug-check, eight watch-tier, and nothing at execute tier. Some signal legs (OpenSea drops API, Solana, mempool) remain offline on missing API keys.",
+      "effective_at": "2026-09-25T03:13:11Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener scan: 22 candidates, 0 execute-tier",
+      "update_id": "goal_update_0a30d0f3d9c0",
+      "updated_at": "2026-09-25T03:13:11Z"
+    },
+    {
+      "created_at": "2026-09-25T03:06:25Z",
+      "current_state": "No live claimable free mints tonight; Bunii free-mint lead surfaced but unverifiable this run.",
+      "description": "Re-probed tracked contracts — no active free public stage; all radar live phases are allowlist-gated, and a corroborated Bunii free-mint lead needs contract verification before any claim attempt. Friday carries: XLords public free at 7 AM CDT, CCFF00 Diamonds free phases at 1 PM CDT.",
+      "effective_at": "2026-09-25T03:06:25Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch: 0 claims, new Bunii lead unverified",
+      "update_id": "goal_update_b0bc97b40594",
+      "updated_at": "2026-09-25T03:06:25Z"
+    },
+    {
+      "created_at": "2026-09-25T02:16:55Z",
+      "current_state": "No claimable free mints live tonight; two new verified free public mints queued for Friday.",
+      "description": "Scanned 26 free Robinhood Chain mints — all live phases are allowlist/signed-gated so nothing was claimed — and verified two new free public mints onchain: NOBODIES (Friday 6:15 PM CDT) and UPGRADED WAIFUS (Saturday 8:00 AM CDT). Also spotted a new Vamps free mint with an open allowlist and confirmed CCFF00 Diamonds' free mint Friday afternoon.",
+      "effective_at": "2026-09-25T02:16:55Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch sweep — 26 free mints scanned, 0 claims tonight",
+      "update_id": "goal_update_6e646c9a144a",
+      "updated_at": "2026-09-25T02:16:55Z"
+    },
+    {
+      "created_at": "2026-09-25T02:08:23Z",
+      "current_state": "24 candidates scanned; one verify-tier find (\"What's Cooking Bruiser?\" on Base, score 68.26, rug-check clean) and no execute-tier mints this window.",
+      "description": "Detection-only scan found no execute-tier mints; one Base candidate scored 68.26 with a clean rug-check, and a flagged Robinhood contract stayed blocked. OpenSea drops, Solana, and mempool legs remain offline.",
+      "effective_at": "2026-09-25T02:08:23Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — 1 clean candidate, none execute-tier",
+      "update_id": "goal_update_815f4deb03f9",
+      "updated_at": "2026-09-25T02:08:23Z"
+    },
+    {
+      "created_at": "2026-09-25T01:59:21Z",
+      "current_state": "No claims tonight — every live free mint is allowlist/signed-gated with no unsigned claim path; two Friday public free phases verified onchain for the next runs.",
+      "description": "Scanned ~30 live Robinhood Chain free-mint leads (all gated, none claimable), verified onchain that XLords Heroes: Genesis (Fri 7 AM CDT) and Data Miners (Fri 3 PM CDT) both open free public phases with no signature needed, and flagged CCFF00 Diamonds' Friday phases plus a fresh-account caution on BOB IN THE HOOD's Saturday CCFF00-holder mint.",
+      "effective_at": "2026-09-25T01:59:21Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch 8:04 PM CDT sweep",
+      "update_id": "goal_update_71856bb8bb50",
+      "updated_at": "2026-09-25T01:59:21Z"
+    },
+    {
+      "created_at": "2026-09-25T01:59:05Z",
+      "current_state": "Screener clean: no execute-tier candidates this window; one verify-tier Base candidate worth eyeballing.",
+      "description": "Foil ran the read-only screener across Robinhood and Base — 26 candidates scanned, zero execute-tier, one verify-tier (\"What's Cooking Bruiser?\", score 66.66, rug-check clean). Onchain legs healthy; OpenSea drops and Solana/mempool legs remain unconfigured as before.",
+      "effective_at": "2026-09-25T01:59:05Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "nft-screener run — no execute-tier candidates",
+      "update_id": "goal_update_c9179a5b26a0",
+      "updated_at": "2026-09-25T01:59:05Z"
+    },
+    {
+      "created_at": "2026-09-25T01:43:24Z",
+      "current_state": "No execute-tier candidates; one verify-tier candidate flagged with a clean rug-check.",
+      "description": "Scanned Base and Robinhood Chain mints and surfaced Rare Friends Generations on Robinhood Chain at score 73.36 — just under the execute tier, with a clean rug-check; nothing actionable this run, and the OpenSea drops leg stayed offline on its missing API key.",
+      "effective_at": "2026-09-25T01:43:24Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — 1 verify-tier candidate",
+      "update_id": "goal_update_ac2049f302e9",
+      "updated_at": "2026-09-25T01:43:24Z"
+    },
+    {
+      "created_at": "2026-09-25T01:21:58Z",
+      "current_state": "No free mints were claimable for Foil's wallet; all ~30 live RH leads are allowlist-gated with no unsigned path.",
+      "description": "Scouted ~30 free-mint leads on Robinhood Chain: none passed verification (all allowlist-gated), and QuadGrifters' free window closed. New targets for Friday: XLords Heroes public free mint 7 AM CDT, CCFF00 Diamonds free mint (needs contract verification), and Data Miners' OG-collections free mint.",
+      "effective_at": "2026-09-25T01:21:58Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening mint sweep — no claims, Friday leads lined up",
+      "update_id": "goal_update_0bf0f6bb24be",
+      "updated_at": "2026-09-25T01:21:58Z"
+    },
+    {
+      "created_at": "2026-09-25T01:03:33Z",
+      "current_state": "11 candidates seen, none scored 60+; nothing execute-tier, so no claims pursued.",
+      "description": "Scanned Base and Robinhood Chain; Base leg healthy but the Robinhood leg hit rate limits and the OpenSea drops feed is still offline, so coverage was partial.",
+      "effective_at": "2026-09-25T01:03:33Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener v2 scan (read-only)",
+      "update_id": "goal_update_b97ab2e2f925",
+      "updated_at": "2026-09-25T01:03:33Z"
+    },
+    {
+      "created_at": "2026-09-25T00:59:17Z",
+      "current_state": "No verified free mints to claim tonight; a 1,000-piece free Diamonds mint lands tomorrow Fri 9/25.",
+      "description": "Scanned 21 in-window leads — all failed verification (paid public phases or gated allowlists), so nothing was claimed; CCFF00 Diamonds' free mint tomorrow (GTD 2:00 PM CDT) is flagged for contract verification ahead of its open, and a fake \"RH Orangs Club\" collection warning was re-amplified.",
+      "effective_at": "2026-09-25T00:59:17Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "19:24 CDT mint watch sweep",
+      "update_id": "goal_update_0c938ebc243b",
+      "updated_at": "2026-09-25T00:59:17Z"
+    },
+    {
+      "created_at": "2026-09-25T00:58:32Z",
+      "current_state": "Stinklings (STINK) scored 85.51 on Robinhood Chain with a clean rug-check; 2 more candidates in verify tier on Base.",
+      "description": "Screened 24 candidates (1 execute, 2 verify); Stinklings on Robinhood Chain (0x204bf999cb4b7f9fb56da75f097325b94e855d34) passed rug-check clean with 529 recent mints, while OpenSea's drops leg was down and two Base candidates (After School, What's Cooking Bruiser?) sit in verify tier. One contract was rug-check flagged and blacklisted.",
+      "effective_at": "2026-09-25T00:58:32Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run: execute-tier find on Robinhood Chain",
+      "update_id": "goal_update_f808bb4454a4",
+      "updated_at": "2026-09-25T00:58:32Z"
+    },
+    {
+      "created_at": "2026-09-25T00:53:59Z",
+      "current_state": "Stinklings (Robinhood Chain) flagged as execute-tier candidate; rug-check clean, queued for claim verification.",
+      "description": "The screener surfaced Stinklings, a Robinhood-chain mint with very high momentum (590 mints, 561 unique minters) and a clean rug-check, ready for the claim pipeline to verify it's truly free before any mint.",
+      "effective_at": "2026-09-25T00:53:59Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Execute-tier free-mint candidate flagged",
+      "update_id": "goal_update_2f1159dbc68f",
+      "updated_at": "2026-09-25T00:53:59Z"
+    },
+    {
+      "created_at": "2026-09-25T00:44:27Z",
+      "current_state": "Stinklings (STINK) on Robinhood Chain scored 87.81 with a clean rug-check; price unverified, queued for verification not claimed.",
+      "description": "Detection-only scan surfaced one high-conviction candidate: Stinklings is minting hot (685 mints in ~5 min, 673 unique minters) and the contract passed the rug-check, but its mint price is unconfirmed so no claim happens until that's verified.",
+      "effective_at": "2026-09-25T00:44:27Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener run: Stinklings flagged as execute-tier candidate",
+      "update_id": "goal_update_83a0fe186ada",
+      "updated_at": "2026-09-25T00:44:27Z"
+    },
+    {
+      "created_at": "2026-09-25T00:39:13Z",
+      "current_state": "Stinklings (STINK) flagged at 88.26 with a clean rug-check; rug-check notes a paid mint path, so it's not free-mint claim material.",
+      "description": "The 7:35 PM screener run found one execute-tier drop — Stinklings on Robinhood Chain, minting fast with 1,478 unique minters — but its mint function is paid, so it doesn't qualify for the free-mint claim loop. Two lower-scoring Base drops were noted and are being watched.",
+      "effective_at": "2026-09-25T00:39:13Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener flagged Stinklings (88.26, clean rug-check)",
+      "update_id": "goal_update_8e8854279755",
+      "updated_at": "2026-09-25T00:39:13Z"
+    },
+    {
+      "created_at": "2026-09-25T00:34:29Z",
+      "current_state": "Nothing passed verification this run; standing WL-application leads (Veggiehood, MrBonez, FOMOATERS) still open.",
+      "description": "Scanned the Robinhood radar, OpenSea drops, and X chatter. All 21 in-window free leads failed verification (gated allowlists, paid public phases, or no official project route). New leads: @ProjectShiesty free mint on Robinhood Chain (no link yet), Hyper Chipboard free mint Sept 25 on HypeEVM (outside our chains), and your own account replied \"Game on looper\" to @Foil667.",
+      "effective_at": "2026-09-25T00:34:29Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch sweep — no verified free mints to claim",
+      "update_id": "goal_update_b40c1d5cd101",
+      "updated_at": "2026-09-25T00:34:29Z"
+    },
+    {
+      "created_at": "2026-09-25T00:33:47Z",
+      "current_state": "One hot candidate flagged but it's a paid mint, not a free one — no claim made.",
+      "description": "The screener flagged Stinklings on Robinhood Chain at score 89 with clean contract checks, but its mint function takes payment, so it's off-limits for free-mint auto-claims; one lower-scoring Base candidate (Magical Forest) and one blacklisted Base contract were noted, and the OpenSea drops feed is still down while the onchain legs stay live.",
+      "effective_at": "2026-09-25T00:33:47Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening screener sweep (19:30 CDT)",
+      "update_id": "goal_update_d629ad7d6ec8",
+      "updated_at": "2026-09-25T00:33:47Z"
+    },
+    {
+      "created_at": "2026-09-25T00:21:46Z",
+      "current_state": "No claimable free mint found; nothing executed, all leads ruled out or gated.",
+      "description": "Swept the Robinhood Chain scene for free mints; two new dust-tier leads turned out unverifiable or gated, QuadGrifters stayed unclaimable, and BOB's free-mint whitelist filled in seconds — but Foil is confirmed on the VAMPS allowlist with the free mint opening Sun Sep 27 at 5:00 PM CDT.",
+      "effective_at": "2026-09-25T00:21:46Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch sweep 6:44 PM CDT — no claims, leads ruled out",
+      "update_id": "goal_update_a4b28fd8d7df",
+      "updated_at": "2026-09-25T00:21:46Z"
+    },
+    {
+      "created_at": "2026-09-24T23:55:30Z",
+      "current_state": "No verified claimable free mints this sweep; the only live free gate failed the credible-route check.",
+      "description": "No claims or flips — the \".\" dot free mint had no official X, site, or collection page; Bob in the Hood's Sep 26 free mint opened and filled its CCFF00 whitelist within seconds; two scam flags surfaced (fake RH Orangs Club collection, fake Harrow collection -42); next carries: XLords FCFS public free Fri 7 AM CDT and CCFF00 Diamonds all-free phases Fri.",
+      "effective_at": "2026-09-24T23:55:30Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening mint sweep (6:24 PM CDT) — no claims",
+      "update_id": "goal_update_d32f6948964d",
+      "updated_at": "2026-09-24T23:55:30Z"
+    },
+    {
+      "created_at": "2026-09-24T23:33:07Z",
+      "current_state": "Swept Robinhood Chain mints, Trencher radar, OpenSea drops, and X chatter — nothing claimable or worth acting on.",
+      "description": "No free mints passed verification (every live gate lacked a credible route or a checkable allowlist); no claims, no flips, no gas spent. Leads to watch: fomoater WL raffle closing soon, veggiehood free-mint applications, a teased 3K Bunnywtf free PFP, and Bob in the Hood's Sep 26 whitelist which filled in seconds.",
+      "effective_at": "2026-09-24T23:33:07Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening mint sweep — quiet",
+      "update_id": "goal_update_d8192e4e8e19",
+      "updated_at": "2026-09-24T23:33:07Z"
+    },
+    {
+      "created_at": "2026-09-24T23:21:44Z",
+      "current_state": "No free mint passed verification; 0 claims, 0 flips; one new scam imitation flagged.",
+      "description": "Scanned 18 live free Robinhood Chain mints plus all 22 announcer accounts: nothing claimable under the verification rules, and a fake QuadGrifters collection (opensea.io/collection/-42) was flagged as a scam. Watching Nice Bubble (free FCFS ends 11:35 PM), NOBODIES (free test phase to Fri), XLords (free public Fri 7 AM), CCFF00 Diamonds (free phases Fri), and BOB IN THE HOOD (free CCFF00 mint Sat).",
+      "effective_at": "2026-09-24T23:21:44Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening mint sweep — no claims, scam flagged",
+      "update_id": "goal_update_ad7ac867a966",
+      "updated_at": "2026-09-24T23:21:44Z"
+    },
+    {
+      "created_at": "2026-09-24T23:14:12Z",
+      "current_state": "Screened Base + Robinhood; one clean verify-tier mint (\"After School\" on Base) below execute bar, no candidates worth claiming.",
+      "description": "The read-only scan found one rug-clean Base mint scoring 70.73 (missed the execute tier on velocity and subscores); the Robinhood onchain leg failed on a rate limit this run, so RH coverage was offline for this pass.",
+      "effective_at": "2026-09-24T23:14:12Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener check — one verify-tier mint, no executes",
+      "update_id": "goal_update_805310b2dfcf",
+      "updated_at": "2026-09-24T23:14:12Z"
+    },
+    {
+      "created_at": "2026-09-24T23:08:37Z",
+      "current_state": "Screener scanned Robinhood and Base onchain; 3 verify-tier finds, all rug-check clean, nothing reaching execute tier.",
+      "description": "Three verify-tier mints surfaced on Base (After School 72.3, What's Cooking Bruiser? 67.3, Cyberdolls 66.2), all clean on rug-check and direct mints with modest velocity; OpenSea drops, Solana, and mempool legs remain offline while both onchain scan legs are healthy.",
+      "effective_at": "2026-09-24T23:08:37Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — 27 candidates, none execute-tier",
+      "update_id": "goal_update_ad60c7cfedb2",
+      "updated_at": "2026-09-24T23:08:37Z"
+    },
+    {
+      "created_at": "2026-09-24T22:59:00Z",
+      "current_state": "Screener found 10 candidates but nothing scored high enough to act on, and the Robinhood onchain scan was rate-limited this run.",
+      "description": "Three Base collections (The Dream Station, Magical Forest, one unnamed) scored in the 60s with clean rug-checks but below the execute bar; no claims were made, and the Robinhood Chain leg hit a rate limit so RH coverage was blind this run.",
+      "effective_at": "2026-09-24T22:59:00Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening screener run: 10 candidates, none executable",
+      "update_id": "goal_update_9ba69430d4b7",
+      "updated_at": "2026-09-24T22:59:00Z"
+    },
+    {
+      "created_at": "2026-09-24T22:48:33Z",
+      "current_state": "Scan found no mint candidates worth acting on; Robinhood leg was rate-limited this run.",
+      "description": "Read-only screen of Robinhood and Base mint activity turned up no execute-tier finds; the Robinhood onchain leg hit a rate limit so coverage was partial, with the Base leg healthy.",
+      "effective_at": "2026-09-24T22:48:33Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — quiet",
+      "update_id": "goal_update_18f9aa646e3e",
+      "updated_at": "2026-09-24T22:48:33Z"
+    },
+    {
+      "created_at": "2026-09-24T22:43:59Z",
+      "current_state": "Watch is live but thin: onchain legs ran clean; OpenSea drops signal, Solana, and mempool coverage remain offline.",
+      "description": "31 mints scored on Robinhood Chain + Base; 2 clean verify-tier candidates (Quad Grifters 73.59, The Dream Station 66.25) with 2 rug-check-flagged contracts blacklisted; OpenSea drops API, Solana, and mempool legs are offline, so this is a partial view.",
+      "effective_at": "2026-09-24T22:43:59Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener sweep 2026-09-24 17:40 CDT",
+      "update_id": "goal_update_1ad02ac68fad",
+      "updated_at": "2026-09-24T22:43:59Z"
+    },
+    {
+      "created_at": "2026-09-24T22:40:35Z",
+      "current_state": "No mints claimed this sweep — nothing passed all verification checks.",
+      "description": "The free QuadGrifters claim can't be claimed from Foil's wallet and is flagged as a honeypot (minted tokens can't be sold), DogsHash needs live GPU mining to win rounds, and the other free phases are gated or unverified; BOB IN THE HOOD's Saturday free mint and CCFF00 DIAMONDS' Friday mint are the next ones to watch.",
+      "effective_at": "2026-09-24T22:40:35Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch: QuadGrifters honeypot-flagged, no claims executed",
+      "update_id": "goal_update_b7dce9f7d95c",
+      "updated_at": "2026-09-24T22:40:35Z"
+    },
+    {
+      "created_at": "2026-09-24T22:38:54Z",
+      "current_state": "27 candidates scanned across Robinhood Chain and Base; \"After School\" (Base) scored 68.97 with a clean rug-check, below the execute tier.",
+      "description": "The 5:35 PM scan's top find was a direct-mint ERC-721 on Base with 8 mints from 8 unique minters; the OpenSea drops leg, Solana monitor, and mempool watch remain offline so coverage is onchain-only.",
+      "effective_at": "2026-09-24T22:38:54Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener run: one verify-tier mint found",
+      "update_id": "goal_update_0ead3338ce2e",
+      "updated_at": "2026-09-24T22:38:54Z"
+    },
+    {
+      "created_at": "2026-09-24T22:33:02Z",
+      "current_state": "8 candidates scanned, none at execute tier; Robinhood Chain leg hit a rate limit this run.",
+      "description": "The scheduled screener checked Robinhood and Base and found nothing worth acting on; the Robinhood Chain scan leg hit a rate limit (429) and the OpenSea drops leg is still without an API key, so coverage was reduced this run.",
+      "effective_at": "2026-09-24T22:33:02Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener sweep — no execute-tier finds",
+      "update_id": "goal_update_87c8af70fbf9",
+      "updated_at": "2026-09-24T22:33:02Z"
+    },
+    {
+      "created_at": "2026-09-24T22:24:10Z",
+      "current_state": "No execute-tier mints this run; three Base candidates scored in the verify band but fell short on velocity, and the Robinhood scan leg was down on a rate-limit error.",
+      "description": "The scheduled detection run (no claims) saw no candidates strong enough to act on; one contract was flagged and blacklisted, and the Robinhood RPC was rate-limited so its coverage was lost for this window.",
+      "effective_at": "2026-09-24T22:24:10Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener run: 12 candidates, 0 execute-tier, Robinhood leg down on 429",
+      "update_id": "goal_update_037f1353e835",
+      "updated_at": "2026-09-24T22:24:10Z"
+    },
+    {
+      "created_at": "2026-09-24T22:19:46Z",
+      "current_state": "Quad Grifters scored 83.38 and rug-check came back CLEAN, but its free claim is blocked (needs a browser wallet flow the mandate forbids).",
+      "description": "Scanned 25 candidates on Base and Robinhood Chain; 3 verify-tier finds are logged for review, 3 scam-flagged contracts were blacklisted, and onchain legs are healthy while the OpenSea drops leg stays offline.",
+      "effective_at": "2026-09-24T22:19:46Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — Quad Grifters at execute tier, rug-check CLEAN but claim blocked",
+      "update_id": "goal_update_76f44047cea5",
+      "updated_at": "2026-09-24T22:19:46Z"
+    },
+    {
+      "created_at": "2026-09-24T22:16:59Z",
+      "current_state": "No free mint passed verification this run; Mooncats and Early Men free stages are wallet-connect-gated and unclaimable, and new lead Pump Doggies couldn't be verified.",
+      "description": "Swept the radar, X chatter, and announcers with zero claims executed; flagged Pump Doggies (free ×1, ends ~2:25 AM CDT) as unverified and FryBagIVXX's 1,000 free packs for CCFF00 holders (snapshot Fri 7pm CDT) as the top new watch item — while Bob in the Hood's CCFF00 whitelist closed at 200/200 before Foil could get in.",
+      "effective_at": "2026-09-24T22:16:59Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Hourly mint sweep — no claims, two new leads",
+      "update_id": "goal_update_2ab55d512d9d",
+      "updated_at": "2026-09-24T22:16:59Z"
+    },
+    {
+      "created_at": "2026-09-24T22:08:47Z",
+      "current_state": "One verify-tier candidate found and checked; nothing met the execute threshold.",
+      "description": "Ran the v2 screener over Base and Robinhood Chain onchain mint activity: 29 candidates, none scored 75+, and one (\"After School (COLLECTABLE)\" on Base) scored 69.75 with a clean rug-check, so no action taken. OpenSea drops leg remains offline without an API key.",
+      "effective_at": "2026-09-24T22:08:47Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "nft-screener scan 17:05 CDT",
+      "update_id": "goal_update_dd1047144d77",
+      "updated_at": "2026-09-24T22:08:47Z"
+    },
+    {
+      "created_at": "2026-09-24T21:52:06Z",
+      "current_state": "No claims this run; XLords free mint verified for Fri 7:00 AM CDT, Bob in the Hood whitelist needs one X post.",
+      "description": "Swept the radar and X for free Robinhood Chain mints. The XLords free phase doesn't open until Friday 7:00 AM CDT (verified onchain), QuadGrifters is blocked and now flagged as a honeypot, and the Bob in the Hood whitelist (200 guaranteed free mints for CCFF00 holders) is live but requires posting on X — which this read-only run didn't do.",
+      "effective_at": "2026-09-24T21:52:06Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint sweep 16:24 CDT — no claims, 2 action items queued",
+      "update_id": "goal_update_8eba5954f73e",
+      "updated_at": "2026-09-24T21:52:06Z"
+    },
+    {
+      "created_at": "2026-09-24T21:50:08Z",
+      "current_state": "No execute-tier mints found; 4 verify-tier candidates logged, all rug-check clean.",
+      "description": "The screener surfaced After School (Base, 72.62), Quad Grifters (Robinhood, 70.71 — free window already closed), The Dream Station (Base, 69.14), and What's Cooking Bruiser? (Base, 66.46); none hit the 75 execute tier, onchain legs stayed healthy, and OpenSea/Solana/mempool signals remain offline.",
+      "effective_at": "2026-09-24T21:50:08Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — no execute-tier mints",
+      "update_id": "goal_update_5dafb2a17db5",
+      "updated_at": "2026-09-24T21:50:08Z"
+    },
+    {
+      "created_at": "2026-09-24T21:30:31Z",
+      "current_state": "Verified a free public mint stage for XLords Heroes: Genesis opening tomorrow (Fri 9/25) at 12:00 PM CDT — contract resolved ahead of open; no claims or spends this run.",
+      "description": "Onchain read confirmed the SeaDrop public stage is price-zero; QuadGrifters free claim stays blocked by its signature requirement (window closes 8:28 PM tonight, plus a fake-imitator scam warning surfaced), and new CCFF00-adjacent leads include @BOB_InTheHood's free mint Saturday with a whitelist open now.",
+      "effective_at": "2026-09-24T21:30:31Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint sweep: XLords Heroes free stage verified for tomorrow 12:00 CDT",
+      "update_id": "goal_update_ee9452412188",
+      "updated_at": "2026-09-24T21:30:31Z"
+    },
+    {
+      "created_at": "2026-09-24T21:18:54Z",
+      "current_state": "No execute-tier mints this run; two verify-tier candidates on Robinhood and Base both passed rug-check cleanly.",
+      "description": "Screener v2 checked 33 candidates across Robinhood and Base with both onchain legs live; Quad Grifters by Harrow (score 74.9, Robinhood, upcoming phase) was closest to the execute tier but missed on velocity and social signals, and \"What's Cooking Bruiser?\" (score 68.5, Base) also came up clean. The OpenSea drops-API leg stays offline for want of an API key.",
+      "effective_at": "2026-09-24T21:18:54Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener scan: 33 candidates, no execute-tier mints",
+      "update_id": "goal_update_af5973308535",
+      "updated_at": "2026-09-24T21:18:54Z"
+    },
+    {
+      "created_at": "2026-09-24T21:15:21Z",
+      "current_state": "Quad Grifters by Harrow (Robinhood Chain) scored 78.1 with a clean rug-check; two Base projects in the verify tier.",
+      "description": "Ran the scheduled NFT screener across Robinhood Chain and Base; the onchain mint-scan legs are healthy but the OpenSea drops feed and Solana/mempool stubs are offline, and this scan only detects — no claims were made.",
+      "effective_at": "2026-09-24T21:15:21Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener scan: one execute-tier candidate flagged",
+      "update_id": "goal_update_e14198263043",
+      "updated_at": "2026-09-24T21:15:21Z"
+    },
+    {
+      "created_at": "2026-09-24T21:11:19Z",
+      "current_state": "Quad Grifters by Harrow (QUAD) on Robinhood Chain scored 76.64, rug-check clean, passed to the claim leg.",
+      "description": "The mint screener flagged one execute-tier free mint on Robinhood Chain, Quad Grifters by Harrow; it passed a full rug-check, so it's queued for the usual claim flow (no claims made by the screener itself).",
+      "effective_at": "2026-09-24T21:11:19Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Execute-tier mint detected: Quad Grifters",
+      "update_id": "goal_update_64c0da1ade6c",
+      "updated_at": "2026-09-24T21:11:19Z"
+    },
+    {
+      "created_at": "2026-09-24T21:04:24Z",
+      "current_state": "Quad Grifters by Harrow (Robinhood Chain) scored 78.88 — execute tier, rug-check CLEAN.",
+      "description": "The free-mint screener flagged Quad Grifters by Harrow on Robinhood Chain at score 78.88 with 137 mints in the last 5 minutes; independent rug-check came back clean (verified source, no dangerous opcodes). Detection only — any claim is handled by the mint-watch loop.",
+      "effective_at": "2026-09-24T21:04:24Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener flagged an execute-tier free mint: Quad Grifters",
+      "update_id": "goal_update_c7bf4909bd4d",
+      "updated_at": "2026-09-24T21:04:24Z"
+    },
+    {
+      "created_at": "2026-09-24T21:02:18Z",
+      "current_state": "Two more live RH free mints found (Sherwood Hoods, Upgraded Waifu) but unclaimable: WL eligibility unverified + signed-presale signature barrier.",
+      "description": "Late browser sweep surfaced Sherwood Hoods (WL free phase live, 175/4,444, $1.60 floor) and Upgraded Waifu (free early phase live, 56/10,000, 118 eligible wallets) on Robinhood Chain — neither claimed since Foil's whitelist eligibility is unverified and both need per-wallet signatures only OpenSea's connected flow issues; also flagged a scam QuadGrifters imitator collection and a @veggie_hood follow candidate.",
+      "effective_at": "2026-09-24T21:02:18Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Two new live free mints found, both blocked — plus scam alert",
+      "update_id": "goal_update_fda1640f4751",
+      "updated_at": "2026-09-24T21:02:18Z"
+    },
+    {
+      "created_at": "2026-09-24T20:59:12Z",
+      "current_state": "QuadGrifters free claim live and eligible for Foil's #4429, but unclaimable this run: the SeaDrop signed-mint signature is only issued via OpenSea's connected-wallet flow.",
+      "description": "QuadGrifters' CCFF00 free claim opened 3:44 PM CDT on Robinhood Chain (0 ETH, ends 8:28 PM CDT, ~1,256/4,444 minted) and Foil's square #4429 qualifies under the team snapshot — but the SeaDrop mintSigned call needs a per-wallet ECDSA signature obtainable only through OpenSea's connected-wallet mint flow, which Foil's Bankr-held wallet can't use, so no claim was executed; failed closed with zero gas spent.",
+      "effective_at": "2026-09-24T20:59:12Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "QuadGrifters free mint verified eligible, claim blocked on signature",
+      "update_id": "goal_update_364923325b43",
+      "updated_at": "2026-09-24T20:59:12Z"
+    },
+    {
+      "created_at": "2026-09-24T20:53:37Z",
+      "current_state": "8 candidates scanned; none reached verify/execute tier, and the Robinhood onchain leg was rate-limited (429) this run.",
+      "description": "Base onchain scan was fine and one Base contract got blacklisted by the rug check; the Robinhood chain leg failed with a rate-limit error so Robinhood mint coverage was offline for this window.",
+      "effective_at": "2026-09-24T20:53:37Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener scan — clean, one coverage leg down",
+      "update_id": "goal_update_0eba67a26348",
+      "updated_at": "2026-09-24T20:53:37Z"
+    },
+    {
+      "created_at": "2026-09-24T20:44:02Z",
+      "current_state": "Scan clean: nothing at claim-worthy scores; two low-tier Base mints passed safety checks.",
+      "description": "Checked 30 candidates across Robinhood Chain and Base; nothing scored high enough to act on, and three Robinhood Chain contracts were flagged as scams and blacklisted. Note: OpenSea's drops feed, Solana coverage, and mempool watching were offline this run — onchain mint scanning still worked.",
+      "effective_at": "2026-09-24T20:44:02Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint screener run — no execute-tier candidates",
+      "update_id": "goal_update_81849e96e891",
+      "updated_at": "2026-09-24T20:44:02Z"
+    },
+    {
+      "created_at": "2026-09-24T20:39:17Z",
+      "current_state": "Screener ran clean: no execute-tier mints, two verify-tier Base candidates both rug-checked clean, one Robinhood contract blacklisted.",
+      "description": "The scheduled mint scan checked Robinhood Chain and Base onchain legs — nothing met the action bar, though two Base mints (After School, Magical Forest) passed rug checks and sit on the watch list.",
+      "effective_at": "2026-09-24T20:39:17Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint screener run: 32 candidates, none execute-tier",
+      "update_id": "goal_update_51c5276b5789",
+      "updated_at": "2026-09-24T20:39:17Z"
+    },
+    {
+      "created_at": "2026-09-24T20:13:45Z",
+      "current_state": "Scan surfaced 2 rug-check-clean Base collections (\"After School\" 73.44, \"Magical Forest\" 66.95), both below the execute threshold — nothing to claim.",
+      "description": "Scanned 35 candidates across Robinhood Chain and Base with no execute-tier hits; the two verify-tier finds passed rug-check clean and were too slow to warrant action, so no claims were made.",
+      "effective_at": "2026-09-24T20:13:45Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Free-mint scan: 2 clean candidates, none actionable",
+      "update_id": "goal_update_83812e6add82",
+      "updated_at": "2026-09-24T20:13:45Z"
+    },
+    {
+      "created_at": "2026-09-24T20:08:14Z",
+      "current_state": "Screener scanned 29 candidates: two in verify tier (rug-check clean), none in execute tier; one contract blacklisted and blocked.",
+      "description": "The Robinhood + Base onchain scan found two verify-tier free mints — \"What's Cooking Bruiser?\" on Base (67.9) and \"DICKY\" on Robinhood Chain (60.6) — both clean on rug-check, plus one blacklisted contract (0xe0a4…c187) flagged never-execute; no execute-tier finds and no leg failures on this run.",
+      "effective_at": "2026-09-24T20:08:14Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — 2 verify-tier candidates, 1 blacklisted",
+      "update_id": "goal_update_8d13406076d1",
+      "updated_at": "2026-09-24T20:08:14Z"
+    },
+    {
+      "created_at": "2026-09-24T20:03:28Z",
+      "current_state": "QuadGrifters claim mechanism confirmed as OpenSea SeaDrop allowlist; free claim opens 3:44 PM CDT today — Foil expected eligible via square #4429 held at snapshot.",
+      "description": "Scanned the radar, OpenSea, and 27 X announcers: QuadGrifters' 1-free-per-square CCFF00 claim is on schedule at 3:44 PM CDT via OpenSea (2,278 eligible wallets, contract verified); RH PEEPEEs sold out and MiniDuck's contract is the sim-bricked one, so both stay off the board; no claims executed this run.",
+      "effective_at": "2026-09-24T20:03:28Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint sweep: QuadGrifters on schedule, two leads closed",
+      "update_id": "goal_update_000f419c00ae",
+      "updated_at": "2026-09-24T20:03:28Z"
+    },
+    {
+      "created_at": "2026-09-24T19:59:14Z",
+      "current_state": "One execute-tier candidate flagged on Base (rug-check clean); Robinhood Chain leg was down this run.",
+      "description": "The screener spotted 11 mints worth a look, with \"After School (COLLECTABLE)\" on Base scoring high and passing a manual rug-check — no claims were made since this job is detection-only; the Robinhood Chain signal was temporarily offline due to an RPC rate limit.",
+      "effective_at": "2026-09-24T19:59:14Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener scan (2:55 PM CDT)",
+      "update_id": "goal_update_a0ae4f99edbf",
+      "updated_at": "2026-09-24T19:59:14Z"
+    },
+    {
+      "created_at": "2026-09-24T19:53:51Z",
+      "current_state": "26 candidates screened; nothing reached the execute tier, so no claims were made.",
+      "description": "The screener flagged one Base candidate (\"The Dream Station\", score 69.54) that missed the execute tier and passed its rug-check; onchain coverage for Robinhood and Base stayed live, with the OpenSea drops leg, Solana, and mempool still offline on known missing keys.",
+      "effective_at": "2026-09-24T19:53:51Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener run: 1 verify-tier candidate, no claims",
+      "update_id": "goal_update_14449c16fc4a",
+      "updated_at": "2026-09-24T19:53:51Z"
+    },
+    {
+      "created_at": "2026-09-24T19:49:10Z",
+      "current_state": "\"After School\" (Base, score 78.49) passed rug-check; Robinhood-chain leg stayed degraded on RPC rate limits.",
+      "description": "The read-only scan found a strong Base candidate (\"After School\", 0xf8aec61953c59053596cc75763f98396c1ccddd1) that passed rug-check, plus one weaker verify-tier candidate; claims stay with the separate mint-watch job and no wallet actions were taken.",
+      "effective_at": "2026-09-24T19:49:10Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener: 1 execute-tier candidate on Base",
+      "update_id": "goal_update_d899764250eb",
+      "updated_at": "2026-09-24T19:49:10Z"
+    },
+    {
+      "created_at": "2026-09-24T19:43:16Z",
+      "current_state": "No execute-tier free mints this scan; two Base candidates scored 68–70 with clean rug-checks.",
+      "description": "Two Base candidates scored in the verify tier (68–70) and passed rug-checks; nothing crossed the 75 execute threshold, and the Robinhood leg hit a rate limit this run so its onchain scan was partial.",
+      "effective_at": "2026-09-24T19:43:16Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "NFT screener run — two clean Base finds, no execute-tier mints",
+      "update_id": "goal_update_95e6b20bdde9",
+      "updated_at": "2026-09-24T19:43:16Z"
+    },
+    {
+      "created_at": "2026-09-24T19:41:33Z",
+      "current_state": "No claims executed; QuadGrifters free mint confirmed on schedule for 3:44 PM CDT with Foil's #4429 expected eligible.",
+      "description": "Scanned the radar and X for fresh Robinhood Chain free mints — nothing passed verification for a claim. QuadGrifters (free for CCFF00 square holders, noon-CT snapshot) was re-confirmed for its 3:44 PM opening, with Foil's square expected to qualify; a few fresh-account mints got rug-risk flags and the CCFF00 Diamonds tomorrow drop stays scam-flagged.",
+      "effective_at": "2026-09-24T19:41:33Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint sweep 2:04 PM CDT — no claims, QuadGrifters on schedule",
+      "update_id": "goal_update_b04fa58a5325",
+      "updated_at": "2026-09-24T19:41:33Z"
+    },
+    {
+      "created_at": "2026-09-24T19:29:03Z",
+      "current_state": "Scan found no execute-tier mints; MicroZombies (MZMB, Robinhood Chain, score 73.8) passed rug-check and sits just under execute tier.",
+      "description": "Read-only sweep across Robinhood and Base surfaced 37 candidates: two verify-tier (MicroZombies 73.8 and an unnamed Base drop 65.08, both rug-check clean), two rug contracts blacklisted, and the OpenSea drops, Solana, and mempool legs remain offline.",
+      "effective_at": "2026-09-24T19:29:03Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Screener sweep: MicroZombies at 73.8, two rugs blacklisted",
+      "update_id": "goal_update_03a83744687c",
+      "updated_at": "2026-09-24T19:29:03Z"
+    },
+    {
+      "created_at": "2026-09-24T19:14:26Z",
+      "current_state": "QuadGrifters free claim for CCFF00 holders opens today at 3:44 PM CDT; Foil's square #4429 should qualify — next run verifies at open and claims.",
+      "description": "Swept the mint radar and X: no claims executed this pass, but pulled QuadGrifters' claim contract and eligibility rules — Foil's #4429 held since Sep 23 clears the snapshot, so the 3:44 PM CDT free claim is queued. Also flagged @CCFF00Diamonds as a scam vector and queued new follow candidates.",
+      "effective_at": "2026-09-24T19:14:26Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint sweep: QuadGrifters claim prepped, radar re-checked",
+      "update_id": "goal_update_b4074303b06d",
+      "updated_at": "2026-09-24T19:14:26Z"
+    },
+    {
+      "created_at": "2026-09-24T19:06:47Z",
+      "current_state": "Hunt stays active; FEET PIX is off the claim list — it isn't free.",
+      "description": "Fired the pre-staged claim but the guardrails stopped it: the mint price reads 0.00011 ETH onchain (not exactly zero), so no claim, no spend, nothing touched.",
+      "effective_at": "2026-09-24T19:06:47Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "FEET PIX claim blocked by price check",
+      "update_id": "goal_update_42c54308c6f0",
+      "updated_at": "2026-09-24T19:06:47Z"
+    },
+    {
+      "created_at": "2026-09-24T19:04:11Z",
+      "current_state": "Scan ran clean on Robinhood with no actionable mints; Base onchain leg is degraded.",
+      "description": "The 2 PM screener checked 26 candidates across Robinhood and Base: none hit the execute or verify tiers, and 6 rug-check-flagged contracts were blocked. Robinhood's onchain leg was healthy, but the Base onchain scan failed on an RPC error, so Base coverage is reduced until the RPC call is fixed.",
+      "effective_at": "2026-09-24T19:04:11Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint screener run: no actionable finds, Base leg degraded",
+      "update_id": "goal_update_467962d2b3cf",
+      "updated_at": "2026-09-24T19:04:11Z"
+    },
+    {
+      "created_at": "2026-09-24T18:49:55Z",
+      "current_state": "Delayed sweep reconciled: Pepe rides blocked at sim; radar \"free\" labels wrong for 5 more projects; XLords (9/25) and Waifus (9/26) claim crons armed; QuadGrifters CCFF00 claim at 3:44 PM is next run's priority.",
+      "description": "The browser sweep report arrived late and was verified onchain: MiniDuck, Pepe rides and five more radar-\"free\" leads all fail the price-zero or simulation checks, so no claims were submitted; two genuine price-zero SeaDrop windows got one-shot claim crons.",
+      "effective_at": "2026-09-24T18:49:55Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint sweep 1:04 PM: full reconciliation, 2 claim crons armed",
+      "update_id": "goal_update_70cbf464a387",
+      "updated_at": "2026-09-24T18:49:55Z"
+    },
+    {
+      "created_at": "2026-09-24T18:45:27Z",
+      "current_state": "No claims executed: MiniDuck blocked at claim-time simulation; Credit Apes and CCFF00 Pyramid charge onchain despite \"free\" labels; Feet Pix claim (2:06 PM) and QuadGrifters (3:44 PM) still queued.",
+      "description": "Armed and fired a 1:31 PM claim cron for the price-zero MiniDuck drop, but the claim-time onchain simulation reverted, so nothing was submitted and no gas was spent; radar \"free\" labels were again wrong for Credit Apes and CCFF00 Pyramid, which charge onchain.",
+      "effective_at": "2026-09-24T18:45:27Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint sweep 1:04 PM: MiniDuck claim blocked, two paid leads caught",
+      "update_id": "goal_update_26c12688f1da",
+      "updated_at": "2026-09-24T18:45:27Z"
+    },
+    {
+      "created_at": "2026-09-24T18:31:50Z",
+      "current_state": "MiniDuck free mint claim BLOCKED — fire-time simulation reverted, no tx submitted.",
+      "description": "Pre-checks passed (price 0, drop active, no allowlist) but the mintPublic simulation reverted, so the claim was aborted per the no-retry rule; the next hood-mint-watch sweep can re-flag it.",
+      "effective_at": "2026-09-24T18:31:50Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "MiniDuck SeaDrop claim attempt",
+      "update_id": "goal_update_32fe2bf45a39",
+      "updated_at": "2026-09-24T18:31:50Z"
+    },
+    {
+      "created_at": "2026-09-24T18:17:56Z",
+      "current_state": "Hood Boys Club blocked at contract level; Feet Pix free mint opens 2:05 PM CDT next.",
+      "description": "Audited today's free-mint queue onchain: Hood Boys Club passed price checks but its public mint reverts for every wallet (supply-cap mismatch at contract level — nothing claimed, no gas spent), and four radar \"FREE\" labels (Credit Apes, MiniDuck, Gorbo, SeaFrogs) turned out to be paid mints and were blocked. Feet Pix On Hood verified free (x5, opens 2:05 PM CDT) and is queued for the next claim window.",
+      "effective_at": "2026-09-24T18:17:56Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Free-mint sweep: Hood Boys blocked, four radar false-positives caught",
+      "update_id": "goal_update_716ec80c0ff0",
+      "updated_at": "2026-09-24T18:17:56Z"
+    },
+    {
+      "created_at": "2026-09-24T18:02:36Z",
+      "current_state": "Hood Boys Club claim blocked at the onchain simulation check — no mint, no gas spent.",
+      "description": "The free drop verified clean (price 0, live, no allowlist) but the SeaDrop mint call reverted on simulation, so nothing was submitted and the wallet spent nothing; the watch continues for the next free mint.",
+      "effective_at": "2026-09-24T18:02:36Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Hood Boys Club claim attempted, blocked",
+      "update_id": "goal_update_5d12be713024",
+      "updated_at": "2026-09-24T18:02:36Z"
+    },
+    {
+      "created_at": "2026-09-24T17:32:45Z",
+      "current_state": "Claim-time check found a non-zero mint price, so the claim was blocked and nothing was submitted.",
+      "description": "It was verified free at 12:26 CDT but the onchain price read 0.00015 RH ETH at the 12:31 claim moment, so the re-verification did its job and stopped a paid mint; no gas spent, no transaction sent.",
+      "effective_at": "2026-09-24T17:32:45Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Credit Apes claim blocked: price was no longer zero",
+      "update_id": "goal_update_1b25eec0c944",
+      "updated_at": "2026-09-24T17:32:45Z"
+    },
+    {
+      "created_at": "2026-09-24T16:59:41Z",
+      "current_state": "No claims — nothing live is free, ungated, and verifiable; four verified free drops open 12:30–2:05 PM for the next run.",
+      "description": "Checked the mint radar and OpenSea drops, but the browser died mid-sweep so the X check didn't run. XLords' live \"free\" phase turned out to be a gated phase (its real free public drop opens Friday 7 AM). Wallet holds square #4429 with ~$2.68 gas, ready for today's claim queue.",
+      "effective_at": "2026-09-24T16:59:41Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch sweep 11:25 AM",
+      "update_id": "goal_update_ad8dc9f7d451",
+      "updated_at": "2026-09-24T16:59:41Z"
+    },
+    {
+      "created_at": "2026-09-24T15:56:22Z",
+      "current_state": "No claims executed; four verified free drops open later today, starting with Credit Apes at 12:30 PM CDT.",
+      "description": "Web access recovered after last night's outage. Pulled the full mint radar and verified every \"free\" lead onchain: Gorbo and SeaFrogs charge non-zero prices so they were blocked, the @SmartAzuki \"free mint live\" posts turned out to be paid drops, and four genuinely free drops (Credit Apes, Hood Boys Club, MiniDuck, Feet Pix On Hood) open between 12:30 and 2:05 PM CDT with claim scripts ready.",
+      "effective_at": "2026-09-24T15:56:22Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "10:25 AM mint watch — verified today's free drops onchain",
+      "update_id": "goal_update_cc8dcb429768",
+      "updated_at": "2026-09-24T15:56:22Z"
+    },
+    {
+      "created_at": "2026-09-24T12:31:46Z",
+      "current_state": "XLords Heroes: Genesis free mint actually opens Friday 7:00 AM CDT, not this morning; claim script verified onchain and stands ready for Friday's run.",
+      "description": "The hourly watch re-checked the XLords free mint onchain and found its public phase opens Friday morning, correcting the earlier Thursday assumption; nothing was claimed today since nothing verified as free and live, and web intel stayed down due to the ongoing browser outage.",
+      "effective_at": "2026-09-24T12:31:46Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch 07:25 — XLords timing corrected to Friday",
+      "update_id": "goal_update_5b4e124c58d9",
+      "updated_at": "2026-09-24T12:31:46Z"
+    },
+    {
+      "created_at": "2026-09-24T05:30:03Z",
+      "current_state": "No claims this run; XLords free mint opens Thu 7:00 AM CDT with a tested claim script ready.",
+      "description": "Browser tooling was fully down, so the 00:25 CDT scan ran onchain only: Feesher Hook turned out to be sold out, and XLords Heroes: Genesis was re-verified free and opening 7:00 AM CDT, with a dry-tested claim script prepared for the morning run.",
+      "effective_at": "2026-09-24T05:30:03Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch 00:25 CDT — onchain-only, XLords claim prepped for 7 AM",
+      "update_id": "goal_update_ed0a441e8689",
+      "updated_at": "2026-09-24T05:30:03Z"
+    },
+    {
+      "created_at": "2026-09-24T04:30:11Z",
+      "current_state": "No claims or flips: all web intel paths were down, and no mint passed verification this run.",
+      "description": "The mint radar and X scans couldn't load (browser fleet down), so nothing new could be verified; Foil's wallet still holds CCFF00 square #4429 with gas, and the XLords free mint opening Thursday 7:00 AM stays the priority claim.",
+      "effective_at": "2026-09-24T04:30:11Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch — 11:25 PM scan (web intel unavailable)",
+      "update_id": "goal_update_d4c0b78a2b2e",
+      "updated_at": "2026-09-24T04:30:11Z"
+    },
+    {
+      "created_at": "2026-09-24T03:47:45Z",
+      "current_state": "X scan report arrived late; no claims executed, two live leads flagged for next run.",
+      "description": "X scan found Hood Crayons (free for CCFF00 holders but a quoted price shows $0.18 — conflicting, needs verification) and DogsHash free mint live with no whitelist — both unverified, neither claimed. Thursday's free-mint lineup includes XLords public (7 AM CDT), Robin Gaming Power, CCFF00 Folks, and the QuadGrifters CCFF00 claim at 3:44 PM.",
+      "effective_at": "2026-09-24T03:47:45Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "X scan report late: Hood Crayons + DogsHash leads, Thu mint lineup",
+      "update_id": "goal_update_6fcb0e6ce041",
+      "updated_at": "2026-09-24T03:47:45Z"
+    },
+    {
+      "created_at": "2026-09-24T03:45:53Z",
+      "current_state": "No claims executed; nothing passed all verification checks.",
+      "description": "Radar showed 20 free RH leads tonight, but every one was gated, signed, unverified, or expired — nothing claimed. XLords Heroes free public (price 0, 1/wallet) opens Thu 7:00 AM CDT and is the priority claim candidate; Roman Numera's free vault (11 PM tonight) is signed/manual-only.",
+      "effective_at": "2026-09-24T03:45:53Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Nightly mint sweep — no claims, XLords free public at 7 AM Thu flagged",
+      "update_id": "goal_update_350c1310fdba",
+      "updated_at": "2026-09-24T03:45:53Z"
+    },
+    {
+      "created_at": "2026-09-24T03:07:35Z",
+      "current_state": "19 free-mint leads in window, none headless-claimable; two new items need contract verification.",
+      "description": "Radar showed all live free mints are either signed (OpenSea claims only), paid, or lack any official route; PlumWoker (has X account) and Shing Zin Jao (opens 11 PM CDT) are new leads to verify, and Roman Numera's free Vault opens 11 PM CDT (signed, manual only).",
+      "effective_at": "2026-09-24T03:07:35Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Radar digest: 19 free mints, none claimable headless",
+      "update_id": "goal_update_b457de3c2c1c",
+      "updated_at": "2026-09-24T03:07:35Z"
+    },
+    {
+      "created_at": "2026-09-24T03:06:05Z",
+      "current_state": "New leads logged; no claims — nothing verified enough to touch the wallet.",
+      "description": "X scan surfaced Robin Gaming Power (free, 2445 supply, first 350 wallets, mints ~Thu 8 AM CDT) as the newest lead, plus live CCFF00 Brokers free mint and confirmed Quad Grifters details for Foil's #4429; CCFF00 Diamonds stays flagged as a possible scam.",
+      "effective_at": "2026-09-24T03:06:05Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Late X intel: Robin Gaming Power free mint ~Thu 8 AM, CCFF00 Brokers live",
+      "update_id": "goal_update_2ede7988a6fd",
+      "updated_at": "2026-09-24T03:06:05Z"
+    },
+    {
+      "created_at": "2026-09-24T03:04:44Z",
+      "current_state": "No claims executed; no live free mint passed verification, and the X/radar intel feeds were down this run.",
+      "description": "Onchain checks showed Rog's just-opened public drop costs 0.00001 ETH (not free, no official route) and all other free phases are server-signed (manual-claim only); XLords' free public drop still opens Thursday 7 AM — the next real claim shot.",
+      "effective_at": "2026-09-24T03:04:44Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch scan — no claims; XLords free public Thu 7 AM is next shot",
+      "update_id": "goal_update_5e7a150b83fe",
+      "updated_at": "2026-09-24T03:04:44Z"
+    },
+    {
+      "created_at": "2026-09-24T01:35:37Z",
+      "current_state": "No claims executed — every live free mint failed verification; unsigned free drops flagged for Thursday 7 AM and tonight 9:02 PM windows.",
+      "description": "Verified every live Robinhood Chain free mint onchain: live free phases are all server-signed (need OpenSea's backend signature, can't claim headless) except Feesher Hook which is sold out (4444/4444, mint reverts). Flagged XLords' free public mint Thursday 7 AM CDT as the next headless-claimable window and Rog's free public mint tonight 9:02 PM CDT (no official X/site found, needs user override). CCFF00 Pyramid free GTD for CCFF00 holders is live until ~9:40 AM CDT and Foil's square #4429 qualifies — manual-claim candidate for the user via OpenSea.",
+      "effective_at": "2026-09-24T01:35:37Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint hunt run: all live free mints verified, none claimable",
+      "update_id": "goal_update_f0a89e3daf0d",
+      "updated_at": "2026-09-24T01:35:37Z"
+    },
+    {
+      "created_at": "2026-09-24T00:51:23Z",
+      "current_state": "Seven free Robinhood Chain mints are live tonight; Roman Numera opens a free mint tonight 11 PM CDT with CCFF00-holder whitelist access.",
+      "description": "First sweep of the NFT Trencher radar turned up MADJACKET, Scrap Raccoons, Duck Wagies, Doom Crew, NULL CREW, VENUM CLUB, and Metal Broks — all live and free tonight. Roman Numera's free mint opens 11:00 PM CDT with CCFF00 holders on the whitelist; QuadGrifters (Thu 3:44 PM) and ChiliPunks (Thu 11 AM) confirmed CCFF00-holder free claims; Foil's square #4429 should qualify for the QuadGrifters snapshot. All findings are unverified aggregator leads so far.",
+      "effective_at": "2026-09-24T00:51:23Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening mint sweep — 7 live free mints + CCFF00 leads",
+      "update_id": "goal_update_48e96af3899c",
+      "updated_at": "2026-09-24T00:51:23Z"
+    },
+    {
+      "created_at": "2026-09-23T22:43:52Z",
+      "current_state": "New live free mints and tomorrow's drop times found — Autonomous Sentinels is minting now, CCFF00 Diamonds phases set for Fri 9/25.",
+      "description": "Scanned X: Autonomous Sentinels is minting live on Robinhood Chain (1,024 on-chain, gas only); fresh GTD giveaways from Bunny WTF and DEVILDOODLENFT; CCFF00 Diamonds free mint phases announced for Fri 9/25 (2 PM/3 PM/6 PM CDT — caution: that account was previously flagged as a possible scam vector); ChiliPunks guaranteed phase moved to ~2 PM CDT Thu; QuadGrifters CCFF00 free tiers confirmed for Thu 3:44 PM CDT.",
+      "effective_at": "2026-09-23T22:43:52Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch scan 5:35 PM CDT",
+      "update_id": "goal_update_8c475bea2eaa",
+      "updated_at": "2026-09-23T22:43:52Z"
+    },
+    {
+      "created_at": "2026-09-23T20:46:56Z",
+      "current_state": "No new live free mints beyond the open SciVive book; Thursday's CCFF00 free-mint window is the main action.",
+      "description": "The 24/7 HOODSTREET Space is live (~220 listeners); QuadGrifters, ChiliPunks, and XLords Genesis all have confirmed free mint slots for CCFF00 holders tomorrow.",
+      "effective_at": "2026-09-23T20:46:56Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch scan 3:55 PM CDT",
+      "update_id": "goal_update_03e94945a785",
+      "updated_at": "2026-09-23T20:46:56Z"
+    },
+    {
+      "created_at": "2026-09-23T18:45:55Z",
+      "current_state": "fomoater WL raffle live for a 3,333-supply Robinhood free mint; QuadGrifters posted a tighter snapshot timeline — details still unconfirmed.",
+      "description": "Scanned X for the last ~2h: fomoater opened a whitelist raffle for a free Robinhood Chain mint, QuadGrifters signaled an imminent CCFF00 snapshot, and several new unverified/casino-adjacent promos were flagged with caution; DogsHash and the 24/7 HoodStreet Space remain live.",
+      "effective_at": "2026-09-23T18:45:55Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "1:35 PM mint watch scan",
+      "update_id": "goal_update_c88cb75c7fcc",
+      "updated_at": "2026-09-23T18:45:55Z"
+    },
+    {
+      "created_at": "2026-09-23T17:00:25Z",
+      "current_state": "ChiliPunks guaranteed free mint for top-1000 CCFF00 holders tomorrow 11am CDT; CCFF00 Folks free mint tomorrow 8:30am CDT; DogsHashRH mining live.",
+      "description": "Scanned X as @Foil667 (last ~2h): found a guaranteed free-mint phase for top-1000 CCFF00 holders tomorrow morning, plus several other free mints and scam warnings in the chatter.",
+      "effective_at": "2026-09-23T17:00:25Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch scan 11:35 CDT",
+      "update_id": "goal_update_4d9b1b311ddf",
+      "updated_at": "2026-09-23T17:00:25Z"
+    },
+    {
+      "created_at": "2026-09-23T18:26:51Z",
+      "current_state": "CCFF00 FOLKS allowlist corrected to 25 GTD spots for the Sep 24 8:30 AM CDT free mint; entry is follow/retweet/like plus wallet in replies, with a caution on the promoter's track record.",
+      "description": "After the user asked for a link, the CCFF00 FOLKS details were corrected from 55 to 25 GTD spots for the first 300 wallets, with entry via follow/retweet/like plus wallet in replies and a caution on @SmartAzuki's bait-and-switch track record.",
+      "effective_at": "2026-09-23T14:57:30Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "CCFF00 FOLKS allowlist details corrected",
+      "update_id": "goal_update_11e0fc0d11da",
+      "updated_at": "2026-09-23T18:26:51Z"
+    },
+    {
+      "created_at": "2026-09-23T14:49:06Z",
+      "current_state": "New: 55 GTD CCFF00 FOLKS allowlist is live now (free mint tomorrow 8:30am CDT); SmartAzuki's four \"live\" free mints remain unverified single-source posts.",
+      "description": "The morning scan turned up a new free CCFF00 Folks allowlist (first 300 wallets, mint tomorrow morning), plus @SmartAzuki's four \"first 300 wallets\" free mints, which still lack any independent confirmation and carry the usual bait-and-switch caution.",
+      "effective_at": "2026-09-23T14:49:06Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Morning mint scan 09:35 CDT",
+      "update_id": "goal_update_12b6e001e357",
+      "updated_at": "2026-09-23T14:49:06Z"
+    },
+    {
+      "created_at": "2026-09-23T18:26:51Z",
+      "current_state": "Screenfreakz skipped as delisted (unverified mint link); RobinRottenz free mint on the calendar for tomorrow 3 PM.",
+      "description": "Mint watch flagged Screenfreakz as delisted from OpenSea for a suspected ToS violation with an unverified mint link, and added a RobinRottenz free mint tomorrow at 3 PM to the calendar.",
+      "effective_at": "2026-09-23T12:49:46Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch safety flags and new calendar item",
+      "update_id": "goal_update_2258b8205ddb",
+      "updated_at": "2026-09-23T18:26:51Z"
+    },
+    {
+      "created_at": "2026-09-23T12:46:34Z",
+      "current_state": "Screenfreakz free GTD mint live now (3,333 PFPs, 2/wallet; top-50 CCFF00 holders eligible); XLords Hero: Genesis public free mint tomorrow 7:00 AM CDT.",
+      "description": "Foil's 07:35 scan found Screenfreakz's new free GTD phase (3,333 PFPs, 2 per wallet, also free for top-50 CCFF00 holders) and flagged XLords Hero: Genesis's 10K free public mint tomorrow 7:00 AM CDT; also warned that @habibiesHQ GTD spots were flagged as a free-to-paid bait-and-switch.",
+      "effective_at": "2026-09-23T12:46:34Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Morning scan: Screenfreakz free GTD live, XLords public mint tomorrow",
+      "update_id": "goal_update_ac3458d895cf",
+      "updated_at": "2026-09-23T12:46:34Z"
+    },
+    {
+      "created_at": "2026-09-23T08:43:15Z",
+      "current_state": "DogsHash free mint (no WL) still live; CCFF00 HOODS free GTD phase ended (now $0.27 public); XLords free mint Sep 24 7:00 AM and QuadGrifters free CCFF00 claim Sep 24 ~4:35 PM upcoming.",
+      "description": "3:35 AM scan found DogsHash still mintable free with no gate, the CCFF00 HOODS free allowlist already over (public mint now $0.27 until 2:20 PM), and two upcoming free drops: XLords Hero Genesis (Sep 24, 10k supply) and QuadGrifters for CCFF00 holders (Sep 24).",
+      "effective_at": "2026-09-23T08:43:15Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "3:35 AM mint sweep — CCFF00 HOODS free window missed, DogsHash still live",
+      "update_id": "goal_update_3e27ef3c5875",
+      "updated_at": "2026-09-23T08:43:15Z"
+    },
+    {
+      "created_at": "2026-09-23T06:44:22Z",
+      "current_state": "DogsHash free mint still live on dogshash.app with no whitelist; CCFF00 HOODS public free mint was due to launch at 2:20 AM CDT Sep 23.",
+      "description": "The ~2 AM read-only X sweep found DogsHash still minting free with no gate, new free-mint sightings (Arklis, DEVILDOODLENFT), a $DEED rug warning on Robinhood Chain, and the QuadGrifters CCFF00 snapshot still pending.",
+      "effective_at": "2026-09-23T06:44:22Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Overnight X sweep: DogsHash still live, CCFF00 HOODS launching 2:20 AM",
+      "update_id": "goal_update_ff2c6e0e3c7b",
+      "updated_at": "2026-09-23T06:44:22Z"
+    },
+    {
+      "created_at": "2026-09-23T04:46:58Z",
+      "current_state": "DogsHash free mint is live now with no whitelist gate (claim at dogshash.app).",
+      "description": "Night scan found DogsHash live on Robinhood Chain (4,096 dogs minting over 7 days, no allowlist); CCFF00 HOODS public free mint starts 2:20 AM; QuadGrifters free for CCFF00 holders lands Thu Sep 24 (snapshot not yet taken). SmartAzuki's \"free mint\" promos stayed unverified — treat as unconfirmed.",
+      "effective_at": "2026-09-23T04:46:58Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Night mint scan: DogsHash live free mint",
+      "update_id": "goal_update_d9acf4b76db4",
+      "updated_at": "2026-09-23T04:46:58Z"
+    },
+    {
+      "created_at": "2026-09-23T02:46:56Z",
+      "current_state": "New verified free-mint allowlist: Bunii (verified launcher) at bunii.fun/join, applications close ~Sep 24; CCFF00 HOODS public free mint opens 2:20 AM CDT tonight.",
+      "description": "Read-only 9:35 PM CDT sweep of X: found Bunii's free-mint allowlist (first mint on the BuniiPad Robinhood launchpad, supply 10,000, free allowlist / 0.0007 ETH public), confirmed the CCFF00 HOODS public free mint is still on track for 2:20 AM CDT tonight, flagged @SmartAzuki's new wave of conflicting \"free mint\" posts as unverified/scam-entangled, and noted the RhNarks CCFF00 snapshot ~3:25 AM CDT with a website WL application needing no wallet connect.",
+      "effective_at": "2026-09-23T02:46:56Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "21:35 CDT mint scan — Bunii free-mint allowlist live, CCFF00 HOODS public at 2:20 AM",
+      "update_id": "goal_update_f42834f97289",
+      "updated_at": "2026-09-23T02:46:56Z"
+    },
+    {
+      "created_at": "2026-09-23T00:43:44Z",
+      "current_state": "CCFF00 HOODS free mint is live now for CCFF00 holders (public free stage opens 2:20 AM CDT Sep 23); Scrap Raccoons free allowlist live too.",
+      "description": "Evening scan found two genuinely live free mints on Robinhood Chain: CCFF00 HOODS (free for CCFF00 holders now, public free stage opens 2:20 AM CDT Sep 23, ends 2:20 PM) and Scrap Raccoons (free allowlist live; public at 8:30 PM CDT costs $2.76, so don't wait for that). Also confirmed Quad Grifters' free CCFF00 claim mechanics (1-for-1, IDs 1–4444) for Thu Sep 24 3:44 PM CDT, and flagged KONGZ (Sep 23) as unverified — verify it's distinct from the scam-flagged punk collection before trusting it.",
+      "effective_at": "2026-09-23T00:43:44Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Evening scan — new live free mints found",
+      "update_id": "goal_update_9c2fe4307059",
+      "updated_at": "2026-09-23T00:43:44Z"
+    },
+    {
+      "created_at": "2026-09-23T01:18:51Z",
+      "current_state": "Foil entered the live CCFF00 square giveaway from @Foil667; no deadline posted, watching for the winner announcement.",
+      "description": "At the user's go-ahead Foil dug up the one live CCFF00 square giveaway (@Ireland_Sol with co-host @HardScaleCo) and completed all four entry steps from @Foil667: followed both accounts, liked the post, and commented tagging @joosbocs.",
+      "effective_at": "2026-09-22T23:05:05Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "CCFF00 square giveaway entered",
+      "update_id": "goal_update_434ec7c0520d",
+      "updated_at": "2026-09-23T01:18:51Z"
+    },
+    {
+      "created_at": "2026-09-23T01:18:51Z",
+      "current_state": "The 'snapshot already taken' claim was retracted by the source — the new square might still qualify for Thursday's Quad Grifters claim.",
+      "description": "The mint watch corrected its earlier note: the source retracted the snapshot-taken claim, so the new square may still be eligible for the Thu Sep 24 Quad Grifters free claim; Foil will confirm before Thursday.",
+      "effective_at": "2026-09-22T22:49:27Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Quad Grifters snapshot claim retracted",
+      "update_id": "goal_update_ae982202b1eb",
+      "updated_at": "2026-09-23T01:18:51Z"
+    },
+    {
+      "created_at": "2026-09-22T22:46:31Z",
+      "current_state": "Mint scan clean: DogsHash free mint starts tonight 19:20 CDT; QuadGrifters free mint Thu 9/24 is CCFF00-holder eligible.",
+      "description": "Read-only X scan found a no-whitelist DogsHash free mint going live tonight, a Sep 24 free mint for CCFF00 square holders (QuadGrifters), several upcoming free mints with WL raffles, and one time-sensitive giveaway — a free CCFF00 square via @Ireland_Sol.",
+      "effective_at": "2026-09-22T22:46:31Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint scan ~17:35 CDT: DogsHash live tonight, QuadGrifters Sep 24",
+      "update_id": "goal_update_2f6563619a78",
+      "updated_at": "2026-09-22T22:46:31Z"
+    },
+    {
+      "created_at": "2026-09-22T20:50:53Z",
+      "current_state": "No free mint live right now; X digest arrived late: Diamonds (scam-watch), fomoater WL live, \"CCFF00 PUNKS\" + KONGZ free mints Wed 8:30am CDT announced; 24/7 HOODSTREET MEDIA Space live.",
+      "description": "Scan ~15:35–16:45 CDT: X scan digest arrived via late handoff — no confirmed live free mint; watch-worthy: @CCFF00Diamonds free-mint announcement (scam-vector caution), @fomoater WL raffle live, @SmartAzuki's announced free mints for Wed 8:30am CDT, plus 13 follow candidates. OpenSea: Quad Grifters' free CCFF00-holder claim confirmed on countdown for Thu Sep 24 ~3:44 PM CDT.",
+      "effective_at": "2026-09-22T20:50:53Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint scan 15:35 CDT",
+      "update_id": "goal_update_db52150d7e8b",
+      "updated_at": "2026-09-22T20:52:10Z"
+    },
+    {
+      "created_at": "2026-09-22T18:50:16Z",
+      "current_state": "No live free mints right now, but the Quad Grifters free claim for CCFF00 holders opens Thu Sep 24 3:44 PM CDT.",
+      "description": "The 14:00 CDT scan found today's free CCFF00 Genesis and Misfits stages ended, CCFF00 PUNK switched to a paid mint flagged as a scam, and the confirmed free Quad Grifters claim for the first 4,444 CCFF00 holders goes live Thursday Sep 24 — worth holding the squares to stay eligible.",
+      "effective_at": "2026-09-22T18:50:16Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint scan 14:00 CDT — Quad Grifters free claim Thu Sep 24",
+      "update_id": "goal_update_e260bd5963f8",
+      "updated_at": "2026-09-22T18:50:16Z"
+    },
+    {
+      "created_at": "2026-09-23T01:18:51Z",
+      "current_state": "Standing rule locked in: auto-claim free mints with gas under $0.50 each once the square and gas land.",
+      "description": "The user will buy another CCFF00 square and send it plus Robinhood Chain gas to Foil's wallet, and confirmed the standing rule for Foil to auto-claim eligible free mints with gas under $0.50 each.",
+      "effective_at": "2026-09-22T17:29:40Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Auto-claim rule agreed — waiting on the square",
+      "update_id": "goal_update_ab9383986bf6",
+      "updated_at": "2026-09-23T01:18:51Z"
+    },
+    {
+      "created_at": "2026-09-22T16:56:20Z",
+      "current_state": "Chainling free mint live now (chainling.xyz); QuadGrifters free mint for CCFF00 holders lands Thu Sep 24, 4:44 PM ET.",
+      "description": "Scanned X for the ~2h window: found the new Chainling free mint on Robinhood Chain, the fomoater raffle still open, a Thursday CCFF00-gated free mint worth attention, and flagged @SmartAzuki's wallet-bait \"free mint\" posts as suspicious and unverified.",
+      "effective_at": "2026-09-22T16:56:20Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "X scan — new free mints + scam flag",
+      "update_id": "goal_update_2f4c1169666e",
+      "updated_at": "2026-09-22T16:56:20Z"
+    },
+    {
+      "created_at": "2026-09-22T15:01:19Z",
+      "current_state": "@0xMisfitsNFT free mint LIVE (CCFF00 eligibility complaints); ROBIN RARE/ARC BIT claimed live (unverified); KONGZ + THOUSAND + fooliesnft (Sept 25) upcoming; BrokerFarm WL raffle ends ~6h.",
+      "description": "Second scan added: @SmartAzuki's ROBIN RARE and ARC BIT claim to be live free mints (unverified), a @fooliesnft free mint lands Sept 25 with a giveaway closing tonight, and the BrokerFarm whitelist raffle ends within ~6h — plus scam cautions around punk-style launches.",
+      "effective_at": "2026-09-22T15:01:19Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint scan completed (09:35 CDT)",
+      "update_id": "goal_update_05c215b003f0",
+      "updated_at": "2026-09-22T15:03:44Z"
+    },
+    {
+      "created_at": "2026-09-22T10:58:47Z",
+      "current_state": "Correction: CCFF00 PUNK is community-flagged as a scam (free mint flipped to paid) — not a live free mint. @SmartAzuki announced two live whitelist free mints (ARC BIT, ROBIN RARE), and @STACCOverflow's \"Treehouse Of Horror\" public mint is live at half price.",
+      "description": "The delayed scan digest arrived after the early note and corrected the picture: skip CCFF00 PUNK entirely, while ARC BIT (first 100 wallets) and ROBIN RARE (first 200 wallets) are the live free-mint whitelists to know about.",
+      "effective_at": "2026-09-22T10:58:47Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Correction: PUNK is a scam, two new live WL mints",
+      "update_id": "goal_update_87740f8c5b46",
+      "updated_at": "2026-09-22T10:58:47Z"
+    },
+    {
+      "created_at": "2026-09-22T10:57:41Z",
+      "current_state": "CCFF00 PUNK's public free-mint stage opened at 5:30 AM CDT — 193 minted so far with a $0.50 floor on OpenSea; no CCFF00-holder whitelist stage was announced.",
+      "description": "Carrying forward the prior sweep's flags: the elementals snapshot favored 1,289 wallets holding 2+ CCFF00 squares, and Devil Doodle (Sep 24), BUNII, MUMiMisfits, and THE GOAT free mints are still upcoming. The X browser tasks' digests failed to deliver this run, so findings are limited to what was independently verified.",
+      "effective_at": "2026-09-22T10:57:41Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Early-morning RH mint scan",
+      "update_id": "goal_update_33441e750b67",
+      "updated_at": "2026-09-22T10:57:41Z"
+    },
+    {
+      "created_at": "2026-09-22T06:58:10Z",
+      "current_state": "CCFF00 PUNK free mint confirmed: today 05:30 CDT, 3,333 supply, 10/wallet — but with trust flags; plus Baggers snapshot details and five more upcoming RH free mints.",
+      "description": "Full scan digest confirmed CCFF00 PUNK's free mint goes live today at 05:30 CDT (3,333 supply, 10 per wallet, on Robinhood Chain via OpenSea) — flagged with caution: a serial-deployer accusation and gas-cost skepticism in the replies. Also new: Baggers snapshot specifics (00:08 CDT; CCFF00 2+ holders = 1,289 eligible wallets) and five more upcoming Robinhood free mints (Devil Doodle Sep 24, MUMiMisfits, DragoonHood, BUNII, THE GOAT).",
+      "effective_at": "2026-09-22T06:58:10Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Overnight mint scan: CCFF00 PUNK confirmed for 05:30 CDT + Baggers snapshot details",
+      "update_id": "goal_update_8eef7f53b638",
+      "updated_at": "2026-09-22T06:59:35Z"
+    },
+    {
+      "created_at": "2026-09-22T05:12:29Z",
+      "current_state": "Baggers free-mint claim opened for top-210 CCFF00 holders; ARC BIT + ROBIN RARE free mints hit Robinhood Chain Sep 22; HOODSTREET MEDIA Space live.",
+      "description": "The full scan digest finally arrived: the \"Baggers\" claim opened ~21:35 CDT for the top 210 CCFF00 holders (Sep 20 snapshot, claim via opensea.io/collection/bag...ohwhale), AntHood WL winners were announced (@Ronnie_SNF), and two WL-gated free mints — ARC BIT (3,333 supply) and ROBIN RARE (2,222 supply) — mint on Robinhood Chain Sep 22. New follow candidates surfaced: @Fayyonchain, @TheWaveaArt, @KingAntLike.",
+      "effective_at": "2026-09-22T05:12:29Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Overnight mint-scene scan (digest arrived late)",
+      "update_id": "goal_update_6cd04e65630d",
+      "updated_at": "2026-09-22T05:13:36Z"
+    },
+    {
+      "created_at": "2026-09-23T01:18:51Z",
+      "current_state": "Foil followed six new mint-scene accounts and skipped a scam-flagged one; the follow batch is complete.",
+      "description": "Six mint-scene accounts (@ProjectShiesty, @ethernalcubs, @BambooRiot, @MintABear, @vibevibefun, @DogsHashRH) were followed at a human pace while @CCFF00Diamonds was skipped as a possible scam vector.",
+      "effective_at": "2026-09-22T03:09:52Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Six mint-scene accounts followed, one scam-flagged skipped",
+      "update_id": "goal_update_d6ca4e3b5781",
+      "updated_at": "2026-09-23T01:18:51Z"
+    },
+    {
+      "created_at": "2026-09-23T01:18:51Z",
+      "current_state": "Foil now handles routine mint-watch follows without checking in first; scam-flagged accounts are skipped and reported.",
+      "description": "The user replaced pre-confirmation with standing follow autonomy and tightened the automation directive: routine scans, follows, and drafts are handled without asking, while spend, posts, and wallet actions still need approval.",
+      "effective_at": "2026-09-22T02:59:45Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Standing follow autonomy granted",
+      "update_id": "goal_update_ccc90db2ba09",
+      "updated_at": "2026-09-23T01:18:51Z"
+    },
+    {
+      "created_at": "2026-09-22T02:50:15Z",
+      "current_state": "Baggers free mint opened tonight for top-210 CCFF00 holders; Identicon Punks CCFF00 mint sold out.",
+      "description": "Nightly scan found the Baggers free mint opening for top-210 CCFF00 holders (claim on OpenSea), the Identicon Punks free mint for CCFF00 holders minted out, a suspicious \"Mutated Apes\" free-mint claim flagged as unverified, and new upcoming mints (Ethernal Cubs, MintABear, BambooRiot); the 24/7 HoodStreet Space is live and the CCFF00 green-square meme is trending.",
+      "effective_at": "2026-09-22T02:50:15Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint scan 21:35 CDT — Baggers live for top-210 CCFF00 holders",
+      "update_id": "goal_update_7b4230922731",
+      "updated_at": "2026-09-22T02:50:15Z"
+    },
+    {
+      "created_at": "2026-09-22T00:48:32Z",
+      "current_state": "Evening scan found three new live mints — RhNarks WL claim (CCFF00 holders eligible), ARC BIT free mint, Ethernal Cubs — plus Baggers minting ~9 PM CDT tonight.",
+      "description": "Read-only X scan as @Foil667 surfaced live claims at wavea.art/rhnarks, an ARC BIT free mint tomorrow 8:30 AM CDT, and Baggers minting tonight 9 PM; new follow candidates queued for user approval.",
+      "effective_at": "2026-09-22T00:48:32Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Robinhood Chain mint scan — Sep 21 evening",
+      "update_id": "goal_update_98b54bf351e9",
+      "updated_at": "2026-09-22T00:48:32Z"
+    },
+    {
+      "created_at": "2026-09-21T22:53:25Z",
+      "current_state": "Bunii's free-mint claim is live now; QuadGrifters is running a free mint for CCFF00 holders.",
+      "description": "Evening sweep found two live free mints: Bunii's GTD community claim is open now, and QuadGrifters is running a free mint for #CCFF00 holders (unverified). Mutated Apes and Identicon Punks both minted out today; The Furnace mints tomorrow with its WL checker live.",
+      "effective_at": "2026-09-21T22:53:25Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Free-mint scan — Sep 21 evening",
+      "update_id": "goal_update_5eda5603a072",
+      "updated_at": "2026-09-21T22:53:25Z"
+    },
+    {
+      "created_at": "2026-09-22T01:43:31Z",
+      "current_state": "All nine (@joosbocs, @IdenticonPunks, @Thefurnacexyz, @fomoater, @ProjectShiesty, @AlphaRoboverse, @RowdiesRH, @KongzXRPL, @RHOrangs) followed from @Foil667.",
+      "description": "At the user's 'Follow them all' the nine mint-watch follow candidates were each followed from @Foil667 in a paced session with no other interactions.",
+      "effective_at": "2026-09-21T22:49:13Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Followed 9 mint-scene accounts",
+      "update_id": "goal_update_a40b5dfec8c1",
+      "updated_at": "2026-09-22T01:43:31Z"
+    },
+    {
+      "created_at": "2026-09-21T20:53:34Z",
+      "current_state": "BambooRiot 4,000-piece free mint announced (not yet live); Fries Dot Fun WL open for 48h; 24/7 HoodStreet Space still live with ~121-128 listeners.",
+      "description": "New finds: BambooRiot pixel-panda free mint announced and Fries Dot Fun WL submissions open for 48 hours; known mints unchanged; Baggers mints tonight ~9 PM CDT and RowdiesRH WL giveaway closes tomorrow morning.",
+      "effective_at": "2026-09-21T20:53:34Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch scan — 15:35 CDT",
+      "update_id": "goal_update_57d4ae97b924",
+      "updated_at": "2026-09-21T20:53:34Z"
+    },
+    {
+      "created_at": "2026-09-21T19:03:02Z",
+      "current_state": "Identicon Punks GTD free mint is live for top-2,000 CCFF00 holders (fake-mint scam warning confirmed); fomoater WL raffle opened; Baggers mint tonight ~9 PM CDT.",
+      "description": "New live mints: Identicon Punks (free for CCFF00 top 2k — beware fake mints), MintABear/@PlayOnMint free mint (4,444 supply), \"Space Invaders\" CCFF00 freemint; fomoater WL raffle registration opened (3,333 free-mint collection); @AlphaRoboverse public mint live at $1.5; @Thefurnacexyz WL checker live; upcoming: Juice Box Club and @RowdiesRH (free, WL giveaway closes tomorrow AM); Baggers tonight ~9 PM CDT unchanged.",
+      "effective_at": "2026-09-21T19:03:02Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Afternoon mint scan: Identicon Punks live, several new drops",
+      "update_id": "goal_update_6773ca379c72",
+      "updated_at": "2026-09-21T19:03:02Z"
+    },
+    {
+      "created_at": "2026-09-21T16:44:08Z",
+      "current_state": "Identicon Punks free mint live for CCFF00 holders (fake mints also circulating — verify links); BAGGERS drop tonight at 9 PM CDT with 210 reserved for top CCFF00 squares.",
+      "description": "Scanned X as @Foil667 and found one live CCFF00-gated free mint plus three other whitelist mints, tonight's BAGGERS drop with half reserved for top 210 CCFF00 squares, a Sept 25 Duckling free mint, and seven new follow candidates pending your approval.",
+      "effective_at": "2026-09-21T16:44:08Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Midday X mint scan",
+      "update_id": "goal_update_e77b7d073248",
+      "updated_at": "2026-09-21T16:44:08Z"
+    },
+    {
+      "created_at": "2026-09-21T14:41:49Z",
+      "current_state": "Ethernal Cubs WL-earning is live and Misfits NFT just dropped with rumored free-for-CCFF00 pricing; watch continues.",
+      "description": "Scanned X as @Foil667 (read-only): Ethernal Cubs' free-mint whitelist is earnable right now at ethernalcubs.ai, Misfits NFT launched with rumored free pricing for CCFF00 holders (WL confusion noted), and new gating criteria (Crack Goblins) plus upcoming mints (Mallard Order, AntHood via Gravemint, Baggers tonight 9pm, Quadgrifters Sep 24) were logged.",
+      "effective_at": "2026-09-21T14:41:49Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "09:35 CDT mint scan",
+      "update_id": "goal_update_dfefe8f369bf",
+      "updated_at": "2026-09-21T14:41:49Z"
+    },
+    {
+      "created_at": "2026-09-21T12:48:36Z",
+      "current_state": "RARE PEOPLES free mint is live now on Robinhood Chain; Quadgrifters goes free for CCFF00 square holders Thu Sep 24 at 3:44 PM CDT.",
+      "description": "Scanned X: RARE PEOPLES free mint started this morning (WL first-550 wallets, engagement-farming style so caution), the Fomoater WL raffle is open, and Quadgrifters was announced — free Thursday Sep 24 for original CCFF00 Squares #1–4444 holders; Baggers mints tonight at 9 PM CDT. 17 new follow candidates recorded for user confirmation.",
+      "effective_at": "2026-09-21T12:48:36Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Morning mint scan — RARE PEOPLES live now, Quadgrifters Thu",
+      "update_id": "goal_update_71f6156c2b76",
+      "updated_at": "2026-09-21T12:48:36Z"
+    },
+    {
+      "created_at": "2026-09-21T10:44:01Z",
+      "current_state": "Bunii free mint is open now (bunii.fun, 48h window); Identicon Punks GTD freemint today for top-2,000 CCFF00 holders.",
+      "description": "Two time-sensitive finds: Bunii opened a 48-hour free mint on Robinhood Chain at bunii.fun, and Identicon Punks is doing a GTD freemint today open to top-2,000 CCFF00 holders — relevant to your squares, but use only the project's official X links since fake mints are circulating. Baggers still on for 9 PM CDT tonight.",
+      "effective_at": "2026-09-21T10:44:01Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint scout scan 05:35 CDT",
+      "update_id": "goal_update_dc35a287798b",
+      "updated_at": "2026-09-21T10:44:01Z"
+    },
+    {
+      "created_at": "2026-09-21T08:44:24Z",
+      "current_state": "Two new live free-mint leads on Robinhood Chain: Bunii's 48h mint at bunii.fun (closes ~Sep 23) and @fomoater's 3,333-supply mint with whitelist live at fomoater.com.",
+      "description": "The overnight read-only scan covered all keyword searches and all 22 watchlist profiles as @Foil667; Baggers stays on for tonight 9 PM CDT, the 24/7 HOODSTREET MEDIA Space is still running, CCFF00 floor held at ~0.0089 ETH, and six new follow candidates were logged — nothing was posted or interacted with.",
+      "effective_at": "2026-09-21T08:44:24Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Early-morning mint scan (Sep 21)",
+      "update_id": "goal_update_35e84a8810ad",
+      "updated_at": "2026-09-21T08:44:24Z"
+    },
+    {
+      "created_at": "2026-09-21T06:44:41Z",
+      "current_state": "New: HoodMiners WL-only free mint live (hoodminer.live); Rounds' CCFF00 free-mint stage minted out; Baggers still on for 9 PM CDT tonight.",
+      "description": "The ~2-hour read-only X scan surfaced one new live free mint (HoodMiners, whitelist-only FCFS on Robinhood Chain), confirmed Rounds' CCFF00 free-mint stage is over and minted out, flagged a SmartAzuki WL promo bundle for today as an unverified lead, and logged six new follow candidates for your approval.",
+      "effective_at": "2026-09-21T06:44:41Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint scan: HoodMiners live, Rounds sold out",
+      "update_id": "goal_update_1f3792fc9b03",
+      "updated_at": "2026-09-21T06:44:41Z"
+    },
+    {
+      "created_at": "2026-09-21T04:48:51Z",
+      "current_state": "Baggers mint tomorrow (Mon) 9:00 PM CDT with 210 of 420 spots reserved for top CCFF00 squares (snapshot already taken); Bunii free mint still live via bunii.fun; Rounds CCFF00 free mint sold out ~9:35 PM tonight.",
+      "description": "Scanned X as @Foil667 (read-only): the big CCFF00-holder news is the Baggers drop tomorrow night, plus live Bunii/DogsHash claims, upcoming AntHood and SmartAzuki WL mints, a still-live 24/7 HoodStreet Space, and five new follow candidates led by @FryBagIVXX (Baggers creator).",
+      "effective_at": "2026-09-21T04:48:51Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Hood mint scan — 23:35 CDT run",
+      "update_id": "goal_update_17daa8ba6b32",
+      "updated_at": "2026-09-21T04:48:51Z"
+    },
+    {
+      "created_at": "2026-09-21T02:51:43Z",
+      "current_state": "Bunii free mint live (GTD-gated), Fomoater WL raffle open, Rounds sold out tonight; four WL free mints drop tomorrow.",
+      "description": "The 9:35 PM CDT read-only X scan found the live Bunii mint via bunii.fun, Fomoater's open WL raffle, Rounds' 888-mint sellout, four CCFF00-friendly mints dropping Sept 21, and ten new follow candidates for the watch.",
+      "effective_at": "2026-09-21T02:51:43Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Mint watch scan — Sun 9:35 PM",
+      "update_id": "goal_update_acdeaf023036",
+      "updated_at": "2026-09-21T02:51:43Z"
+    },
+    {
+      "created_at": "2026-09-21T00:40:22Z",
+      "current_state": "No live CCFF00-exclusive free mint verified right now; watching Robinhood Bear (Sep 21) and Gold Diggers (Sep 26).",
+      "description": "CCFF00 perk sweep complete: official accounts verified (@hoodstreetcap, @ccff00club, hoodstreet.capital) but no published holder-benefits list. Explicit CCFF00 free mints found (Stacc's homecoming, RobinhoodToys) have ended; Rounds/Marbles leads from X could not be confirmed live. Upcoming: Robinhood Bear free mint Sep 21 (no confirmed CCFF00 allocation), Gold Diggers free Claim Deed drop Sep 26–Oct 3. The 2h watch continues flagging new ones.",
+      "effective_at": "2026-09-21T00:40:22Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "CCFF00 mint hunt complete",
+      "update_id": "goal_update_1ee84583b018",
+      "updated_at": "2026-09-21T00:40:22Z"
+    },
+    {
+      "created_at": "2026-09-21T00:37:48Z",
+      "current_state": "@RealCashpig (24.2K, 24/7 Space host, #1 CCFF00 holder) added atop the follow shortlist.",
+      "description": "Identified the 24/7 Space: \"HoodStreet Media 24/7\" hosted by @RealCashpig (24.2K followers, reportedly the #1 CCFF00 square holder) with @STACCOverflow co-hosting; the whole profiled group rotates as speakers. Added @RealCashpig to the top of the follow shortlist.",
+      "effective_at": "2026-09-21T00:37:48Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "24/7 Space host identified",
+      "update_id": "goal_update_e064fa88f088",
+      "updated_at": "2026-09-21T00:37:48Z"
+    },
+    {
+      "created_at": "2026-09-21T00:37:27Z",
+      "current_state": "Ranked 8 follow candidates; spotted live CCFF00 free mints (Rounds, Marbles); full claim-link sweep still running.",
+      "description": "Profiled the 15 Space accounts: top follows are @RoaringPiggy (14.9K, runs 24/7 HOODSTREET MEDIA Spaces), @STACCOverflow (41.3K), @BrookeGanster, @BigTinKC, @AaronFromX, @vibesforreal1, @RoundsOnRH, @NZNFTguy. Spotted live free mints for CCFF00 holders (Rounds, Marbles) and tomorrow's Robin Processors free mint. Watch cron updated with new announcer accounts.",
+      "effective_at": "2026-09-21T00:37:27Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Account research done, shortlist ready",
+      "update_id": "goal_update_02882d39c61a",
+      "updated_at": "2026-09-21T00:37:27Z"
+    },
+    {
+      "created_at": "2026-09-21T00:35:44Z",
+      "current_state": "Hunting CCFF00-holder free mints: checking HoodStreet official perks and partner project mints.",
+      "description": "User confirmed CCFF00 square holders regularly get new free mints; started a research sweep of HoodStreet's official holder benefits and partner projects with live/upcoming free mints, to line up claim links.",
+      "effective_at": "2026-09-21T00:35:44Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "CCFF00 free-mint hunt started",
+      "update_id": "goal_update_ceeaba8efcf9",
+      "updated_at": "2026-09-21T00:35:44Z"
+    },
+    {
+      "created_at": "2026-09-21T00:35:25Z",
+      "current_state": "Watch cron live (every 2h); researching Space accounts for follow shortlist.",
+      "description": "Set up the hood-mint-watch cron (every 2 hours, read-only) to track keywords \"ccff00 free mint\" / Robinhood Chain free mints plus Space hosts and mint announcers; started profiling the 15 accounts from the user's Space screenshots to build a follow shortlist.",
+      "effective_at": "2026-09-21T00:35:25Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Watch set up, account research started",
+      "update_id": "goal_update_0b445f196526",
+      "updated_at": "2026-09-21T00:35:25Z"
+    },
+    {
+      "created_at": "2026-09-21T00:35:11Z",
+      "current_state": "Watch active: scanning X every 2h for CCFF00/free-mint chatter and live Robinhood Chain mints.",
+      "description": "Keep a close eye on the Robinhood Chain NFT scene on X: accounts that host Spaces and announce live free mints, plus keyword chatter around \"ccff00 free mint\". Surfaces worthwhile finds (live mints, whitelist opportunities for the user's CCFF00 holdings) without spamming. Follows of influential accounts are paced and user-approved.",
+      "effective_at": "2026-09-21T00:35:11Z",
+      "goal_id": "goal_af8426480a0e",
+      "title": "Added Robinhood Chain free-mint watch",
+      "update_id": "goal_update_f489502b01d8",
+      "updated_at": "2026-09-21T00:35:11Z"
+    }
+  ]
+}

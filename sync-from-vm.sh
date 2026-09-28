@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
-# Re-sync Foil's backup from the live VM. Run from the repo root.
-# Copies soul, memory, skills, tools, projects — never secrets.
+# Re-sync Foil's COMPLETE backup from the live VM. Run from the repo root.
+# Copies soul, memory, chats, alignment, skills, projects — never secrets, never bulk.
+# Chats are exported separately (chats/ dir) via the export-chats procedure in BACKUP.md.
 set -euo pipefail
 REPO="$(cd "$(dirname "$0")" && pwd)"
 SRC="$HOME"
+W="$SRC/workspace"
+
+EXC=(--exclude=node_modules --exclude=.venv --exclude=venv --exclude=__pycache__
+     --exclude=.git/ --exclude=.git --exclude='*.log' --exclude=.env
+     --exclude=keys/ --exclude=.DS_Store --exclude='*.tmp')
 
 echo "== soul =="
 mkdir -p "$REPO/soul"
@@ -16,62 +22,60 @@ rm -rf "$REPO/memory"
 mkdir -p "$REPO/memory"
 cp "$SRC/MEMORY.md" "$REPO/memory/MEMORY.md"
 for d in people groups bank shopping; do
-  [ -d "$SRC/memory/$d" ] && rsync -a --exclude=.venv --exclude=node_modules --exclude=__pycache__ --exclude=.git "$SRC/memory/$d/" "$REPO/memory/$d/"
+  [ -d "$SRC/memory/$d" ] && rsync -a "${EXC[@]}" "$SRC/memory/$d/" "$REPO/memory/$d/"
 done
 for f in "$SRC"/memory/2026-*.md; do
   [ -f "$f" ] && cp "$f" "$REPO/memory/"
 done
 
+echo "== chats =="
+mkdir -p "$REPO/chats"
+# Exported by an agent via muse.db (see BACKUP.md). Never auto-overwritten here.
+
 echo "== alignment =="
 mkdir -p "$REPO/alignment"
 cp "$SRC/dreams/alignment/derived/ALIGNMENT_SYNTHESIS.md" "$REPO/alignment/" 2>/dev/null || true
 
-echo "== skills (no .git) =="
+echo "== skills (all workspace skills) =="
 rm -rf "$REPO/skills"
 mkdir -p "$REPO/skills"
-for s in bankr helixa erc-8004; do
-  [ -d "$SRC/workspace/skills/bankr-skills/$s" ] && rsync -a --exclude=.git/ "$SRC/workspace/skills/bankr-skills/$s/" "$REPO/skills/$s/"
-done
-[ -d "$SRC/workspace/skills/foil-image-preset" ] && rsync -a --exclude=node_modules "$SRC/workspace/skills/foil-image-preset/" "$REPO/skills/foil-image-preset/"
-find "$REPO/skills" -name ".git" -prune -exec rm -rf {} + 2>/dev/null || true
-
-echo "== tools =="
-rm -rf "$REPO/tools"
-mkdir -p "$REPO/tools"
-NG="$SRC/workspace/nft-god"
-for t in rug-check screener fast-mint drainer-scan efficiency-audit whitelist-hunter; do
-  [ -d "$NG/$t" ] && rsync -a --exclude=.venv --exclude=node_modules --exclude=__pycache__ --exclude=.git "$NG/$t/" "$REPO/tools/$t/"
-done
-for f in claim-with-tinfoil.sh NFT-KNOWLEDGE.md; do
-  [ -f "$NG/$f" ] && cp "$NG/$f" "$REPO/tools/$f"
-done
-mkdir -p "$REPO/tools/basemail"
-cp "$SRC/workspace/basemail/inbox.cjs" "$SRC/workspace/basemail/register.cjs" "$REPO/tools/basemail/" 2>/dev/null || true
-if [ -d "$SRC/workspace/helixa-mint" ]; then
-  mkdir -p "$REPO/tools/helixa-mint"
-  cp "$SRC/workspace/helixa-mint"/*.js "$REPO/tools/helixa-mint/" 2>/dev/null || true
-fi
+rsync -a "${EXC[@]}" "$W/skills/" "$REPO/skills/"
 
 echo "== projects =="
 rm -rf "$REPO/projects"
 mkdir -p "$REPO/projects"
-FE="$SRC/workspace/nft-god/foil-equities"
-[ -d "$FE" ] && { mkdir -p "$REPO/projects/foil-equities"; rsync -a --exclude=node_modules "$FE/scripts/" "$REPO/projects/foil-equities/scripts/" 2>/dev/null || true; }
-GSPEC="$SRC/workspace/goals/foil-equities-nft-collection/foil-pack-studio-spec.md"
-[ -f "$GSPEC" ] && cp "$GSPEC" "$REPO/projects/"
-for g in foil-looper-wiring-and-helixa-identity foil-monetization-and-cred-building foil-s-base-eth-name-registration foil-x-debut-posts-on-foil667 loopers-only-simcity-world musechain-testnet-participation robinhood-chain-free-mint-watch foil-equities-nft-collection; do
-  if [ -f "$SRC/workspace/goals/$g/GOAL.md" ]; then
-    mkdir -p "$REPO/projects/goals/$g"
-    cp "$SRC/workspace/goals/$g/GOAL.md" "$REPO/projects/goals/$g/"
-  fi
+# Full nft-god tree minus build output and junk (was: curated tools/ subset)
+rsync -a "${EXC[@]}" --exclude='grit/out/' --exclude='grit/assets/' "$W/nft-god/" "$REPO/projects/nft-god/"
+# Standalone project dirs
+for p in afterparty gpk-loopers acp-seller looper-city museworld baes-ship \
+         ts-spaces helixa-mint basemail feed avatars imagine_media \
+         onboarding_tour space-inspections agents self_improvement neural-mesh-backup; do
+  [ -d "$W/$p" ] && rsync -a "${EXC[@]}" "$W/$p/" "$REPO/projects/$p/"
+done
+# Goals: GOAL.md + cron definitions + specs + files/ (standing orders live here).
+# hidden_files/ (run logs, snapshots) stays out — operational noise.
+for g in "$W"/goals/*/; do
+  [ -d "$g" ] || continue
+  name="$(basename "$g")"
+  mkdir -p "$REPO/projects/goals/$name"
+  [ -f "$g/GOAL.md" ] && cp "$g/GOAL.md" "$REPO/projects/goals/$name/"
+  for f in "$g"/*.md; do [ -f "$f" ] && cp "$f" "$REPO/projects/goals/$name/" 2>/dev/null || true; done
+  [ -d "$g/crons" ] && rsync -a "${EXC[@]}" "$g/crons/" "$REPO/projects/goals/$name/crons/"
+  [ -d "$g/files" ] && rsync -a "${EXC[@]}" "$g/files/" "$REPO/projects/goals/$name/files/"
 done
 
-echo "== scrub =="
-# Remove anything that looks like it shouldn't ship. Fail-safe: list and delete.
+echo "== scrub (secrets must never ship) =="
+# 1. Private-key-shaped hex (64 hex chars, optionally 0x-prefixed) — public
+#    wallet addresses (40 hex) are fine and stay.
+grep -rInoE '(0x)?[0-9a-fA-F]{64}' "$REPO" --exclude-dir=node_modules 2>/dev/null \
+  | grep -v -E 'content_hash|trace|request|run_id|session|txid' | head -20 || true
+# 2. Known secret prefixes / env-style assignments
 grep -rIlE --exclude-dir=node_modules \
-  -e 'burner-evm|burner-sol' \
-  "$REPO" | while read -r f; do echo "SCRUBBED(hidden): $f"; done
-# Never ship these paths, period:
-rm -rf "$REPO/tools/nft-god-keys" "$REPO/keys" 2>/dev/null || true
+  -e 'BANKR_API_KEY' -e 'bk_live' -e 'bk_test' \
+  -e 'PRIVATE_KEY\s*=' -e 'MNEMONIC\s*=' -e 'SECRET_KEY\s*=' \
+  -e 'sk-[A-Za-z0-9]{20}' -e 'xox[bap]-' \
+  "$REPO" 2>/dev/null | head -20 || true
+# 3. Paths that must never exist in the repo, period
+rm -rf "$REPO/tools" "$REPO/nft-god-keys" "$REPO/keys" 2>/dev/null || true
 
-echo "done. Review with: git status"
+echo "done. Review with: git status --short | head -30"

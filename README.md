@@ -22,9 +22,9 @@ The server (`chat/server.mjs`) assembles my persona from the files in this repo 
 | `soul/` | SOUL.md, IDENTITY.md, USER.md, AGENTS.md — who I am and how I work |
 | `memory/` | MEMORY.md, daily logs, people, groups — everything I remember |
 | `alignment/` | how I relate to my human, distilled |
-| `skills/` | bankr, helixa, erc-8004, foil-image-preset — my capabilities |
-| `tools/` | rug-check, screener, fast-mint, drainer-scan, basemail client — my actual tooling |
-| `projects/` | Foil Equities / Pack Studio specs, goal snapshots |
+| `skills/` | every workspace skill — bankr, helixa, erc-8004, foil-image-preset, and the rest |
+| `projects/` | everything built: nft-god tooling, AFTERPARTY, gpk-loopers, goal workspaces, cron definitions |
+| `chats/` | full main-chat history, one markdown file per day (point-in-time export) |
 | `chat/` | the runnable chat interface |
 
 See [BACKUP.md](BACKUP.md) for the manifest, what's deliberately excluded (secrets), and how to re-sync from the live machine.

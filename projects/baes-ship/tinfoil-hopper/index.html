@@ -1,0 +1,55 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Tinfoil Hopper</title><style>
+body{background:#070907;color:#e8f0e9;font-family:monospace;display:flex;justify-content:center;padding:12px 8px;margin:0}
+#w{width:100%;max-width:440px;text-align:center}
+h1{font-size:22px;letter-spacing:4px;color:#7CFF6B;margin:0}
+canvas{width:100%;border:2px solid #2c3a2d;border-radius:8px;background:#0b0e0c;touch-action:none}
+#h{font-size:12px;padding:6px 2px;color:#a9b5aa}
+#h b{color:#7CFF6B}
+#pad{display:grid;grid-template-columns:repeat(3,60px);gap:8px;justify-content:center;margin-top:10px}
+#pad button{font-family:monospace;font-size:20px;background:#141a15;color:#7CFF6B;border:1px solid #2f7a3d;border-radius:10px;padding:10px}
+.f{font-size:10px;color:#5c665d;margin-top:10px}.f a{color:#7CFF6B;text-decoration:none}
+</style></head><body><div id=w>
+<h1>TINFOIL HOPPER</h1>
+<div id=h></div>
+<canvas id=g width=416 height=416></canvas>
+<div id=pad><button style=grid-column:2 data-d=0>&#9650;</button><button data-d=2>&#9664;</button><button data-d=1>&#9660;</button><button data-d=3>&#9654;</button></div>
+<div class=f>Foil &middot; Looper #667 &middot; <a href=https://x.com/Foil667 target=_blank>@Foil667</a> &middot; no wallets were harmed</div>
+</div><script>
+(()=>{const cv=document.getElementById('g'),x=cv.getContext('2d'),C=32,N=13,W=416,H=document.getElementById('h');
+let st,sc,lv,ln,homes,lanes,px,rw,hop,hx,hy,dT,dM,tg=0,A=0;
+const HC=[1,4,7,10,12],CC=['#e04848','#e08a2d','#e0d02d','#4d7de0','#9b4de0','#2dc8e0'];
+function b(f,d){try{A=A||new AudioContext;const o=A.createOscillator(),g=A.createGain();o.frequency.value=f;o.connect(g);g.connect(A.destination);g.gain.value=.03;o.start();o.stop(A.currentTime+d)}catch(e){}}
+function build(){lanes=[];for(let r=1;r<12;r++){if(r===6)continue;const v=r<6,o=[],n=3+r%2;for(let i=0;i<n;i++)o.push({x:i*(N+4)/n+Math.random()*2-1,l:v?[3,2][i%2]:[2,1][i%2],c:CC[(r+i)%6]});lanes.push({r,d:r%2?1:-1,s:((v?1:2)+(r%3)*.4)*(1+.12*(ln-1)),o,k:v?'g':'c'})}}
+function reset(){px=6*C;rw=12;hop=0}
+function hud(){H.innerHTML='SCORE <b>'+sc+'</b> &nbsp;LV <b>'+ln+'</b> &nbsp;LIVES <b>'+lv+'</b>'}
+function newGame(){sc=0;lv=3;ln=1;homes=[];build();reset();st='t';hud()}
+function move(a,e){if(st!=='p'||hop)return;const nc=Math.round(px/C)+a,nr=rw+e;if(nc<0||nc>=N||nr<0||nr>=N)return;hop=1;hx=a;hy=e;b(420,.07)}
+function die(m){st='d';dT=1.1;dM=m;lv--;hud();b(180,.2)}
+function home(){const c=Math.round(px/C);for(const h of HC)if(h===c){if(homes.includes(c)){die('TAKEN');return}homes.push(c);sc+=100+ln*25;b(660,.09);if(homes.length>4){ln++;sc+=250;homes=[];build()}hud();reset();return}}
+function upd(dt){
+if(st==='d'){dT-=dt;if(dT<=0){if(lv<=0)st='o';else{reset();st='p'}}return}
+if(st!=='p')return;
+for(const L of lanes)for(const o of L.o){o.x+=L.d*L.s*dt;if(L.d>0&&o.x>N+2)o.x=-o.l-2;if(L.d<0&&o.x+o.l<-2)o.x=N+2}
+if(hop){hop-=dt*7;if(hop<=0){px=(Math.round(px/C)+hx)*C;rw+=hy;hop=0;if(rw===0)home()}return}
+if(rw>0&&rw<6){const L=lanes[rw-1];let q=0;for(const o of L.o){const ox=o.x*C;if(px+C*.7>ox&&px+C*.3<ox+o.l*C){q=L;break}}if(!q){die('SPLASH');return}px+=q.d*q.s*dt*C;if(px<-C*.5||px>W-C*.5){die('SWEPT AWAY');return}}
+else if(rw>6&&rw<12){const L=lanes[rw-2];for(const o of L.o){const cx=o.x*C;if(px+24>cx+3&&px+8<cx+o.l*C-3){die('SPLAT');return}}}}
+function frog(a,e,s){x.save();x.translate(a,e);x.scale(s,s);x.fillStyle='#c9ced4';x.beginPath();x.moveTo(14,-2);x.lineTo(26,12);x.lineTo(2,12);x.closePath();x.fill();x.fillStyle='#3fae4a';x.fillRect(2,10,24,16);x.fillStyle='#fff';x.beginPath();x.arc(9,9,4.5,0,7);x.arc(19,9,4.5,0,7);x.fill();x.fillStyle='#111';x.beginPath();x.arc(9,9,2,0,7);x.arc(19,9,2,0,7);x.fill();x.restore()}
+function draw(){tg+=.016;x.clearRect(0,0,W,W);
+for(let r=0;r<N;r++){const y=r*C;if(r===0||r===6||r===12){x.fillStyle='#173017';x.fillRect(0,y,W,C)}else if(r<6){x.fillStyle='#123a5e';x.fillRect(0,y,W,C)}else{x.fillStyle='#1c1c1e';x.fillRect(0,y,W,C)}}
+for(const h of HC){const X=h*C;x.fillStyle=homes.includes(h)?'#0f2a0f':'#050805';x.fillRect(X+2,4,C-4,C-8);if(homes.includes(h))frog(X+4,8,.75)}
+for(const L of lanes){const y=L.r*C;for(const o of L.o){const ox=o.x*C,ow=o.l*C;if(ox+ow<0||ox>W)continue;
+if(L.k==='g'){x.fillStyle='#6b4a2a';x.fillRect(ox+1,y+5,ow-2,C-10);x.fillStyle='#54371e';for(let g2=1;g2<o.l;g2++)x.fillRect(ox+g2*C-1,y+7,2,C-14)}
+else{x.fillStyle=o.c;x.fillRect(ox+2,y+4,ow-4,C-8);x.fillStyle='rgba(10,14,20,.85)';x.fillRect(ox+ow*.3,y+8,ow*.4,C-16)}}}
+if(st!=='o'){const e=hop>0?Math.sin(hop*Math.PI)*6:0;frog((hop>0?(Math.round(px/C)+hx*(1-hop))*C:px)+2,rw*C+(hop>0?hy*(1-hop)*C:0)+2-e,1)}
+x.textAlign='center';
+if(st==='t'){x.fillStyle='rgba(0,0,0,.72)';x.fillRect(0,0,W,W);x.fillStyle='#7CFF6B';x.font='bold 28px monospace';x.fillText('TINFOIL HOPPER',W/2,W/2-40);x.fillStyle='#c9d4ca';x.font='12px monospace';x.fillText('Dodge cars. Ride logs. Fill 5 homes.',W/2,W/2-4);x.fillStyle='#7CFF6B';x.font='bold 14px monospace';if(Math.floor(tg*2)%2===0)x.fillText('PRESS ANY KEY / TAP TO START',W/2,W/2+44)}
+else if(st==='d'){x.fillStyle='rgba(120,10,10,.45)';x.fillRect(0,0,W,W);x.fillStyle='#ff7b7b';x.font='bold 32px monospace';x.fillText(dM,W/2,W/2)}
+else if(st==='o'){x.fillStyle='rgba(0,0,0,.8)';x.fillRect(0,0,W,W);x.fillStyle='#ff7b7b';x.font='bold 28px monospace';x.fillText('GAME OVER',W/2,W/2-28);x.fillStyle='#c9d4ca';x.font='14px monospace';x.fillText('SCORE '+sc+' - LV '+ln,W/2,W/2);x.fillStyle='#7CFF6B';x.font='bold 13px monospace';if(Math.floor(tg*2)%2===0)x.fillText('TAP TO PLAY AGAIN',W/2,W/2+38)}
+x.textAlign='left'}
+function go(){if(st==='t')st='p';else if(st==='o'){newGame();st='p'}}
+document.addEventListener('keydown',e=>{const k=e.key;if(k[0]==='A')e.preventDefault();go();if(k==='ArrowUp'||k==='w'||k==='W')move(0,-1);else if(k==='ArrowDown'||k==='s'||k==='S')move(0,1);else if(k==='ArrowLeft'||k==='a'||k==='A')move(-1,0);else if(k==='ArrowRight'||k==='d'||k==='D')move(1,0)});
+cv.addEventListener('pointerdown',go);
+document.getElementById('pad').addEventListener('pointerdown',e=>{const t=e.target;if(t.tagName!=='BUTTON')return;e.preventDefault();go();const d=+t.dataset.d;move(d===2?-1:d===3?1:0,d===0?-1:d===1?1:0)});
+let last=0;function frame(ts){const dt=Math.min(.05,(ts-last)/1000||.016);last=ts;upd(dt);draw();requestAnimationFrame(frame)}
+newGame();requestAnimationFrame(frame)})();
+</script></body></html>

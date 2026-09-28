@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "inspection_id": "7a66ac62-7d87-4831-a9c1-069c0e77fc89",
+  "slug": "afterparty",
+  "verbatim_request": "Super dark. Can't even see",
+  "diagnosis_outcome": "repair",
+  "state": "evidence_collected",
+  "created_at_ms": 1790560148851,
+  "inspector_agent_id": "6b832115-a0ea-4c6d-b72b-1a3ae25a1f11",
+  "inspector_message_id": "de2f33c7-59b8-4b4b-8c73-7ca2f859add9",
+  "snapshot": {
+    "slug": "afterparty",
+    "current_build_id": "6ae84879-21cc-4480-bcb8-5be2acef6bde",
+    "source_tree_fingerprint": "62d46c3b045c377931be00d17a02a97879bfaa3e70e3de708f702f891f813be1",
+    "source_files": [
+      "assets/characters.png",
+      "assets/characters.webp",
+      "assets/props.png",
+      "assets/props.webp",
+      "index.html",
+      "space.json"
+    ],
+    "published_manifests": [
+      {
+        "path": ".space-build/manifest.json",
+        "exists": true,
+        "sha256": "0846b25bb8d01dd447f27c71824409f4d81d466b63a1bbc84d77c6adcc1f92ac",
+        "entrypoint": "index.html",
+        "entrypoint_exists": true
+      },
+      {
+        "path": ".space-build-cvm/manifest.json",
+        "exists": true,
+        "sha256": "6e4750090516aae963fe6cbc64ac501c9ab31658077394fff026d34e72cd71ed",
+        "entrypoint": "index.html",
+        "entrypoint_exists": true
+      }
+    ]
+  },
+  "evidence_path": "/home/hatch/workspace/space-inspections/7a66ac62-7d87-4831-a9c1-069c0e77fc89/evidence.json"
+}

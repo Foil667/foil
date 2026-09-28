@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/tinfoil-scan-foil-s-free-wallet-drainer-checker/.harness/probe-ui/sock",
+  "slug": "tinfoil-scan-foil-s-free-wallet-drainer-checker",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-74210eaa-063c-4647-a293-dc5b96382797/",
+  "audit_session_id": "a3c7458b-08e0-427b-afc8-bbeb78f449aa",
+  "pid": 7908
+}

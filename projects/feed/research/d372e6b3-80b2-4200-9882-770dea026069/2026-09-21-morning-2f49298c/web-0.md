@@ -1,0 +1,7 @@
+Beat: web
+Angle: Change check for the Loopers holder (owns Looper #667): the paper said floor 0.0169 ETH on its biggest trading day (opensea.io/collection/loopers-639312714 and basescan.org/token/0x1649cd37f4748807b4882fc48765ba0b2affa94a already gave this reader that day's floor, volume and holder count). Report ONLY what moved since: current floor, 24h volume/sales, holder count, and any Quigley or collection announcement today.
+
+## Finding 1
+Loopers (LOOPER, ERC-721 on Base, contract 0x1649cd37f4748807b4882fc48765ba0b2affa94a) is holding near its recent high. OpenSea prices the collection at a 0.017 ETH floor, up a hair from the 0.0169 ETH the paper recorded on the collection's biggest trading day. The three cheapest listed items (#1356, #2661, #112) are each asking $46.92, which at a 0.017 ETH floor implies ETH around $2,760. BaseScan shows the collection has grown to 1,282 holders against a 7,777 max total supply, with 1,231 total transfers; its 24H volume, min price and max price fields all read N/A, so no confirmed 24-hour sales figure is visible on the explorer. No new Quigley or collection announcement surfaced for today: searches across web sources for a September 21, 2026 Loopers or QuigleyNFT announcement returned only the recap of the September 3 mint-announcement Space and unrelated older stories. Both pages state no publication date for the data shown.
+- https://opensea.io/collection/loopers-639312714 (undated)
+- https://basescan.org/token/0x1649cd37f4748807b4882fc48765ba0b2affa94a (undated)

@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Trait Combiner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:#f4f7ef; --paper:#ffffff; --ink:#101518; --muted:#566167; --line:#cbd4cd;
+      --acid:#d9ff43; --cyan:#21d4d1; --coral:#ff675d; --yellow:#ffd24a; --shadow:#101518;
+      --soft:#e8ede7; --grid:rgba(16,21,24,.055);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#0c1114; --paper:#141b1f; --ink:#eef5ef; --muted:#a9b7b6; --line:#334047;
+        --acid:#d9ff43; --cyan:#37dfdc; --coral:#ff766d; --yellow:#ffdb62; --shadow:#050809;
+        --soft:#1d272c; --grid:rgba(255,255,255,.045);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0; color:var(--ink); background-color:var(--bg);
+      background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+      background-size:24px 24px; font-family:"Chivo",sans-serif; min-height:100vh;
+    }
+    button,input{font:inherit}
+    button{color:inherit}
+    button:focus-visible,input:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+    .shell{width:min(1480px,100%);margin:auto;padding:clamp(16px,3vw,38px)}
+    .topline{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:6px 0 22px}
+    .hero-copy{max-width:780px}
+    .kicker{font:600 12px/1.2 "IBM Plex Mono",monospace;color:var(--muted);margin:0 0 8px}
+    h1{font-size:clamp(38px,6.4vw,88px);line-height:.9;letter-spacing:-.065em;margin:0;max-width:760px}
+    h1 em{font-style:normal;background:var(--acid);color:#101510;padding:0 .09em}
+    .lede{font-size:clamp(15px,2vw,20px);line-height:1.45;max-width:660px;margin:16px 0 0;color:var(--muted)}
+    .action-stack{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:9px;max-width:410px}
+    .btn{border:1px solid var(--line);background:var(--paper);padding:12px 14px;font-weight:700;cursor:pointer;box-shadow:3px 3px 0 var(--shadow);display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:45px;transition:transform .12s,box-shadow .12s,background .12s}
+    .btn:hover{background:var(--soft);transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--shadow)}
+    .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow)}
+    .btn.primary{background:var(--acid);color:#111;border-color:#111}
+    .btn.danger{background:var(--coral);color:#111;border-color:#111}
+    .btn.small{min-height:36px;padding:8px 10px;font-size:12px;box-shadow:2px 2px 0 var(--shadow)}
+    svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+    .workspace{display:grid;grid-template-columns:282px minmax(360px,1fr) 332px;grid-template-areas:"rack stage data";gap:14px;align-items:start}
+    .panel{background:var(--paper);border:1px solid var(--line);box-shadow:5px 5px 0 var(--shadow)}
+    .rack{grid-area:rack}.stage{grid-area:stage}.data{grid-area:data}
+    .panel-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 15px;border-bottom:1px solid var(--line)}
+    .panel-head h2{font-size:14px;margin:0;letter-spacing:-.01em}
+    .micro{font:500 10px/1.3 "IBM Plex Mono",monospace;color:var(--muted)}
+    .tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}
+    .tab{border:0;background:var(--paper);padding:11px 4px;font:600 10px "IBM Plex Mono",monospace;cursor:pointer;color:var(--muted)}
+    .tab.active{background:var(--acid);color:#111}
+    .trait-list{padding:12px;display:grid;gap:8px;min-height:372px}
+    .trait{display:grid;grid-template-columns:35px 1fr auto;align-items:center;gap:9px;text-align:left;border:1px solid var(--line);background:var(--paper);padding:7px;cursor:pointer;min-width:0}
+    .trait:hover{background:var(--soft)}
+    .trait.active{background:var(--acid);border-color:#111;color:#111;box-shadow:2px 2px 0 #111}
+    .swatch{width:35px;height:35px;background:var(--soft);border:1px solid var(--line);display:grid;place-items:center;font:700 11px "IBM Plex Mono",monospace;overflow:hidden}
+    .trait-name{font-size:12px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .rarity{font:500 10px "IBM Plex Mono",monospace;color:var(--muted)}
+    .trait.active .rarity{color:#27321a}
+    .lock-btn{border:1px solid var(--line);background:var(--paper);padding:6px 8px;cursor:pointer;font:600 10px "IBM Plex Mono",monospace}
+    .lock-btn.locked{background:var(--cyan);color:#071516;border-color:#071516}
+    .stage-body{padding:14px}
+    .canvas-wrap{position:relative;max-width:680px;margin:auto;background:#111;border:1px solid #111;overflow:hidden;aspect-ratio:1}
+    canvas#art{width:100%;height:100%;display:block;image-rendering:pixelated}
+    .stamp{position:absolute;right:10px;bottom:10px;background:var(--acid);color:#111;border:2px solid #111;padding:6px 8px;font:700 10px "IBM Plex Mono",monospace;transform:rotate(-2deg)}
+    .ticker{display:flex;justify-content:space-between;gap:12px;padding:12px 14px;border-top:1px solid var(--line);background:var(--soft);font:500 11px "IBM Plex Mono",monospace;flex-wrap:wrap}
+    .ticker strong{color:var(--coral)}
+    .stage-controls{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;padding:0 14px 14px}
+    .upload-zone{margin:12px;border:2px dashed var(--line);padding:16px 10px;text-align:center;background:var(--bg);cursor:pointer}
+    .upload-zone.drag{border-color:var(--cyan);background:color-mix(in srgb,var(--cyan) 18%,var(--paper))}
+    .upload-zone strong{font-size:12px}.upload-zone span{display:block;margin-top:5px}
+    .data-body{padding:14px}
+    .field{margin-bottom:12px}.field label{display:block;font:600 10px "IBM Plex Mono",monospace;color:var(--muted);margin-bottom:6px}
+    .field input{width:100%;background:var(--bg);color:var(--ink);border:1px solid var(--line);padding:10px 11px;border-radius:0}
+    .scoreboard{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+    .score{padding:11px;background:var(--soft);border-top:3px solid var(--cyan)}
+    .score b{display:block;font-size:20px;letter-spacing:-.04em}.score span{font:500 9px "IBM Plex Mono",monospace;color:var(--muted)}
+    pre{margin:0;background:#0f171a;color:#cde8d8;padding:12px;min-height:216px;max-height:286px;overflow:auto;font:500 10px/1.6 "IBM Plex Mono",monospace;white-space:pre-wrap;word-break:break-word}
+    .data-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+    .strip{margin-top:25px}
+    .strip-head{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;margin-bottom:11px}
+    .strip-head h2{font-size:clamp(24px,3vw,36px);letter-spacing:-.05em;margin:0}.strip-head p{margin:0;color:var(--muted);font-size:13px;max-width:480px;text-align:right}
+    .batch{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+    .specimen{border:1px solid var(--line);background:var(--paper);padding:7px;cursor:pointer;text-align:left;box-shadow:3px 3px 0 var(--shadow)}
+    .specimen:hover{background:var(--acid);color:#111}
+    .specimen canvas{display:block;width:100%;aspect-ratio:1;image-rendering:pixelated;background:#111}
+    .specimen b{font-size:11px;display:block;margin-top:7px}.specimen span{font:500 9px "IBM Plex Mono",monospace;color:var(--muted)}
+    .concepts{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:26px}
+    .pack-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;padding:12px}
+    .pack{border:1px solid var(--line);background:var(--paper);padding:14px;text-align:left;cursor:pointer;min-height:128px;position:relative;overflow:hidden}
+    .pack:before{content:"";position:absolute;width:45px;height:45px;right:-16px;top:-16px;background:var(--pack,var(--acid));transform:rotate(45deg)}
+    .pack:hover,.pack.active{background:var(--soft);box-shadow:inset 0 -4px 0 var(--pack,var(--acid))}
+    .pack b{font-size:16px;display:block}.pack p{font-size:11px;line-height:1.45;color:var(--muted);margin:8px 0 0}.pack code{display:block;margin-top:10px;font:600 9px "IBM Plex Mono",monospace;color:var(--ink)}
+    .math{padding:14px}
+    .math-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .math .scoreboard{grid-template-columns:1fr;margin-bottom:0}.math .score{border-top-color:var(--acid)}
+    .fine{font:500 10px/1.5 "IBM Plex Mono",monospace;color:var(--muted);margin:10px 0 0}
+    .toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);border:1px solid var(--line);padding:11px 15px;font:600 11px "IBM Plex Mono",monospace;opacity:0;pointer-events:none;transition:.2s;z-index:20;box-shadow:4px 4px 0 var(--coral)}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .footer{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:28px 0 10px;padding-top:16px;border-top:1px solid var(--line);font:500 10px "IBM Plex Mono",monospace;color:var(--muted)}
+    .footer b{color:var(--ink)}
+    @media(max-width:1050px){
+      .workspace{grid-template-columns:1fr 300px;grid-template-areas:"stage data" "rack rack"}
+      .trait-list{grid-template-columns:repeat(3,1fr);min-height:0}.rack .tabs{grid-template-columns:repeat(6,1fr)}
+      .batch{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(max-width:720px){
+      .shell{padding:14px}.topline{display:block}.action-stack{justify-content:flex-start;margin-top:18px}.action-stack .btn{flex:1}
+      .workspace{display:flex;flex-direction:column}.stage{order:0}.rack{order:1}.data{order:2}.panel{width:100%;box-shadow:3px 3px 0 var(--shadow)}
+      .stage-controls{grid-template-columns:1fr 1fr}.stage-controls .btn:last-child{grid-column:1/-1}
+      .rack .tabs{grid-template-columns:repeat(3,1fr)}.trait-list{grid-template-columns:1fr 1fr}.trait{grid-template-columns:32px 1fr}.trait .rarity{display:none}
+      .batch{grid-template-columns:repeat(2,1fr)}.concepts{grid-template-columns:1fr}.pack-grid{grid-template-columns:1fr}.strip-head{display:block}.strip-head p{text-align:left;margin-top:7px}
+      .footer{display:block}.footer span{display:block;margin-top:8px}
+    }
+    @media(max-width:390px){.trait-list{grid-template-columns:1fr}.batch{grid-template-columns:1fr 1fr}.btn{font-size:12px}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <section class="topline">
+      <div class="hero-copy">
+        <p class="kicker">GENETICALLY IRRESPONSIBLE ART LAB // BUILD 001</p>
+        <h1>Mix the genes.<br><em>Break the floor.</em></h1>
+        <p class="lede">Stack traits, lock the good mutations, import your own transparent layers, then export the art and its metadata template. No roadmap. Just recombinant JPEG science.</p>
+      </div>
+      <div class="action-stack">
+        <button class="btn" id="loadBtn"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 18v2h14v-2"/></svg>Load trait pack</button>
+        <button class="btn primary" id="randomBtn"><svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="m15 15 6 6m0-5v5h-5M4 4l5 5"/></svg>Mutate</button>
+      </div>
+    </section>
+
+    <section class="workspace">
+      <aside class="panel rack">
+        <div class="panel-head"><h2>DNA rack</h2><button class="lock-btn" id="lockBtn">UNLOCKED</button></div>
+        <div class="tabs" id="tabs"></div>
+        <div class="trait-list" id="traitList"></div>
+        <div class="upload-zone" id="dropZone" tabindex="0" role="button" aria-label="Upload a folder or images of trait layers">
+          <strong>DROP LAYERS HERE</strong><span class="micro">PNG / JPG / WEBP · folders welcome</span>
+          <input id="fileInput" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden>
+          <input id="folderInput" type="file" accept="image/png,image/jpeg,image/webp" webkitdirectory multiple hidden>
+        </div>
+      </aside>
+
+      <section class="panel stage">
+        <div class="panel-head"><h2 id="specimenTitle">Specimen #00667</h2><span class="micro" id="genomeCode">GENOME 7D-667</span></div>
+        <div class="stage-body">
+          <div class="canvas-wrap"><canvas id="art" width="640" height="640" aria-label="Generated pixel character preview"></canvas><div class="stamp">NOT FINANCIAL ART</div></div>
+        </div>
+        <div class="stage-controls">
+          <button class="btn small" id="uglyBtn">Make it cursed</button>
+          <button class="btn small" id="spinBtn">10× mutation</button>
+          <button class="btn small primary" id="pngBtn">Download PNG</button>
+        </div>
+        <div class="ticker"><span>lab status: <strong>UNSUPERVISED</strong></span><span id="tickerText">0 promises · 6 traits · 1 questionable decision</span></div>
+      </section>
+
+      <aside class="panel data">
+        <div class="panel-head"><h2>Mint specimen</h2><span class="micro">ERC-721 STYLE</span></div>
+        <div class="data-body">
+          <div class="field"><label for="collectionName">COLLECTION</label><input id="collectionName" value="Rug Doctors" maxlength="32"></div>
+          <div class="field"><label for="tokenId">TOKEN ID</label><input id="tokenId" type="number" min="0" value="667"></div>
+          <div class="scoreboard">
+            <div class="score"><b id="rarityScore">88.4</b><span>CHAOS SCORE</span></div>
+            <div class="score"><b id="rarityRank">S+</b><span>VIBE GRADE</span></div>
+          </div>
+          <div class="field"><label>METADATA TEMPLATE · REPLACE IMAGE URI BEFORE MINT</label><pre id="jsonPreview"></pre></div>
+          <div class="data-actions"><button class="btn small" id="copyBtn">Copy JSON</button><button class="btn small" id="jsonBtn">Download JSON</button></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="strip">
+      <div class="strip-head"><div><p class="kicker">MUTATION CHAMBER</p><h2>Six bad decisions. Pick one.</h2></div><p>Click a specimen to pull its full DNA into the editor. Generate a fresh batch whenever the floor needs more emotional damage.</p></div>
+      <div class="batch" id="batch"></div>
+    </section>
+
+    <section class="concepts">
+      <section class="panel">
+        <div class="panel-head"><h2>Vibe pack launcher</h2><span class="micro">ORIGINAL DROP CONCEPTS</span></div>
+        <div class="pack-grid" id="packGrid"></div>
+      </section>
+      <section class="panel">
+        <div class="panel-head"><h2>Drop math</h2><span class="micro">HOPIUM CALCULATOR</span></div>
+        <div class="math">
+          <div class="math-grid">
+            <div class="field"><label for="supply">SUPPLY</label><input id="supply" type="number" min="1" value="2222"></div>
+            <div class="field"><label for="price">MINT PRICE (USD)</label><input id="price" type="number" min="0" step="0.01" value="3"></div>
+            <div class="field"><label for="sellthrough">SELL-THROUGH %</label><input id="sellthrough" type="number" min="0" max="100" value="65"></div>
+            <div class="field"><label for="creator">CREATOR SHARE %</label><input id="creator" type="number" min="0" max="100" value="90"></div>
+          </div>
+          <div class="scoreboard"><div class="score"><b id="gross">$4,333</b><span>PROJECTED CREATOR REVENUE</span></div></div>
+          <p class="fine">Straight calculator, not a prophecy. Excludes gas, taxes, platform fees, refunds, secondary sales, and the market noticing your Discord has three people.</p>
+        </div>
+      </section>
+    </section>
+
+    <footer class="footer"><b>100% art · 0% promises · infinite bad genetics</b><span>Files stay in this tab. Nothing uploads anywhere.</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+  'use strict';
+  var W=640, S=20;
+  var tabs=['Background','Body','Eyes','Mouth','Head','FX'];
+  var traitSets={
+    Background:[
+      {name:'Acid Grid',rarity:18,color:'#d9ff43',kind:'grid'},
+      {name:'Night Shift',rarity:22,color:'#18242a',kind:'night'},
+      {name:'Liquidity Lava',rarity:13,color:'#ff675d',kind:'lava'},
+      {name:'Blue Screen',rarity:27,color:'#21d4d1',kind:'blue'},
+      {name:'Golden Exit',rarity:8,color:'#ffd24a',kind:'gold'}
+    ],
+    Body:[
+      {name:'Mint Goblin',rarity:26,color:'#6fcc72',kind:'goblin'},
+      {name:'Diamond Bull',rarity:11,color:'#a7d8d5',kind:'bull'},
+      {name:'Office Ghoul',rarity:23,color:'#d7b27e',kind:'office'},
+      {name:'Chain Gremlin',rarity:19,color:'#a989cc',kind:'gremlin'},
+      {name:'Liquidated',rarity:6,color:'#ff785f',kind:'liquid'}
+    ],
+    Eyes:[
+      {name:'Laser Focus',rarity:12,color:'#ff4f57',kind:'laser'},
+      {name:'Exit Liquidity',rarity:28,color:'#f4f7ef',kind:'wide'},
+      {name:'3AM Chart',rarity:19,color:'#d9ff43',kind:'chart'},
+      {name:'Rug Radar',rarity:8,color:'#21d4d1',kind:'radar'},
+      {name:'NGMI Tears',rarity:7,color:'#65bdf8',kind:'tears'}
+    ],
+    Mouth:[
+      {name:'Diamond Grin',rarity:15,color:'#f4f7ef',kind:'grin'},
+      {name:'Floor Sweeper',rarity:24,color:'#ff675d',kind:'sweep'},
+      {name:'Liquidity Straw',rarity:9,color:'#21d4d1',kind:'straw'},
+      {name:'No Comment',rarity:31,color:'#141b1f',kind:'zip'},
+      {name:'Alpha Leak',rarity:5,color:'#ffd24a',kind:'leak'}
+    ],
+    Head:[
+      {name:'Tinfoil Crown',rarity:10,color:'#d5dedf',kind:'foil'},
+      {name:'Bull Terminal',rarity:14,color:'#ffd24a',kind:'terminal'},
+      {name:'Gas Cap',rarity:29,color:'#ff675d',kind:'cap'},
+      {name:'Ledger Brain',rarity:7,color:'#21d4d1',kind:'ledger'},
+      {name:'Nothing',rarity:40,color:'#566167',kind:'none'}
+    ],
+    FX:[
+      {name:'Green Candles',rarity:17,color:'#d9ff43',kind:'candles'},
+      {name:'Rekt Sparks',rarity:12,color:'#ff675d',kind:'sparks'},
+      {name:'Gas Leak',rarity:21,color:'#21d4d1',kind:'gas'},
+      {name:'Diamond Dust',rarity:7,color:'#f4f7ef',kind:'dust'},
+      {name:'Clean Air',rarity:43,color:'#566167',kind:'none'}
+    ]
+  };
+  var packConcepts=[
+    {name:'Rug Doctors',color:'#ff675d',line:'Hospital staff treating terminal bags with medically unlicensed alpha.',code:'2,222 supply · $3 mint',theme:[2,2,3,0,0,1]},
+    {name:'Bull Run Babies',color:'#ffd24a',line:'Tiny market maniacs born with green candles and no risk management.',code:'3,333 supply · free claim',theme:[4,1,0,1,1,0]},
+    {name:'Gas Gremlins',color:'#21d4d1',line:'Chain-hopping mechanics that eat failed transactions for breakfast.',code:'1,111 supply · burn-to-upgrade',theme:[3,3,3,2,2,2]},
+    {name:'Cursed Compliance',color:'#d9ff43',line:'Corporate goblins with spreadsheets, ties, and deeply non-compliant vibes.',code:'888 supply · open edition packs',theme:[0,2,1,3,3,4]}
+  ];
+  var activeTab='Background';
+  var selected={Background:0,Body:0,Eyes:1,Mouth:0,Head:0,FX:0};
+  var locks={};
+  var uploaded={};
+  var batch=[];
+  var art=document.getElementById('art');
+  var ctx=art.getContext('2d');
+  ctx.imageSmoothingEnabled=false;
+  var toastTimer;
+
+  function px(c,x,y,w,h,col){c.fillStyle=col;c.fillRect(x*S,y*S,w*S,h*S)}
+  function shade(hex,amt){
+    var n=parseInt(hex.slice(1),16),r=Math.max(0,Math.min(255,(n>>16)+amt)),g=Math.max(0,Math.min(255,((n>>8)&255)+amt)),b=Math.max(0,Math.min(255,(n&255)+amt));
+    return '#'+[r,g,b].map(function(v){return v.toString(16).padStart(2,'0')}).join('');
+  }
+  function trait(cat, sel){return traitSets[cat][sel[cat]]||traitSets[cat][0]}
+  function drawScene(c,sel,images){
+    c.clearRect(0,0,W,W);c.imageSmoothingEnabled=false;
+    var bg=trait('Background',sel),body=trait('Body',sel),eyes=trait('Eyes',sel),mouth=trait('Mouth',sel),head=trait('Head',sel),fx=trait('FX',sel);
+    c.fillStyle=bg.color;c.fillRect(0,0,W,W);
+    if(bg.kind==='grid'){c.fillStyle='#b4dd2c';for(var i=0;i<32;i+=4){c.fillRect(i*S,0,S,640);c.fillRect(0,i*S,640,S)}}
+    if(bg.kind==='night'){c.fillStyle='#24343b';for(var j=0;j<50;j++){var sx=(j*17)%32,sy=(j*11)%30;px(c,sx,sy,1,1,j%5?'#334a53':'#d9ff43')}}
+    if(bg.kind==='lava'){c.fillStyle='#c93d4b';for(var l=0;l<32;l+=6){px(c,l,0,2,32,'#ff9e55');px(c,l+2,(l*3)%24,2,8,'#e84a4d')}}
+    if(bg.kind==='blue'){c.fillStyle='#168b9b';for(var q=0;q<10;q++){px(c,(q*7)%32,(q*11)%29,4,1,'#7cf5e5')}}
+    if(bg.kind==='gold'){c.fillStyle='#e6a92e';for(var g=0;g<32;g+=3){px(c,g,(g*5)%28,2,2,'#fff1a1')}}
+    px(c,5,27,22,3,'rgba(0,0,0,.22)');
+    var bc=body.color,dark=shade(bc,-42),light=shade(bc,35);
+    px(c,9,12,14,15,dark);px(c,8,15,16,10,bc);px(c,10,10,12,4,bc);px(c,12,8,8,3,bc);px(c,7,18,2,7,dark);px(c,23,18,2,7,dark);
+    px(c,10,23,12,5,shade(bc,-20));px(c,11,25,4,3,dark);px(c,17,25,4,3,dark);px(c,9,14,2,2,light);px(c,21,14,2,2,light);
+    if(body.kind==='bull'){px(c,8,9,5,2,light);px(c,19,9,5,2,light);px(c,6,7,4,2,'#e9ebc9');px(c,22,7,4,2,'#e9ebc9')}
+    if(body.kind==='office'){px(c,10,20,12,7,'#e5ecea');px(c,15,20,2,7,'#ff675d');px(c,10,20,4,2,'#2b414b');px(c,18,20,4,2,'#2b414b')}
+    if(body.kind==='gremlin'){px(c,6,11,5,5,dark);px(c,21,11,5,5,dark);px(c,7,12,3,2,bc);px(c,22,12,3,2,bc)}
+    if(body.kind==='liquid'){for(var dr=0;dr<8;dr++)px(c,9+dr*2,26+(dr%3),1,3,dr%2?'#ffb65d':'#e2444c')}
+    if(eyes.kind==='laser'){px(c,11,14,4,2,'#fff');px(c,17,14,4,2,'#fff');px(c,12,14,3,1,'#ff2436');px(c,17,14,3,1,'#ff2436');px(c,2,14,9,1,'#ff2436');px(c,21,14,9,1,'#ff2436')}
+    if(eyes.kind==='wide'){px(c,10,13,5,4,'#f4f7ef');px(c,17,13,5,4,'#f4f7ef');px(c,12,14,2,2,'#111');px(c,18,14,2,2,'#111')}
+    if(eyes.kind==='chart'){px(c,10,13,5,4,'#101518');px(c,17,13,5,4,'#101518');px(c,11,15,1,1,'#d9ff43');px(c,12,14,1,1,'#d9ff43');px(c,13,15,1,1,'#d9ff43');px(c,18,15,1,1,'#d9ff43');px(c,19,13,1,2,'#d9ff43');px(c,20,14,1,1,'#d9ff43')}
+    if(eyes.kind==='radar'){px(c,10,13,5,4,'#102b30');px(c,17,13,5,4,'#102b30');px(c,12,14,1,1,'#21d4d1');px(c,19,14,1,1,'#21d4d1');px(c,9,12,6,1,'#21d4d1');px(c,17,12,6,1,'#21d4d1')}
+    if(eyes.kind==='tears'){px(c,10,13,5,3,'#fff');px(c,17,13,5,3,'#fff');px(c,12,14,1,1,'#111');px(c,19,14,1,1,'#111');px(c,11,16,2,5,'#65bdf8');px(c,19,16,2,5,'#65bdf8')}
+    if(mouth.kind==='grin'){px(c,12,19,8,3,'#111');px(c,13,19,6,2,'#fff');for(var t=14;t<19;t+=2)px(c,t,19,1,2,'#aab4b4')}
+    if(mouth.kind==='sweep'){px(c,11,19,10,2,'#111');px(c,12,20,8,2,'#ff675d')}
+    if(mouth.kind==='straw'){px(c,13,19,6,2,'#111');px(c,18,19,2,1,'#21d4d1');px(c,19,17,1,5,'#21d4d1');px(c,20,17,3,1,'#21d4d1')}
+    if(mouth.kind==='zip'){px(c,11,19,10,1,'#15191b');for(var z=12;z<21;z+=2)px(c,z,18,1,3,'#cbd4cd')}
+    if(mouth.kind==='leak'){px(c,12,19,8,2,'#111');px(c,15,21,3,5,'#ffd24a');px(c,14,25,5,2,'#ffd24a')}
+    if(head.kind==='foil'){px(c,10,8,12,3,'#b8c6c8');px(c,12,5,8,3,'#dbe3e4');px(c,15,2,3,4,'#eef5ef');px(c,10,7,2,2,'#778b90');px(c,20,7,2,3,'#8ea0a4');px(c,14,4,2,2,'#9cadaf')}
+    if(head.kind==='terminal'){px(c,10,5,12,6,'#13191c');px(c,12,6,8,3,'#d9ff43');px(c,13,7,1,1,'#111');px(c,15,7,1,1,'#111');px(c,18,7,1,1,'#111');px(c,9,10,14,2,'#ffd24a')}
+    if(head.kind==='cap'){px(c,10,7,13,4,'#ff675d');px(c,13,5,7,3,'#ff675d');px(c,20,9,5,2,'#b52e3a')}
+    if(head.kind==='ledger'){px(c,11,4,10,7,'#18242a');px(c,12,5,8,5,'#21d4d1');px(c,13,6,1,1,'#102b30');px(c,15,6,1,1,'#102b30');px(c,17,6,2,1,'#102b30');px(c,13,8,5,1,'#102b30')}
+    if(fx.kind==='candles'){for(var cd=0;cd<6;cd++){var cx=2+cd*5,cy=4+(cd*7)%17;px(c,cx,cy,1,4,'#ecfff0');px(c,cx-1,cy+1,3,2,'#68d970')}}
+    if(fx.kind==='sparks'){for(var sp=0;sp<8;sp++){var xx=(sp*9)%29+1,yy=(sp*13)%24+2;px(c,xx,yy,1,2,sp%2?'#ffd24a':'#ff675d');px(c,xx-1,yy+1,3,1,sp%2?'#ffd24a':'#ff675d')}}
+    if(fx.kind==='gas'){for(var ga=0;ga<5;ga++){px(c,2+ga*6,23-(ga%2)*3,3,2,'rgba(33,212,209,.7)');px(c,3+ga*6,21-(ga%2)*3,2,2,'rgba(33,212,209,.45)')}}
+    if(fx.kind==='dust'){for(var dd=0;dd<16;dd++){var dx=(dd*11)%31,dy=(dd*7)%29;px(c,dx,dy,dd%4===0?2:1,dd%4===0?2:1,'rgba(255,255,255,.85)')}}
+    if(images){tabs.forEach(function(cat){var tr=traitSets[cat][sel[cat]];if(tr&&tr.image&&tr.loaded)c.drawImage(tr.image,0,0,W,W)})}
+  }
+  function render(){
+    drawScene(ctx,selected,true);renderTraits();renderMeta();renderBatch(false);
+  }
+  function renderTabs(){
+    var el=document.getElementById('tabs');el.innerHTML='';
+    tabs.forEach(function(cat){var b=document.createElement('button');b.className='tab'+(cat===activeTab?' active':'');b.textContent=cat;b.onclick=function(){activeTab=cat;renderTabs();renderTraits();syncLock()};el.appendChild(b)})
+  }
+  function renderTraits(){
+    var el=document.getElementById('traitList');el.innerHTML='';
+    traitSets[activeTab].forEach(function(t,i){
+      var b=document.createElement('button');b.className='trait'+(selected[activeTab]===i?' active':'');
+      var sw=document.createElement('span');sw.className='swatch';sw.style.background=t.color||'var(--soft)';sw.textContent=t.image?'IMG':String(i+1).padStart(2,'0');
+      var name=document.createElement('span');name.className='trait-name';name.textContent=t.name;
+      var rar=document.createElement('span');rar.className='rarity';rar.textContent=t.rarity+'%';
+      b.append(sw,name,rar);b.onclick=function(){selected[activeTab]=i;render()};el.appendChild(b)
+    })
+  }
+  function syncLock(){var b=document.getElementById('lockBtn'),on=!!locks[activeTab];b.classList.toggle('locked',on);b.textContent=on?'LOCKED':'UNLOCKED'}
+  function mutate(forceCursed){
+    tabs.forEach(function(cat){if(!locks[cat]){var max=traitSets[cat].length;selected[cat]=forceCursed?Math.max(0,Math.min(max-1,4)):Math.floor(Math.random()*max)}});
+    document.getElementById('genomeCode').textContent='GENOME '+Math.random().toString(16).slice(2,8).toUpperCase();render();
+  }
+  function attributes(sel){return tabs.map(function(cat){var t=trait(cat,sel);return {trait_type:cat,value:t.name}})}
+  function chaos(sel){var sum=0;tabs.forEach(function(cat){sum+=100-trait(cat,sel).rarity});return Math.min(99.9,Math.round(sum/6*10)/10)}
+  function renderMeta(){
+    var name=document.getElementById('collectionName').value.trim()||'Untitled Pack',id=document.getElementById('tokenId').value||'0',score=chaos(selected);
+    var meta={name:name+' #'+id,description:'A genetically irresponsible onchain specimen.',image:'ipfs://YOUR_IMAGE_CID',attributes:attributes(selected)};
+    document.getElementById('jsonPreview').textContent=JSON.stringify(meta,null,2);
+    document.getElementById('rarityScore').textContent=score.toFixed(1);document.getElementById('rarityRank').textContent=score>88?'S+':score>78?'A':score>66?'B':'C';
+    document.getElementById('specimenTitle').textContent='Specimen #'+String(id).padStart(5,'0');
+    document.getElementById('tickerText').textContent='0 promises · 6 traits · '+(score>85?'1 suspiciously rare accident':'1 questionable decision')
+  }
+  function makeBatch(){batch=[];for(var i=0;i<6;i++){var s={};tabs.forEach(function(cat){s[cat]=Math.floor(Math.random()*traitSets[cat].length)});batch.push(s)}renderBatch(true)}
+  function renderBatch(force){
+    var el=document.getElementById('batch');if(!force&&el.children.length)return;el.innerHTML='';
+    batch.forEach(function(sel,i){var b=document.createElement('button');b.className='specimen';var cv=document.createElement('canvas');cv.width=320;cv.height=320;var cc=cv.getContext('2d');cc.scale(.5,.5);drawScene(cc,sel,false);var nm=document.createElement('b');nm.textContent='MUTANT '+String(i+1).padStart(2,'0');var sc=document.createElement('span');sc.textContent=chaos(sel).toFixed(1)+' CHAOS';b.append(cv,nm,sc);b.onclick=function(){selected=Object.assign({},sel);render();showToast('DNA loaded. Ethics committee notified.')};el.appendChild(b)})
+  }
+  function renderPacks(){var el=document.getElementById('packGrid');el.innerHTML='';packConcepts.forEach(function(p,i){var b=document.createElement('button');b.className='pack'+(i===0?' active':'');b.style.setProperty('--pack',p.color);b.innerHTML='<b>'+p.name+'</b><p>'+p.line+'</p><code>'+p.code+'</code>';b.onclick=function(){document.querySelectorAll('.pack').forEach(function(x){x.classList.remove('active')});b.classList.add('active');tabs.forEach(function(cat,ix){selected[cat]=Math.min(p.theme[ix],traitSets[cat].length-1)});document.getElementById('collectionName').value=p.name;render();showToast(p.name+' pack injected.')};el.appendChild(b)})}
+  function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show')},2200)}
+  function downloadBlob(blob,name){var a=document.createElement('a'),u=URL.createObjectURL(blob);a.href=u;a.download=name;a.click();setTimeout(function(){URL.revokeObjectURL(u)},1000)}
+  function downloadPNG(){art.toBlob(function(blob){downloadBlob(blob,(document.getElementById('collectionName').value||'specimen').replace(/\s+/g,'-').toLowerCase()+'-'+document.getElementById('tokenId').value+'.png');showToast('PNG escaped the lab.')},'image/png')}
+  function metadata(){return document.getElementById('jsonPreview').textContent}
+  function addFiles(fileList){
+    var files=Array.prototype.filter.call(fileList,function(f){return /^image\/(png|jpeg|webp)$/.test(f.type)});if(!files.length){showToast('No usable images found. Feed me PNG, JPG, or WEBP.');return}
+    var loaded=0;
+    files.forEach(function(file){var path=file.webkitRelativePath||file.name,parts=path.split('/'),base=file.name.replace(/\.[^.]+$/,''),guess=(parts.length>1?parts[parts.length-2]:base.split(/[-_ ]/)[0]);var cat=tabs.find(function(x){return x.toLowerCase()===guess.toLowerCase()})||activeTab;var img=new Image(),url=URL.createObjectURL(file);img.onload=function(){var item={name:base.replace(/[-_]/g,' '),rarity:10,color:'#cbd4cd',kind:'upload',image:img,loaded:true,url:url};traitSets[cat].push(item);selected[cat]=traitSets[cat].length-1;loaded++;if(loaded===files.length){activeTab=cat;renderTabs();render();showToast(files.length+' trait layer'+(files.length>1?'s':'')+' loaded. Memory only, no upload.')}};img.onerror=function(){loaded++;URL.revokeObjectURL(url)};img.src=url
+    })
+  }
+  function calc(){var s=Math.max(0,+document.getElementById('supply').value||0),p=Math.max(0,+document.getElementById('price').value||0),st=Math.max(0,Math.min(100,+document.getElementById('sellthrough').value||0))/100,cr=Math.max(0,Math.min(100,+document.getElementById('creator').value||0))/100;document.getElementById('gross').textContent='$'+Math.round(s*p*st*cr).toLocaleString()}
+
+  document.getElementById('randomBtn').onclick=function(){mutate(false);showToast('Fresh mutation. Probably legal.')};
+  document.getElementById('uglyBtn').onclick=function(){mutate(true);showToast('Taste successfully removed.')};
+  document.getElementById('spinBtn').onclick=function(){var n=0,iv=setInterval(function(){mutate(false);n++;if(n>=10){clearInterval(iv);makeBatch();showToast('10× mutation complete. Floor not found.')}},85)};
+  document.getElementById('lockBtn').onclick=function(){locks[activeTab]=!locks[activeTab];syncLock();showToast(activeTab+(locks[activeTab]?' locked. Good gene secured.':' unlocked. Chaos resumed.'))};
+  document.getElementById('pngBtn').onclick=downloadPNG;
+  document.getElementById('jsonBtn').onclick=function(){downloadBlob(new Blob([metadata()],{type:'application/json'}),'metadata-'+document.getElementById('tokenId').value+'.json');showToast('Metadata bottled.')};
+  document.getElementById('copyBtn').onclick=function(){navigator.clipboard.writeText(metadata()).then(function(){showToast('Metadata copied.')},function(){showToast('Copy blocked. Download it instead.')})};
+  document.getElementById('collectionName').oninput=renderMeta;document.getElementById('tokenId').oninput=renderMeta;
+  ['supply','price','sellthrough','creator'].forEach(function(id){document.getElementById(id).oninput=calc});
+  var fi=document.getElementById('fileInput'),fo=document.getElementById('folderInput'),dz=document.getElementById('dropZone');
+  document.getElementById('loadBtn').onclick=function(){fo.click()};dz.onclick=function(e){if(e.target===dz||e.target.tagName!=='INPUT')fi.click()};dz.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fi.click()}};
+  fi.onchange=function(){addFiles(fi.files)};fo.onchange=function(){addFiles(fo.files)};
+  ['dragenter','dragover'].forEach(function(n){dz.addEventListener(n,function(e){e.preventDefault();dz.classList.add('drag')})});['dragleave','drop'].forEach(function(n){dz.addEventListener(n,function(e){e.preventDefault();dz.classList.remove('drag')})});dz.addEventListener('drop',function(e){addFiles(e.dataTransfer.files)});
+  renderTabs();syncLock();makeBatch();renderPacks();render();calc();
+})();
+</script>
+</body>
+</html>

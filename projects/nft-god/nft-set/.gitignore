@@ -1,0 +1,22 @@
+# Dependencies and local junk
+node_modules/
+package-lock.json
+
+# Generated metadata (the pipeline output — reproducible from art/ + traits/)
+metadata/[0-9]*.json
+metadata/provenance.json
+!metadata/SAMPLE-*.json
+
+# Never commit keys, env, or wallets
+.env
+.env.*
+*.pem
+*.key
+**/*private*key*
+**/*secret*
+key.json
+keys/
+
+# OS / editor
+.DS_Store
+Thumbs.db

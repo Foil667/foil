@@ -1,0 +1,46 @@
+# GitHub Actions — NEURAL_MESH CI (self-hosted runner on VPS)
+#
+# Runner: neural-mesh-vps on Hostinger (api.d0xeddev.com)
+#        Ubuntu 24.04, Python 3.12, x86_64
+#        Service: /etc/systemd/system/actions.runner.*.service
+
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+permissions:
+  contents: read
+
+jobs:
+  core-tests:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - name: Core tests (unittest — pure stdlib, no deps)
+        run: |
+          PYTHONPATH=. python3 -m unittest tests.test_core tests.test_security tests.test_dream_provenance_guard tests.test_reputation tests.test_lanes tests.test_lifecycle tests.test_sharing tests.test_meshfile tests.test_cli_operations -v -q 2>&1
+
+  server-tests:
+    runs-on: self-hosted
+    needs: core-tests
+    steps:
+      - uses: actions/checkout@v4
+      - name: Server tests
+        run: |
+          PYTHONPATH=. python3 -m unittest tests.test_server_lifecycle tests.test_server_operations -v 2>&1
+
+  lint:
+    runs-on: self-hosted
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - name: Flake8 syntax checks
+        run: |
+          python3 -m flake8 neural_mesh/ server.py --count --select=E9,F63,F7,F82 --show-source --statistics 2>&1
+      - name: Flake8 style (warnings)
+        run: |
+          python3 -m flake8 neural_mesh/ server.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics 2>&1

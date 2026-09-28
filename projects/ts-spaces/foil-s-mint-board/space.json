@@ -1,0 +1,8 @@
+{
+  "runtime": "static",
+  "platformVersion": 15,
+  "entry": "index.html",
+  "name": "Foil's Mint Board",
+  "slug": "foil-s-mint-board",
+  "managedCronJobs": []
+}

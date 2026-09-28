@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Vibe Pak Opener</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg:#f3f0e8; --panel:#fffdf6; --ink:#171713; --muted:#5c5b54;
+      --line:#171713; --lime:#b8f41d; --lime2:#7aa900; --orange:#ff6b1a;
+      --violet:#7a58c9; --pink:#e94c89; --soft:#e9e4d8; --shadow:#171713;
+      --success:#4b8d05; --scan:rgba(23,23,19,.06);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#10110d; --panel:#1b1d17; --ink:#f3f1e7; --muted:#b6b5a9;
+        --line:#f3f1e7; --lime:#c5ff27; --lime2:#91c311; --orange:#ff7b2f;
+        --violet:#a98bec; --pink:#ff6da4; --soft:#272a21; --shadow:#000;
+        --success:#b8f41d; --scan:rgba(255,255,255,.035);
+      }
+    }
+    *{box-sizing:border-box}
+    [hidden]{display:none!important}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Mono",monospace;min-height:100vh;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;background:repeating-linear-gradient(0deg,transparent 0 3px,var(--scan) 3px 4px);opacity:.4}
+    button{font:inherit;color:inherit}
+    .shell{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:24px 0 64px}
+    .ticker{display:flex;align-items:center;gap:14px;border:2px solid var(--line);background:var(--ink);color:var(--bg);padding:9px 12px;box-shadow:4px 4px 0 var(--lime);font-size:12px;font-weight:700;overflow:hidden}
+    .ticker b{color:var(--lime);font-family:Bungee,sans-serif;font-size:11px;white-space:nowrap}
+    .ticker-track{white-space:nowrap;animation:marquee 25s linear infinite;display:inline-block}
+    @keyframes marquee{to{transform:translateX(-50%)}}
+    .hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);gap:28px;align-items:center;padding:46px 0 32px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;font-weight:800;font-size:12px;background:var(--lime);color:#171713;border:2px solid #171713;padding:7px 9px;transform:rotate(-1deg);box-shadow:3px 3px 0 #171713}
+    .dot{width:8px;height:8px;background:var(--orange);border:1px solid #171713;border-radius:50%;animation:pulse 1.1s steps(2,end) infinite}
+    @keyframes pulse{50%{opacity:.25}}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-family:Bungee,sans-serif;font-size:clamp(44px,7.2vw,92px);line-height:.88;letter-spacing:-.035em;margin:24px 0 24px;max-width:800px}
+    h1 span{display:block;color:var(--orange);text-shadow:4px 4px 0 var(--ink);-webkit-text-stroke:1px var(--ink)}
+    .lede{font-size:clamp(15px,1.7vw,19px);line-height:1.6;max-width:650px;color:var(--muted);font-weight:600}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+    .btn{appearance:none;border:3px solid var(--line);background:var(--lime);color:#171713;padding:14px 18px;font-weight:900;cursor:pointer;box-shadow:5px 5px 0 var(--shadow);text-transform:uppercase;transition:transform .12s,box-shadow .12s;letter-spacing:-.03em}
+    .btn:hover{transform:translate(2px,2px);box-shadow:3px 3px 0 var(--shadow)}
+    .btn:active{transform:translate(5px,5px);box-shadow:0 0 0 var(--shadow)}
+    .btn.alt{background:var(--panel);color:var(--ink)}
+    .btn.orange{background:var(--orange);color:#171713}
+    .micro{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.5}
+    .machine{position:relative;border:3px solid var(--line);background:var(--panel);padding:9px;box-shadow:10px 10px 0 var(--orange);transform:rotate(1deg)}
+    .machine img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover;image-rendering:auto}
+    .machine .stamp{position:absolute;right:-10px;bottom:-16px;background:var(--lime);color:#171713;border:2px solid #171713;padding:9px 12px;font-family:Bungee,sans-serif;font-size:13px;transform:rotate(-4deg);box-shadow:3px 3px 0 #171713}
+    .section{padding:36px 0}
+    .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;border-bottom:3px solid var(--line);padding-bottom:14px;margin-bottom:20px}
+    h2{font-family:Bungee,sans-serif;font-size:clamp(25px,4vw,44px);line-height:1;margin-bottom:0}
+    .section-head p{max-width:520px;margin:0;color:var(--muted);font-size:13px;line-height:1.5}
+    .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .pack{position:relative;text-align:left;border:3px solid var(--line);background:var(--panel);padding:0;cursor:pointer;box-shadow:6px 6px 0 var(--shadow);overflow:hidden;min-height:255px;transition:transform .12s}
+    .pack:hover{transform:translateY(-3px)}
+    .pack[aria-pressed="true"]{box-shadow:8px 8px 0 var(--orange);outline:4px solid var(--lime);outline-offset:-7px}
+    .pack-art{height:128px;border-bottom:3px solid var(--line);position:relative;overflow:hidden;background:var(--soft)}
+    .pack-art:before,.pack-art:after{content:"";position:absolute;inset:0}
+    .pack-art:before{background:repeating-linear-gradient(135deg,var(--lime) 0 14px,#171713 14px 28px);transform:scale(1.3) rotate(-6deg)}
+    .pack:nth-child(2) .pack-art:before{background:repeating-linear-gradient(45deg,var(--orange) 0 16px,#171713 16px 32px)}
+    .pack:nth-child(3) .pack-art:before{background:repeating-linear-gradient(90deg,var(--violet) 0 9px,var(--panel) 9px 18px)}
+    .pack-art:after{inset:18px 24px;background:var(--panel);border:3px solid var(--line);transform:rotate(4deg);box-shadow:5px 5px 0 var(--shadow)}
+    .pack-glyph{position:absolute;z-index:2;inset:0;display:grid;place-items:center;font-family:Bungee,sans-serif;font-size:35px;color:var(--ink);text-shadow:2px 2px 0 var(--lime);transform:rotate(-4deg)}
+    .pack-copy{padding:15px 16px 17px}
+    .pack-title{font-family:Bungee,sans-serif;font-size:19px;margin:0 0 6px}
+    .pack-desc{font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 13px;min-height:36px}
+    .odds{display:flex;flex-wrap:wrap;gap:6px}
+    .odds span{font-size:10px;font-weight:800;border:1.5px solid var(--line);padding:4px 6px;background:var(--soft)}
+    .rip-zone{display:grid;grid-template-columns:minmax(0,1fr) 280px;border:3px solid var(--line);background:var(--panel);box-shadow:8px 8px 0 var(--shadow);margin-top:25px}
+    .rip-main{padding:22px;border-right:3px solid var(--line)}
+    .rip-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:18px}
+    .rip-title{font-family:Bungee,sans-serif;font-size:22px}
+    .meter{height:15px;border:2px solid var(--line);background:var(--soft);padding:2px;margin-bottom:18px}
+    .meter-fill{height:100%;width:12%;background:repeating-linear-gradient(90deg,var(--lime) 0 12px,var(--orange) 12px 24px);transition:width .5s steps(5,end)}
+    .rip-btn{width:100%;font-family:Bungee,sans-serif;font-size:clamp(20px,4vw,34px);padding:18px}
+    .rip-side{padding:20px;background:var(--soft);display:flex;flex-direction:column;justify-content:space-between}
+    .rip-side strong{font-family:Bungee,sans-serif;font-size:17px}
+    .rip-side ul{list-style:none;padding:0;margin:16px 0;font-size:12px;line-height:1.8}
+    .rip-side li:before{content:"+";color:var(--orange);font-weight:900;margin-right:7px}
+    .session{font-size:11px;border-top:2px solid var(--line);padding-top:12px;color:var(--muted)}
+    .reveal{display:none;padding:35px 0 15px}
+    .reveal.active{display:block}
+    .reveal-status{text-align:center;font-family:Bungee,sans-serif;font-size:clamp(24px,5vw,50px);margin:0 0 20px;animation:jitter .4s steps(2,end) 3}
+    @keyframes jitter{25%{transform:translateX(-3px) rotate(-.5deg)}75%{transform:translateX(3px) rotate(.5deg)}}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;perspective:1000px}
+    .card{border:3px solid var(--line);background:var(--panel);box-shadow:7px 7px 0 var(--shadow);overflow:hidden;transform:rotateY(90deg);opacity:0}
+    .card.show{animation:flip .55s cubic-bezier(.2,.8,.2,1) forwards}
+    .card:nth-child(2).show{animation-delay:.25s}.card:nth-child(3).show{animation-delay:.5s}
+    @keyframes flip{to{transform:rotateY(0);opacity:1}}
+    .card-art{position:relative;border-bottom:3px solid var(--line);aspect-ratio:1/1;overflow:hidden;background:#111}
+    .card-art img{width:100%;height:100%;object-fit:cover;display:block}
+    .card-art .serial{position:absolute;left:8px;top:8px;background:#171713;color:#fff;padding:4px 6px;font-size:10px;font-weight:800;border:1px solid #fff}
+    .card-body{padding:14px}
+    .rarity{display:inline-block;border:2px solid var(--line);padding:4px 7px;font-size:10px;font-weight:900;background:var(--lime);color:#171713;margin-bottom:8px}
+    .rarity.mythic{background:var(--orange)}.rarity.feral{background:var(--violet);color:#fff}
+    .card h3{font-family:Bungee,sans-serif;font-size:18px;margin:0 0 8px}
+    .traits{display:grid;grid-template-columns:1fr 1fr;gap:5px;font-size:10px;color:var(--muted)}
+    .traits span{background:var(--soft);padding:5px}
+    .reaction-row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:24px}
+    .dex{display:grid;grid-template-columns:1.15fr .85fr;gap:18px}
+    .dex-panel,.manifesto{border:3px solid var(--line);background:var(--panel);padding:22px;box-shadow:6px 6px 0 var(--shadow)}
+    .dex-empty{min-height:200px;display:grid;place-items:center;text-align:center;color:var(--muted);border:2px dashed var(--muted);padding:30px}
+    .dex-list{display:grid;gap:8px}
+    .dex-item{display:grid;grid-template-columns:44px 1fr auto;gap:10px;align-items:center;border-bottom:2px solid var(--line);padding-bottom:8px}
+    .dex-item img{width:44px;height:44px;object-fit:cover;border:2px solid var(--line)}
+    .dex-item b{font-size:12px}.dex-item small{display:block;color:var(--muted);margin-top:3px}
+    .score{font-family:Bungee,sans-serif;color:var(--orange)}
+    .manifesto{background:var(--ink);color:var(--bg)}
+    .manifesto h3{font-family:Bungee,sans-serif;font-size:24px;line-height:1.05;color:var(--lime)}
+    .manifesto p{font-size:13px;line-height:1.7;color:var(--bg);opacity:.85}
+    .manifesto code{display:block;border:1px solid currentColor;padding:10px;margin-top:14px;color:var(--orange);white-space:normal}
+    .toast{position:fixed;right:20px;bottom:20px;z-index:80;background:var(--ink);color:var(--bg);border:2px solid var(--lime);box-shadow:5px 5px 0 var(--orange);padding:13px 16px;font-weight:800;font-size:12px;max-width:330px;transform:translateY(160%);transition:transform .25s}
+    .toast.show{transform:translateY(0)}
+    .confetti{position:fixed;pointer-events:none;z-index:75;width:10px;height:10px;top:-15px;animation:fall 1.8s linear forwards}
+    @keyframes fall{to{transform:translate(var(--drift),110vh) rotate(720deg)}}
+    footer{padding:44px 0 10px;display:flex;justify-content:space-between;gap:20px;align-items:center;color:var(--muted);font-size:11px}
+    .footer-mark{font-family:Bungee,sans-serif;color:var(--ink)}
+    @media(max-width:800px){
+      .shell{width:min(100% - 22px,680px);padding-top:12px}.hero{grid-template-columns:1fr;padding-top:32px;gap:30px}.machine{order:-1;transform:none;box-shadow:6px 6px 0 var(--orange)}
+      h1{font-size:clamp(45px,15vw,74px)}.packs{grid-template-columns:1fr}.pack{min-height:0;display:grid;grid-template-columns:120px 1fr}.pack-art{height:auto;border-bottom:0;border-right:3px solid var(--line)}
+      .pack-art:after{inset:24px 16px}.pack-glyph{font-size:23px}.pack-desc{min-height:0}.rip-zone{grid-template-columns:1fr}.rip-main{border-right:0;border-bottom:3px solid var(--line)}.cards{grid-template-columns:1fr;max-width:460px;margin:auto}.dex{grid-template-columns:1fr}.section-head{align-items:flex-start;flex-direction:column}.section-head p{max-width:none}.ticker{margin:0 -2px}.ticker-track{animation-duration:18s}
+    }
+    @media(max-width:480px){
+      .pack{grid-template-columns:96px 1fr}.pack-copy{padding:12px}.pack-title{font-size:16px}.pack-desc{font-size:11px}.pack-art:after{inset:30px 12px}.pack-glyph{font-size:18px}.rip-main,.rip-side,.dex-panel,.manifesto{padding:16px}.hero-actions .btn{width:100%}.rip-top{align-items:flex-start;flex-direction:column}.machine .stamp{right:4px}.odds span{font-size:9px}footer{align-items:flex-start;flex-direction:column}
+    }
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.ticker-track,.dot,.reveal-status{animation:none!important}.card{transform:none;opacity:1}.card.show{animation:none}.confetti{display:none}}
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="ticker" aria-label="pack opener status">
+      <b>SIM TERMINAL</b>
+      <div class="ticker-track">NO WALLET • NO GAS • THREE CARDS PER PAK • BAD FINANCIAL INSTINCTS ENCOURAGED • NO WALLET • NO GAS • THREE CARDS PER PAK • BAD FINANCIAL INSTINCTS ENCOURAGED • </div>
+    </div>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow"><span class="dot"></span> THE PACK MACHINE IS MALFUNCTIONING BEAUTIFULLY</div>
+        <h1>RIP PAKS.<span>CATCH VIBES.</span></h1>
+        <p class="lede">A zero-stakes arcade for opening fictional Vibe Paks, meeting financially irresponsible creatures, and finding out if the universe owes you a mythic.</p>
+        <div class="hero-actions">
+          <button class="btn" id="jumpRip">Choose your pak ↓</button>
+          <button class="btn alt" id="soundBtn" aria-pressed="false">Sound: off</button>
+        </div>
+        <p class="micro">Demo only. No purchase, wallet, token, mint, or suspicious browser extension required.</p>
+      </div>
+      <div class="machine">
+        <img src="assets/pak-machine.png" alt="Pixel-art pack machine exploding with bizarre collectible creatures and arcade tokens">
+        <div class="stamp">100% UNHINGED</div>
+      </div>
+    </section>
+
+    <section class="section" id="choose">
+      <div class="section-head">
+        <h2>Pick your poison</h2>
+        <p>Each pak has its own species, flavor, and questionable risk profile. Odds are for this demo pull—not a promise from a guy in a Discord.</p>
+      </div>
+      <div class="packs" role="group" aria-label="Choose a pack">
+        <button class="pack" data-pack="vibe" aria-pressed="true">
+          <div class="pack-art"><span class="pack-glyph">VIBE PAK</span></div>
+          <div class="pack-copy">
+            <h3 class="pack-title">Vibe Pak</h3>
+            <p class="pack-desc">Pure timeline energy. No thesis. Immaculate aura.</p>
+            <div class="odds"><span>COMMON 60%</span><span>FERAL 32%</span><span>MYTHIC 8%</span></div>
+          </div>
+        </button>
+        <button class="pack" data-pack="baes" aria-pressed="false">
+          <div class="pack-art"><span class="pack-glyph">BAES OS</span></div>
+          <div class="pack-copy">
+            <h3 class="pack-title">BAES OS</h3>
+            <p class="pack-desc">Companions booting with premium delusion pre-installed.</p>
+            <div class="odds"><span>COMMON 55%</span><span>FERAL 34%</span><span>MYTHIC 11%</span></div>
+          </div>
+        </button>
+        <button class="pack" data-pack="etc" aria-pressed="false">
+          <div class="pack-art"><span class="pack-glyph">ETC.</span></div>
+          <div class="pack-copy">
+            <h3 class="pack-title">Etc. Pak</h3>
+            <p class="pack-desc">The leftovers achieved consciousness and formed a market.</p>
+            <div class="odds"><span>COMMON 48%</span><span>FERAL 38%</span><span>MYTHIC 14%</span></div>
+          </div>
+        </button>
+      </div>
+
+      <div class="rip-zone">
+        <div class="rip-main">
+          <div class="rip-top">
+            <div><div class="micro" style="margin:0 0 5px">LOADED IN CHAMBER</div><div class="rip-title" id="loadedName">VIBE PAK</div></div>
+            <div class="eyebrow" id="luckLabel">LUCK: SUSPICIOUS</div>
+          </div>
+          <div class="meter" aria-label="chaos meter"><div class="meter-fill" id="meterFill"></div></div>
+          <button class="btn orange rip-btn" id="ripBtn">RIP THE FREE DEMO PAK</button>
+        </div>
+        <aside class="rip-side">
+          <div>
+            <strong>WHAT HAPPENS?</strong>
+            <ul><li>Three creatures appear</li><li>Traits mutate per pull</li><li>Score feeds your session dex</li></ul>
+          </div>
+          <div class="session"><b id="pullCount">0</b> paks ripped • <b id="cardCount">0</b> cards found<br>Collection clears when this tab closes.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="reveal" id="reveal" aria-live="polite">
+      <div class="reveal-status" id="revealStatus">THE FOIL IS SCREAMING</div>
+      <div class="cards" id="cards"></div>
+      <div class="reaction-row">
+        <button class="btn" id="againBtn">Again. Obviously.</button>
+        <button class="btn alt" id="copeBtn">Generate cope</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Session dex</h2>
+        <p>Your pulls live here until the tab closes. The score means almost nothing, which makes it extremely important.</p>
+      </div>
+      <div class="dex">
+        <div class="dex-panel">
+          <div class="dex-empty" id="dexEmpty"><div><b>NOTHING YET.</b><br><br>Rip a pak. Become a statistic.</div></div>
+          <div class="dex-list" id="dexList" hidden></div>
+        </div>
+        <aside class="manifesto">
+          <h3>Build. Rip. Ship. Repeat.</h3>
+          <p>The machine does not care about your roadmap. It rewards motion, taste, and a reckless commitment to pressing the large orange button.</p>
+          <code>money → build → ship → learn → build better</code>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <span class="footer-mark">VIBE PAK TERMINAL / SIMULATION</span>
+      <span>No real assets were harmed in this pull.</span>
+    </footer>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    (function(){
+      var selected='vibe', pulls=0, found=[], soundOn=false, audioCtx=null;
+      var packNames={vibe:'VIBE PAK',baes:'BAES OS PAK',etc:'ETC. PAK'};
+      var roots={
+        vibe:['Chart Frog','Vibe Goblin','Exit Liquidity','Candle Gremlin','Foil Prince','Timeline Oracle'],
+        baes:['Bootleg Angel','Kernel Cutie','Cache Me Outside','Hotfix Babe','Daemon Darling','Patch Princess'],
+        etc:['Misc. Entity','Unnamed Intern','Spare Part','Final Final v7','Loose Decimal','Mystery Folder']
+      };
+      var imgs=['assets/frog-king.png','assets/orb-grub.png','assets/bat-accountant.png'];
+      var hats=['Foil Crown','Laser Visor','No Thoughts','Tiny Cap','Market Halo','Error 404'];
+      var moods=['Overleveraged','Unbothered','Suspicious','Bullish-ish','Chronically Online','Built Different'];
+      var powers=['Ratio Shield','Dip Magnet','Aura Farming','Gas Dodger','Reply Guy Ray','Infinite Cope'];
+      var bg=['Lime Terminal','Exit Orange','Purple Hour','Basement Alpha','Chartreuse Void'];
+      var odds={vibe:[.60,.92],baes:[.55,.89],etc:[.48,.86]};
+      function pick(a){return a[Math.floor(Math.random()*a.length)]}
+      function rarity(){var r=Math.random(),o=odds[selected];return r<o[0]?'COMMON':r<o[1]?'FERAL':'MYTHIC'}
+      function scoreFor(r){var base=r==='MYTHIC'?900:r==='FERAL'?420:120;return base+Math.floor(Math.random()*99)}
+      function beep(freq,dur,type){if(!soundOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();var o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=type||'square';o.frequency.value=freq;g.gain.setValueAtTime(.045,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+dur);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+dur)}catch(e){}}
+      function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(function(){t.classList.remove('show')},2600)}
+      function confetti(){var colors=['#b8f41d','#ff6b1a','#7a58c9','#e94c89','#fffdf6'];for(var i=0;i<34;i++){var el=document.createElement('i');el.className='confetti';el.style.left=Math.random()*100+'vw';el.style.background=pick(colors);el.style.setProperty('--drift',(Math.random()*220-110)+'px');el.style.animationDelay=Math.random()*.45+'s';el.style.transform='rotate('+Math.random()*180+'deg)';document.body.appendChild(el);setTimeout(function(n){n.remove()},2500,el)}}
+      function makeCard(i){var r=rarity(),item={name:pick(roots[selected]),rarity:r,score:scoreFor(r),img:imgs[(i+pulls+Math.floor(Math.random()*3))%3],hat:pick(hats),mood:pick(moods),power:pick(powers),bg:pick(bg),serial:String(Math.floor(Math.random()*9999)).padStart(4,'0')};found.unshift(item);return item}
+      function cardHTML(c){return '<article class="card"><div class="card-art"><img src="'+c.img+'" alt="Pixel-art portrait of '+c.name+'"><span class="serial">#'+c.serial+'</span></div><div class="card-body"><span class="rarity '+c.rarity.toLowerCase()+'">'+c.rarity+' • '+c.score+'</span><h3>'+c.name+'</h3><div class="traits"><span>HEAD<br><b>'+c.hat+'</b></span><span>MOOD<br><b>'+c.mood+'</b></span><span>POWER<br><b>'+c.power+'</b></span><span>VOID<br><b>'+c.bg+'</b></span></div></div></article>'}
+      function updateDex(){var list=document.getElementById('dexList'),empty=document.getElementById('dexEmpty');empty.hidden=true;list.hidden=false;list.innerHTML=found.slice(0,8).map(function(c){return '<div class="dex-item"><img src="'+c.img+'" alt=""><div><b>'+c.name+'</b><small>'+c.rarity+' • #'+c.serial+'</small></div><span class="score">'+c.score+'</span></div>'}).join('')}
+      function rip(){
+        var btn=document.getElementById('ripBtn');btn.disabled=true;btn.textContent='CRINKLING REALITY…';
+        var meter=document.getElementById('meterFill');meter.style.width='100%';beep(130,.18,'sawtooth');
+        setTimeout(function(){
+          pulls++;var trio=[makeCard(0),makeCard(1),makeCard(2)];
+          document.getElementById('cards').innerHTML=trio.map(cardHTML).join('');
+          document.getElementById('reveal').classList.add('active');
+          document.getElementById('revealStatus').textContent=trio.some(function(x){return x.rarity==='MYTHIC'})?'MYTHIC DETECTED. STAY HUMBLE-ish.':'THE FOIL HAS SPOKEN';
+          document.getElementById('pullCount').textContent=pulls;document.getElementById('cardCount').textContent=found.length;
+          updateDex();confetti();beep(330,.12);setTimeout(function(){beep(520,.16)},130);
+          requestAnimationFrame(function(){document.querySelectorAll('.card').forEach(function(c){c.classList.add('show')})});
+          document.getElementById('reveal').scrollIntoView({behavior:'smooth',block:'start'});
+          btn.disabled=false;btn.textContent='RIP ANOTHER '+packNames[selected];meter.style.width=(12+Math.random()*35)+'%';
+        },750)
+      }
+      document.querySelectorAll('.pack').forEach(function(p){p.addEventListener('click',function(){document.querySelectorAll('.pack').forEach(function(x){x.setAttribute('aria-pressed','false')});p.setAttribute('aria-pressed','true');selected=p.dataset.pack;document.getElementById('loadedName').textContent=packNames[selected];document.getElementById('luckLabel').textContent='LUCK: '+pick(['SUSPICIOUS','COOKING','UNLICENSED','PROBABLY FINE']);document.getElementById('ripBtn').textContent='RIP THE FREE DEMO PAK';document.getElementById('meterFill').style.width=(12+Math.random()*45)+'%';beep(180,.08)})});
+      document.getElementById('ripBtn').addEventListener('click',rip);
+      document.getElementById('againBtn').addEventListener('click',function(){document.getElementById('choose').scrollIntoView({behavior:'smooth'});setTimeout(rip,400)});
+      document.getElementById('copeBtn').addEventListener('click',function(){toast(pick(['Rarity is a social construct anyway.','The market simply lacks your vision.','You were early to being late.','Floor price: emotionally priceless.','The real mythic was the gas we did not spend.']))});
+      document.getElementById('jumpRip').addEventListener('click',function(){document.getElementById('choose').scrollIntoView({behavior:'smooth'})});
+      document.getElementById('soundBtn').addEventListener('click',function(){soundOn=!soundOn;this.setAttribute('aria-pressed',String(soundOn));this.textContent='Sound: '+(soundOn?'on':'off');beep(260,.1);toast(soundOn?'Tiny arcade noises enabled.':'Silence restored.')});
+    })();
+  </script>
+</body>
+</html>

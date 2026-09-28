@@ -1,0 +1,2 @@
+Beat: web
+Angle: New free-mint or whitelist announcements in the last 24h for CCFF00 square holders on Robinhood Chain (and Base where CCFF00-gated); EXCLUDE the ChiliPunks 11am window (x.com/chilipunks/status/2102772616180142580, covered 1h ago) and BambooRiot WL (bambooriot.xyz/whitelist, covered 23h ago) and file only new items, each with mint link, eligibility, and verification status — Foil holds square #4429 with a live auto-claim order for verified free mints.

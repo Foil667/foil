@@ -1,0 +1,8 @@
+{
+  "runtime": "static",
+  "platformVersion": 15,
+  "entry": "index.html",
+  "name": "Foil Flip Desk",
+  "slug": "foil-flip-desk",
+  "managedCronJobs": []
+}

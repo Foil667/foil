@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+*.db
+*.db-journal
+.env
+build/
+*.egg-info/
+runtime/
+.DS_Store
+intuition-client/node_modules/
+# Local-only deployment/signing scratch scripts; never stage signer-path helpers.
+intuition-client/local-scratch/
+intuition-client/*sign*.mjs
+intuition-client/*deploy*.mjs
+intuition-client/*triple*.mjs
+intuition-client/verify-key.mjs
+
+# Large media exports (FLUX video, renders)
+media/
+
+# Runtime dream-cycle artifacts
+dream_results/
+dream-consolidation-*.md
+
+# Mesh runtime backups
+mesh.db.bak-*
+
+# LongMemEval oracle + benchmark outputs (large, downloaded)
+data/

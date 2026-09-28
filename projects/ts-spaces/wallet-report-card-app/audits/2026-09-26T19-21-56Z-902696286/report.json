@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-af018b88-f537-4b58-832c-c94ddf8a2c4c/",
+  "duration_ms": 6183.985991,
+  "output_dir": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/wallet-report-card-app/audits/2026-09-26T19-21-56Z-902696286/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [],
+    "mobile": []
+  },
+  "images": {
+    "total": 0,
+    "broken": [],
+    "duplicate": [],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 0,
+  "external_fetch_failure_samples": [],
+  "blocked_requests": [],
+  "external_requests": [],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 3940,
+      "bytes_down": 2487
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 3,
+  "aria_snapshot": "- main:\n  - paragraph: ERC-721 HOLDING ANALYSIS\n  - heading \"How strong are those hands?\" [level=1]\n  - paragraph: Trace a wallet’s NFT exits, hold times, and flip patterns—then turn the history into one inspectable score.\n  - text: Wallet address\n  - textbox \"Wallet address\"\n  - text: Any public EVM wallet. Nothing is connected or signed. Chain\n  - combobox \"Chain\":\n    - option \"Base — Blockscout\" [selected]\n    - option \"Ethereum — Blockscout\"\n    - option \"Robinhood Chain — Explorer + RPC fallback\"\n  - button \"Grade this wallet\" [disabled]\n  - region \"How the rating works\":\n    - text: \"50\"\n    - paragraph: points for average hold duration\n    - text: \"30\"\n    - paragraph: points for avoiding 7-day flips\n    - text: \"20\"\n    - paragraph: points for avoiding 30-day flips",
+  "audit_session_id": "e580beba-6fc0-4c02-8b9c-254bb871d397",
+  "mobile_ms": 3675.2635769999997,
+  "cold_launch_ms": 1440.085117,
+  "desktop_ms": 3767.243887,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

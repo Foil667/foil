@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/foil-flip-desk/.harness/probe-ui/sock",
+  "slug": "foil-flip-desk",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-cf766dfe-df1a-4e6f-a3f7-22d781127d37/",
+  "audit_session_id": "a43ea76c-56a8-4f7a-b995-6de90abecfc1",
+  "pid": 7986
+}

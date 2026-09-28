@@ -1,0 +1,8 @@
+{
+  "runtime": "static",
+  "platformVersion": 15,
+  "entry": "index.html",
+  "name": "NFT Mint Site Demo",
+  "slug": "nft-mint-site-demo",
+  "managedCronJobs": []
+}

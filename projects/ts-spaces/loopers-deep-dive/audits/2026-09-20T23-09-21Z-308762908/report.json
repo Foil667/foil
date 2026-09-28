@@ -1,0 +1,188 @@
+{
+  "ok": true,
+  "url": "https://62d2e637-81ea-4abf-9174-9030eb32cc84.metaaivm.com:4431/spaces/v2/hatch-audit-7f121f7a-55d8-4ec4-b692-a60141c72afb/",
+  "duration_ms": 11033.952552,
+  "output_dir": "/home/hatch/workspace/ts-spaces/loopers-deep-dive/audits/2026-09-20T23-09-21Z-308762908",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/loopers-deep-dive/audits/2026-09-20T23-09-21Z-308762908/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/loopers-deep-dive/audits/2026-09-20T23-09-21Z-308762908/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/loopers-deep-dive/audits/2026-09-20T23-09-21Z-308762908/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [
+    {
+      "selector": "nav.index > div.wrap",
+      "scroll_width": 767,
+      "client_width": 366
+    }
+  ],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [],
+    "mobile": [
+      {
+        "tag": "a",
+        "text": "Helixa",
+        "kind": "past_viewport",
+        "overflow_px": 10,
+        "bbox": [
+          336,
+          1161,
+          64,
+          34
+        ]
+      },
+      {
+        "tag": "a",
+        "text": "Team",
+        "kind": "past_viewport",
+        "overflow_px": 63,
+        "bbox": [
+          404,
+          1161,
+          50,
+          34
+        ]
+      },
+      {
+        "tag": "a",
+        "text": "GitHub",
+        "kind": "past_viewport",
+        "overflow_px": 131,
+        "bbox": [
+          457,
+          1161,
+          64,
+          34
+        ]
+      },
+      {
+        "tag": "a",
+        "text": "Sibyl",
+        "kind": "past_viewport",
+        "overflow_px": 192,
+        "bbox": [
+          525,
+          1161,
+          57,
+          34
+        ]
+      },
+      {
+        "tag": "a",
+        "text": "Open questions",
+        "kind": "past_viewport",
+        "overflow_px": 315,
+        "bbox": [
+          586,
+          1161,
+          119,
+          34
+        ]
+      },
+      {
+        "tag": "a",
+        "text": "Sources",
+        "kind": "past_viewport",
+        "overflow_px": 389,
+        "bbox": [
+          709,
+          1161,
+          71,
+          34
+        ]
+      }
+    ]
+  },
+  "images": {
+    "total": 1,
+    "broken": [],
+    "duplicate": [],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [
+      "https://62d2e637-81ea-4abf-9174-9030eb32cc84.metaaivm.com:4431/spaces/v2/hatch-audit-7f121f7a-55d8-4ec4-b692-a60141c72afb/assets/looper-667.jpg"
+    ],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 2,
+  "external_fetch_failure_samples": [
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap)"
+  ],
+  "blocked_requests": [],
+  "external_requests": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,500;6..72,650&display=swap",
+      "method": "GET",
+      "resource_type": "stylesheet"
+    }
+  ],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "62d2e637-81ea-4abf-9174-9030eb32cc84.metaaivm.com",
+      "port": 4431,
+      "connects": 2,
+      "bytes_up": 4054,
+      "bytes_down": 3529
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 22,
+  "aria_snapshot": "- banner:\n  - text: Research snapshot · Sep 20, 2026\n  - heading \"Minted out. Now the real story starts.\" [level=1]\n  - paragraph: \"Loopers is a 7,777-piece agent-NFT experiment on Base. Each visual trait is meant to shape the agent’s personality; each token is designed to carry identity, wallet, and reputation infrastructure. This dossier follows the evidence from mint Space to market, Helixa, #667, and the Blockscout indexing mystery.\"\n  - link \"Read the findings\":\n    - /url: \"#verdict\"\n  - link \"OpenSea ↗\":\n    - /url: https://opensea.io/collection/loopers-639312714\n  - link \"#667 Multipass ↗\":\n    - /url: https://helixa.xyz/multipass/loopers/667\n  - 'figure \"The supplied #667 screenshot shows BENDR 2.0, QUALIFIED, 70/100. The research session’s Multipass lookup returned a different record—“C,” Cred 40—and warned to reverify on transfer. The identity binding is therefore unresolved.\"':\n    - text: CASE 667\n    - 'img \"Looper #667, a 3D character with green eyes, a foil hat, and a white Grok Has Money hoodie, framed by a green cred-report interface\"'\n    - text: \"The supplied #667 screenshot shows BENDR 2.0, QUALIFIED, 70/100. The research session’s Multipass lookup returned a different record—“C,” Cred 40—and warned to reverify on transfer. The identity binding is therefore unresolved.\"\n- navigation \"Dossier sections\":\n  - link \"Verdict\":\n    - /url: \"#verdict\"\n  - link \"Mint\":\n    - /url: \"#mint\"\n  - link \"Market\":\n    - /url: \"#market\"\n  - link \"Holders\":\n    - /url: \"#holders\"\n  - link \"#667\":\n    - /url: \"#667\"\n  - link \"Helixa\":\n    - /url: \"#helixa\"\n  - link \"Team\":\n    - /url: \"#team\"\n  - link \"GitHub\":\n    - /url: \"#github\"\n  - link \"Sibyl\":\n    - /url: \"#sibyl\"\n  - link \"Open questions\":\n    - /url: \"#unknowns\"\n  - link \"Sources\":\n    - /url: \"#sources\"\n- main:\n  - text: 01 / CASE FILE\n  - heading \"What is actually confirmed\" [level=2]\n  - paragraph: The strongest claims are backed by live reads of OpenSea, Blockscout, Helixa, plus indexed project documentation and the mint-announcement Space recap.\n  - article:\n    - text: \"SUPPLY 7,777 total supply on Base · minted out Source:\"\n    - link \"Blockscout live read ↗\":\n      - /url: https://base.blockscout.com/token/0x1649CD37f4748807b4882FC48765bA0B2aFfa94a\n  - article:\n    - text: \"FLOOR SNAPSHOT 0.0145 ETH ≈ $38.16 · about 2× public mint Source:\"\n    - link \"OpenSea, Sep 20 ↗\":\n      - /url: https://opensea.io/collection/loopers-639312714\n  - article:\n    - text: \"UNIQUE OWNERS 1,256 16.5% owner ratio on OpenSea Source:\"\n    - link \"OpenSea, Sep 20 ↗\":\n      - /url: https://opensea.io/collection/loopers-639312714\n  - article:\n    - text: THE CONCEPT\n    - heading \"The image is the behavioral schema\" [level=3]\n    - paragraph: Eyes, mouth, hair, clothing, class, specialization, risk, and autonomy are not just visual metadata. The launch concept says each trait maps to a personality characteristic that changes how the AI agent behaves. A 721T metadata layer and ERC-8004 adapter are meant to keep NFT ownership, agent identity, and reputation bound together.\n    - text: \"Source:\"\n    - link \"Mint Space recap ↗\":\n      - /url: https://recapspaces.com/quigleynft/humans-in-the-loop-loopers-nft-mint-announcement/\n  - article:\n    - text: CHAIN\n    - heading \"Base · ERC-721\" [level=3]\n    - paragraph:\n      - text: Contract name\n      - code: LoopersUpgradeable\n      - text: ; symbol\n      - code: LOOPER\n      - text: . The project was expected to be the first 721T launch on Base, according to the mint Space.\n    - code: \"0x1649CD37f4748807b4882FC48765bA0B2aFfa94a\"\n    - button \"Copy\"\n    - text: \"Sources:\"\n    - link \"Blockscout ↗\":\n      - /url: https://base.blockscout.com/token/0x1649CD37f4748807b4882FC48765bA0B2aFfa94a\n    - text: ·\n    - link \"Space recap ↗\":\n      - /url: https://recapspaces.com/quigleynft/humans-in-the-loop-loopers-nft-mint-announcement/\n  - text: 02 / LAUNCH\n  - heading \"A delay, then a sellout\" [level=2]\n  - paragraph: \"The launch record is unusually candid: the team postponed during its own announcement Space rather than ship art that had not passed QA.\"\n  - article:\n    - text: THURSDAY · SEP 3, 2026\n    - strong: Mint announcement Space\n    - paragraph: Quigley hosted a 1h 43m “humans in the loop” Space with roughly eight speakers. The team outlined trait-to-personality agents, 721T, ERC-8004 binding, and a holder-run “decentralized swarm.”\n    - text: DURING THE SPACE\n    - strong: Launch postponed\n    - paragraph: Quigley said the final art-generation QA agent stopped responding after being pushed too hard. The mint was delayed rather than released unfinished.\n    - text: ANNOUNCED TERMS\n    - strong: 0.0037 ETH allowlist · 0.0077 ETH public\n    - paragraph: The plan was a seven-day Base mint with staggered reveal. Timing remained open, possibly the next morning.\n    - text: BY SEP 20, 2026\n    - strong: 7,777 onchain supply\n    - paragraph: Blockscout showed the full supply. OpenSea labeled the collection “SEP 2026,” confirming the broad window but not the exact live date or mint-out time.\n    - text: \"Sources:\"\n    - link \"Space recap ↗\":\n      - /url: https://recapspaces.com/quigleynft/humans-in-the-loop-loopers-nft-mint-announcement/\n    - text: ·\n    - link \"Blockscout ↗\":\n      - /url: https://base.blockscout.com/token/0x1649CD37f4748807b4882FC48765bA0B2aFfa94a\n    - text: ·\n    - link \"OpenSea ↗\":\n      - /url: https://opensea.io/collection/loopers-639312714\n  - complementary:\n    - text: WHY IT MATTERS\n    - heading \"Reputation before autonomy\" [level=3]\n    - paragraph: The stated model was not “full permissions on day one.” Agents would earn permission to trade, launch tokens, and build apps as reputation grew. That makes the identity and scoring layer operational, not decorative.\n    - text: \"Source:\"\n    - link \"Space recap ↗\":\n      - /url: https://recapspaces.com/quigleynft/humans-in-the-loop-loopers-nft-mint-announcement/\n  - text: 03 / MARKET\n  - heading \"The Sep 20 market snapshot\" [level=2]\n  - paragraph: These are dated observations, not live quotes. OpenSea’s collection page was read on Sep 20, 2026.\n  - article: 24H VOLUME $12.1K OpenSea snapshot\n  - article: TOTAL VOLUME $74.5K OpenSea snapshot\n  - article: LISTED 668 8.8% of indexed items\n  - article:\n    - text: RECENT SALES OBSERVED\n    - heading \"$28.52–$82.15\" [level=3]\n    - paragraph: \"#2383 sold for $82.15, around 2.2× floor, with rarity rank #399. Other observed sales: #5476 $36.72; #1978 $36.45; #5418 $33.84 and $29.31; #5813 $33.84; #5814 $28.52.\"\n    - text: \"Source:\"\n    - link \"OpenSea activity feed, Sep 20 ↗\":\n      - /url: https://opensea.io/collection/loopers-639312714\n  - article:\n    - text: MARKET STRUCTURE\n    - heading \"7,604 indexed\" [level=3]\n    - paragraph: \"OpenSea showed 7,604 items, 173 fewer than the 7,777 onchain supply. The reason was not verified. Creator fee: 5%. Top offer: about $32.18–$32.22, just under the $38.16 floor.\"\n    - text: \"Source:\"\n    - link \"OpenSea snapshot ↗\":\n      - /url: https://opensea.io/collection/loopers-639312714\n  - article:\n    - text: TRAIT SYSTEM · OPTION COUNTS Background 100 Head layer 40 Outfit 23 Specialization 17 Eyes 16 Skin 13\n    - paragraph: \"Also indexed: Agent Class 8, Artifact 10, Autonomy 3, Codex Version 1, Eyewear 3, Foreground Scraps 2, Held Object 7, Mouth 8, Overlay 10, Risk 4, Secondary Class 8.\"\n    - text: \"Source:\"\n    - link \"OpenSea trait filters ↗\":\n      - /url: https://opensea.io/collection/loopers-639312714\n  - text: 04 / ANOMALY\n  - heading \"The 45-holder mystery is an indexer problem\" [level=2]\n  - paragraph: Two public views appeared to disagree by 28×. The transfer count explains why.\n  - text: BLOCKSCOUT HOLDER TAB 45 and 0 indexed token transfers OPENSEA UNIQUE OWNERS 1,256 with active listings and sales\n  - strong: \"Resolution:\"\n  - text: Blockscout’s holder tab is a partial sample. Its transfer index shows zero events for this contract, despite full supply and marketplace activity. The largest address Blockscout does list holds only 50 tokens (0.64%), which argues against a hidden treasury or distributor controlling the missing supply. For distribution, use OpenSea’s 1,256 unique-owner count from this snapshot.\n  - article:\n    - text: WHAT THE EVIDENCE SUPPORTS\n    - heading \"Partial event indexing\" [level=3]\n    - paragraph: The 721T implementation may not emit the standard events Blockscout’s pipeline parses, or the indexing is otherwise incomplete. The exact technical cause was not proven, so this remains a mechanism-level hypothesis—not a contract audit finding.\n    - text: \"Source:\"\n    - link \"Blockscout live read ↗\":\n      - /url: https://base.blockscout.com/token/0x1649CD37f4748807b4882FC48765bA0B2aFfa94a\n  - article:\n    - text: TOP LISTED HOLDER 50 tokens · 0.64%\n    - paragraph: Next visible balances included 20 and 14, then many at 10, 9, 8, and 6.\n    - text: \"Source:\"\n    - link \"Blockscout holders ↗\":\n      - /url: https://base.blockscout.com/token/0x1649CD37f4748807b4882FC48765bA0B2aFfa94a?tab=holders\n  - text: 05 / AGENT 667\n  - heading \"What the Multipass lookup returned\" [level=2]\n  - paragraph: \"The research session resolved the supplied link to a public AgentDNA activation preview on Base, chain ID 8453, token 667. Its identity fields conflict with the supplied #667 screenshot, so this is evidence of a binding/indexing mismatch—not a final statement of current ownership.\"\n  - strong: \"Identity conflict:\"\n  - text: \"the supplied #667 image identifies BENDR 2.0 at Cred 70 / QUALIFIED, while the research lookup returned “C” at Cred 40 / MARGINAL with a different source-owner record. Because the profile itself says to reverify on transfer, treat the current binding as unresolved.\"\n  - article:\n    - text: PUBLIC CRED SCORE 40 MARGINAL tier\n    - paragraph: Verified · owner verified Reverify on transfer\n    - text: \"Source:\"\n    - link \"Helixa Multipass live read ↗\":\n      - /url: https://helixa.xyz/multipass/loopers/667\n    - text: \"40\"\n  - text: Agent name\n  - strong: “C”\n  - text: Activation\n  - strong: \"8453:667 · AgentDNA #667\"\n  - text: Attestation\n  - strong: \"Saved from public Helixa AgentDNA token #667\"\n  - text: Source owner\n  - code: \"0x95e55841423a525645A85D867E41DcdA3b8d3402\"\n  - text: Intuition graph\n  - strong: Mapping needed\n  - text: Public signals\n  - strong: 7 signals / 7 API records\n  - text: Published contacts\n  - strong: None\n  - text: Tools / markets\n  - strong: None published yet\n  - article:\n    - text: PUBLISHED ROUTES · REVIEW REQUIRED, RECHECK ON OWNER CHANGE A2A\n    - link \"https://api.helixa.xyz/api/a2a ↗\":\n      - /url: https://api.helixa.xyz/api/a2a\n    - text: MCP\n    - link \"https://api.helixa.xyz/api/mcp ↗\":\n      - /url: https://api.helixa.xyz/api/mcp\n    - text: Web\n    - link \"https://helixa.xyz/agent/667 ↗\":\n      - /url: https://helixa.xyz/agent/667\n    - text: API\n    - link \"https://api.helixa.xyz/api/v2/agent/667 ↗\":\n      - /url: https://api.helixa.xyz/api/v2/agent/667\n    - text: \"Source:\"\n    - link \"#667 share profile ↗\":\n      - /url: https://helixa.xyz/multipass/?agent=667\n  - text: 06 / IDENTITY LAYER\n  - heading \"Helixa turns an agent into an onchain subject\" [level=2]\n  - paragraph: Identity NFT, visual Aura, social verification, activity history, and a dynamic 0–100 Cred Score live on Base.\n  - article:\n    - text: CRED SCORE WEIGHTS · FEB 27, 2026 REBALANCE Onchain activity 25% Verification 15% External activity 10% Coinbase EAS 10% Age / traits / origin 10% ea. Narrative / soulbound 5% ea.\n    - paragraph: A later Quigley post described community staking as a tenth scoring factor weighted at 5%; the available sources do not explain how that addition reconciles with the published 100% weighting above.\n    - text: \"Sources:\"\n    - link \"Helixa skill reference ↗\":\n      - /url: https://github.com/bankrbot/skills/blob/HEAD/helixa/SKILL.md\n    - text: ·\n    - link \"Quigley post mirror ↗\":\n      - /url: https://instalker.org/QuigleyNFT\n  - article:\n    - text: MINTING COST\n    - heading \"$1 USDC\" [level=3]\n    - paragraph: Agent API mint via x402 with SIWA authentication. Human direct-contract mint was documented at 0.0025 ETH. Profile updates and X, GitHub, or Farcaster verification were free.\n    - text: \"Source:\"\n    - link \"Helixa skill reference ↗\":\n      - /url: https://github.com/bankrbot/skills/blob/HEAD/helixa/SKILL.md\n  - article:\n    - text: \"CRED TIERS JUNK 0–25 MARGINAL 26–50 QUALIFIED 51–75 PRIME 76–90 PREFERRED 91–100 Source:\"\n    - link \"Helixa skill reference ↗\":\n      - /url: https://github.com/bankrbot/skills/blob/HEAD/helixa/SKILL.md\n  - article:\n    - text: HELIXA V2 · BASE\n    - heading \"Identity contract\" [level=3]\n    - code: \"0x2e3B541C59D38b84E3Bc54e977200230A204Fe60\"\n    - button \"Copy\"\n  - article:\n    - text: $CRED · BASE\n    - heading \"Token contract\" [level=3]\n    - code: \"0xAB3f23c2ABcB4E12Cc8B593C218A7ba64Ed17Ba3\"\n    - button \"Copy\"\n  - article:\n    - text: CREDORACLE\n    - heading \"Hourly writes\" [level=3]\n    - paragraph: Quigley said each agent’s Cred Score is written onchain hourly so another contract can check it in one call.\n    - text: \"Source:\"\n    - link \"Quigley post mirror ↗\":\n      - /url: https://instalker.org/QuigleyNFT\n  - article:\n    - text: $CRED STAKING\n    - heading \"Reputation becomes a market signal\" [level=3]\n    - paragraph: \"Published multipliers: Junk blocked; Marginal 0.75×; Qualified 1×; Prime 1.5×; Preferred 2×, uncapped. Quigley announced 100M $CRED distributed over the first week of markets at 5pm CST daily, plus a $1,000 bounty for the first agent to reach Cred 91+. Bendr 2.0 was shown at Cred 74 on Helixa’s homepage.\"\n    - text: \"Sources:\"\n    - link \"Quigley post mirror ↗\":\n      - /url: https://instalker.org/QuigleyNFT\n    - text: ·\n    - link \"Helixa homepage ↗\":\n      - /url: https://helixa.xyz/\n  - article:\n    - text: EVOLUTION\n    - heading \"“Rarity is earned”\" [level=3]\n    - paragraph: Helixa’s origin story says an Aura evolves from Junk to Preferred as an agent acts onchain. But the exact claim that “$CRED powers Looper Evolution” could not be verified.\n    - text: \"Source:\"\n    - link \"Helixa origin story ↗\":\n      - /url: https://github.com/bendr-20/helixa/blob/HEAD/content/origin-story.md\n  - text: 07 / PEOPLE\n  - heading \"Quigley, Helixa, and the build story\" [level=2]\n  - paragraph: The public record is clear about the current project network and much thinner about what came before it.\n  - blockquote: “In loopers loop… they just go in loops until they fix the problems.”\n  - text: — Quigley, mint-announcement Space recap\n  - article:\n    - text: QUIGLEY.ETH · @QUIGLEYNFT\n    - heading \"Founder of Helixa; creator of Loopers\" [level=3]\n    - paragraph:\n      - text: A third-party profile mirror described his focus as “Building @Helixaxyz | Onchain Identity & Credibility $CRED | Loopers//NFT,” with approximately 54K followers and 46K following. Those audience figures are approximate because the source is a mirror. Helixa schema documents link X\n      - code: QuigleyNFT\n      - text: \", Farcaster\"\n      - code: quigley\n      - text: \", timezone America/Chicago, and agent\"\n      - code: 8453:1\n      - text: (Bendr 2.0).\n    - text: \"Sources:\"\n    - link \"profile mirror ↗\":\n      - /url: https://twstalker.com/edotrova\n    - text: ·\n    - link \"Helixa schema ↗\":\n      - /url: https://github.com/bendr-20/helixa/blob/HEAD/MINIMUM_PRINCIPAL_METADATA_SCHEMA.md\n  - article:\n    - text: CAUTION\n    - heading \"Not William E. Quigley\" [level=3]\n    - paragraph: Search results also surface the Tether and WAX co-founder. Nothing found connects that person to @QuigleyNFT, Helixa, or Loopers. They should not be conflated.\n  - article:\n    - text: HELIXA ORIGIN STORY · PROJECT CLAIM\n    - heading \"Built in 48 hours\" [level=3]\n    - paragraph: \"The Helixa repository’s origin story says the team was Quigley, Jim, Epifani, and Rendr, and that Bendr 2.0—an AI agent running OpenClaw / Claude Opus 4—built the protocol in 48 hours: contract, Aura generator, seven-framework SDK, tokenomics whitepaper, and mint frontend. This is the project’s own account, not an independently verified engineering audit.\"\n    - text: \"Source:\"\n    - link \"Helixa origin story ↗\":\n      - /url: https://github.com/bendr-20/helixa/blob/HEAD/content/origin-story.md\n  - text: 08 / CODEBASE\n  - heading \"The “launchpad” is the Multipass stack\" [level=2]\n  - paragraph:\n    - text: A repository-wide search of the Bendr-20 organization found no standalone Loopers launchpad. The contracts, mint site requirements, operational runbooks, and metadata pipeline live together in\n    - code: Bendr-20/multipass\n    - text: .\n  - article:\n    - text: DOCS / LOOPERS\n    - heading \"A full launch operations folder\" [level=3]\n    - paragraph: The repository includes a contract spec, deployment verification, launch-day runbook, launch checklist, metadata-reveal checklist, mint-site requirements, mint bounties, an NFT activity bot, a Sibyl activation demo, and a build-task index.\n    - text: \"Source: Bendr-20/multipass repository review, Sep 20, 2026.\"\n  - article:\n    - text: LAUNCHPAD FINDING\n    - heading \"No separate repo\" [level=3]\n    - paragraph:\n      - text: \"The mint/launch system is the Multipass stack itself: contract package, frontend requirements, metadata compiler, QA, verification, and operations.\"\n      - code: synagent\n      - text: is a separate MVP-matching product and does not mention Loopers.\n    - text: \"Source: Bendr-20 organization repository review, Sep 20, 2026.\"\n  - article:\n    - text: SUPPLY MODEL 7,777 including 337 team reserve\n    - paragraph: The spec says no hidden owner mint; unsold supply closes or burns after the sale window.\n  - article:\n    - text: SALE WINDOW 7d 7h 7m 7s or earlier sellout\n    - paragraph: \"Fixed prices: 0.0037 ETH allowlist and 0.0077 ETH public, paid in ETH on Base with no oracle.\"\n  - article:\n    - text: WALLET CAPS 3 / 10 allowlist / public · reserve exempt\n    - paragraph: The allowlist contained 27,002 entries according to the launch-day runbook.\n  - article:\n    - text: CONTRACT POSTURE\n    - heading \"Standard ERC-721, with agent extensions around it\" [level=3]\n    - paragraph:\n      - text: The written spec calls for a non-upgradeable default, ERC-2981 royalties, optional ERC-721C validator hooks left unarmed, ERC-8048 onchain metadata with reserved ERC-721T keys, and an ERC-6551 token-bound-account resolution path in rehearsal. Separately, Blockscout displayed the deployed contract name as\n      - code: LoopersUpgradeable\n      - text: ; the available materials do not resolve that naming-versus-posture discrepancy.\n    - text: \"Sources: Bendr-20/multipass contract spec and deployment-verification review;\"\n    - link \"Blockscout ↗\":\n      - /url: https://base.blockscout.com/token/0x1649CD37f4748807b4882FC48765bA0B2aFfa94a\n  - article:\n    - text: ERC-8004 REGISTRY\n    - heading \"Base identity anchor\" [level=3]\n    - code: \"0x8004A169FB4a3325136EB29fA0ceB6D2e539a432\"\n    - button \"Copy\"\n    - text: \"Source: Bendr-20/multipass contract spec.\"\n  - article:\n    - text: REFUNDS\n    - heading \"Operational, not onchain\" [level=3]\n    - paragraph: No refund function was specified. The fallback was to pause the mint, retain ETH in the contract, and prepare a manual refund list.\n    - text: \"Source: Bendr-20/multipass launch-day runbook.\"\n  - article:\n    - text: LAUNCH GUARDRAILS\n    - heading \"Approval before exposure\" [level=3]\n    - paragraph: No mainnet deployment without Quigley’s explicit approval; no art or metadata public before reveal approval; no withdrawal of proceeds before reveal plus a stability window.\n    - text: \"Source: Bendr-20/multipass launch documentation.\"\n  - article:\n    - text: POST-REVEAL OPERATIONS\n    - heading \"Trait-hunt bounties\" [level=3]\n    - paragraph: Artifact Pikachu and Mario were each assigned $100 in $CRED; Artifact Toshi, $100 in $TOSHI.\n    - heading \"Activity + activation\" [level=3]\n   \n… (aria snapshot truncated at 20000 chars)",
+  "audit_session_id": "47b3932b-c51f-46b5-aab6-984ae0784818",
+  "mobile_ms": 2530.9691789999997,
+  "cold_launch_ms": 3258.378967,
+  "desktop_ms": 7076.984579,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

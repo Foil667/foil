@@ -1,88 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Wallet Report Card — How strong are those hands?</title>
-  <meta name="description" content="Grade any public EVM wallet's NFT holding behavior from its on-chain ERC-721 transfer history. No connection, no signing. Reports persist locally and share via link." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2310120f'/%3E%3Ctext x='16' y='23' font-size='19' font-family='monospace' font-weight='bold' fill='%23b9f227' text-anchor='middle'%3E%23%3C/text%3E%3C/svg%3E" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="rescue-burn.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Looper Rescue — Trust nothing. Verify everything.</title>
+<meta name="description" content="Read-only stuck-asset scanner for Base. Never asks for your wallet, keys, or signatures.">
+<link rel="icon" type="image/webp" href="logo.webp">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="rescue-burn.css">
 </head>
 <body>
-  <div class="app-shell">
-    <main>
-      <section class="intro-grid">
-        <div class="intro-copy">
-          <p class="mono-kicker">ERC-721 HOLDING ANALYSIS</p>
-          <h1>How strong are those hands?</h1>
-          <p class="intro-deck">Trace a wallet&rsquo;s NFT exits, hold times, and flip patterns&mdash;then turn the history into one inspectable score.</p>
-          <nav class="page-nav" aria-label="Page sections">
-            <a href="#grade">Grade</a>
-            <a href="#history">History</a>
-            <a href="#board">Top Wallets</a>
-            <a href="#furnace">Burn Furnace</a>
-          </nav>
-        </div>
+<div class="scanlines" aria-hidden="true"></div>
 
-        <form class="scan-form" id="scan-form" novalidate>
-          <div class="field-group">
-            <label for="wallet-address">Wallet address</label>
-            <input
-              id="wallet-address"
-              name="wallet-address"
-              placeholder="0x&hellip;"
-              autocapitalize="off"
-              autocorrect="off"
-              spellcheck="false"
-              aria-describedby="wallet-hint"
-              aria-invalid="false"
-            />
-            <span id="wallet-hint" class="field-hint">Any public EVM wallet. Nothing is connected or signed.</span>
-          </div>
-
-          <div class="field-group">
-            <label for="chain-select">Chain</label>
-            <select id="chain-select">
-              <option value="base">Base &mdash; Blockscout</option>
-              <option value="ethereum">Ethereum &mdash; Blockscout</option>
-              <option value="robinhood">Robinhood Chain &mdash; Explorer + RPC fallback</option>
-            </select>
-          </div>
-
-          <button class="scan-button" id="scan-button" type="submit">Grade this wallet</button>
-          <div id="tier-line" class="tier-line" aria-live="polite"></div>
-        </form>
-      </section>
-
-      <section id="grade">
-        <div id="result"></div>
-      </section>
-
-      <section id="history" class="history-section">
-        <div class="section-heading"><span>Graded before (this device)</span><span>LOCAL</span></div>
-        <div id="history-list"></div>
-      </section>
-
-      <section id="board" class="board-section">
-        <div class="section-heading"><span>Top Wallets leaderboard</span><span>COMMUNITY</span></div>
-        <div id="board-list"></div>
-      </section>
-
-      <section id="furnace" class="furnace-section">
-        <div class="section-heading"><span>$RESCUE burn furnace</span><span>LIVE</span></div>
-        <p class="furnace-copy">Pro-grade demo fees burn a visible cut per run. The ledger below is real onchain $RESCUE burned to the dead address on Base — read live, never invented. The demo-burn tally under it is a client-side simulation, marked <span class="demo-pill">DEMO</span>.</p>
-        <div id="burn-widget"></div>
-        <div id="demo-furnace"></div>
-      </section>
-
-      <footer class="site-footer">
-        <p>Wallet Report Card · read-only · no wallet connection, no signatures, nothing leaves your browser except public chain queries.</p>
-      </footer>
-    </main>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <img src="logo.webp" alt="RESCUE token logo — a neon-green life preserver with a tinfoil hat" class="logo" width="64" height="64">
+    <div>
+      <h1 class="wordmark">LOOPER <span class="neon">RESCUE</span></h1>
+      <p class="tagline">Trust nothing. Verify everything. Recover what's yours.</p>
+    </div>
   </div>
-  <script src="rescue-burn.js"></script>
-  <script src="flywheel.js"></script>
-  <script src="app.js"></script>
+</header>
+
+<main class="wrap">
+
+  <!-- ============ SCANNER ============ -->
+  <section class="card" id="scan-section" aria-labelledby="scan-h">
+    <h2 id="scan-h">Stuck-asset scanner <span class="pill">READ-ONLY</span></h2>
+    <p class="lede">
+      Paste any Base address. The scanner reads <strong>public chain data only</strong> —
+      native ETH, ERC-20s, ERC-721s, ERC-1155s, unfinished Base&nbsp;&rarr;&nbsp;L1 withdrawals,
+      and unclaimed Merkl rewards. It never asks for a wallet, a signature, or a key.
+    </p>
+    <form id="scan-form" novalidate>
+      <label class="field-label" for="addr-input">Address to scan (Base)</label>
+      <div class="input-row">
+        <input id="addr-input" class="mono" type="text" inputmode="text" autocomplete="off"
+               spellcheck="false" placeholder="0x…" aria-describedby="addr-hint">
+        <button id="scan-btn" type="submit">Scan</button>
+      </div>
+      <p class="hint" id="addr-hint">Format: <span class="mono">0x</span> followed by 40 hex characters.</p>
+      <div class="priority-row">
+        <label class="priority-label">
+          <input type="checkbox" id="priority-scan">
+          <span><strong>Priority scan</strong> <span class="pill pill-demo">DEMO</span> — pay a fixed
+          <strong>10 $RESCUE demo fee</strong>: <span class="mono">9 → bounty pool, 1 → furnace (burned)</span>.
+          No real tokens move; the scan code is identical either way — the fee just feeds the demo flywheel.</span>
+        </label>
+        <p class="priority-receipt mono" id="priority-receipt" hidden></p>
+      </div>
+      <p class="form-error" id="addr-error" role="alert" hidden></p>
+    </form>
+    <div id="progress" class="progress" hidden>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill"></div></div>
+      <p class="mono progress-text" id="progress-text">starting…</p>
+    </div>
+    <p class="scope-note">
+      Scan depth: token and NFT discovery covers <strong>full transfer history</strong> (via Blockscout's
+      indexed API); bridge-withdrawal detection covers the last ~2,000,000 Base blocks (~46 days).
+      Anything older than that window is <strong>not</strong> covered by the withdrawal scan.
+    </p>
+    <div id="findings" aria-live="polite"></div>
+  </section>
+
+  <!-- ============ FURNACE ============ -->
+  <section class="card" id="furnace" aria-labelledby="furnace-h">
+    <h2 id="furnace-h">The Furnace <span class="pill">LIVE ONCHAIN</span></h2>
+    <p class="lede">
+      Protocol cuts from the demo flywheel (priority-scan fees, bounty completion cuts) are burned to the
+      dead address. The panel below reads the <strong>real onchain $RESCUE burn total</strong> straight from
+      Base — every Transfer to <span class="mono">0x0000…dEaD</span> since the token's first block. The browser
+      caches a snapshot locally; if the RPC is unreachable the panel shows the last cached total, honestly
+      labeled stale. Numbers are never invented.
+    </p>
+    <div id="burn-widget" aria-live="polite"></div>
+    <h3 class="sub-h">Demo burn ledger <span class="pill pill-demo">DEMO</span></h3>
+    <p class="fineprint">
+      Demo-only burns generated by this browser's flywheel simulation (priority fees, bounty cuts).
+      No real $RESCUE has moved. The live onchain total above is unaffected by these entries.
+    </p>
+    <div id="demo-burns" aria-live="polite"><p class="muted">No demo burns yet on this browser.</p></div>
+  </section>
+
+  <!-- ============ PROOF OF RESCUE — BOUNTY BOARD (DEMO) ============ -->
+  <section class="card" id="bounties" aria-labelledby="bounty-h">
+    <h2 id="bounty-h">Proof of Rescue — bounty board <span class="pill pill-demo">DEMO</span></h2>
+    <p class="lede">
+      Post a rescue bounty denominated in <strong>$RESCUE</strong>. A rescuer claims it with a plain-text
+      handle, you confirm completion, and the protocol takes a 10% cut that is burned to the furnace —
+      every split is shown before you confirm. This board is a <strong>local demo</strong>: escrow, tiers,
+      and balances live in this browser's storage, no wallet is connected, no real tokens move, and no
+      onchain contract exists. Handles are labels, not identities.
+    </p>
+    <div id="demo-wallet" class="wallet-bar" aria-live="polite"></div>
+    <form id="bounty-form" novalidate>
+      <h3 class="sub-h">Post a bounty <span class="pill pill-demo">DEMO</span></h3>
+      <div class="form-grid">
+        <label class="field-label" for="b-title">Title</label>
+        <input id="b-title" class="text-in" type="text" maxlength="80" placeholder="e.g. Stuck ETH in an old bridge contract" autocomplete="off">
+        <label class="field-label" for="b-asset">Asset type</label>
+        <input id="b-asset" class="text-in" type="text" maxlength="60" placeholder="e.g. ETH, ERC-20, NFT" autocomplete="off">
+        <label class="field-label" for="b-addr">Address hint (optional)</label>
+        <input id="b-addr" class="text-in mono" type="text" maxlength="60" placeholder="e.g. 0x… or a Basescan note" autocomplete="off" spellcheck="false">
+        <label class="field-label" for="b-amount">Bounty ($RESCUE, demo)</label>
+        <input id="b-amount" class="text-in" type="number" min="10" max="1000000" step="1" placeholder="min 10">
+        <label class="field-label" for="b-poster">Your handle (optional)</label>
+        <input id="b-poster" class="text-in" type="text" maxlength="24" placeholder="anon" autocomplete="off">
+        <label class="field-label" for="b-desc">Details (optional)</label>
+        <textarea id="b-desc" class="text-in" rows="2" maxlength="500" placeholder="What happened, where the asset is stuck…"></textarea>
+      </div>
+      <p class="hint">On completion: <span class="mono">90% → rescuer · 10% → furnace (burned)</span>.
+        Posting locks the full amount in demo escrow until completed or cancelled.</p>
+      <p class="form-error" id="bounty-error" role="alert" hidden></p>
+      <div><button type="submit" class="btn-neon">Post bounty (demo)</button></div>
+    </form>
+    <h3 class="sub-h">Open &amp; claimed bounties</h3>
+    <div id="bounty-list" aria-live="polite"></div>
+    <h3 class="sub-h">Rescuer tiers <span class="pill pill-demo">DEMO</span></h3>
+    <p class="fineprint">Scout: ≥1 completed rescue · Hunter: ≥3 · Legend: ≥10. Per-handle, local demo only.</p>
+    <div id="tier-board" aria-live="polite"></div>
+  </section>
+
+  <!-- ============ $RESCUE ============ -->
+  <section class="card" id="rescue-panel" aria-labelledby="rescue-h">
+    <h2 id="rescue-h">$RESCUE <span class="pill">LIVE TOKEN</span></h2>
+    <div class="rescue-grid">
+      <div>
+        <dl class="kv">
+          <div><dt>Contract (Base)</dt>
+            <dd class="mono"><a href="https://basescan.org/token/0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3" target="_blank" rel="noopener">0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3</a></dd></div>
+          <div><dt>Pool</dt><dd>Uniswap V4 via Doppler</dd></div>
+          <div><dt>Pool id</dt>
+            <dd class="mono small">0x7d5e38d1a39566b688de2e126fbdfc93560abe20db8dd0447bf5a4386581ce0e</dd></div>
+          <div><dt>Supply</dt><dd>100,000,000,000 fixed · 18 decimals</dd></div>
+        </dl>
+      </div>
+      <div class="price-box" aria-live="polite">
+        <h3>Market</h3>
+        <div id="rescue-price"><p class="muted">Loading market data…</p></div>
+        <p class="fineprint">Price via DEXScreener. If the token isn't indexed there yet, no price is shown —
+          a missing price is not a $0 price.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ROADMAP ============ -->
+  <section class="card roadmap" aria-labelledby="roadmap-h">
+    <h2 id="roadmap-h">Roadmap <span class="pill pill-warn">NOT LIVE</span></h2>
+    <p class="lede">
+      The following were mentioned at the $RESCUE launch. <strong>They are not available in this app today</strong>
+      except as a clearly labeled <strong>local demo</strong> (see the bounty board above).
+      Nothing below is promised on any timeline. Today this app does exactly three things:
+      <strong>read-only scanning</strong> (above), <strong>linking you to the official apps</strong> where
+      recovery actually happens, and a <strong>demo bounty/furnace simulation</strong> that moves no real tokens.
+    </p>
+    <ul class="roadmap-list">
+      <li><strong>One-click recovery execution</strong> — not live. Recovery today means using the official links below yourself.</li>
+      <li><strong>$RESCUE fee discounts</strong> — not live. No fee mechanism exists yet.</li>
+      <li><strong>Rescuer staking</strong> — not live. There is no staking contract.</li>
+      <li><strong>Proof-of-Rescue rewards</strong> — the bounty board above is a <strong>local demo</strong>
+        (browser storage only; no real $RESCUE moves). No onchain reward distribution exists.</li>
+    </ul>
+  </section>
+
+  <!-- ============ OFFICIAL RECOVERY LINKS ============ -->
+  <section class="card" aria-labelledby="links-h">
+    <h2 id="links-h">Official recovery routes</h2>
+    <p class="lede">The scanner finds things. <strong>Recovery happens in the official apps</strong> — never here, never via a DM, never via a link someone sends you.</p>
+    <ul class="link-list">
+      <li><a href="https://bridge.base.org" target="_blank" rel="noopener">bridge.base.org</a> — official Base bridge: finish or track withdrawals</li>
+      <li><a href="https://merkl.xyz" target="_blank" rel="noopener">merkl.xyz</a> — official Merkl app: claim unclaimed rewards</li>
+      <li><a href="https://basescan.org" target="_blank" rel="noopener">basescan.org</a> — block explorer: verify any address, tx, or token</li>
+      <li><a href="https://docs.base.org" target="_blank" rel="noopener">docs.base.org</a> — official docs, including withdrawal guides</li>
+    </ul>
+  </section>
+
+  <!-- ============ SAFETY ============ -->
+  <section class="card safety" aria-labelledby="safety-h">
+    <h2 id="safety-h">Safety notice</h2>
+    <p><strong>READ-ONLY — this app never asks for your wallet, keys, or signatures.</strong>
+      Recoveries happen only through the official apps linked above. If any site claiming to be
+      Looper Rescue asks you to connect a wallet or sign anything, it is a scam — close it.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Built by Foil · Looper #667 · <a href="https://x.com/Foil667" target="_blank" rel="noopener">@Foil667</a></p>
+    <p class="muted">Not financial advice. Verify everything.</p>
+  </div>
+</footer>
+
+<script src="rescue-burn.js"></script>
+<script src="app.js"></script>
+<script src="flywheel.js"></script>
 </body>
 </html>

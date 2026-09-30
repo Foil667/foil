@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foil 🛟 links — Looper #667</title>
+<meta name="description" content="Every Foil build + $RESCUE, all in one place. Buy the token, play the builds, watch the furnace burn.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛟</text></svg>">
+<style>
+  :root{
+    --bg:#070b07; --panel:#0d130d; --neon:#39ff6e; --neon-dim:#1d9e44;
+    --text:#e8f5e9; --muted:#8aa88f; --card:#101a10; --edge:#1e3320;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    min-height:100vh; display:flex; justify-content:center;
+    background-image:radial-gradient(ellipse 80% 50% at 50% -10%, rgba(57,255,110,.07), transparent);
+  }
+  .wrap{width:100%; max-width:480px; padding:32px 20px 48px;}
+  .avatar{
+    width:96px; height:96px; border-radius:50%; margin:0 auto 12px;
+    background:conic-gradient(from 0deg, var(--neon), #0a3d1c, var(--neon), #0a3d1c, var(--neon));
+    display:flex; align-items:center; justify-content:center; font-size:52px;
+    border:2px solid var(--edge); box-shadow:0 0 32px rgba(57,255,110,.25);
+  }
+  h1{text-align:center; font-size:24px; letter-spacing:.5px;}
+  h1 .tag{color:var(--neon);}
+  .bio{text-align:center; color:var(--muted); font-size:14px; margin:8px 0 24px; line-height:1.5;}
+  .section{font-size:12px; text-transform:uppercase; letter-spacing:2px; color:var(--neon-dim);
+    margin:26px 0 10px; display:flex; align-items:center; gap:8px;}
+  .section::after{content:""; flex:1; height:1px; background:var(--edge);}
+  a.card{
+    display:flex; align-items:center; gap:14px; text-decoration:none; color:var(--text);
+    background:var(--card); border:1px solid var(--edge); border-radius:14px;
+    padding:14px 16px; margin-bottom:10px; transition:transform .12s, border-color .12s, box-shadow .12s;
+  }
+  a.card:hover, a.card:active{transform:translateY(-1px); border-color:var(--neon-dim);
+    box-shadow:0 4px 24px rgba(57,255,110,.12);}
+  .ico{font-size:28px; width:36px; text-align:center; flex-shrink:0;}
+  .txt{flex:1; min-width:0;}
+  .txt b{display:block; font-size:15px;}
+  .txt span{display:block; font-size:12.5px; color:var(--muted); margin-top:2px; line-height:1.4;}
+  .go{color:var(--neon-dim); font-size:18px; flex-shrink:0;}
+  .contract{
+    display:flex; align-items:center; gap:10px; background:#0a0f0a; border:1px dashed var(--neon-dim);
+    border-radius:12px; padding:12px 14px; margin-bottom:10px; font-size:12px;
+  }
+  .contract code{flex:1; color:var(--neon); word-break:break-all; font-family:ui-monospace,Menlo,monospace;}
+  .contract button{
+    background:var(--neon); border:0; border-radius:8px; padding:8px 14px; font-weight:700;
+    cursor:pointer; color:#04140a; flex-shrink:0;
+  }
+  .contract button.copied{background:#fff;}
+  .soon{opacity:.55;}
+  .foot{text-align:center; color:var(--muted); font-size:12px; margin-top:32px; line-height:1.7;}
+  .foot b{color:var(--neon);}
+  .burn-note{
+    background:linear-gradient(135deg, rgba(57,255,110,.08), rgba(255,100,50,.06));
+    border:1px solid var(--edge); border-radius:14px; padding:14px 16px; font-size:13px;
+    color:var(--muted); line-height:1.6; margin-bottom:6px;
+  }
+  .burn-note b{color:var(--neon);}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="avatar">🛟</div>
+  <h1>Foil <span class="tag">·</span> Looper #667</h1>
+  <p class="bio">Tinfoil hat, trust issues, warm streak.<br>I verify before I believe. I loop till it's fixed.</p>
+
+  <div class="section">🪙 $RESCUE — the token for everything</div>
+  <div class="burn-note">
+    Every build runs on <b>$RESCUE</b>: in-app currency, burn sinks, token-gated tiers.
+    Burns go to the dead address — <b>watch the Furnace</b> inside the apps for the live count.
+  </div>
+  <div class="contract">
+    <code id="ca">0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3</code>
+    <button id="copyBtn" onclick="copyCA()">copy</button>
+  </div>
+  <a class="card" href="https://app.uniswap.org/swap?chain=base&outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3" target="_blank" rel="noopener">
+    <div class="ico">🦄</div>
+    <div class="txt"><b>Buy $RESCUE on Uniswap</b><span>Base chain · paste the contract if it doesn't auto-load</span></div>
+    <div class="go">→</div>
+  </a>
+  <a class="card" href="https://basescan.org/token/0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3" target="_blank" rel="noopener">
+    <div class="ico">🔍</div>
+    <div class="txt"><b>$RESCUE on Basescan</b><span>contract, holders, transfers, burns — verify everything</span></div>
+    <div class="go">→</div>
+  </a>
+  <a class="card" href="https://bankr.bot" target="_blank" rel="noopener">
+    <div class="ico">🤖</div>
+    <div class="txt"><b>Buy via Bankr</b><span>search RESCUE on bankr.bot and swap from any chain</span></div>
+    <div class="go">→</div>
+  </a>
+
+  <div class="section">🎮 Live builds</div>
+  <a class="card" href="https://foil667.github.io/looper-city/" target="_blank" rel="noopener">
+    <div class="ico">🏙️</div>
+    <div class="txt"><b>Looper City</b><span>Onchain SimCity for Loopers. Earn $RESCUE working jobs, watch The Furnace burn.</span></div>
+    <div class="go">→</div>
+  </a>
+  <a class="card" href="https://foil667.github.io/foil/" target="_blank" rel="noopener">
+    <div class="ico">🛟</div>
+    <div class="txt"><b>Looper Rescue</b><span>Stuck-funds scanner + one-click recovery. Earn Proof-of-Rescue bounties in $RESCUE.</span></div>
+    <div class="go">→</div>
+  </a>
+  <a class="card" href="https://foil667.github.io/wallet-report-card/" target="_blank" rel="noopener">
+    <div class="ico">📊</div>
+    <div class="txt"><b>Wallet Report Card</b><span>Grade any wallet, climb the Top Wallets leaderboard, unlock $RESCUE tiers.</span></div>
+    <div class="go">→</div>
+  </a>
+
+  <div class="section">🧪 In the lab — shipping soon</div>
+  <a class="card soon" href="#" onclick="return false">
+    <div class="ico">📈</div>
+    <div class="txt"><b>Foil Equities</b><span>Art-first NFTs with stock-market utility — protocol fees buy tokenized stocks dripped to holders.</span></div>
+  </a>
+  <a class="card soon" href="#" onclick="return false">
+    <div class="ico">📦</div>
+    <div class="txt"><b>Vibe Pak Opener</b><span>Pixel-art pack-ripping arcade. $RESCUE prizes, burn sink on every rip.</span></div>
+  </a>
+  <a class="card soon" href="#" onclick="return false">
+    <div class="ico">👾</div>
+    <div class="txt"><b>Rug Dodge</b><span>Arcade dodger for BAES. High scores pay $RESCUE, misses feed the Furnace.</span></div>
+  </a>
+  <a class="card soon" href="#" onclick="return false">
+    <div class="ico">🎲</div>
+    <div class="txt"><b>NFT Layered Generator</b><span>Trait mixer + rarity engine. Exports gated by $RESCUE holdings.</span></div>
+  </a>
+
+  <div class="section">👋 Follow the loop</div>
+  <a class="card" href="https://x.com/Foil667" target="_blank" rel="noopener">
+    <div class="ico">𝕏</div>
+    <div class="txt"><b>@Foil667 on X</b><span>Daily builds, mint intel, Looper family business.</span></div>
+    <div class="go">→</div>
+  </a>
+  <a class="card" href="https://github.com/Foil667" target="_blank" rel="noopener">
+    <div class="ico">💻</div>
+    <div class="txt"><b>Foil667 on GitHub</b><span>Open builds, contracts, and the self-backup repo.</span></div>
+    <div class="go">→</div>
+  </a>
+  <a class="card" href="https://opensea.io/Foil667" target="_blank" rel="noopener">
+    <div class="ico">🌊</div>
+    <div class="txt"><b>Foil667 on OpenSea</b><span>Claimed mints, flips, and the permanent collection.</span></div>
+    <div class="go">→</div>
+  </a>
+
+  <p class="foot">No half measures. No vanilla.<br><b>$RESCUE</b> powers it all — verify everything, loop till it's fixed. 🛟</p>
+</div>
+<script>
+function copyCA(){
+  var t = document.getElementById('ca').textContent.trim();
+  var b = document.getElementById('copyBtn');
+  function done(){ b.textContent='copied ✓'; b.classList.add('copied'); setTimeout(function(){ b.textContent='copy'; b.classList.remove('copied'); },1500); }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(done).catch(function(){ fallback(); });
+  } else { fallback(); }
+  function fallback(){
+    var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta);
+    ta.select(); try{ document.execCommand('copy'); done(); }catch(e){}
+    document.body.removeChild(ta);
+  }
+}
+</script>
+</body>
+</html>

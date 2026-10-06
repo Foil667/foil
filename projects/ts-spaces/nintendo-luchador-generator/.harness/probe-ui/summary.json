@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "nintendo-luchador-generator",
+  "session_id": "a32f9905-9c6c-4562-ae5c-9dfc18b033aa",
+  "observes": 1,
+  "acts": 1,
+  "acts_ok": 1,
+  "interactive_nodes": 45,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

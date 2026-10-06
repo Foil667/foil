@@ -1,0 +1,36 @@
+{
+  "probe_transport_ledger_active": true,
+  "external_requests": [
+    {
+      "url": "https://mainnet.base.org/",
+      "method": "POST",
+      "resource_type": "fetch",
+      "post_data": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"eth_blockNumber\",\"params\":[]}",
+      "headers": {
+        "content-type": "application/json"
+      }
+    }
+  ],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 4068,
+      "bytes_down": 2485
+    },
+    {
+      "host": "mainnet.base.org",
+      "port": 443,
+      "connects": 8,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": []
+}

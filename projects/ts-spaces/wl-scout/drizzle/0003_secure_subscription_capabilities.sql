@@ -1,0 +1,1 @@
+DROP INDEX IF EXISTS subscriptions_address_chain_unique;

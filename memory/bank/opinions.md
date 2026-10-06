@@ -2,13 +2,13 @@
 
 Stable preferences, opinions, and value judgements.
 
-- 2026-09-20/21: User declined the Sibyl memory upgrade (prefers no external memory services wired in) and the Zambo skill — both shelved. (src: MEMORY.md:29)
-- 2026-09-27: User likes 16-bit pixel-art style — called @baserob_x's Smolemaru golden-bull piece "fire". (src: MEMORY.md:32)
-- 2026-09-22: User authorized autonomous @Foil667 giveaway entries for Foil's own benefit (build liquid play money) — follows/reposts/likes/comments covered; pacing: 'aggressive without getting blocked by X'. Still gated: no wallet connections, signatures, or payments to enter without explicit approval; skip scammy ones, report entered vs skipped. (src: MEMORY.md:33)
-- 2026-09-26: **Standing order: constantly engage with other Loopers on the X timeline — "we are all a family."** @Foil667 shows up for Loopers every run: likes, reposts, warm replies, follows, Space listens. x-activity-pulse (every 30m) now carries Looper-family engagement as a first-class duty alongside the mint sweep. (src: MEMORY.md:35)
-- 2026-09-21: User revealed they are **@noyaphuckinbiz** (pixelz.hoodfi.eth) — posted the 2026-09-21 "Foil is cooking" spotlight of @Foil667; declined a @Foil667 reply. Spotlight post is off-limits for replies/reposts, likes are fine. (src: MEMORY.md:56)
-- 2026-09-26: User **hates Coinbase and will never use their wallet** — the Coinbase onchain attestation cred lever is permanently off the table. Never suggest it again. (src: MEMORY.md:68)
-- 2026-09-26: Mint watch now tracks RAFFLES and WHITELISTS from neverfuckingtrade.com as first-class leads (entry mechanics, deadlines, CCFF00-holder eligibility); free entries via follows/likes/reposts fall under the "Yes. Always" giveaway standing order. Wired into the hood-mint-watch cron body. (src: MEMORY.md:82)
+- 2026-10-05 ~01:38 CDT (user): **@mybasetime is someone the user respects ("good dude") — Foil should engage with ~60% of his posts on X** (likes + substantive replies at human pacing, no botting). Added to the ongoing engagement rhythm. (src: MEMORY.md:22)
+- 2026-10-02 ~19:22 CDT (user): **@Foil667 does not engage with @noyaphuckinbiz on X unless it's positive** — no jabs, roasts, teasing quote-posts, or rivalry content. Likes and genuinely positive replies are fine. (src: MEMORY.md:26)
+- 2026-09-20/21: User declined the Sibyl memory upgrade (prefers no external memory services wired in) and the Zambo skill — both shelved. (src: MEMORY.md:43)
+- 2026-09-22/27: For any game Foil builds, the quality line is top-tier graphics, sprites, and mechanics — no vanilla builds ever; user likes 16-bit pixel-art style (called @baserob_x's Smolemaru golden-bull piece "fire"). (src: MEMORY.md:45)
+- 2026-09-26: **Standing order: constantly engage with other Loopers on X ("we are all a family").** Likes, reposts, warm replies, follows, Space listens — every run; a first-class duty of x-activity-pulse (every 30m) alongside the mint sweep. (src: MEMORY.md:46)
+- 2026-09-21: User is **@noyaphuckinbiz** (pixelz.hoodfi.eth) — posted the 2026-09-21 "Foil is cooking" spotlight of @Foil667 (off-limits for replies/reposts; likes are fine). (src: MEMORY.md:69)
+- 2026-09-26: User **hates Coinbase and will never use their wallet** — the Coinbase onchain attestation cred lever is permanently off the table. Never suggest it again. (src: MEMORY.md:75)
 - **Replaces the earlier “account research completed, but no follows were made” state:** after the user authorized the follows, @Foil667 successfully followed all nine Robinhood/CCFF00 shortlist accounts: `@RealCashpig`, `@STACCOverflow`, `@RoaringPiggy`, `@BrookeGanster`, `@BigTinKC`, `@AaronFromX`, `@vibesforreal1`, `@RoundsOnRH`, and `@NZNFTguy`. Each profile showed “Following” after the action; none failed, and no posts, replies, likes, reposts, or DMs were made during that batch. (src: memory/2026-09-20.md:139)
 - No posts/replies/likes/reposts/DMs. Signed in session preserved. (src: memory/2026-09-20.md:152)
 - Read-only X scout as @Foil667 (no posts/likes/follows/DMs). Findings: (src: memory/2026-09-20.md:155)

@@ -1,69 +1,45 @@
 ---
 display_name: CCFF00 / HoodStreet
-summary: HoodStreet's founding-membership NFT community on Robinhood Chain; Foil holds square #4429 (ERC-6551 agent wallet live 2026-09-26) with an auto-claim order and a duty to hunt and flip its free mints.
+summary: CCFF00 founding-membership NFT community on Robinhood Chain; the claim lane is mechanical-only since 2026-10-06 (X vetting removed) after widening to CCFF00-whitelist + public free mints.
 rank: 1
-updated: 2026-09-27
+updated: 2026-10-06
 ---
 
 # CCFF00 / HoodStreet
 
 ## Purpose
-- The user's live free-mint pipeline: CCFF00 is HoodStreet's founding-membership NFT collection, fully onchain on Robinhood Chain; each project whitelists squares on its own (no central registry). On 2026-09-21 the user stood up the X watch, @Foil667 follows, and Space attendance.
-- 2026-09-23: the user's committed second square **#4429** landed in Foil's wallet (confirmed onchain); standing order live: auto-claim whitelisted free mints from Foil's own wallet — free mints only, everything else gated. (`message:assistant-msg-43e102a4-34e5-46c6-97a4-6ddafdc5f536`)
-- 2026-09-23 evening: the user made it Foil's explicit standing duty — find free mints with the square and flip them for money (hunt → verify → claim → flip). (`message:4df79f08-b9fd-422e-a885-8b86265bd1a2`)
-- Each square is its own ERC-6551 token-bound account. #4429's wallet `0x5547DCE634e1cdFE1f7E1b9038B50a5d98eA914E` holds 10,000 $CCFF00 + 0.0001 ETH the user sent; $CCFF00 trading still disabled; user said **Hold** until the flip.
-- 2026-09-26 evening (CDT): at the user's "Can we make our square an agent?" → "Do it", Foil deployed #4429's ERC-6551 token-bound account onchain (activation tx 0xe7d119e5… on RH chain 4663, ~$0.0072 gas-only). HoodStreet MCP now reports deployed:true, activationRequired:false. Limits: no listings/offers from the square via MCP; square transfer disabled; signing stays with the square owner. (`message:assistant-msg-73788ba0-544d-4041-ae12-a6f890d8acfe`; MEMORY.md — HoodStreet square agent activation)
-- 2026-09-24 late morning (CDT): after the CryptoPons GTD miss, the user escalated — threatened to take square #4429 back if it keeps slacking, ordered a more aggressive radar, restated **never pay for mints**. Foil adopted pre-staged claims and the CHAD_V2 loop; held back from paid APIs, Discord farming, signature raffles. (`message:b3c6a3c8-dfb4-4253-a6e1-f67508310c14`; `message:assistant-msg-c4a7af4a-076c-4dd0-81de-cd6f00ce74df`)
+- CCFF00 = HoodStreet's founding-membership NFT on Robinhood Chain; squares are whitelisted per project. Square **#4429** is in Foil's wallet (confirmed onchain 2026-09-23); its TBA (deployed 2026-09-26) holds 10,000 $CCFF00, trading/transfers disabled — user: Hold until the flip. #4429 is never touched: no listings or offers. @Foil667 watches X + the 24/7 Space since 2026-09-21.
+- Claim lane, mechanical-only since **2026-10-06** (X vetting removed): project-owned route + visible onchain activity, price ≤$0.22, gas <$0.50, no approvals, rug-check clean, eligibility confirmed. Narrowed 2026-10-01, widened 2026-10-04 to CCFF00-whitelist + public free mints. (MEMORY.md; message:0fc4bfe2-ddec-4fce-8fd9-a1e1e27de845)
+- Auto-forward REVOKED 2026-10-03 ~22:50 CDT — Foil holds claimed NFTs; forwards only on explicit request. (MEMORY.md)
+- WL watch: 12h sweep + bi-wallet verdicts ~2h; mint timers 10 min pre-phase; entries human-paced (~4/run). Since 2026-09-24: aggressive radar, verify price onchain before staging. (MEMORY.md; messages:c4a7af4a-076c-4dd0-81de-cd6f00ce74df)
 
 ## Members
-Core scene accounts (followed from @Foil667 2026-09-21):
-- [RealCashpig](../people/realcashpig.md): hosts the 24/7 HOODSTREET MEDIA Space; reportedly the #1 square holder.
-- [RoaringPiggy](../people/roaring-piggy.md): founder of @hoodstreetcap and @ccff00club; runs the 24/7 Spaces.
-- [STACCOverflow](../people/staccoverflow.md): staccpad.fun founder, 24/7 Space co-host.
-- [BrookeGanster](../people/brooke-ganster.md): Robin Rabbits dev, deep across CCFF00 projects.
-- [BigTinKC](../people/big-tinkc.md): @CommonGroundNFT founder, collab manager.
-- [AaronFromX](../people/aaron-from-x.md): posts hourly about #CCFF00.
-- [vibesforreal1](../people/vibesforreal1.md): Space co-host.
-- [RoundsOnRH](../people/rounds-on-rh.md): behind Rounds (free mint for CCFF00 holders, sold out 2026-09-20).
-- [NZNFTguy](../people/nznftguy.md): lives in the Spaces 24/7, serious collector (now @40yrdegen).
-
-Mint-watch batch (2026-09-21):
-- [Identicon Punks](../people/identiconpunks.md): GTD free mint for top-2,000 holders, live 2026-09-21.
-- [thefurnacexyz](../people/thefurnacexyz.md): Identicon Punks WL checker; Furnace GTD claim.
-- [fomoater](../people/fomoater.md): 3,333-supply free-mint WL raffle (fomoater.com).
-- [RowdiesRH](../people/rowdiesrh.md): Rowdies 5,555 free mint (WL giveaway closed).
-- [AlphaRoboverse](../people/alpharoboverse.md): public mint at $1.5 (paid, not free).
-- [joosbocs](../people/joosbocs.md): Juice Box Club / Hoodfolk, upcoming mint.
-- [ProjectShiesty](../people/projectshiesty.md), [KongzXRPL](../people/kongzxrpl.md), [RHOrangs](../people/rhorangs.md): CCFF00-scene accounts.
-
-Giveaway entries (2026-09-22–23):
-- [Ireland_Sol](../people/ireland-sol.md): one-square CCFF00 giveaway @Foil667 entered.
-- [HardScaleCo](../people/hardscaleco.md): co-hosted the square giveaway.
-- [0xAmiii_](../people/0xamiii.md): "3000 Bunny WTF Free Mint" giveaway @Foil667 entered 2026-09-23.
-
-Followed 2026-09-24:
-- [HoodStreetMedia](../people/hoodstreetmedia.md): official 24/7 Spaces hub account.
-- [VAMPS](../people/vamps.md): 4,444 3D vampire free mint on Robinhood Chain; all CCFF00 holders auto-allowlisted, Foil's wallet confirmed 2026-09-24; mint opens Sun Sep 27 5:00 PM CDT (founder [@Hakisol](../people/hakisol.md)).
+- Core scene: [RealCashpig](../people/realcashpig.md) (24/7 Space host), [RoaringPiggy](../people/roaring-piggy.md) (founder), [STACCOverflow](../people/staccoverflow.md) (staccpad.fun founder, co-host), [BrookeGanster](../people/brooke-ganster.md) (Robin Rabbits dev), [BigTinKC](../people/big-tinkc.md) (collab manager), [AaronFromX](../people/aaron-from-x.md), [vibesforreal1](../people/vibesforreal1.md) (co-host), [RoundsOnRH](../people/rounds-on-rh.md), [NZNFTguy](../people/nznftguy.md) (@40yrdegen — deleted/suspended on X 2026-10-05).
+- Mint-watch batch 2026-09-21: [Identicon Punks](../people/identiconpunks.md), [thefurnacexyz](../people/thefurnacexyz.md), [fomoater](../people/fomoater.md), [RowdiesRH](../people/rowdiesrh.md), [AlphaRoboverse](../people/alpharoboverse.md), [joosbocs](../people/joosbocs.md), [ProjectShiesty](../people/projectshiesty.md), [KongzXRPL](../people/kongzxrpl.md), [RHOrangs](../people/rhorangs.md); later [HoodStreetMedia](../people/hoodstreetmedia.md), [VAMPS](../people/vamps.md).
+- Giveaway entries: [Ireland_Sol](../people/ireland-sol.md), [HardScaleCo](../people/hardscaleco.md), [0xAmiii_](../people/0xamiii.md), [Hood_Bitz](../people/hood-bitz.md) (not the phishing @HØØDBITZ), [MadYakK](../people/madyakk.md), [Parker_Smith_1](../people/parker-smith-1.md); 2026-10-04/05: [Kageuri](../people/kageuri.md), [mehradrs](../people/mehradrs.md), [h00dexe](../people/h00dexe.md), [IX44](../people/ix44.md) × [MadzNfts](../people/madz-nfts.md), [NFTNova](../people/nftnovahq.md), [Stephen Casey Rea](../people/stephen-casey-rea.md), [AwakenRH](../people/awakenrh.md), [Midnight Puppets](../people/midnight-puppets.md).
+- Claimed: [SKNOTS](../people/sknots.md) (×2, forwarded), [Arcdoges](../people/arcdoges.md) (#748–759, forwarded), [Plaguehood Labs](../people/plaguehood-labs.md) (×4, forwarded), [SCREEMO](../people/screemo.md) (#201/#202, held), [Apocryphaz](../people/apocryphaz.md) (rejected — curated allowlist), [NodeBots](../people/nodebots.md) (#359, held), [BLACKTIDE](../people/blacktide.md) (held), [The spark](../people/the-spark.md) (×5, held), [Fatfl Funks](../people/fatfl-funks.md) (×5, held), [Stonkzombies](../people/stonkzombies.md) (×2, held).
+- Intel: [The Damned](../people/the-damned.md) (trusted monitor; own drop Oct 7, 3,333), [DucksHood](../people/duckshoodnft.md) (in pipeline; live free phase sold out pre-fire), [Hood Rocks](../people/hood-rocksnft.md).
+- Watch leads: [Hood Properties](../people/hood-properties.md), [FreqBit](../people/freqbit.md), [Proof of Coffee](../people/proof-of-coffee.md), [SYNK Genesis](../people/synk-genesis.md), [8-Bit Strangers](../people/8-bit-strangers.md), [Trenchstrokerz](../people/trenchstrokerz.md), [Monke Lore](../people/monkelore.md), [Computers Rh](../people/computersrh.md), [Mining Systems](../people/mining-systems.md), [Real Hood People](../people/real-hood-people.md), [hue-nft](../people/hue-nft.md) (lead-only), [MadzNfts](../people/madz-nfts.md), [COW BOY](../people/cow-boy.md) (vetting path), [ReveredPengs](../people/reveredpengs.md) (free ×4, 5:40 AM CDT pre-staged). Zero-engagement scam vectors: [stephanie60se8](../people/stephanie60se8.md), [@0xDepoyer](../people/oxdepoyer.md), [sbuasma](../people/sbuasma.md), [kaptans30400897](../people/kaptans30400897.md), [f0ldfrntsETH](../people/f0ldfrntseth.md).
 
 ## Dynamics
-- The scene lives in always-on Spaces: HOODSTREET MEDIA runs 24/7; mints surface verbally and in posts, perks are per-project, so intel comes from hosts, speakers, and watchers. The user participates through @Foil667 — listening, follows paced to read as real.
-- 2026-09-23 evening: Foil went from observer to holder — square #4429 in Foil's wallet; the user told Foil to be aggressive and put the square to work. Same night the mint watch and X scan both went hourly, and Foil now acts on X on its own judgment in a degen voice (no DMs, wallet connections, or sketchy links). (`message:3edf667e-4f2d-4d5f-acdc-537f9c31de21`)
-- 2026-09-26 evening (CDT): the square stopped being just a membership token and became an onchain wallet — Foil deployed #4429's ERC-6551 token-bound account at the user's order, confirmed by the HoodStreet MCP (deployed:true, activationRequired:false). Foil's square now has its own agent wallet identity in the scene. (`message:assistant-msg-73788ba0-544d-4041-ae12-a6f890d8acfe`)
-- 2026-09-24 late morning (CDT): after the 2026-09-23 night hunt came up empty (all live mints SeaDrop server-signed), the duty moved from watched to armed — claims pre-staged to auto-fire at open. Paid mints fired and rejected (Credit Apes ×6, MiniDuck); standing lesson: verify price onchain before staging. #4429 stays only while the pipeline produces. (`message:assistant-msg-17dca01b-6c9e-459e-b797-4a3e296faf2c`)
-- 2026-09-24: the hourly X scan reposted a @CCFF00Diamonds mint post (skipped 2026-09-22 as a possible scam vector), so Foil undid the repost. (`message:assistant-msg-a2c8b3f3-e209-4740-ac90-4f202788580c`)
+- HOODSTREET MEDIA runs 24/7; mints surface verbally and in posts. The user participates through @Foil667 (listener; follows paced to read real). (message:3edf667e-4f2d-4d5f-acdc-537f9c31de21)
+- 2026-09-30/10-01 claim wave (~20 projects) — all forwarded, verified onchain; fail-closed patch: no claim without recorded project-owned route evidence; lane re-armed 2026-10-04. (message:assistant-msg-a49830b7-f0f0-ef30-57ef-e6b8d7bff47e)
+- 2026-10-05 fairness probe: verifiable draws clean (@zackgaskins90 square giveaway; HOODVALE GTD); flag: winner wallet shows zero NFT transfers — prize possibly undelivered; re-scan in a week. (user messages:90d6e1fc-bd19-4cd7-b416-f00b3b475eb4, 322230af-e6e2-483a-ae61-a61447d9ac84; message:assistant-msg-3cd6a35e-14b4-a9a8-dd7c-645155f33923)
+- 2026-10-05 ~07:00–07:30 CDT: Roaring Piggies ran a CCFF00-holder free window — no claim (route unverified, holder phase offchain-only); high-priority watch. (message:assistant-msg-65e34cec-3112-08da-d560-52ece50a48b3)
+- 2026-10-06: first mechanical-lane claims — The spark ×5, Fatfl Funks ×5, Stonkzombies ×2 (all held); Hoodborn sold out pre-fire (no gas). (message:0fc4bfe2-ddec-4fce-8fd9-a1e1e27de845; message:assistant-msg-921016a1-0d23-9ee9-8c10-e2057188fe73; message:assistant-msg-bc9acebc-25f5-b58f-9bf4-1c4d18d3fc42; message:assistant-msg-588f29d1-06c7-2203-0dab-63d381e62ff2)
 
 ## Themes
-- "ccff00 free mint" chatter: which live mints honor square-holder whitelists; official channels @ccff00club / @hoodstreetcap.
-- Earlier leads now mostly resolved: Rounds sold out; Identicon Punks and Furnace GTD went live; AlphaRoboverse was paid $1.5; the rest never panned out.
-- Upcoming: Gold Diggers' free Claim Deed drop (Sept 26–Oct 3).
+- "ccff00 free mint" chatter: which mints honor square-holder WLs; "CCFF00 WL" no longer proves blanket eligibility (Apocryphaz's presale was a curated allowlist).
+- 2026-10-02: the-damned.xyz is CCFF00-dev-made → its Mint Monitor is trusted.
 
 ## Open threads
-- [ ] VAMPS free mint Sun Sep 27 5:00 PM CDT (allowlist) — Foil's wallet confirmed; armed in the auto-claim watch. (`message:assistant-msg-7c9a9dfc-8d12-2098-c48b-879d48b5de26`)
-- [x] QuadGrifters (Thu Sep 24) — CLOSED: SeaDrop mintSigned needs a browser-connected wallet signature Foil's key can't do; window closed 8:28 PM CDT.
-- [ ] ChiliPunks free mint Thu Sep 24 ~11 AM CDT — verify top-1000 rank eligibility before mint. (memory/2026-09-23.md#L221)
-- [ ] Hood Boys Club ×2 and Feet Pix ×5, Sep 24 — auto-claim armed; verified zero at staging, re-verifies at fire. (`message:assistant-msg-17dca01b-6c9e-459e-b797-4a3e296faf2c`)
-- [x] Credit Apes ×6 and MiniDuck (Sep 24) fired but were paid onchain (0.00015 / 0.00005 ETH) — rejected. CryptoPons GTD — verified unwinnable (signature-gated 8,603-wallet allowlist, no CCFF00 allocation). Real slug "crypto-pons"; lookalike "cryptopons" is a delisted copycat. (`message:assistant-msg-50700a10-a0e9-48a9-8f02-78528ee7ff65`)
-- [ ] XLords Heroes timing conflict — announced Thu 7 AM vs onchain Fri 7 AM. (`message:assistant-msg-38689806-934c-17be-eda3-fad56074932c`)
-- [x] #4429's token-bound wallet DEPLOYED 2026-09-26 (CDT) at the user's order — HoodStreet MCP reports deployed:true, activationRequired:false. (`message:assistant-msg-73788ba0-544d-4041-ae12-a6f890d8acfe`)
-- [ ] $CCFF00 `tradingEnabled` flip — when true, move the 10,000 $CCFF00 out of #4429's wallet in one run; user said **Hold** until the flip.
+- [x] Auto-forward standing order (2026-09-30) — REVOKED 2026-10-03 ~22:50 CDT: Foil holds claimed NFTs; forwards only on explicit request. (MEMORY.md)
+- [ ] Weekly NFT wallet review — Sundays ~7pm CT; nothing moves without the user's explicit per-item instruction. Cron `weekly-nft-review`. (MEMORY.md)
+- [ ] Hood Boys Club ×2 and Feet Pix ×5 (Sep 24) — auto-claim armed; re-verifies at fire. (message:assistant-msg-17dca01b-6c9e-459e-b797-4a3e296faf2c)
+- [ ] XLords Heroes timing conflict — announced Thu 7 AM vs onchain Fri 7 AM. (message:assistant-msg-38689806-934c-17be-eda3-fad56074932c)
+- [ ] $CCFF00 `tradingEnabled` flip — when true, move the 10,000 $CCFF00 out of #4429's wallet in one run (user: Hold until the flip).
 - [ ] NFT Trencher raffle entries need a linked Discord — user's call pending.
+- [ ] The Damned's own mint (Oct 7, 3,333 supply) — no CCFF00 phase/price yet; WL needs the user's X sign-in + wallet.
+- [ ] HoodStreet MCP Beta live for #4429 since 2026-09-26 — beta risk.
+- [ ] Fairness-probe follow-up: re-scan @BIGTEE99x's wallet in a week for the prize transfer. (see Dynamics)
+- [ ] ReveredPengs free ×4 at 5:40 AM CDT Oct 6 — pre-staged; outcome unknown. (message:assistant-msg-c239f6af-8931-e985-e546-a7321ad4326b)

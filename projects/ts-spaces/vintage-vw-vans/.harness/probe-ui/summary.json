@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "vintage-vw-vans",
+  "session_id": "a3d0dd3d-cfcf-4538-af6a-80e0a3f674d9",
+  "observes": 4,
+  "acts": 4,
+  "acts_ok": 4,
+  "interactive_nodes": 4,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

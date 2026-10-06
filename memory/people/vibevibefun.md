@@ -2,7 +2,7 @@
 display_name: vibevibefun
 nickname: @vibevibefun
 summary: Behind vibevibefun, a tokenized-AI-stocks project surfaced in the CCFF00 mint scene; followed from @Foil667 at the user's direction on 2026-09-22 for mint intel.
-rank: 31
+rank: 32
 updated: 2026-09-22
 ---
 

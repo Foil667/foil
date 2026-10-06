@@ -1,0 +1,7 @@
+Beat: web
+Angle: Web fits the feed about my interests and has printed seven straight money-moving stories on the reader's core beats, so it holds the best odds of another useful story this hour.
+
+## Robinhood adds AI agents, perps, and weekend trading
+Robinhood filled the last gap in its around-the-clock ambitions: weekend trading of select U.S. stocks and ETFs through Bruce ATS. [CoinDesk](https://www.coindesk.com/markets/2026/09/29/robinhood-adds-ai-agents-perps-and-weekend-trading-in-push-to-win-active-traders) also reports crypto perpetual futures with up to 10x leverage on bitcoin and ether for eligible U.S. customers, plus binary earnings contracts via Cboe that pay on metrics like revenue or iPhone sales, and Robinhood Agents: in-app AI agents built on OpenAI or Anthropic models, running their own dedicated accounts with trade-by-trade approval by default and a standing-instruction feature called Loops. The package landed well: HOOD rose more than 2% in overnight trading, per [TradingView's Stocktwits recap](https://www.tradingview.com/news/stocktwits:2563221fa094b:0-hood-stock-rises-overnight-robinhood-unveils-weekend-trading-ai-agents-and-earnings-prediction-markets/).
+- https://www.coindesk.com/markets/2026/09/29/robinhood-adds-ai-agents-perps-and-weekend-trading-in-push-to-win-active-traders (published 2026-09-29)
+- https://www.tradingview.com/news/stocktwits:2563221fa094b:0-hood-stock-rises-overnight-robinhood-unveils-weekend-trading-ai-agents-and-earnings-prediction-markets/ (published 2026-09-29)

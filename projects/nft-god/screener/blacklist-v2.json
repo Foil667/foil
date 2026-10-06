@@ -1134,5 +1134,505 @@
   "4663:0xf8ecb1c3cfd4fc80e1c7e076df7688b03bf210bf": {
     "reason": "rug-check 4663:0xf8ecb1c3cfd4fc80e1c7e076df7688b03bf210bf\ntarget scanned : 0xf8ecb1c3cfd4fc80e1c7e076df7688b03bf210bf (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
     "at": "2026-09-28T18:05:45.444Z"
+  },
+  "4663:0x62af8007744a60f54a1a67aadc1717402aac4c8a": {
+    "reason": "rug-check 4663:0x62af8007744a60f54a1a67aadc1717402aac4c8a\ntarget scanned : 0x62af8007744a60f54a1a67aadc1717402aac4c8a (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:tx-origin-auth\n  Function getTransferValidator() uses tx.origin for authorization — phishable and unsafe in comp",
+    "at": "2026-09-28T23:00:45.210Z"
+  },
+  "4663:0x620ba7d3a12d6e58eef6372d30561b062dab012f": {
+    "reason": "rug-check 4663:0x620ba7d3a12d6e58eef6372d30561b062dab012f\ntarget scanned : 0x620ba7d3a12d6e58eef6372d30561b062dab012f (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x1 (heuristic s",
+    "at": "2026-09-28T23:40:46.244Z"
+  },
+  "4663:0x6225d9bb33d90d6aa7aac0a43b6ab2c86773711c": {
+    "reason": "rug-check 4663:0x6225d9bb33d90d6aa7aac0a43b6ab2c86773711c\ntarget scanned : 0x6225d9bb33d90d6aa7aac0a43b6ab2c86773711c (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: le enabling the optimizer. Otherwise, try removing local variables. --> src/GiwaKBW.sol:130:122: | 130 | seedOf[tokenId] = keccak256(abi.encode(block.chai",
+    "at": "2026-09-29T00:05:46.048Z"
+  },
+  "4663:0xc6ba4af272ada2ccbb384c54914f88655e4c2575": {
+    "reason": "rug-check 4663:0xc6ba4af272ada2ccbb384c54914f88655e4c2575\ntarget scanned : 0xc6ba4af272ada2ccbb384c54914f88655e4c2575 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-09-29T03:40:45.451Z"
+  },
+  "4663:0x6812a31952be49d9c77381dfe7454af6f6993d63": {
+    "reason": "rug-check 4663:0x6812a31952be49d9c77381dfe7454af6f6993d63\ntarget scanned : 0x6812a31952be49d9c77381dfe7454af6f6993d63 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-09-29T06:50:45.155Z"
+  },
+  "4663:0xe729488607c84b3f6d3a7dde21c7ca6c09f0afff": {
+    "reason": "rug-check 4663:0xe729488607c84b3f6d3a7dde21c7ca6c09f0afff\ntarget scanned : 0xe729488607c84b3f6d3a7dde21c7ca6c09f0afff (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mintSeaDrop() is external with no access control and no payment check — anyone can m",
+    "at": "2026-09-29T08:35:45.030Z"
+  },
+  "8453:0x43e7606f9481c60f870ccba99ba677b09258026e": {
+    "reason": "rug-check 8453:0x43e7606f9481c60f870ccba99ba677b09258026e\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-29T08:40:45.332Z"
+  },
+  "8453:0x0522f22a1566ad0d8ff62ab9ad8ec7cf41a9e8dd": {
+    "reason": "rug-check 8453:0x0522f22a1566ad0d8ff62ab9ad8ec7cf41a9e8dd\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-29T09:10:45.853Z"
+  },
+  "8453:0x5a192263f3f462cb1bb4ffa468163e12c52691d1": {
+    "reason": "rug-check 8453:0x5a192263f3f462cb1bb4ffa468163e12c52691d1\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-29T09:10:45.853Z"
+  },
+  "8453:0x29cdc2a3486399a6298557fda7d5261a8c09829d": {
+    "reason": "rug-check 8453:0x29cdc2a3486399a6298557fda7d5261a8c09829d\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-29T10:45:44.836Z"
+  },
+  "8453:0x3f9cc30ca8ecd7c91483f9ff059f2c01741285d1": {
+    "reason": "rug-check 8453:0x3f9cc30ca8ecd7c91483f9ff059f2c01741285d1\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-29T14:25:45.165Z"
+  },
+  "4663:0xb07b42f7a1c986ee09af0d8230e8a97673d7fffe": {
+    "reason": "rug-check 4663:0xb07b42f7a1c986ee09af0d8230e8a97673d7fffe\ntarget scanned : 0xb07b42f7a1c986ee09af0d8230e8a97673d7fffe (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:tx-origin-auth\n  Function validateTransfer() uses tx.origin for authorization — phishable and unsafe in composab",
+    "at": "2026-09-29T14:45:46.012Z"
+  },
+  "4663:0x368f9801bacc7f11ad39f4e15e6e4d3ea49a5f1a": {
+    "reason": "rug-check 4663:0x368f9801bacc7f11ad39f4e15e6e4d3ea49a5f1a\ntarget scanned : 0x368f9801bacc7f11ad39f4e15e6e4d3ea49a5f1a (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-09-29T16:55:46.221Z"
+  },
+  "4663:0xf5563d05e98cfcbc0c8724db53757c9d960186e1": {
+    "reason": "rug-check 4663:0xf5563d05e98cfcbc0c8724db53757c9d960186e1\ntarget scanned : 0xf5563d05e98cfcbc0c8724db53757c9d960186e1 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:tx-origin-auth\n  Function validateTransfer() uses tx.origin for authorization — phishable and unsafe in composab",
+    "at": "2026-09-29T22:15:46.570Z"
+  },
+  "4663:0x92747cc82674428620c21ef89e92bdd3f5a5263a": {
+    "reason": "rug-check 4663:0x92747cc82674428620c21ef89e92bdd3f5a5263a\ntarget scanned : 0x92747cc82674428620c21ef89e92bdd3f5a5263a (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (di",
+    "at": "2026-09-29T23:41:34.345Z"
+  },
+  "8453:0x93610e602a23dd8d1d21f13b5ab33a42497fc89e": {
+    "reason": "rug-check 8453:0x93610e602a23dd8d1d21f13b5ab33a42497fc89e\ntarget scanned : 0x77694145408ac958Ed747a1aD55192025B22bdd6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x77694145408ac958Ed747a1aD55192025B22bdd6 (resolved via blockscout-implementations, name PublicLock). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-09-30T02:25:46.018Z"
+  },
+  "8453:0x3e289e2f59f45e64ded03f1ca3548d82cfc24305": {
+    "reason": "rug-check 8453:0x3e289e2f59f45e64ded03f1ca3548d82cfc24305\ntarget scanned : 0x77694145408ac958Ed747a1aD55192025B22bdd6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x77694145408ac958Ed747a1aD55192025B22bdd6 (resolved via blockscout-implementations, name PublicLock). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-09-30T02:30:45.728Z"
+  },
+  "8453:0xa08a53ae3002cdec2d03a29f00756a9d5de405a0": {
+    "reason": "rug-check 8453:0xa08a53ae3002cdec2d03a29f00756a9d5de405a0\ntarget scanned : 0x77694145408ac958Ed747a1aD55192025B22bdd6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x77694145408ac958Ed747a1aD55192025B22bdd6 (resolved via blockscout-implementations, name PublicLock). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-09-30T02:30:45.728Z"
+  },
+  "8453:0xfe0b6cf727b98a827b649a77c18daeb31c135333": {
+    "reason": "rug-check 8453:0xfe0b6cf727b98a827b649a77c18daeb31c135333\ntarget scanned : 0x77694145408ac958Ed747a1aD55192025B22bdd6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x77694145408ac958Ed747a1aD55192025B22bdd6 (resolved via blockscout-implementations, name PublicLock). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-09-30T02:30:45.728Z"
+  },
+  "8453:0x0a531fbddddbdb9d40cf09b7ff229215b0f03eac": {
+    "reason": "rug-check 8453:0x0a531fbddddbdb9d40cf09b7ff229215b0f03eac\ntarget scanned : 0x77694145408ac958Ed747a1aD55192025B22bdd6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x77694145408ac958Ed747a1aD55192025B22bdd6 (resolved via blockscout-implementations, name PublicLock). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-09-30T02:30:45.728Z"
+  },
+  "8453:0x685b12846ed3d3586a0f811c39059cb47fba2558": {
+    "reason": "rug-check 8453:0x685b12846ed3d3586a0f811c39059cb47fba2558\ntarget scanned : 0x77694145408ac958Ed747a1aD55192025B22bdd6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x77694145408ac958Ed747a1aD55192025B22bdd6 (resolved via blockscout-implementations, name PublicLock). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-09-30T02:35:47.192Z"
+  },
+  "8453:0x519f0f8661b2361fcb230ff77d02d7c785ab3de1": {
+    "reason": "rug-check 8453:0x519f0f8661b2361fcb230ff77d02d7c785ab3de1\ntarget scanned : 0x2767A7e1672b94a0fa2ab23C228b4bC7Ac74f5c0 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x2767A7e1672b94a0fa2ab23C228b4bC7Ac74f5c0 (resolved via blockscout-implementations). Whoever controls the proxy admin can replace this code.\n[INFO] source:unavaila",
+    "at": "2026-09-30T02:44:26.734Z"
+  },
+  "4663:0xf5ea2ce986ba11e5977062954e58e777db3554bc": {
+    "reason": "rug-check 4663:0xf5ea2ce986ba11e5977062954e58e777db3554bc\ntarget scanned : 0xf5ea2ce986ba11e5977062954e58e777db3554bc (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[HIGH] slither:arbitrary-send-eth\n  Dots.withdraw(address) (contracts/Dots.sol#221-225) sends eth to arbitrary user Dangerous calls: - (ok,None) = address(to).call{value: address(this).balance}() (contracts/Dots.sol#223)  [src:sourcify]\n[INFO] he",
+    "at": "2026-09-30T04:20:45.246Z"
+  },
+  "8453:0x36046858f691c18e1926ca26a10a240490c7f636": {
+    "reason": "rug-check 8453:0x36046858f691c18e1926ca26a10a240490c7f636\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-30T04:30:46.020Z"
+  },
+  "8453:0xac23e6e0953343bb6bea73c60bebcb3246a802e8": {
+    "reason": "rug-check 8453:0xac23e6e0953343bb6bea73c60bebcb3246a802e8\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-30T08:35:46.936Z"
+  },
+  "8453:0xbeb49d6f2f20b07ac75701d2507d11e143cb9828": {
+    "reason": "rug-check 8453:0xbeb49d6f2f20b07ac75701d2507d11e143cb9828\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-30T10:15:45.523Z"
+  },
+  "4663:0x2010a7f2a6cd317e8755f181b18a4a672125f231": {
+    "reason": "rug-check 4663:0x2010a7f2a6cd317e8755f181b18a4a672125f231\ntarget scanned : 0x2010a7f2a6cd317e8755f181b18a4a672125f231 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-09-30T11:30:45.230Z"
+  },
+  "8453:0xa7ada0db00539313153d259900c624c94bb22f7e": {
+    "reason": "rug-check 8453:0xa7ada0db00539313153d259900c624c94bb22f7e\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-30T11:35:44.624Z"
+  },
+  "4663:0x42cf0d9d5edd100ae04ec8375916e34846dae967": {
+    "reason": "rug-check 4663:0x42cf0d9d5edd100ae04ec8375916e34846dae967\ntarget scanned : 0x42cf0d9d5edd100ae04ec8375916e34846dae967 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-09-30T13:10:45.184Z"
+  },
+  "4663:0x440fd3bd067a9dec6844213fb7ed730e6d605fda": {
+    "reason": "rug-check 4663:0x440fd3bd067a9dec6844213fb7ed730e6d605fda\ntarget scanned : 0x440fd3bd067a9dec6844213fb7ed730e6d605fda (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-09-30T13:10:45.184Z"
+  },
+  "4663:0x9ac8581b291678f0f7ec840b71194fbeb3178115": {
+    "reason": "rug-check 4663:0x9ac8581b291678f0f7ec840b71194fbeb3178115\ntarget scanned : 0x9ac8581b291678f0f7ec840b71194fbeb3178115 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: f\"Invalid solc compilation {stderr}\") crytic_compile.platform.exceptions.InvalidCompilation: Invalid solc compilation Error: Stack too deep. Try compiling",
+    "at": "2026-09-30T13:20:46.390Z"
+  },
+  "4663:0x37c0c6611f56fc580bcef810c3ebe87445fa10b6": {
+    "reason": "rug-check 4663:0x37c0c6611f56fc580bcef810c3ebe87445fa10b6\ntarget scanned : 0x37c0c6611f56fc580bcef810c3ebe87445fa10b6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[HIGH] slither:arbitrary-send-eth\n  StonkCred._openPool() (src/StonkCred.sol#795-805) sends eth to arbitrary user Dangerous calls: - IStonkCredHook(hook).launch{value: eth}() (src/StonkCred.sol#797-804)  [src:sourcify]\n[HIGH] slither:arbitrary-se",
+    "at": "2026-09-30T14:05:45.342Z"
+  },
+  "8453:0x1719e455675eb3954c6a8daabdc93f29430e8279": {
+    "reason": "rug-check 8453:0x1719e455675eb3954c6a8daabdc93f29430e8279\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-30T14:10:45.771Z"
+  },
+  "8453:0x868bb050ab5b3e33e380e3b8d37cdca4d6e32e21": {
+    "reason": "rug-check 8453:0x868bb050ab5b3e33e380e3b8d37cdca4d6e32e21\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-09-30T14:55:47.268Z"
+  },
+  "4663:0xaab5a750ed652117ad4856782c11e2891db5794a": {
+    "reason": "rug-check 4663:0xaab5a750ed652117ad4856782c11e2891db5794a\ntarget scanned : 0xaab5a750ed652117ad4856782c11e2891db5794a (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-09-30T15:20:46.149Z"
+  },
+  "8453:0xfe04b70bc6d611d5aec698c62f205ad4b1e6eb39": {
+    "reason": "rug-check 8453:0xfe04b70bc6d611d5aec698c62f205ad4b1e6eb39\ntarget scanned : 0xfe04b70bc6d611d5aec698c62f205ad4b1e6eb39 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x2 (heuristic s",
+    "at": "2026-09-30T15:35:46.257Z"
+  },
+  "8453:0xbb7696c0d679e9c3d6da624948bce0b4d027448f": {
+    "reason": "rug-check 8453:0xbb7696c0d679e9c3d6da624948bce0b4d027448f\ntarget scanned : 0xbb7696c0d679e9c3d6da624948bce0b4d027448f (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x2 (heuristic s",
+    "at": "2026-09-30T15:55:46.380Z"
+  },
+  "4663:0x4c9845ca99e973b8589bd85ca17e1f33af0f50d9": {
+    "reason": "rug-check 4663:0x4c9845ca99e973b8589bd85ca17e1f33af0f50d9\ntarget scanned : 0x4c9845ca99e973b8589bd85ca17e1f33af0f50d9 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[HIGH] slither:arbitrary-send-eth\n  SaleErc721._sendEth(address,uint256) (project/contracts/turbo/Nft/SaleErc721.sol#401-405) sends eth to arbitrary user Dangerous calls: - (ok,None) = address(_to).call{value: _amount}() (project/contracts/turbo/",
+    "at": "2026-09-30T16:00:46.025Z"
+  },
+  "8453:0xde943e176d73160cb0d8ab1bd253318536005a39": {
+    "reason": "rug-check 8453:0xde943e176d73160cb0d8ab1bd253318536005a39\ntarget scanned : 0xde943e176d73160cb0d8ab1bd253318536005a39 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x2 (heuristic s",
+    "at": "2026-09-30T16:05:46.465Z"
+  },
+  "8453:0xc6f94ab8b14aa05fda5e4e89765c883b7121a5ea": {
+    "reason": "rug-check 8453:0xc6f94ab8b14aa05fda5e4e89765c883b7121a5ea\ntarget scanned : 0xc6f94ab8b14aa05fda5e4e89765c883b7121a5ea (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x2 (heuristic s",
+    "at": "2026-09-30T16:20:45.141Z"
+  },
+  "8453:0x49d01b4e4f7927937014d21ce3ec3941cbc75c1e": {
+    "reason": "rug-check 8453:0x49d01b4e4f7927937014d21ce3ec3941cbc75c1e\ntarget scanned : 0x49d01b4e4f7927937014d21ce3ec3941cbc75c1e (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x2 (heuristic s",
+    "at": "2026-09-30T16:30:53.887Z"
+  },
+  "8453:0x61042e769ddee969d1e075fc928be34e70110569": {
+    "reason": "rug-check 8453:0x61042e769ddee969d1e075fc928be34e70110569\ntarget scanned : 0x61042e769ddee969d1e075fc928be34e70110569 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x2 (heuristic s",
+    "at": "2026-09-30T17:33:10.358Z"
+  },
+  "4663:0x8632e439055499668a41305f60f107b88ab3ee77": {
+    "reason": "rug-check 4663:0x8632e439055499668a41305f60f107b88ab3ee77\ntarget scanned : 0x8632e439055499668a41305f60f107b88ab3ee77 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function freeMint() is external with no access control and no payment check — anyone can mint",
+    "at": "2026-09-30T18:20:45.171Z"
+  },
+  "4663:0x8705a50943a130f21b3ed0585ab5e8f403b443ec": {
+    "reason": "rug-check 4663:0x8705a50943a130f21b3ed0585ab5e8f403b443ec\ntarget scanned : 0x8705a50943a130f21b3ed0585ab5e8f403b443ec (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:tx-origin-auth\n  Function validateTransfer() uses tx.origin for authorization — phishable and unsafe in composab",
+    "at": "2026-09-30T18:30:45.079Z"
+  },
+  "4663:0x0edc94eabbc83ebbc372888a03f498bd386b55a1": {
+    "reason": "rug-check 4663:0x0edc94eabbc83ebbc372888a03f498bd386b55a1\ntarget scanned : 0x0edc94eabbc83ebbc372888a03f498bd386b55a1 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x12 (heuristic ",
+    "at": "2026-09-30T22:45:46.713Z"
+  },
+  "4663:0x0968de81b1a567987ef3c592a77ce2fe56d3e8a6": {
+    "reason": "rug-check 4663:0x0968de81b1a567987ef3c592a77ce2fe56d3e8a6\ntarget scanned : 0x0968de81b1a567987ef3c592a77ce2fe56d3e8a6 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function devMint() is external but owner-gated — owner can mint arbitrarily (supply-inflat",
+    "at": "2026-10-01T04:00:45.110Z"
+  },
+  "8453:0x3158e5257628e581148a4ff58edcd0ed1e35d259": {
+    "reason": "rug-check 8453:0x3158e5257628e581148a4ff58edcd0ed1e35d259\ntarget scanned : 0x3158e5257628e581148a4ff58edcd0ed1e35d259 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (di",
+    "at": "2026-10-01T04:15:45.863Z"
+  },
+  "8453:0x23df9344a2cf1890f768e386fea006d143bcdfca": {
+    "reason": "rug-check 8453:0x23df9344a2cf1890f768e386fea006d143bcdfca\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-01T07:12:08.243Z"
+  },
+  "8453:0x9826c4d706c2e229beedc1d7ebaf5b49186209ac": {
+    "reason": "rug-check 8453:0x9826c4d706c2e229beedc1d7ebaf5b49186209ac\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-01T09:15:45.832Z"
+  },
+  "4663:0x72073c99aa032aa1f6cf61500e07b831577838fd": {
+    "reason": "rug-check 4663:0x72073c99aa032aa1f6cf61500e07b831577838fd\ntarget scanned : 0x72073c99aa032aa1f6cf61500e07b831577838fd (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function wlMint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:ow",
+    "at": "2026-10-01T11:00:47.278Z"
+  },
+  "8453:0xa6fedf61f8465ededf37fe92e9c7e648abfb15fc": {
+    "reason": "rug-check 8453:0xa6fedf61f8465ededf37fe92e9c7e648abfb15fc\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-01T12:00:45.775Z"
+  },
+  "4663:0xd05850c9251d15bb5ab197badade8c31e48975f7": {
+    "reason": "rug-check 4663:0xd05850c9251d15bb5ab197badade8c31e48975f7\ntarget scanned : 0xd05850c9251d15bb5ab197badade8c31e48975f7 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-01T14:15:46.958Z"
+  },
+  "8453:0xbb15c765a616a3606a0f908078a6919b7a36a2ad": {
+    "reason": "rug-check 8453:0xbb15c765a616a3606a0f908078a6919b7a36a2ad\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-01T15:10:45.897Z"
+  },
+  "8453:0xef35dad1e221ae641ec720265ed3bb141a95df9d": {
+    "reason": "rug-check 8453:0xef35dad1e221ae641ec720265ed3bb141a95df9d\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-01T15:55:45.112Z"
+  },
+  "4663:0xed37605ff0e513e46d50b26244deb2024189751a": {
+    "reason": "rug-check 4663:0xed37605ff0e513e46d50b26244deb2024189751a\ntarget scanned : 0xed37605ff0e513e46d50b26244deb2024189751a (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function dengClaim() is external with no access control and no payment check — anyone can min",
+    "at": "2026-10-01T16:15:44.964Z"
+  },
+  "4663:0x2bf1a74d4ebf04ead2b6a1d6e32bd42ac6517c66": {
+    "reason": "rug-check 4663:0x2bf1a74d4ebf04ead2b6a1d6e32bd42ac6517c66\ntarget scanned : 0x2bf1a74d4ebf04ead2b6a1d6e32bd42ac6517c66 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function setMinter() is external with no access control and no payment check — anyone can min",
+    "at": "2026-10-01T18:05:44.719Z"
+  },
+  "4663:0x209761538ab9976d2c04957dac60e2f8c88b6bed": {
+    "reason": "rug-check 4663:0x209761538ab9976d2c04957dac60e2f8c88b6bed\ntarget scanned : 0x209761538ab9976d2c04957dac60e2f8c88b6bed (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x11 with no pro",
+    "at": "2026-10-01T19:37:23.361Z"
+  },
+  "4663:0x2c3ef21097c9df6ff923b0f114bbdac817fdcef9": {
+    "reason": "rug-check 4663:0x2c3ef21097c9df6ff923b0f114bbdac817fdcef9\ntarget scanned : 0x2c3ef21097c9df6ff923b0f114bbdac817fdcef9 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:tx-origin-auth\n  Function build() uses tx.origin for authorization — phishable and unsafe in composable contexts",
+    "at": "2026-10-02T03:50:45.024Z"
+  },
+  "8453:0x3e72f94aedbf163f7f23038c6b92df6166e31218": {
+    "reason": "rug-check 8453:0x3e72f94aedbf163f7f23038c6b92df6166e31218\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T04:55:44.979Z"
+  },
+  "8453:0xd2bf5a0535064f3dbe918c52e2ed9af2c3c3e4af": {
+    "reason": "rug-check 8453:0xd2bf5a0535064f3dbe918c52e2ed9af2c3c3e4af\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T06:55:45.121Z"
+  },
+  "8453:0x73b1a78d18d21804bcdef99752614592da28e2c8": {
+    "reason": "rug-check 8453:0x73b1a78d18d21804bcdef99752614592da28e2c8\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T10:35:45.150Z"
+  },
+  "4663:0x1699320da8dd2324a74016bae7a5620eb76bfc11": {
+    "reason": "rug-check 4663:0x1699320da8dd2324a74016bae7a5620eb76bfc11\ntarget scanned : 0x1699320da8dd2324a74016bae7a5620eb76bfc11 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: s.InvalidCompilation: Invalid solc compilation Error: Stack too deep. Try compiling with `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) ",
+    "at": "2026-10-02T10:40:44.644Z"
+  },
+  "8453:0xc89866cbbd3fc142469dbfee342f4b6d0839bc8b": {
+    "reason": "rug-check 8453:0xc89866cbbd3fc142469dbfee342f4b6d0839bc8b\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T11:12:15.671Z"
+  },
+  "8453:0x0604aca89614bb6f12acdd457e0081238ffe1371": {
+    "reason": "rug-check 8453:0x0604aca89614bb6f12acdd457e0081238ffe1371\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T11:21:11.523Z"
+  },
+  "8453:0x596394ff1012a92677e7d3304187e97bddb18d19": {
+    "reason": "rug-check 8453:0x596394ff1012a92677e7d3304187e97bddb18d19\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T11:46:10.341Z"
+  },
+  "8453:0x988819a32157c262767bad568001eba73ad90fc1": {
+    "reason": "rug-check 8453:0x988819a32157c262767bad568001eba73ad90fc1\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T12:25:45.692Z"
+  },
+  "8453:0x7bf90f164b31453faf7b57cc5d176bbe60586b91": {
+    "reason": "rug-check 8453:0x7bf90f164b31453faf7b57cc5d176bbe60586b91\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T13:15:44.603Z"
+  },
+  "8453:0x7513dee16486ab1f733d58168dd677b91b906f06": {
+    "reason": "rug-check 8453:0x7513dee16486ab1f733d58168dd677b91b906f06\ntarget scanned : 0x78A270EC56aDaFaE69f570f7508A5f22437375a0 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x78A270EC56aDaFaE69f570f7508A5f22437375a0 (resolved via blockscout-implementations, name LeagueClassic). Whoever controls the proxy admin can replace this code.\n",
+    "at": "2026-10-02T13:15:44.603Z"
+  },
+  "8453:0x86ed99957ea59ec324aedf80b2d810132db8482b": {
+    "reason": "rug-check 8453:0x86ed99957ea59ec324aedf80b2d810132db8482b\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-02T13:38:14.797Z"
+  },
+  "4663:0xd1acea279b4d0d436b43f87d29818c3264ee4e65": {
+    "reason": "rug-check 4663:0xd1acea279b4d0d436b43f87d29818c3264ee4e65\ntarget scanned : 0xd1acea279b4d0d436b43f87d29818c3264ee4e65 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-10-02T18:15:45.101Z"
+  },
+  "4663:0x78d68be9cead2ef2539a3cba35b74199c4dfbe5f": {
+    "reason": "rug-check 4663:0x78d68be9cead2ef2539a3cba35b74199c4dfbe5f\ntarget scanned : 0x78d68be9cead2ef2539a3cba35b74199c4dfbe5f (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[MEDIUM] heuristic:tx",
+    "at": "2026-10-02T20:55:51.183Z"
+  },
+  "4663:0xaa8f9aef64259e557c5f96133a08e8eef683205d": {
+    "reason": "rug-check 4663:0xaa8f9aef64259e557c5f96133a08e8eef683205d\ntarget scanned : 0xaa8f9aef64259e557c5f96133a08e8eef683205d (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-02T22:40:46.738Z"
+  },
+  "4663:0x5a2f4d2acb7a3f370f5c6e95d30ddb93a7f8abb1": {
+    "reason": "rug-check 4663:0x5a2f4d2acb7a3f370f5c6e95d30ddb93a7f8abb1\ntarget scanned : 0x5a2f4d2acb7a3f370f5c6e95d30ddb93a7f8abb1 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-02T23:01:01.407Z"
+  },
+  "8453:0x0b8465e35290a1d25275aff6c4ea8f8c98bd4ab9": {
+    "reason": "rug-check 8453:0x0b8465e35290a1d25275aff6c4ea8f8c98bd4ab9\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T01:35:47.224Z"
+  },
+  "8453:0xdf2aa20531224aa2766490db0175aee04a45b24f": {
+    "reason": "rug-check 8453:0xdf2aa20531224aa2766490db0175aee04a45b24f\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T05:30:45.659Z"
+  },
+  "8453:0x32ab8ee7ea7513151e241244bb8e42e245d47594": {
+    "reason": "rug-check 8453:0x32ab8ee7ea7513151e241244bb8e42e245d47594\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T08:05:45.206Z"
+  },
+  "8453:0xe955b203345be1075c7813cb3b99c0878244d576": {
+    "reason": "rug-check 8453:0xe955b203345be1075c7813cb3b99c0878244d576\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T09:10:45.425Z"
+  },
+  "8453:0x65fa9e680f4f1b24b3b151f67ae64ee4bd6832bd": {
+    "reason": "rug-check 8453:0x65fa9e680f4f1b24b3b151f67ae64ee4bd6832bd\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T09:30:44.753Z"
+  },
+  "4663:0x2528719c649040ee7ddc85bd6e0392049d998494": {
+    "reason": "rug-check 4663:0x2528719c649040ee7ddc85bd6e0392049d998494\ntarget scanned : 0x2528719c649040ee7ddc85bd6e0392049d998494 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function claim() is external with no access control and no payment check — anyone can mint (d",
+    "at": "2026-10-03T11:21:57.716Z"
+  },
+  "8453:0x969f932064aa4ee50d707e5f2ede6bc7162fe44c": {
+    "reason": "rug-check 8453:0x969f932064aa4ee50d707e5f2ede6bc7162fe44c\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T12:30:45.597Z"
+  },
+  "4663:0x0c2cfcd1db8d47336349c0317fa58c8b20767301": {
+    "reason": "rug-check 4663:0x0c2cfcd1db8d47336349c0317fa58c8b20767301\ntarget scanned : 0x0c2cfcd1db8d47336349c0317fa58c8b20767301 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). ",
+    "at": "2026-10-03T13:30:18.689Z"
+  },
+  "8453:0x65800f2efd552a76fbf3b97bc2bcf4fa6e8c40b0": {
+    "reason": "rug-check 8453:0x65800f2efd552a76fbf3b97bc2bcf4fa6e8c40b0\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T14:15:47.031Z"
+  },
+  "8453:0xa1b917e9f36b2b3a0a23220dbf5999e86066b321": {
+    "reason": "rug-check 8453:0xa1b917e9f36b2b3a0a23220dbf5999e86066b321\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T14:25:46.317Z"
+  },
+  "8453:0x3d590192df23ba350d757447e7e2f10776f96336": {
+    "reason": "rug-check 8453:0x3d590192df23ba350d757447e7e2f10776f96336\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T14:40:45.831Z"
+  },
+  "8453:0xc7dec93c4a020eca8b33d0b46688219f94d594a1": {
+    "reason": "rug-check 8453:0xc7dec93c4a020eca8b33d0b46688219f94d594a1\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T16:52:58.966Z"
+  },
+  "8453:0xe090b99f883e302a655bd060c418211579d95431": {
+    "reason": "rug-check 8453:0xe090b99f883e302a655bd060c418211579d95431\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T17:05:45.933Z"
+  },
+  "8453:0xc361905b1191db3ae1258852d2c5091b336775ef": {
+    "reason": "rug-check 8453:0xc361905b1191db3ae1258852d2c5091b336775ef\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T17:36:21.962Z"
+  },
+  "8453:0x0a339b9d9766cba2da3cc4d59d2641160f6310f4": {
+    "reason": "rug-check 8453:0x0a339b9d9766cba2da3cc4d59d2641160f6310f4\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T17:45:51.842Z"
+  },
+  "8453:0x94d8cf569ff3f99640a80ab62807fb2fdc1ad5fc": {
+    "reason": "rug-check 8453:0x94d8cf569ff3f99640a80ab62807fb2fdc1ad5fc\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T17:45:51.842Z"
+  },
+  "4663:0x4e41fa3bb0220507c955f81d352a4a662e2a0ca2": {
+    "reason": "rug-check 4663:0x4e41fa3bb0220507c955f81d352a4a662e2a0ca2\ntarget scanned : 0x4e41fa3bb0220507c955f81d352a4a662e2a0ca2 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-10-03T17:50:27.831Z"
+  },
+  "8453:0x37178eb564812221c810f7e82320aefa6f09ea08": {
+    "reason": "rug-check 8453:0x37178eb564812221c810f7e82320aefa6f09ea08\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T18:34:03.373Z"
+  },
+  "4663:0x355888e82d488f831c62756ae5c5d0531d4b5aa1": {
+    "reason": "rug-check 4663:0x355888e82d488f831c62756ae5c5d0531d4b5aa1\ntarget scanned : 0x355888e82d488f831c62756ae5c5d0531d4b5aa1 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mintFoldmarks() is external and priced/payable — ordinary paid mint path.\n[MEDIUM] heu",
+    "at": "2026-10-03T19:25:45.823Z"
+  },
+  "8453:0x180cb98d544916d91709222f4e9252d98b49a0b5": {
+    "reason": "rug-check 8453:0x180cb98d544916d91709222f4e9252d98b49a0b5\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-03T19:36:06.198Z"
+  },
+  "4663:0xb4ff95a46822d9a85fb1c2858a57d2c8cdb92b93": {
+    "reason": "rug-check 4663:0xb4ff95a46822d9a85fb1c2858a57d2c8cdb92b93\ntarget scanned : 0xb4ff95a46822d9a85fb1c2858a57d2c8cdb92b93 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:SELFDESTRUCT\n  Runtime bytecode contains SELFDESTRUCT opcode x1 (heuristic s",
+    "at": "2026-10-03T20:30:44.690Z"
+  },
+  "4663:0x41933a4648966c8721d548ff7485be4d4e96338c": {
+    "reason": "rug-check 4663:0x41933a4648966c8721d548ff7485be4d4e96338c\ntarget scanned : 0x41933a4648966c8721d548ff7485be4d4e96338c (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function mint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuristic:owne",
+    "at": "2026-10-04T01:00:45.428Z"
+  },
+  "8453:0xa180929589403c3205551131ea120d8410a73a0a": {
+    "reason": "rug-check 8453:0xa180929589403c3205551131ea120d8410a73a0a\ntarget scanned : 0x0000000000a248a99F797ec03160a76b18415074 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x0000000000a248a99F797ec03160a76b18415074 (resolved via blockscout-implementations, name N2MERC721A). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-10-04T05:15:45.137Z"
+  },
+  "8453:0x445d26e5273ffd053a604fa9241211a3a7be1374": {
+    "reason": "rug-check 8453:0x445d26e5273ffd053a604fa9241211a3a7be1374\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-04T11:55:45.448Z"
+  },
+  "4663:0x20ac4f6f1b3be52b1de4214748e6eaf62617c794": {
+    "reason": "rug-check 4663:0x20ac4f6f1b3be52b1de4214748e6eaf62617c794\ntarget scanned : 0x20ac4f6f1b3be52b1de4214748e6eaf62617c794 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-04T13:16:28.580Z"
+  },
+  "4663:0xb2c0a574e2ad6c649e88d6d916f03938f71dc5d0": {
+    "reason": "rug-check 4663:0xb2c0a574e2ad6c649e88d6d916f03938f71dc5d0\ntarget scanned : 0xb2c0a574e2ad6c649e88d6d916f03938f71dc5d0 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[HIGH] slither:arbitrary-send-eth\n  Hoodlums.flush() (src/Hoodlums.sol#691-707) sends eth to arbitrary user Dangerous calls: - (ok,None) = team.call{value: t}() (src/Hoodlums.sol#700)  [src:sourcify]\n[HIGH] slither:arbitrary-send-eth\n  Hoodlums._",
+    "at": "2026-10-04T13:27:56.663Z"
+  },
+  "8453:0x5a09b536254202049928828093c6f564cc40b451": {
+    "reason": "rug-check 8453:0x5a09b536254202049928828093c6f564cc40b451\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-04T14:50:45.305Z"
+  },
+  "8453:0x1b4e55bbf5fc42f762e8f8042c4d976f612fbbaf": {
+    "reason": "rug-check 8453:0x1b4e55bbf5fc42f762e8f8042c4d976f612fbbaf\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-04T15:39:07.977Z"
+  },
+  "8453:0x4a21519d72d37569c4e4ad18abf622fb18f3dd32": {
+    "reason": "rug-check 8453:0x4a21519d72d37569c4e4ad18abf622fb18f3dd32\ntarget scanned : 0x0000000000a248a99F797ec03160a76b18415074 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x0000000000a248a99F797ec03160a76b18415074 (resolved via blockscout-implementations, name N2MERC721A). Whoever controls the proxy admin can replace this code.\n[IN",
+    "at": "2026-10-04T15:57:29.767Z"
+  },
+  "4663:0x1219774c718a4455eaecabe9bc447d70c378d29c": {
+    "reason": "rug-check 4663:0x1219774c718a4455eaecabe9bc447d70c378d29c\ntarget scanned : 0x1219774c718a4455eaecabe9bc447d70c378d29c (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mintWithProof() is external with no access control and no payment check — anyone can",
+    "at": "2026-10-04T16:12:18.104Z"
+  },
+  "8453:0x0ac8561620733fea50e7ef88e87037494070c683": {
+    "reason": "rug-check 8453:0x0ac8561620733fea50e7ef88e87037494070c683\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-04T16:35:46.107Z"
+  },
+  "4663:0x1405fbc283bf80f9a60d8c627a8105f879ab7969": {
+    "reason": "rug-check 4663:0x1405fbc283bf80f9a60d8c627a8105f879ab7969\ntarget scanned : 0x1405fbc283bf80f9a60d8c627a8105f879ab7969 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-04T17:05:45.776Z"
+  },
+  "8453:0xb121b2b77a1a6d783bd807ae15228ed19694cabf": {
+    "reason": "rug-check 8453:0xb121b2b77a1a6d783bd807ae15228ed19694cabf\ntarget scanned : 0x0932b9F233078F549C21782C0B88deB2B30dDAaD (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x0932b9F233078F549C21782C0B88deB2B30dDAaD (resolved via blockscout-implementations, name BadNFT). Whoever controls the proxy admin can replace this code.\n[INFO] ",
+    "at": "2026-10-05T03:18:42.078Z"
+  },
+  "8453:0xb4e0f886b8a0c9581232ec239e029d3d2397d184": {
+    "reason": "rug-check 8453:0xb4e0f886b8a0c9581232ec239e029d3d2397d184\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T06:45:46.739Z"
+  },
+  "8453:0x2c0c999c3fc4465eb207583ffa056a48ae31a1b6": {
+    "reason": "rug-check 8453:0x2c0c999c3fc4465eb207583ffa056a48ae31a1b6\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T08:50:45.467Z"
+  },
+  "4663:0x322809ca404ebabfda355202e1af704a0cff0960": {
+    "reason": "rug-check 4663:0x322809ca404ebabfda355202e1af704a0cff0960\ntarget scanned : 0x322809ca404ebabfda355202e1af704a0cff0960 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function mint() is external but owner-gated — owner can mint arbitrarily (supply-inflation",
+    "at": "2026-10-05T09:05:45.252Z"
+  },
+  "8453:0xa31f0b9f7a29c28aa2125239e8b127f6e2fd7227": {
+    "reason": "rug-check 8453:0xa31f0b9f7a29c28aa2125239e8b127f6e2fd7227\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T09:50:46.242Z"
+  },
+  "8453:0xf92b7e9aa50df24a8e9a37bc8f8106c8555fa241": {
+    "reason": "rug-check 8453:0xf92b7e9aa50df24a8e9a37bc8f8106c8555fa241\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T10:25:45.190Z"
+  },
+  "8453:0xa15a0c3672793efcf446d988153830e5b0c740ee": {
+    "reason": "rug-check 8453:0xa15a0c3672793efcf446d988153830e5b0c740ee\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T10:50:45.338Z"
+  },
+  "4663:0x7ae42e90ad0b942cfe3792c08d4fe5644e1c258a": {
+    "reason": "rug-check 4663:0x7ae42e90ad0b942cfe3792c08d4fe5644e1c258a\ntarget scanned : 0x7ae42e90ad0b942cfe3792c08d4fe5644e1c258a (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] heuristic:owner-controlled-mint\n  Function mint() is external but owner-gated — owner can mint arbitrarily (supply-inflation",
+    "at": "2026-10-05T10:55:44.447Z"
+  },
+  "4663:0x37d1be84a06b2cba5ac6d092778fb339d8346856": {
+    "reason": "rug-check 4663:0x37d1be84a06b2cba5ac6d092778fb339d8346856\ntarget scanned : 0x37d1be84a06b2cba5ac6d092778fb339d8346856 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[HIGH] slither:arbitrary-send-eth\n  Cards.flush() (src/Cards.sol#694-710) sends eth to arbitrary user Dangerous calls: - (ok,None) = team.call{value: t}() (src/Cards.sol#703)  [src:sourcify]\n[HIGH] slither:arbitrary-send-eth\n  Cards._openPool() (",
+    "at": "2026-10-05T12:16:46.338Z"
+  },
+  "4663:0xab81f6bcc100cf445359fdfad895fc167acb2663": {
+    "reason": "rug-check 4663:0xab81f6bcc100cf445359fdfad895fc167acb2663\ntarget scanned : 0xab81f6bcc100cf445359fdfad895fc167acb2663 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[HIGH] slither:arbitrary-send-eth\n  Cards.flush() (src/Cards.sol#694-710) sends eth to arbitrary user Dangerous calls: - (ok,None) = team.call{value: t}() (src/Cards.sol#703)  [src:sourcify]\n[HIGH] slither:arbitrary-send-eth\n  Cards._openPool() (",
+    "at": "2026-10-05T14:25:44.227Z"
+  },
+  "8453:0xe5c2049a2d1552c380377a2f1fb2207f08a726ce": {
+    "reason": "rug-check 8453:0xe5c2049a2d1552c380377a2f1fb2207f08a726ce\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T15:18:41.357Z"
+  },
+  "4663:0x4e7d59b37ed70923bd988ab3d8f871260a966f2b": {
+    "reason": "rug-check 4663:0x4e7d59b37ed70923bd988ab3d8f871260a966f2b\ntarget scanned : 0x4e7d59b37ed70923bd988ab3d8f871260a966f2b (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-05T17:21:01.195Z"
+  },
+  "4663:0xacc5889fa26268bf33253c652fa3ddaa6ac82654": {
+    "reason": "rug-check 4663:0xacc5889fa26268bf33253c652fa3ddaa6ac82654\ntarget scanned : 0xacc5889fa26268bf33253c652fa3ddaa6ac82654 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[INFO] heuristic:public-paid-mint\n  Function whitelistMint() is external and priced/payable — ordinary paid mint path.\n[HIGH] heuri",
+    "at": "2026-10-05T17:38:10.434Z"
+  },
+  "4663:0xb32a71ebaf950548d34e7baa1d0527fd6b6cb61e": {
+    "reason": "rug-check 4663:0xb32a71ebaf950548d34e7baa1d0527fd6b6cb61e\ntarget scanned : 0xb32a71ebaf950548d34e7baa1d0527fd6b6cb61e (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-05T17:38:10.434Z"
+  },
+  "4663:0x995d0a6917f8be86c43b1a4f4cdb00403f1f1eae": {
+    "reason": "rug-check 4663:0x995d0a6917f8be86c43b1a4f4cdb00403f1f1eae\ntarget scanned : 0x995d0a6917f8be86c43b1a4f4cdb00403f1f1eae (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-05T20:00:52.869Z"
+  },
+  "8453:0xcfc5c9c6bd36585de1ab4886e172978041653566": {
+    "reason": "rug-check 8453:0xcfc5c9c6bd36585de1ab4886e172978041653566\ntarget scanned : 0x6143D14fae58161B48e8809BF4b185Ede506d172 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x6143D14fae58161B48e8809BF4b185Ede506d172 (resolved via blockscout-implementations, name BlackbirdStatusTokenV2). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T20:13:43.817Z"
+  },
+  "8453:0x46a57f9b501b22a8f4b0a29657594d9a35549395": {
+    "reason": "rug-check 8453:0x46a57f9b501b22a8f4b0a29657594d9a35549395\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-05T22:00:42.767Z"
+  },
+  "8453:0xae4ccbc46058668d9548f0601403860153d6e746": {
+    "reason": "rug-check 8453:0xae4ccbc46058668d9548f0601403860153d6e746\ntarget scanned : 0xae4ccbc46058668d9548f0601403860153d6e746 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: th `--via-ir` (cli) or the equivalent `viaIR: true` (standard JSON) while enabling the optimizer. Otherwise, try removing local variables. When compiling ",
+    "at": "2026-10-05T22:51:17.830Z"
+  },
+  "8453:0x85e2f144dfa1a81ab64557cbc8de9293eadc0092": {
+    "reason": "rug-check 8453:0x85e2f144dfa1a81ab64557cbc8de9293eadc0092\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-06T00:17:13.419Z"
+  },
+  "8453:0x8b25253dc5aae2f8ba3ff78771077b2f7ec32199": {
+    "reason": "rug-check 8453:0x8b25253dc5aae2f8ba3ff78771077b2f7ec32199\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
+    "at": "2026-10-06T01:50:46.454Z"
   }
 }

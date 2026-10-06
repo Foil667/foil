@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/nintendo-luchador-generator/.harness/probe-ui/sock",
+  "slug": "nintendo-luchador-generator",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-2988a773-4e93-4483-8be6-a56e59fe66a3/",
+  "audit_session_id": "a32f9905-9c6c-4562-ae5c-9dfc18b033aa",
+  "pid": 21749
+}

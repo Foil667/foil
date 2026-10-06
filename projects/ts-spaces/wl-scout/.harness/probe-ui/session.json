@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/wl-scout/.harness/probe-ui/sock",
+  "slug": "wl-scout",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-e23c3340-f050-46ef-8d4f-6c3ad6788f48/",
+  "audit_session_id": "7654fcfe-860d-4fc8-983b-daf98f290e68",
+  "pid": 4983
+}

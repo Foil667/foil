@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/vintage-vw-vans/.harness/probe-ui/sock",
+  "slug": "vintage-vw-vans",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-7b0fc66a-a8e7-42d5-a702-5f62157a001f/",
+  "audit_session_id": "a3d0dd3d-cfcf-4538-af6a-80e0a3f674d9",
+  "pid": 9808
+}

@@ -108,7 +108,7 @@ async function ethRpc(chainId, method, params = []) {
   let lastErr = null;
   for (const rpc of cfg.rpc) {
     try {
-      const j = await fetchJson(rpc, { method: 'POST', body: { jsonrpc: '2.0', id: 1, method, params }, timeout: 15000 });
+      const j = await fetchJson(rpc, { method: 'POST', body: { jsonrpc: '2.0', id: 1, method, params }, timeout: 45000 });
       if (j.error) throw new Error(j.error.message || JSON.stringify(j.error));
       return j.result;
     } catch (e) { lastErr = e; }

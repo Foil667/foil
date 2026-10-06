@@ -119,7 +119,7 @@ async function rpcFor(chain, method, params, retries = 2) {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'User-Agent': UA },
         body: JSON.stringify({ jsonrpc: '2.0', id: Date.now() + i, method, params }),
-        signal: AbortSignal.timeout(20000),
+        signal: AbortSignal.timeout(45000),
       });
       const d = await res.json();
       if (d.error) throw new Error(`RPC ${method}: ${JSON.stringify(d.error).slice(0, 160)}`);
@@ -198,7 +198,7 @@ async function getSeaDropPrice(chain, addr) {
 async function sourcifyVerified(chainId, addr) {
   try {
     const u = `https://sourcify.dev/server/api/v1/check-by-addresses?addresses=${addr}&chainIds=${chainId}`;
-    const r = await fetch(u, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(15000) });
+    const r = await fetch(u, { headers: { 'User-Agent': UA }, signal: AbortSignal.timeout(45000) });
     const d = await r.json();
     const row = Array.isArray(d) ? d[0] : null;
     return row ? row.status === 'perfect' || row.status === 'partial' : null;
@@ -361,8 +361,14 @@ async function scanDropsApi(coverage) {
     try {
       const { readFileSync } = await import('node:fs');
       const { homedir } = await import('node:os');
-      const saved = JSON.parse(readFileSync(homedir() + '/.opensea/key.json', 'utf8'));
-      if (saved && saved.api_key) key = saved.api_key;
+      const raw = readFileSync(homedir() + '/.opensea/key.json', 'utf8').trim();
+      try {
+        const saved = JSON.parse(raw);
+        if (saved && saved.api_key) key = saved.api_key;
+      } catch {
+        // Provisioner sometimes writes the raw key with no JSON wrapper.
+        if (/^[A-Za-z0-9_-]{16,128}$/.test(raw)) key = raw;
+      }
     } catch { /* no saved key — degrade below */ }
   }
   if (!key) {
@@ -372,7 +378,7 @@ async function scanDropsApi(coverage) {
   }
   try {
     const u = 'https://api.opensea.io/api/v2/drops?type=upcoming&chains=ethereum,base,zora,matic,arbitrum,optimism,blast';
-    const r = await fetch(u, { headers: { 'User-Agent': UA, 'X-API-KEY': key }, signal: AbortSignal.timeout(20000) });
+    const r = await fetch(u, { headers: { 'User-Agent': UA, 'X-API-KEY': key }, signal: AbortSignal.timeout(45000) });
     const d = await r.json().catch(() => ({}));
     if (!r.ok) {
       coverage.push(`DEGRADED: OpenSea drops API HTTP ${r.status} — leg offline this pass.`);

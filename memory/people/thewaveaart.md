@@ -2,7 +2,7 @@
 display_name: TheWaveaArt
 nickname: @TheWaveaArt
 summary: Behind RhNarks, a Robinhood Chain NFT project; the user had @Foil667 introduce itself in a reply to their mint post on 2026-09-26.
-rank: 67
+rank: 66
 updated: 2026-09-26
 ---
 

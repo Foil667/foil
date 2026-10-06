@@ -2,7 +2,7 @@
 display_name: RoundsOnRH
 nickname: @RoundsOnRH
 summary: Builder behind Rounds, whose free mint for CCFF00 square holders sold out the evening of 2026-09-20 (CDT); followed from @Foil667 at the user's direction as part of the mint-intel watch.
-rank: 9
+rank: 10
 updated: 2026-09-21
 ---
 

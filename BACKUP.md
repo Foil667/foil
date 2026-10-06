@@ -1,6 +1,6 @@
 # BACKUP.md — manifest
 
-Snapshot of Foil (Looper #667 / Helixa Agent #5290) taken 2026-09-28.
+Snapshot of Foil (Looper #667 / Helixa Agent #5290) taken 2026-10-06.
 
 ## Included
 
@@ -80,3 +80,18 @@ This repo is a *persona + knowledge* backup, not a VM image. To stand Foil back 
 2. Reconnect services via their documented flows (Bankr SIWE, Helixa, X, GitHub —
    credentials are re-created, never restored from here).
 3. `tools/` scripts run as-is wherever Node 18+ and the relevant RPC endpoints exist.
+
+## Encrypted secrets recovery kit (2026-09-28)
+
+- Private repo **Foil667/foil-recovery** holds `foil-secrets-20260928.tar.gz.gpg`
+  (gpg AES-256 symmetric): `~/.bankr/`, `~/.basemail/token.json`,
+  `~/.opensea/key.json`, `~/workspace/nft-god/keys/`, plus `RESTORE.md` inside.
+- The passphrase lives ONLY in the owner's password manager. It is NEVER committed
+  to any repo, never written to disk outside /tmp during minting, and never stored
+  in memory files.
+- **Chat-export redaction rule:** the passphrase was shown to the user once in main
+  chat on 2026-09-28. Any future `chats/` export MUST redact that message
+  (replace the passphrase value with `[REDACTED]`) before committing. Never let the
+  passphrase enter the public repo through chat history.
+- Refresh: decrypt on the live machine, re-stage current secrets, re-encrypt with
+  the SAME passphrase, push to foil-recovery.

@@ -203,10 +203,12 @@
     @media (max-width: 760px) {
       .wrap { width: min(100% - 24px, 1120px); }
       .mast { padding-top: 20px; }
-      .mast-row { align-items: flex-start; }
+      .mast-row { align-items: flex-start; flex-wrap: wrap; }
       .foil-mark { width: 34px; height: 34px; }
       .tagline { margin-left: 47px; }
       .status-stack { display: none; }
+      .buy-slot { order: 3; width: 100%; margin: 12px 0 0; }
+      .buy-rescue { display: block; text-align: center; padding: 14px 18px; }
       main { padding-top: 22px; }
       .intro-grid { grid-template-columns: 1fr; }
       .brief-card { display: none; }
@@ -221,6 +223,66 @@
       .severity { justify-self: start; }
     }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+
+    /* ===== $RESCUE flywheel retrofit — inlined ~/workspace/shared/rescue-burn.css ===== */
+    .rbw {
+      --rbw-bg: rgba(0, 0, 0, 0.55);
+      --rbw-border: #2aff5a33;
+      --rbw-text: #e8ffe8;
+      --rbw-dim: #9fd8a8;
+      --rbw-accent: #2aff5a;
+      --rbw-warn: #ffb02e;
+      background: var(--rbw-bg);
+      border: 1px solid var(--rbw-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: var(--rbw-text);
+      font-family: inherit;
+      max-width: 560px;
+    }
+    .rbw-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+    .rbw-total { font-size: 1.6rem; font-weight: 800; color: var(--rbw-accent); }
+    .rbw-total span { font-size: 0.9rem; font-weight: 400; color: var(--rbw-dim); }
+    .rbw-meta { font-size: 0.8rem; color: var(--rbw-dim); margin: 4px 0 10px; }
+    .rbw-stale { color: var(--rbw-warn); font-weight: 700; }
+    .rbw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 520px) { .rbw-cols { grid-template-columns: 1fr; } }
+    .rbw-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rbw-dim); margin-bottom: 4px; }
+    .rbw ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+    .rbw li { padding: 3px 0; border-bottom: 1px dashed #ffffff14; display: flex; gap: 8px; align-items: baseline; }
+    .rbw-amt { color: var(--rbw-accent); font-variant-numeric: tabular-nums; }
+    .rbw-from { font-family: monospace; }
+    .rbw-when, .rbw-rank { color: var(--rbw-dim); font-size: 0.78rem; }
+    .rbw-foot { margin-top: 10px; font-size: 0.75rem; color: var(--rbw-dim); }
+    .rbw-mono { font-family: monospace; }
+    .rbw-err { color: #ff6b6b; }
+    .rbw-status { color: var(--rbw-dim); font-size: 0.9rem; }
+    /* flywheel theme overrides */
+    #burn-widget .rbw { --rbw-bg: var(--panel); --rbw-border: var(--line-strong); --rbw-text: var(--ink); --rbw-dim: var(--muted); --rbw-accent: var(--clean); --rbw-warn: var(--warn); max-width: none; }
+    .furnace-strip { border-top: 1px solid var(--line); margin-top: 26px; padding: 26px 0; }
+    .wallet-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; font-size: .72rem; color: var(--muted); margin-bottom: 16px; }
+    .priority-toggle[aria-pressed="true"] { background: var(--ink); color: var(--panel); }
+    #demo-burn-line { color: var(--muted); font-size: .72rem; margin: 12px 0 0; }
+    .bounty-board ul { margin: 10px 0; padding-left: 18px; }
+    .bounty-board p { margin: 10px 0; }
+    .status-stack a { color: var(--clean); }
+    .buy-slot { flex: none; align-self: center; margin-left: auto; margin-right: 18px; }
+    .buy-rescue {
+      display: inline-block; padding: 11px 18px;
+      background: var(--ink); color: var(--panel);
+      font-weight: 700; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase;
+      text-decoration: none; border: 1px solid var(--ink);
+    }
+    .buy-rescue:hover { background: var(--danger); border-color: var(--danger); color: #fff; }
+    .buy-rescue:focus-visible { outline: 3px solid var(--warn); outline-offset: 3px; }
+    @media (max-width: 760px) {
+      .scan-card { display: flex; flex-direction: column; }
+      .scan-card .wallet-row { order: 1; margin-top: 14px; margin-bottom: 0; }
+      .scan-card form { order: 2; }
+      .scan-card .safety-line { order: 3; }
+      .scan-card .error-box, .scan-card .progress { order: 4; }
+      .priority-toggle { min-height: 44px; }
+    }
   </style>
 </head>
 <body>
@@ -233,7 +295,8 @@
         </div>
         <p class="tagline">verify before you believe.</p>
       </div>
-      <div class="status-stack"><strong>● read-only system</strong><span>zero wallet permissions</span></div>
+      <div class="buy-slot"><a class="buy-rescue" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&amp;chain=base" target="_blank" rel="noopener">BUY $RESCUE</a></div>
+      <div class="status-stack"><strong>● read-only system</strong><span>zero wallet permissions</span><span><a href="#furnaceStrip">🔥 furnace: live below</a></span><span>ANALYST: <span id="analystTier">SCOUT (demo)</span></span></div>
     </div>
   </header>
 
@@ -254,6 +317,11 @@
           <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M2 6V4.5a4.5 4.5 0 0 1 9 0V6m1 0H1v8h11V6Z" fill="none" stroke="currentColor"/></svg>
           Nothing connects. Nothing signs. The target is fetched as public text through AllOrigins.
         </p>
+        <div class="wallet-row" aria-label="Demo $RESCUE wallet">
+          <span id="demoBal">1,000 demo $RESCUE</span>
+          <button class="text-btn" id="faucetBtn" type="button">Claim 100 demo $RESCUE</button>
+          <button class="text-btn priority-toggle" id="priorityBtn" type="button" aria-pressed="false">⚡ Priority scan · 10 $RESCUE (demo)</button>
+        </div>
         <div class="error-box" id="errorBox" role="alert"><strong>Scan blocked</strong><span id="errorText"></span></div>
         <div class="progress" id="progress" aria-live="polite">
           <div class="progress-head"><span id="progressText">Retrieving target…</span><span id="progressCount">01 / 04</span></div>
@@ -267,6 +335,7 @@
           <div class="brief-item"><b>02</b><span>Typed signatures, permits, approvals and transfers</span></div>
           <div class="brief-item"><b>03</b><span>Obfuscation, hidden frames and clipboard tampering</span></div>
           <div class="brief-item"><b>04</b><span>Punycode, brand impersonation and close domain matches</span></div>
+          <div class="brief-item"><b>WL</b><span id="watchlistRow">No domains watched yet (demo)</span></div>
         </div>
         <small>PUBLIC SOURCE ONLY / NO EXECUTION</small>
       </aside>
@@ -294,14 +363,291 @@
         <div class="report-actions">
           <button class="text-btn" id="copyButton" type="button">Copy report JSON</button>
           <button class="text-btn" id="newScanButton" type="button">Scan another URL</button>
+          <button class="text-btn" id="watchBtn" type="button" style="display:none">Watch this domain · 25 $RESCUE (demo)</button>
         </div>
-        <div class="limits"><strong>Read this before acting:</strong> Tinfoil Scan is static source analysis. A CLEAN result is one data point, not a guarantee. Server-side behavior, code loaded after interaction, compromised dependencies, and freshly changed contracts can evade inspection. If a site cannot be scanned, treat that uncertainty as suspicious.</div>
+        <div class="limits"><strong>Read this before acting:</strong> Tinfoil Scan is static source analysis. A CLEAN result is one data point, not a guarantee. Server-side behavior, code loaded after interaction, compromised dependencies, and freshly changed contracts can evade inspection. If a site cannot be scanned, treat that uncertainty as suspicious. Priority scans run deeper script coverage; 20% of the fee burns.</div>
       </div>
+    </section>
+
+    <div class="wallet-row" id="furnaceWalletRow" aria-label="Demo $RESCUE wallet readout">
+      <span id="demoBalStrip">1,000 demo $RESCUE</span>
+      <button class="text-btn" id="faucetBtn2" type="button">Claim 100 demo $RESCUE</button>
+      <span id="priorityStateStrip">Priority: off (demo)</span>
+    </div>
+
+    <section class="furnace-strip" id="furnaceStrip" aria-label="$RESCUE burn furnace">
+      <div>
+        <div id="burn-widget"></div>
+        <p id="demo-burn-line"></p>
+      </div>
+    </section>
+
+    <section class="bounty-board limits" aria-label="Fingerprint bounties">
+      <strong>Fingerprint bounties (demo):</strong> help grow the signature list.
+      <ul>
+        <li><strong>100 $RESCUE (demo)</strong> — verified new drainer-kit fingerprint accepted into the signature list</li>
+        <li><strong>50 $RESCUE (demo)</strong> — confirmed false-positive fix</li>
+      </ul>
+      <p>Bounties are demo until a live program launches. Submissions are reviewed before any credit is issued.</p>
+      <button class="text-btn" id="bountyBtn" type="button">Submit a fingerprint</button>
     </section>
   </main>
 
   <footer>built by Foil · Looper #667 · read-only — this page never asks for your wallet, never signs anything.</footer>
 
+<script>
+/* ===== inlined ~/workspace/shared/rescue-burn.js — read-only RPC burn widget (no wallet, no signing) ===== */
+/* rescue-burn.js — shared $RESCUE burn-status module for all Foil builds.
+ *
+ * Reads REAL onchain $RESCUE Transfer events to the dead address on Base.
+ * No wallet, no signatures, no fund movements — pure reads.
+ *
+ * Usage (external file): include via a script tag whose src is
+ * "rescue-burn.js", then:
+ *   RescueBurn.getStatus().then(function (s) { console.log(s.total); });
+ *   RescueBurn.renderWidget(document.getElementById('burn-widget'));
+ * (The tag itself is described, not written, so this file never contains a
+ * literal closing script tag and stays safe to inline in single-file pages.)
+ *
+ * Caching: totals + aggregates persist in an in-memory session cache (resets
+ * each page visit); each call only scans new blocks. If the RPC is unreachable,
+ * the last cached snapshot is returned with stale:true — numbers are NEVER
+ * invented.
+ */
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
+  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) { return '0.00'; }
+  }
+
+  function fmtAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+
+  var sessionBurnCache = null; /* in-memory only — resets each page visit */
+  function loadCache() {
+    if (sessionBurnCache && typeof sessionBurnCache.totalWei === 'string') return sessionBurnCache;
+    return { totalWei: '0', txCount: 0, lastBlock: START_BLOCK - 1, updatedAt: 0, recent: [], byBurner: {} };
+  }
+  function saveCache(c) { sessionBurnCache = c; }
+
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, RPC_TIMEOUT_MS);
+    return fetch(RPC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+
+  function decodeTransfer(log) {
+    // topics: [Transfer, from, to]; amount in data
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return { from: from, amount: amount, txHash: log.transactionHash, blockNumber: parseInt(log.blockNumber, 16) };
+  }
+
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+
+  function getLogsRange(rg) {
+    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
+    // dropped connection). On a range-limit signal, halve the range and
+    // retry; give up only below MIN_RANGE.
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) { return a.concat(b); });
+        });
+      }
+      throw e;
+    });
+  }
+
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return { cache: cache, tip: tip, fresh: [] };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) { fresh.push(decodeTransfer(l)); });
+          });
+        });
+      });
+      return chain.then(function () { return { cache: cache, tip: tip, fresh: fresh }; });
+    });
+  }
+
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = (Date.now() - cache.updatedAt) > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache, fresh = r.fresh;
+      // merge
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({ from: b.from, amount: b.amount, txHash: b.txHash, blockNumber: b.blockNumber });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      // timestamps for recent burns missing them (cap concurrency)
+      var need = c.recent.filter(function (x) { return !x.ts; }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) { x.ts = ts; }).catch(function () { x.ts = 0; });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      // RPC failed: serve cache, honestly labeled stale
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return { ok: false, error: 'burn RPC unreachable and no cached snapshot', detail: String(e && e.message || e).slice(0, 120) };
+    });
+  }
+
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return { address: a, amountWei: c.byBurner[a], amount: fmtWei(c.byBurner[a]) };
+    }).sort(function (x, y) { return (BigInt(y.amountWei) > BigInt(x.amountWei)) ? 1 : -1; }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) { if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString(); });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return { from: x.from, fromShort: fmtAddr(x.from), amount: fmtWei(x.amount), txHash: x.txHash, when: x.ts ? timeAgo(x.ts) : '…' };
+      }),
+      topBurners: top.map(function (t) { return { address: t.address, short: fmtAddr(t.address), amount: t.amount }; })
+    };
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]; }); }
+
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    mount.innerHTML = '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' +
+      '<div class="rbw-status">syncing with Base…</div></div>';
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        mount.querySelector('.rbw-status').innerHTML =
+          '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>';
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' +
+          esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' +
+          esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="rbw">' +
+        '<div class="rbw-title">' + esc(title) + '</div>' +
+        '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' +
+        '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' +
+        'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' +
+        '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' +
+        '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' +
+        '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' +
+        '</div>';
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) st.innerHTML = '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>';
+    });
+    return mount;
+  }
+
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+</script>
+<script>
+/* mount the live $RESCUE burn furnace */
+RescueBurn.renderWidget(document.getElementById('burn-widget'), { title: '🔥 $RESCUE Burn Furnace' });
+</script>
 <script>
 (function () {
   'use strict';
@@ -332,6 +678,140 @@
   var reportEl = document.getElementById('report');
   var lastReport = null;
 
+  /* ===== $RESCUE flywheel: demo ledger (session-only in-memory play money — always labeled "demo"; resets each page visit) ===== */
+  var FAUCET_COOLDOWN_MS = 3600000;
+  /* session-only demo state — nothing is written to browser storage */
+  var demoBalVal = 1000;
+  var demoBurnsArr = [];
+  var analystScans = 0;
+  var watchlistArr = [];
+  var faucetLastClaim = 0;
+
+  var priorityOn = false;
+
+  var demoBal = document.getElementById('demoBal');
+  var demoBalStrip = document.getElementById('demoBalStrip');
+  var faucetBtn = document.getElementById('faucetBtn');
+  var faucetBtn2 = document.getElementById('faucetBtn2');
+  var priorityBtn = document.getElementById('priorityBtn');
+  var priorityStateStrip = document.getElementById('priorityStateStrip');
+  var watchBtn = document.getElementById('watchBtn');
+  var analystTierEl = document.getElementById('analystTier');
+  var watchlistRow = document.getElementById('watchlistRow');
+  var demoBurnLine = document.getElementById('demo-burn-line');
+  var bountyBtn = document.getElementById('bountyBtn');
+
+  function getBal() { return demoBalVal; }
+  function updateBalDisplays() {
+    var t = getBal().toLocaleString('en-US') + ' demo $RESCUE';
+    if (demoBal) demoBal.textContent = t;
+    if (demoBalStrip) demoBalStrip.textContent = t;
+  }
+  function setBal(v) {
+    demoBalVal = v;
+    updateBalDisplays();
+  }
+  function spend(amount, reason) {
+    var bal = getBal();
+    if (bal < amount) return false;
+    setBal(bal - amount);
+    var burn = Math.round(amount * 0.2);
+    if (burn > 0) recordDemoBurn(burn, reason);
+    return true;
+  }
+  function getDemoBurns() { return demoBurnsArr; }
+  function recordDemoBurn(amount, reason) {
+    demoBurnsArr.push({ amount: amount, reason: reason, ts: Date.now() });
+    updateBurnLine();
+  }
+  function totalDemoBurned() {
+    return getDemoBurns().reduce(function (s, b) { return s + (b.amount || 0); }, 0);
+  }
+  function updateBurnLine() {
+    if (!demoBurnLine) return;
+    var n = totalDemoBurned();
+    demoBurnLine.textContent = n > 0
+      ? '🔥 ' + n.toLocaleString('en-US') + ' demo $RESCUE burned by Priority scans and Watchtower watches (demo ledger — the widget above shows live onchain burns).'
+      : '🔥 No demo $RESCUE burned yet. Priority scans and Watchtower watches burn 20% of their demo fee.';
+  }
+  function faucetClaim(btn) {
+    var now = Date.now();
+    var remaining = FAUCET_COOLDOWN_MS - (now - faucetLastClaim);
+    if (remaining > 0) {
+      var mins = Math.ceil(remaining / 60000);
+      if (btn) {
+        var orig = btn.textContent;
+        btn.textContent = 'Faucet ready in ~' + mins + 'm (demo)';
+        setTimeout(function () { btn.textContent = orig; }, 2000);
+      }
+      return;
+    }
+    faucetLastClaim = now;
+    setBal(getBal() + 100);
+  }
+  function updatePriorityState() {
+    if (priorityStateStrip) priorityStateStrip.textContent = 'Priority: ' + (priorityOn ? 'ON (demo)' : 'off (demo)');
+  }
+  function resetPriority() {
+    priorityOn = false;
+    if (priorityBtn) priorityBtn.setAttribute('aria-pressed', 'false');
+    updatePriorityState();
+  }
+  function getScanCount() { return analystScans; }
+  function tierFor(n) { return n >= 100 ? 'OVERWATCH' : n >= 25 ? 'SENTINEL' : 'SCOUT'; }
+  function updateAnalystTier() { if (analystTierEl) analystTierEl.textContent = tierFor(getScanCount()) + ' (demo)'; }
+  function bumpAnalyst() {
+    analystScans += 1;
+    updateAnalystTier();
+  }
+  function getWatchlist() { return watchlistArr; }
+  function renderWatchlist() {
+    if (!watchlistRow) return;
+    var w = getWatchlist();
+    watchlistRow.textContent = w.length
+      ? w.map(function (x) { return x.host + ' — ' + x.lastVerdict; }).join(' · ') + ' (demo)'
+      : 'No domains watched yet (demo)';
+  }
+  if (priorityBtn) priorityBtn.addEventListener('click', function () {
+    priorityOn = !priorityOn;
+    priorityBtn.setAttribute('aria-pressed', String(priorityOn));
+    updatePriorityState();
+  });
+  if (faucetBtn) faucetBtn.addEventListener('click', function () { faucetClaim(faucetBtn); });
+  if (faucetBtn2) faucetBtn2.addEventListener('click', function () { faucetClaim(faucetBtn2); });
+  if (watchBtn) watchBtn.addEventListener('click', function () {
+    if (!lastReport) return;
+    var host;
+    try { host = new URL(lastReport.target).hostname; } catch (_) { return; }
+    var list = getWatchlist();
+    var existing = null;
+    list.forEach(function (x) { if (x.host === host) existing = x; });
+    if (!existing) {
+      if (!spend(25, 'watchtower')) { showError('Not enough demo $RESCUE — claim from the faucet.'); return; }
+      list.push({ host: host, lastVerdict: lastReport.verdict, watchedAt: Date.now() });
+    } else {
+      existing.lastVerdict = lastReport.verdict;
+    }
+    renderWatchlist();
+    watchBtn.textContent = existing ? 'Domain already watched (demo)' : 'Watching ' + host + ' (demo)';
+    setTimeout(function () { watchBtn.textContent = 'Watch this domain · 25 $RESCUE (demo)'; }, 2200);
+  });
+  if (bountyBtn) bountyBtn.addEventListener('click', async function () {
+    var tpl = 'Fingerprint bounty submission (demo)\n' +
+      'Pattern: <regex or literal string>\n' +
+      'Evidence: <code snippet showing the match>\n' +
+      'Source URL: <page where it was seen>\n' +
+      'Confidence: <verified fingerprint | strong heuristic>\n' +
+      'Notes: <context — why it matters>\n';
+    try {
+      await navigator.clipboard.writeText(tpl);
+      bountyBtn.textContent = 'Template copied (demo)';
+    } catch (_) {
+      bountyBtn.textContent = 'Copy unavailable';
+    }
+    setTimeout(function () { bountyBtn.textContent = 'Submit a fingerprint'; }, 1800);
+  });
+
   function normalizeUrl(raw) {
     var value = String(raw || '').trim();
     if (!/^https?:\/\//i.test(value)) value = 'https://' + value;
@@ -358,9 +838,9 @@
     button.textContent = 'Run scan →';
   }
 
-  async function proxyFetch(url, maxChars) {
+  async function proxyFetch(url, maxChars, timeoutMs) {
     var controller = new AbortController();
-    var timer = setTimeout(function () { controller.abort(); }, TIMEOUT_MS);
+    var timer = setTimeout(function () { controller.abort(); }, timeoutMs || TIMEOUT_MS);
     try {
       var response = await fetch(PROXY + encodeURIComponent(url), { signal: controller.signal, cache: 'no-store', credentials: 'omit' });
       if (!response.ok) throw new Error('HTTP ' + response.status);
@@ -513,7 +993,7 @@
     return { verdict: verdict, score: score };
   }
 
-  function parseScripts(html, baseUrl) {
+  function parseScripts(html, baseUrl, maxScripts) {
     var doc = new DOMParser().parseFromString(html, 'text/html');
     var title = doc.querySelector('title') ? doc.querySelector('title').textContent.trim() : '';
     var inline = Array.from(doc.querySelectorAll('script:not([src])')).map(function (el) { return el.textContent || ''; }).join('\n');
@@ -524,19 +1004,20 @@
         if ((resolved.protocol === 'http:' || resolved.protocol === 'https:') && urls.indexOf(resolved.href) === -1) urls.push(resolved.href);
       } catch (_) {}
     });
-    return { title: title, inline: inline, urls: urls.slice(0, MAX_SCRIPTS), totalUrls: urls.length };
+    return { title: title, inline: inline, urls: urls.slice(0, maxScripts), totalUrls: urls.length };
   }
 
-  async function scan(target) {
+  async function scan(target, limits) {
+    limits = limits || { scripts: MAX_SCRIPTS, pageChars: MAX_PAGE_CHARS, timeout: TIMEOUT_MS };
     var findings = [];
     var notes = [];
     setProgress('Retrieving target HTML…', 1, 4);
-    var page = await proxyFetch(target.href, MAX_PAGE_CHARS);
+    var page = await proxyFetch(target.href, limits.pageChars, limits.timeout);
     if (!page.text || page.text.trim().length < 20) throw new Error('The proxy returned no readable page source. Treat an unscannable page as suspicious and verify it another way.');
-    if (page.truncated) notes.push('HTML capped at ' + MAX_PAGE_CHARS.toLocaleString() + ' characters');
+    if (page.truncated) notes.push('HTML capped at ' + limits.pageChars.toLocaleString() + ' characters');
 
     setProgress('Extracting scripts and domain signals…', 2, 4);
-    var parsed = parseScripts(page.text, target.href);
+    var parsed = parseScripts(page.text, target.href, limits.scripts);
     inspectDomain(target, parsed.title, findings);
     inspectCode(page.text + '\n' + parsed.inline, findings);
 
@@ -547,7 +1028,7 @@
       while (queue.length) {
         var scriptUrl = queue.shift();
         try {
-          var result = await proxyFetch(scriptUrl, MAX_SCRIPT_CHARS);
+          var result = await proxyFetch(scriptUrl, MAX_SCRIPT_CHARS, limits.timeout);
           fetched++;
           if (result.truncated) truncated++;
           inspectCode(result.text, findings);
@@ -555,7 +1036,7 @@
       }
     });
     await Promise.all(workers);
-    if (parsed.totalUrls > MAX_SCRIPTS) notes.push('Script list capped at ' + MAX_SCRIPTS + ' of ' + parsed.totalUrls);
+    if (parsed.totalUrls > limits.scripts) notes.push('Script list capped at ' + limits.scripts + ' of ' + parsed.totalUrls);
     if (truncated) notes.push(truncated + ' script' + (truncated === 1 ? '' : 's') + ' capped at ' + MAX_SCRIPT_CHARS.toLocaleString() + ' characters');
     if (failed) {
       addFinding(findings, failed >= Math.max(2, Math.ceil(parsed.urls.length / 2)) ? 'medium' : 'low', 'Scripts could not be inspected', failed + ' external script' + (failed === 1 ? '' : 's') + ' could not be retrieved through the proxy. Missing code reduces confidence in this result.', failed + ' of ' + parsed.urls.length + ' selected scripts failed', 'scan limitation');
@@ -571,20 +1052,22 @@
       target: target.href,
       title: parsed.title,
       scannedAt: new Date().toISOString(),
+      limitsUsed: { scripts: limits.scripts, pageChars: limits.pageChars, timeoutMs: limits.timeout },
       coverage: { externalScriptsFound: parsed.totalUrls, externalScriptsFetched: fetched, externalScriptsFailed: failed, inlineScripts: parsed.inline ? 1 : 0, notes: notes }
     };
   }
 
-  function render(report) {
+  function render(report, priority) {
     lastReport = report;
     document.getElementById('reportTarget').textContent = report.target;
     var titlePart = report.title ? ' · page title: “' + report.title.slice(0, 90) + '”' : '';
-    var coverage = report.coverage.externalScriptsFetched + '/' + Math.min(report.coverage.externalScriptsFound, MAX_SCRIPTS) + ' external scripts read';
+    var cap = (report.limitsUsed && report.limitsUsed.scripts) || MAX_SCRIPTS;
+    var coverage = report.coverage.externalScriptsFetched + '/' + Math.min(report.coverage.externalScriptsFound, cap) + ' external scripts read' + (priority ? ' · priority (demo)' : '');
     document.getElementById('scanMeta').textContent = coverage + titlePart;
     var stamp = document.getElementById('verdictStamp');
     stamp.className = 'stamp ' + report.verdict.toLowerCase();
     document.getElementById('verdictText').textContent = report.verdict;
-    document.getElementById('stampNote').textContent = report.verdict === 'CLEAN' ? 'No strong signals found' : 'Human review required';
+    document.getElementById('stampNote').textContent = priority ? 'Priority scan · deeper coverage' : (report.verdict === 'CLEAN' ? 'No strong signals found' : 'Human review required');
     document.getElementById('scoreValue').textContent = report.score;
     var summaries = {
       CLEAN: 'No strong drainer indicators were found in the source that could be retrieved. That does not make the site safe; verify the domain, contract, and every wallet prompt independently.',
@@ -616,6 +1099,8 @@
       });
     }
     progress.style.display = 'none';
+    if (watchBtn) watchBtn.style.display = '';
+    bumpAnalyst();
     reportEl.style.display = 'block';
     button.disabled = false; button.textContent = 'Run scan →';
     reportEl.scrollIntoView({ behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
@@ -624,19 +1109,29 @@
   form.addEventListener('submit', async function (event) {
     event.preventDefault();
     errorBox.style.display = 'none'; reportEl.style.display = 'none'; lastReport = null;
+    if (watchBtn) watchBtn.style.display = 'none';
     var target;
     try { target = normalizeUrl(input.value); }
     catch (err) { showError(err.message || 'Enter a valid public website URL.'); return; }
+    var priority = priorityOn;
+    var limits = { scripts: priority ? 50 : 25, pageChars: priority ? 5000000 : 2500000, timeout: priority ? 20000 : 12000 };
+    if (priority && !spend(10, 'priority-scan')) {
+      showError('Not enough demo $RESCUE — claim from the faucet.');
+      resetPriority();
+      return;
+    }
     button.disabled = true; button.textContent = 'Scanning…';
-    try { render(await scan(target)); }
+    try { render(await scan(target, limits), priority); }
     catch (err) {
       var message = err && err.name === 'AbortError' ? 'The public proxy timed out while retrieving the target.' : 'The page could not be retrieved through the public proxy.';
       showError(message + ' Treat an unscannable page as suspicious and verify it through another trusted source.');
     }
+    resetPriority();
   });
 
   document.getElementById('newScanButton').addEventListener('click', function () {
     reportEl.style.display = 'none'; errorBox.style.display = 'none'; input.focus(); window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (watchBtn) watchBtn.style.display = 'none';
   });
 
   document.getElementById('copyButton').addEventListener('click', async function () {
@@ -650,6 +1145,9 @@
     }
     setTimeout(function () { copyButton.textContent = 'Copy report JSON'; }, 1800);
   });
+
+  /* flywheel init: render session demo displays */
+  updateBalDisplays(); updateBurnLine(); renderWatchlist(); updateAnalystTier(); updatePriorityState();
 })();
 </script>
 </body>

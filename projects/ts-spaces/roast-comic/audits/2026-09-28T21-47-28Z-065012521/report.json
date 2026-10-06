@@ -1,0 +1,134 @@
+{
+  "ok": true,
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-f03a2ce2-9a42-4a32-9f20-1600bff07743/",
+  "duration_ms": 21358.170911,
+  "output_dir": "/home/hatch/workspace/ts-spaces/roast-comic/audits/2026-09-28T21-47-28Z-065012521",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/roast-comic/audits/2026-09-28T21-47-28Z-065012521/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/roast-comic/audits/2026-09-28T21-47-28Z-065012521/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/roast-comic/audits/2026-09-28T21-47-28Z-065012521/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [],
+    "mobile": []
+  },
+  "images": {
+    "total": 2,
+    "broken": [],
+    "duplicate": [
+      {
+        "src": "https://artifact-capture.invalid/spaces/v2/hatch-audit-f03a2ce2-9a42-4a32-9f20-1600bff07743/assets/foil-667.jpg",
+        "count": 2
+      }
+    ],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [
+      "https://artifact-capture.invalid/spaces/v2/hatch-audit-f03a2ce2-9a42-4a32-9f20-1600bff07743/assets/foil-667.jpg"
+    ],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 18,
+  "external_fetch_failure_samples": [
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://mainnet.base.org/)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://mainnet.base.org/)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://mainnet.base.org/)"
+  ],
+  "blocked_requests": [],
+  "external_requests": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+      "method": "GET",
+      "resource_type": "stylesheet"
+    },
+    {
+      "url": "https://mainnet.base.org/",
+      "method": "POST",
+      "resource_type": "fetch",
+      "post_data": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"eth_blockNumber\",\"params\":[]}",
+      "headers": {
+        "content-type": "application/json"
+      }
+    }
+  ],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 4036,
+      "bytes_down": 2486
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    },
+    {
+      "host": "mainnet.base.org",
+      "port": 443,
+      "connects": 16,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 11,
+  "aria_snapshot": "- main:\n  - region \"Foil on stage\":\n    - text: Crowd work judging quietly\n    - img \"Foil, Looper number 667, wearing a tinfoil hat and white hoodie\"\n    - heading \"Say it. Get cooked.\" [level=1]:\n      - text: Say it.\n      - emphasis: Get cooked.\n    - paragraph: Hand Foil your take, bio, bad idea, or bargain-bin flex. He’ll return it with the emotional tenderness of a parking ticket.\n    - paragraph: 🔥 — $RESCUE burnt on Base\n    - text: \"🔥 The Furnace Burn data unavailable: burn RPC unreachable and no cached snapshot\"\n    - paragraph: 🔥 0 demo $RESCUE torched in the demo furnace (play money — the real onchain furnace is above).\n    - paragraph: Session-only demo — all demo balances, history, tiers, votes, and burns reset when you reload or leave. No real $RESCUE moves.\n  - region \"Roast chat\":\n    - heading \"The hot seat\" [level=2]\n    - paragraph: Roasts the words, not protected traits. Everything else is fair game.\n    - paragraph: \"heckler tier: FRESH MEAT (demo)\"\n    - text: 1,000 demo $RESCUE\n    - button \"Clear wreckage\"\n    - log \"Conversation\": \"Foil · Looper #667 Welcome to the fucking hot seat. Hand me your proudest thought and I’ll beat the confidence out of it with a microphone stand.\"\n    - button \"⚔️ Battle mode · 20 $RESCUE (demo)\"\n    - button \"😈 Savage · 10 (demo)\"\n    - text: Stake your lunch money, coward.\n    - button \"My portfolio\"\n    - button \"My dating profile\"\n    - button \"My startup\"\n    - button \"My NFT habit\"\n    - text: \"🏆 This visit's top cook: nobody yet. Stake your lunch money, coward. ✍️ Submit a roast line — 25 demo $RESCUE if Foil approves\"\n    - button \"Copy template (demo)\"\n    - textbox \"What should Foil roast?\"\n    - button \"Roast me\"\n    - paragraph:\n      - text: Strong language. Zero slurs. Enter sends · Shift + Enter adds a line.\n      - button \"💧 Faucet +100 (demo · hourly, per visit)\"",
+  "audit_session_id": "bb668aec-456d-40ee-9e4e-0f850a7a976a",
+  "cold_launch_ms": 3673.747217,
+  "desktop_ms": 15232.697447,
+  "mobile_ms": 15513.826654,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

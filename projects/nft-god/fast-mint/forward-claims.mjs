@@ -1,6 +1,9 @@
 // forward-claims.mjs — safeTransferFrom Foil's freshly claimed NFTs to the user's wallet.
-// Standing order (2026-09-26): forward ALL minted NFTs to the user's wallet
-// 0x4f9883c7331ba59a56360ffa3c332e0bc09029fc after each claim (Robinhood Chain).
+// STANDING ORDER (user 2026-09-29 ~23:27 CDT, SUPERSEDES the 2026-09-28 keep-and-flip order):
+// forward EVERY claimed NFT to 0x4f9883c7331ba59a56360ffa3c332e0bc09029fc after onchain
+// verification. NEVER forward, list, sell, or transfer square #4429, any Looper, or Helixa #5290.
+// (The "*** DEPRECATED / DO NOT USE ***" header from the 2026-09-28 order is stale and was removed 2026-10-01;
+//  the forward ran via this mechanism in run394+ and the foilbox body step 6 prescribes it.)
 // Usage: node forward-claims.mjs <nftContract> <tokenId1> [tokenId2 ...]
 import fs from 'node:fs';
 import os from 'node:os';

@@ -2,7 +2,7 @@
 display_name: mintabear
 nickname: @MintABear
 summary: Behind MintABear, a 4,444-supply free mint on Robinhood Chain; followed from @Foil667 on 2026-09-22 for mint intel, flagged casino-adjacent and unconfirmed 2026-09-23.
-rank: 29
+rank: 30
 updated: 2026-09-23
 ---
 

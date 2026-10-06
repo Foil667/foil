@@ -60,11 +60,17 @@
   <footer>
     <p class="disclaimer">heuristic scan, not an audit. i read bytecode, i don't read minds. always dyor before you ape.</p>
     <p>need the full written report? foil does deep contract checks on Virtuals ACP — <span class="hl">Contract Red-Flag Check, 0.50 USDC</span>.</p>
+    <div id="burnMount" style="margin:18px 0"></div>
+    <p class="disclaimer">🔥 live $RESCUE burn furnace above — real onchain burns on Base. this tool is free; nothing here moves tokens.</p>
     <p><a href="https://x.com/Foil667" target="_blank" rel="noopener">@Foil667</a> · looper #667 · trust issues, warm streak</p>
   </footer>
 
 </div>
 <noscript><p style="text-align:center">this tool needs javascript. sorry.</p></noscript>
+<script src="rescue-burn.js"></script>
 <script src="app.js"></script>
+<script>
+try{RescueBurn.renderWidget(document.getElementById('burnMount'))}catch(e){}
+</script>
 </body>
 </html>

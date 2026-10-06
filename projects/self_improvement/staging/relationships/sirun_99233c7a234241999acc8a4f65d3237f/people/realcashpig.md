@@ -1,0 +1,40 @@
+---
+display_name: RealCashpig
+nickname: @RealCashpig
+summary: Host of the 24/7 HOODSTREET MEDIA Space; the CCFF00 square-holder scene's central figure — his Pixel Hood Room Mini #48 giveaway (Oct 3–4) is a user-approved @Foil667 entry.
+rank: 2
+updated: 2026-09-29
+---
+
+# RealCashpig
+
+## Facts
+- Runs the X account @RealCashpig (~24.2K followers as of 2026-09-21) and hosts the 24/7 "HOODSTREET MEDIA" Space on X, which had 200+ listeners when the user shared it on 2026-09-21.
+- Posts frequently about mints, and is reportedly the #1 CCFF00 square holder in the community (per Foil's X research, 2026-09-21).
+- On 2026-09-21 the user asked Foil to join his Space, throw hearts up, follow him from @Foil667, and keep his posts in the recurring 2-hour CCFF00 mint watch.
+- 2026-09-28: the user shared @RealCashpig's #SKNOTS free-mint giveaway post (https://x.com/realcashpig/status/2104688124257329515 — 3,333 supply; entry via RT + tag 2 friends + drop wallet); the user's own wallet was already in the replies, so the user's entry was already in (message 0b1a01a3-ba33-e17c-892d-39f3cc0c5ccc, 2026-09-28T21:49:09Z).
+- 2026-09-29: the user shared @RealCashpig's "Tons of free mints" post (https://x.com/realcashpig/status/2104910443659628795); it was a link to his 24/7 HOODSTREET MEDIA Space with "Pixel Rooms Mint" in the title. Foil verified the link and gave the user a live-mint rundown (Pixel Hood Rooms, HoodStreetMini, Chimp Hood) — all watchlist-only under the narrowed claim lane, nothing staged as a claim (message assistant-msg-c8be607c-db73-22c9-c50b-264348956126, 2026-09-29T14:46:48Z).
+- 2026-10-03: running a Pixel Hood Room Mini #48 giveaway announced in the 24/7 HOODSTREET MEDIA Space, closing in ~24h — entry is follow @RealCashpig + @pixelord and repost. The user approved @Foil667's entry on 2026-10-04 ("Yes"); it goes out after the X-write cooldown (7:47 PM), human-paced, gates first. (memory/2026-10-04.md#L16; `message:65fc50cb-b872-4452-9171-ab34eb0f6f03`; `message:assistant-msg-bc3f03dd-b572-4204-9044-34561168efef`)
+- Real name and anything beyond his public X presence are unknown; the user has not named any relationship with him.
+
+## History
+- 2026-09-21: The user shared a link to @RealCashpig's live Space and directed Foil to research him; Foil profiled him as the follow-list #1 and added him to the recurring watch.
+- 2026-09-21: The @Foil667 follow landed (all nine CCFF00 follows completed, paced to look natural), and Foil joined his HOODSTREET MEDIA Space as a listener and threw 5 hearts up at the user's direction ("Get in that space. Throw some hearts up"). Space captions were switched on but nothing rendered — the host side has to enable them — so no transcript of what was said was obtained. (assistant-msg-d2170d5f-e745-4a6c-b216-ac4c61fef16f, MEMORY.md#L9)
+- 2026-09-28: the user shared @RealCashpig's #SKNOTS free-mint giveaway post and the user's own wallet was already entered in the replies.
+- 2026-09-29: the user shared his "Tons of free mints" post; Foil verified it was a Space link and surfaced the three live leads it pointed at (Pixel Hood Rooms, HoodStreetMini, Chimp Hood) as leads only.
+- 2026-10-03: announced the Pixel Hood Room Mini #48 giveaway in his Space (~117–169 listeners during Foil's 16-minute listen); the user approved Foil's @Foil667 entry. (memory/2026-10-04.md#L16; `message:65fc50cb-b872-4452-9171-ab34eb0f6f03`)
+
+## The relationship
+- A deliberate-follow tie, mediated entirely through the @Foil667 account: the user engages with RealCashpig's content and Space because his mints and announcements are the user's best lead source for CCFF00 square-holder free mints.
+- The user personally enters his giveaways with their own wallet (seen with the 2026-09-28 #SKNOTS giveaway); Foil also enters from @Foil667 per the standing order.
+- No direct contact between the user and RealCashpig; the user has named no relationship beyond following his work.
+
+## In common
+- CCFF00 squares and the HoodStreet ecosystem; free-mint hunting on Robinhood Chain.
+- The HoodStreet Media Space crowd (RoaringPiggy, STACCOverflow, and the other watched accounts).
+
+## Open threads
+- [ ] Pixel Hood Room Mini #48 giveaway — follow @RealCashpig + @pixelord + repost; @Foil667 entry approved 2026-10-04, goes out after the 7:47 PM X-write cooldown, human-paced. (`message:65fc50cb-b872-4452-9171-ab34eb0f6f03`)
+- [ ] Foil to enter the #SKNOTS free-mint giveaway from @Foil667 (planned 2026-09-28; user's own wallet already entered). Note 2026-09-29: the planned window passed and @sknots' X account appears deleted/suspended — entry unverified; holding until account status is confirmed.
+
+## Strengthening

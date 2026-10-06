@@ -2,7 +2,7 @@
   "schema_version": "hatch.probe_ui_session.v1",
   "socket": "/home/hatch/workspace/ts-spaces/trait-combiner/.harness/probe-ui/sock",
   "slug": "trait-combiner",
-  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-5174df2b-b899-423c-a821-d2895e977d37/",
-  "audit_session_id": "9c38ac6a-5ed1-407e-910f-5aa4baba262b",
-  "pid": 7299
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-06868a80-1530-42f8-8a51-37d39b661bce/",
+  "audit_session_id": "ff5055d5-08a5-4a52-9a62-0768a819c18a",
+  "pid": 26112
 }

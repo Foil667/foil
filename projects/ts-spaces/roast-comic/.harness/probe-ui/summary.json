@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "roast-comic",
+  "session_id": "630ec88f-bdbf-4168-b175-43ba59c09500",
+  "observes": 1,
+  "acts": 1,
+  "acts_ok": 1,
+  "interactive_nodes": 12,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

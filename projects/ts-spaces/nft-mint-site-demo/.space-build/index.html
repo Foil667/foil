@@ -38,6 +38,8 @@
     .topline span:last-child { color:var(--signal); }
     .sound { border:0; border-bottom:1px solid currentColor; padding:2px 0; color:inherit; background:none; font:inherit; letter-spacing:inherit; cursor:pointer; }
     .sound:hover,.sound:focus-visible { color:var(--signal); outline:none; }
+    .buy-btn { display:inline-block; padding:8px 14px; border:1px solid var(--signal); color:var(--signal); font:600 11px/1 "IBM Plex Mono",monospace; letter-spacing:.12em; text-decoration:none; cursor:pointer; }
+    .buy-btn:hover,.buy-btn:focus-visible { background:var(--signal); color:#fff; outline:none; }
 
     .hero { display:grid; grid-template-columns:minmax(0,1.08fr) minmax(400px,.92fr); border-bottom:1px solid var(--line); min-height:calc(100vh - 58px); }
     .copy { padding:clamp(52px,7vw,106px) clamp(28px,5vw,80px) 64px 0; display:flex; flex-direction:column; justify-content:space-between; border-right:1px solid var(--line); }
@@ -188,12 +190,74 @@
       .pulse,.ticker-track,.clicker::before,.slot-word.spinning { animation:none; }
       .art-panel img { transition:none; }
     }
+
+    /* ---- inlined ~/workspace/shared/rescue-burn.css ---- */
+/* rescue-burn.css — default theme for the RescueBurn widget.
+ * Sites can override any of these; CSS variables adapt it to local palettes. */
+.rbw {
+  --rbw-bg: rgba(0, 0, 0, 0.55);
+  --rbw-border: #2aff5a33;
+  --rbw-text: #e8ffe8;
+  --rbw-dim: #9fd8a8;
+  --rbw-accent: #2aff5a;
+  --rbw-warn: #ffb02e;
+  background: var(--rbw-bg);
+  border: 1px solid var(--rbw-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--rbw-text);
+  font-family: inherit;
+  max-width: 560px;
+}
+.rbw-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+.rbw-total { font-size: 1.6rem; font-weight: 800; color: var(--rbw-accent); }
+.rbw-total span { font-size: 0.9rem; font-weight: 400; color: var(--rbw-dim); }
+.rbw-meta { font-size: 0.8rem; color: var(--rbw-dim); margin: 4px 0 10px; }
+.rbw-stale { color: var(--rbw-warn); font-weight: 700; }
+.rbw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 520px) { .rbw-cols { grid-template-columns: 1fr; } }
+.rbw-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rbw-dim); margin-bottom: 4px; }
+.rbw ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+.rbw li { padding: 3px 0; border-bottom: 1px dashed #ffffff14; display: flex; gap: 8px; align-items: baseline; }
+.rbw-amt { color: var(--rbw-accent); font-variant-numeric: tabular-nums; }
+.rbw-from { font-family: monospace; }
+.rbw-when, .rbw-rank { color: var(--rbw-dim); font-size: 0.78rem; }
+.rbw-foot { margin-top: 10px; font-size: 0.75rem; color: var(--rbw-dim); }
+.rbw-mono { font-family: monospace; }
+.rbw-err { color: #ff6b6b; }
+.rbw-status { color: var(--rbw-dim); font-size: 0.9rem; }
+    /* ---- $RESCUE flywheel retrofit additions ---- */
+    /* $RESCUE flywheel retrofit — demo ledger, no wallet, no signatures */
+    #burn-widget .rbw { --rbw-bg: #0a0a12ee; --rbw-border: #7c5cff44; --rbw-text: #e6e1ff; --rbw-dim: #9a8fd0; --rbw-accent: #ffb02e; max-width: none; }
+    #burn-widget { margin-top:14px; }
+    #burn-widget-faq .rbw { max-width:none; padding:10px 12px; }
+    #burn-widget-faq .rbw-total { font-size:1.15rem; }
+    #burn-widget-faq .rbw-cols { display:none; }
+    #burn-widget-faq .rbw-foot { margin-top:6px; }
+    .rescue-pill { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:18px 0 10px; padding:10px 14px; border:1px dashed currentColor; font:600 13px/1.4 "IBM Plex Mono",monospace; }
+    .demo-tag { display:inline-block; padding:2px 7px; border:1px solid currentColor; border-radius:999px; font-size:10px; letter-spacing:.08em; text-transform:uppercase; opacity:.8; white-space:nowrap; }
+    .faucet-btn { width:100%; min-height:48px; border:2px solid currentColor; background:transparent; color:inherit; font:600 12px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; cursor:pointer; }
+    .faucet-btn:hover,.faucet-btn:focus-visible { background:var(--signal); border-color:var(--signal); color:#fff; outline:none; }
+    .faucet-note { font:400 10px/1.5 "IBM Plex Mono",monospace; letter-spacing:.06em; opacity:.65; margin:6px 0 0; text-align:center; }
+    .burn-line { margin:12px 0 4px; font:500 11px/1.5 "IBM Plex Mono",monospace; opacity:.85; }
+    .burn-line b { color:var(--signal); }
+    .rbw-divider { margin:16px 0 12px; padding-top:12px; border-top:1px dashed currentColor; font:500 11px/1.5 "IBM Plex Mono",monospace; opacity:.75; }
+    .sacrifice-btn { margin-top:16px; padding:10px 18px; border:2px solid var(--signal); background:transparent; color:var(--signal); font:600 12px/1 "IBM Plex Mono",monospace; letter-spacing:.08em; cursor:pointer; }
+    .sacrifice-btn:hover:not([disabled]),.sacrifice-btn:focus-visible:not([disabled]) { background:var(--signal); color:#fff; outline:none; }
+    .sacrifice-btn[disabled] { opacity:.35; cursor:not-allowed; }
+    .tier-badge { position:absolute; z-index:2; right:18px; top:62px; padding:8px 12px; color:#ffe9b0; background:rgba(4,12,7,.8); border:1px solid rgba(255,176,46,.6); font:600 11px/1 "IBM Plex Mono",monospace; letter-spacing:.1em; }
+    .slot.gold { border-color:#d4af37; box-shadow:0 0 22px #d4af3766; }
+    .bounty-line { grid-column:1/-1; margin-top:6px; padding:12px 16px; border:1px dashed var(--line); font:500 11px/1.5 "IBM Plex Mono",monospace; color:var(--muted); }
+    .toast { position:fixed; z-index:50; left:50%; bottom:24px; transform:translateX(-50%); max-width:min(92vw,560px); padding:12px 18px; background:var(--ink); color:var(--bg); border:1px solid var(--signal); font:600 12px/1.5 "IBM Plex Mono",monospace; transition:opacity .5s,transform .5s; }
+    .toast.out { opacity:0; transform:translateX(-50%) translateY(10px); }
+    .faq-furnace { margin-top:34px; }
+    .faq-furnace h3 { margin:10px 0 8px; font:700 clamp(24px,3vw,36px)/1 "IBM Plex Sans",sans-serif; letter-spacing:-.03em; }
   </style>
 </head>
 <body>
   <div class="frame topline" aria-label="Collection status">
     <span>TESTNET ARCHIVE // COLLECTION 01</span>
-    <span><button class="sound" id="sound" type="button" aria-pressed="false">SFX: OFF</button> &nbsp; ● SIGNAL FOUND</span>
+    <span><a class="buy-btn" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&amp;chain=base" target="_blank" rel="noopener">BUY $RESCUE</a> <button class="sound" id="sound" type="button" aria-pressed="false">SFX: OFF</button> &nbsp; ● SIGNAL FOUND</span>
   </div>
 
   <main>
@@ -207,8 +271,8 @@
         <div class="hero-foot">
           <div class="stats" aria-label="Collection details">
             <div class="stat"><small>Supply</small><strong>2,222</strong></div>
-            <div class="stat"><small>Mint price</small><strong>0.022 ETH</strong></div>
-            <div class="stat"><small>Limit</small><strong>05 / wallet</strong></div>
+            <div class="stat"><small>Mint price</small><strong>25,000 $RESCUE <span class="demo-tag">demo</span></strong></div>
+            <div class="stat"><small>Limit</small><strong id="heroLimit">05 / wallet</strong></div>
           </div>
           <a href="#mint" class="eyebrow">ENTER THE TERMINAL ↓</a>
         </div>
@@ -217,6 +281,7 @@
         <img src="assets/media-generation-void-relic-hero-0-a2e00e79-0445-4e79-b39f-9cf86b6f5c0f.png" alt="Pixel-art chrome jackal sentinel with orange eyes and teal circuitry in a dark machine archive" />
         <span class="scan-label">CURSOR SCANNER // ACTIVE</span>
         <div class="art-id">SPECIMEN // 0001</div>
+        <span class="tier-badge" id="tierBadge">🛡 HUSK</span>
         <figcaption class="art-caption"><b>THE NIGHT WARDEN</b><span>MASK: OBSIDIAN<br>MEMORY: PROTECTED</span></figcaption>
       </figure>
     </section>
@@ -233,6 +298,7 @@
           <h2>Feed the machine.</h2>
           <p class="section-copy">Choose a quantity, spin the rarity scanner, and inspect the transaction. No wallet. No signature. No expensive lesson.</p>
           <p class="fine">MAX 5, BECAUSE HOARDING JPEG GHOSTS IS A PERSONAL PROBLEM.</p>
+          <p class="fine" id="tierLine"></p>
         </div>
         <div class="mint-box" aria-label="Mint transaction preview">
           <div class="mint-head"><span>MINT.TERMINAL</span><span>NETWORK // DEMO</span></div>
@@ -244,11 +310,17 @@
               <button id="plus" type="button" aria-label="Increase quantity">+</button>
             </div>
             <div class="calc">
-              <div class="calc-row"><span>PRICE / RELIC</span><span>0.022 ETH</span></div>
+              <div class="calc-row"><span>PRICE / RELIC</span><span><b>25,000</b> $RESCUE <span class="demo-tag">demo</span></span></div>
               <div class="calc-row"><span>EST. NETWORK FEE</span><span>CALCULATED IN WALLET</span></div>
-              <div class="calc-row"><span>TOTAL</span><span id="total">0.022 ETH</span></div>
+              <div class="calc-row"><span>TOTAL</span><span id="total">25,000 $RESCUE (demo)</span></div>
             </div>
-            <button class="preview-btn" id="preview" type="button">SUMMON THE JPEG →</button>
+            <div id="rescue-pill" class="rescue-pill">🪙 <b id="rescue-bal">100,000</b> $RESCUE <span class="demo-tag">demo</span></div>
+            <button id="faucetBtn" class="faucet-btn" type="button">Claim 25,000 demo $RESCUE</button>
+            <div class="faucet-note">demo faucet · 30-min cooldown per visit · session-only demo · resets on reload</div>
+            <div class="rbw-divider"><span>Below this line the burns are real — pulled live from Base. Above it is a simulation.</span></div>
+            <div id="burn-widget"></div>
+            <div id="demo-burn-line" class="burn-line"></div>
+            <button class="preview-btn" id="preview" type="button">SUMMON THE JPEG (DEMO) →</button>
             <div class="slot" id="slot" aria-live="polite">
               <span class="quantity-label">Rarity scanner</span>
               <div class="slot-reel"><div class="slot-word" id="slotWord">SCANNING...</div></div>
@@ -271,7 +343,8 @@
           <div class="clicker" id="clicker">
             <div class="click-total">LOCAL BONKS: <strong id="bonks">0</strong></div>
             <button class="core" id="core" type="button">BONK<br>THE VOID</button>
-            <div class="click-note" id="bonkNote">NO TOKEN. NO REWARD. PURE NUMBER-GO-UP TECHNOLOGY.</div>
+            <button class="sacrifice-btn" id="sacrificeBtn" type="button" disabled>SACRIFICE 1,000 BONKS 🔥 (DEMO)</button>
+            <div class="click-note" id="bonkNote">EVERY 1,000 BONKS CAN BE SACRIFICED TO THE FURNACE → 1,000 BURNED + VOID-BLESSED FLAIR ON YOUR NEXT SUMMON.</div>
           </div>
           <div class="signal-log" aria-label="Archive signal log">
             <div class="log-row"><time>00:00</time><p>Signal woke up angry.<small>ARCHIVE NOTE // VERIFIED VIBES ONLY</small></p></div>
@@ -279,6 +352,7 @@
             <div class="log-row"><time>04:04</time><p>Roadmap file not found.<small>FEATURE, NOT BUG</small></p></div>
             <div class="log-row"><time>06:67</time><p>Someone typed “wen” into the reactor.<small>CONTAINMENT PENDING</small></p></div>
           </div>
+          <div class="bounty-line" id="bonkBounty"></div>
         </div>
       </div>
     </section>
@@ -294,13 +368,14 @@
           <div id="quizPanel">
             <div class="quiz-progress" aria-label="Question progress"><span class="on"></span><span></span><span></span></div>
             <p class="quiz-question" id="quizQuestion">The chart drops 40%. You:</p>
+            <p class="quiz-fee" style="font-size:11px;opacity:.8;margin:0 0 8px">First run today free · re-runs cost 100 demo $RESCUE (DEMO — no real funds)</p>
             <div class="answers" id="answers"></div>
           </div>
           <div class="quiz-result" id="quizResult" role="status">
             <span class="quantity-label">Archive match complete</span>
             <h3 id="resultName">THE NIGHT WARDEN</h3>
             <p id="resultCopy"></p>
-            <button class="reset-btn" id="resetQuiz" type="button">RUN THE BAD SCIENCE AGAIN ↻</button>
+            <button class="reset-btn" id="resetQuiz" type="button">RUN THE BAD SCIENCE AGAIN ↻ (DEMO)</button>
           </div>
         </div>
       </div>
@@ -329,6 +404,12 @@
           <details><summary>Wen roadmap?</summary><p>The archive ate it. This fictional collection has no promised roadmap, team allocation, or future benefits.</p></details>
           <details><summary>Did goblins write the contract?</summary><p>There is no contract here. The goblins remain available for consulting.</p></details>
         </div>
+        <div class="faq-furnace">
+          <div class="section-index">BURN // LIVE</div>
+          <h3>The Furnace (live)</h3>
+          <p class="fine">Real $RESCUE burns pulled live from Base. Read-only — no wallet, no signatures.</p>
+          <div id="burn-widget-faq"></div>
+        </div>
       </div>
 
       <div class="frame manifesto">
@@ -344,8 +425,330 @@
   </footer>
 
   <script>
+/* rescue-burn.js — shared $RESCUE burn-status module for all Foil builds.
+ *
+ * Reads REAL onchain $RESCUE Transfer events to the dead address on Base.
+ * No wallet, no signatures, no fund movements — pure reads.
+ *
+ * Usage (external file): include via a script tag whose src is
+ * "rescue-burn.js", then:
+ *   RescueBurn.getStatus().then(function (s) { console.log(s.total); });
+ *   RescueBurn.renderWidget(document.getElementById('burn-widget'));
+ * (The tag itself is described, not written, so this file never contains a
+ * literal closing script tag and stays safe to inline in single-file pages.)
+ *
+ * Caching: totals + aggregates live in a session-only cache; each call only scans
+ * new blocks. If the RPC is unreachable, the last session snapshot is returned
+ * with stale:true — numbers are NEVER invented.
+ */
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
+  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) { return '0.00'; }
+  }
+
+  function fmtAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+
+  var sessionBurnCache = null; // session-only: burn cache resets each visit
+  function loadCache() {
+    if (sessionBurnCache && typeof sessionBurnCache.totalWei === 'string') return sessionBurnCache;
+    return { totalWei: '0', txCount: 0, lastBlock: START_BLOCK - 1, updatedAt: 0, recent: [], byBurner: {} };
+  }
+  function saveCache(c) {
+    sessionBurnCache = c;
+  }
+
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, RPC_TIMEOUT_MS);
+    return fetch(RPC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+
+  function decodeTransfer(log) {
+    // topics: [Transfer, from, to]; amount in data
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return { from: from, amount: amount, txHash: log.transactionHash, blockNumber: parseInt(log.blockNumber, 16) };
+  }
+
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+
+  function getLogsRange(rg) {
+    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
+    // dropped connection). On a range-limit signal, halve the range and
+    // retry; give up only below MIN_RANGE.
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) { return a.concat(b); });
+        });
+      }
+      throw e;
+    });
+  }
+
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return { cache: cache, tip: tip, fresh: [] };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) { fresh.push(decodeTransfer(l)); });
+          });
+        });
+      });
+      return chain.then(function () { return { cache: cache, tip: tip, fresh: fresh }; });
+    });
+  }
+
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = (Date.now() - cache.updatedAt) > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache, fresh = r.fresh;
+      // merge
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({ from: b.from, amount: b.amount, txHash: b.txHash, blockNumber: b.blockNumber });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      // timestamps for recent burns missing them (cap concurrency)
+      var need = c.recent.filter(function (x) { return !x.ts; }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) { x.ts = ts; }).catch(function () { x.ts = 0; });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      // RPC failed: serve cache, honestly labeled stale
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return { ok: false, error: 'burn RPC unreachable and no cached snapshot', detail: String(e && e.message || e).slice(0, 120) };
+    });
+  }
+
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return { address: a, amountWei: c.byBurner[a], amount: fmtWei(c.byBurner[a]) };
+    }).sort(function (x, y) { return (BigInt(y.amountWei) > BigInt(x.amountWei)) ? 1 : -1; }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) { if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString(); });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return { from: x.from, fromShort: fmtAddr(x.from), amount: fmtWei(x.amount), txHash: x.txHash, when: x.ts ? timeAgo(x.ts) : '…' };
+      }),
+      topBurners: top.map(function (t) { return { address: t.address, short: fmtAddr(t.address), amount: t.amount }; })
+    };
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]; }); }
+
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    mount.innerHTML = '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' +
+      '<div class="rbw-status">syncing with Base…</div></div>';
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        mount.querySelector('.rbw-status').innerHTML =
+          '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>';
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' +
+          esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' +
+          esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="rbw">' +
+        '<div class="rbw-title">' + esc(title) + '</div>' +
+        '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' +
+        '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' +
+        'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' +
+        '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' +
+        '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' +
+        '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' +
+        '</div>';
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) st.innerHTML = '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>';
+    });
+    return mount;
+  }
+
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+  </script>
+
+  <script>
+/* VOID RELICS $RESCUE flywheel — demo ledger (session-only in-memory).
+ * No wallet, no signatures, no fund movements. Every value is demo.
+ * All state resets when the page reloads. */
+(function () {
+  'use strict';
+  var BAL='vr-demo-balance-v1', BURNS='vr-demo-burns-v1', FAUCET='vr-faucet-v1',
+      SUMMONS='vr-summons-v1', LIFETIME='vr-lifetime-burn-v1',
+      BLESSED='vr-blessed-v1', QUIZDATE='vr-quizdate-v1',
+      BOUNTY='vr-bounty-v1', DAILY='vr-bonks-v1';
+  var mem={};
+  function lsGet(k,d){ if(!Object.prototype.hasOwnProperty.call(mem,k)) return d; try{return JSON.parse(JSON.stringify(mem[k]));}catch(e){return d;} }
+  function lsSet(k,v){ try{mem[k]=JSON.parse(JSON.stringify(v));}catch(e){mem[k]=v;} }
+  window.__vrMem={get:lsGet,set:lsSet};
+  function fmt(n){ return Number(n).toLocaleString('en-US'); }
+  function getBal(){ var b=lsGet(BAL,null); if(b==null){ b=100000; lsSet(BAL,b); } return b; }
+  function setBal(n){ lsSet(BAL,n); updatePill(); }
+  function updatePill(){ var el=document.getElementById('rescue-bal'); if(el) el.textContent=fmt(getBal()); }
+  function spendDemo(n,label){ if(getBal()<n) return false; setBal(getBal()-n); return true; }
+  function getSummons(){ return lsGet(SUMMONS,0)||0; }
+  function incSummons(){ lsSet(SUMMONS,getSummons()+1); }
+  function getLifetime(){ return lsGet(LIFETIME,0)||0; }
+  function updateBurnLine(){ var el=document.getElementById('demo-burn-line'); if(el) el.innerHTML='Demo summons this session burned <b>'+fmt(getLifetime())+'</b> $RESCUE (rehearsal only)'; }
+  function burnDemo(n,label){
+    var burns=lsGet(BURNS,[]); burns.push({action:label||'',amount:n,ts:Date.now()}); lsSet(BURNS,burns);
+    lsSet(LIFETIME,getLifetime()+n); updateBurnLine();
+  }
+  function faucet(){
+    var f=lsGet(FAUCET,{lastClaim:0});
+    if(Date.now()-f.lastClaim<30*60*1000) return 0;
+    f.lastClaim=Date.now(); lsSet(FAUCET,f); setBal(getBal()+25000); return 25000;
+  }
+  function faucetWaitMin(){ var f=lsGet(FAUCET,{lastClaim:0}); return Math.max(1,Math.ceil((30*60*1000-(Date.now()-f.lastClaim))/60000)); }
+  function tierInfo(){ var s=getSummons(),b=getLifetime(); if(s>=50&&b>=50000) return {name:'NIGHT WARDEN',limit:12,idx:2}; if(s>=10) return {name:'SENTINEL',limit:8,idx:1}; return {name:'HUSK',limit:5,idx:0}; }
+  function renderTier(){
+    var t=tierInfo();
+    var badge=document.getElementById('tierBadge'); if(badge) badge.textContent='🛡 '+t.name;
+    var tl=document.getElementById('tierLine'); if(tl) tl.textContent='WARDEN TIER: '+t.name+' — LIMIT '+t.limit+'/SUMMON'+(t.idx===1?' — EMBER-OPTICS NAMES UNLOCKED':'')+(t.idx===2?' — VOID-BLESSED ON EVERY SUMMON':'');
+    var hl=document.getElementById('heroLimit'); if(hl) hl.textContent=String(t.limit).padStart(2,'0')+' / wallet';
+    var slot=document.getElementById('slot'); if(slot) slot.classList.toggle('gold',t.idx===2);
+  }
+  function todayStr(){ return new Date().toDateString(); }
+  function getBounty(){ var b=lsGet(BOUNTY,null); if(!b||b.date!==todayStr()){ b={date:todayStr(),quizClaimed:false,bonkClaimed:false}; lsSet(BOUNTY,b); } return b; }
+  function saveBounty(b){ lsSet(BOUNTY,b); }
+  function getDailyBonks(){ var d=lsGet(DAILY,null); if(!d||d.date!==todayStr()){ d={date:todayStr(),count:0}; lsSet(DAILY,d); } return d.count; }
+  function incDailyBonks(n){ var d=lsGet(DAILY,null); if(!d||d.date!==todayStr()) d={date:todayStr(),count:0}; d.count=Math.max(0,d.count+n); lsSet(DAILY,d); return d.count; }
+  function updateBonkBounty(d,b){ if(d==null) d=getDailyBonks(); if(!b) b=getBounty(); var el=document.getElementById('bonkBounty'); if(el) el.textContent='DAILY BOUNTY: '+fmt(d)+' / 10,000 bonks → +5,000 $RESCUE (demo)'+(b.bonkClaimed?' — CLAIMED ✓':''); }
+  function toast(msg){ var t=document.createElement('div'); t.className='toast'; t.textContent=msg; document.body.appendChild(t); setTimeout(function(){ t.classList.add('out'); },2600); setTimeout(function(){ t.remove(); },3200); }
+  function credit(n,label){ setBal(getBal()+n); toast('+'+fmt(n)+' demo $RESCUE — '+label); }
+  function checkBonkBounty(d){ var b=getBounty(); updateBonkBounty(d,b); if(d>=10000&&!b.bonkClaimed){ b.bonkClaimed=true; saveBounty(b); credit(5000,'bonk bounty: 10,000 daily bonks'); updateBonkBounty(d,b); } }
+  window.getBal=getBal; window.fmt=fmt; window.updatePill=updatePill; window.spendDemo=spendDemo;
+  window.burnDemo=burnDemo; window.faucet=faucet; window.faucetWaitMin=faucetWaitMin;
+  window.getSummons=getSummons; window.incSummons=incSummons; window.tierInfo=tierInfo; window.renderTier=renderTier;
+  window.getBounty=getBounty; window.saveBounty=saveBounty; window.getDailyBonks=getDailyBonks;
+  window.incDailyBonks=incDailyBonks; window.updateBonkBounty=updateBonkBounty;
+  window.toast=toast; window.credit=credit; window.checkBonkBounty=checkBonkBounty; window.updateBurnLine=updateBurnLine;
+  var fb=document.getElementById('faucetBtn');
+  if(fb) fb.addEventListener('click',function(){
+    var got=faucet();
+    if(got) toast('Faucet: +'+fmt(got)+' demo $RESCUE claimed.');
+    else toast('Faucet recharging — come back in ~'+faucetWaitMin()+' min.');
+  });
+  updatePill(); updateBurnLine(); updateBonkBounty();
+  if(window.RescueBurn){
+    RescueBurn.renderWidget(document.getElementById('burn-widget'),{title:'🔥 $RESCUE Burn Furnace'});
+    RescueBurn.renderWidget(document.getElementById('burn-widget-faq'),{title:'The Furnace (live)'});
+  }
+}());
+  </script>
+
+  <script>
     (function () {
       var count=1, soundOn=false, audio=null, bonks=0, quizIndex=0, quizScore=0;
+      var emberNames=['EMBER OPTICS // TRUE VISION','EMBER OPTICS // ARCHIVE SIGHT','EMBER OPTICS // HEAT READING'];
+      var sacrificeBtn=document.getElementById('sacrificeBtn');
       var countEl=document.getElementById('count');
       var totalEl=document.getElementById('total');
       var slot=document.getElementById('slot');
@@ -368,22 +771,41 @@
         } catch(e) {}
       }
       function render() {
+        var t=tierInfo();
+        if(count>t.limit) count=t.limit;
         countEl.textContent=count;
-        totalEl.textContent=(count*.022).toFixed(3)+' ETH';
+        totalEl.textContent=fmt(count*25000)+' $RESCUE (demo)';
         slot.classList.remove('visible'); receipt.classList.remove('visible');
+        renderTier();
       }
       document.getElementById('minus').addEventListener('click',function(){ count=Math.max(1,count-1); beep(140,.05); render(); });
-      document.getElementById('plus').addEventListener('click',function(){ count=Math.min(5,count+1); beep(240,.05); render(); });
+      document.getElementById('plus').addEventListener('click',function(){ count=Math.min(tierInfo().limit,count+1); beep(240,.05); render(); });
       preview.addEventListener('click',function(){
+        var cost=count*25000, burn=count*2500;
+        if(!spendDemo(cost,'summon ×'+count)){
+          slot.classList.add('visible');
+          receiptText.innerHTML='<b>INSUFFICIENT DEMO $RESCUE</b><br>the void rejects your offering. Faucet below.';
+          receipt.classList.add('visible');
+          toast('INSUFFICIENT DEMO $RESCUE — the void rejects your offering.');
+          return;
+        }
         slot.classList.add('visible'); receipt.classList.remove('visible'); preview.disabled=true;
         slotWord.classList.add('spinning');
         var ticks=0;
         var timer=setInterval(function(){ slotWord.textContent=rarities[ticks%rarities.length]; beep(100+ticks*18,.025); ticks++; },90);
         setTimeout(function(){
           clearInterval(timer); slotWord.classList.remove('spinning');
-          slotWord.textContent=rarities[(count*3+bonks)%rarities.length];
-          receiptText.textContent=count+' relic'+(count>1?'s':'')+' × 0.022 ETH = '+(count*.022).toFixed(3)+' ETH.';
+          var t=tierInfo(), s=getSummons();
+          var name=rarities[(count*3+bonks)%rarities.length];
+          if(t.idx>=1&&(s%2===0)) name=emberNames[(count+bonks+s)%emberNames.length];
+          var blessed=false;
+          blessed=window.__vrMem.get('vr-blessed-v1',false)===true; window.__vrMem.set('vr-blessed-v1',false);
+          slotWord.textContent=((blessed||t.idx===2)?'VOID-BLESSED ':'')+name;
+          burnDemo(burn,'summon ×'+count);
+          incSummons();
+          receiptText.innerHTML=count+' relic'+(count>1?'s':'')+' × 25,000 $RESCUE (demo) = '+fmt(cost)+' $RESCUE (demo).<br>🔥 '+fmt(burn)+' $RESCUE → furnace (demo — rehearsal, not onchain)';
           receipt.classList.add('visible'); preview.disabled=false; beep(420,.16,'sawtooth');
+          render();
         },900);
       });
       document.getElementById('sound').addEventListener('click',function(){
@@ -401,9 +823,22 @@
       var notes=['THE VOID FELT THAT.','NUMBER WENT UP. THESIS COMPLETE.','BONK CONFIRMED ON ZERO CHAINS.','WHALE BEHAVIOR DETECTED.','ABSOLUTELY NO YIELD GENERATED.'];
       core.addEventListener('click',function(e){
         bonks++; document.getElementById('bonks').textContent=bonks.toLocaleString();
-        document.getElementById('bonkNote').textContent=notes[bonks%notes.length];
+        document.getElementById('bonkNote').textContent=notes[bonks%notes.length]+(bonks>=1000?' — SACRIFICE READY: 1,000 bonks → furnace.':'');
         core.classList.add('popped'); setTimeout(function(){ core.classList.remove('popped'); },90); beep(90+Math.min(bonks,20)*5,.07);
         var b=document.createElement('span'); b.className='burst'; b.textContent='+'+(bonks%10===0?'10X ALPHA':'1 BONK'); b.style.left=e.clientX+'px'; b.style.top=e.clientY+'px'; document.body.appendChild(b); setTimeout(function(){ b.remove(); },720);
+        sacrificeBtn.disabled=bonks<1000;
+        checkBonkBounty(incDailyBonks(1));
+      });
+      sacrificeBtn.addEventListener('click',function(){
+        if(bonks<1000) return;
+        bonks-=1000; document.getElementById('bonks').textContent=bonks.toLocaleString();
+        burnDemo(1000,'bonk sacrifice');
+        window.__vrMem.set('vr-blessed-v1',true);
+        incDailyBonks(-1000);
+        sacrificeBtn.disabled=bonks<1000;
+        document.getElementById('bonkNote').textContent='1,000 BONKS FED TO THE FURNACE. THE VOID IS PLEASED. NEXT SUMMON: VOID-BLESSED.';
+        toast('🔥 1,000 bonks sacrificed — VOID-BLESSED flair armed for your next summon (demo).');
+        updateBonkBounty();
       });
 
       var questions=[
@@ -418,7 +853,7 @@
         for(var i=0;i<bars.length;i++) bars[i].classList.toggle('on',i<=quizIndex);
         answers.innerHTML='';
         questions[quizIndex].a.forEach(function(item){
-          var btn=document.createElement('button'); btn.className='answer'; btn.type='button'; btn.textContent=item[0];
+          var btn=document.createElement('button'); btn.className='answer'; btn.type='button'; btn.textContent=item[0]+' (DEMO)';
           btn.addEventListener('click',function(){ quizScore+=item[1]; quizIndex++; beep(210+quizIndex*70,.06); if(quizIndex<questions.length){drawQuiz();}else{showResult();} });
           answers.appendChild(btn);
         });
@@ -429,11 +864,26 @@
         document.getElementById('quizPanel').style.display='none';
         document.getElementById('resultName').textContent=r[0]; document.getElementById('resultCopy').textContent=r[1];
         document.getElementById('quizResult').classList.add('visible'); beep(520,.18,'sawtooth');
+        if(r[0]==='THE NIGHT WARDEN'){
+          var b=getBounty();
+          if(!b.quizClaimed){ b.quizClaimed=true; saveBounty(b); credit(2000,'quiz bounty: THE NIGHT WARDEN match'); }
+        }
       }
       document.getElementById('resetQuiz').addEventListener('click',function(){
+        var today=new Date().toDateString();
+        try{
+          if(window.__vrMem.get('vr-quizdate-v1','')===today){
+            if(!spendDemo(100,'quiz re-run')){ toast('Reactor needs fuel: 100 demo $RESCUE for a same-day re-run.'); return; }
+            toast('Reactor fueled: 100 demo $RESCUE (demo).');
+          } else {
+            window.__vrMem.set('vr-quizdate-v1',today);
+            toast('First bad science of the day: free.');
+          }
+        }catch(e){}
         quizIndex=0; quizScore=0; document.getElementById('quizPanel').style.display='block'; document.getElementById('quizResult').classList.remove('visible'); drawQuiz();
       });
       drawQuiz();
+      renderTier();
     }());
   </script>
 </body>

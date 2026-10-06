@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-58c124e2-9f30-48a0-a9c7-770903a2d59f/",
+  "duration_ms": 3721.020723,
+  "output_dir": "/home/hatch/workspace/ts-spaces/nintendo-luchador-generator/audits/2026-09-30T00-03-50Z-254961058",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/nintendo-luchador-generator/audits/2026-09-30T00-03-50Z-254961058/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/nintendo-luchador-generator/audits/2026-09-30T00-03-50Z-254961058/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/nintendo-luchador-generator/audits/2026-09-30T00-03-50Z-254961058/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [],
+    "mobile": []
+  },
+  "images": {
+    "total": 0,
+    "broken": [],
+    "duplicate": [],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 0,
+  "external_fetch_failure_samples": [],
+  "blocked_requests": [],
+  "external_requests": [],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 3972,
+      "bytes_down": 2487
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 45,
+  "aria_snapshot": "- main:\n  - region \"Build your NFT collection.\":\n    - heading \"Build your NFT collection.\" [level=1]\n    - paragraph: Stack your transparent art traits, shuffle combinations, and export game-ready PNGs with NFT metadata—right in your browser.\n    - text: ARCADE ART LAB\n  - region \"Collection setup\":\n    - heading \"Collection setup\" [level=2]\n    - text: 1 Collection name\n    - textbox \"Collection name\": My NFT Collection\n    - text: Item name\n    - textbox \"Item name\": NFT\n    - text: Symbol\n    - textbox \"Symbol\": NFT\n    - text: Description\n    - textbox \"Description\": A layered NFT collection assembled from original artwork.\n    - text: Edition size\n    - spinbutton \"Edition size\": \"12\"\n    - text: Blockchain\n    - combobox \"Blockchain\":\n      - option \"Base\" [selected]\n      - option \"Ethereum\"\n      - option \"Polygon\"\n      - option \"Solana\"\n      - option \"Other\"\n    - text: External URL\n    - textbox \"External URL\"\n    - text: Image base URI\n    - textbox \"Image base URI\": ipfs://YOUR_CID/images\n    - text: Metadata points here. Replace YOUR_CID after uploading the images folder.\n    - group \"$RESCUE utility + gate\":\n      - text: $RESCUE utility + gate Base token contract\n      - textbox \"Base token contract\": \"0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3\"\n      - text: Minimum $RESCUE\n      - spinbutton \"Minimum $RESCUE\": \"1\"\n      - text: Unlocks\n      - combobox \"Unlocks\":\n        - option \"Mint + holder perks\" [selected]\n        - option \"Mint access\"\n        - option \"Holder perks\"\n      - text: This page verifies the connected wallet on Base before unlocking exports. The package also carries the same requirement into your mint build.\n  - region \"Layer preview\":\n    - heading \"Layer preview\" [level=2]\n    - text: \"2\"\n    - strong: Load your first art layer\n    - text: Transparent PNGs work best. Each layer can hold multiple traits.\n    - button \"Randomize NFT\"\n    - button \"Download preview\"\n    - text: Layers · back to front\n    - button \"+ Add layer\"\n    - textbox \"Layer name\": Background\n    - button \"Move layer backward\" [disabled]\n    - button \"Move layer forward\"\n    - button \"Delete layer\"\n    - text: No traits yet\n    - button \"Add trait images to Background\"\n    - textbox \"Layer name\": Body\n    - button \"Move layer backward\"\n    - button \"Move layer forward\"\n    - button \"Delete layer\"\n    - text: No traits yet\n    - button \"Add trait images to Body\"\n    - textbox \"Layer name\": Face\n    - button \"Move layer backward\"\n    - button \"Move layer forward\"\n    - button \"Delete layer\"\n    - text: No traits yet\n    - button \"Add trait images to Face\"\n    - textbox \"Layer name\": Clothing\n    - button \"Move layer backward\"\n    - button \"Move layer forward\"\n    - button \"Delete layer\"\n    - text: No traits yet\n    - button \"Add trait images to Clothing\"\n    - textbox \"Layer name\": Accessory\n    - button \"Move layer backward\"\n    - button \"Move layer forward\" [disabled]\n    - button \"Delete layer\"\n    - text: No traits yet\n    - button \"Add trait images to Accessory\"\n    - status\n  - region \"Export cabinet\":\n    - heading \"Export cabinet\" [level=2]\n    - text: 3 Possible combinations\n    - strong: \"0\"\n    - text: 0 layers ready PNG resolution\n    - combobox \"PNG resolution\":\n      - option \"512 × 512\"\n      - option \"1024 × 1024\" [selected]\n      - option \"2048 × 2048\"\n    - text: Your ZIP includes\n    - strong: images\n    - text: \",\"\n    - strong: metadata\n    - text: \", and a\"\n    - strong: $RESCUE gate config\n    - text: . Nothing is uploaded from this page. $RESCUE access gate\n    - status: Connect a Base wallet holding the configured minimum to unlock collection exports.\n    - button \"Connect wallet & verify\"\n    - button \"Generate collection ZIP\" [disabled]\n    - text: Quick downloads\n    - button \"Preview JSON\" [disabled]\n    - button \"Trait manifest\" [disabled]\n    - button \"$RESCUE gate config\"\n    - text: \"Use original artwork or assets you have permission to publish. Keep every image the same square dimensions for crisp stacking. Layer order matters: the last layer is drawn on top.\"\n  - text: Built for original NFT artwork. Your layers stay in this browser session and are only packaged when you export.\n- status",
+  "audit_session_id": "4a0a5a35-b9ae-4279-a320-3683e22b6934",
+  "mobile_ms": 2180.700053,
+  "cold_launch_ms": 288.063543,
+  "desktop_ms": 2431.1101360000002,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

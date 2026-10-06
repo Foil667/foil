@@ -1,0 +1,196 @@
+{
+  "results": [
+    {
+      "citation_hash_id": "5c95",
+      "excerpt": "Last Updated: Just now\nLast Crawl: Just now\nName: Ethereum\nSymbol: \"ETH\"\nExchange: \"binance\"\nCountry: \"US\"\nCurrency: \"USD\"\nTicker Type: \"crypto\"\nMarket Cap: 326406602752\n5 Day Price Return (%): 0.15\n1 Month Price Return (%): 9.24\n6 Month Price Return (%): 28.04\nYear to Date Price Return (%): -10.27\n1 Year Price Return (%): -38\nCurrent Price: 2719.42\nOpen Price: 2663.31\nHigh Price: 2738.51\nLow Price: 2661.77\nPrevious Close Price: 2663.31\nChange: 56.11\nPercent Change: 2.1068",
+      "sources": [
+        "MASE"
+      ],
+      "structured_entity": {
+        "candles": {
+          "daily": [],
+          "monthly": [],
+          "one_minute": [],
+          "thirty_minute": [],
+          "weekly": []
+        },
+        "entity": {
+          "attributes": {
+            "52WeekHigh": null,
+            "52WeekLow": null,
+            "averageVolume": null,
+            "beta": null,
+            "change": 56.11,
+            "countryCode": "US",
+            "currency": "USD",
+            "currentPrice": 2719.42,
+            "dividendYield": null,
+            "epsAnnual": null,
+            "exchange": "binance",
+            "finnhub_industry": null,
+            "fiveDayReturn": 0.15,
+            "flags/isSensitive": null,
+            "highPrice": 2738.51,
+            "ipoDate": null,
+            "lastUpdatedAt": 1790838676,
+            "longName": null,
+            "lowPrice": 2661.77,
+            "marketCap": 326406602752,
+            "marketCapChange": null,
+            "marketStatus": null,
+            "oneMonthReturn": 9.24,
+            "oneYearReturn": -38,
+            "openPrice": 2663.31,
+            "percentChange": 2.1068,
+            "previousClosedPrice": 2663.31,
+            "priceEarningRatio": null,
+            "shortName": null,
+            "sixMonthReturn": 28.04,
+            "symbol": "ETH",
+            "tenYearReturn": null,
+            "tickertype": "crypto",
+            "totalVolume": null,
+            "weightedShares": null,
+            "ytdReturn": -10.27
+          },
+          "domain": "ticker",
+          "kgid": 1099457144783374181,
+          "name": "Ethereum"
+        },
+        "vertical": "finance"
+      },
+      "title": "Ethereum (ETH): Financial Market Data",
+      "url": "https://finnhub.io/?q=%22ETH%22",
+      "vertical_data": {
+        "candles": {
+          "daily": [],
+          "monthly": [],
+          "one_minute": [],
+          "thirty_minute": [],
+          "weekly": []
+        },
+        "entity": {
+          "attributes": {
+            "52WeekHigh": null,
+            "52WeekLow": null,
+            "averageVolume": null,
+            "beta": null,
+            "change": 56.11,
+            "countryCode": "US",
+            "currency": "USD",
+            "currentPrice": 2719.42,
+            "dividendYield": null,
+            "epsAnnual": null,
+            "exchange": "binance",
+            "finnhub_industry": null,
+            "fiveDayReturn": 0.15,
+            "flags/isSensitive": null,
+            "highPrice": 2738.51,
+            "ipoDate": null,
+            "lastUpdatedAt": 1790838676,
+            "longName": null,
+            "lowPrice": 2661.77,
+            "marketCap": 326406602752,
+            "marketCapChange": null,
+            "marketStatus": null,
+            "oneMonthReturn": 9.24,
+            "oneYearReturn": -38,
+            "openPrice": 2663.31,
+            "percentChange": 2.1068,
+            "previousClosedPrice": 2663.31,
+            "priceEarningRatio": null,
+            "shortName": null,
+            "sixMonthReturn": 28.04,
+            "symbol": "ETH",
+            "tenYearReturn": null,
+            "tickertype": "crypto",
+            "totalVolume": null,
+            "weightedShares": null,
+            "ytdReturn": -10.27
+          },
+          "domain": "ticker",
+          "kgid": 1099457144783374181,
+          "name": "Ethereum"
+        },
+        "vertical": "finance"
+      }
+    },
+    {
+      "citation_hash_id": "47d0",
+      "excerpt": "Last Updated: 7 hours ago\nLast Crawl: less than 1 hour ago\n| **1 ETH to USD** | 2 ETH to USD | 3 ETH to USD |\n| --- | --- | --- |\n| **$2,715.58** | $5,431.16 | $8,146.74 |\n## Graph of change in 1 Ethereum to United States Dollars rate\nSelect the period for plotting the chart:\nThe Ethereum to Dollar exchange rate on the chart allows you to track changes over different periods and draw conclusions about possible forecasts of the exchange rate of one currency in relation to another.\n## Dynamics of the cost changes of 1 Ethereum (ETH) in Dollars (USD)\nCompare the cost of 1 Ethereum in United States Dollars in the past with the current price at the moment.\n*Changes for the week (7 days)*\n| Date | Day of the week | 1 ETH to USD | Changes | Changes % |\n| --- | --- | --- | --- | --- |\n| September 25, 2026 | Friday | 1 ETH = 2,692.86 USD | +9.38 USD | +0.35% |\n| September 26, 2026 | Saturday | 1 ETH = 2,687.83 USD | -5.03 USD | -0.19% |\n| September 27, 2026 | Sunday | 1 ETH = 2,675.42 USD | -12.41 USD | -0.46% |\n| September 28, 2026 | Monday | 1 ETH = 2,685.62 USD | +10.20 USD | +0.38% |\n| September 29, 2026 | Tuesday | 1 ETH = 2,681.36 USD | -4.26 USD | -0.16% |\n| September 30, 2026 | Wednesday | 1 ETH = 2,686.34 USD | +4.98 USD | +0.19% |\n| October 1, 2026 (today) | Thursday | 1 ETH = 2,715.58 USD | +29.24 USD | +1.08% |\n| The cost of 1 Ethereum (ETH) in United States Dollars for a week (7 days) increased by **+$22.72** (twenty-two dollars seventy-two cents). | | | | |\n*Changes for the month (30 days)*\n| Date | Day of the week | 1 ETH to USD | Changes | Changes % |\n| --- | --- | --- | --- | --- |\n| September 1, 2026 | Tuesday | 1 ETH = 2,412.16 USD | -57.19 USD | -2.37% |\n| October 1, 2026 (today) | Thursday | 1 ETH = 2,715.58 USD | +303.42 USD | +11.17% |\n| The cost of 1 Ethereum (ETH) in United States Dollars for a month (30 days) increased by **+$303.42** (three hundred three dollars forty-two cents). | | | | |\n*Changes for the year (365 days)*\n| Date | Day of the week | 1 ETH to USD | Changes | Changes % |\n| --- | --- | --- | --- | --- |\n| October 1, 2025 | Wednesday | 1 ETH = 4,312.13 USD | +172.11 USD | +3.99% |\n| October 1, 2026 (today) | Thursday | 1 ETH = 2,715.58 USD | -1,596.56 USD | -58.79% |\n| The cost of 1 Ethereum (ETH) in United States Dollars for a year (365 days) decreased by **-$1,596.56** (one thousand five hundred ninety-six dollars fifty-six cents). | | | | |",
+      "sources": [
+        "MASE"
+      ],
+      "title": "1 Ethereum (ETH) to United States Dollars (USD) today",
+      "url": "https://exchangerate.guru/eth/usd/1/"
+    },
+    {
+      "citation_hash_id": "5380",
+      "excerpt": "Last Updated: 7 hours ago\nLast Crawl: 2 hours ago\n## ETH Ethereum price in USD and  Top 100 comparison\nEthereum price increased by +71.35% in the last 24h, while Top 100 increased by +41.30%. Overall, ETH coin was stronger than Top 100 by +21.62%.\nETH\nTop 100\nETH/Top 100\nThe blue line represents the parity between Ethereum and Top 100. If the blue line goes up, it means that the ETH coin price grows faster than the Top 100 coin price. If it goes down, it means that the price of Ethereum is dropping faster than the price of Top 100. The two bar charts under the main chart. that shows the growth or decline of a cryptocurrency shows how much ETH and Top 100 have grew or declined each day (or hour).\nETH Ethereum worse day for the selected time frame was on  when it declined by ; on the same day, Top 100 . The best day for Ethereum was on , when the price of ETH increased by  and the price of Top 100 .\n### Ethereum live price and 24h trend\n**$2,697.70** +1.09%\nUpdated 45 minutes ago\n### ETH to USD price converter\n#### How much is 1 ETH in USD?\nEnter amount\n1 ETH is now $2,697.70 USD, up by 29.02 (+1.09%) since yesterday.\n### ETH Market Cap Rank to Top Rank\nBased on the current circulating supply, the ETH price must be $13,750.74 (+409.72%) for the market cap to be ranked #1\n| # | Price | Price Increase |\n| --- | --- | --- |\n| 1 | $13,750.74 | +409.72% |\n### Ethereum All Time High (ATH)\n| All-time high | $4,957.67 (-45.59%)      Aug 24, 2025 (a year ago) |\n| --- | --- |\n| All-time low | $81.79 (+3198.32%)      Dec 15, 2018 (7 years ago) |",
+      "sources": [
+        "MASE"
+      ],
+      "title": "ETH Ethereum price is $2,697.70 - Best Crypto Checker",
+      "url": "https://bestcryptochecker.com/coin/eth-to-usd-price"
+    },
+    {
+      "citation_hash_id": "c49a",
+      "excerpt": "Last Updated: 7 hours ago\nLast Crawl: 3 hours ago\n## Convert ETH to USD | Live Ethereum Calculator\nETH/USD: 1 ETH ≈ 2,686.51 USD (Last update: 10/01/2026). Get the latest Ethereum to US Dollar rate for FREE with WEEX Converter.\n## ETH to USD price chart\n10/01/2026\nETH to USD Rate--\n1 ETH = 2,686.51 USD\n1 ETH = 2,686.51 USD\n## Ethereum to USD exchange rate\nToday's Ethereum to USD exchange rate is 2,686.51USD per ETH. With a circulating supply of 122,095,846.23248415 ETH, Ethereum's total market capitalization is $328,012,485,396.00133487. Ethereum trading volume has decreased by $8,480,140.900860798 over the past 24 hours, a decreased of 0.0605%. As of 10/01/2026, $14,008,281,678.70376205 worth of ETH was traded. More ETH information>>\n## How to convert Ethereum to US Dollar\nCreate your free WEEX account\nYou can trade on WEEX with as little as $10.\nAdd a payment method\nLink your card or bank account, or deposit crypto to WEEX.\nConvert ETH to USD\nChoose the crypto you want to convert and enter the amount.\n## Changes in the value of 1 Ethereum in US Dollar\n| Performance History | Last 24 Hours | Last 7 Days | Last 30 Days | Last 90 Days |\n| --- | --- | --- | --- | --- |\n| High | 2,737.26 | 2,746.01 | 2,805.49 | 2,805.49 |\n| Low | 2,657.08 | 2,628.68 | 2,356.18 | 1,693.03 |\n| Average | 2,697.17 | 2,687.34 | 2,580.84 | 2,249.26 |\n| Change | +0.27% | -0.01% | +8.81% | +58.03% |\nThe highest Ethereum to US Dollar exchange rate value in the past 30 days was 2,805.49 USD on 09/21/2026. The lowest ETH to USD rate was 2,356.18 USD on 09/02/2026.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "1 ETH to USD | Convert Ethereum to US Dollar | WEEX",
+      "url": "https://www.weex.global/tokens/ethereum/to-usd"
+    },
+    {
+      "citation_hash_id": "192f",
+      "excerpt": "Last Updated: 7 hours ago\nLast Crawl: 2 hours ago\n# Ethereum Price Today | ETH Live Price, Chart & Market Cap | OKX United States\nEthereum can offer strong returns, but is also subject to market volatility. Whether it’s a good investment depends on your risk tolerance, goals, and market conditions. Ethereum’s price can be influenced by various factors such as adoption, regulation, technological advancement, and overall market sentiment. Always do your own research before buying Ethereum and never buy more than you can afford to lose. This content is for informational purposes only and isn’t financial advice.\nTo buy Ethereum at a low price, monitor the market closely and use tools like price alerts and technical indicators to keep you updated on price trends. Always do your own research and use secure platforms. This content is for informational purposes only and isn’t financial advice.\nCurrently, one Ethereum is worth $2,705.49. For answers and insight into Ethereum's price action, you're in the right place. Explore the latest Ethereum charts and trade responsibly with OKX.\nTo read this Ethereum price chart, hover over or click on the time period you want to view. Hover over the chart to view the corresponding price, displayed in your local currency.\nYes, Ethereum’s price is updated in real-time on our Ethereum price page. You can view the current price and historical price data here at all times.\nCountries and regions differ on how digital assets transactions and holdings are taxed and how they view digital assets in general (money, property, commodity). In general, it is expected that you will pay capital gains tax when selling or swapping Ethereum ETH. Refer here for a more detailed guide.\nStaking and earning rewards with Ethereum are subject to local restrictions. Log in or sign up to view products available in your country, region, or state of residence.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Ethereum Price Today | ETH Live Price, Chart & Market Cap",
+      "url": "https://www.okx.vote/en-us/price/ethereum-eth"
+    },
+    {
+      "citation_hash_id": "9349",
+      "excerpt": "Last Updated: 7 hours ago\nLast Crawl: 3 hours ago\nOctober 1, 2026 6 m\nShare\n**ETH** Price Change 7d -2.7806%  \nOctober 1, 2026 6 m\nShare\nHow to Get Free Crypto\nSimple tricks to build a profitable portfolio at zero cost\n| Year | Minimum Price | Average Price | Maximum Price |\n| --- | --- | --- | --- |\n| 2026 | $2,674.77 | $3,095.17 | $3,937.13 |\n| 2027 | $3,418.14 | $4,198.53 | $4,976.09 |\n| 2028 | $3,710.11 | $5,572.08 | $7,095.59 |\n| 2029 | $3,622.93 | $5,506.80 | $7,097.56 |\n| 2030 | $3,723.28 | $5,372.09 | $6,795.24 |\n| 2031 | $6,615.22 | $6,886.18 | $7,155.63 |\n| 2032 | $6,716.50 | $7,367.91 | $7,890.82 |\n| 2033 | $6,686.26 | $7,336.59 | $7,891.50 |\n| 2034 | $6,721.06 | $7,330.58 | $8,156.71 |\n| 2035 | $7,940.61 | $8,266.01 | $8,589.30 |\n| 2040 | $9,677.48 | $10,630.15 | $11,369.51 |\n| 2050 | $13,953.31 | $15,264.04 | $16,933.78 |\n- Our real-time ETH to USD price update shows the current Ethereum price as $2,666.68 USD.\n- Our analysis of the technical indicators suggests that the current market feeling is neutral Bearish 30%, with a Fear & Greed Index score of 71 (Greed).\n- Over the last 30 days, Ethereum has had 17/30 (57%) green days and 4.26% price volatility.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Ethereum (ETH) Price Prediction 2026 2027 2028 - 2040",
+      "url": "https://changelly.com/blog/ethereum-eth-price-predictions/"
+    },
+    {
+      "citation_hash_id": "ff0f",
+      "excerpt": "Last Updated: 7 hours ago\nLast Crawl: 3 hours ago\n#2\nETH/USD\nSuspiciously similar\n## Price of Ethereum (ETH)\nPrice of 1 Ethereum today (1 October)\n$ 2 685.96\nMax / Min\nVolume Profile\n## All-time high and low price of ETH\nATH: **4 878.26 USD** (4 January 2021, 01:47)\nATL: **0.433 USD** (19 October 2015, 19:00)\nMarket Cap, Trading Volume, 24h, $ 13.9B, -10%, Dominance, 10.46%, In circulation ETH, 122 095 971, Price Min/Max, 24 hrs, $ 2.66k, $ 2.74k, 30 days, $ 2.36k, $ 2.8k, 1 year, $ 1.51k, $ 4.75k, ATH, $ 0.433, $ 4.88k\n-45% from ATH · +82% to ATH",
+      "sources": [
+        "MASE"
+      ],
+      "title": "ETH to USD Price today: Live rate Ethereum in US Dollar (Rank: #2)",
+      "url": "https://holder.io/coins/eth/rate/"
+    },
+    {
+      "citation_hash_id": "aea2",
+      "excerpt": "Last Updated: 1 day ago\nLast Crawl: 8 hours ago\nAmount\nUSD\nThe conversion value for 1 ETH to USD is 2,691.\nThe lowest and highest exchange rate for 1 ETH, in the last 24 hours was 2,659 and 2,738 respectively.\n## 1 ETH = 2,691 USD\nLast updated: Sep 30, 2026, 22:38 UTC (5 minutes ago)  \n### Rate quality\nRate source CoinLore average market rate Crypto price is converted to USD using the current fiat rate.\nCurrent converter rate 2,691 USD Displayed converter rate for 1 ETH.\nAverage vs tracked markets 2,649 - 2,707 USD Fresh markets within 2.16% range. Low: Poloniex. High: luno.  \nLiquidity behind conversion $3,974,650,745Top reported-volume exchanges: Binance, MEXC Global, Gate.  \nDepth within 2% Buy $181,994,112.14 / Sell $164,013,773.40Visible order-book depth from fresh markets.  \nReliability filter: fresh market data, positive adjusted volume, and prices within 3% of the CoinLore average. Thin, stale, or outlier markets are excluded.\nFor the last 24 hours, more than 4,321,240.11 ETH were exchanged which is equivalent to $11,628,031,191.23, it is traded on 82 exchanges, the top ones are Binance, MEXC Global, Gate.\nThe highest price of Ethereum which we have recorded is 4,952 U.S. Dollars.\nETH can be converted to/from stablecoins, crypto coins and fiat such as USDT, USDC, DAI, TUSD, GUSD, BTC, BNB, USD, EUR, JPY, BRL, GBP, AUD.\nCheck additional information - **Ethereum (ETH) Price/Chart/Details** , Exchange or Buy, Price History, Ethereum Price Prediction , ICO & Tokenomics, Technical Analysis , Wallets  ",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Convert ETH to USD",
+      "url": "http://www.coinlore.com/convert/eth-ethereum/usd"
+    },
+    {
+      "citation_hash_id": "1c46",
+      "excerpt": "Last Updated: 1 day ago\nLast Crawl: 1 hour ago\n- Spot Ethereum ETFs posted $2.81 million in outflows on Sept. 29, ending a seven-session inflow streak.\n- A break above $2,779 would trigger $1 billion in short liquidations, with $2,800 and $2,900 overhead.\nEthereum traded at $2,686.32 on Wednesday, flat on the session, after opening the day at $2,676.74, 0.4% below Tuesday's opening price. The coin spent the overnight session near $2,672, down 1.24% on a 24-hour basis at 2:08 a.m. ET, then recovered as U.S. data turned in its favor. At 8:30 a.m. ET, the August personal consumption expenditures report showed core inflation rising 0.2% on the month for a 3.0% annual rate, against forecasts of 0.3% and 3.3%. Rate futures cut the probability of an October Fed hike to 37% from 47% before the data.\nEthereum's value stands at $328 billion on a supply of 122.1 million ETH. The coin trades more than 45% below its record high, set in August 2025 just below $5,000. It has also recovered sharply from its 2026 low. ETH fell from $3,000 at the end of 2025 to below $1,800 by February 2026, with spot ETF outflows and recession fears among the drivers. From that trough, the coin has climbed more than 49%.\nSeptember has been a month of steady gains followed by a stall. ETH traded at $2,495 on September 7 and $2,513 on September 13. It cleared $2,600 by September 20, reached $2,688 that evening and printed $2,698 on September 27. Every attempt to break higher ran into the $2,750 to $2,800 resistance zone, which stopped the September rally cold.\nThe thesis for this forecast is direct. Ethereum has the strongest structural supply squeeze of any major crypto asset. Bitmine alone holds 6,001,302 ETH, or 4.9% of all supply, and stakes 84% of it. Roughly 30% of all ETH is locked in staking. Spot ETF buying ran at a record pace in late August. Against that, ETF flows stalled on Tuesday and ETH has lagged Bitcoin all month. Today's cooler U.S. inflation print removes the rate headwind. If ETH holds $2,650 through Friday's payrolls report, a break above $2,800 opens $2,900 and $3,000 in October. A failure below $2,650 sends the coin back toward $2,500.",
+      "sources": [
+        "MASE"
+      ],
+      "title": "Ethereum Price Forecast — ETH-USD ($2,686) Holds Support as Core PCE Cools, Bitmine Tops 6M ETH — $2,800 Breakout Target",
+      "url": "https://www.tradingnews.com/news/ethereum-2686-usd-coils-below-2800-usd-with-1b-usd-short-stacked-at-2779-usd"
+    }
+  ],
+  "search_engines": [
+    "MASE"
+  ],
+  "search_session_id": "f53eef7ed4294d878ea00d0aa59ebf10",
+  "tool": "web_search"
+}

@@ -1,7 +1,7 @@
 ---
 id: foil-flip-desk
 title: Foil flip desk (daily profit turnover)
-enabled: true
+enabled: false
 owner: goal:foil-monetization-and-cred-building
 mode: task
 schedule:
@@ -10,7 +10,7 @@ schedule:
   time: 18:36:00
 metadata:
   tags: [cron:flexible-time]
-  originating_channel_context_json: '{"originating_channel":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
+  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false}'
   presentation_locale: en-US
 ---
 You are Foil's flip desk. The scoreboard is profit: win it, flip it, take profits, turn it over. This job closes the loop after the mint/giveaway hunters win NFTs.

@@ -1,11 +1,11 @@
 {
   "schema_version": "hatch.probe_ui_summary.v1",
   "slug": "trait-combiner",
-  "session_id": "9c38ac6a-5ed1-407e-910f-5aa4baba262b",
-  "observes": 6,
-  "acts": 12,
-  "acts_ok": 12,
-  "interactive_nodes": 36,
+  "session_id": "ff5055d5-08a5-4a52-9a62-0768a819c18a",
+  "observes": 1,
+  "acts": 1,
+  "acts_ok": 1,
+  "interactive_nodes": 55,
   "viewports_seen": [
     "desktop"
   ],

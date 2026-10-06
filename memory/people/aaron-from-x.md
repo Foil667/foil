@@ -2,7 +2,7 @@
 display_name: AaronFromX
 nickname: @AaronFromX
 summary: Posts hourly about #CCFF00 and the HoodStreet Spaces; followed from @Foil667 at the user's direction as part of the mint-intel watch.
-rank: 7
+rank: 8
 updated: 2026-09-21
 ---
 

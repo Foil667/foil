@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T18:30:47.305Z",
+  "generatedAt": "2026-10-06T03:20:45.416Z",
   "readOnly": true,
   "dry": false,
   "chains": [
@@ -7,20 +7,20 @@
     "base"
   ],
   "coverage": [
-    "OK: base scanned blocks 51915300..51915450 (~5 min), 1826 mint events.",
-    "DEGRADED: robinhood eth_getLogs failed (RPC eth_getLogs: {\"code\":429,\"message\":\"Too Many Requests\"}).",
-    "OK: OpenSea drops API returned 6 upcoming drops.",
+    "OK: base scanned blocks 52233600..52233750 (~5 min), 2037 mint events.",
+    "OK: robinhood scanned blocks 81307815..81310815 (~5 min), 1401 mint events.",
+    "OK: OpenSea drops API returned 3 upcoming drops.",
     "OK: Zora timed-sale strategy quiet in window (0 events).",
     "STUB: Solana candy-machine monitor not configured — needs a Helius websocket (no key on file, no signup performed). Solana coverage OFFLINE. Code path: scanSolanaStub() in screener-v2.mjs.",
     "STUB: mempool websocket watch not configured — needs Alchemy/QuickNode/Helius WS (no signups performed). Mempool signal OFFLINE. Code path: mempoolWatchStub() in screener-v2.mjs."
   ],
   "minScore": 60,
   "counts": {
-    "candidates": 16,
+    "candidates": 22,
     "execute": 0,
     "verify": 0,
-    "watch": 10,
-    "blocked": 6
+    "watch": 14,
+    "blocked": 8
   },
   "alerts": []
 }

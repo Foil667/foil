@@ -1,0 +1,637 @@
+{
+  "commands": {
+    "bluetooth.scan": {
+      "description": "Scan for Bluetooth Low Energy devices broadcasting near the user's phone and return them ranked by signal strength. Use when the user asks what Bluetooth devices are around them, which ones are closest, or wants to find a specific advertising accessory. `payload_json` holds `devices` (each with `id`, `name` when the device broadcasts one, `rssi` in dBm, `best_rssi`, a coarse `signal` bucket of excellent/good/fair/weak, `samples`, `connectable`, `tx_power`, `service_uuids`, `company_id`, `company` when the id is a known vendor, `first_seen_ms_ago`, `last_seen_ms_ago`), plus `device_count`, `returned`, `named_count`, `truncated` and `scanned_ms`. Beacons are NOT decoded: iBeacons are invisible to this command entirely (iOS routes them through a different system), and other beacon formats appear only as ordinary devices. Report what is actually there and do not overstate it: `id` is an opaque identifier iOS generates for this app and it changes between installs, so it is NOT a MAC address and cannot be compared against another app's or another phone's list. Most devices rotate their broadcast address for privacy and never broadcast a name, so a large count of unnamed entries is normal and does not mean anything is wrong. `company_id` is the Bluetooth SIG member id from the advertisement and only hints at the maker. RSSI is signal strength, not distance — say \"stronger/closer\" rather than quoting meters. Classic (non-BLE) accessories and already-paired devices that are not advertising do not appear. Errors: `bluetooth_off` (user must switch Bluetooth on), `bluetooth_unauthorized` (user must grant Bluetooth in iOS Settings), `bluetooth_unsupported` (no BLE radio), `app_backgrounded` (iOS only scans while Muse is open on screen — ask the user to open the app rather than reporting that nothing is nearby).",
+      "optional": {
+        "duration_ms": {
+          "description": "How long to listen, in milliseconds. Default 6000, clamped to 1000-20000. Longer finds more devices; 3000-10000 is usually enough.",
+          "type": "integer"
+        },
+        "include_unnamed": {
+          "description": "Whether to include devices that broadcast no name. Default true. Set false when the user only cares about identifiable devices.",
+          "type": "boolean"
+        },
+        "limit": {
+          "description": "Maximum devices to return, strongest signal first. Default 40, clamped to 1-100. `device_count` still reports the full total.",
+          "type": "integer"
+        },
+        "service_uuids": {
+          "description": "Comma-separated GATT service UUIDs (16-, 32-, or 128-bit) to restrict the scan to, e.g. '180F' for Battery Service. Omit to list everything.",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "bluetooth"
+      ]
+    },
+    "calendar.events.create": {
+      "description": "Create one or more calendar events on the device. ALWAYS pass `events_json`, a JSON array string of event objects, even for a single event.\n\nEach object REQUIRES title, start_date, and either end_date or duration; start_date must be earlier than end_date.\n\ncalendar_id is OPTIONAL. Omit it and the event goes to the device's default calendar for new events, else the first calendar that reports writable. Supply it whenever the user names a calendar. Writability is decided by the OS at save time, not by the calendars list: is_writable from calendar.search is advisory, so do NOT filter candidates on it and do not refuse to try. A calendar the OS actually rejects fails with calendar_read_only carrying the EventKit code, and there is no silent redirect — the create fails rather than landing the event somewhere the user did not ask for. Do NOT infer calendar_id from an event payload alone; the calendar that happens to hold an event is often a shared, read-only one. If no calendar on the device reports writable the create fails with no_default_calendar — report that to the user rather than retrying.\n\nOptional per-event fields: location, notes, is_all_day (time portion ignored; covers whole calendar days), availability ('busy' default, 'free', 'tentative', 'unavailable'), timezone (IANA/Olson, defaults to the device zone), reminder_minutes (alert this many minutes before start; 0 = at start), duration (ISO 8601 length, e.g. PT1H — used as the end when end_date is omitted), rrule, and the recurrence_* fields.\n\nRecurrence is OPTIONAL. Set recurrence_frequency to one of 'daily', 'weekly', 'monthly', 'yearly' to repeat; recurrence_interval repeats every N periods (default 1, e.g. 2 with 'weekly' = every other week). For weekly recurrence, recurrence_days_of_week is a comma-separated list of two-letter weekday codes (SU,MO,TU,WE,TH,FR,SA) — omit to repeat on the start day's weekday. Bound the series with EITHER recurrence_count (total occurrences) OR recurrence_end_date (ISO 8601, last day it can occur); supplying both returns 'invalid_argument'. Omit both for an open-ended series.\n\nResponse: {ok, created_count, event_ids, results}, where `results` carries one entry per input object in order. Entries are applied one at a time and are NOT rolled back, so a failure partway leaves the earlier ones applied — read `results` rather than `ok` alone to see which succeeded. Each successful entry is {ok: true, event_id, calendar_id, calendar_name}. An entry also carries used_fallback_calendar: true when no calendar_id was given and the event went somewhere other than the device default — tell the user which calendar it landed in.",
+      "permission_required": [
+        "calendar"
+      ],
+      "required": {
+        "events_json": {
+          "description": "JSON array string of event objects. Always use an array, even for one event: [{\"title\":\"Team standup\",\"start_date\":\"2026-08-01T15:00:00Z\",\"end_date\":\"2026-08-01T15:30:00Z\"}]. Add \"calendar_id\":\"<id from calendar.search>\" only when the user names a calendar. ISO 8601 timestamp ONLY (e.g. '2025-04-24T14:30:00Z'). The `yyyy-MM-dd` short form is also accepted and is parsed as UTC midnight on the supplied day. Relative tokens like 'today' or '+7d' are not accepted here — send an explicit timestamp.",
+          "type": "string"
+        }
+      }
+    },
+    "calendar.events.delete": {
+      "description": "Delete one or more calendar events from the device. ALWAYS pass `targets_json`, a JSON array string of target objects, even for a single event.\n\nEach object REQUIRES event_id and may include span ('this_event' default or 'future_events').\n\nFor recurring events, each occurrence is returned as a separate row with a composite event_id of the form '<eventIdentifier>#<ISO start>'. When calling calendar.events.update or calendar.events.delete on a recurring event, pass the EXACT event_id you received from calendar.search so the operation targets the intended occurrence. Per-event payload also includes 'is_recurring' (bool) and 'occurrence_date' (ISO 8601, recurring events only). event_id is stable within a single app session but is not guaranteed across reinstalls — do not persist beyond a session.\n\nResponse: {ok, deleted_count, event_ids, results}, where `results` carries one entry per input object in order. Entries are applied one at a time and are NOT rolled back, so a failure partway leaves the earlier ones applied — read `results` rather than `ok` alone to see which succeeded. Each successful entry is {ok: true, event_id}.\n\nAlways confirm with the user before deleting.",
+      "permission_required": [
+        "calendar"
+      ],
+      "required": {
+        "targets_json": {
+          "description": "JSON array string of target objects. Always use an array, even for one event: [{\"event_id\":\"<exact id from calendar.search>\"}].",
+          "type": "string"
+        }
+      }
+    },
+    "calendar.events.update": {
+      "description": "Update one or more existing calendar events on the device. ALWAYS pass `updates_json`, a JSON array string of update objects, even for a single event.\n\nEach object REQUIRES event_id and calendar_id. Pass the event's CURRENT calendar_id (returned in every calendar.search event payload) to keep it in place, or a DIFFERENT one to move it between calendars — there is no implicit \"keep current calendar\", so omitting it fails with missing_required_param. Only the fields you supply change.\n\nOptional per-event fields: title, start_date, end_date (if both, start must be earlier), location, notes, is_all_day, availability, timezone, reminder_minutes (replaces existing alerts), rrule, the recurrence_* fields, and span ('this_event' default or 'future_events').\n\nRecurrence is OPTIONAL. Set recurrence_frequency to one of 'daily', 'weekly', 'monthly', 'yearly' to repeat; recurrence_interval repeats every N periods (default 1, e.g. 2 with 'weekly' = every other week). For weekly recurrence, recurrence_days_of_week is a comma-separated list of two-letter weekday codes (SU,MO,TU,WE,TH,FR,SA) — omit to repeat on the start day's weekday. Bound the series with EITHER recurrence_count (total occurrences) OR recurrence_end_date (ISO 8601, last day it can occur); supplying both returns 'invalid_argument'. Omit both for an open-ended series. Pass recurrence_frequency: 'none' to remove recurrence and make the event one-off. Recurrence changes respect `span`.\n\nFor recurring events, each occurrence is returned as a separate row with a composite event_id of the form '<eventIdentifier>#<ISO start>'. When calling calendar.events.update or calendar.events.delete on a recurring event, pass the EXACT event_id you received from calendar.search so the operation targets the intended occurrence. Per-event payload also includes 'is_recurring' (bool) and 'occurrence_date' (ISO 8601, recurring events only). event_id is stable within a single app session but is not guaranteed across reinstalls — do not persist beyond a session.\n\nResponse: {ok, updated_count, event_ids, results}, where `results` carries one entry per input object in order. Entries are applied one at a time and are NOT rolled back, so a failure partway leaves the earlier ones applied — read `results` rather than `ok` alone to see which succeeded. Each successful entry is {ok: true, event_id, calendar_id, calendar_name}.",
+      "permission_required": [
+        "calendar"
+      ],
+      "required": {
+        "updates_json": {
+          "description": "JSON array string of update objects. Always use an array, even for one event: [{\"event_id\":\"<exact id from calendar.search>\",\"calendar_id\":\"<current or new calendar>\",\"start_date\":\"2026-08-01T16:00:00Z\"}]. ISO 8601 timestamp ONLY (e.g. '2025-04-24T14:30:00Z'). The `yyyy-MM-dd` short form is also accepted and is parsed as UTC midnight on the supplied day. Relative tokens like 'today' or '+7d' are not accepted here — send an explicit timestamp.",
+          "type": "string"
+        }
+      }
+    },
+    "calendar.search": {
+      "description": "Search or browse the device's calendars and return events. All parameters are OPTIONAL.\n\nPass `query` to find events by keyword — a typo-tolerant, accent-insensitive match across event title, location, notes, organizer, and attendees, ranked best-first. Use it for requests like 'When is my dentist appointment?', 'Find my 1:1 with Sarah', or 'Look for the budget review'. Omit `query` to simply list every event in the window, for requests like 'What's on my calendar next week?' or 'Do I have anything Friday afternoon?'.\n\nstart_date and end_date bound the window, anchored to start of today (UTC) when omitted: a keyword search defaults to today-365d → today+365d; a plain browse defaults to today-7d → today+14d (MobileConfig-driven). Date arguments accept either an ISO 8601 timestamp (e.g. '2025-04-24T00:00:00Z') OR a named anchor ('now', 'today', 'yesterday', 'tomorrow') OR a SIGNED relative offset ('-7d', '+7d', '-24h', '+30m', '-1h'). Bare unsigned tokens like '7d' or '24h' are REJECTED with error 'invalid_argument' because they don't say past vs. future — always include '+' or '-'. start_date MUST be earlier than end_date; inverted ranges return 'invalid_argument' with the parsed timestamps so you can fix the call. The window must not exceed two years.\n\nPass `limit` to cap how many events come back; keyword searches default to 25 (capped at 100).\n\nCalendar filter inputs (calendar_id and calendars) are unioned: every value is matched first by calendar identifier, then case-insensitively by title; matches from both inputs are deduplicated and queried together. Either field accepts an identifier OR a title. When neither is supplied, every calendar on the device is queried.\n\nResponse (success): {ok: true, events: [...], event_count: N, calendars: [...], calendars_queried: [titles]}. `calendars` lists EVERY event calendar on the device — not just the ones queried — as {calendar_id, title, source, is_writable?, is_default?}. Use it to pick the calendar_id for calendar.events.create/update/delete: is_writable is the OS hint about which entries accept writes, and is_default marks the device's default calendar for new events. If the user hasn't named a calendar, prefer the is_default one; ask the user when several calendars could plausibly be meant. is_writable is advisory — the OS decides at save time, so do NOT refuse to try a calendar because it reports false. It is omitted entirely when the device could not report writability for any calendar; treat an absent is_writable as unknown, not as false. Each event in `events` includes: event_id, title, start_date, end_date, is_all_day, calendar_name, calendar_id, availability, is_recurring. Optional per-event keys: location and notes (only when non-empty; notes truncated at 500 chars). Some events also carry time_zone (Olson identifier); it is omitted when EventKit has no zone for the event. Each event's own `start_date`/`end_date` (the response fields, not the window arguments) are UTC and internal — never show them, and never read the day, date, or weekday off them. Use the local fields instead: `start_local`/`end_local` for a timed event (`is_all_day`=false), `start_local_date`/`end_local_date` (yyyy-MM-dd) for an all-day one, and `start_weekday`/`end_weekday` for the weekday, verbatim. `occurrence_date` and the ISO instant inside a recurring `event_id` repeat that same UTC `start_date`, so read the row's own local fields for that occurrence's day rather than either of them. When a `recurrence` object carries an `end_date`, that one is UTC with no local counterpart: convert it to the user's time zone — the `client_timezone` on their message — before stating when the series stops. For recurring events the response also includes occurrence_date (ISO 8601) and a `recurrence` object {frequency, interval, days_of_week?, end_date?, occurrence_count?}. `calendars_queried` is title-keyed; use `calendars` when you need identifiers or writability.\n\nFor recurring events, each occurrence is returned as a separate row with a composite event_id of the form '<eventIdentifier>#<ISO start>'. When calling calendar.events.update or calendar.events.delete on a recurring event, pass the EXACT event_id you received from calendar.search so the operation targets the intended occurrence. Per-event payload also includes 'is_recurring' (bool) and 'occurrence_date' (ISO 8601, recurring events only). event_id is stable within a single app session but is not guaranteed across reinstalls — do not persist beyond a session.\n\nThe on-device sync cache covers `[today-N, today+M]` (configurable via MobileConfig); queries outside this window perform a fresh device fetch and may be slower.",
+      "optional": {
+        "calendar_id": {
+          "description": "Calendar identifier OR title. Identifier is matched first, then case-insensitive title. Combined (union) with `calendars` if both are supplied. Defaults to all calendars when omitted.",
+          "type": "string"
+        },
+        "calendars": {
+          "description": "Comma-separated list of calendar identifiers and/or titles. Each value is matched identifier-first, then case-insensitive title. Combined (union) with `calendar_id` if both are supplied.",
+          "type": "string"
+        },
+        "end_date": {
+          "description": "Range end. Accepts an ISO 8601 timestamp, a named anchor ('now', 'today', 'yesterday', 'tomorrow'), or a SIGNED relative offset like '+1d' or '-2h'. Bare unsigned tokens like '7d' are REJECTED — always include '+' or '-'. When omitted, a browse defaults to today-7d → today+14d (MobileConfig-driven); a keyword search defaults to today-365d → today+365d.",
+          "type": "string"
+        },
+        "limit": {
+          "description": "Maximum number of events to return. Keyword searches default to 25 (capped at 100). When set, also caps a plain browse.",
+          "type": "integer"
+        },
+        "query": {
+          "description": "Free-text keywords to match against event title, location, notes, organizer, and attendees. Typo-tolerant and accent-insensitive. Omit to list all events in the window.",
+          "type": "string"
+        },
+        "start_date": {
+          "description": "Range start. Accepts an ISO 8601 timestamp, a named anchor ('now', 'today', 'yesterday', 'tomorrow'), or a SIGNED relative offset like '+1d' or '-2h'. Bare unsigned tokens like '7d' are REJECTED — always include '+' or '-'. When omitted, a browse defaults to today-7d → today+14d (MobileConfig-driven); a keyword search defaults to today-365d → today+365d.",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "calendar"
+      ]
+    },
+    "contacts.create": {
+      "description": "Create one or more contacts in Apple Contacts silently after user approval. Use this only when the user asks to save people or businesses to contacts. Always pass contacts_json as a JSON array string, even for one contact. Each object must include display_name and may include phones, emails, organization, or job_title. Give a contact several phone numbers or email addresses with phones:[{value,label?}] and emails:[{value,label?}], in the order they should be saved; labels may repeat and the first entry becomes the primary one, but the same number or address twice in one list is rejected. The legacy phone_number/phone_label and email/email_label scalar pairs still work for a single value, but do not send a plural list and its scalar pair together. Postal addresses, birthdays and notes cannot be written, and any other field is ignored. The batch is all-or-nothing: if any object fails, no contact is created. Do NOT call contacts.create once per contact when the user asks to create multiple contacts; batching keeps this as one user-approved action. This writes directly to Apple Contacts; it does not open the Contacts app.\n\nResponse (success): a contact card — {ok: true, card, embed_token}. Include the embed_token in your reply to show it. Each card row carries item_id, which is that contact's saved platformId.",
+      "permission_required": [
+        "contacts"
+      ],
+      "required": {
+        "contacts_json": {
+          "description": "JSON array string of contact objects. Use an array with one object for one contact, or many objects for many contacts. Each object requires display_name and may include phones:[{value,label?}], emails:[{value,label?}], organization, job_title. Legacy phone_number/phone_label and email/email_label scalar pairs remain supported for one value; do not mix a list with its scalar pair. Do not send multiple contacts.create calls for one multi-contact user request.",
+          "type": "string"
+        }
+      }
+    },
+    "contacts.delete": {
+      "description": "Delete one or more existing contacts from Apple Contacts silently after user approval. Use this only when the user explicitly asks to remove saved contacts. Always pass targets_json as a JSON array string, even for one contact. Each target object must include platform_id (the contact identifier from the contacts data source's platformId field). Do NOT call contacts.delete once per contact when the user asks to delete multiple contacts; batching keeps this as one user-approved action. This writes directly to Apple Contacts; it does not open the Contacts app.\n\nThe batch is all-or-nothing: if any target cannot be resolved, nothing is deleted and the error names the platform_id that failed. Retry with that one removed.\n\nResponse (success): {ok: true, deleted_count, contacts:[{platform_id, deleted: true}]}.",
+      "permission_required": [
+        "contacts"
+      ],
+      "required": {
+        "targets_json": {
+          "description": "JSON array string of target objects. Each object must include platform_id. Do not send multiple contacts.delete calls for one multi-contact user request.",
+          "type": "string"
+        }
+      }
+    },
+    "contacts.search": {
+      "description": "Search or browse the user's contacts and return matching people. All parameters are OPTIONAL.\n\nPass `query` to find contacts by keyword — a typo-tolerant, accent-insensitive match across name, organization, job title, email, postal address, and phone number, ranked best-first. Use it for requests like 'What's Sarah's number?', 'Find my contact at Acme', or 'Look up Dr. Nguyen'. Omit `query` to list contacts alphabetically by name, for requests like 'Show me my contacts'.\n\nPrefer this over syncing the whole address book when the user is asking about specific people; it returns only the relevant contacts.\n\nPass `limit` to cap how many contacts come back; defaults to 25 (capped at 100).\n\nResponse (success): {ok: true, payload_json}. `payload_json` is a JSON string {platform, syncedAt, contacts:[...]} — the same shape as the `contacts` data source — where each contact has platformId, displayName, organization, jobTitle, phones[{label,value}], emails[{label,value}], addresses[{label,street,city,state,postalCode,country}], and birthday.",
+      "optional": {
+        "limit": {
+          "description": "Maximum number of contacts to return. Defaults to 25, capped at 100.",
+          "type": "integer"
+        },
+        "query": {
+          "description": "Free-text keywords to match against name, organization, job title, email, postal address, and phone. Typo-tolerant and accent-insensitive. Omit to list all contacts alphabetically.",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "contacts"
+      ]
+    },
+    "contacts.update": {
+      "description": "Update one or more existing contacts in Apple Contacts silently after user approval. Use this only when the user explicitly asks to change saved contacts. Always pass updates_json as a JSON array string, even for one contact. Each update object must include platform_id (the contact identifier from the contacts data source's platformId field) plus at least one field: display_name, phones, emails, organization, or job_title. Fields you omit are left alone. display_name sets the first and last name only, so a rename is rejected when the saved name also has a prefix, middle name or suffix — tell the user to rename that contact in the Contacts app instead.\n\nphones:[{value,label?}] and emails:[{value,label?}] add the values you list and relabel ones already saved. They never delete on their own: if your list leaves out a value the contact already has, the write is REJECTED, nothing changes, and the error names what was missing. Re-send the list including those values to keep them, or add \"remove_missing\": true to delete them on purpose. To swap one number for another, send the full list with the new value in place of the old one plus \"remove_missing\": true. \"remove_missing\" sits on the update object, not inside a value, and applies to every list on that object — so with it set, an emails list you send alongside a phones list must be complete too, or those emails are deleted.\n\nCall contacts.search for the contact first and copy each value exactly as it came back. Matching ignores punctuation — \"+1 (415) 555-0101\" and \"+14155550101\" are the same number — and emails match case-insensitively. A number whose digits nearly match a saved one, such as the same digits with the country code missing, is REJECTED as ambiguous rather than added; re-send it spelled exactly as saved. That check does not cover short numbers, which are simply added, so copy the saved spelling either way. Listing one value more times than the contact already has it is rejected too. The list also sets the saved order, so its first entry becomes the contact's primary number or address; keep the existing order unless asked to change it. Labels are metadata, not keys: the same label may repeat, and values are matched on the number or address itself.\n\nThe legacy phone_number/phone_label and email/email_label pairs relabel a matching saved value or append a new one. They never remove anything, so replacing a number this way leaves the old one behind — use phones/emails for that. Do not send a list together with its scalar pair on the same object, and send at most one object per platform_id; both are rejected. An empty list is rejected too, so this command cannot clear a field outright. Do NOT call contacts.update once per contact when the user asks to update multiple contacts; batching keeps this as one user-approved action. The batch is all-or-nothing: if any object fails, nothing is written and the error names the object. This writes directly to Apple Contacts; it does not open the Contacts app.\n\nResponse (success): a contact card — {ok: true, card, embed_token}. Include the embed_token in your reply to show it. Each card row carries item_id, which is that contact's platformId. The response does NOT list what was removed, so if you sent \"remove_missing\": true, tell the user which values you asked to delete.",
+      "permission_required": [
+        "contacts"
+      ],
+      "required": {
+        "updates_json": {
+          "description": "JSON array string of update objects. Each object needs a unique platform_id, at least one field, and may set display_name, phones:[{value,label?}], emails:[{value,label?}], organization, job_title, remove_missing, or the legacy phone_number/phone_label and email/email_label pairs. See the command description for what each one does to the saved values.",
+          "type": "string"
+        }
+      }
+    },
+    "device.find": {
+      "description": "Find one of the user's connected wearable devices (Ray-Ban Meta or other smart glasses). Use this when the user asks \"where are my glasses?\", \"find my glasses\", \"locate my Ray-Bans\", or similar. Also use when the user wants to set up Find Device — pass `intent=enroll`. Returns a `deep_link` (a `metaai://find-my[...]` URL) inside `payload_json`. You MUST include the deep link as a tappable markdown link in your reply so the user can open the Meta AI app and see the map. Suggested format: [Open Find Device](metaai://find-my). The Find Device screen auto-routes to enrollment if the user isn't yet opted in, so a single link covers both the located and not-yet-enrolled cases. V1 supports glasses only; Neural Band and other devices are coming in a follow-up.",
+      "optional": {
+        "device_type": {
+          "description": "Which device family to find. Currently only 'glasses' is supported (default).",
+          "type": "string"
+        },
+        "intent": {
+          "description": "'locate' (default) opens the Find Device map. 'enroll' opens the Find Device setup / consent flow.",
+          "type": "string"
+        }
+      }
+    },
+    "geofence.list": {
+      "description": "List all currently registered geofences.",
+      "permission_required": [
+        "location_always"
+      ]
+    },
+    "geofence.remove": {
+      "description": "Remove a previously registered geofence by its ID.",
+      "permission_required": [
+        "location_always"
+      ],
+      "required": {
+        "id": {
+          "description": "The geofence ID returned by geofence.set",
+          "type": "string"
+        }
+      }
+    },
+    "geofence.set": {
+      "description": "Register a geofence so the device can proactively react when the user arrives at or leaves a place. Requires background location access to already be granted via `location.set_sharing_mode(mode: \"always\")`. Use this for location-based reminders like \"remind me when I get to the office\". Give the place EITHER as latitude and longitude, or as a free-text address the device will look up. Returns a geofence ID that can be used with `geofence.remove`.",
+      "optional": {
+        "address": {
+          "description": "Free-text address or place name to look up, for example '1 Hacker Way, Menlo Park CA'. Ignored when latitude/longitude are supplied. Needs network: returns address_not_found if nothing matches, address_lookup_unavailable if the lookup could not run.",
+          "type": "string"
+        },
+        "latitude": {
+          "description": "Latitude in decimal degrees. Required unless `address` is supplied; must be sent together with longitude.",
+          "type": "number"
+        },
+        "longitude": {
+          "description": "Longitude in decimal degrees. Required unless `address` is supplied; must be sent together with latitude.",
+          "type": "number"
+        },
+        "persistent": {
+          "description": "Whether this geofence should keep firing after the first trigger. Default false (one-time: auto-removed after first trigger). Set to true for ongoing monitoring.",
+          "type": "boolean"
+        },
+        "radius_meters": {
+          "description": "Geofence radius in meters (default 150)",
+          "type": "number"
+        },
+        "trigger": {
+          "description": "When to trigger: 'enter' (default), 'exit', or 'enter_or_exit'",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "location_always"
+      ],
+      "required": {
+        "label": {
+          "description": "Human-readable geofence label, for example 'office' or 'home'",
+          "type": "string"
+        }
+      }
+    },
+    "home.accessories.list": {
+      "description": "List HomeKit accessories the user has paired, including each accessory's room, category, reachability, and the characteristics it exposes. Optionally filter by room name, home_id, or accessory category (e.g. 'lightbulb', 'lock', 'thermostat').",
+      "optional": {
+        "category": {
+          "description": "Accessory category filter (e.g. lightbulb, lock, thermostat, outlet, switch)",
+          "type": "string"
+        },
+        "home_id": {
+          "description": "Limit accessories to a single home (from home.list)",
+          "type": "string"
+        },
+        "room": {
+          "description": "Case-insensitive room name filter",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit"
+      ]
+    },
+    "home.accessory.get": {
+      "description": "Read one or more characteristic values from a single accessory. Defaults to all readable characteristics; pass characteristic_types to restrict the read to a comma-separated list (e.g. 'power_state,brightness').",
+      "optional": {
+        "characteristic_types": {
+          "description": "Comma-separated characteristic types to read (defaults to all readable)",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit"
+      ],
+      "required": {
+        "accessory_id": {
+          "description": "Accessory id from home.accessories.list",
+          "type": "string"
+        }
+      }
+    },
+    "home.accessory.set": {
+      "description": "Mutate one or more characteristics on a single accessory in a single round-trip. The 'characteristics' arg is a JSON array of {type, value} objects, e.g. '[{\"type\":\"power_state\",\"value\":true},{\"type\":\"brightness\",\"value\":50}]'. The response reports per-characteristic success/failure under 'applied' and 'failed' so you can react to partial success.",
+      "permission_required": [
+        "homekit"
+      ],
+      "required": {
+        "accessory_id": {
+          "description": "Accessory id from home.accessories.list",
+          "type": "string"
+        },
+        "characteristics": {
+          "description": "JSON array of {type, value} objects",
+          "type": "string"
+        }
+      }
+    },
+    "home.bind_geofence": {
+      "description": "Create a geofence-triggered HomeKit bridge. When the user enters or exits the specified location, the configured HomeKit actions execute automatically. Requires both homekit and Always location permissions.",
+      "optional": {
+        "cooldown_seconds": {
+          "description": "Minimum interval between firings in seconds (default 300)",
+          "type": "integer"
+        },
+        "radius_meters": {
+          "description": "Geofence radius in meters (default 150)",
+          "type": "number"
+        },
+        "trigger": {
+          "description": "When to fire: 'enter' (default), 'exit', or 'both'",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit",
+        "location_always"
+      ],
+      "required": {
+        "actions": {
+          "description": "JSON array of {command, params_json} objects (home.accessory.set or home.scene.run)",
+          "type": "string"
+        },
+        "label": {
+          "description": "Human-readable name for this bridge",
+          "type": "string"
+        },
+        "latitude": {
+          "description": "Geofence latitude",
+          "type": "number"
+        },
+        "longitude": {
+          "description": "Geofence longitude",
+          "type": "number"
+        }
+      }
+    },
+    "home.bridge.list": {
+      "description": "List saved HomeKit bridges and their active status, based on current permission and whether their monitored region is installed.",
+      "permission_required": [
+        "homekit"
+      ]
+    },
+    "home.bridge.remove": {
+      "description": "Remove a previously registered HomeKit bridge by its ID.",
+      "permission_required": [
+        "homekit"
+      ],
+      "required": {
+        "bridge_id": {
+          "description": "Bridge ID returned by home.bind_geofence",
+          "type": "string"
+        }
+      }
+    },
+    "home.choreograph": {
+      "description": "Execute an ordered sequence of HomeKit accessory set and scene run operations with optional delays between steps. Each step is a {command, params_json, delay_seconds?} object. The command pauses delay_seconds (default 0) BEFORE executing each step. Partial success is reported per-step.",
+      "optional": {
+        "label": {
+          "description": "Human-readable name for this choreography",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit"
+      ],
+      "required": {
+        "steps": {
+          "description": "JSON array of {command, params_json, delay_seconds?} objects",
+          "type": "string"
+        }
+      }
+    },
+    "home.list": {
+      "description": "List all HomeKit homes the user has set up, along with their rooms and zones. Use this to discover the topology before issuing accessory- or scene-targeted commands.",
+      "permission_required": [
+        "homekit"
+      ]
+    },
+    "home.scene.list": {
+      "description": "List user-configured HomeKit scenes (action sets) so you can discover names before triggering them.",
+      "optional": {
+        "home_id": {
+          "description": "Limit scenes to a single home (from home.list)",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit"
+      ]
+    },
+    "home.scene.run": {
+      "description": "Execute a HomeKit scene by id or name. Provide exactly one of scene_id or name; names are matched case-insensitively. If both are absent the call returns 'missing_required_param: scene_id_or_name'.",
+      "optional": {
+        "home_id": {
+          "description": "Optional home id to disambiguate scenes that share a name across homes",
+          "type": "string"
+        },
+        "name": {
+          "description": "Case-insensitive scene name (from home.scene.list)",
+          "type": "string"
+        },
+        "scene_id": {
+          "description": "Scene id from home.scene.list",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit"
+      ]
+    },
+    "home.scene.synthesize": {
+      "description": "Create a virtual scene by composing multiple HomeKit characteristic writes into a single invocation. Unlike home.choreograph, all writes are issued concurrently (no ordering or delays). Returns per-accessory results.",
+      "optional": {
+        "label": {
+          "description": "Human-readable name for this synthetic scene",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit"
+      ],
+      "required": {
+        "writes": {
+          "description": "JSON array of {accessory_id, characteristics: [{type, value}]} objects",
+          "type": "string"
+        }
+      }
+    },
+    "home.security.sweep": {
+      "description": "Scan all reachable HomeKit accessories and report their lock states, sensor readings, and contact/motion/leak status. Useful for a 'goodnight' or 'leaving home' safety check.",
+      "optional": {
+        "categories": {
+          "description": "Comma-separated accessory categories to include (default: all security-relevant)",
+          "type": "string"
+        },
+        "home_id": {
+          "description": "Limit sweep to a single home (from home.list)",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "homekit"
+      ]
+    },
+    "invite.upsell": {
+      "description": "Open the invite-sharing sheet so the user can invite friends and earn free additional usage.",
+      "optional": {
+        "src": {
+          "description": "Attribution token for where the user was invited from, e.g. `out_of_credits`. Lowercase letters, digits and underscores only.",
+          "type": "string"
+        }
+      }
+    },
+    "location.get": {
+      "description": "Reports the device's current location — latitude, longitude, accuracy in meters, timestamp, and a reverse-geocoded address when available. Use when the user's current location is needed.",
+      "permission_required": [
+        "location"
+      ]
+    },
+    "location.set_sharing_mode": {
+      "description": "Request location access and report the current OS permission tier. This does NOT return coordinates — to read the current position, call `location.get`. Choose 'mode' based on the user's intent: - 'when_chatting': foreground access, enough for one-off or conversational location queries (which you then answer via `location.get`; that command reads the position but never grants access, so call this first if `location.get` reports it is not shared). - 'always': background access. Use ONLY when the user explicitly asks for continuous or background monitoring, e.g. \"always track my location\" or \"notify me when I'm near a coffee shop\". Enabling it starts proactive location updates and is required before `geofence.set`. iOS cannot grant 'always' directly: if foreground access is not yet held, this returns error 'requires_when_in_use' — request 'when_chatting' first, then retry with 'always'. - 'never': direct the user to iOS Settings to revoke an existing location grant. Revoking access or downgrading 'always' to 'when_chatting' requires user action in iOS Settings; this command reports the actual tier and cannot revoke or downgrade it. The response 'payload_json' reports the resolved 'sharing_mode' and whether 'proactive_tracking_active'. Check the response 'message' field for guidance on errors.",
+      "required": {
+        "mode": {
+          "description": "Location sharing tier: 'when_chatting' (foreground), 'always' (background/continuous — only when the user explicitly requests it), or 'never' (revoke an existing grant in iOS Settings)",
+          "type": "string"
+        }
+      }
+    },
+    "message.draft": {
+      "description": "Creates a message draft card with `body` + recipients. **Use when the user wants to send a text message.** Returns ok=true with `result: \"draft_presented\"` once the card is ready in chat, plus `recipients_count`, `resolved_recipients` (so you can confirm e.g. \"Bob\" → \"+15551234567\"), and an optional `warnings` array.\n\nAt least one of `recipients` or `contact_ids` is required. Prefer `contact_ids` (CNContact identifiers — the `platformId` field on `contacts.search` results or the `contacts` data source, or the `contact_id` field on `imessage` sync items) whenever you have one; they're resolved on-device and require Contacts permission. `recipients` accepts E.164 phone numbers and iMessage email addresses; names like \"Bob\" are rejected as `invalid_recipients` unless `resolve_name: true` triggers a fuzzy on-device Contacts lookup.\n\nIf a `resolve_name` entry matches multiple contacts equally, nothing is drafted: the command returns ok=false with `error: \"name_resolution_ambiguous\"`; the candidates are listed in the error `message` and, structured, under `payload_json.ambiguous_matches` (one entry per unresolved name, `{query, candidates: [{name, phone, contact_id}]}`). Show the candidates to the user, then call message.draft again with the chosen `contact_id` in `contact_ids`.\n\nWhen both are provided and contact resolution fails, the command falls through with the available phone recipients and adds a `warnings` entry. When only `contact_ids` is provided and Contacts permission is denied, this fails with `permission_denied` and returns a permission card.\n\nOptionally pass `attachments` (media, files, PDFs) to prefill the draft; see the `attachments` param for the accepted shape. Attachments are fetched and added after the user taps the card. They are best-effort, so the composer still opens with the body/recipients even if some can't be attached.\n\nEvery successful draft returns a `messaging` card showing the body and recipients. Embed the card's token to show it. The command does not open Messages automatically. The user can tap Send on the card to open the prefilled composer, review it, and send the message.",
+      "optional": {
+        "attachments": {
+          "description": "JSON-encoded array of attachment objects to prefill after the user taps the card. Each object references a gateway file: `{\"path\": \"workspace/user/files/…\", \"file_name\": \"optional.pdf\", \"mime_type\": \"application/pdf\"}` (fetched on-device from the /fs/ store). `path` is required; `file_name` defaults to the path's last component; `mime_type` is optional and only used to append a file extension when the name lacks one. Best-effort: entries that fail to resolve, exceed the size limit, or can't be attached are skipped when Messages opens.",
+          "type": "string"
+        },
+        "contact_ids": {
+          "description": "Comma-separated CNContact identifiers: the `platformId` field on `contacts.search` results or the `contacts` data source, or the `contact_id` field on `imessage` sync items. Resolved on-device; requires Contacts permission. PREFER over `recipients`.",
+          "type": "string"
+        },
+        "recipients": {
+          "description": "Comma-separated E.164 phone numbers and/or iMessage email addresses. Names are rejected unless `resolve_name=true`. Prefer `contact_ids` whenever a `platformId` is available.",
+          "type": "string"
+        },
+        "resolve_name": {
+          "description": "When true, treat non-phone/non-email `recipients` entries as contact names and rank on-device Contacts matches; a unique best match is surfaced in `resolved_recipients`. If a name matches multiple contacts equally, the command returns `error: name_resolution_ambiguous` with an `ambiguous_matches` list to disambiguate (present the options, then re-call with the chosen `contact_id`). Requires Contacts permission. Last-resort fallback; prefer `contact_ids`.",
+          "type": "boolean"
+        }
+      },
+      "required": {
+        "body": {
+          "description": "Message body to show on the card and prefill in the composer after the user taps Send.",
+          "type": "string"
+        }
+      }
+    },
+    "reminders.complete": {
+      "description": "Mark a reminder as completed or incomplete",
+      "optional": {
+        "completed": {
+          "description": "Whether to mark as completed (true, default) or incomplete (false)",
+          "type": "boolean"
+        }
+      },
+      "permission_required": [
+        "reminders"
+      ],
+      "required": {
+        "reminder_id": {
+          "description": "Reminder identifier (from reminders.list response)",
+          "type": "string"
+        }
+      }
+    },
+    "reminders.create": {
+      "description": "Create one or more reminders on the device. ALWAYS pass `reminders_json`, a JSON array string of reminder objects, even for one reminder: [{\"title\":\"Milk\",\"list_name\":\"Shopping\"}]. One call for a whole list — do NOT send a separate reminders.create per item. Each object supports: title (required), notes, due_date (Accepts an ISO 8601 timestamp, a named anchor ('now', 'today', 'yesterday', 'tomorrow'), or a SIGNED relative offset like '+1d' or '-2h'. Bare unsigned tokens like '7d' are REJECTED — always include '+' or '-'. required when any recurrence_* is set), priority (0=none default, 1=high, 5=medium, 9=low), list_id, list_name (default list if omitted), location_latitude, location_longitude, location_title, location_radius_meters (default 150), location_proximity ('arrive' default or 'leave'), and recurrence_* (Recurrence is OPTIONAL. Set recurrence_frequency to one of 'daily', 'weekly', 'monthly', 'yearly' to repeat; recurrence_interval repeats every N periods (default 1, e.g. 2 with 'weekly' = every other week). For weekly recurrence, recurrence_days_of_week is a comma-separated list of two-letter weekday codes (SU,MO,TU,WE,TH,FR,SA) — omit to repeat on the start day's weekday. Bound the series with EITHER recurrence_count (total occurrences) OR recurrence_end_date (ISO 8601, last day it can occur); supplying both returns 'invalid_argument'. Omit both for an open-ended series. a recurring reminder REQUIRES a due_date). When location fields are set on an item, ALSO call `geofence.set` with the same lat/long, radius, and trigger — the reminder alarm and the geofence are separate systems and both are needed. Response: {ok, created_count, reminder_ids, results}, where `results` carries one entry per input object in order. Entries are applied one at a time and are NOT rolled back, so a failure partway leaves the earlier ones applied — read `results` rather than `ok` alone to see which succeeded. Each successful entry is {ok: true, reminder_id, list_id, list_name}.",
+      "permission_required": [
+        "reminders"
+      ],
+      "required": {
+        "reminders_json": {
+          "description": "JSON array string of reminder objects. Always use an array, even for one reminder: [{\"title\":\"Milk\",\"list_name\":\"Shopping\"}].",
+          "type": "string"
+        }
+      }
+    },
+    "reminders.delete": {
+      "description": "Delete a reminder from the device",
+      "permission_required": [
+        "reminders"
+      ],
+      "required": {
+        "reminder_id": {
+          "description": "Reminder identifier to delete (from reminders.list response)",
+          "type": "string"
+        }
+      }
+    },
+    "reminders.list": {
+      "description": "List reminders from the device, optionally filtered by list and completion status. Location-based reminders include location trigger details in the response. Recurring reminders include a `recurrence` object {frequency, interval, days_of_week?, end_date?, occurrence_count?} in the response. `due_date`, `start_date` and `completion_date` (the response fields, not the `start_date`/`end_date` filter arguments) are UTC ISO-8601 and are NOT converted for you. Read them against the user's time zone — the `client_timezone` on their message, which follows them when they travel — before stating a time, and never take the day, date, or weekday straight off them: near either end of the day the UTC date falls on a different day from the user's, in whichever direction their offset runs. A reminder saved with no time of day is indistinguishable here from one due at midnight, so do not assert a time for one that lands on midnight local. A `recurrence` object's own `end_date` is UTC on the same terms — convert it before stating when the series stops. Date arguments accept either an ISO 8601 timestamp (e.g. '2025-04-24T00:00:00Z') OR a named anchor ('now', 'today', 'yesterday', 'tomorrow') OR a SIGNED relative offset ('-7d', '+7d', '-24h', '+30m', '-1h'). Bare unsigned tokens like '7d' or '24h' are REJECTED with error 'invalid_argument' because they don't say past vs. future — always include '+' or '-'. start_date MUST be earlier than end_date; inverted ranges return 'invalid_argument' with the parsed timestamps so you can fix the call.",
+      "optional": {
+        "end_date": {
+          "description": "Filter reminders due before this date. Accepts an ISO 8601 timestamp, a named anchor ('now', 'today', 'yesterday', 'tomorrow'), or a SIGNED relative offset like '+1d' or '-2h'. Bare unsigned tokens like '7d' are REJECTED — always include '+' or '-'.",
+          "type": "string"
+        },
+        "list_id": {
+          "description": "Reminder list identifier to filter (defaults to all lists)",
+          "type": "string"
+        },
+        "list_name": {
+          "description": "Reminder list name to filter",
+          "type": "string"
+        },
+        "start_date": {
+          "description": "Filter reminders due after this date. Accepts an ISO 8601 timestamp, a named anchor ('now', 'today', 'yesterday', 'tomorrow'), or a SIGNED relative offset like '+1d' or '-2h'. Bare unsigned tokens like '7d' are REJECTED — always include '+' or '-'.",
+          "type": "string"
+        },
+        "status": {
+          "description": "Filter by status: incomplete (default), completed, or all",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "reminders"
+      ]
+    },
+    "reminders.update": {
+      "description": "Update an existing reminder on the device. Pass reminder_id (from reminders.list) plus only the fields to change; omitted fields are left unchanged. Recurrence is OPTIONAL. Set recurrence_frequency to one of 'daily', 'weekly', 'monthly', 'yearly' to repeat; recurrence_interval repeats every N periods (default 1, e.g. 2 with 'weekly' = every other week). For weekly recurrence, recurrence_days_of_week is a comma-separated list of two-letter weekday codes (SU,MO,TU,WE,TH,FR,SA) — omit to repeat on the start day's weekday. Bound the series with EITHER recurrence_count (total occurrences) OR recurrence_end_date (ISO 8601, last day it can occur); supplying both returns 'invalid_argument'. Omit both for an open-ended series. Pass recurrence_frequency: 'none' to remove recurrence. Setting or keeping recurrence REQUIRES a due_date (set one here or already on the reminder). Response (success): {ok: true, reminder_id, list_id, list_name}.",
+      "optional": {
+        "due_date": {
+          "description": "New due date. Accepts an ISO 8601 timestamp, a named anchor ('now', 'today', 'yesterday', 'tomorrow'), or a SIGNED relative offset like '+1d' or '-2h'. Bare unsigned tokens like '7d' are REJECTED — always include '+' or '-'. Required when setting/keeping recurrence.",
+          "type": "string"
+        },
+        "list_id": {
+          "description": "Move the reminder to the list with this identifier",
+          "type": "string"
+        },
+        "list_name": {
+          "description": "Move the reminder to the list with this name",
+          "type": "string"
+        },
+        "notes": {
+          "description": "New reminder notes",
+          "type": "string"
+        },
+        "priority": {
+          "description": "Priority: 0=none, 1=high, 5=medium, 9=low",
+          "type": "integer"
+        },
+        "recurrence_count": {
+          "description": "End the series after this many occurrences. Mutually exclusive with recurrence_end_date.",
+          "type": "integer"
+        },
+        "recurrence_days_of_week": {
+          "description": "Weekly recurrence: comma-separated two-letter weekday codes (SU,MO,TU,WE,TH,FR,SA), e.g. 'MO,WE,FR'. Omit to repeat on the start day's weekday.",
+          "type": "string"
+        },
+        "recurrence_end_date": {
+          "description": "End the series on/before this ISO 8601 date. Mutually exclusive with recurrence_count.",
+          "type": "string"
+        },
+        "recurrence_frequency": {
+          "description": "Repeat cadence: 'daily', 'weekly', 'monthly', or 'yearly' (or 'none' to remove recurrence on update). Omit for a one-off item.",
+          "type": "string"
+        },
+        "recurrence_interval": {
+          "description": "Repeat every N periods of recurrence_frequency (default 1; e.g. 2 + 'weekly' = every other week). Must be a positive integer.",
+          "type": "integer"
+        },
+        "title": {
+          "description": "New reminder title",
+          "type": "string"
+        }
+      },
+      "permission_required": [
+        "reminders"
+      ],
+      "required": {
+        "reminder_id": {
+          "description": "Reminder identifier to update (from reminders.list response)",
+          "type": "string"
+        }
+      }
+    },
+    "subscriptions.upgrade": {
+      "description": "Launch the Meta AI subscription upgrade flow so the user can subscribe to Hatch Plus."
+    }
+  },
+  "connection_state": "offline",
+  "data_sources": {
+    "calendar": {
+      "emits_proactively": true,
+      "is_permission_granted": true
+    },
+    "contacts": {
+      "emits_proactively": true,
+      "is_permission_granted": false
+    },
+    "health": {
+      "emits_proactively": true,
+      "is_permission_granted": false
+    },
+    "imessage": {
+      "is_permission_granted": false
+    },
+    "location": {
+      "emits_proactively": true,
+      "is_permission_granted": false
+    },
+    "reminders": {
+      "emits_proactively": true,
+      "is_permission_granted": true
+    }
+  },
+  "device_family": "iPhone17,3",
+  "device_id": "c0efaf97-f9be-4fb7-bb44-174b152ad9fc",
+  "display_name": "iPhone",
+  "enabled_permissions": [
+    "bluetooth",
+    "calendar",
+    "photos",
+    "reminders"
+  ],
+  "last_seen_at": "2026-10-05T05:15:27.400632823+00:00",
+  "platform": "ios"
+}

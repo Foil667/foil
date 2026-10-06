@@ -220,6 +220,51 @@
       .contract-row { align-items:stretch; }
       .contract-row code { font-size:.62rem; }
     }
+    /* --- rescue-burn.css (inlined shared module, single-file artifact) --- */
+    /* rescue-burn.css — default theme for the RescueBurn widget.
+     * Sites can override any of these; CSS variables adapt it to local palettes. */
+    .rbw {
+      --rbw-bg: rgba(0, 0, 0, 0.55);
+      --rbw-border: #2aff5a33;
+      --rbw-text: #e8ffe8;
+      --rbw-dim: #9fd8a8;
+      --rbw-accent: #2aff5a;
+      --rbw-warn: #ffb02e;
+      background: var(--rbw-bg);
+      border: 1px solid var(--rbw-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: var(--rbw-text);
+      font-family: inherit;
+      max-width: 560px;
+    }
+    .rbw-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+    .rbw-total { font-size: 1.6rem; font-weight: 800; color: var(--rbw-accent); }
+    .rbw-total span { font-size: 0.9rem; font-weight: 400; color: var(--rbw-dim); }
+    .rbw-meta { font-size: 0.8rem; color: var(--rbw-dim); margin: 4px 0 10px; }
+    .rbw-stale { color: var(--rbw-warn); font-weight: 700; }
+    .rbw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 520px) { .rbw-cols { grid-template-columns: 1fr; } }
+    .rbw-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rbw-dim); margin-bottom: 4px; }
+    .rbw ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+    .rbw li { padding: 3px 0; border-bottom: 1px dashed #ffffff14; display: flex; gap: 8px; align-items: baseline; }
+    .rbw-amt { color: var(--rbw-accent); font-variant-numeric: tabular-nums; }
+    .rbw-from { font-family: monospace; }
+    .rbw-when, .rbw-rank { color: var(--rbw-dim); font-size: 0.78rem; }
+    .rbw-foot { margin-top: 10px; font-size: 0.75rem; color: var(--rbw-dim); }
+    .rbw-mono { font-family: monospace; }
+    .rbw-err { color: #ff6b6b; }
+    .rbw-status { color: var(--rbw-dim); font-size: 0.9rem; }
+    /* palette fit for this dossier */
+    #furnace .rbw { --rbw-bg: var(--paper); --rbw-border: var(--line); --rbw-text: var(--ink); --rbw-dim: var(--muted); --rbw-accent: var(--green); font-family: "IBM Plex Mono", monospace; max-width: none; }
+    /* flywheel retrofit extras */
+    .tier-badges { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; align-items:center; }
+    .tier-badge { font-size:.68rem; padding:7px 11px; border:1px solid var(--line); border-radius:3px; color:var(--muted); opacity:.5; }
+    .tier-badge.earned { color:var(--green); border-color:var(--green); opacity:1; font-weight:600; background:var(--green-soft); }
+    .pro-export { margin-top:22px; padding:20px; border:1px dashed var(--line); border-radius:6px; background:var(--paper); }
+    .pro-export h3 { margin-bottom:8px; }
+    .demo-note { font-size:.68rem; color:var(--muted); }
+    #demo-burn-line { margin-top:14px; }
   </style>
 </head>
 <body>
@@ -229,9 +274,16 @@
       <h1>Minted out.<br>Now the real story starts.</h1>
       <p class="dek"><span class="verdict">Loopers is a 7,777-piece agent-NFT experiment on Base.</span> Each visual trait is meant to shape the agent’s personality; each token is designed to carry identity, wallet, and reputation infrastructure. This dossier follows the evidence from mint Space to market, Helixa, #667, and the Blockscout indexing mystery.</p>
       <div class="hero-links">
+        <a class="btn primary" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&amp;chain=base" target="_blank" rel="noopener">BUY $RESCUE</a>
         <a class="btn primary" href="#verdict">Read the findings</a>
         <a class="btn" href="https://opensea.io/collection/loopers-639312714" target="_blank" rel="noopener">OpenSea ↗</a>
         <a class="btn" href="https://helixa.xyz/multipass/loopers/667" target="_blank" rel="noopener">#667 Multipass ↗</a>
+      </div>
+      <div class="tier-badges" aria-label="Reader tiers (demo status)">
+        <span class="tier-badge" id="tb-scout">SCOUT · visited</span>
+        <span class="tier-badge" id="tb-analyst">ANALYST · read 6+ sections</span>
+        <span class="tier-badge" id="tb-curator">CURATOR · all 11 + pro export</span>
+        <span class="demo-note">reader tiers — demo status</span>
       </div>
     </div>
     <figure class="portrait">
@@ -242,7 +294,7 @@
 
   <nav class="index" aria-label="Dossier sections">
     <div class="wrap">
-      <a href="#verdict">Verdict</a><a href="#mint">Mint</a><a href="#market">Market</a><a href="#holders">Holders</a><a href="#667">#667</a><a href="#helixa">Helixa</a><a href="#team">Team</a><a href="#github">GitHub</a><a href="#sibyl">Sibyl</a><a href="#unknowns">Open questions</a><a href="#sources">Sources</a>
+      <a href="#verdict">Verdict</a><a href="#mint">Mint</a><a href="#market">Market</a><a href="#holders">Holders</a><a href="#667">#667</a><a href="#helixa">Helixa</a><a href="#team">Team</a><a href="#github">GitHub</a><a href="#sibyl">Sibyl</a><a href="#unknowns">Open questions</a><a href="#sources">Sources</a><a href="#furnace">Furnace</a>
     </div>
   </nav>
 
@@ -333,6 +385,15 @@
           <div class="source">Source: <a href="https://helixa.xyz/multipass/?agent=667" target="_blank" rel="noopener">#667 share profile ↗</a></div>
         </article>
       </div>
+      <details id="field-notes" class="pro-locked" hidden>
+        <summary>🔒 Foil’s field notes <span class="demo-note">(Pro Dossier — 50 $RESCUE demo)</span></summary>
+        <div class="detail-body">
+          <p><strong>On the identity conflict (§05).</strong> The supplied screenshot reads BENDR 2.0 / Cred 70 / QUALIFIED; the Sep 20 Multipass lookup returned agent “C” / Cred 40 / MARGINAL with source owner 0x95e5…3402. The profile itself warns “reverify on transfer” — until that re-verification runs against the current owner of #667, treat the binding as an open question, not a settled fact.</p>
+          <p><strong>On the holder anomaly (§04).</strong> Blockscout’s 45-holder tab vs OpenSea’s 1,256 unique owners is a 28× gap, but the transfer index showing zero events explains it: the holder tab is a partial sample. The largest address Blockscout does list holds 50 tokens (0.64%), which argues against a hidden treasury.</p>
+          <p><strong>On market structure (§03).</strong> Floor 0.0145 ETH sat ~2× the 0.0077 ETH public mint price; 7,604 OpenSea-indexed items vs 7,777 onchain supply leaves a 173-item gap that was not verified. Watch open questions 04, 05, 08, 09 — those are the highest-leverage re-verifications.</p>
+          <p><em>Field notes rendered from data already in this dossier. Demo unlock — no real $RESCUE moves.</em></p>
+        </div>
+      </details>
     </section>
 
     <section id="helixa">
@@ -450,11 +511,296 @@
         <div class="source-item"><span class="badge">INDEX READ</span><a href="https://docs.sibyllabs.org/memory/tiers" target="_blank" rel="noopener">Sibyl Memory · tiers ↗</a><p>Pricing, cap, features, privacy behavior.</p></div>
         <div class="source-item"><span class="badge">INDEX READ</span><a href="https://github.com/sibyl-labs/sibyl-memory/blob/HEAD/sibyl-memory-client/README.md" target="_blank" rel="noopener">Sibyl Memory repository README ↗</a><p>Open-source project and tier context.</p></div>
       </div>
+      <div id="pro-export-wrap" class="pro-export pro-locked" hidden>
+        <h3>🔒 Pro dossier export <span class="demo-note">(50 $RESCUE demo)</span></h3>
+        <p class="demo-note">One-click Markdown export of this dossier, generated from the page DOM. Downloads <code>dossier-2026-09-20.md</code>. Demo unlock — no real $RESCUE moves.</p>
+        <div class="hero-links" style="margin-top:12px">
+          <button class="btn primary" id="pro-export-btn" type="button">Export dossier as Markdown</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="furnace">
+      <div class="section-head"><div class="section-no">12 / THE FURNACE</div><div><h2>$RESCUE burn furnace</h2><p class="section-intro">The Furnace burns real $RESCUE on Base. Demo spends below log what would burn in a live launch — never invented as onchain. The live widget reads real onchain Transfer→dead-address logs; demo activity is labeled demo throughout.</p></div></div>
+      <div id="burn-widget"></div>
+      <div id="demo-burn-line" class="source">Demo burns this session: <b>0</b> $RESCUE <span class="demo-note">(demo ledger — none logged yet)</span></div>
+      <div class="grid" style="margin-top:18px">
+        <article class="card full" id="demo-ledger-card">
+          <span class="kicker">DEMO LEDGER · NO REAL TOKENS MOVE</span>
+          <h3>Demo $RESCUE wallet</h3>
+          <p>Balance: <b id="demo-bal">1,000</b> $RESCUE <span class="demo-note">(demo tokens — no real $RESCUE moves)</span></p>
+          <div class="hero-links" style="margin-top:14px">
+            <button class="btn" id="faucet-btn" type="button">Claim 100 demo $RESCUE</button>
+            <button class="btn primary" id="pro-btn" type="button">🔒 Pro Dossier — 50 $RESCUE (demo)</button>
+          </div>
+          <div class="source">Reader tier: <b id="tier-line-badge">Scout</b> <span class="demo-note">(demo status)</span> · <span id="faucet-note" class="demo-note">Faucet ready — 100 demo $RESCUE per hour.</span></div>
+        </article>
+        <article class="card full" id="bounty-card">
+          <span class="kicker">RESEARCH BOUNTIES · DEMO UNTIL A LIVE PROGRAM LAUNCHES</span>
+          <h3>Bounty board</h3>
+          <p><strong>200 $RESCUE (demo)</strong> for an accepted primary-source correction to the dossier. <strong>100 $RESCUE (demo)</strong> for a verified new onchain data point (e.g. updated floor/owner count). Buttons copy a formatted bounty claim to your clipboard — no backend, no real payouts until a live program launches.</p>
+          <div class="hero-links" style="margin-top:14px">
+            <button class="btn" type="button" data-bounty="correction">Copy bounty claim: primary-source correction</button>
+            <button class="btn" type="button" data-bounty="datapoint">Copy bounty claim: new onchain data point</button>
+          </div>
+        </article>
+      </div>
     </section>
   </main>
 
   <footer class="wrap footer">Research snapshot dated Sunday, Sep 20, 2026. Market prices, scores, ownership signals, and published routes can change after that date.</footer>
   <div class="toast" id="toast" role="status" aria-live="polite">Copied</div>
+  <script>
+/* rescue-burn.js — shared $RESCUE burn-status module for all Foil builds.
+ *
+ * Reads REAL onchain $RESCUE Transfer events to the dead address on Base.
+ * No wallet, no signatures, no fund movements — pure reads.
+ *
+ * Usage (external file): include via a script tag whose src is
+ * "rescue-burn.js", then:
+ *   RescueBurn.getStatus().then(function (s) { console.log(s.total); });
+ *   RescueBurn.renderWidget(document.getElementById('burn-widget'));
+ * (The tag itself is described, not written, so this file never contains a
+ * literal closing script tag and stays safe to inline in single-file pages.)
+ *
+ * Caching: totals + aggregates persist in localStorage; each call only scans
+ * new blocks. If the RPC is unreachable, the last cached snapshot is returned
+ * with stale:true — numbers are NEVER invented.
+ */
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
+  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) { return '0.00'; }
+  }
+
+  function fmtAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+
+  function loadCache() {
+    try {
+      var c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+      if (c && typeof c.totalWei === 'string') return c;
+    } catch (e) {}
+    return { totalWei: '0', txCount: 0, lastBlock: START_BLOCK - 1, updatedAt: 0, recent: [], byBurner: {} };
+  }
+  function saveCache(c) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify(c)); } catch (e) {}
+  }
+
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, RPC_TIMEOUT_MS);
+    return fetch(RPC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+
+  function decodeTransfer(log) {
+    // topics: [Transfer, from, to]; amount in data
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return { from: from, amount: amount, txHash: log.transactionHash, blockNumber: parseInt(log.blockNumber, 16) };
+  }
+
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+
+  function getLogsRange(rg) {
+    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
+    // dropped connection). On a range-limit signal, halve the range and
+    // retry; give up only below MIN_RANGE.
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) { return a.concat(b); });
+        });
+      }
+      throw e;
+    });
+  }
+
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return { cache: cache, tip: tip, fresh: [] };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) { fresh.push(decodeTransfer(l)); });
+          });
+        });
+      });
+      return chain.then(function () { return { cache: cache, tip: tip, fresh: fresh }; });
+    });
+  }
+
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = (Date.now() - cache.updatedAt) > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache, fresh = r.fresh;
+      // merge
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({ from: b.from, amount: b.amount, txHash: b.txHash, blockNumber: b.blockNumber });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      // timestamps for recent burns missing them (cap concurrency)
+      var need = c.recent.filter(function (x) { return !x.ts; }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) { x.ts = ts; }).catch(function () { x.ts = 0; });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      // RPC failed: serve cache, honestly labeled stale
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return { ok: false, error: 'burn RPC unreachable and no cached snapshot', detail: String(e && e.message || e).slice(0, 120) };
+    });
+  }
+
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return { address: a, amountWei: c.byBurner[a], amount: fmtWei(c.byBurner[a]) };
+    }).sort(function (x, y) { return (BigInt(y.amountWei) > BigInt(x.amountWei)) ? 1 : -1; }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) { if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString(); });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return { from: x.from, fromShort: fmtAddr(x.from), amount: fmtWei(x.amount), txHash: x.txHash, when: x.ts ? timeAgo(x.ts) : '…' };
+      }),
+      topBurners: top.map(function (t) { return { address: t.address, short: fmtAddr(t.address), amount: t.amount }; })
+    };
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]; }); }
+
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    mount.innerHTML = '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' +
+      '<div class="rbw-status">syncing with Base…</div></div>';
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        mount.querySelector('.rbw-status').innerHTML =
+          '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>';
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' +
+          esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' +
+          esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="rbw">' +
+        '<div class="rbw-title">' + esc(title) + '</div>' +
+        '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' +
+        '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' +
+        'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' +
+        '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' +
+        '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' +
+        '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' +
+        '</div>';
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) st.innerHTML = '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>';
+    });
+    return mount;
+  }
+
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+  </script>
   <script>
     const toast = document.getElementById('toast');
     let toastTimer;
@@ -482,6 +828,219 @@
         toastTimer = setTimeout(() => toast.classList.remove('show'), 1600);
       });
     });
+  </script>
+  <script>
+/* ldd-demo.js — Loopers Deep Dive flywheel retrofit demo ledger.
+ * All balances/spends/burns are DEMO (localStorage only, labeled demo everywhere).
+ * No wallet, no signatures, no real $RESCUE moves. Pure reads for the live burn widget.
+ */
+(function () {
+  'use strict';
+  var K_BAL = 'ldd-demo-balance-v1';
+  var K_BURN = 'ldd-demo-burns-v1';
+  var K_FAUC = 'rescue-demo-faucet-v1';
+  var K_TIER = 'ldd-reader-tier-v1';
+  var K_PRO = 'ldd-pro-unlock-v1';
+  var SECTIONS = ['verdict', 'mint', 'market', 'holders', '667', 'helixa', 'team', 'github', 'sibyl', 'unknowns', 'sources'];
+  var FAUCET_AMOUNT = 100, FAUCET_MS = 3600000, PRO_COST = 50, PRO_BURN = 10;
+
+  function read(k, d) {
+    try { var v = JSON.parse(localStorage.getItem(k)); return (v === null || v === undefined) ? d : v; }
+    catch (e) { return d; }
+  }
+  function write(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+  function $(id) { return document.getElementById(id); }
+  function showToast(msg) {
+    var t = $('toast'); if (!t) return;
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(showToast._t);
+    showToast._t = setTimeout(function () { t.classList.remove('show'); }, 2200);
+  }
+  function copyText(txt, okMsg) {
+    function done() { showToast(okMsg || 'Copied (demo)'); }
+    function fallback() {
+      var a = document.createElement('textarea');
+      a.value = txt; a.style.position = 'fixed'; a.style.opacity = '0';
+      document.body.appendChild(a); a.select();
+      try { document.execCommand('copy'); } catch (e) {}
+      a.remove(); done();
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(txt).then(done, fallback);
+    } else { fallback(); }
+  }
+
+  // --- demo balance ---
+  function getBal() {
+    var b = read(K_BAL, null);
+    if (b === null || isNaN(Number(b))) { b = 1000; write(K_BAL, b); }
+    return Number(b);
+  }
+  function fmt(n) { return Number(n).toLocaleString('en-US'); }
+  function refreshBal() { var el = $('demo-bal'); if (el) el.textContent = fmt(getBal()); }
+  function pushBurn(amount, action, note) {
+    var arr = read(K_BURN, []);
+    arr.push({ action: action, amount: amount, ts: Date.now(), note: note });
+    write(K_BURN, arr);
+    refreshBurnLine();
+  }
+  function refreshBurnLine() {
+    var el = $('demo-burn-line'); if (!el) return;
+    var arr = read(K_BURN, []);
+    var total = arr.reduce(function (s, x) { return s + (Number(x.amount) || 0); }, 0);
+    el.innerHTML = 'Demo burns this session: <b>' + fmt(total) + '</b> $RESCUE <span class="demo-note">(demo ledger — ' +
+      (arr.length ? arr.length + ' burn(s) logged; would burn onchain in a live launch' : 'none logged yet') + ')</span>';
+  }
+  function spend(n, action) {
+    var bal = getBal();
+    if (bal < n) return false;
+    write(K_BAL, bal - n);
+    pushBurn(PRO_BURN, action, 'demo — would burn onchain in a live launch');
+    refreshBal();
+    return true;
+  }
+
+  // --- faucet ---
+  function refreshFaucet() {
+    var el = $('faucet-note'); if (!el) return;
+    var f = read(K_FAUC, {});
+    var now = Date.now();
+    if (f.lastClaim && now - f.lastClaim < FAUCET_MS) {
+      var mins = Math.ceil((FAUCET_MS - (now - f.lastClaim)) / 60000);
+      el.textContent = 'Faucet on cooldown — next demo claim in ~' + mins + 'm.';
+    } else {
+      el.textContent = 'Faucet ready — 100 demo $RESCUE per hour.';
+    }
+  }
+  function faucet() {
+    var f = read(K_FAUC, {});
+    var now = Date.now();
+    if (f.lastClaim && now - f.lastClaim < FAUCET_MS) {
+      var mins = Math.ceil((FAUCET_MS - (now - f.lastClaim)) / 60000);
+      showToast('Faucet on cooldown — next demo claim in ~' + mins + 'm');
+      return;
+    }
+    f.lastClaim = now; write(K_FAUC, f);
+    write(K_BAL, getBal() + FAUCET_AMOUNT);
+    refreshBal(); refreshFaucet();
+    showToast('Claimed 100 demo $RESCUE (demo — no real $RESCUE moves)');
+  }
+
+  // --- pro unlock ---
+  function isPro() { return read(K_PRO, false) === true; }
+  function revealPro() {
+    ['field-notes', 'pro-export-wrap'].forEach(function (id) {
+      var el = $(id); if (el) el.removeAttribute('hidden');
+    });
+    var b = $('pro-btn');
+    if (b) b.textContent = '✓ Pro Dossier active (demo)';
+  }
+  function unlockPro() {
+    if (isPro()) { showToast('Pro Dossier already active (demo)'); return; }
+    if (!spend(PRO_COST, 'pro-dossier-unlock')) {
+      showToast('Not enough demo $RESCUE — claim from the faucet (demo)');
+      return;
+    }
+    write(K_PRO, true);
+    revealPro();
+    showToast('Pro Dossier unlocked · 10 $RESCUE burned (demo)');
+  }
+
+  // --- dossier export (DOM -> Markdown download) ---
+  function exportDossier() {
+    if (!isPro()) { showToast('🔒 Pro Dossier required — unlock for 50 $RESCUE (demo)'); return; }
+    var out = ['# Loopers Deep Dive', '', 'Research snapshot · Sep 20, 2026',
+      'Exported ' + new Date().toISOString().slice(0, 10) + ' (demo export)', ''];
+    Array.prototype.forEach.call(document.querySelectorAll('main section'), function (sec) {
+      if (sec.id === 'furnace') return;
+      var no = sec.querySelector('.section-no');
+      var h2 = sec.querySelector('h2');
+      out.push('## ' + (no ? no.textContent.trim() + ' — ' : '') + (h2 ? h2.textContent.trim() : sec.id));
+      out.push('');
+      Array.prototype.forEach.call(
+        sec.querySelectorAll('.card h3, .card p, .event strong, .event p, .caveat p, .detail-body p, .source-item a, .source-item p'),
+        function (el) {
+          var t = el.textContent.replace(/\s+/g, ' ').trim();
+          if (t) out.push('- ' + t);
+        });
+      out.push('');
+    });
+    var blob = new Blob([out.join('\n')], { type: 'text/markdown' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'dossier-2026-09-20.md';
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 4000);
+    var t = tierState(); t.proExport = true; write(K_TIER, t);
+    refreshTier();
+    showToast('Dossier exported: dossier-2026-09-20.md (demo)');
+  }
+
+  // --- reader tiers ---
+  function tierState() { return read(K_TIER, null) || { sectionsSeen: [], proExport: false }; }
+  function tierName() {
+    var t = tierState(), n = t.sectionsSeen.length;
+    if (n >= SECTIONS.length && t.proExport) return 'Curator';
+    if (n >= 6) return 'Analyst';
+    return 'Scout';
+  }
+  function refreshTier() {
+    var name = tierName(), order = { Scout: 0, Analyst: 1, Curator: 2 };
+    [['tb-scout', 'Scout'], ['tb-analyst', 'Analyst'], ['tb-curator', 'Curator']].forEach(function (p) {
+      var el = $(p[0]);
+      if (el) el.classList.toggle('earned', order[name] >= order[p[1]]);
+    });
+    var line = $('tier-line-badge');
+    if (line) line.textContent = name;
+  }
+  function markSeen(id) {
+    if (SECTIONS.indexOf(id) < 0) return;
+    var t = tierState();
+    if (t.sectionsSeen.indexOf(id) < 0) { t.sectionsSeen.push(id); write(K_TIER, t); refreshTier(); }
+  }
+  if (typeof window !== 'undefined' && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) markSeen(e.target.id); });
+    }, { threshold: 0.2 });
+    SECTIONS.forEach(function (id) { var el = $(id); if (el) io.observe(el); });
+  }
+
+  // --- research bounties (clipboard template, no backend) ---
+  function bounty(kind) {
+    var b = kind === 'correction'
+      ? { name: 'PRIMARY-SOURCE CORRECTION', amount: 200 }
+      : { name: 'NEW ONCHAIN DATA POINT', amount: 100 };
+    var txt = [
+      '$RESCUE RESEARCH BOUNTY CLAIM — DEMO (no live program yet)',
+      'Dossier: Loopers Deep Dive · snapshot Sep 20, 2026',
+      'Bounty type: ' + b.name + ' — ' + b.amount + ' $RESCUE (demo)',
+      'Section: ____________________',
+      kind === 'correction' ? 'Correction: ____________________' : 'Metric / value: ____________________',
+      'Source (URL or onchain ref): ____________________',
+      'Submitted (demo): ' + new Date().toISOString(),
+      'Note: bounties are demo until a live program launches.'
+    ].join('\n');
+    copyText(txt, 'Bounty claim copied (demo)');
+  }
+
+  // --- wire up ---
+  function on(id, ev, fn) { var el = $(id); if (el) el.addEventListener(ev, fn); }
+  on('faucet-btn', 'click', faucet);
+  on('pro-btn', 'click', unlockPro);
+  on('pro-export-btn', 'click', exportDossier);
+  Array.prototype.forEach.call(document.querySelectorAll('[data-bounty]'), function (b) {
+    b.addEventListener('click', function () { bounty(b.getAttribute('data-bounty')); });
+  });
+
+  // --- init ---
+  refreshBal(); refreshBurnLine(); refreshTier(); refreshFaucet();
+  if (isPro()) revealPro();
+
+  // --- live burn widget mount ---
+  if (typeof window !== 'undefined' && window.RescueBurn && $('burn-widget')) {
+    window.RescueBurn.renderWidget($('burn-widget'), { title: '🔥 $RESCUE Burn Furnace' });
+  }
+})();
   </script>
 </body>
 </html>

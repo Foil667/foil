@@ -1,11 +1,11 @@
 {
   "schema_version": "hatch.probe_ui_summary.v1",
   "slug": "foil-s-mint-board",
-  "session_id": "56fc8254-3637-49ba-9ae0-059ac3fe5e94",
+  "session_id": "e60a4f32-2ab2-4e55-b282-60a3c020ba39",
   "observes": 1,
-  "acts": 8,
-  "acts_ok": 8,
-  "interactive_nodes": 16,
+  "acts": 1,
+  "acts_ok": 1,
+  "interactive_nodes": 29,
   "viewports_seen": [
     "desktop"
   ],

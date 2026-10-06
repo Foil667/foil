@@ -1,11 +1,11 @@
 {
   "schema_version": "hatch.probe_ui_summary.v1",
   "slug": "afterparty",
-  "session_id": "3d36fc75-931e-474e-ad57-48356d1cb2f2",
-  "observes": 3,
-  "acts": 3,
-  "acts_ok": 3,
-  "interactive_nodes": 5,
+  "session_id": "843ea191-04f0-4c2b-b6d5-a8e19f255f5e",
+  "observes": 1,
+  "acts": 1,
+  "acts_ok": 1,
+  "interactive_nodes": 4,
   "viewports_seen": [
     "desktop"
   ],

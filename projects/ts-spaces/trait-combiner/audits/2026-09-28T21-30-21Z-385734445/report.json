@@ -1,0 +1,127 @@
+{
+  "ok": true,
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-4136ac48-296a-4699-bab4-88f591ee8a4f/",
+  "duration_ms": 18539.144654000003,
+  "output_dir": "/home/hatch/workspace/ts-spaces/trait-combiner/audits/2026-09-28T21-30-21Z-385734445",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/trait-combiner/audits/2026-09-28T21-30-21Z-385734445/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/trait-combiner/audits/2026-09-28T21-30-21Z-385734445/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/trait-combiner/audits/2026-09-28T21-30-21Z-385734445/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [],
+    "mobile": []
+  },
+  "images": {
+    "total": 0,
+    "broken": [],
+    "duplicate": [],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 10,
+  "external_fetch_failure_samples": [
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://mainnet.base.org/)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://mainnet.base.org/)",
+    "console.error: Failed to load resource: net::ERR_SOCKS_CONNECTION_FAILED (https://mainnet.base.org/)"
+  ],
+  "blocked_requests": [],
+  "external_requests": [
+    {
+      "url": "https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&display=swap",
+      "method": "GET",
+      "resource_type": "stylesheet"
+    },
+    {
+      "url": "https://mainnet.base.org/",
+      "method": "POST",
+      "resource_type": "fetch",
+      "post_data": "{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"eth_blockNumber\",\"params\":[]}",
+      "headers": {
+        "content-type": "application/json"
+      }
+    }
+  ],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 4100,
+      "bytes_down": 2487
+    },
+    {
+      "host": "fonts.googleapis.com",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    },
+    {
+      "host": "mainnet.base.org",
+      "port": 443,
+      "connects": 8,
+      "bytes_up": 0,
+      "bytes_down": 0,
+      "policy_denied": true
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 54,
+  "aria_snapshot": "- main:\n  - paragraph: GENETICALLY IRRESPONSIBLE ART LAB // BUILD 001\n  - heading \"Mix the genes. Break the floor.\" [level=1]:\n    - text: Mix the genes.\n    - emphasis: Break the floor.\n  - paragraph: Stack traits, lock the good mutations, import your own transparent layers, then export the art and its metadata template. No roadmap. Just recombinant JPEG science.\n  - button \"Load trait pack\":\n    - img\n    - text: Load trait pack\n  - button \"Mutate\":\n    - img\n    - text: Mutate\n  - text: 🎯 Seal 3 specimens today → +1,500 demo $RESCUE (0/3)\n  - button \"CLAIM\" [disabled]\n  - text: 🎯 Ash 5 specimens → +1,000 demo $RESCUE (0/5)\n  - button \"CLAIM\" [disabled]\n  - complementary:\n    - heading \"DNA rack\" [level=2]\n    - button \"UNLOCKED\"\n    - button \"Background\"\n    - button \"Body\"\n    - button \"Eyes\"\n    - button \"Mouth\"\n    - button \"Head\"\n    - button \"FX\"\n    - button \"01 Acid Grid 18%\"\n    - button \"02 Night Shift 22%\"\n    - button \"03 Liquidity Lava 13%\"\n    - button \"04 Blue Screen 27%\"\n    - button \"05 Golden Exit 8%\"\n    - button \"Upload a folder or images of trait layers\":\n      - strong: DROP LAYERS HERE\n      - text: PNG / JPG / WEBP · folders welcome\n  - 'heading \"Specimen #00667\" [level=2]'\n  - text: GENOME 7D-667 NOT FINANCIAL ART\n  - button \"Make it cursed — 200 $RESCUE (demo)\"\n  - button \"10× mutation\"\n  - button \"Download PNG\"\n  - text: \"lab status:\"\n  - strong: UNSUPERVISED\n  - text: 0 promises · 6 traits · 1 questionable decision 🪙 10,000 $RESCUE demo\n  - button \"+faucet\"\n  - text: DABBLER 🔥 0 demo-burned\n  - complementary:\n    - heading \"Mint specimen\" [level=2]\n    - text: ERC-721 STYLE COLLECTION\n    - textbox \"COLLECTION\": Rug Doctors\n    - text: TOKEN ID\n    - spinbutton \"TOKEN ID\": \"667\"\n    - text: \"81.0 CHAOS SCORE A VIBE GRADE METADATA TEMPLATE · REPLACE IMAGE URI BEFORE MINT { \\\"name\\\": \\\"Rug Doctors #667\\\", \\\"description\\\": \\\"A genetically irresponsible onchain specimen.\\\", \\\"image\\\": \\\"ipfs://YOUR_IMAGE_CID\\\", \\\"attributes\\\": [ { \\\"trait_type\\\": \\\"Background\\\", \\\"value\\\": \\\"Acid Grid\\\" }, { \\\"trait_type\\\": \\\"Body\\\", \\\"value\\\": \\\"Mint Goblin\\\" }, { \\\"trait_type\\\": \\\"Eyes\\\", \\\"value\\\": \\\"Exit Liquidity\\\" }, { \\\"trait_type\\\": \\\"Mouth\\\", \\\"value\\\": \\\"Diamond Grin\\\" }, { \\\"trait_type\\\": \\\"Head\\\", \\\"value\\\": \\\"Tinfoil Crown\\\" }, { \\\"trait_type\\\": \\\"FX\\\", \\\"value\\\": \\\"Green Candles\\\" } ] }\"\n    - button \"Copy JSON\"\n    - button \"Download JSON\"\n    - button \"SEAL SPECIMEN — 2,500 $RESCUE (demo)\"\n  - paragraph: MUTATION CHAMBER\n  - heading \"Six bad decisions. Pick one.\" [level=2]\n  - paragraph: Click a specimen to pull its full DNA into the editor. Generate a fresh batch whenever the floor needs more emotional damage.\n  - button \"Generate fresh batch — 500 $RESCUE (demo)\"\n  - button \"Load mutant 1 DNA\":\n    - text: MUTANT 01 80.7 CHAOS\n    - button \"Ash mutant 1\": ASH IT 🔥\n  - button \"Load mutant 2 DNA\":\n    - text: MUTANT 02 82.8 CHAOS\n    - button \"Ash mutant 2\": ASH IT 🔥\n  - button \"Load mutant 3 DNA\":\n    - text: MUTANT 03 80.7 CHAOS\n    - button \"Ash mutant 3\": ASH IT 🔥\n  - button \"Load mutant 4 DNA\":\n    - text: MUTANT 04 76.0 CHAOS\n    - button \"Ash mutant 4\": ASH IT 🔥\n  - button \"Load mutant 5 DNA\":\n    - text: MUTANT 05 88.8 CHAOS\n    - button \"Ash mutant 5\": ASH IT 🔥\n  - button \"Load mutant 6 DNA\":\n    - text: MUTANT 06 86.2 CHAOS\n    - button \"Ash mutant 6\": ASH IT 🔥\n  - paragraph: COMMISSION BOARD\n  - heading \"Trait-pack jobs. Demo escrow.\" [level=2]\n  - paragraph: Post a trait-pack request with a demo $RESCUE bounty. Bounties escrow from your demo balance; unclaimed bounties refund on expiry, unreleased ones split 50/50 with the Furnace. All demo — no real $RESCUE moves.\n  - text: REQUEST TITLE\n  - textbox \"REQUEST TITLE\"\n  - text: BOUNTY (DEMO $RESCUE, MIN 500)\n  - spinbutton \"BOUNTY (DEMO $RESCUE, MIN 500)\": \"500\"\n  - text: TRAIT NEEDS\n  - textbox \"TRAIT NEEDS\"\n  - text: DEADLINE (WITHIN 7 DAYS)\n  - textbox \"DEADLINE (WITHIN 7 DAYS)\": 2026-10-05\n  - button \"Post commission\"\n  - text: No commissions yet. Post the first trait-pack request.\n  - heading \"Vibe pack launcher\" [level=2]\n  - text: ORIGINAL DROP CONCEPTS\n  - button \"Rug Doctors Hospital staff treating terminal bags with medically unlicensed alpha. 2,222 supply · $3 mint\":\n    - text: Rug Doctors\n    - paragraph: Hospital staff treating terminal bags with medically unlicensed alpha.\n    - code: 2,222 supply · $3 mint\n  - button \"Bull Run Babies Tiny market maniacs born with green candles and no risk management. 3,333 supply · free claim\":\n    - text: Bull Run Babies\n    - paragraph: Tiny market maniacs born with green candles and no risk management.\n    - code: 3,333 supply · free claim\n  - button \"Gas Gremlins Chain-hopping mechanics that eat failed transactions for breakfast. 1,111 supply · burn-to-upgrade\":\n    - text: Gas Gremlins\n    - paragraph: Chain-hopping mechanics that eat failed transactions for breakfast.\n    - code: 1,111 supply · burn-to-upgrade\n  - button \"Cursed Compliance Corporate goblins with spreadsheets, ties, and deeply non-compliant vibes. 888 supply · open edition packs\":\n    - text: Cursed Compliance\n    - paragraph: Corporate goblins with spreadsheets, ties, and deeply non-compliant vibes.\n    - code: 888 supply · open edition packs\n  - heading \"Drop math\" [level=2]\n  - text: HOPIUM CALCULATOR\n  - group \"Calculator currency\":\n    - button \"USD\"\n    - button \"$RESCUE demo\"\n  - text: SUPPLY\n  - spinbutton \"SUPPLY\": \"2222\"\n  - text: MINT PRICE (USD)\n  - spinbutton \"MINT PRICE (USD)\": \"3\"\n  - text: SELL-THROUGH %\n  - spinbutton \"SELL-THROUGH %\": \"65\"\n  - text: CREATOR SHARE %\n  - spinbutton \"CREATOR SHARE %\": \"90\"\n  - text: $3,900 PROJECTED CREATOR REVENUE\n  - paragraph: Straight calculator, not a prophecy. Excludes gas, taxes, platform fees, refunds, secondary sales, and the market noticing your Discord has three people.\n  - paragraph: THE FURNACE\n  - heading \"Burn receipts, live.\" [level=2]\n  - paragraph: The Furnace below is live on Base. The lab's demo burns are rehearsal — never passed off as onchain.\n  - text: \"🔥 $RESCUE Burn Furnace Burn data unavailable: burn RPC unreachable and no cached snapshot 100% art · 0% promises · infinite bad genetics Files stay in this tab. Nothing uploads anywhere.\"\n- status",
+  "audit_session_id": "06653b8a-6844-4f9c-8bb0-25ad1d2428f2",
+  "mobile_ms": 11233.545200999999,
+  "cold_launch_ms": 1463.1519099999998,
+  "desktop_ms": 15132.143368999998,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

@@ -2,7 +2,7 @@
   "schema_version": "hatch.probe_ui_session.v1",
   "socket": "/home/hatch/workspace/ts-spaces/erc-8048-rabbit-hole/.harness/probe-ui/sock",
   "slug": "erc-8048-rabbit-hole",
-  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-48c8f103-86d3-4ac4-83bb-926f0b263b37/",
-  "audit_session_id": "c944244b-6fbf-4723-8971-773b2a24c66d",
-  "pid": 16237
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-dcbafb61-d05b-4aab-8830-daff4c696b3f/",
+  "audit_session_id": "8a26fea4-4b81-4a73-9668-5025a56bcff4",
+  "pid": 24933
 }

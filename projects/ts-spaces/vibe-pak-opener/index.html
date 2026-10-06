@@ -58,7 +58,7 @@
     .section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;border-bottom:3px solid var(--line);padding-bottom:14px;margin-bottom:20px}
     h2{font-family:Bungee,sans-serif;font-size:clamp(25px,4vw,44px);line-height:1;margin-bottom:0}
     .section-head p{max-width:520px;margin:0;color:var(--muted);font-size:13px;line-height:1.5}
-    .packs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .packs{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .pack{position:relative;text-align:left;border:3px solid var(--line);background:var(--panel);padding:0;cursor:pointer;box-shadow:6px 6px 0 var(--shadow);overflow:hidden;min-height:255px;transition:transform .12s}
     .pack:hover{transform:translateY(-3px)}
     .pack[aria-pressed="true"]{box-shadow:8px 8px 0 var(--orange);outline:4px solid var(--lime);outline-offset:-7px}
@@ -132,6 +132,22 @@
       .pack{grid-template-columns:96px 1fr}.pack-copy{padding:12px}.pack-title{font-size:16px}.pack-desc{font-size:11px}.pack-art:after{inset:30px 12px}.pack-glyph{font-size:18px}.rip-main,.rip-side,.dex-panel,.manifesto{padding:16px}.hero-actions .btn{width:100%}.rip-top{align-items:flex-start;flex-direction:column}.machine .stamp{right:4px}.odds span{font-size:9px}footer{align-items:flex-start;flex-direction:column}
     }
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.ticker-track,.dot,.reveal-status{animation:none!important}.card{transform:none;opacity:1}.card.show{animation:none}.confetti{display:none}}
+
+    /* Inlined RescueBurn widget styles. */
+    .rbw{--rbw-bg:rgba(0,0,0,.55);--rbw-border:#2aff5a33;--rbw-text:#e8ffe8;--rbw-dim:#9fd8a8;--rbw-accent:#2aff5a;--rbw-warn:#ffb02e;background:var(--rbw-bg);border:1px solid var(--rbw-border);border-radius:12px;padding:14px 16px;color:var(--rbw-text);font-family:inherit;max-width:560px}
+    .rbw-title{font-weight:700;font-size:1.05rem;margin-bottom:8px}.rbw-total{font-size:1.6rem;font-weight:800;color:var(--rbw-accent)}.rbw-total span{font-size:.9rem;font-weight:400;color:var(--rbw-dim)}
+    .rbw-meta{font-size:.8rem;color:var(--rbw-dim);margin:4px 0 10px}.rbw-stale{color:var(--rbw-warn);font-weight:700}.rbw-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .rbw-h{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--rbw-dim);margin-bottom:4px}.rbw ul{list-style:none;margin:0;padding:0;font-size:.85rem}.rbw li{padding:3px 0;border-bottom:1px dashed #ffffff14;display:flex;gap:8px;align-items:baseline}
+    .rbw-amt{color:var(--rbw-accent);font-variant-numeric:tabular-nums}.rbw-from{font-family:monospace}.rbw-when,.rbw-rank{color:var(--rbw-dim);font-size:.78rem}.rbw-foot{margin-top:10px;font-size:.75rem;color:var(--rbw-dim)}.rbw-mono{font-family:monospace}.rbw-err{color:#ff6b6b}.rbw-status{color:var(--rbw-dim);font-size:.9rem}
+    #dex-section .rbw{--rbw-bg:#141007;--rbw-border:#ffb02e55;--rbw-text:#ffe9c4;--rbw-dim:#c99a55;--rbw-accent:#ffb02e;max-width:none}
+    #burn-widget{margin-top:18px}.demo-line{margin-top:9px;color:var(--muted);font-size:11px;line-height:1.5}.furnace-note{font-size:11px;line-height:1.55;color:var(--muted);margin:16px 0 0}
+    .rescue-pill{display:inline-flex;align-items:center;gap:6px;border:2px solid var(--line);background:#141007;color:#ffe9c4;padding:8px 9px;box-shadow:3px 3px 0 var(--orange);font-size:11px;font-weight:700;max-width:100%;flex-wrap:wrap}.rescue-pill b{color:#ffb02e;font-size:13px}.demo-tag{background:#ffb02e;color:#171713;padding:2px 5px;text-transform:uppercase;font-size:9px;font-weight:900}.mini{border:1px solid #ffb02e;background:transparent;color:#ffe9c4;padding:4px 6px;cursor:pointer;font-size:10px;font-weight:800}.mini:disabled{opacity:.5;cursor:not-allowed}
+    .pack-price{font-size:11px;font-weight:900;color:var(--orange);margin:0 0 10px}.pack.cursed .pack-art:before{background:repeating-linear-gradient(135deg,#171713 0 10px,var(--orange) 10px 20px)}.pack.cursed[aria-disabled="true"]{filter:grayscale(.85);opacity:.62}.pack.cursed[aria-disabled="true"]:after{content:"DIAMOND TINFOIL LOCK";position:absolute;inset:auto 8px 8px;background:#171713;color:#ffb02e;padding:5px 7px;font-size:9px;font-weight:900;text-align:center}
+    .loaded-line{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.tier-badge{border:1.5px solid var(--line);background:var(--soft);padding:4px 6px;font-size:9px;font-weight:900}.tier-badge.tin{background:#c9cdd0;color:#171713}.tier-badge.diamond{background:var(--lime);color:#171713}
+    .rip-actions{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px}.ash-btn{background:#171713;color:#ffb02e;white-space:nowrap}.ash-btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:5px 5px 0 var(--shadow)}
+    #bounty-board{display:grid;gap:7px;margin-top:15px}.bounty-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;border-top:1.5px dashed var(--muted);padding-top:8px;font-size:11px}.bounty-row small{display:block;color:var(--muted);margin-top:3px}.bounty-claim{border:1.5px solid var(--line);background:var(--lime);color:#171713;padding:6px 8px;font-size:10px;font-weight:900;cursor:pointer}.bounty-claim:disabled{background:var(--soft);color:var(--muted);cursor:not-allowed}
+    @media(max-width:960px) and (min-width:801px){.packs{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.rbw-cols{grid-template-columns:1fr}.rip-actions{grid-template-columns:1fr}.rescue-pill{width:100%;justify-content:center}.hero-actions{align-items:stretch}.hero-actions .rescue-pill{order:3}.bounty-row{grid-template-columns:1fr}.bounty-claim{width:100%}}
   </style>
 </head>
 <body>
@@ -147,10 +163,12 @@
         <h1>RIP PAKS.<span>CATCH VIBES.</span></h1>
         <p class="lede">A zero-stakes arcade for opening fictional Vibe Paks, meeting financially irresponsible creatures, and finding out if the universe owes you a mythic.</p>
         <div class="hero-actions">
+          <a class="btn orange" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&amp;chain=base" target="_blank" rel="noopener">BUY $RESCUE</a>
           <button class="btn" id="jumpRip">Choose your pak ↓</button>
           <button class="btn alt" id="soundBtn" aria-pressed="false">Sound: off</button>
+          <div id="rescue-pill" class="rescue-pill">🪙 <b id="rescue-bal">2,500</b> $RESCUE <span class="demo-tag">demo</span> <button id="faucetBtn" class="mini">Claim 500 demo $RESCUE</button></div>
         </div>
-        <p class="micro">Demo only. No purchase, wallet, token, mint, or suspicious browser extension required.</p>
+        <p class="micro">demo tokens — no real $RESCUE moves. No wallet, signature, purchase, or mint required.</p>
       </div>
       <div class="machine">
         <img src="assets/pak-machine.png" alt="Pixel-art pack machine exploding with bizarre collectible creatures and arcade tokens">
@@ -169,6 +187,7 @@
           <div class="pack-copy">
             <h3 class="pack-title">Vibe Pak</h3>
             <p class="pack-desc">Pure timeline energy. No thesis. Immaculate aura.</p>
+            <p class="pack-price">250 $RESCUE · 20% burns (demo)</p>
             <div class="odds"><span>COMMON 60%</span><span>FERAL 32%</span><span>MYTHIC 8%</span></div>
           </div>
         </button>
@@ -177,6 +196,7 @@
           <div class="pack-copy">
             <h3 class="pack-title">BAES OS</h3>
             <p class="pack-desc">Companions booting with premium delusion pre-installed.</p>
+            <p class="pack-price">500 $RESCUE · 20% burns (demo)</p>
             <div class="odds"><span>COMMON 55%</span><span>FERAL 34%</span><span>MYTHIC 11%</span></div>
           </div>
         </button>
@@ -185,7 +205,17 @@
           <div class="pack-copy">
             <h3 class="pack-title">Etc. Pak</h3>
             <p class="pack-desc">The leftovers achieved consciousness and formed a market.</p>
+            <p class="pack-price">1,000 $RESCUE · 20% burns (demo)</p>
             <div class="odds"><span>COMMON 48%</span><span>FERAL 38%</span><span>MYTHIC 14%</span></div>
+          </div>
+        </button>
+        <button class="pack cursed" data-pack="cursed" aria-pressed="false" aria-disabled="true">
+          <div class="pack-art"><span class="pack-glyph">CURSED PAK</span></div>
+          <div class="pack-copy">
+            <h3 class="pack-title">Cursed Pak</h3>
+            <p class="pack-desc">The machine is malfunctioning beautifully. Demo pull.</p>
+            <p class="pack-price">2,500 $RESCUE · 20% burns (demo)</p>
+            <div class="odds"><span>COMMON 40%</span><span>FERAL 35%</span><span>MYTHIC 25%</span></div>
           </div>
         </button>
       </div>
@@ -193,11 +223,15 @@
       <div class="rip-zone">
         <div class="rip-main">
           <div class="rip-top">
-            <div><div class="micro" style="margin:0 0 5px">LOADED IN CHAMBER</div><div class="rip-title" id="loadedName">VIBE PAK</div></div>
+            <div><div class="micro" style="margin:0 0 5px">LOADED IN CHAMBER</div><div class="loaded-line"><div class="rip-title" id="loadedName">VIBE PAK</div><span id="tierBadge" class="tier-badge">PAPER HANDS</span></div></div>
             <div class="eyebrow" id="luckLabel">LUCK: SUSPICIOUS</div>
           </div>
           <div class="meter" aria-label="chaos meter"><div class="meter-fill" id="meterFill"></div></div>
-          <button class="btn orange rip-btn" id="ripBtn">RIP THE FREE DEMO PAK</button>
+          <div class="rip-actions">
+            <button class="btn orange rip-btn" id="ripBtn">RIP THE FREE DEMO PAK</button>
+            <button class="btn ash-btn" id="ashBtn" disabled>ASH IT 🔥</button>
+          </div>
+          <div id="bounty-board"></div>
         </div>
         <aside class="rip-side">
           <div>
@@ -218,7 +252,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="dex-section">
       <div class="section-head">
         <h2>Session dex</h2>
         <p>Your pulls live here until the tab closes. The score means almost nothing, which makes it extremely important.</p>
@@ -227,6 +261,9 @@
         <div class="dex-panel">
           <div class="dex-empty" id="dexEmpty"><div><b>NOTHING YET.</b><br><br>Rip a pak. Become a statistic.</div></div>
           <div class="dex-list" id="dexList" hidden></div>
+          <p class="furnace-note">The Furnace burns real $RESCUE on Base. Demo burns below are rehearsal — never shown as onchain.</p>
+          <div id="burn-widget"></div>
+          <div id="demo-burn-line" class="demo-line"></div>
         </div>
         <aside class="manifesto">
           <h3>Build. Rip. Ship. Repeat.</h3>
@@ -244,51 +281,356 @@
   <div class="toast" id="toast" role="status"></div>
 
   <script>
-    (function(){
-      var selected='vibe', pulls=0, found=[], soundOn=false, audioCtx=null;
-      var packNames={vibe:'VIBE PAK',baes:'BAES OS PAK',etc:'ETC. PAK'};
-      var roots={
-        vibe:['Chart Frog','Vibe Goblin','Exit Liquidity','Candle Gremlin','Foil Prince','Timeline Oracle'],
-        baes:['Bootleg Angel','Kernel Cutie','Cache Me Outside','Hotfix Babe','Daemon Darling','Patch Princess'],
-        etc:['Misc. Entity','Unnamed Intern','Spare Part','Final Final v7','Loose Decimal','Mystery Folder']
-      };
-      var imgs=['assets/frog-king.png','assets/orb-grub.png','assets/bat-accountant.png'];
-      var hats=['Foil Crown','Laser Visor','No Thoughts','Tiny Cap','Market Halo','Error 404'];
-      var moods=['Overleveraged','Unbothered','Suspicious','Bullish-ish','Chronically Online','Built Different'];
-      var powers=['Ratio Shield','Dip Magnet','Aura Farming','Gas Dodger','Reply Guy Ray','Infinite Cope'];
-      var bg=['Lime Terminal','Exit Orange','Purple Hour','Basement Alpha','Chartreuse Void'];
-      var odds={vibe:[.60,.92],baes:[.55,.89],etc:[.48,.86]};
-      function pick(a){return a[Math.floor(Math.random()*a.length)]}
-      function rarity(){var r=Math.random(),o=odds[selected];return r<o[0]?'COMMON':r<o[1]?'FERAL':'MYTHIC'}
-      function scoreFor(r){var base=r==='MYTHIC'?900:r==='FERAL'?420:120;return base+Math.floor(Math.random()*99)}
-      function beep(freq,dur,type){if(!soundOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();var o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=type||'square';o.frequency.value=freq;g.gain.setValueAtTime(.045,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+dur);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+dur)}catch(e){}}
-      function toast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast.timer);toast.timer=setTimeout(function(){t.classList.remove('show')},2600)}
-      function confetti(){var colors=['#b8f41d','#ff6b1a','#7a58c9','#e94c89','#fffdf6'];for(var i=0;i<34;i++){var el=document.createElement('i');el.className='confetti';el.style.left=Math.random()*100+'vw';el.style.background=pick(colors);el.style.setProperty('--drift',(Math.random()*220-110)+'px');el.style.animationDelay=Math.random()*.45+'s';el.style.transform='rotate('+Math.random()*180+'deg)';document.body.appendChild(el);setTimeout(function(n){n.remove()},2500,el)}}
-      function makeCard(i){var r=rarity(),item={name:pick(roots[selected]),rarity:r,score:scoreFor(r),img:imgs[(i+pulls+Math.floor(Math.random()*3))%3],hat:pick(hats),mood:pick(moods),power:pick(powers),bg:pick(bg),serial:String(Math.floor(Math.random()*9999)).padStart(4,'0')};found.unshift(item);return item}
-      function cardHTML(c){return '<article class="card"><div class="card-art"><img src="'+c.img+'" alt="Pixel-art portrait of '+c.name+'"><span class="serial">#'+c.serial+'</span></div><div class="card-body"><span class="rarity '+c.rarity.toLowerCase()+'">'+c.rarity+' • '+c.score+'</span><h3>'+c.name+'</h3><div class="traits"><span>HEAD<br><b>'+c.hat+'</b></span><span>MOOD<br><b>'+c.mood+'</b></span><span>POWER<br><b>'+c.power+'</b></span><span>VOID<br><b>'+c.bg+'</b></span></div></div></article>'}
-      function updateDex(){var list=document.getElementById('dexList'),empty=document.getElementById('dexEmpty');empty.hidden=true;list.hidden=false;list.innerHTML=found.slice(0,8).map(function(c){return '<div class="dex-item"><img src="'+c.img+'" alt=""><div><b>'+c.name+'</b><small>'+c.rarity+' • #'+c.serial+'</small></div><span class="score">'+c.score+'</span></div>'}).join('')}
-      function rip(){
-        var btn=document.getElementById('ripBtn');btn.disabled=true;btn.textContent='CRINKLING REALITY…';
-        var meter=document.getElementById('meterFill');meter.style.width='100%';beep(130,.18,'sawtooth');
-        setTimeout(function(){
-          pulls++;var trio=[makeCard(0),makeCard(1),makeCard(2)];
-          document.getElementById('cards').innerHTML=trio.map(cardHTML).join('');
-          document.getElementById('reveal').classList.add('active');
-          document.getElementById('revealStatus').textContent=trio.some(function(x){return x.rarity==='MYTHIC'})?'MYTHIC DETECTED. STAY HUMBLE-ish.':'THE FOIL HAS SPOKEN';
-          document.getElementById('pullCount').textContent=pulls;document.getElementById('cardCount').textContent=found.length;
-          updateDex();confetti();beep(330,.12);setTimeout(function(){beep(520,.16)},130);
-          requestAnimationFrame(function(){document.querySelectorAll('.card').forEach(function(c){c.classList.add('show')})});
-          document.getElementById('reveal').scrollIntoView({behavior:'smooth',block:'start'});
-          btn.disabled=false;btn.textContent='RIP ANOTHER '+packNames[selected];meter.style.width=(12+Math.random()*35)+'%';
-        },750)
+/* rescue-burn.js — shared $RESCUE burn-status module for all Foil builds.
+ *
+ * Reads REAL onchain $RESCUE Transfer events to the dead address on Base.
+ * No wallet, no signatures, no fund movements — pure reads.
+ *
+ * Usage (external file): include via a script tag whose src is
+ * "rescue-burn.js", then:
+ *   RescueBurn.getStatus().then(function (s) { console.log(s.total); });
+ *   RescueBurn.renderWidget(document.getElementById('burn-widget'));
+ * (The tag itself is described, not written, so this file never contains a
+ * literal closing script tag and stays safe to inline in single-file pages.)
+ *
+ * Caching: totals + aggregates persist in localStorage; each call only scans
+ * new blocks. If the RPC is unreachable, the last cached snapshot is returned
+ * with stale:true — numbers are NEVER invented.
+ */
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
+  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) { return '0.00'; }
+  }
+
+  function fmtAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+
+  function loadCache() {
+    try {
+      var c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+      if (c && typeof c.totalWei === 'string') return c;
+    } catch (e) {}
+    return { totalWei: '0', txCount: 0, lastBlock: START_BLOCK - 1, updatedAt: 0, recent: [], byBurner: {} };
+  }
+  function saveCache(c) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify(c)); } catch (e) {}
+  }
+
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, RPC_TIMEOUT_MS);
+    return fetch(RPC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+
+  function decodeTransfer(log) {
+    // topics: [Transfer, from, to]; amount in data
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return { from: from, amount: amount, txHash: log.transactionHash, blockNumber: parseInt(log.blockNumber, 16) };
+  }
+
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+
+  function getLogsRange(rg) {
+    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
+    // dropped connection). On a range-limit signal, halve the range and
+    // retry; give up only below MIN_RANGE.
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) { return a.concat(b); });
+        });
       }
-      document.querySelectorAll('.pack').forEach(function(p){p.addEventListener('click',function(){document.querySelectorAll('.pack').forEach(function(x){x.setAttribute('aria-pressed','false')});p.setAttribute('aria-pressed','true');selected=p.dataset.pack;document.getElementById('loadedName').textContent=packNames[selected];document.getElementById('luckLabel').textContent='LUCK: '+pick(['SUSPICIOUS','COOKING','UNLICENSED','PROBABLY FINE']);document.getElementById('ripBtn').textContent='RIP THE FREE DEMO PAK';document.getElementById('meterFill').style.width=(12+Math.random()*45)+'%';beep(180,.08)})});
-      document.getElementById('ripBtn').addEventListener('click',rip);
-      document.getElementById('againBtn').addEventListener('click',function(){document.getElementById('choose').scrollIntoView({behavior:'smooth'});setTimeout(rip,400)});
-      document.getElementById('copeBtn').addEventListener('click',function(){toast(pick(['Rarity is a social construct anyway.','The market simply lacks your vision.','You were early to being late.','Floor price: emotionally priceless.','The real mythic was the gas we did not spend.']))});
-      document.getElementById('jumpRip').addEventListener('click',function(){document.getElementById('choose').scrollIntoView({behavior:'smooth'})});
-      document.getElementById('soundBtn').addEventListener('click',function(){soundOn=!soundOn;this.setAttribute('aria-pressed',String(soundOn));this.textContent='Sound: '+(soundOn?'on':'off');beep(260,.1);toast(soundOn?'Tiny arcade noises enabled.':'Silence restored.')});
-    })();
+      throw e;
+    });
+  }
+
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return { cache: cache, tip: tip, fresh: [] };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) { fresh.push(decodeTransfer(l)); });
+          });
+        });
+      });
+      return chain.then(function () { return { cache: cache, tip: tip, fresh: fresh }; });
+    });
+  }
+
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = (Date.now() - cache.updatedAt) > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache, fresh = r.fresh;
+      // merge
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({ from: b.from, amount: b.amount, txHash: b.txHash, blockNumber: b.blockNumber });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      // timestamps for recent burns missing them (cap concurrency)
+      var need = c.recent.filter(function (x) { return !x.ts; }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) { x.ts = ts; }).catch(function () { x.ts = 0; });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      // RPC failed: serve cache, honestly labeled stale
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return { ok: false, error: 'burn RPC unreachable and no cached snapshot', detail: String(e && e.message || e).slice(0, 120) };
+    });
+  }
+
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return { address: a, amountWei: c.byBurner[a], amount: fmtWei(c.byBurner[a]) };
+    }).sort(function (x, y) { return (BigInt(y.amountWei) > BigInt(x.amountWei)) ? 1 : -1; }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) { if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString(); });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return { from: x.from, fromShort: fmtAddr(x.from), amount: fmtWei(x.amount), txHash: x.txHash, when: x.ts ? timeAgo(x.ts) : '…' };
+      }),
+      topBurners: top.map(function (t) { return { address: t.address, short: fmtAddr(t.address), amount: t.amount }; })
+    };
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]; }); }
+
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    mount.innerHTML = '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' +
+      '<div class="rbw-status">syncing with Base…</div></div>';
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        mount.querySelector('.rbw-status').innerHTML =
+          '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>';
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' +
+          esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' +
+          esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="rbw">' +
+        '<div class="rbw-title">' + esc(title) + '</div>' +
+        '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' +
+        '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' +
+        'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' +
+        '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' +
+        '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' +
+        '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' +
+        '</div>';
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) st.innerHTML = '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>';
+    });
+    return mount;
+  }
+
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+  </script>
+
+  <script>
+(function(global){
+  'use strict';
+  var BAL_KEY='vpo-demo-balance-v1';
+  var BURNS_KEY='vpo-demo-burns-v1';
+  var FAUCET_KEY='vpo-faucet-v1';
+  var ASH_KEY='vpo-ash-v1';
+  var TIER_KEY='vpo-tier-v1';
+  var BOUNTY_KEY='vpo-bounty-v1';
+  var sessionAshConsumed=0;
+
+  function readJSON(key,fallback){try{var v=JSON.parse(localStorage.getItem(key));return v===null?fallback:v}catch(e){return fallback}}
+  function writeJSON(key,value){try{localStorage.setItem(key,JSON.stringify(value))}catch(e){}}
+  function dayKey(){var d=new Date();return String(d.getFullYear())+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')}
+  function vpoToast(msg){var t=document.getElementById('toast');if(!t)return;t.textContent=msg;t.classList.add('show');clearTimeout(vpoToast.timer);vpoToast.timer=setTimeout(function(){t.classList.remove('show')},2800)}
+  function getBal(){var raw=localStorage.getItem(BAL_KEY);if(raw===null){localStorage.setItem(BAL_KEY,'2500');return 2500}var n=Number(raw);return isFinite(n)?n:2500}
+  function setBal(n){n=Math.max(0,Math.floor(Number(n)||0));try{localStorage.setItem(BAL_KEY,String(n))}catch(e){}updateBalance();return n}
+  function addDemo(n,label){var value=setBal(getBal()+n);vpoToast((label||'Demo credit')+' +'+Number(n).toLocaleString()+' demo $RESCUE.');return value}
+  function spendDemo(n,actionLabel){if(getBal()<n){vpoToast('Not enough demo $RESCUE — hit the faucet, broke king.');return false}setBal(getBal()-n);return true}
+  function getTierData(){var t=readJSON(TIER_KEY,{lifetimeBurned:0,totalRips:0});t.lifetimeBurned=Number(t.lifetimeBurned)||0;t.totalRips=Number(t.totalRips)||0;return t}
+  function tierName(){var n=getTierData().lifetimeBurned;return n>=100000?'DIAMOND TINFOIL':n>=10000?'TIN FOIL':'PAPER HANDS'}
+  function burnDemo(n,actionLabel){var burns=readJSON(BURNS_KEY,[]);burns.push({action:actionLabel,amount:Number(n),ts:Date.now()});writeJSON(BURNS_KEY,burns);var tier=getTierData();tier.lifetimeBurned+=Number(n);writeJSON(TIER_KEY,tier);updateDemoLine();updateTier();return tier.lifetimeBurned}
+  function getAsh(){return Math.max(0,Number(localStorage.getItem(ASH_KEY))||0)}
+  function setAsh(n){try{localStorage.setItem(ASH_KEY,String(Math.max(0,Math.floor(n))))}catch(e){}updateLuck();return getAsh()}
+  function addAsh(n){return setAsh(getAsh()+(n||1))}
+  function consumeAshForRip(){var n=getAsh();if(!n)return 0;setAsh(n-1);sessionAshConsumed+=1;updateDemoLine();return n*.02}
+  function getBounty(){var today=dayKey(),b=readJSON(BOUNTY_KEY,{date:today,rips:0,mythics:0,paidRips:0});if(b.date!==today)b={date:today,rips:0,mythics:0,paidRips:0};b.rips=Number(b.rips)||0;b.mythics=Number(b.mythics)||0;b.paidRips=Number(b.paidRips)||0;writeJSON(BOUNTY_KEY,b);return b}
+  function getClaims(){return readJSON('vpo-bounty-'+dayKey(),{rip5:false,mythic:false})}
+  function canPaidRip(){return tierName()!=='PAPER HANDS'||getBounty().paidRips<3}
+  function recordRip(wasPaid,hadMythic){var b=getBounty();b.rips+=1;if(wasPaid)b.paidRips+=1;if(hadMythic)b.mythics+=1;writeJSON(BOUNTY_KEY,b);var tier=getTierData();tier.totalRips+=1;writeJSON(TIER_KEY,tier);if(tier.lifetimeBurned>=10000&&tier.totalRips%10===0){addAsh(1);vpoToast('TIN FOIL streak: +1 ASH (demo luck).')}renderBounties();updateTier()}
+  function claimBounty(kind){var b=getBounty(),claims=getClaims(),ok=kind==='rip5'?b.rips>=5:b.mythics>=1;if(!ok||claims[kind])return;claims[kind]=true;writeJSON('vpo-bounty-'+dayKey(),claims);addDemo(kind==='rip5'?2000:5000,kind==='rip5'?'Daily rip bounty':'Mythic bounty');renderBounties()}
+  function renderBounties(){var mount=document.getElementById('bounty-board');if(!mount)return;var b=getBounty(),c=getClaims();mount.innerHTML='<div class="bounty-row"><div><b>Rip 5 paks today → +2,000 demo $RESCUE</b><small>'+Math.min(b.rips,5)+'/5 paks · demo reward</small></div><button class="bounty-claim" data-bounty="rip5" '+(b.rips<5||c.rip5?'disabled':'')+'>'+(c.rip5?'CLAIMED':'CLAIM')+'</button></div><div class="bounty-row"><div><b>Pull a mythic → +5,000 demo $RESCUE + leaderboard row (local)</b><small>'+Math.min(b.mythics,1)+'/1 mythic · demo reward</small></div><button class="bounty-claim" data-bounty="mythic" '+(b.mythics<1||c.mythic?'disabled':'')+'>'+(c.mythic?'CLAIMED':'CLAIM')+'</button></div>';mount.querySelectorAll('[data-bounty]').forEach(function(btn){btn.addEventListener('click',function(){claimBounty(btn.getAttribute('data-bounty'))})})}
+  function updateBalance(){var el=document.getElementById('rescue-bal');if(el)el.textContent=getBal().toLocaleString()}
+  function updateDemoLine(){var burns=readJSON(BURNS_KEY,[]),total=burns.reduce(function(sum,x){return sum+(Number(x.amount)||0)},0),el=document.getElementById('demo-burn-line');if(el)el.textContent='ASH consumed this session: '+sessionAshConsumed+' · demo $RESCUE burned: '+total.toLocaleString()+' (demo ledger)'}
+  function updateLuck(){var el=document.getElementById('luckLabel'),n=getAsh();if(el)el.textContent=n?'LUCK: ASHEN ×'+n:'LUCK: SUSPICIOUS'}
+  function updateTier(){var name=tierName(),badge=document.getElementById('tierBadge'),cursed=document.querySelector('[data-pack="cursed"]');if(badge){badge.textContent=name;badge.className='tier-badge '+(name==='TIN FOIL'?'tin':name==='DIAMOND TINFOIL'?'diamond':'')}if(cursed)cursed.setAttribute('aria-disabled',name==='DIAMOND TINFOIL'?'false':'true')}
+  function faucet(){var f=readJSON(FAUCET_KEY,{lastClaim:0}),wait=1800000-(Date.now()-(Number(f.lastClaim)||0));if(wait>0){vpoToast('Demo faucet refills in '+Math.ceil(wait/60000)+' min — no real $RESCUE moves.');return false}f.lastClaim=Date.now();writeJSON(FAUCET_KEY,f);addDemo(500,'Faucet');return true}
+  function init(){updateBalance();updateDemoLine();updateTier();updateLuck();renderBounties();var f=document.getElementById('faucetBtn');if(f)f.addEventListener('click',faucet);if(global.RescueBurn)global.RescueBurn.renderWidget(document.getElementById('burn-widget'),{title:'🔥 $RESCUE Burn Furnace'})}
+
+  global.getBal=getBal;global.spendDemo=spendDemo;global.burnDemo=burnDemo;global.faucet=faucet;global.vpoToast=vpoToast;
+  global.VPO={getBal:getBal,setBal:setBal,burnDemo:burnDemo,getAsh:getAsh,addAsh:addAsh,consumeAshForRip:consumeAshForRip,getTierData:getTierData,tierName:tierName,canPaidRip:canPaidRip,recordRip:recordRip,updateLuck:updateLuck,updateDemoLine:updateDemoLine,updateTier:updateTier,renderBounties:renderBounties};
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
+})(window);
+  </script>
+
+  <script>
+(function(){
+  var selected='vibe',pulls=0,found=[],soundOn=false,audioCtx=null,freeMode=true,sealedPak=null,activeAshBonus=0,pityRips=0;
+  var packNames={vibe:'VIBE PAK',baes:'BAES OS PAK',etc:'ETC. PAK',cursed:'CURSED PAK'};
+  var roots={
+    vibe:['Chart Frog','Vibe Goblin','Exit Liquidity','Candle Gremlin','Foil Prince','Timeline Oracle'],
+    baes:['Bootleg Angel','Kernel Cutie','Cache Me Outside','Hotfix Babe','Daemon Darling','Patch Princess'],
+    etc:['Misc. Entity','Unnamed Intern','Spare Part','Final Final v7','Loose Decimal','Mystery Folder'],
+    cursed:['Margin Phantom','Liquidation Saint','Glitch Oracle','Ash Baron','Broken Alpha','Doom Printer']
+  };
+  var imgs=['assets/frog-king.png','assets/orb-grub.png','assets/bat-accountant.png'];
+  var hats=['Foil Crown','Laser Visor','No Thoughts','Tiny Cap','Market Halo','Error 404'];
+  var moods=['Overleveraged','Unbothered','Suspicious','Bullish-ish','Chronically Online','Built Different'];
+  var powers=['Ratio Shield','Dip Magnet','Aura Farming','Gas Dodger','Reply Guy Ray','Infinite Cope'];
+  var bg=['Lime Terminal','Exit Orange','Purple Hour','Basement Alpha','Chartreuse Void'];
+  var odds={vibe:[.60,.92],baes:[.55,.89],etc:[.48,.86],cursed:[.40,.75]};
+  var PAK_PRICE={vibe:250,baes:500,etc:1000,cursed:2500};
+  var PAK_BURN=0.20;
+  function pick(a){return a[Math.floor(Math.random()*a.length)]}
+  function rarity(forceMythic){if(forceMythic)return'MYTHIC';var r=Math.random(),o=odds[selected],feralCeiling=Math.max(o[0],o[1]-activeAshBonus);return r<o[0]?'COMMON':r<feralCeiling?'FERAL':'MYTHIC'}
+  function scoreFor(r){var base=r==='MYTHIC'?900:r==='FERAL'?420:120;return base+Math.floor(Math.random()*99)}
+  function beep(freq,dur,type){if(!soundOn)return;try{audioCtx=audioCtx||new(window.AudioContext||window.webkitAudioContext)();var o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=type||'square';o.frequency.value=freq;g.gain.setValueAtTime(.045,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+dur);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+dur)}catch(e){}}
+  function toast(msg){window.vpoToast(msg)}
+  function confetti(){var colors=['#b8f41d','#ff6b1a','#7a58c9','#e94c89','#fffdf6'];for(var i=0;i<34;i++){var el=document.createElement('i');el.className='confetti';el.style.left=Math.random()*100+'vw';el.style.background=pick(colors);el.style.setProperty('--drift',(Math.random()*220-110)+'px');el.style.animationDelay=Math.random()*.45+'s';el.style.transform='rotate('+Math.random()*180+'deg)';document.body.appendChild(el);setTimeout(function(n){n.remove()},2500,el)}}
+  function makeCard(i,forceMythic){var r=rarity(forceMythic),item={name:pick(roots[selected]),rarity:r,score:scoreFor(r),img:imgs[(i+pulls+Math.floor(Math.random()*3))%3],hat:pick(hats),mood:pick(moods),power:pick(powers),bg:pick(bg),serial:String(Math.floor(Math.random()*9999)).padStart(4,'0')};found.unshift(item);return item}
+  function cardHTML(c){return '<article class="card"><div class="card-art"><img src="'+c.img+'" alt="Pixel-art portrait of '+c.name+'"><span class="serial">#'+c.serial+'</span></div><div class="card-body"><span class="rarity '+c.rarity.toLowerCase()+'">'+c.rarity+' • '+c.score+'</span><h3>'+c.name+'</h3><div class="traits"><span>HEAD<br><b>'+c.hat+'</b></span><span>MOOD<br><b>'+c.mood+'</b></span><span>POWER<br><b>'+c.power+'</b></span><span>VOID<br><b>'+c.bg+'</b></span></div></div></article>'}
+  function updateDex(){var list=document.getElementById('dexList'),empty=document.getElementById('dexEmpty');empty.hidden=true;list.hidden=false;list.innerHTML=found.slice(0,8).map(function(c){return '<div class="dex-item"><img src="'+c.img+'" alt=""><div><b>'+c.name+'</b><small>'+c.rarity+' • #'+c.serial+'</small></div><span class="score">'+c.score+'</span></div>'}).join('')}
+  function updateRipButton(){var btn=document.getElementById('ripBtn');if(freeMode){btn.textContent='RIP THE FREE DEMO PAK'}else{btn.textContent='RIP THE '+packNames[selected]+' — '+PAK_PRICE[selected].toLocaleString()+' $RESCUE (demo)'}document.getElementById('ashBtn').disabled=!sealedPak}
+  function choosePak(p){if(p.getAttribute('aria-disabled')==='true'){toast('CURSED PAK unlocks at DIAMOND TINFOIL — 100,000 lifetime demo $RESCUE burned.');return false}document.querySelectorAll('.pack').forEach(function(x){x.setAttribute('aria-pressed','false')});p.setAttribute('aria-pressed','true');selected=p.getAttribute('data-pack');freeMode=false;sealedPak=selected;document.getElementById('loadedName').textContent=packNames[selected];if(!VPO.getAsh())document.getElementById('luckLabel').textContent='LUCK: '+pick(['SUSPICIOUS','COOKING','UNLICENSED','PROBABLY FINE']);updateRipButton();document.getElementById('meterFill').style.width=(12+Math.random()*45)+'%';beep(180,.08);return true}
+  function ash(){if(!sealedPak){toast('Select a sealed paid pak before you ash it. Demo tokens only.');return false}var price=PAK_PRICE[sealedPak];VPO.burnDemo(price*.50,'ash '+sealedPak+' pak (demo)');VPO.addAsh(1);sealedPak=null;updateRipButton();toast('Pak ashed: +1 ASH, '+(price*.50).toLocaleString()+' demo $RESCUE burned.');return true}
+  function rip(){
+    var wasPaid=!freeMode,price=PAK_PRICE[selected];
+    if(wasPaid&&!VPO.canPaidRip()){toast('PAPER HANDS paid limit reached: 3 today. Burn 10,000 demo $RESCUE to unlock TIN FOIL.');return false}
+    if(wasPaid&&!window.spendDemo(price,'rip '+selected+' (demo)'))return false;
+    if(wasPaid)window.burnDemo(price*PAK_BURN,'rip '+selected+' (demo)');
+    var btn=document.getElementById('ripBtn');btn.disabled=true;btn.textContent='CRINKLING REALITY…';sealedPak=null;document.getElementById('ashBtn').disabled=true;
+    var meter=document.getElementById('meterFill');meter.style.width='100%';beep(130,.18,'sawtooth');
+    activeAshBonus=VPO.consumeAshForRip();
+    setTimeout(function(){
+      pulls++;var force=VPO.tierName()==='DIAMOND TINFOIL'&&pityRips>=11;var trio=[makeCard(0,false),makeCard(1,false),makeCard(2,force)];var hadMythic=trio.some(function(x){return x.rarity==='MYTHIC'});pityRips=hadMythic?0:pityRips+1;
+      document.getElementById('cards').innerHTML=trio.map(cardHTML).join('');document.getElementById('reveal').classList.add('active');document.getElementById('revealStatus').textContent=hadMythic?'MYTHIC DETECTED. STAY HUMBLE-ish.':'THE FOIL HAS SPOKEN';document.getElementById('pullCount').textContent=pulls;document.getElementById('cardCount').textContent=found.length;
+      updateDex();VPO.recordRip(wasPaid,hadMythic);confetti();beep(330,.12);setTimeout(function(){beep(520,.16)},130);requestAnimationFrame(function(){document.querySelectorAll('.card').forEach(function(c){c.classList.add('show')})});document.getElementById('reveal').scrollIntoView({behavior:'smooth',block:'start'});
+      freeMode=false;sealedPak=selected;activeAshBonus=0;btn.disabled=false;updateRipButton();meter.style.width=(12+Math.random()*35)+'%';if(!VPO.getAsh())document.getElementById('luckLabel').textContent='LUCK: '+pick(['SUSPICIOUS','COOKING','UNLICENSED','PROBABLY FINE']);
+    },750);return true
+  }
+  document.querySelectorAll('.pack').forEach(function(p){p.addEventListener('click',function(){choosePak(p)})});
+  document.getElementById('ripBtn').addEventListener('click',rip);document.getElementById('ashBtn').addEventListener('click',ash);
+  document.getElementById('againBtn').addEventListener('click',function(){document.getElementById('choose').scrollIntoView({behavior:'smooth'});setTimeout(rip,400)});
+  document.getElementById('copeBtn').addEventListener('click',function(){toast(pick(['Rarity is a social construct anyway.','The market simply lacks your vision.','You were early to being late.','Floor price: emotionally priceless.','The real mythic was the gas we did not spend.']))});
+  document.getElementById('jumpRip').addEventListener('click',function(){document.getElementById('choose').scrollIntoView({behavior:'smooth'})});
+  document.getElementById('soundBtn').addEventListener('click',function(){soundOn=!soundOn;this.setAttribute('aria-pressed',String(soundOn));this.textContent='Sound: '+(soundOn?'on':'off');beep(260,.1);toast(soundOn?'Tiny arcade noises enabled.':'Silence restored.')});
+  window.__VPO_TEST__={rip:rip,ash:ash,choose:function(name){var p=document.querySelector('[data-pack="'+name+'"]');return p?choosePak(p):false},state:function(){return{selected:selected,freeMode:freeMode,sealedPak:sealedPak,pulls:pulls,cards:found.length,ash:VPO.getAsh(),balance:VPO.getBal()}}};
+  updateRipButton();
+})();
   </script>
 </body>
 </html>

@@ -84,8 +84,8 @@ async function main() {
   const ptext = await pr.text();
   console.log('paid status:', pr.status);
   if (!pr.ok) { console.log('paid body:', trunc(ptext)); return; }
-  fs.writeFileSync(os.homedir() + '/workspace/helixa-mint/cred-report-5290.json', ptext);
-  console.log('saved to ~/workspace/helixa-mint/cred-report-5290.json');
+  fs.writeFileSync(os.homedir() + '/workspace/helixa-mint/cred-report-full.json', ptext);
+  console.log('saved to ~/workspace/helixa-mint/cred-report-full.json');
   try {
     const j = JSON.parse(ptext);
     console.log('keys:', Object.keys(j).join(','));

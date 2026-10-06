@@ -2,7 +2,7 @@
 display_name: kongzxrpl
 nickname: @KongzXRPL
 summary: X account in the CCFF00 mint scene; @Foil667 follow directed by the user on 2026-09-21 as part of the mint-intel watch.
-rank: 26
+rank: 27
 updated: 2026-09-21
 ---
 

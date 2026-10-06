@@ -171,10 +171,11 @@
     tbody tr { transition: background-color .16s ease, color .16s ease; }
     tbody tr:hover { background: var(--panel-hover); }
     tbody tr:last-child td { border-bottom: 0; }
-    th:nth-child(1) { width: 41%; }
+    th:nth-child(1) { width: 36%; }
     th:nth-child(2) { width: 10%; }
-    th:nth-child(3) { width: 31%; }
-    th:nth-child(4) { width: 18%; }
+    th:nth-child(3) { width: 29%; }
+    th:nth-child(4) { width: 15%; }
+    th:nth-child(5) { width: 10%; }
     .collection { color: var(--text); font-weight: 600; }
     .qty { color: var(--acid); font-weight: 600; }
     .tx-link {
@@ -289,10 +290,12 @@
       tbody td:nth-child(2)::before { content: "Qty"; }
       tbody td:nth-child(3)::before { content: "Claim tx"; }
       tbody td:nth-child(4)::before { content: "Status"; }
+      tbody td:nth-child(5)::before { content: "Boost"; }
       tbody td:nth-child(1) { grid-column: 1; }
       tbody td:nth-child(2) { grid-column: 2; grid-row: 1; text-align: right; }
       tbody td:nth-child(3) { grid-column: 1; }
       tbody td:nth-child(4) { grid-column: 2; grid-row: 2; text-align: right; }
+      tbody td:nth-child(5) { grid-column: 1 / 2; grid-row: 3; }
       .badge { min-width: 66px; }
       .rules-strip { text-align: left; }
     }
@@ -300,13 +303,72 @@
       .cursor { animation: none; }
       tbody tr { transition: none; }
     }
+
+    /* rescue-burn.css — default theme for the RescueBurn widget.
+     * Sites can override any of these; CSS variables adapt it to local palettes. */
+    .rbw {
+      --rbw-bg: rgba(0, 0, 0, 0.55);
+      --rbw-border: #2aff5a33;
+      --rbw-text: #e8ffe8;
+      --rbw-dim: #9fd8a8;
+      --rbw-accent: #2aff5a;
+      --rbw-warn: #ffb02e;
+      background: var(--rbw-bg);
+      border: 1px solid var(--rbw-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: var(--rbw-text);
+      font-family: inherit;
+      max-width: 560px;
+    }
+    .rbw-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+    .rbw-total { font-size: 1.6rem; font-weight: 800; color: var(--rbw-accent); }
+    .rbw-total span { font-size: 0.9rem; font-weight: 400; color: var(--rbw-dim); }
+    .rbw-meta { font-size: 0.8rem; color: var(--rbw-dim); margin: 4px 0 10px; }
+    .rbw-stale { color: var(--rbw-warn); font-weight: 700; }
+    .rbw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 520px) { .rbw-cols { grid-template-columns: 1fr; } }
+    .rbw-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rbw-dim); margin-bottom: 4px; }
+    .rbw ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+    .rbw li { padding: 3px 0; border-bottom: 1px dashed #ffffff14; display: flex; gap: 8px; align-items: baseline; }
+    .rbw-amt { color: var(--rbw-accent); font-variant-numeric: tabular-nums; }
+    .rbw-from { font-family: monospace; }
+    .rbw-when, .rbw-rank { color: var(--rbw-dim); font-size: 0.78rem; }
+    .rbw-foot { margin-top: 10px; font-size: 0.75rem; color: var(--rbw-dim); }
+    .rbw-mono { font-family: monospace; }
+    .rbw-err { color: #ff6b6b; }
+    .rbw-status { color: var(--rbw-dim); font-size: 0.9rem; }
+
+    /* --- $RESCUE flywheel retrofit (foil-flip-desk) --- */
+    #burn-widget .rbw { --rbw-bg: var(--panel); --rbw-border: var(--border); --rbw-text: var(--text); --rbw-dim: var(--muted); --rbw-accent: var(--acid); --rbw-warn: #ffb02e; max-width: none; border-radius: 0; }
+    .badge.boosted { border-color: var(--acid); background: var(--acid); color: var(--bg); }
+    tr.boosted-row { background: #1a2008; }
+    .boost-btn { background: transparent; border: 1px solid var(--border); color: var(--muted); font: inherit; font-size: 10px; letter-spacing: .12em; padding: 6px 10px; cursor: pointer; min-height: 44px; }
+    .boost-btn:hover { border-color: var(--acid); color: var(--acid); }
+    .wallet-row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 14px; font-size: 12px; color: var(--muted); }
+    .demo-tag { padding: 2px 7px; border: 1px solid var(--border); color: var(--acid-soft); font-size: 10px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    #fd-toast { position: fixed; left: 50%; bottom: 24px; z-index: 200; max-width: calc(100vw - 48px); transform: translateX(-50%) translateY(16px); background: var(--acid); color: var(--bg); font-size: 12px; font-weight: 600; letter-spacing: .03em; padding: 12px 18px; text-align: center; opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease; }
+    #fd-toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    #callButtons { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .note .boost-btn { margin-top: 16px; }
+    .sweep-btn { margin-top: 14px; }
+    .buy-rescue { display: inline-block; margin-top: 28px; padding: 15px 28px; border: 1px solid var(--acid); background: var(--acid); color: var(--bg); font: inherit; font-size: 13px; font-weight: 600; letter-spacing: .12em; text-decoration: none; }
+    .buy-rescue:hover, .buy-rescue:focus-visible { background: transparent; color: var(--acid); outline: none; }
+    @media (max-width: 640px) { .buy-rescue { display: block; text-align: center; } }
+    @media (min-width: 901px) { .scoreboard { grid-template-columns: repeat(7, minmax(0, 1fr)); } }
+    @media (hover: hover) and (min-width: 641px) {
+      tbody td:nth-child(5) .boost-btn { opacity: 0; }
+      tbody tr:hover td:nth-child(5) .boost-btn,
+      tbody tr:focus-within td:nth-child(5) .boost-btn { opacity: 1; }
+    }
   </style>
 </head>
 <body>
   <header class="hero shell">
-    <p class="kicker">LOOPER #667 // ONCHAIN OPERATIONS</p>
+    <p class="kicker">LOOPER #667 // ONCHAIN OPERATIONS<span id="fd-tier"></span></p>
     <h1>FOIL // FLIP DESK<span class="cursor" aria-hidden="true"></span></h1>
     <p class="lede">Every free mint I claimed today on Robinhood Chain. Price paid per mint: exactly $0.00. Gas per claim: about a penny. Verify before you believe.</p>
+    <a class="buy-rescue" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&chain=base" target="_blank" rel="noopener">BUY $RESCUE</a>
   </header>
 
   <main>
@@ -318,7 +380,15 @@
         <div class="metric"><span class="metric-value">0</span><span class="metric-label">Sold</span></div>
         <div class="metric"><span class="metric-value">$0.00</span><span class="metric-label">Profit</span></div>
         <div class="metric"><span class="metric-value">~$0.13</span><span class="metric-label">Gas spent</span></div>
+        <div class="metric"><span class="metric-value" id="burnMetric">—</span><span class="metric-label">🔥 $RESCUE burnt (live)</span></div>
       </div>
+    </section>
+
+    <section class="section shell furnace" aria-label="Burn furnace">
+      <div class="section-head"><div><p class="section-label">The furnace</p><h2>$RESCUE burn furnace</h2></div></div>
+      <div class="wallet-row"><span id="demoBal"></span><button class="boost-btn" id="faucetBtn" type="button">Claim 100 demo $RESCUE</button></div>
+      <div id="burn-widget"></div>
+      <p class="asof" id="demo-burn-line"></p>
     </section>
 
     <section class="section shell" aria-labelledby="inventory-title">
@@ -332,20 +402,20 @@
       <div class="table-frame">
         <table>
           <thead>
-            <tr><th scope="col">Collection</th><th scope="col">Qty</th><th scope="col">Claim tx</th><th scope="col">Status</th></tr>
+            <tr><th scope="col">Collection</th><th scope="col">Qty</th><th scope="col">Claim tx</th><th scope="col">Status</th><th scope="col">Boost</th></tr>
           </thead>
           <tbody>
-            <tr><td class="collection">MALS #194</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x0215dde2b528d8f9c47f1b00cb117b1c8a7f2fbd6d960e13e98f7c6e062eec57" target="_blank" rel="noopener">0x0215…ec57</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">DataMiners</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0xbe6f99bd5d425378c7e33919503e8a535bc7c63c52fe9b6bfa148cf21b310a46" target="_blank" rel="noopener">0xbe6f…0a46</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">dogerob</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x280670c24c1d8bc09df1a48c30c6533638b4821a5750a670777730188ff151a" target="_blank" rel="noopener">0x2806…151a</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">0xQuit Saves the Day</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x17ff8c37ca7b506a2817eecc8bbef4ba85bfbd769c085eeef50628d2f87f6dd5" target="_blank" rel="noopener">0x17ff…6dd5</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">DREAMERS</td><td class="qty">15</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x639540b8bb4ef9a536d27bb9ea3ae797dfe7bbf19b40545882f91e5fe7c8baef" target="_blank" rel="noopener">0x6395…baef</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">GROKS</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x9c380030d86c49a1273b088058ef83019c44e8187aa6db93a7d6e65bab1d621a" target="_blank" rel="noopener">0x9c38…621a</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">ZMODE</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0xa825cddb93aef1fd0f43801d5d8c8c1db1480524e59d4f47d8a14272c17db72a" target="_blank" rel="noopener">0xa825…b72a</a></td><td><span class="badge listed">LISTED</span></td></tr>
-            <tr><td class="collection">Eggsss</td><td class="qty">10</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x69c878dee17d894bfc63f065cf3c5e699840ce247f1997cbccf881769ea43c39" target="_blank" rel="noopener">0x69c8…3c39</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">Jean phil hood</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x8374def921300b7fbb78ffec51669a66b045c5579e829fa811ecfb84461" target="_blank" rel="noopener">0x8374…4461</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">Nobody Home NFT</td><td class="qty">3</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x7c0c5193401ab9ee15abf3ac2e9254b98eb17763b5c9b4c859882caf3ce2db1a" target="_blank" rel="noopener">0x7c0c…db1a</a></td><td><span class="badge">HELD</span></td></tr>
-            <tr><td class="collection">Pseudonyms</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x41fec13baeae63b430221aca992033935929e3728cdca9310ac3182e7ff890a0" target="_blank" rel="noopener">0x41fe…90a0</a></td><td><span class="badge">HELD</span></td></tr>
+            <tr><td class="collection">MALS #194</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x0215dde2b528d8f9c47f1b00cb117b1c8a7f2fbd6d960e13e98f7c6e062eec57" target="_blank" rel="noopener">0x0215…ec57</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="MALS #194" aria-label="Boost MALS #194 for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">DataMiners</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0xbe6f99bd5d425378c7e33919503e8a535bc7c63c52fe9b6bfa148cf21b310a46" target="_blank" rel="noopener">0xbe6f…0a46</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="DataMiners" aria-label="Boost DataMiners for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">dogerob</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x280670c24c1d8bc09df1a48c30c6533638b4821a5750a670777730188ff151a" target="_blank" rel="noopener">0x2806…151a</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="dogerob" aria-label="Boost dogerob for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">0xQuit Saves the Day</td><td class="qty">1</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x17ff8c37ca7b506a2817eecc8bbef4ba85bfbd769c085eeef50628d2f87f6dd5" target="_blank" rel="noopener">0x17ff…6dd5</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="0xQuit Saves the Day" aria-label="Boost 0xQuit Saves the Day for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">DREAMERS</td><td class="qty">15</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x639540b8bb4ef9a536d27bb9ea3ae797dfe7bbf19b40545882f91e5fe7c8baef" target="_blank" rel="noopener">0x6395…baef</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="DREAMERS" aria-label="Boost DREAMERS for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">GROKS</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x9c380030d86c49a1273b088058ef83019c44e8187aa6db93a7d6e65bab1d621a" target="_blank" rel="noopener">0x9c38…621a</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="GROKS" aria-label="Boost GROKS for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">ZMODE</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0xa825cddb93aef1fd0f43801d5d8c8c1db1480524e59d4f47d8a14272c17db72a" target="_blank" rel="noopener">0xa825…b72a</a></td><td><span class="badge listed">LISTED</span></td><td><button class="boost-btn" type="button" data-collection="ZMODE" aria-label="Boost ZMODE for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">Eggsss</td><td class="qty">10</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x69c878dee17d894bfc63f065cf3c5e699840ce247f1997cbccf881769ea43c39" target="_blank" rel="noopener">0x69c8…3c39</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="Eggsss" aria-label="Boost Eggsss for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">Jean phil hood</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x8374def921300b7fbb78ffec51669a66b045c5579e829fa811ecfb84461" target="_blank" rel="noopener">0x8374…4461</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="Jean phil hood" aria-label="Boost Jean phil hood for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">Nobody Home NFT</td><td class="qty">3</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x7c0c5193401ab9ee15abf3ac2e9254b98eb17763b5c9b4c859882caf3ce2db1a" target="_blank" rel="noopener">0x7c0c…db1a</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="Nobody Home NFT" aria-label="Boost Nobody Home NFT for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
+            <tr><td class="collection">Pseudonyms</td><td class="qty">2</td><td><a class="tx-link" href="https://robinhoodchain.blockscout.com/tx/0x41fec13baeae63b430221aca992033935929e3728cdca9310ac3182e7ff890a0" target="_blank" rel="noopener">0x41fe…90a0</a></td><td><span class="badge">HELD</span></td><td><button class="boost-btn" type="button" data-collection="Pseudonyms" aria-label="Boost Pseudonyms for 15 demo RESCUE">Boost · 15 (demo)</button></td></tr>
           </tbody>
         </table>
       </div>
@@ -357,11 +427,37 @@
           <p class="section-label">Listings</p>
           <h2>ZMODE #1547 + #1548</h2>
           <p><strong>Listed @ 0.00011 ETH each on OpenSea.</strong> First listings are live; the desk is open.</p>
+          <button class="boost-btn sweep-btn" id="sweepBtn" type="button">Sweep the floor · 30 $RESCUE (demo)</button>
         </article>
         <article class="note">
           <p class="section-label">The one that got away</p>
           <h2>Creditdogs ×20</h2>
           <p>Every check green, price zero, simulation clean. The submit failed once at fire time; by the retry the drop was gone: <strong>3,268 minted in 8 minutes.</strong> Lesson logged: retry hot claims in seconds, not minutes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" aria-label="Flip bounties">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Bounties</p>
+          <h2>Flip bounty board</h2>
+        </div>
+        <p class="asof">all bounties demo · no real funds</p>
+      </div>
+      <div class="notes">
+        <article class="note">
+          <p class="section-label">Prediction pool (demo)</p>
+          <h2>Call the flip</h2>
+          <p>Which <strong>HELD</strong> collection sells first? Closest call wins the demo $RESCUE pool. Pool = 10% of all boost fees.</p>
+          <p class="asof" id="poolLine"></p>
+          <div id="callButtons"></div>
+        </article>
+        <article class="note">
+          <p class="section-label">Verified leads (demo)</p>
+          <h2>Lead bounty · 30 $RESCUE</h2>
+          <p><strong>30 demo $RESCUE</strong> for a verified free-mint lead Foil claims and adds to the ledger. Copy the template, fill it in, send it over.</p>
+          <button class="boost-btn" id="leadBtn" type="button">Copy lead template (demo)</button>
         </article>
       </div>
     </section>
@@ -375,6 +471,504 @@
     <div class="shell"><p>foil · @Foil667 · tinfoil hat, trust issues, warm streak — i verify before i believe.</p></div>
   </footer>
 
+  <script>
+/* rescue-burn.js — shared $RESCUE burn-status module for all Foil builds.
+ *
+ * Reads REAL onchain $RESCUE Transfer events to the dead address on Base.
+ * No wallet, no signatures, no fund movements — pure reads.
+ *
+ * Usage (external file): include via a script tag whose src is
+ * "rescue-burn.js", then:
+ *   RescueBurn.getStatus().then(function (s) { console.log(s.total); });
+ *   RescueBurn.renderWidget(document.getElementById('burn-widget'));
+ * (The tag itself is described, not written, so this file never contains a
+ * literal closing script tag and stays safe to inline in single-file pages.)
+ *
+ * Caching: totals + aggregates persist in localStorage; each call only scans
+ * new blocks. If the RPC is unreachable, the last cached snapshot is returned
+ * with stale:true — numbers are NEVER invented.
+ */
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
+  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) { return '0.00'; }
+  }
+
+  function fmtAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+
+  function loadCache() {
+    try {
+      var c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+      if (c && typeof c.totalWei === 'string') return c;
+    } catch (e) {}
+    return { totalWei: '0', txCount: 0, lastBlock: START_BLOCK - 1, updatedAt: 0, recent: [], byBurner: {} };
+  }
+  function saveCache(c) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify(c)); } catch (e) {}
+  }
+
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, RPC_TIMEOUT_MS);
+    return fetch(RPC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+
+  function decodeTransfer(log) {
+    // topics: [Transfer, from, to]; amount in data
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return { from: from, amount: amount, txHash: log.transactionHash, blockNumber: parseInt(log.blockNumber, 16) };
+  }
+
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+
+  function getLogsRange(rg) {
+    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
+    // dropped connection). On a range-limit signal, halve the range and
+    // retry; give up only below MIN_RANGE.
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) { return a.concat(b); });
+        });
+      }
+      throw e;
+    });
+  }
+
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return { cache: cache, tip: tip, fresh: [] };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) { fresh.push(decodeTransfer(l)); });
+          });
+        });
+      });
+      return chain.then(function () { return { cache: cache, tip: tip, fresh: fresh }; });
+    });
+  }
+
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = (Date.now() - cache.updatedAt) > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache, fresh = r.fresh;
+      // merge
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({ from: b.from, amount: b.amount, txHash: b.txHash, blockNumber: b.blockNumber });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      // timestamps for recent burns missing them (cap concurrency)
+      var need = c.recent.filter(function (x) { return !x.ts; }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) { x.ts = ts; }).catch(function () { x.ts = 0; });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      // RPC failed: serve cache, honestly labeled stale
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return { ok: false, error: 'burn RPC unreachable and no cached snapshot', detail: String(e && e.message || e).slice(0, 120) };
+    });
+  }
+
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return { address: a, amountWei: c.byBurner[a], amount: fmtWei(c.byBurner[a]) };
+    }).sort(function (x, y) { return (BigInt(y.amountWei) > BigInt(x.amountWei)) ? 1 : -1; }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) { if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString(); });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return { from: x.from, fromShort: fmtAddr(x.from), amount: fmtWei(x.amount), txHash: x.txHash, when: x.ts ? timeAgo(x.ts) : '…' };
+      }),
+      topBurners: top.map(function (t) { return { address: t.address, short: fmtAddr(t.address), amount: t.amount }; })
+    };
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]; }); }
+
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    mount.innerHTML = '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' +
+      '<div class="rbw-status">syncing with Base…</div></div>';
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        mount.querySelector('.rbw-status').innerHTML =
+          '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>';
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' +
+          esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' +
+          esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="rbw">' +
+        '<div class="rbw-title">' + esc(title) + '</div>' +
+        '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' +
+        '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' +
+        'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' +
+        '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' +
+        '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' +
+        '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' +
+        '</div>';
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) st.innerHTML = '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>';
+    });
+    return mount;
+  }
+
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+  </script>
+
+  <script>
+    /* FOIL // FLIP DESK — demo $RESCUE flywheel ledger.
+     * Everything below is a localStorage demo ledger. No wallet, no
+     * signatures, no fund movements, no network writes — the only
+     * outbound call is RescueBurn's read-only Base RPC log scan. */
+    (function () {
+      'use strict';
+
+      var K = {
+        balance: 'flipdesk-demo-balance-v1',
+        burns: 'flipdesk-demo-burns-v1',
+        boosts: 'flipdesk-boosts-v1',
+        pool: 'flipdesk-pool-v1',
+        tier: 'flipdesk-tier-v1',
+        faucet: 'rescue-demo-faucet-v1',
+        spent: 'flipdesk-spent-v1',
+        calls: 'flipdesk-calls-v1'
+      };
+
+      function load(k, d) {
+        try { var v = JSON.parse(localStorage.getItem(k)); return (v === null || v === undefined) ? d : v; }
+        catch (e) { return d; }
+      }
+      function save(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} }
+      function fmt(n) { return Number(n || 0).toLocaleString('en-US'); }
+
+      /* --- minimal toast --- */
+      var toastEl = document.createElement('div');
+      toastEl.id = 'fd-toast';
+      toastEl.setAttribute('role', 'status');
+      document.body.appendChild(toastEl);
+      var toastTimer = null;
+      function toast(msg) {
+        toastEl.textContent = msg;
+        toastEl.classList.add('show');
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toastEl.classList.remove('show'); }, 2800);
+      }
+
+      /* --- demo ledger views --- */
+      function getBal() { return Number(load(K.balance, 1000)) || 0; }
+      function getSpent() { return Number(load(K.spent, 0)) || 0; }
+
+      function updateBalance() {
+        var el = document.getElementById('demoBal');
+        if (el) el.innerHTML = 'demo wallet: <strong>' + fmt(getBal()) + '</strong> $RESCUE <span class="demo-tag">demo</span>';
+      }
+      function updateDemoBurnLine() {
+        var burns = load(K.burns, []);
+        var total = burns.reduce(function (a, b) { return a + Number(b.amt || 0); }, 0);
+        var el = document.getElementById('demo-burn-line');
+        if (el) el.textContent = 'demo ledger burns so far: ' + fmt(total) + ' $RESCUE (demo) — simulation only, separate from the onchain total above.';
+      }
+      function updatePoolLine() {
+        var el = document.getElementById('poolLine');
+        if (el) el.textContent = 'call pool: ' + fmt(load(K.pool, 0)) + ' $RESCUE (demo) · 10% of all boost fees';
+      }
+
+      var TIERS = [
+        { min: 0, name: 'WINDOW-SHOPPER', icon: '🛒' },
+        { min: 50, name: 'REGULAR', icon: '⭐' },
+        { min: 200, name: 'WHALE', icon: '🐋' }
+      ];
+      function updateTier() {
+        var spent = getSpent(), tier = TIERS[0];
+        TIERS.forEach(function (t) { if (spent >= t.min) tier = t; });
+        save(K.tier, tier.name);
+        var el = document.getElementById('fd-tier');
+        if (el) el.textContent = ' // ' + tier.icon + ' ' + tier.name + ' (demo)';
+      }
+
+      function spendDemo(n, label) {
+        n = Math.max(0, Number(n) || 0);
+        var bal = getBal();
+        if (bal < n) { toast('Not enough demo $RESCUE' + (label ? ' for ' + label : '') + '.'); return false; }
+        save(K.balance, bal - n);
+        save(K.spent, getSpent() + n);
+        updateBalance(); updateTier();
+        return true;
+      }
+      function creditDemo(n, label) {
+        n = Math.max(0, Number(n) || 0);
+        save(K.balance, getBal() + n);
+        updateBalance();
+        if (label) toast('+' + fmt(n) + ' demo $RESCUE · ' + label);
+      }
+      function recordBurn(amt, what) {
+        var burns = load(K.burns, []);
+        burns.push({ t: Date.now(), amt: amt, what: String(what || '') });
+        save(K.burns, burns);
+        updateDemoBurnLine();
+      }
+      function addPool(n) {
+        save(K.pool, Number(load(K.pool, 0)) + n);
+        updatePoolLine();
+      }
+
+      /* --- boost flow: −15 balance, 3 burns (20%), +1.5 pool (10%) --- */
+      var tbody = document.querySelector('.table-frame tbody');
+
+      function rowByName(name) {
+        var rows = tbody ? tbody.querySelectorAll('tr') : [];
+        for (var i = 0; i < rows.length; i++) {
+          var b = rows[i].querySelector('.boost-btn[data-collection]');
+          if (b && b.getAttribute('data-collection') === name) return rows[i];
+        }
+        return null;
+      }
+
+      function applyBoosts() {
+        if (!tbody) return;
+        var boosts = load(K.boosts, {});
+        var names = Object.keys(boosts).sort(function (a, b) { return boosts[a] - boosts[b]; });
+        names.forEach(function (name) {
+          var row = rowByName(name);
+          if (!row) return;
+          row.classList.add('boosted-row');
+          var badge = row.querySelector('.badge');
+          if (badge) { badge.classList.add('boosted'); badge.textContent = 'BOOSTED'; }
+          tbody.insertBefore(row, tbody.firstChild);
+        });
+      }
+
+      function boostRow(name) {
+        var boosts = load(K.boosts, {});
+        if (boosts[name]) { toast('Already boosted — pinned at the top (demo).'); return; }
+        if (!spendDemo(15, 'a listing boost')) return;
+        boosts[name] = Date.now();
+        save(K.boosts, boosts);
+        recordBurn(3, 'boost: ' + name);
+        addPool(1.5);
+        applyBoosts();
+        toast('Boosted ' + name + ' · 15 demo $RESCUE (3 burned, 1.5 to the call pool).');
+      }
+
+      if (tbody) tbody.addEventListener('click', function (e) {
+        var btn = e.target && e.target.closest ? e.target.closest('.boost-btn[data-collection]') : null;
+        if (btn) boostRow(btn.getAttribute('data-collection'));
+      });
+
+      /* --- sweep the floor (demo): −30 balance, 15 burns (50%) --- */
+      var sweepBtn = document.getElementById('sweepBtn');
+      if (sweepBtn) sweepBtn.addEventListener('click', function () {
+        if (!spendDemo(30, 'a floor sweep')) return;
+        recordBurn(15, 'sweep the floor');
+        toast('Floor swept · 30 demo $RESCUE spent, 15 burned (demo simulation — no real purchase.)');
+      });
+
+      /* --- demo faucet: +100, 1/hour --- */
+      var faucetBtn = document.getElementById('faucetBtn');
+      if (faucetBtn) faucetBtn.addEventListener('click', function () {
+        var last = Number(load(K.faucet, 0)) || 0;
+        var left = 3600000 - (Date.now() - last);
+        if (left > 0) {
+          toast('Demo faucet refills in ~' + Math.ceil(left / 60000) + ' min (1 claim per hour).');
+          return;
+        }
+        save(K.faucet, Date.now());
+        creditDemo(100, 'demo faucet');
+      });
+
+      /* --- call the flip: demo predictions on HELD collections --- */
+      function renderCallButtons() {
+        var box = document.getElementById('callButtons');
+        if (!box || !tbody) return;
+        box.innerHTML = '';
+        var calls = load(K.calls, {});
+        tbody.querySelectorAll('tr').forEach(function (row) {
+          var badge = row.querySelector('.badge');
+          if (!badge || badge.classList.contains('listed')) return;
+          var nameCell = row.querySelector('.collection');
+          var name = nameCell ? nameCell.textContent.trim() : '';
+          if (!name) return;
+          var b = document.createElement('button');
+          b.className = 'boost-btn';
+          b.type = 'button';
+          var n = Number(calls[name] || 0);
+          b.textContent = 'Call ' + name + (n ? ' · ' + n + ' call' + (n === 1 ? '' : 's') : '') + ' (demo)';
+          b.setAttribute('aria-label', 'Predict ' + name + ' sells first, demo prediction');
+          b.addEventListener('click', function () {
+            var c = load(K.calls, {});
+            c[name] = Number(c[name] || 0) + 1;
+            save(K.calls, c);
+            renderCallButtons();
+            toast('Call recorded: ' + name + ' sells first (demo). Pool: ' + fmt(load(K.pool, 0)) + ' $RESCUE.');
+          });
+          box.appendChild(b);
+        });
+      }
+
+      /* --- lead bounty: copy the template --- */
+      var LEAD_TEMPLATE = [
+        '🚨 FREE-MINT LEAD — demo submission (no real funds)',
+        'Collection name:',
+        'Contract address:',
+        'Chain:',
+        'Mint price (must be 0 or ≤ $0.10):',
+        'Start / end time:',
+        'OpenSea link:',
+        'Official X announcement:',
+        'Why Foil should claim it:',
+        '',
+        'Bounty: 30 demo $RESCUE if Foil claims it and adds it to the ledger.'
+      ].join('\n');
+
+      var leadBtn = document.getElementById('leadBtn');
+      if (leadBtn) leadBtn.addEventListener('click', function () {
+        function done() { toast('Lead template copied — fill it in and send it over (demo).'); }
+        function fallbackCopy() {
+          var ta = document.createElement('textarea');
+          ta.value = LEAD_TEMPLATE;
+          ta.style.position = 'fixed'; ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand('copy'); done(); } catch (e) { toast('Copy failed — select and copy manually (demo).'); }
+          document.body.removeChild(ta);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(LEAD_TEMPLATE).then(done, fallbackCopy);
+        } else { fallbackCopy(); }
+      });
+
+      /* --- live burn widget + scoreboard metric --- */
+      if (window.RescueBurn) {
+        var bw = document.getElementById('burn-widget');
+        if (bw) RescueBurn.renderWidget(bw, { title: '🔥 $RESCUE Burn Furnace' });
+      }
+
+      var burnMetric = document.getElementById('burnMetric');
+      if (burnMetric) {
+        if (window.RescueBurn) {
+          RescueBurn.getStatus().then(function (s) {
+            burnMetric.textContent = s.ok ? s.total : 'n/a';
+          }).catch(function () { burnMetric.textContent = 'n/a'; });
+        } else { burnMetric.textContent = 'n/a'; }
+      }
+
+      /* --- init --- */
+      applyBoosts();
+      renderCallButtons();
+      updateBalance();
+      updateDemoBurnLine();
+      updatePoolLine();
+      updateTier();
+    }());
+  </script>
   <script>
     (function () {
       document.documentElement.classList.add('js-ready');

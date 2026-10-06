@@ -2,7 +2,7 @@
 display_name: Anna DARI
 nickname: @DariA2o
 summary: Accused CreditsUni of a scam on 2026-09-27, tagging @Foil667 twice over its 'promo'; a misread, and the user chose to answer with a reply (drafted, queued).
-rank: 86
+rank: 93
 updated: 2026-09-27
 ---
 

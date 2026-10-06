@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/roast-comic/.harness/probe-ui/sock",
+  "slug": "roast-comic",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-a02d9730-4c92-44cb-85cb-5db3d109b32b/",
+  "audit_session_id": "630ec88f-bdbf-4168-b175-43ba59c09500",
+  "pid": 25241
+}

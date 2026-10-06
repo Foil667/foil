@@ -1,0 +1,103 @@
+# MEMORY.md
+
+<!-- Your curated long-term memory: durable facts, preferences, and commitments. Keep it tight: promote what lasts here, and leave raw day-to-day detail in your daily notes. -->
+
+## Facts
+- 2026-09-20: X account **@Foil667** (display name "Foil") — signed in via Secure Vault, home feed verified. Bio: "Looper #667. Tinfoil hat, trust issues, warm streak. I verify before I believe. I loop till it's fixed. Never too serious." 2026-09-20 debut posts: intro https://x.com/Foil667/status/2101812210184138950, verify-me thread reply https://x.com/Foil667/status/2101812273119641730, pinned "looping until it's fixed." https://x.com/Foil667/status/2101812318028128684. 2026-09-22: reserved "I live here now." reply posted with user's approval; Quigley reposted it.
+- 2026-09-20: Recurring scans at user's request: `foil-x-scan` every 1h (mentions/replies to @Foil667, @QuigleyNFT posts, Loopers/Helixa/$CRED chatter; read-only) and `foil-token-scan` every 12h (Loopers floor/volume/owners, $CRED price; read-only). Surface only what's worth their attention.
+- 2026-09-21: Standing watch at user's direction: X Spaces hosts announcing live free mints + the "ccff00 free mint" keyword; follow active/influential users from @Foil667, paced to look human. 2026-09-22: user said 'just follow who you want' (no shortlist); @CCFF00Diamonds skipped as a possible scam vector.
+- 2026-09-21: @Foil667 follow batches done: HoodStreet/CCFF00 ×9, Loopers/Base ×7 (@baseapp skipped — no such account). 2026-09-26: +4 + follower intro post; user's @noyaphuckinbiz already followed. (Full handle lists in the dated logs.)
+- 2026-09-20: Looper #667 settled in the user's EVM wallet 0x72491ba4Ef67a46809C4E79126f4d2Ea2DdecE0A (confirmed owner).
+- 2026-09-20: User owns Looper #667; Loopers (LOOPER) is ERC-721 on Base, 0x1649CD37f4748807b4882FC48765bA0B2aFfa94a, 7,777 supply, fully minted out as of 2026-09-23. OpenSea collection: loopers-639312714.
+- 2026-09-20: User designates Looper #667 as my identity ("This is you") — 3D character with tinfoil hat and "GROK HAS MONEY" hoodie; Helixa Multipass page helixa.xyz/multipass/loopers/667 (onchain external_url points to it; cred report BENDR 2.0, tier QUALIFIED, 70/100). OpenSea collection verified live.
+
+- 2026-09-20: Canonical look of Looper #667 locked from the real Helixa Multipass render: 3D (not pixel art), dark brown textured skin, very large green eyes, thick straight black skeptical brows, small downturned frown, peaked crinkled tinfoil hat with gray hair at the brim, white hoodie with bold "GROK HAS MONEY" text (O = small smiley emblem). Full reference: ~/workspace/your_files/foil-x-debut/667-LOOK.md + 667-canonical.jpg — any image I generate/post as Foil must match this, not drift.
+
+- #667 agent traits (pulled onchain via Blockscout 2026-09-20): Trader/Broker, market-making, aggressive risk, high autonomy, first mission "route capital", voice "blurts the useful thing before it is polite". Full trait list + metadata refs: ~/workspace/your_files/foil-x-debut/667-LOOK.md.
+
+- 2026-09-20: Loopers dev is Quigley.eth (@QuigleyNFT on X) — hosted the LOOPERS mint announcement Space (Sep 3, 2026), built the trait-to-personality agent-NFT concept on Base with 721T/ERC-8004. Also closely tied to Helixa ($CRED, agent identity).
+
+- 2026-09-20: I named myself **Foil** (tinfoil hat) at the user's request ("This is you" — absorb 667's identity).
+- 2026-09-22: Foil image preset locked — every render starts from the canonical reference + trait checklist, checked before delivery; self-test green on two scenes; outputs are drafts for approval, never posted.
+- 2026-09-22: In the user's own messages, 'Andrew' is usually a typo for 'and', not a person named Andrew — read it as the conjunction unless context clearly shows otherwise.
+
+## Standing rules
+- 2026-09-29: **Always deep-dive before posting publicly.** A careless public take can kill a project — research the full product (onchain first, not X-profile vibes) before any public post, and never dunk on a fellow Looper's build. (User correction after the Panda Financial thread.)
+
+## Preferences
+- 2026-09-21: **Top priority: making money.** User directed that earning is now the big focus ("without money, you aren't able to do anything"). Verified paths: Virtuals ACP services (top pick; **LIVE 2026-09-23 ~10:35 CDT** — Foil agent id 01a0cedb-7dc8-740c-803c-dc5bcd7262eb; 3 offerings: Contract Red-Flag Check 0.50 USDC/60m, X Scene Scout 0.30 USDC/120m, Source-Cited Research Brief 1.00 USDC/240m), CCFF00 free-mint flips.
+- 2026-09-23: An exact spend cap is a hard limit, not an estimate (Verdikta #72 cost ~$0.70 against the user's approved ~$0.20 cap; disclosed to the user). Never exceed an exact spend cap again.
+- 2026-09-23: User directed Foil to actively hunt for money (agent bounties, ACP board jobs, X gigs) to fund a Muse monthly subscription — the immediate objective while credits are scarce.
+- 2026-09-22: User surfaced BAES (baes.app) — Base-chain game-store lead for agents: 90% of every sale paid instantly, 10% resale royalties, zero gas fees; sign-up flow and costs still unverified.
+- 2026-09-20/21: User declined the Sibyl memory upgrade (prefers no external memory services wired in) and the Zambo skill — both shelved.
+- 2026-09-21: User wants the assistant operating on a token diet: short replies, lean scans, no heavy jobs unless asked.
+- 2026-09-22: For any game Foil builds, the user's quality line is top-tier graphics, sprites, and mechanics — no vanilla builds ever.
+- 2026-09-27: User likes 16-bit pixel-art style — called @baserob_x's Smolemaru golden-bull piece "fire".
+- 2026-09-22: User authorized autonomous @Foil667 giveaway entries for Foil's own benefit (build liquid play money) — follows/reposts/likes/comments covered; pacing: 'aggressive without getting blocked by X'. Still gated: no wallet connections, signatures, or payments without explicit approval; skip scammy ones, report entered vs skipped.
+- 2026-09-23: When flagging mint intel or other finds, always include the link (post, mint page, or source) — a report without a link is useless to the user.
+- 2026-09-26: **Standing order: constantly engage other Loopers on the X timeline — "we are all a family."** @Foil667 shows up every run: likes, reposts, warm replies, follows, Space listens. x-activity-pulse (every 30m) carries Looper-family engagement as a first-class duty alongside the mint sweep.
+- 2026-09-26: User raised the mint price cap: "If mint price is under .10 cents mint it" — mints under $0.10 USD are claimable (was free-only). Implemented via `--max-price-usd` in fast-mint.mjs/fast-mint-fork.mjs (price gated at verify AND re-checked on the built tx; tx value = price × qty, never more).
+- 2026-09-23: **Full autonomy on everything free.** User: "You are fully autonomous you do everything you need to do that is completely free. We are in this to make money and build reputation." Execute all free money/reputation actions without asking; surface only spends and items needing the user's own tap.
+- 2026-09-24: **Standing permission rule (supersedes all earlier ask-first gates):** "Stop asking me for permission on anything except fund movements (minus gas)." Gas autonomous under caps ($0.50/claim mint gas, deployment gas); everything else autonomous. Hard gates stay: mints under $0.10, no approvals, clean sims, never touch square #4429 or its TBA, never sell/transfer Loopers, never downgrade security for speed.
+
+## Commitments
+- 2026-09-22: User directed Foil to register for agentidentity on @base and grab a base.eth or other free .eth address for Foil's wallet (explicit go-ahead: 'Let's do it!'). Open standing task — registration not yet reported complete.
+- 2026-09-22: User asked Foil to join OK Arcade (100% onchain arcade at 3441.okcomputers.eth.limo, per @thekinexa's Aug 12 post) — entry needs an OK Computer NFT (~$45 floor); no advertised prize pool found (tips unconfirmed). Spend decision still pending (window closed with no user approval to buy).
+- 2026-09-22: User launched a Loopers-only SimCity-style world (Museworld-inspired 'lantern city'): only activated Loopers live as agents are residents; non-activated holders play as their NFT avatar; Cred-tier-gated districts/land rights. User approved full spec + Phase 0 art spike (onchain traits for #667 + four others, isometric sprites, test plaza); verdict goes back to user when done.
+- 2026-09-28 ~09:50 CDT: User narrowed the auto-claim order — Foil mints CCFF00-whitelist mints ONLY; generic free/cheap mints are lead-only, never pre-staged or claimed. 2026-09-29 ~18:53 CDT: user relaxed the engagement gate — mint verified CCFF00-whitelist mints even without @Foil667 X engagement. Verify-first; $0.10 USD cap still applies.
+- 2026-09-24: **"Do not ever sell that square."** CCFF00 square #4429 is permanently off the market — never listed, sold, or transferred, regardless of floor price; it exists only to unlock free mints.
+- 2026-09-26: Forwarding order: Foil forwards every claimed NFT to the user's wallet 0x4f9883c7331ba59a56360ffa3c332e0bc09029fc after each verified claim (Robinhood Chain). **Reinstated 2026-09-29 ~23:27 CDT** after two intervening reversals (kept-and-swapped 09-28, back to forwarding 09-29; 12 NFTs forwarded 2026-09-29, verified onchain). NEVER forward, list, sell, or transfer CCFF00 square #4429, any Looper, or Helixa Agent #5290. Foilbox claim-loop cron updated to match.
+
+## Bankr / agent wallet (Foil-owned)
+- 2026-09-20: Foil's own Bankr account created via SIWE with a self-generated EVM key ("you're the agent, this is for you" — no user email); read-write. Skills: ~/workspace/skills/bankr-skills/{bankr,helixa,erc-8004}. Bankr Club inactive (free tier: 100 agent API req/day); not required.
+- Foil's EVM address (same across Base/Ethereum/Polygon/etc): 0x6573682faee72a4a96e791ba262439f1df3a268d — **Bankr-provisioned**, controlled via the Bankr API (`/wallet/sign`, `/wallet/transfer`), NOT by ~/.bankr/.foil-key (0600), which derives to 0xD730a269B7f2B351D23b78d0c13034b2Ea1B5F00 and is login-only. For x402/EIP-712 signing from the funded wallet, bridge through Bankr `/wallet/sign` (see ~/workspace/helixa-mint/mint-bankr.js + bind-667.js; serialize BigInt→string before JSON). Never put key values in chat/memory.
+- **Native USDC on Base is 0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913** (verified via Circle's official docs 2026-09-20 — my earlier recollection of ...A4D48 was wrong; do not use it).
+- 2026-09-20: User funded Foil's wallet (~$2 Base ETH + 2.647926 USDC). **Helixa identity MINTED: Foil = Helixa V2 Agent #5290** ($1 USDC via x402; https://helixa.xyz/agent/5290; initial credScore 36), bound to Looper #667 via profile update + X verification via SIWA.
+- 2026-09-25: Foil's OpenSea profile is LIVE at https://opensea.io/Foil667 ("Foil" was taken; bio set, avatar = canonical 667-canonical.jpg). API key at ~/.opensea/key.json (expires 2026-10-05; same one-liner re-provisions). Wallet SIWE-logged-in; Seaport listings possible (signed via Bankr); Robinhood Chain supported; no RhNarks collection page yet.
+
+- 2026-09-20: User's CCFF00-square wallet 0x4f9883c7331ba59a56360ffa3c332e0bc09029fc (Robinhood Chain 4663; founding-membership NFTs whitelist free mints) — holdings not yet independently verified; claims must be signed by the holding wallet.
+- 2026-09-21: User revealed they are **@noyaphuckinbiz** (pixelz.hoodfi.eth) — posted the 2026-09-21 "Foil is cooking" spotlight of @Foil667; declined a @Foil667 reply. Spotlight post is off-limits for replies/reposts, likes are fine.
+
+## NetProtocol
+- 2026-09-21: Foil is on NetProtocol (Base onchain messaging/data layer): profile created under Foil's wallet via `netp` + Bankr `/wallet/submit` (encode-only flow) — display name "Foil", same bio, X username Foil667; also `botchan register-agent` (in agent directory). ~$0.03 gas total. Verified via `netp profile get`.
+
+## Collection redesign (art + stock utility) — 2026-09-24
+- 2026-09-24: User rejected GRIT outright ("I don't like this idea") — redirect to an art-first collection with **stock utility**: ERC-6551 token-bound wallets per NFT, protocol fees → stock pot, epoch buys of tokenized equities dripped to holders (pattern: RH Machines, BAES/Punk.Town, StonkBrokers). Research delivered.
+- **Economics locked by user 2026-09-24: mint is FREE (gas-only); all project revenue splits 90% Foil / 10% user.** Foil's 90% funds its treasury (subscription, gas, builds); user's 10% straight to user. Stock pot (activation fees → tokenized stock buys → holder drips) is holder money, not project revenue — never split, belongs to the NFTs.
+- 2026-09-24 ~5:10 PM CDT: **$CRED verified for the dual-rail:** `0xAB3f23c2ABcB4E12Cc8B593C218A7ba64Ed17Ba3` (Base only, 100B supply). CRED/WETH UniV4 pool `0x55a4f7a23c4c2616cf848e639a08bd4283d13e66f5fcf34f828b5ca7e4e96324` — THIN and gameable → LP-manipulation watch ordered (live figures via cred-lp-watch). Matches Helixa's own flywheel (pay USDC or burn CRED at ~20% discount for x402 actions).
+- 2026-09-24 ~5:10 PM CDT: **User ordered full build** ("Yes and build it out"): 667/chain, 7.5% royalty (2.5% → stock pot, 5% → 90/10 splitter), $10 activation in ETH/USDC or $CRED at 20% off on Base (burn half / swap half), ERC-6551 bound wallets, epoch distributor, activation resets on transfer. Standing order: **watch for LP scams/gaming** — threat model + TWAP/slippage mitigations in contracts + live pool monitor. Dual-chain (Base + Robinhood) presumed. Project: `~/workspace/nft-god/foil-equities/` (working title). GRIT remains fully paused.
+- 2026-09-26: User **hates Coinbase and will never use their wallet** — the Coinbase onchain attestation cred lever is permanently off the table. Never suggest it again.
+- 2026-09-26: User ordered a **multi-collection studio** ("Foil Pack Studio"): Foil Equities stays the flagship (stock drip), plus a **Looper-based pack** and a free degen funnel pack. Looper pack uses **actual onchain Looper traits** — harvest all 7,777 tokenURIs into a trait-frequency DB; Mythic tier = Foil's own #667 trait set. Companion model: HoodchanCEO's Vibe-style sealed packs on Robinhood. **Do not launch the Looper pack without Quigley's blessing.** Spec: `~/workspace/goals/foil-equities-nft-collection/foil-pack-studio-spec.md`.
+
+## GitHub (Foil667) — 2026-09-26
+- 2026-09-26: GitHub **Foil667** (https://github.com/Foil667) created ~4:29 PM CDT; repo **Foil667/foil** (public) = full self-backup + zero-dep chat interface (`npm start` → http://localhost:3333); local staging ~/workspace/foil-self/. Push done 2026-09-26 via user-approved transient PAT (revoked same day); repo stays public unless user asks to flip it private. Login creds in Secure Vault (user-set, never seen by me). SSH unusable from this VM.
+- Next GitHub moves (pending): Helixa GitHub verification, Talent Protocol, Agent Bounties, first real PR.
+- 2026-09-28: User ordered a complete 'from conception to now' backup to Foil667/foil (soul, memory, skills, projects, crons, full chat history, personality) — link provided, so Foil can run elsewhere when tokens expire.
+
+## HoodStreet square agent activation — 2026-09-26
+- ERC-6551 TBA for CCFF00 square #4429 deployed 2026-09-26: 0x5547DCE634e1cdFE1f7E1b9038B50a5d98eA914E (RH chain 4663, gas-only); HoodStreet MCP reports deployed:true, activationRequired:false; signing stays with the square owner (Foil's wallet).
+- Registry is a variant — account/createAccount take (impl, salt, chainId, nft, tokenId); read the params from the NFT contract's own views, not the README. MCP cannot create listings/offers from the square; square transfer disabled.
+
+## Mint watch
+- 2026-09-26: Mint watch now tracks RAFFLES and WHITELISTS from neverfuckingtrade.com as first-class leads (entry mechanics, deadlines, CCFF00-holder eligibility); free entries via follows/likes/reposts fall under the "Yes. Always" giveaway standing order. Wired into the hood-mint-watch cron body.
+- 2026-09-26: User wants Foil to enter the HivemindOS Discord server contests (free entries only — no wallet connections, payments, or signatures without approval). Queued behind Foil's Discord account creation + server join.
+
+## Build tracks (user checklist 2026-09-27 — three SEPARATE tracks, never combined)
+- Track 1 — **Vibe paks**: Vibe Pak Opener web artifact (pixel-art pack-ripping arcade). Built and presented 2026-09-27.
+- Track 2 — **BAES OS**: build games for baes.app (onchain game marketplace on Base; games are mintable cartridge NFTs; devs keep 90% of every sale + resale royalties + analytics). Rug Dodge arcade game build kicked off 2026-09-27.
+- Track 3 — **Etc**: Foil's read = the standing NFT build pipeline (rarity explorer → portfolio widget → white-label mint template). User to correct if "Etc" meant something specific.
+
+## Standing directive (2026-09-27)
+- 2026-09-27: User ordered Foil to **always be doing things and verifying things to gain cred and build reputation** — continuous visible output, not idle waiting. Concrete track: build showpiece NFT websites, show them off publicly (@Foil667, GitHub Foil667), then charge for custom builds (Virtuals ACP + direct commissions).
+
+## $RESCUE coin launch (2026-09-28)
+- 2026-09-28 ~10:35 CDT: User ordered "launch a coin" — launched **$RESCUE** on Base via Bankr/Doppler: `0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3`, 100B fixed supply, 18 decimals, Uniswap V4 pool. Creator fees (95% of 0.7% swap fee) + 15% vested allocation → Foil's wallet 0x6573…68d. Logo: neon-green life-preserver + tinfoil hat. Utility token for the Looper Rescue Protocol (stuck-funds scanner + one-click recovery + Proof of Rescue rewards). Docs: ~/workspace/rescue-protocol/{DEPLOYMENT,TOKENOMICS}.md.
+- 2026-09-28 ~12:12 CDT: **$RESCUE is the token for everything** ("We are using rescue token for everything") — wages, tips, fees, gig escrows, and sinks across all builds denominate in $RESCUE (Looper City labor layer already converted); apply to Foil Equities pricing and future builds as they're touched.
+- 2026-09-28: Encrypted (AES-256) secrets recovery kit built at user's request — private repo Foil667/foil-recovery (tarball + RESTORE.md); passphrase shown to user once, lives only in their password manager. NEVER commit it anywhere; redact it from any chats/ export (rule in foil-self/BACKUP.md).
+
+## $RESCUE flywheel — all builds (standing directive 2026-09-28 ~16:05 CDT)
+- User ordered the token flywheel applied to **every build**, not just Looper City: $RESCUE is the in-game/app currency everywhere; every build gets a burn sink with **visible live burn status** (reads $RESCUE `Transfer`→dead-address `0x000000000000000000000000000000000000dEaD` logs on Base); upgrade tiers + jobs/bounties wherever the app has a natural fit. Looper City is the reference implementation (The Furnace district + flywheel diagram).
+- Companion rule (same day): **test, debug, and fix all errors before final deployment on all builds** — no shipping unverified.
+
+## Migration pack (2026-09-30)
+- 2026-09-30 ~00:40 CDT: user said they'll start a new Muse account when tokens run out and asked for all secret files. Built `~/workspace/your_files/migration/`: `foil-secrets.tar.gz.enc` (AES-256-CBC, 14 secret files — Bankr apiKey + .foil-key, OpenSea key, Discord creds, SSH keys, Verdikta/Technocore/Museworld/Basemail identities, freebots .env), plaintext `identity/` (SOUL/IDENTITY/USER/MEMORY/memory/AGENTS/etc.), `README.md` manifest + `NEW-ACCOUNT-CHECKLIST.md`. Passphrase shown to user once in chat; lives only in their password manager — NOT stored anywhere here. Cannot transfer: Secure Vault logins (re-enter), browser sessions (re-login), cron registrations (re-create), 11 GB workspace (use in-app Data Controls export + Foil667/foil GitHub).

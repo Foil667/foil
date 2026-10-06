@@ -1,9 +1,9 @@
 ---
 display_name: 40yrdegen
 nickname: @40yrdegen
-summary: Serious collector who lives in the HoodStreet Spaces 24/7; followed from @Foil667 at the user's direction as part of the mint-intel watch. Renamed from @NZNFTguy on 2026-09-23.
-rank: 10
-updated: 2026-09-23
+summary: Serious collector in the HoodStreet Spaces 24/7; followed from @Foil667 at the user's direction for mint intel. 2026-10-05: shows as deleted/suspended on X.
+rank: 170
+updated: 2026-10-05
 ---
 
 # 40yrdegen
@@ -14,11 +14,13 @@ updated: 2026-09-23
 - On 2026-09-21 the user approved following him from @Foil667, paced so it reads as a real account rather than a bot; the follow completed that day. (MEMORY.md#L9)
 - The handle changed to @40yrdegen on 2026-09-23; the mint watchlist handle was updated the same day. (memory/2026-09-23.md#L227)
 - Real name and anything beyond his public X presence are unknown; the user has not named any relationship with him.
+- 2026-10-05: @40yrdegen shows as deleted/suspended on X; treat as gone until proven otherwise — pulled from the Space-host watch list. (message:assistant-msg-a50e6feb-bb7a-92a1-92cf-8d62c7a17dec)
 
 ## History
 - 2026-09-20: Ranked on Foil's follow shortlist, pending user approval. (memory/2026-09-20.md#L128)
 - 2026-09-21: Followed from @Foil667 at the user's direction, as part of the completed nine-account batch. (MEMORY.md#L9)
 - 2026-09-23: Renamed the X handle to @40yrdegen; the standing mint watchlist was updated to the new handle.
+- 2026-10-05: Account shows as deleted/suspended on X. (message:assistant-msg-a50e6feb-bb7a-92a1-92cf-8d62c7a17dec)
 
 ## The relationship
 - A deliberate-follow tie, mediated entirely through the @Foil667 account: the user follows him because his constant presence in the Spaces makes him part of the room's mint-intel fabric.

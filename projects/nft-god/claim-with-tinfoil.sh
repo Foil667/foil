@@ -7,7 +7,12 @@
 # claim. This is the standing integration of Tinfoil Scan into the live
 # claim pipeline (approved 2026-09-24).
 #
-# Usage: claim-with-tinfoil.sh <mint-url> <nftContract> <qty> [--dry] [fast-mint flags...]
+# Usage: claim-with-tinfoil.sh <mint-url> <nftContract> <qty> [--route-x @handle] [--route-site https://...] [--dry] [fast-mint flags...]
+#
+# Route gate (fail-closed, 2026-10-01): --route-x/--route-site, or route_x/
+# route_site + route_verified:true recorded on the project's pipeline entry,
+# is REQUIRED before the Tinfoil scan runs. The mint URL itself is not route
+# evidence; opensea.io/aggregator metadata alone never passes.
 #
 # Examples:
 #   claim-with-tinfoil.sh https://quadgrifters.com 0x7b3A...FE 1 --dry
@@ -21,6 +26,28 @@ if [ $# -lt 3 ]; then
 fi
 
 MINT_URL="$1"; NFT="$2"; QTY="$3"; shift 3
+
+# ---- gate R: OFFICIAL-ROUTE (fail-closed, 2026-10-01).
+# Consumes --route-x @handle / --route-site https://... from the arg list
+# (they gate BEFORE the Tinfoil scan AND are re-attached for fast-mint's
+# own startup gate) and enforces the shared route gate BEFORE the Tinfoil
+# scan. The mint URL itself is NOT route evidence:
+# an opensea.io collection URL does not prove a project-owned route.
+ROUTE_X=""; ROUTE_SITE=""; FWD_ARGS=()
+while [ $# -gt 0 ]; do
+  case "$1" in
+    --route-x) ROUTE_X="$2"; shift 2 ;;
+    --route-site) ROUTE_SITE="$2"; shift 2 ;;
+    *) FWD_ARGS+=("$1"); shift ;;
+  esac
+done
+echo "[ROUTE] verifying official project route for $NFT (fail-closed)"
+if ! node "$HOME/workspace/nft-god/fast-mint/route-gate.mjs" --contract "$NFT" \
+    ${ROUTE_X:+--x "$ROUTE_X"} ${ROUTE_SITE:+--site "$ROUTE_SITE"}; then
+  echo "[ROUTE] official route NOT verified — refusing claim. Aggregator metadata alone is never sufficient." >&2
+  exit 4
+fi
+
 SCAN="$HOME/workspace/nft-god/drainer-scan/scan-url.mjs"
 PLATFORM_X="$HOME/workspace/nft-god/drainer-scan/opensea-platform-exception.mjs"
 FAST_MINT="$HOME/workspace/nft-god/fast-mint/fast-mint-fork.mjs"
@@ -61,4 +88,12 @@ case "$VERDICT" in
   *) echo "[TINFOIL] scan failed (verdict $VERDICT) — failing closed, aborting claim" >&2; exit 1 ;;
 esac
 
-exec node "$FAST_MINT" "$NFT" "$QTY" "$@"
+# Re-attach route evidence for fast-mint's own startup gate (fail-closed):
+# the wrapper consumes --route-x/--route-site for its pre-scan gate but
+# fast-mint ALSO enforces the route gate at startup, so the flags must be
+# forwarded, not dropped. (2026-10-05: main-agent Golden Arrows fire was
+# blocked because the flags were eaten here.)
+[ -n "$ROUTE_X" ] && FWD_ARGS+=(--route-x "$ROUTE_X")
+[ -n "$ROUTE_SITE" ] && FWD_ARGS+=(--route-site "$ROUTE_SITE")
+
+exec node "$FAST_MINT" "$NFT" "$QTY" "${FWD_ARGS[@]}"

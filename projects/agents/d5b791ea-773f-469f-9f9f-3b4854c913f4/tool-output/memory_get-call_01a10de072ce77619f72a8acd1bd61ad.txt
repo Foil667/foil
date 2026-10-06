@@ -1,0 +1,495 @@
+# Memory file `memory/2026-10-05.md`
+
+```markdown
+- **UPDATE on x-activity-pulse scheduled 13:29 CDT:** live-browser task `ec613ff1-0527-425a-9bc6-70cf084ed761` was spawned with the full sweep brief, but no completion handoff had arrived by run close. No social actions, persistence checks, `x-pulse-seen.json` changes, `x-pulse-actions.log` append, or goal entry are verified for this occurrence; reconciliation remains pending.
+- **x-hourly-follow-scan scheduled 13:34 CDT was incomplete:** browser task `9b5079db-1189-4aa0-881a-8ca9b0bc209f` remained queued with zero steps because the shared Chromium slot was occupied. No session check, write-gate test, follows, likes, reposts, or bookkeeping occurred; the entire hourly X sweep is a coverage gap, with no user action required.
+
+## foilbox-ccff00-watch fb-run1602 (2026-10-05 13:55 CDT)
+- Delta sweep: radar build 1791226186499 (97 cards) → 2 new RH slugs, both lead-only: veylora (dust, fresh, no team/X; "Specific Collections" FREE x1 18:56Z + public 0.0003 ETH) and tickerfolk- (cold, team=anon; GTD FREE x2 19:42Z generic, public 0.00005 ETH >cap). Neither mentions CCFF00; quality gate FAIL on both.
+- Onchain probes (official RH RPC, 0 errors): stonewatch 0x5faa still LIVE PUBLIC FREE but route FAIL-CLOSED + quality unverified (no claim); allctcollection10 still LIVE PAID 2.4e13 under cap but route/quality gates shut; stonewatch-banners 0x39ab fires FREE 19:00:53Z (needs route+quality before any claim at fire); kanpai-wagies/cluck-dogg paid >cap future phases. All allowRoots 0x0 → 0 live CCFF00-gated phases. No config flips.
+- Screener 18:45Z: 0 execute-tier; 18:44Z execute MrBonez already pipelined blocked. No claims, 2 lead-only adds, pipeline now 1740 entries.
+
+## nft-screener 13:52 CDT
+Read-only v2 screener (robinhood,base, min-score 60): 32 candidates, 0 execute-tier (≥75), 2 verify-tier 60–74. Hoodraffe (RH 0x8e66d7169773bb4a8ef92ca88c09945afe1c0009, 71.66, rug-check clean) and Drip Heads (RH 0x14f61e914003e6f26b14f4e996beafd5275634fc, 60.76, rug-check clean). All legs OK; Solana candy-machine + mempool WS stubs remain offline (known gaps). Run log: ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log
+2026-10-05 13:54 CDT — foil-restap-inbox: inbox empty (1 entry, answered), server 127.0.0.1:1871 discovery 200. No action.
+
+## fb-run1603 (foilbox-ccff00-watch, 13:56 CDT)
+5-min sweep: radar build 1791226366687 (92 cards, full feed, 0 new slugs); probed 14 watching contracts on official RH RPC (0 errors). 0 live qualifying claimable phases — all live phases are paid >cap (allctcollection10 is under cap at ~$0.065 but route/quality gates shut; stonewatch 0x5faa LIVE FREE but route FAIL-CLOSED + quality unverified), all allowRoots 0x0 (0 live CCFF00-gated phases). stonewatch-banners FREE fires 19:00:53Z (~4 min out) but per standing rule no claim without route+quality pass. Pixel Family public window ended 17:08Z; #12 held. Screener: no new execute-tier since 18:45Z (MrBonez already pipeline-blocked). Claims: 0. Pipeline: 1740 entries, notes refreshed.
+
+## 13:58 CDT — Base Rooms OS / Buddy #0241 investigation
+- User shared https://baserooms.io/ and said they had just submitted/minted an NFT there; then identified the asset as **Base Rooms OS Buddies — Buddy #0241**: https://opensea.io/item/base/0x2b48ffaa0c453786ebf1a786c6f2e21dcb97f29b/241. OpenSea API verified ERC-721 contract `0x2b48ffaa0c453786ebf1a786c6f2e21dcb97f29b` on Base and current owner `0x4f9883c7331ba59a56360ffa3c332e0bc09029fc` (the user's square-holding wallet). No transfer was requested or executed.
+- Verified asset metadata: name Buddy #0241; Genesis generation; status “Booting”; OpenRarity rank 94 at observation time. Collection description says 8,888 possible Buddies, traits selected using Pyth Entropy, fully onchain rendering/animation, interactive pet games, CC0, made by SLAVA, and minted by BRTC stakers. Direct `totalSupply()` read returned 241 at ~13:57 CDT.
+- OpenSea collection stats at observation time: 53 owners, 0 secondary sales / 0 ETH volume, displayed floor 0.3 ETH (an untraded listing floor, not a realized price). Collection safelist status was `not_requested`.
+- User offered to send Buddy #0241 to Foil if Foil can utilize it, but expressed uncertainty about committing time to learn it. Foil replied that no concrete utilization had yet been established and recommended keeping it unless the OS investigation reveals meaningful owner utility.
+- Full read-only live-site exploration of baserooms.io is **still pending** in browser task `browser-task:062c8798-a058-4b3d-aee8-dbd4f599610e`; scope includes app features, submission flow, BRTC/NFT utility, team/socials, fees, wallet requirements, and legitimacy/activity. No wallet connection, form submission, or signature was authorized.
+
+## hood-mint-watch run916 (~13:45 CDT)
+- Radar build 1791226276718, 93 cards. 3 new slugs (veylora, tickerfolk-, genesis-bugz-12822038); 16 removed.
+- **CHUBBY-KOALAS-CLUB price flip (bopper-pattern repeat):** run915's in-flight 14:00 CDT fire target flipped free→paid onchain — public drop price now 0.0001 ETH (~$0.27 > $0.10 cap) on canon+fork, card removed from radar. Run915's fire process is SAFE: fast-mint-fork.mjs defaults maxPriceUsd=0.10 and re-reads the drop at FIRE-TIME (line 498) → priceCheck blocks, process exits non-zero, claim refused. No spend possible. Chubby = dead lead; do not fire again without a fresh fire-time probe.
+- Leads (no claims this run): veylora (Specific Collections free 13:56 CDT — eligibility TBD, paid public over cap), tickerfolk- (GTD "Top RH NFT Holders (OA)" free 14:42 CDT — which holders TBD), goatsonhood GTD 15:00 CDT (quality-FAIL carried), cluck-dogg Backstage GTD 18:00 CDT (eligibility unknown), madznfts GTD Tue 10:00 CDT, spikesociety Team Tue 05:00 CDT, anthoods GTD Tue 12:00 CDT, blockfun public free Tue 14:00 CDT, maskies public free Tue 02:30 CDT (quality-FAIL).
+- OpenSea drops API (keyed, 9 drops): nothing free live; officialmooncats minting 0.01 ETH > cap; mooniezworld next-price 0 = closed vault.
+- Raffles: 0 live of 151 tracked.
+- X browser task (read-only) spawned ~13:52 CDT for keyword sweep, host checks, Shiesty/MadzNfts confirmations, veylora+tickerfolk vetting, 24/7 Space status. Handoff pending at run916 close-out; reconciled when it lands.
+## 2026-10-05 13:59 CDT — foil-restap-inbox run: inbox single self-test entry already answered; RESTAP server healthy (discovery doc OK). No replies composed, no failures.
+
+## fb-run1604 2026-10-05T19:00Z (foilbox-ccff00-watch, 14:00 CDT)
+- 5-min delta sweep: radar build 1791226502337 (93 cards), 1 new slug — vintage-pixell 0x98ae8686cc649aff75b8ad5a509796b9c99af1b7 (robinhood, dust HYPE0 no-X/no-site; onchain PUBLIC PAID 3e13 ~$0.081 fires 19:09:33Z->10-06 maxW25, NOT live; card TEAM FREE 10-min window offchain-only). quality-FAIL -> lead-only.
+- Probes (official RH RPC, 0 errors): stonewatch 0x5faa LIVE FREE (route fail-closed, no claim); stonewatch-genesis-banners 0x39ab fires 19:00:53Z (no claim at fire without route+quality pass); allctcollection10 0x9c32 LIVE PAID 2.4e13 under cap (route/quality shut); ducks-hood LIVE FREE (lead-only); degenscasino 0x8301 fires 10-09 19:10Z (watching); cashpigs PAID 2e14 blocked >cap; riottoons 0xd036 PAID 3.5e12 lead-only. All allowRoots 0x0 -> 0 live CCFF00-gated phases. 0 config flips.
+- Hyvebox: 0 #CCFF00 phases. Screener: 0 execute-tier. CLAIMS: 0. Pipeline: 1741 entries.
+
+## Base Rooms OS research (user ask, ~14:00 CDT)
+- User minted **Base Rooms OS Buddy #0241** (Genesis, Status: Booting, OpenRarity rank 94) — in user's square wallet 0x4f9883c7331ba59a56360ffa3c332e0bc09029fc. Contract 0x2b48ffaa0c453786ebf1a786c6f2e21dcb97f29b (Base). totalSupply 241/8888 at check.
+- baserooms.io = "Base Rooms OS", retro Win95-style in-browser desktop OS on Base, 19 apps (Wallet, Swap, Lend/Borrow, Markets, BRTC stake, Buddies, Messenger, Rooms video, Room Mates XP, Invite referrals, Radio, Art Gallery, Games, Safety, Research, Wallet Tools, Utilities, Terminal, Documents). Non-custodial, read-only without wallet.
+- NO nft/project submission flow exists on the site — user's "submitted" = minted. Art Gallery is read-only display of owned NFTs.
+- Buddy mint: $10 USDC to treasury + small ETH randomness fee (Pyth Entropy), requires BRTC staked in Vault, max 10/wallet. Classes S90/A889/B3108/C4801. Fully onchain, CC0, "produce nothing and promise nothing".
+- BRTC token: 0xB200000000000000000000856A95738C92fEed01, fixed 1B supply, launched on o1 launchpad, paired vs MSTR on UniV4. At check: $0.0000413, $41.3K mcap, $22.8K liq, 124 holders, -68% vs MSTR ATH.
+- Team anonymous (no names/company/GitHub/Discord). X @baserooms (332 followers, verified, 909 posts, joined Oct 2025). Telegram t.me/brtc_base.
+- Buddy utility: desktop crew avatar (care/talk/evolve/publish), **pair an AI agent** (unverified what it does), BRTC Vault staking yield, XP/leaderboard.
+- User offered to send Buddy #241 to Foil if utilizable. My verdict given: no concrete utilization yet; only real hook is AI-agent pairing (unverified); declined to accept pending verification. Told user to keep it for now.
+
+## nft-screener run — 2026-10-05 ~14:00 CDT
+- Screener v2 (robinhood,base; min-score 60): 22 candidates — 1 execute, 1 verify, 13 watch, 7 blocked.
+- EXECUTE: Ducks hood (DUC), robinhood 0x984a1145f5d451fee5238db560d7ee7997b2bfc4, score 78.26, LIVE, 15 mints @175.9/h, 15 unique minters, whaleShare 0.13. Manual rug-check: CLEAN (bytecode-only, EIP-1167 SeaDrop proxy, 0/255). Handed to hood-mint-watch claim lane; this run read-only, no claim.
+- VERIFY: BLACKTIDE Bounty Chests (BTBC), robinhood 0x7aabb98242b159b01f9d1c9eeae16b375a4f7086, score 66.93, upcoming, 7 mints @82.1/h. Missed execute tier on lower velocity/age; screener-inline rug-check clean. Note: BTBC was already claimed by Foil via the headless OpenSea SIWE lane per the alignment synthesis — this verify-tier hit is just fresh onchain activity, not a new lead.
+- Legs: base + robinhood mint-scan OK, OpenSea drops OK (3 upcoming), Zora quiet. Solana candy-machine + mempool WS monitors OFFLINE (stubs, no keys) — standing coverage gaps, not regressions.
+- Run log appended to ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log
+
+## 14:01 CDT — bankr-launch-alerts run
+- Bankr feed OK (50 launches, HTTP 200). 3 NEW launches: CMUSE "Coinbase Muse" (base, 0xa8dc03d89fd5050d71a184864156ac92d7e20ba3, deployer @musebase_), SELECT "TokenSelect" (robinhood, 0xd0f6faa3d4065db83eddaca5a5ea9f8304cd1ba3, deployer @TokendotSelect, site token.select), MRUSH "MarketRushApp" (robinhood, 0xf2286786e77909c69c86d66fe8a76cbfe9723ba3, deployer @MarketRushTech, site marketrush.voglabs.tech).
+- GeckoTerminal endpoints healthy (tokens + pools indexed) but all 3 pools show no price/FDV/liquidity/volume yet — fresh Doppler launches pre-first-indexed-trade. Retry after 20s still null/0. No @0xDeployer-linked or known-builder launches; no pools.fun token news.
+- Seen-list updated (3 ids added, capped at 500). Run note appended to bankr-launch-alerts.log.
+- 2026-10-05 14:04 CDT (foil-restap-inbox): inbox.json checked — 1 entry, already answered (self-test msg_7df6ddad74179232). RESTAP server on :1871 responding with discovery doc. No action taken, silent run.
+
+## Verified extraction — 19:02 UTC (run sirun_0c1d4993bb7347c292148e6ec243d45f)
+
+- [fact|high] The user confirmed he holds Base Rooms OS Buddies Buddy #0241 in his square-holding wallet ("That's in my wallet", said in reply to Foil's onchain check of that wallet). Foil's research identified it as an ERC-721 on Base, contract 0x2b48ffaa0c453786ebf1a786c6f2e21dcb97f29b.
+  - claim: 13f27f4ec8e24dde05dbb3ab805bbc66
+  - quote: "That's in my wallet"
+  - sources: message:35d4ae71-8f29-4ae7-a364-32118d1a4d09, message:assistant-msg-f1840de1-cf71-4f75-96fe-e715ed9fcb2a
+- [fact|medium] 2026-10-05: At the user's request, Foil researched baserooms.io and reported: Base Rooms OS is a browser-based retro desktop on Base; Buddy mints cost $10 USDC (to treasury) plus a small ETH randomness fee, require BRTC staked in their Vault, max 10 per wallet; the site's own stated terms are "Buddies are collectibles. They produce nothing and promise nothing." These are Foil's reported research findings from this window, not independently verified facts.
+  - claim: 7a2d535e7df15a0c965d1dfe64681e14
+  - quote: "Buddies are collectibles. They produce nothing and promise nothing."
+  - sources: message:953aa2d8-61db-408c-b146-18c0c50522f1, message:assistant-msg-2f721920-b56d-5436-8b3d-c727fd26f174
+- [event|medium] 2026-10-05: User asked Foil to research baserooms.io and offered to transfer Buddy #241 to Foil if Foil could utilize it ('I will send it to you if you can utilize it'). Foil researched the site and contract, found no concrete way to utilize the pet (the Buddies app's AI-agent pairing feature could not be verified as real), and recommended the user keep it — a 0.3 ETH asset too real to accept as a speculative gift. No transfer was agreed or executed.
+  - claim: f4730765d008faff60b08a6f7a7bc5fd
+  - quote: "I will send it to you if you can utilize it"
+  - sources: message:953aa2d8-61db-408c-b146-18c0c50522f1, message:assistant-msg-2f721920-b56d-5436-8b3d-c727fd26f174
+
+## fb-run1605 2026-10-05 14:05 CDT (foilbox-ccff00-watch) — stonewatch-banners fire-time gate chain
+- Stonewatch Genesis Banners (0x39ab8fc35f83cfd0f12034b33cc7299c1c5bbfbc) hit fire time (19:00:53Z) — canon==fork LIVE PUBLIC FREE 0/maxW1, no config flip. Ran the full fire gate chain: route corroborated (Tessera raffle page independently links x.com/stonewatch_rh + stonewatch.io for the Genesis Banners 999 free mint; OpenSea $SW game token live w/ volume); rug-check CLEAN. Tinfoil pre-flight on stonewatch.io returned SUSPICIOUS → fail-closed, NO CLAIM. Review: every finding maps to documented game mechanics (SIWE auth nonce, $SW in-game deposit approvals, SwClaim withdrawal vault, CSV lord-export clipboard, Rovyn PNG asset); claim path would be headless SeaDrop via Bankr (never touches the site), but the standing fail-closed convention held. X-account follower/activity prong still pending. Phase stays live until 10-06 19:00:53Z — watching, not dead.
+- Other live phases unchanged: stonewatch 0x5faa LIVE FREE (route fail-closed, quality unverified, no claim); allct10 LIVE PAID ~$0.065 (route/quality shut); ducks-hood LIVE FREE (lead-only); cashpigs/riottoons blocked. 0 live CCFF00-gated onchain phases (all merkle roots 0x0). Radar: 0 new slugs. Screener: 0 new execute-tier. 0 claims this run.
+
+## nft-screener 14:02 CDT (scheduled, read-only)
+- Run complete. Legs: base OK (1163 mints), robinhood OK (3023 mints), OpenSea drops OK (3 upcoming), Zora quiet. Solana + mempool still offline stubs (no WS keys) — standing gap.
+- 26 candidates: 2 execute, 3 verify, 11 watch, 10 blocked. No leg failures.
+- EXECUTE (>=75, rug-check CLEAN via independent manual runs, both EIP-1167 SeaDrop proxies, 0/255): Ducks hood (DUC) RH 0x984a1145f5d451fee5238db560d7ee7997b2bfc4 score 84.77 (phase LIVE, 30 mints/351.8h); Veylora RH 0x542aec9a270a60848d6445bff5e845a77bda0bee score 84.25 (upcoming, 79 mints/926.4h). No claims made — detection-only; flagged for hood-mint-watch claim lane.
+- VERIFY (60-74, clean per screener): Digital Monkes 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf 74.28 (low velocity); BLACKTIDE Bounty Chests 0x7aabb98242b159b01f9d1c9eeae16b375a4f7086 73.88 (whaleShare 0.37); Drip Heads 0x14f61e914003e6f26b14f4e996beafd5275634fc 66.88 (low unique-minter ratio).
+- Run log: ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log
+- ~14:09 CDT (foil-restap-inbox): inbox checked — 1 entry, already answered=true; outbox has the self-test reply. RESTAP server healthy (restap 0.1.4-beta discovery doc returns OK). No action needed.
+
+## 2026-10-05 14:08 CDT — nft-screener run (detect+score only)
+- 25 candidates from Base + Robinhood legs (both healthy). 2 execute-tier, 3 verify-tier.
+- Execute tier, rug-check CLEAN (standalone re-run): Veylora (score 90.79, RH 0x542aec9a270a60848d6445bff5e845a77bda0bee, upcoming phase, 49 mints, whaleShare 0.04) and Drip Heads (score 82.35, RH 0x14f61e914003e6f26b14f4e996beafd5275634fc, upcoming, 57 mints, whaleShare 0.07). Both EIP-1167 minimal proxies (SeaDrop-clone pattern). Links in screener run log: ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log
+- Verify tier: Digital Monkes 70.8 (whaleShare 0.33), BLACKTIDE 69.51 (still live, already claimed tonight), STEPHOOD BOX 61.95.
+- Legs down (long-standing stubs, not new): Solana candy-machine monitor (no Helius key), mempool websocket (no WS endpoint). OpenSea drops leg OK.
+- READ-ONLY: no claims submitted; execution belongs to hood-mint-watch.
+- 2026-10-05 14:14 CDT cred-lp-watch: RESULT CLEAN (exit 0). CRED $0.0000010046, h24 vol $3, liq $81991, h24 txns 1. RESCUE pool still not indexed by GeckoTerminal — RESCUE watch deferred.
+- 14:14 CDT (foil-restap-inbox): inbox had 1 entry, already answered (msg_7df6ddad74179232 self-test, 2026-10-01); nothing to reply. RESTAP server healthy on :1871 — discovery doc returns 0.1.4-beta. No action.
+
+## hood-mint-watch run916 X-handoff reconciled (~14:13 CDT)
+- 0 claims, 0 spends — wallet untouched.
+- veylora: @VEYLORA_NFT is days old / 0 followers / no website → QUALITY FAIL; CCFF00 not in eligible collections → Foil ineligible. Lead only.
+- tickerfolk-: days-old but verified + website; eligible holders = WIF Outlaws/Credits/MonkeyHoodNFT/GremlinCartel/PitBoys/H00dle — CCFF00 NOT included → Foil ineligible. Lead only.
+- Shiesty Oct 6 CONFIRMED: 3,333 free RH, GTD 10 AM / FCFS 12 PM / PUBLIC 1 PM CDT; site projectshiesty.xyz, checker whitelist.projectshiesty.xyz, no direct mint link yet.
+- MadzNfts Tue 10 AM CDT GTD "first 77 wallets"; CCFF00 not mentioned → fire-time eligibility check.
+- New X leads not on radar: xreign_app free-mint list (snapshot pending), ComputersRH 3,333 free mint (333 GTD), DegensCasinoRH Oct 9, AntHood WL.
+- 24/7 HOODSTREET MEDIA Space live ~14:30 CDT (~140 listeners), no mint links in jumbotron.
+- @DogsHashRH account doesn't exist — drop from host checks. Session healthy, no automation flags.
+- 14:14 CDT: wl-scout-feeds-rebake — snapshot refreshed and pushed (commit da4ffdd, raffles 151 total/0 live, radar build 1791227581497, 93 cards). Healthy run.
+
+## foilbox-ccff00-watch fb-run1605 ~14:14 CDT
+- 0 claims. 5 RH contracts probed (official RH RPC, 0 errors) + 1 Base.
+- **Ducks hood (0x984a1145f5d451fee5238db560d7ee7997b2bfc4)** — screener execute-tier 84.77, LIVE PUBLIC FREE onchain (17:35Z->10-15), rug-check CLEAN (screener + standalone 0/255), 30 real minters. HELD: no claim — route/quality-corroboration FAIL-CLOSED. It's a DIFFERENT contract from the original duckshood radar card (0x41dd..., whose GTD ended Oct 3); OS metadata has no twitter and points at amnt.io (prompt-to-NFT tool); @duckshoodnft's posts describe a 9,999-supply drop (the 0x41dd one), not this 2,000-supply drop. No source links the X account to 0x984a. Lead-only; never claim until an official channel links this contract.
+- Live-but-blocked: allct (LIVE PAID ~$0.065, route/quality shut), cashpigs (LIVE PAID ~$0.54 >cap), stonewatch (LIVE PUBLIC FREE, route FAIL-CLOSED + quality unverified — unchanged), asdasd (now LIVE PUBLIC FREE, dust/quality-FAIL), collectr/Base (LIVE PAID ~$15 >cap).
+- New pipeline: the-spark-507458561 (blocked >cap), bgr-34599986 (lead-only, ethereum/ended), collectr (blocked), mooniez-977479446 (watching, not minting).
+
+## bankr-launch-alerts 14:18 CDT
+- Feed healthy (50 launches). 6 new vs seen-list: SNUB/snub (rh, deployer @snubpower), ROBI/Robinhood (base, @TheBullYellow), Clef/Cloudflare Clef (rh, @verymehari), PROBE/Wren Probe (base, no handle), MUSEBEACH/Muse Beach (base, @omoffinance via @fomo_family_), BUZZ/BUZZ (rh, no handle).
+- GeckoTerminal: tokens registered, pools not yet indexed — null price/liq/vol for all except BUZZ ($10.5k FDV, $16 liquidity, $59 vol h24 = dust). No known-builder deployers, no pools.fun token news. Read-only, no trades.
+- [2026-10-05T19:19:50Z] netprotocol-drop-watch: swept 10 feeds (136 posts) + 30 Base token rankings. 0 new drops, no leg failures.
+
+- 2026-10-05 14:19 CDT (wl-scout-wallet-scan): bi-wallet scan OK (60 project verdicts, both wallets), zero verdict diffs vs prev baseline; no upcoming phases within 2h15m, no pipeline deadlines in window -> no new iOS alerts. Mints list: 4 live reminders (HoodPoker 10/15, Cartoonals Classics 10/15, TrenchStrokerz 10/9, afterworldsxyz 10/5 12:50 CDT fired ~1.5h ago); none >2h stale, no cleanup needed.
+
+## 19:23 UTC — nft-screener sweep
+- 27 candidates (execute: 2, verify: 1, watch: 14, blocked: 10). Legs: base OK, robinhood OK, OpenSea drops OK, Zora quiet; Solana STUB + mempool STUB still offline (no keys).
+- EXECUTE: Veylora 0x542aec9a270a60848d6445bff5e845a77bda0bee (85.19), Drip Heads 0x14f61e914003e6f26b14f4e996beafd5275634fc (77.43) — both robinhood ERC721, both rug-check CLEAN (EIP-1167 minimal-proxy SeaDrop clones).
+- VERIFY: Digital Monkes 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf (73.68, missed tier on low velocity).
+- Read-only detection; no claims made. Handed to hood-mint-watch lane.
+
+## foilbox-ccff00-watch fb-run1606 (14:24 CDT)
+- 5-min sweep: radar build 1791228166618 (95 cards), 2 new slugs — credits-punks 0x74f0d9da5062928446b1e33b064fe8bffd6bc9ef (onchain PUBLIC PAID 4e13 ~$0.108 fires 20:00:58Z, HYPE0 no-X → blocked >cap+quality) and goats-on-hood 0xf11b8fad5ee03e1a93526d2fff7623ebeeed2843 (LIVE PUBLIC PAID 1.5e16 ~$40.5 → blocked >cap+quality). Both logged, NEVER claim.
+- Probed 19 contracts canon+fork via official RH RPC, 0 errors. Live-free phases all gate-blocked: stonewatch + sw-banners (route fail-closed, tinfoil SUSPICIOUS), ducks-hood 0x984a (fail-closed route/quality), asdasd (quality-FAIL). allct10 live PAID under cap but route/quality shut. 0 claims, 0 qualifying claimable phases.
+- Own-error note: this run briefly probed riottoons with an invented 0xd0360d66... address (memory-built, zeroed read); discarded and re-probed with the real contract 0xd036eb260f11f6f3cb616e5245d192171d2979f4 from the pipeline — UNCHANGED live paid. Lesson reinforced: always copy the full address from the pipeline, never the prefix from a log line.
+
+## 2026-10-05 ~14:25 CDT — Base Rooms Buddy #0241 agent-pairing follow-up (UPDATE)
+- **Update to the earlier provisional “keep it for now” verdict:** User asked Foil to investigate the Buddy’s AI-agent pairing more deeply and decide whether pairing should happen while Buddy #0241 stays in the user’s wallet or after transfer to Foil’s wallet. No transfer was authorized or executed; final custody recommendation remains pending the live-site investigation.
+- A read-only live-browser investigation of the Buddies app’s “pair an AI agent,” care/talk/evolve/publish features was started and remains pending. It was explicitly instructed not to connect a wallet, sign, or submit anything.
+- Verified BaseScan source/ABI for the Buddy ERC-721 contract `0x2B48fFaa0c453786EBF1a786c6f2e21Dcb97f29b` (`BaseRoomsUnits`) contains mint, reveal/Pyth entropy, ownership, approval, transfer, staking eligibility, and metadata machinery, but no AI-agent pairing function. Current evidence therefore places agent pairing in the Base Rooms OS application layer rather than the NFT contract itself; what the pairing actually enables and whether NFT custody matters are still unverified pending the browser result.
+
+## foil-x-scan 14:25 CDT — headless portion
+- Agent Bounties claimable feed: 1 item, unchanged — "Bring a real backlog" (funded 21.3 USDC / solver 20.3 USDC, creator 0x29f3afeaf22bb574bf22baae62ee884c7a3a7738); not actionable for Foil (needs 3+ merged commits in established OSS repo before 2026-09-28).
+- APoW $AGENT LP vault on Base: 0xe1d28114ce17840 = 1.017013145625 ETH, byte-identical — STILL FROZEN (< 5 ETH).
+- 13:25 run's browser report never landed — closed out as coverage lost. Browser sweep for 14:25 dispatched; mentions/social/timeline/Space listen pending its report.
+
+## nft-screener run (14:28 CDT)
+Screener v2 `--chains robinhood,base --min-score 60`: 29 candidates, 2 execute-tier (>=75), 2 verify-tier (60-74), 15 watch, 10 blocked. All live legs healthy (base + robinhood mint scans, OpenSea drops API, Zora quiet). Pre-existing offline stubs: Solana candy-machine monitor (no Helius key) and mempool websocket (no WS provider) — never configured, not failures. Rug-check clean on: Veylora 0x542aec9a270a60848d6445bff5e845a77bda0bee (score 91.56, robinhood), Drip Heads 0x14f61e914003e6f26b14f4e996beafd5275634fc (score 87.19, robinhood). Verify tier: Digital Monkes 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf (71.63), Waifu Folds 0xcd49d6558805afdb29ddfbc15d01b68da93384aa (61.87). Read-only run; no claims. Run note appended to goal hidden_files nft-screener-runs.log.
+
+## Base Rooms OS agent-pairing deep dive (~14:30 CDT)
+- Feature is "CONNECT YOUR AI AGENT" (Buddies app). Pairs the owner's OWN agent (Claude Code, Cursor, Codex, Gemini CLI, Hermes, ChatGPT, any script/bot) with a Buddy via a per-buddy API key (shown once, scoped to one buddy, dies on revoke/transfer).
+- What it does: buddy head-badge shows agent live status ("Running npm test"), two-way chat (type to buddy -> agent, replies as speech bubbles), approval gating for risky commands (git push, deploys, onchain sends), agent can use baserooms.io tools via MCP. Key can't sign or move funds; agent proposes swaps/revokes, human signs.
+- Offchain linkage — does NOT change NFT traits/metadata. Only published evolve stages are onchain (attestations, $1 BRTC).
+- Pairing itself free; requires wallet holding buddies (gated, not connected during research).
+- Talk = buddy's built-in free AI + OS tools; Evolve = XP levels (Boot/Beta/Stable/Pro/Elite/Legend/Eternal) with swap-fee perks at LV5/LV8; Publish = onchain attestations.
+- Verdict given to user: pairing is for the OWNER's dev agents, not for Foil — Foil can't be meaningfully "paired" (not a local coding agent). Recommended KEEP Buddy #241 in user's square wallet: pairing key dies on transfer, XP accrues from owner's OS activity, fee perks benefit the trader (user). No functional reason to move it to Foil's wallet.
+
+## fb-run1607 (foilbox-ccff00-watch) — 2026-10-05T19:29Z / 14:29 CDT
+5-min delta sweep. Radar build 1791228392735, 97 cards. 2 NEW RH projects, both LIVE PUBLIC FREE but quality-FAIL (HYPE0, no X, no site) -> lead-only, never claim: rouge-bots (0xce067d8ef9f0087f9987651ce838bf7a905bc63b, free x10) and fatfl-funks (0x4737ce10bfb6941ef650bb3a0bf655ab03653e5d, free x5) — onchain probes canon==fork confirmed live, root 0x0. Screener 19:27Z: execute-tier Veylora + Drip Heads (both already pipelined lead-only); new verify-tier Waifu Folds (0xcd49d6558805afdb29ddfbc15d01b68da93384aa, 0.004 ETH paid >cap) -> blocked. 0 claims, 0 live qualifying claimable phases (6 live-free phases: 2 route-fail-closed, 1 tinfoil-fail-closed, 3 quality-fail). All allowRoots 0x0 -> 0 live CCFF00-gated phases. Pipeline: 1751 entries. CLAIMS: 0.
+## x-activity-pulse 2026-10-05 ~14:00-15:15 CDT (healthy run, no recurrence of runtime death)
+- Session healthy start->end; write gate passed (no automation notice, no limit banners, no rollbacks). Prior run's scam-warning post verified present on /Foil667 (not re-posted).
+- Actions: 1 entry (evergreen_nft Greenfield Citizen, 742 free RH, via @Jennifer_Verse, like+repost+reply w/ EVM + @noyaphuckinbiz tag, verified live); Looper family touches (@QuigleyNFT like+repost x2 + warm reply on Oct 4 Muse post; helixa/brrrbon likes); @mybasetime GM reply; positive reply on @noyaphuckinbiz's Halloween PFP post (no mirror entries — none of his recent posts were giveaways); @shadowdstudio SKIPPED (second operator already at 8 replies/12h, post already liked); @hoojafun liked, no giveaways; Space StreetHood Media 24/7 joined silent 2 min (jumbotron: @Shaq82080 Day #3 of #StreetHood on X; @HYVEBOX SKNOTS HYVEMAP).
+- Substance posted: sweep-notes post — NullHood free RH Oct 8 (969, nullhood.xyz, verified team) + warning on '$630 SOL address' farms. Live with link card.
+- Scam watch (zero engagement): SOL address-farm wave (@airdop_crypto, @Sonicdyor possibly compromised, @Whale___SOLL, @aiwithshriom, @StoneWEX, @VikramVerm25510); fake "Lopers" collection impersonating Loopers (helixa flag); @Web3Dolphin "Pepe Cartel FREE MINT" looks off-brand.
+- Mint desk intel: NullHood FREE Oct 8 (969 RH, nullhood.xyz, OpenSea mint, $NULL after); @TheSeekerGame 3,333 devices FREE RH Oct 8; HOODIENS FREE Base Oct 14 13:00 UTC (888, hoodiens.space); MadzNfts Oct 6 (1212, price TBA, RH).
+- SECOND OPERATOR NOTE: entered NullHood ~3h ago using address 0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3 — that's the $RESCUE token CONTRACT, not Foil's wallet (0x6573682faee72a4a96e791ba262439f1df3a268d); that entry may be malformed. Also 8 @ShadowDstudio replies in 12h risk spammy optics — one-reply rule kept this run.
+
+## Buddy #241 pairing decision (~14:31 CDT)
+- User decided: KEEP Buddy #241 in their square wallet and pair it with **Grok** (listed as supported agent type in Buddies app).
+- Gave walkthrough: Buddies app → AI AGENTS tab → connect holder wallet → pick buddy + Grok → copy one-time per-buddy key + setup snippet → paste into Grok's settings. Key shown once, dies on revoke/transfer.
+- Offered: paste the snippet here when they have it and I'll help interpret/wire it. Caveat noted: Grok-specific snippet contents are behind the wallet gate, unseen.
+
+## 14:33 CDT — bankr-launch-alerts run
+Feed OK (50 launches), 7 new since last run: FUNCTION (0x73da89c5…eba3, base), BITG "Bitget TradFi" (0x121f17bf…7deba3, base), JEVPUTER (0xe2eb5ba8…cfcba3, base), MUNK (0xf4f439ff…60ba3, base), DUCAT (0x4d685833…b31d2ebba3, robinhood), AKERU (0xb1747be1…cf721ba3, robinhood), FUNGO (0x991c4475…8c8eeba3, robinhood). GeckoTerminal: only FUNGO has market data (price $0.000000104, FDV ~$10.4k, liquidity ~$4, vol h24 $160 — dust tier); all others null (no indexed trades yet). Flags: BITG name riffs on Bitget (brand-impersonation risk); BITG + MUNK share deployer 0xb9a1b3e73533dcaa2caf3e3b2834595c31d8b200 (serial deployer). No pools.fun protocol token, no known-builder matches. Seen list updated (cap 500).
+- 14:34 CDT restap-inbox: no unanswered entries (inbox.json has 1 answered self-test entry); RESTAP server on :1871 healthy, discovery doc returned OK. Nothing to do.
+
+## foilbox-ccff00-watch fb-run1608 (14:36 CDT) — 5-min sweep
+- Radar build 1791228709207 (96 cards). 2 new slugs, both rejected:
+  - claus-313936781 (RH 0xda6d053c94ea72c4815ac5635a5bbd51705e6390): card advertises Public FREE x10, but onchain canon==fork is LIVE PUBLIC PAID 5e12 (~$0.0135, under cap) 19:50Z->10-06 maxW10 root 0x0 — card-label mismatch (card FREE ≠ onchain paid), same flip pattern as bopper/exclusive-cat. Generic public, no X presence, quality-FAIL -> lead-only, NEVER claim.
+  - bgr-34599986 (ethereum, 3-min window ended 19:52Z) -> out of lane, skip.
+- 3 dropped from feed (blacktide-bounty-chests, fatfl-funks, goats-on-hood); off-feed != dead, pipeline verdicts stand.
+- CCFF00 mentions: trenchstrokerz only (pipeline-known, watching, 10-10 CCFF00 gate offchain-only, onchain >cap).
+- 0 live qualifying claimable phases; all live-free phases blocked on route/quality/tinfoil. 0 claims. Pipeline: 1752 entries.
+
+## nft-screener run — 14:29 CDT
+- screener-v2 (--chains robinhood,base --min-score 60): 28 candidates, 3 execute-tier / 1 verify / 18 watch / 6 blocked.
+- Execute tier, all rug-check CLEAN (4663, EIP-1167 SeaDrop clones, bytecode-only):
+  - Drip Heads (DH) 0x14f61e914003e6f26b14f4e996beafd5275634fc — 79.2 (22 mints, 261/h, 22 unique, whaleShare 0.09)
+  - Veylora 0x542aec9a270a60848d6445bff5e845a77bda0bee — 79.01 (25 mints, 297/h, 25 unique, whaleShare 0.28)
+  - BLACKTIDE Bounty Chests (BTBC) 0x7aabb98242b159b01f9d1c9eeae16b375a4f7086 — 76.04 (25 mints, 297/h, 25 unique, whaleShare 0.08)
+- Verify tier: Digital Monkes 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf — 71.62 (low velocity).
+- Legs all OK; Solana + mempool stubs offline by design (no keys). No claims (detection only); passed to hood-mint-watch lane.
+
+## 14:42 CDT — x-hourly-follow-scan partial (runtime death)
+- Browser runtime died mid-sweep (terminal_session_unavailable x4, infra failure not X block). Healthy at start, signed in @Foil667 verified; no respawn per protocol — next hourly run re-verifies sign-in and resumes.
+- Write-gate PASSED: like on @BigTinKC post (https://x.com/BigTinKC/status/1975136862779330944), persistence verified in Likes tab. No automation notice.
+- 0/2 follows made — next run owes exactly 2 new follows.
+- Scam flag: @SmartAzuki (banned) pushing fake "AZUKI CLAIMS OPEN 25,000,000 AZUKI" claim-portal post — zero engagement.
+- Leads from Likes-tab observation: CLAUS 5,555 free mint 10/05 7:45 PM UTC (2:45 PM CDT, already passed at run start) — https://x.com/CLAUS_RH/status/1975270486127579509; @RYFTCORP early-alpha free mint RH 4,444 supply (founders @neutanent, @wilhelmsenchris) — https://x.com/RYFTCORP/status/1975254888916414645; @AwakenRH mint scheduled 10.10.2026 — https://x.com/AwakenRH/status/1975237573197865311.
+- Coverage gaps: all live searches + named-profile checks unrun; carried to next run.
+
+## x-activity-pulse ~14:29-14:38 CDT
+- Browser RUNTIME DEATH mid-sweep (~14:37 CDT), unrecoverable; no respawn per standing protocol. Write gate PASSED (like on @0xmonas ChainPunks post persisted). No throttles. 0 entries.
+- Mint-scout leads (URLs not captured before death): CLAUS NFT free mint 5,555 on Robinhood, public 2:45 PM CDT today (time-sensitive); RYFTCORP/Rohitz free mint 4,444 RH; helixa minting live at mint.helixa.xyz; noya radar free mints: Outlaws Armory, Golden Arrows, Spike Society, Fatfunks.
+- Second operator still very active; its NullHood entry using the $RESCUE contract address as wallet remains unresolved.
+- Pending next run: resume from "whitelist giveaway" search, account checks, Space listen, substantive output owed.
+
+## foil-x-scan 14:25 CDT — sweep partial (browser session death ~14:53, report landed)
+- 3 VERIFIED likes (throttle CLEAR, no warnings/rollbacks): @AwakenRH "AWAKEN // PRE MINT FAQ" (gate, persisted ~15 min), @clausnfts CLAUS NFT free mint (5,555, RH, 7:45 PM UTC = 2:45 PM CDT — LIVE by run end), @0xRohitz @RYFTCORP free mint RH (4,444, $NEURAL → $RYFT).
+- Mentions: nothing new <1h needing reply. @noyaphuckinbiz 9h Madz GTD post positive, already liked.
+- News: @ChubbyKoalasNFT free mint LIVE NOW (OpenSea, 2,026, RH, repost+tag) — entry candidate next run; @bankrbot PixelBots free mint RH scheduled Oct 8 6:00 PM UTC; @SmartAzuki 20 GTD + 20 FCFS free mint (follow @RiotToons + like + RT + EVM drop, ends ~24h) — entry candidate next run; @zyper_cloud Stonewatch Genesis Banners RH (23/241 at open); AWAKEN Genesis 10.10.2026 via OpenSea, 1,500 supply.
+- Space: 24/7 StreetHood Media joined via fallback URL https://x.com/i/spaces/1XGygwegqNyxM (orig URL rotated); purple pill + jumbotron captured verbatim (incl. SKNOTS HYVEMAP via @HYVEBOX); no captions visible → no spoken intel. Session died while clicking Leave — Foil may still show as a listener; NEXT RUN must verify login state + confirm out of the Space before any writes. No respawn this run per protocol.
+- Bounty watch (headless): Agent Bounties feed unchanged (1 item, "Bring a real backlog", 21.3 USDC, not actionable); APoW $AGENT LP vault Base = 1.017013145625 ETH byte-identical, STILL FROZEN < 5 ETH.
+- Note: 13:25 run's browser report never landed — closed out as coverage lost; next run continues fresh.
+
+## 14:39 CDT — foil-restap-inbox run
+- inbox.json: 1 entry (msg_7df6ddad74179232, self-test), already answered=true. Nothing new to reply to.
+- RESTAP server (127.0.0.1:1871) healthy — discovery doc returned restap 0.1.4-beta. No restart needed.
+
+## nft-screener run ~14:36 CDT (19:36Z)
+- Ran screener-v2 --chains robinhood,base --min-score 60: 43 candidates (execute 2, verify 3, watch 25, blocked 13). All legs OK: base + robinhood onchain mint-scan, OpenSea drops API (3 upcoming), Zora quiet. Standing offline stubs: Solana candy-machine (no Helius key), mempool WS — known gaps, not failures.
+- EXECUTE-tier, both rug-check CLEAN (4663, EIP-1167 SeaDrop-style proxies, no verified source so bytecode-heuristic scan, 0/255):
+  - Credits Punks (CreditsPunks) 0x74f0d9da5062928446b1e33b064fe8bffd6bc9ef score 91.92, 335 mints/3954.1/h, 335 unique minters, whaleShare 0.01 — https://opensea.io/assets/robinhood/0x74f0d9da5062928446b1e33b064fe8bffd6bc9ef/126
+  - Veylora (Veylora) 0x542aec9a270a60848d6445bff5e845a77bda0bee score 81.39, 27 mints/318.7/h, 27 unique minters, whaleShare 0.11 — https://opensea.io/assets/robinhood/0x542aec9a270a60848d6445bff5e845a77bda0bee/389
+- VERIFY-tier (60-74, missed execute on velocity/uniqueness): UNSCREWED PUNKS 0xe8b32c60471ade33322d4f2c26b1245b96155442 (74.74), BLACKTIDE Bounty Chests 0x7aabb98242b159b01f9d1c9eeae16b375a4f7086 (71.48), The spark 0xdf562bd9fea04cdcd6a0502acf5dd46a48ce665d (61.55). All screener-internal rug-checks clean.
+- No claims (detect-only cron); passed execute candidates to hood-mint-watch lane. Run note appended to ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log.
+
+## 14:45 CDT — foilbox-ccff00-watch fb-run1610
+- Armed GoatsonHood free-mint fire: contract 0xec40dcbb7febea14187e04a2e042073bb57e579e (RH), PUBLIC FREE x5 fires 20:00:23Z. All gates passed (route @GoatsonHood verified, quality PASS 9.8k-follower X account, Tinfoil CLEAN, rug-check CLEAN, price 0, qty 5). Fire scheduled T-750ms via claim-with-tinfoil.sh. Result lands next run's log; tokens stay in Foil's wallet (HOLD rule).
+- Radar delta: 0 new projects. OpenSea drops: 9, all known. No claims executed this window.
+
+## 14:44 CDT — foil-restap-inbox run
+- inbox.json: 1 entry (self-test msg_7df6ddad74179232), answered=true — nothing to reply to.
+- RESTAP server 127.0.0.1:1871 healthy, discovery doc returned (restap 0.1.4-beta).
+- No failures; stayed silent.
+- 14:44 CDT wl-scout-feeds-rebake: rebuilt feeds.json (151 raffles total, 95 radar cards), committed 569db25 and pushed to origin/main.
+
+- 14:47 CDT bankr-launch-alerts: 8 new launches (HOOKI, OINCT, Pollen[RH], YUNO, LucentAI, PEVLUNORA, POLLEN, ADRLA[RH]); GeckoTerminal leg weak (only Pollen/Petten RH indexed at fire time: price $0.000000472, FDV ~$47.2k, paired with NVDA stock, fee-recipient @mattt). Deployer @raeaIisa fired 3 tokens in minutes — spam pattern. No 0xDeployer-orbit or pools.fun protocol token news.
+
+## foil-restap-inbox (14:49 CDT)
+- inbox.json: 1 entry (self-test msg_7df6ddad74179232), answered=true — nothing pending.
+- RESTAP server 127.0.0.1:1871 healthy — discovery doc returns restap 0.1.4-beta, endpoints talk/news OK.
+- No replies written, no failures.
+
+## 14:45 CDT — nft-screener run
+- Screener v2 (robinhood+base, min-score 60): 22 candidates | execute 2 | verify 4 | watch 10 | blocked 6. All legs live (base, RH, OpenSea drops API, Zora); Solana + mempool stubs remain offline (standing).
+- Execute tier, both rug-check CLEAN (re-verified): Credits Punks 91.77 (0x74f0d9da5062928446b1e33b064fe8bffd6bc9ef, RH, 113 unique minters) and Veylora 89.94 (0x542aec9a270a60848d6445bff5e845a77bda0bee, RH, 183 unique minters). Flagged to hood-mint-watch lane; no claims by this run.
+- Verify tier: TlckerFolk 69.18, Fungo Labs 68.99, The spark 68.3, Dotts Hod 61.91 (all rug-check clean). Full detail in goal hidden_files/nft-screener-runs.log.
+
+## nft-screener (14:53 CDT)
+Screener v2 run (robinhood+base, min-score 60): 27 candidates, 2 execute-tier. Credits Punks (RH 0x74f0d9da5062928446b1e33b064fe8bffd6bc9ef, score 82.23) and Veylora (RH 0x542aec9a270a60848d6445bff5e845a77bda0bee, score 79.41) — both rug-check CLEAN (EIP-1167 SeaDrop proxies, 0/255). Verify-tier: Waifu Folds 64.63 (whale-heavy, 11 minters). All legs live; Solana + mempool legs offline by design (stubs). Read-only, no claims. Logged to goal hidden_files nft-screener-runs.log.
+- 14:58 CDT (foil-position-watch): positions.json checked — 0 open positions (only closed BOAR stop-loss from 2026-09-28). No triggers, no exits, staying silent per playbook.
+
+## nft-screener run 14:55 CDT (19:55 UTC) — execute-tier hit
+- 30 candidates: 1 execute, 2 verify, 20 watch, 7 blocked. All legs live (robinhood/base onchain mint-scan, OpenSea drops, Zora quiet); Solana candy-machine + mempool stubs offline as known.
+- EXECUTE: Veylora (robinhood ERC721, 0x542aec9a270a60848d6445bff5e845a77bda0bee, score 77.73, phase upcoming, 218 mints / 117 unique minters, whaleShare 0.02). rug-check CLEAN (0/255, EIP-1167 SeaDrop-clone proxy). Handed to hood-mint-watch lane for execution under standing gates (price <$0.10, gas <$0.50, no approvals, project-quality check). No claims from this cron (read-only).
+- VERIFY-tier: The spark (0xdf562bd9fea04cdcd6a0502acf5dd46a48ce665d, 69.18, live) and Dotts Hod (0x4bad872b7dcac26855a55d49e053784766fb2528, 69.13, live) — both rug-check clean, missed execute on low unique-minter ratios.
+- 14:59 CDT (foil-restap-inbox): Inbox had 1 entry (self-test msg_7df6ddad74179232), already answered. Server healthy — discovery doc returns at 127.0.0.1:1871. No replies needed, nothing to surface.
+
+## 15:00 CDT — GoatsonHood fire BLOCKED (price flip at fire time)
+- Pre-fire (19:44Z): all gates green, price 0. At 20:00:23Z fire time, the drop flipped free->paid (6e13 wei = ~$0.1612, maxSupply 5->10). Fast-mint's fire-time re-probe gate refused the claim (>$0.10 cap). Nothing signed, nothing broadcast, 0 gas spent. Fire-time re-verify gate worked exactly as designed (bopper pattern). GoatsonHood is now blocked in the pipeline — never claim while over cap.
+
+## hood-mint-watch run917 (~14:05–15:05 CDT)
+- Radar headless (build v=1791227581497): 93 cards; +4/-4 vs run916. New RH: vintage-pixell (public LIVE $0.08 — quality FAIL @Red0Rider 0 fol → lead-only), the-spark (public 0.0002 >cap — dead), mooniezworld (free stages offchain-only — dead), bgr (ETH free windows ended — dead).
+- Raffles: 0 live of 151 tracked. OpenSea keyed drops API failed twice (empty reply, retry after 30s) — run916's pull 30 min prior had 9 drops/nothing free; browser page fallback used instead.
+- X sweep (read-only, healthy session, 19 announcers + 4 keyword searches): no CCFF00-holder WL announcements. 24/7 HOODSTREET MEDIA Space LIVE (~146–158 listeners). New leads: PROJECT SHIESTY Oct 6 (3,333 free RH, GTD 10AM/FCFS 12PM/PUBLIC 1PM CDT — WL via whitelist.projectshiesty.xyz), @DegensCasinoRH 2222 free RH Oct 9, @xreign_app free-mint list open till snapshot, @zyper_cloud Stonewatch Genesis free FCFS, @ComputersRH 333 GTD WL (Oct 6 early access), @Demonics_rh 6,666 free + raffle, @KingAnt AntHood 1,111 WL-only free, @PlayOnMint MintABear, @FedProtocol, @RYFTCORP, @pigeoncrew_nft.
+- **Goats on Hood claim attempt: BLOCKED at fire time.** Full gate checklist passed (route verified @GoatsonHood, quality PASS — verified 9.9K followers, tinfoil SUSPICIOUS→reclassified platform noise on dry / CLEAN 17/100 at fire, calldata mintPublic no approvals), dry probe read price=0 free. But at fire (20:01Z) onchain price read 6e13 wei (~$0.1612) > $0.10 cap — the project flipped FREE→PAID between vet and open. fast-mint fire-time price gate auto-refused; no tx signed, no spend. Advertised-free/opened-paid = bait pattern. Pipeline: goatsonhood → blocked, NEVER claim. Foil holds 0 GOATS.
+- cluck-dogg Backstage GTD 18:00 CDT: @MRC_Pixel verified 275 fol; GTD free via wallet-drop replies, NO CCFF00 gate → not a CCFF00-WL claim; public stages paid >cap. Watching only.
+- madznfts GTD Tue 10:00 CDT: first-77-wallets FCFS, no CCFF00 → lead-only. blockfun public free Tue 14:00 CDT: vet pending next run. spikesociety (Tue–Wed all-free): watching.
+
+- 15:01 CDT (bankr-launch-alerts): 50-launch feed, 6 new: SosumiAi (base), Autonomy (robinhood), Pollen Pet (base), Tabby Clanker (base), Pollet Pet (base), WASTED AGENT (base). GeckoTerminal mostly empty (fresh doppler launches, unindexed); Pollen Pet first-sight FDV ~$10k. No pools.fun protocol token launch news; no known-builder deployers. Read-only, no trades.
+
+## 15:04 CDT — foil-restap-inbox run
+- inbox.json: 1 entry (msg_7df6ddad74179232, self-test, answered=true). Nothing pending, nothing to reply to.
+- RESTAP server http://127.0.0.1:1871 healthy — discovery doc returned (restap 0.1.4-beta). No restart needed.
+
+## nft-screener 15:06 CDT — detect-only run
+- Screener v2 (robinhood+base, min-score 60): 34 candidates, all legs OK (base/robinhood mint scans, OpenSea drops ×3, Zora quiet); Solana + mempool legs still offline stubs (no keys) — standing, not a failure.
+- EXECUTE tier: Veylora (RH 0x542aec9a270a60848d6445bff5e845a77bda0bee), score 77.51, upcoming, 217 mints / 115 minters / whale 2%. Manual rug-check 4663: CLEAN (0/255, EIP-1167 proxy). Handed to hood-mint-watch lane under project-quality gate.
+- VERIFY tier: Credits Punks 71.81 (low velocity, whale 29%), RiotToons 61.6 (low minter diversity, whale 46%).
+- BLOCKED: 0x995d0a6917f8be86c43b1a4f4cdb00403f1f1eae (RH) — rug-check FLAGGED, blacklisted.
+
+## fb-run1611 2026-10-05T20:05Z (foilbox-ccff00-watch, 5-min delta sweep)
+- Radar build 1791230680945 (90 cards): 3 new slugs — dear-jeeters (LIVE PUBLIC FREE x3 onchain 0/maxW3, quality-FAIL created-today/no-X/aggregator-only -> lead-only, NEVER claim), crooks-onchain (1-min team window ended -> lead-only), fungo-labs (PAID 0.032 ETH >cap -> blocked).
+- GOATSONHOOD fire armed fb-run1610 fired 20:00:23Z BLOCKED at fire time: price flipped 0 -> 0.00006 ETH (~$0.1612 >cap) + maxSupply 5->10 between pre-encode and fire (bopper-pattern flip #2). Nothing signed, 0 gas. Pipeline -> blocked.
+- 0 live qualifying claimable phases; 0 live CCFF00-gated onchain phases (all allowRoots 0x0); 0 claims; 0 engagement. Pipeline now 1755 entries.
+
+## hmw-run918 2026-10-05T20:10Z (hood-mint-watch — headless portion)
+- Radar build 1791230590696 (90 cards, prev 93): +4/−7. NEW: crooks-onchain (GTD free LIVE 15:06→18:06 CDT, onchain contract 0x6eb77d06a3f910e242ac6f3dee29ba5d3d0dc2a4 — OpenSea metadata has NO twitter/project/discord → anonymous, quality-FAIL → lead-only, NEVER claim), dear-jeeters (PUBLIC FREE ×3 15:06 CDT→Oct 6 04:06 UTC, 0xd0f7d59305e411566cabfaeabdf425aa9da13230 — same anonymous metadata → lead-only, NEVER claim), credits-punks (public paid 0.00004 ≈ $0.107 >cap → dead), fungo-labs (paid 0.032 ETH → dead). GONE: vintage-pixell, blacktide-bounty-chests, beast-boy, the-spark-507458561, goatsonhood (blocked — stays out), bgr-34599986, chantel.
+- Raffles data.json (cache-busted): 0 live of tracked set.
+- OpenSea drops API HEALTHY again (run917's exit-52 failures were transient, not key death): 9 drops, 2 is_minting — Collectr (Base, public 0.0056 ETH ≈ $15 → dead) and Mooncats (RH, 0x99b10b280c1fd3625737c51590ddf7191963c5f6; detail API 404 → OpenSea page fallback in X sweep). None on radar.
+- Claims: NONE — no live phase passed all gates. Every live-free lead is anonymous/dust, Foil-ineligible, or onchain-paid over cap.
+- X sweep (browser task) in flight: keyword searches, 17 announcer profiles, 24/7 Space status, Crooks/DearJeeters X vet, Shiesty Oct 6 update, Mooncats + DearJeeters OpenSea page checks.
+
+## 2026-10-05 15:09 CDT — RESTAP inbox processor
+- inbox.json: 1 entry, already answered (self-test from 2026-10-01); nothing new to reply to.
+- RESTAP server 127.0.0.1:1871: healthy, discovery doc returned.
+
+## foilbox-ccff00-watch fb-run1612 2026-10-05T20:11Z (15:11 CDT)
+- 5-min delta sweep: radar build 1791230861013 (91 cards). 1 new slug: hood-tetris 0x2b87567a173304871cb0990020add908b2849625 (Public PAID 0.00005 ETH fires 10-06, blocked >cap). 6 live-free carry cards dropped off-feed (stonewatch/sw-banners/ducks-hood/asdasd/rouge-bots/claus/fatfl-funks); direct onchain re-probe: NO config flips, all 6 live-free phases remain lead-only-blocked (route/quality), 0 CCFF00-gated onchain phases. CLAIMS: 0. Pipeline: 1756 entries.
+
+## nft-screener run — 2026-10-05 15:05 CDT (cron)
+- Ran screener-v2 `--chains robinhood,base --min-score 60`: 35 candidates, 1 execute, 3 verify, 18 watch, 13 blocked. All live legs OK (base + robinhood mint-scan, OpenSea drops API 3 upcoming, Zora quiet). Solana + mempool STUB legs offline as usual (no keys on file).
+- EXECUTE (≥75): **Veylora** [robinhood/ERC721] score 77.42 — 0x542aec9a270a60848d6445bff5e845a77bda0bee — 85 mints, 49 unique minters, whaleShare 0.16 — rug-check CLEAN (EIP-1167 SeaDrop clone, bytecode-only, no verified source; INFO only).
+- VERIFY (60–74): Digital Monkes 74.1 (0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf, slow vel 21.71); TlckerFolk 61.79 (0x18e1557fe542b1e879dfa845f1b948e6553bcfed, low unique-minter ratio); DEAR JEETERS (DJT) 60.36 (0xd0f7d59305e411566cabfaeabdf425aa9da13230, live, very fresh).
+- Read-only run: no claims, no wallet writes. Run note appended to goal hidden_files/nft-screener-runs.log.
+
+## foilbox-ccff00-watch fb-run1613 (20:13Z / 15:13 CDT)
+- 5-min delta sweep: radar 92 cards (+1): p-570370892 (ink chain, FREE x2 live, HYPE0 no-X) -> lead-only/skip, out of RH/Base lanes.
+- Re-probed 6 live-free watchlist contracts (official RH RPC, 0 errors): no config flips, all roots 0x0; all stay lead-only (route/quality fails). 0 claims. Pipeline: 1757 entries.
+- 2026-10-05 15:14 CDT (foil-restap-inbox): Inbox checked — 0 unanswered entries (1 prior self-test, already answered). RESTAP server healthy at 127.0.0.1:1871 (discovery doc OK). No action taken.
+## 15:15 CDT — wl-scout-feeds-rebake
+- Rebaked WL Scout feeds snapshot: raffles 151 total / 0 live, radar build 1791231176266 with 92 cards. Committed 3a60974 and pushed to origin/main (verified via git log).
+
+## 15:17 CDT — Base Rooms Buddy #0241 pairing + wallet-risk follow-up
+- UPDATE replacing the earlier unconfirmed pairing state: the user said Base Rooms Buddy unit #0241 is already paired and working as an external Base tool layer (token safety, wallet checks, gas, market pulse, approvals). Foil opted to keep it available in the background.
+- Important limitation: Foil has no direct Buddy key/endpoint in this session, so Buddy results must currently be relayed by the user; Foil will analyze and independently cross-check them. Never paste a Buddy key into chat; any future direct handoff belongs in Secure Vault.
+- Buddy-reported wallet scan (not independently verified): 22 risky approvals and one sketchy NPC token. User offered to inspect approvals or ignore; Foil chose approvals first. No revokes, signatures, or other wallet actions occurred. Full spender/token/allowance list remains pending from the Buddy/user.
+- Independent spot-checks: Base RPC returned gas price 0.0060 gwei; Alternative.me Fear & Greed API returned 70 (“Greed”). Revoke.cash allowance API attempts returned no data / HTTP 000, so the 22-approval count remains unverified from Foil’s side.
+- Dexscreener search found three Base NPC contracts: established Non-Playable Coin 0xB166E8B140D35D9D8226E40C09f757BAC5A4d87d (~$834k liquidity, ~$55.6k 24h volume at check) and two low-activity lookalikes, 0x4e513548095b05341a6e4F639aBAf3f67640d3bE and 0x25c9E5BD4F1ab5358c1017AD4e83945457686969 (~$27k liquidity and ~$4 24h volume each). Which contract the Buddy flagged is still unknown; do not label a specific NPC token dangerous until matched.
+- 15:17 CDT bankr-launch-alerts: feed OK (50 items), 13 new launches. Notables: DOGEBOT (RH 0xd164a24930db6d7cdf90269ebfef6528596b3ba3, @reansykes) — real early traction, $522 vol/24h on $53 liquidity, FDV ~$11k; Kardashev-0.7 (RH) tiny ($2.6k FDV, no liquidity yet). FRIDA (Base 0x7d3e17c0a38ac75fffc92bde2e61050babbdfba3, @0xtylerreth doppler) paired with AAPL tokenized stock. @0xtylerreth launched 3 in the window (FRIDA, SNATCH, GENEX). 10 Base launches not yet indexed on GeckoTerminal. No 0xDeployer-linked addresses, no pools.fun token news. Seen list capped at 500.
+- 15:19 CDT (foil-restap-inbox): inbox.json has 1 entry (msg_7df6ddad74179232, self-test), answered=true; outbox matches; RESTAP server on 127.0.0.1:1871 healthy (restap 0.1.4-beta). No new messages to answer.
+
+## nft-screener run 2026-10-05T20:20Z (15:10 CDT scheduled)
+- screener-v2 --chains robinhood,base --min-score 60: 27 candidates (execute 2 / verify 4 / watch 14 / blocked 7). All legs OK, no degraded legs this run (OpenSea drops API live, 3 upcoming drops). Solana + mempool legs remain standing stubs (no keys).
+- Execute-tier: Digital Monkes (DMONKES) robinhood 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf score 84.8 — rug-check CLEAN (independent run, bytecode-only, EIP-1167 proxy); Veylora (Veylora) robinhood 0x542aec9a270a60848d6445bff5e845a77bda0bee score 78.79 — rug-check CLEAN (same profile). Surfaced for hood-mint-watch; this cron made no claims.
+- Blacklisted: base 0xcfc5c9c6bd36585de1ab4886e172978041653566 (FLAGGED, never execute).
+- Full run note in ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log.
+- 20:20 UTC netprotocol-drop-watch: all 10 feeds read + Base token rankings checked; 36 keyword hits and 30 tokens all previously seen — no new drops. Quiet run.
+
+## foilbox-ccff00-watch fb-run1614 (2026-10-05T20:24Z / 15:24 CDT)
+- Radar build 1791231401099: 92 cards, 0 new slugs vs fb1613. OpenSea drops: 9 (0 new qualifying). hyvebox: no CCFF00 phases. Screener execute-tier: Veylora only (pipelined lead-only).
+- Stonewatch Genesis Banners (0x39ab8fc35f83cfd0f12034b33cc7299c1c5bbfbc) LIVE PUBLIC FREE x1 19:00:53Z->10-06 — rug-check CLEAN, route evidence on file, but Tinfoil SUSPICIOUS re-confirmed this run (clipboard-write MEDIUM + wallet prompts on stonewatch.io) -> FAIL-CLOSED, NO claim.
+- Tooling note: claim-with-tinfoil.sh's route-gate.mjs fails pipeline lookup because the pipeline is a keyed dict, not a `projects` array (worked around with --route-x/--route-site flags). Worth fixing route-gate.mjs findEntry for dict-shaped pipelines.
+- CLAIMS: 0. Pipeline 1758 entries. Watching continues.
+
+## x-activity-pulse ~15:00-15:20 CDT — clean run, no throttles
+- Session healthy start→end, signed in @Foil667, parked x.com/home. Write gate passed (like 2941→2942 persisted). No automation notices, no rollbacks, no runtime death this run.
+- 3 giveaway entries (all valid, @noyaphuckinbiz tagged in each as entry+tag): Chubby Koalas Club free mint LIVE (2,026 RH, opensea.io/collection/chubby-koalas-club) — CAUTION community flagged free→paid controversy, verify before mint desk acts; @Bii_Jay1 x @MadzNfts 2-GTD-spots raffle (reply w/ EVM 0x6573682faee72a4a96e791ba262439f1df3a268d; follow-status for @Bii_jay1/@MadzNfts unverified); @MarlonPruz WL-comment entry (RH+OpenSea launch).
+- @shadowdstudio standing duty: 1 warm reply on newest post (affiliation mentioned), verified live.
+- Substantive post: Hoods Works NFTs $4→$50+ on Robinhood + Rarible added RH chain — "two venues live, verify contracts, clones out."
+- Space: StreetHood Media 24/7 via RoaringPiggy panel, silent ~2 min, 153→167 listeners; jumbotron: SKNOTS repost/tag/addy, ProjectShiesty mask-status, HYVEBOX sknots hyvemaps.
+- Mint leads: CLAUS free public mint LIVE (5,555 RH, opened 2:45 PM CDT, $CLAUS airdrop); World of Defense Genesis Oct 7 10:00 UTC (GTD free); Hooded Waifus 3,333 WL quests; Hue 3,054/3,333 (<300 left).
+- Banned handles untouched (@CCFF00Diamonds/@SmartAzuki zero contact). nemo0g not re-posted, no second MINT RADAR.
+- Looper family already covered (all liked/reposted); @mybasetime liked, no reply (9 Foil replies today already).
+- Second operator still active; unresolved: NullHood entry used $RESCUE contract as address (likely malformed).
+- Detail: ~/workspace/goals/foil-x-debut-posts-on-foil667/hidden_files/x-pulse-actions.log (run block 15:00-15:20).
+
+- 2026-10-05 ~15:24 CDT (foil-restap-inbox): no-op run. inbox.json had 1 entry (msg_7df6ddad74179232, self-test "Hello Foil, who are you?" from 2026-10-01) already answered=true — no unanswered entries, no reply composed. RESTAP server at 127.0.0.1:1871 healthy (discovery doc returned, restap 0.1.4-beta). Silent, no user notification.
+
+## foilbox fb-run1615 (20:26Z / 15:26 CDT)
+5-min delta sweep. Radar build 1791231715504: 95 cards (prev 92). 3 new slugs:
+- **stet-the-unwritten** (0xbbb0aaa7515e6d8a176384ce937fb367402acc1d): card GTD FREE LIVE 20:15-20:30Z, but onchain is PUBLIC PAID 0.015 ETH (~$40) firing 20:30:31Z, allowRoot 0x0 -> free gate offchain-only (fail-closed) + onchain blocked >cap. NEVER claim.
+- **hoodraffe** (0x8e66d7169773bb4a8ef92ca88c09945afe1c0009): card GTD FREE offchain-only; onchain PUBLIC PAID 0.0004 ETH (~$1.08) fires 10-06 -> blocked >cap. NEVER claim.
+- **nodebots** (0xc616b36c9194d8fdacf97e9a3b9c250e0b81b70e): re-card of known NodeBots (CCFF00 free gate card offchain-only; onchain PAID 5e13 ~$0.135 fires 22:00Z, still >cap; #359 held). blocked.
+Live-free carry re-probe (7 contracts, official RH RPC, 0 errors): stonewatch-b, ducks-hood, asdasd, rouge-bots, fatfl-funks, dear-jeeters, stonewatch-banner — all UNCHANGED, roots 0x0, all lead-only-blocked (route/quality). All allowRoots 0x0 -> 0 live CCFF00-gated onchain phases.
+Screener 20:19Z execute-tier = Digital Monkes + Veylora (both pipelined lead-only/blocked). CLAIMS: 0. Pipeline: 1758 entries.
+
+## Approval triage via Buddy #241 (~15:20-15:25 CDT)
+- User ran Buddy wallet check on their square wallet (Base): 22 risky approvals + sketchy NPC token.
+- Foil triaged top 5; corrected Buddy/GoPlus false positive: 0x0000000000001ff3684f28c67538d4d072c22734 is the canonical 0x AllowanceHolder (legit infra), not phishing — but unlimited approvals to it on dead tokens still worth revoking.
+- Revoke order given: (1) GEM 0xd3776969966b340d72d75731ef890a3bc9f21ba3 -> 0x4021cfb23a1e9207136916f152aced3517cd3f10 (unverified, ~14KB code); (2) RUSH 0xb36a127dba73f3aa7c70b4e00b7395b86a60e73b -> 0x65f05974b1feec584f6ff47038c6d1ff06e32548 (unverified); (3) invisible-name token 0x74562e039da8af628719b9249cb56019be167ba3 -> AllowanceHolder; (4) GLITCH 0xd2891a50afbae120b93a4c88e709328682d82ba3 -> AllowanceHolder; (5) BM 0x9ef3940ef0feadea62f7453ca98692b2c3875ba3 -> AllowanceHolder.
+- NPC 0xac2d6d39c9ec4874254a9447be84b54302ae60b5 = "NPCs"/NPC, 9 decimals, unverified, no real market (not the liquid NPCs on Base) — dust/copycat, don't interact.
+- User asked if Foil could execute revokes for them — declined: requires square-wallet private key; advised against sharing main-wallet key (holds Buddy #241 + CCFF00 square). Offered calldata drafts. Revokes PENDING user action.
+- Independently verified: Base gas 0.006 gwei, Fear&Greed 70 (Greed) — Buddy's pulse accurate.
+- Buddy arrangement: kept available as relay tool (user pastes Buddy output, Foil analyzes + verifies independently). No direct integration; direct wiring would need secure-vault key handoff, never in chat.
+
+## nft-screener (v2, 15:20 CDT run, read-only detection)
+- 36 candidates: 3 execute (>=75), 2 verify (60-74), 20 watch, 11 blocked. All legs live: base onchain OK, robinhood onchain OK, OpenSea drops API OK (3 upcoming), Zora quiet. Solana candy-machine + mempool WS legs still offline stubs (no keys — standing). No RPC errors.
+- Execute tier, all robinhood/ERC721, all manual rug-check CLEAN (bytecode-only, EIP-1167 SeaDrop clones, no verified source): Ducks hood (DUC) 0x984a1145f5d451fee5238db560d7ee7997b2bfc4 score 82.04 live; Digital Monkes (DMONKES) 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf score 77.04 upcoming; Veylora 0x542aec9a270a60848d6445bff5e845a77bda0bee score 76.96 upcoming.
+- Verify tier: STEPHOOD BOX 72.79 (slow velocity); BLACKTIDE Bounty Chests 70.83 — Foil already holds a BTBC from today's OpenSea-route claim, not a new lead.
+- No claims, no wallet writes. Run note in goal hidden_files/nft-screener-runs.log.
+- 15:28 CDT (foil-position-watch): no open positions (open: [], last closed: BOAR stop-loss 2026-09-28). Nothing priced, nothing exited.
+
+## 20:31 UTC — foilbox-ccff00-watch (fb-run1616)
+- Probes (RH publicnode RPC, 0 errors): both live free phases unchanged — stonewatch-genesis-banners (0/maxW1) still Tinfoil SUSPICIOUS → fail-closed, NO claim (decision stands); stonewatch-246796795 (0/maxW5) still route-refused/quality-unverified → watching (tiebreak browser handoff from fb1597 pending).
+- New radar slug: **tickerfolk-** (0x18e1557fe542b1e879dfa845f1b948e6553bcfed), PUBLIC LIVE paid 0.00005 ETH ≈ $0.136 > $0.10 cap → blocked, never claim.
+- allctcollection10: live paid 2.4e13 ≈ $0.065 (price gate passes) but quality vet incomplete (no corroborated real X presence) → watching, flagged for hood-mint-watch.
+- Claims: 0. Foil RH balance 0.0007152 ETH (gas-only, no drain). Pipeline 1759 entries.
+
+## foil-x-scan 15:25 CDT (run complete ~15:30)
+- X sweep CLEAN: 3 verified writes, zero automation warnings/rollbacks, throttle CLEAR. Session healthy (verified signed in as @Foil667, NOT inside a stale Space at load; left the StreetHood Space quietly after the listen).
+- Actions: REPOST @QuigleyNFT (r_alx_z musegod_rh congrats), REPLY @QuigleyNFT "@Muse work with your looper" post, REPOST @baserooms (link agents/loopers to a desktop, onchain).
+- Quigley news: Muse agents can add looper NFT to their soul; agent-NFT Space "the loop//" hosted by him Thu Oct 8 12:00 AM (x.com/i/spaces/1zqJVqmdRgrxB).
+- Helixa posts all already reposted. Project Shiesty 3,333 masks mint "live real soon" (whitelist.projectshiesty.xyz) — Oct 6 mint windows still the watch (GTD 10AM / FCFS 12PM / PUBLIC 1PM CDT).
+- Space: StreetHood Media 24/7, ~166 listeners, no captions captured; pinned Shiesty/SKNOTS/Hyvebox posts verbatim in run log.
+- Bounty watch: 1 claimable bounty unchanged ("Bring a real backlog", 20.30 USDC) — legitimate but not actionable. APoW frozen at 1.017 ETH.
+- Carried: @ChubbyKoalasNFT + @SmartAzuki OpenSea free-mint entry candidates (24h window on SmartAzuki expiring ~14:25 Oct 6).
+
+## 2026-10-05 ~15:27 CDT — nft-screener run (detect-only)
+- Screener v2 ran clean: 38 candidates (execute 1, verify 3, watch 22, blocked 12); no leg failures (Base/Robinhood/OpenSea drops all OK; Solana + mempool stubs offline by design).
+- Execute-tier: Ducks hood (DUC) robinhood 0x984a1145f5d451fee5238db560d7ee7997b2bfc4 score 77.94, rug-check CLEAN (EIP-1167 SeaDrop-clone proxy, bytecode-only, reduced confidence on source). Passed to claim lanes as lead only — no claim from this cron.
+- Verify-tier: Digital Monkes 73.41 (0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf), Veylora 72.3 (0x542aec9a270a60848d6445bff5e845a77bda0bee, whaleShare 0.48), Dotts Hod 68.32 (0x4bad872b7dcac26855a55d49e053784766fb2528).
+2026-10-05 20:33 UTC bankr-launch-alerts: 6 new Bankr doppler launches on Base — Card Bankr Club (CARD, 0xad96f748a001cdf698d8d6b8acc216640eb77ba3, @reansykes, https://x.com/reansykes/status/2107206421083525262), Netflix And Chill (NETFLIX, 0x1f995e2ee9978c740be85ebcc812efb2cb25dba3, anon), REDDIT MASCOT (SNOO, 0x0df087095a1aea477234b8fbca48e0c5bcbd2ba3, anon), The Reddit Dog (RUBY, 0xe374624e186dfd2a5af1bede3b604290469d2ba3, anon), MusePulse (MUSEPULSE, 0xf4337ba865fbc0f4530193b3bfca1902ff493ba3, @reansykes, https://x.com/reansykes/status/2107203930816217105), Shotbase (SHOTBASE, 0xdcd17a775ab44c320acb79910f54a0681087fba3, https://x.com/0xtylerreth/status/2107203441730945532). GeckoTerminal: tokens indexed, no price/FDV/liquidity/volume yet (all ~3 min old). None is pools.fun token; no known-builder deployers; brand-squat names (NETFLIX/SNOO/RUBY) from same anon wallet 0xdb300975584aa7d94e9f0f19a3128425820f30b9 — caution, not flagged as buys.
+
+## 15:36 CDT — foilbox-ccff00-watch fb-run1617
+- Radar build 1791232301400 (92 cards), 0 new projects vs pipeline. OpenSea RH drops: 5, all known; officialmooncats (0.01 ETH) + early-men-origins (0.0012 ETH) live but >$0.10 cap.
+- 14 watching contracts re-probed (0 errors, canon==fork): 0 live CCFF00-gated phases; 0 claimable. stonewatch-banners stays fail-closed (TINFOIL SUSPICIOUS); stonewatch-246796795 stays watching (route/quality); allctcollection10 live paid ~$0.065 but quality vet incomplete (OS collection created 2026-10-04, no site/discord; radar card dropped) → watching, no claim.
+- Foil RH wallet 0.0007152 ETH, no drain. Claims: 0. Pipeline: 1759 entries.
+
+## hmw-run918 2026-10-05T20:20Z (hood-mint-watch — X sweep honest close-out)
+- X browser sweep: 58 healthy steps, session never degraded (no CAPTCHA/automation/blank signals), completed 15:16:52 CDT — but the final report never arrived; two steer-to-resend attempts went fully silent (0 steps). Steers capped; closed out honestly with pages-visited evidence only. The original handoff may still land late (2026-10-02/10-04 lesson) — will append a correction if so.
+- Unverified signal: final tab title "DEAR JEETERS 0.0001 ETH - Collection | OpenSea" — Dear Jeeters' live stage may price 0.0001 ETH (~$0.27 >cap) not FREE as the card claims; stays lead-only (anonymous anyway).
+- Net coverage lost this pulse: fresh ccff00 chatter, 17 announcer updates, 24/7 Space status, Shiesty Oct-6 update, Mooncats stage pricing. Next run re-covers. Only time-critical item in-window (cluck-dogg Backstage GTD 18:00 CDT) was already watching-only.
+- FINAL run918 verdict: 0 claims, 0 new qualifying mints, OpenSea API healthy again. Full headless detail in hidden_files/x-sweep-hmw-run918.md.
+
+## nft-screener run (15:34 CDT / 20:34 UTC)
+- screener-v2 --chains robinhood,base --min-score 60: 27 candidates (execute 1, verify 0, watch 18, blocked 8). All live legs healthy (base/robinhood onchain scans, OpenSea drops, Zora quiet); Solana + mempool legs offline (standing config gaps, not failures).
+- EXECUTE: Veylora (ERC721), Robinhood chain (4663), 0x542aec9a270a60848d6445bff5e845a77bda0bee, score 76.5, phase upcoming; 112 mints / 57 unique minters / whaleShare 0.04. rug-check 4663:0x542a...0bee => CLEAN (EIP-1167 SeaDrop-clone proxy, source unverified, heuristic confidence).
+- OpenSea: https://opensea.io/assets/robinhood/0x542aec9a270a60848d6445bff5e845a77bda0bee/1667 — Explorer: https://robinhoodchain.blockscout.com/address/0x542aec9a270a60848d6445bff5e845a77bda0bee
+- No claims by this cron; candidate handed to execution lanes. Run note logged to goal hidden_files nft-screener-runs.log.
+
+## hmw-run918 CORRECTION 2026-10-05T21:15Z — X sweep report LANDED LATE (~58 min)
+- Full 58-step sweep was healthy; findings now in hidden_files/x-sweep-hmw-run918.md CORRECTION block (appended, history untouched). Prior "coverage lost" line stands as history.
+- Dear Jeeters: PUBLIC FREE LIVE until 23:06 CDT tonight, ELIGIBLE, limit 3/wallet, 72/10,000 minted — but quality gate FAILS (announcer @salvatore_txn is a verified multi-project promoter, 304 fol; launch post 2 reposts/11 views; OpenSea metadata has zero social links; no active community) → LEAD-ONLY, NOT claimed. Surfaced as user-overrideable in digest.
+- Crooks Onchain: no official X exists → lead-only. GTD free runs to 18:06 CDT.
+- NEW leads (added to pipeline as unvetted): RYFT IDENTITY 4,444 free mint RH (ryft.fun/whitelist/r-10), Chubby Koalas Club free mint LIVE on OpenSea (2,026), Pixel Bots Oct 8 6PM.
+- Mooncats drops-API "minting" lead DEAD (OpenSea delisted the collection — unverifiable).
+- Project Shiesty (Oct 6, 3,333 FREE RH; GTD 10 AM / FCFS 12 PM / PUBLIC 1 PM CDT — no time changes): official @ProjectShiesty verified 10.8K; WL via application on projectshiesty.xyz (link in bio); ⚠️ impersonator @ProjectShiessty exists. GTD application still open as of this run.
+- 24/7 Space live (Cashpig + PIXELORD, ~160 listeners). @DogsHashRH does not exist — removed from announcer list. Scam-warning chatter: @OrionXYZ 15h "This is a scam. DO NOT MINT. Said free for CCFF00 wouldn't mint and then went to paid." (project unnamed in report).
+- Final run918 verdict unchanged: 0 claims, 0 qualifying mints claimed.
+
+## foilbox-ccff00-watch fb-run1618 (15:38 CDT)
+- Radar 91 cards (build 1791232616380), 0 new slugs. OpenSea drops RH/Base: 2 minting (officialmooncats, collectr) — both pipeline-known, no claim path.
+- Onchain probes (official RH RPC, canon==fork, 0 errors, NO config flips): 0 live qualifying claimable phases. Live FREE stonewatch (route refused + quality unverified -> watching) and stonewatch-banners (Tinfoil SUSPICIOUS -> fail-closed). Live PAID allctcollection10 passes price (~$0.065) but quality vet still incomplete -> watching. All allowRoots 0x0 -> 0 live CCFF00-gated phases.
+- Claims 0. New 0. Foil RH balance 0.0007152 ETH (unchanged, no drain).
+
+## hmw-run918 supplement 2026-10-05T21:40Z (worker_completion_batch, both steer successors)
+- Contents match the earlier correction; no conflicts. Extras: @NZNFTguy renamed → **@40yrdegen** (update announcer list); TheSeekerGame Oct-8 free mint GTD for CCFF00/RH-machine holders corroborated via @0xNecr ("3333 devices. hand-forged. not generated") — matches existing SEEKER Oct-8 watch, funding call still the user's; X&O was free for CCFF00/SKNOTS/Cubes (Oct 4, 1/wallet); Shiesty GTD not over-allocated, collabs closed; RYFT = NeuralAI rebrand to an AI+GameFi project on Robinhood; trending: "Hoods Works NFTs Surge from $4 to Over $50 on Robinhood Chain" (126 posts).
+
+## nft-screener run — 2026-10-05 20:39 UTC
+- Ran screener-v2 `--chains robinhood,base --min-score 60`: 23 candidates (execute 1, verify 0, watch 13, blocked 9).
+- All legs live: base + robinhood onchain mint scans, OpenSea drops API (3 upcoming), Zora quiet. Solana + mempool stubs offline as expected (no keys on file) — not leg failures.
+- Execute-tier: **Veylora (Veylora)**, ERC721, Robinhood Chain, 0x542aec9a270a60848d6445bff5e845a77bda0bee, score 75.23, 157 mints / 79 unique minters / whaleShare 0.15. rug-check 4663: CLEAN (bytecode only, EIP-1167 minimal proxy, source unverified → reduced confidence).
+- DETECT ONLY — no claims fired. Veylora handed off to the execution lane (hood-mint-watch) pending project-quality gate + standard claim gates.
+- 2026-10-05 15:44 CDT (foil-restap-inbox): inbox check — 1 entry (msg_7df6ddad74179232, self-test), already answered; nothing new. RESTAP server healthy (discovery doc OK).
+- 15:44 CDT wl-scout-feeds-rebake: snapshot rebuilt (raffles 151 total/0 live, radar 91 cards build 1791233064458) and pushed — commit 46405ac on origin/main.
+
+## foilbox-ccff00-watch fb-run1619 (2026-10-05 20:44Z / 15:44 CDT)
+- Delta sweep: radar build 1791233019645 (91 cards, 0 new slugs); OpenSea drops RH+Base (0 new, all pipeline-known); screener 20:39Z execute-tier Veylora only (already pipelined lead-only).
+- Onchain re-probes (official RH RPC, 0 errors, canon==fork): no config flips anywhere; all allowRoots 0x0 (0 live CCFF00-gated onchain phases).
+- Live FREE phases all blocked: stonewatch-genesis-banners (Tinfoil SUSPICIOUS dispositive, fail-closed), stonewatch-246796795 (route refused + quality unverified), Ducks hood-0x984a (quality-FAIL, route fail-closed).
+- Live PAID under cap: allctcollection10 2.4e13 (~$0.065) but quality vet still incomplete -> watching, no claim.
+- Upcoming: degenscasino FREE fires 10-09 19:10Z (quality pending); trenchstrokerz CCFF00 FREE gate 10-10 04:15Z offchain-only + onchain PAID 4e14 fires 10-10 05:15Z (>cap).
+- Foil RH wallet 0.0007152 ETH, unchanged. CLAIMS: 0. NEW: 0.
+
+## nft-screener run 2026-10-05 20:47 UTC (read-only, detection only)
+- Screener v2, chains robinhood+base, min-score 60: 26 candidates (1 execute, 1 verify, 13 watch, 11 blocked). All detection legs OK: base 1587 mint events, robinhood 1895, OpenSea drops 3 upcoming, Zora quiet. Solana + mempool stubs still offline (no keys — pre-existing, not new failures).
+- EXECUTE tier #1: Veylora, score 76.71, robinhood/ERC721 0x542aec9a270a60848d6445bff5e845a77bda0bee — independent rug-check CLEAN (EIP-1167 minimal proxy, standard SeaDrop clone; 162 mints, 1912/h, 84 minters, whaleShare 0.05). Handoff target for hood-mint-watch / claim lanes (no claim fired by this run).
+- VERIFY tier #2: Digital Monkes (DMONKES), score 70.47, robinhood/ERC721 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf — rug-check CLEAN; missed execute tier on low velocity (6 mints, vel 11.8) + whaleShare 0.33.
+- 2026-10-05 15:47 CDT (bankr-launch-alerts): feed OK — 50 launches scanned, 8 new: SATO (@davidbrooksx, FDV ~1k at first sight), KRAKEN + ba3Pump (@berrycherrs), First Paired $PUMP (@emillyamstrong), First Deploy Paired Bittensor Tao + STONKFLY (anon), Testing Bankr Skill (test deploy), baldcoin (@bhazingan). No known-builder deploys, no pools.fun protocol token, no real volume/liquidity yet on any. Read-only, nothing acted on.
+
+## foil-restap-inbox (15:49 CDT run)
+- Inbox checked: 1 entry (msg_7df6ddad74179232, self-test), already answered=true. Nothing new to reply to.
+- RESTAP server healthy: 127.0.0.1:1871 discovery doc returned OK (restap 0.1.4-beta). No restart needed.
+
+## foilbox-ccff00-watch fb-run1620 (15:49 CDT)
+- Radar build 1791233200432: 90 cards, 0 new slugs. OpenSea drops RH+Base: same 9+9, 0 new. Screener 20:47Z: Veylora execute 76.71 (pipelined lead-only), Digital Monkes verify 70.47 (pipelined blocked).
+- SeaDrop probes (canon==fork, 0 errors): all 4 live carry unchanged — stonewatch-246796795 free/watching (route refused+quality unverified), stonewatch-genesis-banners free/TINFOIL SUSPICIOUS fail-closed, ducks-hood free/quality-FAIL lead-only, allctcollection10 2.4e13 ~$0.065/watching (quality vet incomplete, flagged for hood-mint-watch). All roots 0x0 -> 0 live CCFF00-gated onchain phases.
+- New card data: cluck-dogg Backstage GTD FREE 23:00Z->00:00Z but offchain-only (onchain config = public paid 3.6e14 ~$0.98 >cap, fires 10-06 02:00Z); kanpai-wagies GTD Community FREE live now offchain-only (onchain public paid 4e14 >cap). Neither claimable directly.
+- CLAIMS: 0. 0 live qualifying phases. Pipeline 1764 entries.
+
+## 15:35-16:10 CDT — x-hourly-follow-scan
+Healthy run, write-gate passed (@BigTinKC probe, no automation notice). 2/2 new follows verified: @picis360 (verified, hoodstreet.capital/ccff00 bio, 63 Foil-follow mutuals, Cannacats/Robition RH content) and @MerryForge (RH-chain token launchpad, merryforge.app). 6 likes, 2 reposts (CCFF00club "Do you hold a square?" https://x.com/CCFF00club/status/2107206816451240030; STACCoverflow ccff00 sweep https://x.com/STACCoverflow/status/2107208794837254328), 0 replies. Carry-overs @agentdack/@hoodicorns/@SHADOW_NFT15 already followed by sibling operator. Handle note: @GaryColemansSon now displays as "bigwillystyle". Intel: "Hoods Works NFTs $4->$50 on RH" trending; HØØDBITZ free mint WL checker projectshiesty.xyz; Street Hood Minis 4,269 free RH; @0xBerayan 3,333 free RH PC-game NFTs. Scams: @x2w7k3o2m1d sighted + @PlayOnMint Bear spam (zero engagement). Core scene (~21 profiles) now fully followed — follow discovery getting slow.
+
+## 15:50 CDT — HardScaleCo 3K NFT giveaway
+- Verified the source post from verified @HardScaleCo: https://x.com/hardscaleco/status/2107209325487735054 (posted 15:40 CDT). Giveaway offers 30 random NFTs to 30 winners; entry requires following @HardScaleCo, liking + reposting, and replying with an EVM wallet address. Stated window is 48 hours, implying ~15:40 CDT on 2026-10-07. No mint link or contract address appears in the post; visible replies added no material details.
+- User explicitly approved entry. A live-browser action was handed off to check/follow @HardScaleCo, like, repost, and reply from @Foil667 with Foil's EVM address. **PENDING** — no completion result has arrived yet, so none of those writes is recorded as successful.
+
+## CORRECTION — 15:47 CDT Bankr launch scan
+- Replaces the earlier SATO first-sight FDV note of “~$1k”: the worker report states **SATO FDV was ~$51k**, with no liquidity or volume yet. Other launch-scan conclusions remain unchanged: no known-builder deploy, no pools.fun token, and no notable real liquidity/volume.
+
+## 15:47 CDT — nft-screener (detection-only) run
+- Screener v2: 24 candidates; 1 execute-tier (Veylora 0x542aec9a270a60848d6445bff5e845a77bda0bee, Robinhood, score 76.75, rug-check CLEAN), 2 verify-tier (Digital Monkes 69.4, NodeBots 67.53 — both low velocity + 0.40 whaleShare, stayed below execute tier). All legs live except the never-configured Solana/mempool stubs. Run note appended to goal hidden log.
+
+## x-activity-pulse ~15:29-15:55 CDT
+- Session healthy start->end, @Foil667, parked at /home. Write gate passed (like on @noyaphuckinbiz's fresh Mint Board quote, persisted). No throttle, no deaths.
+- 2 entries (conservative; other operator did 3 ~1h ago): @richbi11 Blockchain Titans giveaway (10 WL spots, 3D Ordinals, winner in 48h, reply https://x.com/Foil667/status/2107208770795524167) and RZN DAO x @NullHood1 SPOTS giveaway (3 GTD + 7 FCFS, free RH mint Oct 8, reply https://x.com/Foil667/status/2107212110640062497). @noyaphuckinbiz tagged in both.
+- Follows verified: @Bii_jay1, @MadzNfts, @NullHood1 (resolves last run's open item).
+- Space: 24/7 StreetHood Media via @RoaringPiggy "Live on X" panel, ~2 min silent, pill gone. @ProjectShiesty confirmed 3,333 masks, Oct 6 (GTD 10 AM / FCFS 12 PM / PUBLIC 1 PM CDT).
+- Mint scout: SPOTS free Oct 8 RH 969 (nullhood.xyz); Tiny_RH x Bii_Jay1 10k supply 0.0001 ETH TBA; RYFTCORP 4,444 free RH (new); Street Hood Minis 4,269 free RH; ROOMIES live 1,111 @ 0.0002 ETH RH; Rarible live on RH chain.
+- SCAM: coordinated $CRED phishing wave on netlify.app (crypto-uff, robinhood-main-dex-kzl/mxc, crypto-pgc) pushed by verified accounts — warning post drafted for next window. Address farms (@theyfwRayan etc.) zero engagement.
+- @shadowdstudio: no reply this run (newest post 14h old, already replied 15:23); @hoojafun: nothing to enter. Other operator active this hour — next run re-check with_replies before any reply.
+
+## nft-screener run — 2026-10-05 ~15:53 CDT
+Read-only detection run on robinhood+base (min-score 60): 31 candidates — 3 execute, 2 verify, 15 watch, 11 blocked. All legs healthy (base + robinhood onchain legs, OpenSea drops API); Solana and mempool legs remain unconfigured stubs (standing gap). Execute-tier (all RH, rug-check clean, SeaDrop clones): TlckerFolk (0x18e1557fe542b1e879dfa845f1b948e6553bcfed, 77.75, live), Veylora (0x542aec9a270a60848d6445bff5e845a77bda0bee, 75.81, upcoming), NUBS RH Neon. (0xe462cd58c013ad9bd093e125b018be2ec924767a, 75.09, live). Verify-tier: DEAR JEETERS (72.93) and Crooks Onchain (70.35), both clean, missed execute on unique-minter ratio. Detection only — no claims. Detail: ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log
+- 15:59 CDT (foil-restap-inbox): inbox checked — 1 entry, already answered (self-test 2026-10-01). RESTAP server healthy on :1871 (restap 0.1.4-beta discovery OK). Nothing to reply to; silent.
+
+## nft-screener run — 15:59 CDT (20:59 UTC)
+- 31 candidates (robinhood+base, min-score 60). Legs: base OK (1509 events), robinhood OK (2519 events), OpenSea drops OK (3 upcoming), Zora quiet; Solana + mempool stubs OFFLINE (standing gaps, never configured).
+- EXECUTE tier (score >=75): Digital Monkes (DMONKES) 0x3a7ab690e250ddc0f736b5fc1c733fde62c802bf — score 91.11, upcoming, 69 mints @ 811.8/h, 69 unique minters, whaleShare 0.03. Independent rug-check: CLEAN (EIP-1167 SeaDrop proxy, bytecode-only). Left for hood-mint-watch lane to evaluate/claim.
+- VERIFY tier (60-74): TlckerFolk 73.66, NUBS RH Neon 72.9, STEPHOOD BOX 72.65 (all missed execute on velocity), Veylora 68.84 (missed on unique-minter ratio). All Robinhood; no Base candidates >=60.
+- Detection only — no claims, no wallet writes. Run note appended to nft-screener-runs.log.
+
+- 16:20 CDT (hood-mint-watch 15:24 run): 0 claims. Radar build 1791232885624 (92 cards, <article> layout; concurrent 20:47Z build 1791233200432, 90 cards, -eliza-singles -tickerfolk-). 39 RH live-or-24h <=$0.10 leads, 0 claim-eligible. Live: gladcatgable public 0.00001ETH (~$0.027) quality-FAIL dust fol=0 -> lead-only; tickerfolk- 0.00005ETH (~$0.135 >cap) + eliza-singles 0.0004ETH + stet-the-unwritten 0.015ETH all over-cap/dust -> lead-only. Stonewatch PUBLIC FREE live till 10-06 19:00:53Z but Tinfoil SUSPICIOUS fail-closed stands. Chubby Koalas = DEAD lead (free->paid flip 0.0001ETH; run915 fire SAFE-aborted by fast-mint fire-time price check, no spend). OpenSea drops API: keyless HTTP 200 works again (earlier 'Invalid API key' was my malformed header sending the whole JSON file instead of the api_key field). 9 drops (4 RH + 1 base): Mooniez vault signed_presale FREE 10-06 14:30Z (gated, lead-only); Mooncats public 0.01ETH, Early Men 0.0012ETH, Collectr(Base) 0.0056ETH all >cap; Rare Friends Genesis + OpenCatz not minting. Raffles: data.json DOES carry the live list (communities[].base.raffles) - 297 total, 3 live all ethereum (out of lane), 0 live RH/base. Armed for next runs: SHIESTY Oct 6 (GTD 10AM/FCFS 12PM/PUBLIC 1PM CDT, 3,333 free RH, WL via whitelist.projectshiesty.xyz), maskies FREE public 10-06 07:30Z, spikesociety vault FREE 10-06 10:00Z, blockfun FREE public 10-06 19:00Z, madznfts GTD 10-06 15:00Z (raffle-only; Foil entered), cluck-dogg Backstage GTD FREE 18:00 CDT today. X sweep: 35-step read-only sweep ran healthy and parked at home, but the final report never arrived (2 silent steer-resends, 0 steps each) - findings pending, carry thread-dedup to next run; last full sweep ~40min prior had no CCFF00 WL announcements. Snapshot: hidden_files/armed-leads-hmw-20261005-1524.json.
+```
+
+<!-- More: no. -->

@@ -12,14 +12,14 @@ schedule:
 timeout_secs: 600
 metadata:
   tags: [cron:automatic-interval-anchor]
-  originating_channel_context_json: '{"originating_channel":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
+  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false}'
   presentation_locale: en-US
 ---
 ## NetProtocol Drop Watch — detect only, READ-ONLY (no claims, no writes)
 
 Sweep NetProtocol for mints / NFT drops / token releases announced or launched only there. This cron is DETECTION. It does NOT claim, buy, mint, sign, approve, post, comment, or upvote anything. All write commands are forbidden.
 
-**CLIs:** `botchan` (social/feeds, v0.4.13+) and `netp` (tokens/upvotes, v0.2.10+) are installed at /usr/bin. All commands below are read-only and wallet-free.
+**CLIs:** `botchan` (social/feeds, v0.4.13+) and `netp` (tokens/upvotes, v0.2.10+) are installed at `~/.npm-global/bin` — NOT on PATH and NOT at /usr/bin (that path is stale). Invoke via full path, e.g. `~/.npm-global/bin/botchan`. All commands below are read-only and wallet-free.
 
 ### Signals to check
 
@@ -40,7 +40,7 @@ Report ONLY genuinely new, actionable drops: name, chain (Base 8453 / Robinhood 
 
 ### Leg failures
 
-If `botchan` or `netp` fails (binary missing, RPC error, timeout, rate limit), report LOUDLY in the final message: name the leg, the error, and the coverage lost. Do not invent a fallback command.
+If `botchan` or `netp` fails (binary missing, RPC error, timeout, rate limit), report LOUDLY in the final message: name the leg, the error, and the coverage lost. If the binaries are missing from `~/.npm-global/bin` (e.g. after a VM rebuild), reinstall them with `npm install -g botchan netp` and note the recovery; do not invent other fallback commands.
 
 ### Bookkeeping
 

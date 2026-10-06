@@ -40,7 +40,7 @@ investigate the wallets, resume only when clean.
 
 ## Pre-mainnet checklist
 
-- [ ] Professional audit of all 6 contracts
+- [ ] Professional audit of all 7 contracts (6 + FoilAccountFactory draft)
 - [ ] Chainlink/TWAP oracle for stock-swap minOut (placeholder `0` in StockPot is NOT safe)
 - [ ] Timelock + multisig on owner functions
 - [ ] Concrete `_credSpotPrice()` oracle adapter per chain (Base: UniV4 pool read)

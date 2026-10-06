@@ -69,7 +69,12 @@ contract Activation is Ownable {
     uint256 public constant CRED_DISCOUNT_BPS = 8000; // pay 80% = 20% off, in discount-token value
     uint256 public constant MAX_DEVIATION_BPS = 2500; // spot must be within 25% of avg
 
-    // EMA of token price in USDC-wei per token-wei (1e12 scale), seeded at deploy
+    // EMA of token price in USD per token, 1e18 fixed point (WAD scale),
+    // seeded at deploy. 1e18 scale (NOT 1e12) so sub-$1 discount tokens —
+    // the normal case for $CRED / $RESCUE — keep full precision. With a
+    // coarser scale the average would truncate toward 0 and discount
+    // activations would cost dust. Per-chain _spotPrice adapters MUST
+    // return this same 1e18 scale.
     uint256 public credPriceAvg;
     uint256 public rescuePriceAvg;
     uint256 public constant EMA_ALPHA_BPS = 2000; // 20% weight to newest observation
@@ -80,6 +85,12 @@ contract Activation is Ownable {
     event ActivationReset(uint256 indexed tokenId);
     event CredPriceUpdate(uint256 newAvg);
     event RescuePriceUpdate(uint256 newAvg);
+    /// @notice Emitted on every discount-rail activation with the exact
+    ///         burned amount. The burn-ledger indexer watches this event
+    ///         (plus dead-address Transfer logs for the $RESCUE rail) for
+    ///         visible live burn status. `token` is CRED (mechanical burn)
+    ///         or RESCUE (dead-address effective burn).
+    event Burned(uint256 indexed tokenId, address indexed payer, address indexed token, uint256 burned);
 
     error NotNFT();
     error AlreadyActive();
@@ -190,19 +201,22 @@ contract Activation is Ownable {
         ) revert PriceDeviation();
 
         // $8 worth of discount token at the EMA price (discount applied to the
-        // average, not spot — flash pumps can't cheapen activations)
+        // average, not spot — flash pumps can't cheapen activations).
+        // avg is USD/token at 1e18: token-wei = USDC-wei * 1e30 / avg.
         uint256 discountedUsd = (ACTIVATION_USDC * CRED_DISCOUNT_BPS) / 10_000;
-        uint256 tokenAmount = (discountedUsd * 1e12) / avg;
+        uint256 tokenAmount = (discountedUsd * 1e30) / avg;
 
         IERC20(token).safeTransferFrom(msg.sender, address(this), tokenAmount);
 
-        uint256 swapHalf = tokenAmount - tokenAmount / 2;
+        uint256 burnHalf = tokenAmount / 2;
+        uint256 swapHalf = tokenAmount - burnHalf;
         if (token == CRED) {
-            ICRED(CRED).burn(tokenAmount / 2);
+            ICRED(CRED).burn(burnHalf);
         } else {
             // $RESCUE has no burn() — dead-address transfer is the effective burn
-            IERC20(token).safeTransfer(DEAD, tokenAmount / 2);
+            IERC20(token).safeTransfer(DEAD, burnHalf);
         }
+        emit Burned(tokenId, msg.sender, token, burnHalf);
 
         _swapHalfToPot(token, swapHalf, avg, maxSlippageBps);
         _foldObservation(token, spot, avg);
@@ -223,7 +237,8 @@ contract Activation is Ownable {
         path[0] = token;
         path[1] = address(USDC);
         IERC20(token).forceApprove(address(dexRouter), swapHalf);
-        uint256 minOut = (swapHalf * avg * (10_000 - maxSlippageBps)) / 10_000 / 1e12;
+        // avg is USD/token at 1e18: USDC-wei = token-wei * avg / 1e30.
+        uint256 minOut = (swapHalf * avg * (10_000 - maxSlippageBps)) / 10_000 / 1e30;
         uint256[] memory amounts = dexRouter.swapExactTokensForTokens(
             swapHalf,
             minOut,
@@ -255,8 +270,10 @@ contract Activation is Ownable {
 
     /// @dev Override per chain: read discount-token/USDC spot from the
     ///      canonical pool. Base: CRED/WETH UniV4 pool -> WETH/USDC;
-    ///      RESCUE/WETH -> WETH/USDC. Default returns the stored EMA
-    ///      (conservative); concrete oracle adapters override per token.
+    ///      RESCUE/WETH -> WETH/USDC. MUST return USD per token at 1e18
+    ///      fixed point (same scale as credPriceAvg / rescuePriceAvg).
+    ///      Default returns the stored EMA (conservative); concrete oracle
+    ///      adapters override per token.
     function _spotPrice(address token) internal view virtual returns (uint256) {
         if (token == CRED) return credPriceAvg;
         if (token == RESCUE) return rescuePriceAvg;

@@ -2,7 +2,7 @@
   "schema_version": "hatch.probe_ui_session.v1",
   "socket": "/home/hatch/workspace/ts-spaces/foil-s-mint-board/.harness/probe-ui/sock",
   "slug": "foil-s-mint-board",
-  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-8f4272c1-189c-4329-8c0d-93d80ec18b9b/",
-  "audit_session_id": "56fc8254-3637-49ba-9ae0-059ac3fe5e94",
-  "pid": 5268
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-dbfd5892-cd9e-4439-a8de-033c43f9b37d/",
+  "audit_session_id": "e60a4f32-2ab2-4e55-b282-60a3c020ba39",
+  "pid": 24263
 }

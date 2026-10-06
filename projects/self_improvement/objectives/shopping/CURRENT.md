@@ -1,7 +1,7 @@
 ---
 objective_id: shopping
-run_id: sirun_5f62bd1ba3cf4ecea122198806e6f9e7
-created_at: 2026-09-27T22:42:52.088386921+00:00
+run_id: sirun_1058d2878e314ee3a5a2634a220d51ac
+created_at: 2026-10-05T04:43:53.790228461+00:00
 card_id: shopping
 worker_outcome: changed
 ---
@@ -18,4 +18,4 @@ is a framework-owned projection only.
 - Request origin: internal.self_improvement
 - Cadence: hourly
 - Worker outcome: changed
-- Subagents spawned: 2
+- Subagents spawned: 1

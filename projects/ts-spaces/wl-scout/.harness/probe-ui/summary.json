@@ -1,0 +1,13 @@
+{
+  "schema_version": "hatch.probe_ui_summary.v1",
+  "slug": "wl-scout",
+  "session_id": "7654fcfe-860d-4fc8-983b-daf98f290e68",
+  "observes": 2,
+  "acts": 3,
+  "acts_ok": 3,
+  "interactive_nodes": 12,
+  "viewports_seen": [
+    "desktop"
+  ],
+  "findings": []
+}

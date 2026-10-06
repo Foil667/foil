@@ -1,0 +1,95 @@
+{
+  "ok": true,
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-e7b0618d-d4ae-46c7-b3b9-15c4b1b640c9/",
+  "duration_ms": 13639.632780000002,
+  "output_dir": "/home/hatch/workspace/ts-spaces/vintage-vw-vans/audits/2026-09-30T01-27-06Z-022900895",
+  "nav_status": 200,
+  "viewports": {
+    "desktop": {
+      "width": 1440,
+      "height": 900,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/vintage-vw-vans/audits/2026-09-30T01-27-06Z-022900895/screenshot.png",
+      "fullpage_screenshot_path": "/home/hatch/workspace/ts-spaces/vintage-vw-vans/audits/2026-09-30T01-27-06Z-022900895/screenshot-full.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "screenshot_path": "/home/hatch/workspace/ts-spaces/vintage-vw-vans/audits/2026-09-30T01-27-06Z-022900895/screenshot-mobile.png"
+    }
+  },
+  "mobile_layout": {
+    "viewport_width": 390,
+    "scroll_width": 390,
+    "overflow_px": 0,
+    "widest_selector": null,
+    "verdict": "pass"
+  },
+  "horizontal_scrollers": [],
+  "unreachable_controls": {
+    "desktop": [],
+    "mobile": []
+  },
+  "clipped": {
+    "desktop": [],
+    "mobile": []
+  },
+  "images": {
+    "total": 4,
+    "broken": [],
+    "duplicate": [],
+    "unstable": [],
+    "failed_requests": [],
+    "external_blocked": {
+      "count": 0,
+      "sample": []
+    },
+    "sample_urls": [
+      "https://artifact-capture.invalid/spaces/v2/hatch-audit-e7b0618d-d4ae-46c7-b3b9-15c4b1b640c9/assets/hero.jpg",
+      "https://artifact-capture.invalid/spaces/v2/hatch-audit-e7b0618d-d4ae-46c7-b3b9-15c4b1b640c9/assets/utility.jpg",
+      "https://artifact-capture.invalid/spaces/v2/hatch-audit-e7b0618d-d4ae-46c7-b3b9-15c4b1b640c9/assets/camper.jpg",
+      "https://artifact-capture.invalid/spaces/v2/hatch-audit-e7b0618d-d4ae-46c7-b3b9-15c4b1b640c9/assets/interior.jpg"
+    ],
+    "verdict": "pass"
+  },
+  "text_issues": [],
+  "console_errors": [],
+  "console_warnings": [],
+  "external_fetch_failures": 0,
+  "external_fetch_failure_samples": [],
+  "blocked_requests": [],
+  "external_requests": [],
+  "external_requests_dropped": 0,
+  "external_requests_dropped_data_bearing": 0,
+  "transport_ledger_active": true,
+  "egress_lockdown": true,
+  "transport_connections": [
+    {
+      "host": "artifact-capture.invalid",
+      "port": 443,
+      "connects": 2,
+      "bytes_up": 4036,
+      "bytes_down": 2488
+    }
+  ],
+  "transport_udp_attempts": 0,
+  "transport_overflow": 0,
+  "unexplained_transport_hosts": [],
+  "broken_assets": [],
+  "blocked_affordances": [],
+  "interactive_nodes": 5,
+  "aria_snapshot": "- main:\n  - text: TYPE 2 / 1950 → FOREVER\n  - heading \"From utility to hippie.\" [level=1]:\n    - text: From\n    - emphasis: utility\n    - text: to hippie.\n  - paragraph: The Volkswagen van began as a box for the working day. Its honest shape became a camper, a protest vehicle, a rolling canvas—and one of the few machines to belong equally to tradespeople and dreamers.\n  - link \"Ride through the story\":\n    - /url: \"#story\"\n  - img \"Classic split-window Volkswagen Type 2 van on the road\"\n  - text: THE BOX THAT WOULDN’T STAY IN ONE LANE BORN TO WORK — ADOPTED BY WANDERERS\n  - heading \"A blank rectangle with a thousand lives.\" [level=2]\n  - paragraph: \"Ben Pon’s 1947 sketch imagined a compact transporter built around Volkswagen mechanics. Production began in 1950. The trick was not luxury or speed: it was useful volume. With the driver over the front wheels and the engine at the rear, the space between could become almost anything.\"\n  - strong: \"1950\"\n  - text: first T1 Transporter enters production\n  - strong: 4.5 m³\n  - text: load space in the original panel van\n  - strong: \"1956\"\n  - text: Westfalia campers reach the United States\n  - region \"Choose a life.\":\n    - heading \"Choose a life.\" [level=2]\n    - paragraph: The body stayed simple; the meaning changed with whoever held the keys. Select an era to see how the same platform crossed from commerce into culture.\n    - tablist \"Volkswagen van eras\":\n      - tab \"01 · Workhorse\" [selected]\n      - tab \"02 · Weekender\"\n      - tab \"03 · Counterculture\"\n      - tab \"04 · Cult classic\"\n    - tabpanel:\n      - img \"Early Volkswagen Type 2 panel van used as a practical transporter\"\n      - text: 1950s · CLOCKED IN\n      - heading \"The working van.\" [level=3]\n      - paragraph: \"The earliest Type 2 was all business: panel van, Kombi, minibus and pickup. Flat sides carried names and signs; the cabin-forward layout kept a large cargo bay inside a small footprint.\"\n      - list:\n        - listitem: FOR deliveries, crews, tools\n        - listitem: WHY simple, compact, adaptable\n        - listitem: LOOK split windshield, V-shaped nose\n  - text: same shell / new rules\n  - heading \"The journey from jobsite to campsite took one fold-out bed.\" [level=2]\n  - figure \"WESTFALIA-STYLE CONVERSIONS TURNED CARGO SPACE INTO A TINY HOME.\":\n    - img \"Restored 1967 Volkswagen Type 2 camper van\"\n    - text: WESTFALIA-STYLE CONVERSIONS TURNED CARGO SPACE INTO A TINY HOME.\n  - 'figure \"CABINET, TABLE, BENCH, BED: DOMESTIC LIFE PACKED INTO A FEW FEET.\"':\n    - img \"Vintage Volkswagen Westfalia camper interior with compact cabinetry and seating\"\n    - text: \"CABINET, TABLE, BENCH, BED: DOMESTIC LIFE PACKED INTO A FEW FEET.\"\n  - region \"How a tool became a symbol.\":\n    - heading \"How a tool became a symbol.\" [level=2]\n    - article:\n      - time: \"1947\"\n      - heading \"The sketch\" [level=3]\n      - paragraph: \"Dutch importer Ben Pon draws the seed of a Beetle-based transporter: maximum carrying space on a compact footprint.\"\n    - article:\n      - time: \"1950\"\n      - heading \"The T1 clocks in\" [level=3]\n      - paragraph: The first production Transporter leaves Wolfsburg. Panel van first; passenger and pickup variants follow quickly.\n    - article:\n      - time: \"1956\"\n      - heading \"The room appears\" [level=3]\n      - paragraph: Westfalia camper conversions reach the U.S., formalizing what owners were already doing—turning the bus into a portable life.\n    - article:\n      - time: 1960s\n      - heading \"The people repaint the meaning\" [level=3]\n      - paragraph: Affordable space, an unconventional silhouette and easy customization make the Microbus a natural fit for musicians, organizers, travelers and the counterculture.\n    - article:\n      - time: \"1967\"\n      - heading \"The bay window arrives\" [level=3]\n      - paragraph: The second generation trades the split windshield for a broad curved pane, better visibility and a more capable platform—without losing the friendly face.\n    - article:\n      - time: NOW\n      - heading \"The blank canvas survives\" [level=3]\n      - paragraph: \"Restorers, campers, collectors and artists still read the same simple body as an invitation: work with it, sleep in it, paint it, go.\"\n  - paragraph: It didn’t stop being useful when it became a hippie icon. Its usefulness is what made the freedom possible.\n  - complementary:\n    - heading \"The real legacy\" [level=2]\n    - paragraph: \"The van’s countercultural image can hide a wider story. Microbuses moved bands and families—but also people to rallies, polling stations and schools. Its symbolism grew from the same trait that made it a work van: it could carry people and purpose together.\"\n  - heading \"ROAD NOTES & SOURCES\" [level=2]\n  - list:\n    - listitem:\n      - link \"Smithsonian · Counterculture\":\n        - /url: https://www.smithsonianmag.com/innovation/how-volkswagen-bus-became-symbol-counterculture-180974354/\n    - listitem:\n      - link \"Practical Motorhome · Timeline\":\n        - /url: https://www.practicalmotorhome.com/news/a-history-of-the-volkswagen-campervan-celebrating-75-years\n    - listitem:\n      - link \"Hagerty · Hero image\":\n        - /url: https://www.hagerty.co.uk/articles/the-volkswagen-type-2-at-75/\n    - listitem:\n      - link \"Secret Classics · Early T1 image\":\n        - /url: https://www.secret-classics.com/en/volkswagen-t1-sofie-2/\n    - listitem:\n      - link \"Classic Driver · Camper image\":\n        - /url: https://www.classicdriver.com/en/car/vw/type-2/1967/493967\n    - listitem:\n      - link \"TheSamba · Interior image\":\n        - /url: https://www.thesamba.com/vw/forum/album_page.php?pic_id=1932843&sid=3fd7046e468e9ab3f7a480dcf21600ff\n    - listitem:\n      - link \"Street Muscle · Culture image\":\n        - /url: https://www.streetmusclemag.com/news/vws-iconic-light-bus-re-creation-is-far-out-trip-man/",
+  "audit_session_id": "e9338b7f-6e17-4750-bc7b-6822d5c2a54d",
+  "mobile_ms": 5874.158781,
+  "cold_launch_ms": 4346.767027,
+  "desktop_ms": 8243.862560000001,
+  "browser_launches": 1,
+  "audit_path": "shared-concurrent",
+  "diagnostics": {
+    "audit_path": "shared-concurrent",
+    "concurrent_ran": true,
+    "concurrent_desktop_retry": false,
+    "concurrent_mobile_retry": false,
+    "shared_launch_failed": false,
+    "nav_retries": 0
+  }
+}

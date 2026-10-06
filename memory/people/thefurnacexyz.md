@@ -2,7 +2,7 @@
 display_name: thefurnacexyz
 nickname: @Thefurnacexyz
 summary: Runs the Identicon Punks allowlist checker and its own Furnace GTD claim (live 2026-09-22, 1,000 spots); @Foil667 follow directed by the user for CCFF00 mint intel.
-rank: 21
+rank: 22
 updated: 2026-09-22
 ---
 

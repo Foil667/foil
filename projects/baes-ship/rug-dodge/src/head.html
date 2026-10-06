@@ -1,0 +1,82 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"><title>Rug Dodge</title><style>
+body{background:#070907;color:#e8f0e9;font-family:monospace;display:flex;justify-content:center;padding:12px 8px;margin:0}
+#w{width:100%;max-width:440px;text-align:center}
+h1{font-size:22px;letter-spacing:4px;color:#ff9d5c;margin:0}
+h1 .sub{font-size:11px;letter-spacing:2px;color:#8a978b;display:block;margin-top:2px}
+canvas{width:100%;border:2px solid #3a2d2c;border-radius:8px;background:#0b0e0c;touch-action:none;cursor:crosshair}
+#h{font-size:12px;padding:6px 2px;color:#a9b5aa}
+#h b{color:#ff9d5c}
+#h .sh{color:#37f2e8;font-weight:bold}
+#eco{font-size:11px;padding:6px 8px;color:#c9d4ca;background:#0e130e;border:1px solid #22301f;border-radius:8px;margin-bottom:8px;line-height:1.7}
+#eco b{color:#ccff00}
+#eco .tier{color:#7CFF6B;font-weight:bold}
+#fireline{color:#ff9d5c}
+#menu{display:flex;gap:6px;justify-content:center;margin:8px 0;flex-wrap:wrap}
+#menu button{font-family:monospace;font-size:12px;background:#141a15;color:#ff9d5c;border:1px solid #7a4a2f;border-radius:8px;padding:8px 10px;cursor:pointer}
+#menu button:hover{background:#1c2a1e}
+.panel{background:#0c110c;border:1px solid #7a4a2f;border-radius:10px;padding:10px;margin:8px 0;text-align:left;font-size:12px}
+.panel h3{margin:0 0 8px;color:#ff9d5c;font-size:13px;letter-spacing:1px}
+.panel .x{float:right;background:none;border:1px solid #7a4a2f;color:#a9b5aa;border-radius:6px;cursor:pointer;font-family:monospace}
+.shoprow,.btyrow{display:flex;align-items:center;gap:8px;padding:7px 6px;border-bottom:1px dashed #ffffff14}
+.shoprow:last-child,.btyrow:last-child{border-bottom:none}
+.shoprow .nm,.btyrow .nm{flex:1}
+.shoprow .ds,.btyrow .ds{color:#8a978b;font-size:11px}
+.shoprow .split,.btyrow .split{color:#8a978b;font-size:10px}
+.shoprow button,.btyrow button,.ovlbtn{font-family:monospace;font-size:11px;background:#141a15;color:#ccff00;border:1px solid #7a8a2f;border-radius:6px;padding:6px 8px;cursor:pointer}
+.shoprow button:disabled,.btyrow button:disabled{color:#5c665d;border-color:#2c3a2d;cursor:default}
+.shoprow button.eq{color:#7CFF6B;border-color:#2f7a3d}
+.hatdot{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:4px}
+#ovl{background:#0c110c;border:1px solid #7a2f2f;border-radius:10px;padding:12px;margin:8px 0}
+#ovl h3{margin:0 0 6px;color:#ff7b7b;letter-spacing:2px}
+#ovl p{font-size:11px;color:#a9b5aa;margin:6px 0}
+#ovl .row{display:flex;gap:8px;justify-content:center;margin-top:8px;flex-wrap:wrap}
+.ovlbtn{font-size:12px;padding:9px 12px}
+#toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#0e130e;border:1px solid #ccff00;color:#ccff00;font-size:12px;padding:8px 14px;border-radius:8px;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90vw;z-index:50}
+#hint{font-size:10px;color:#5c665d;margin-top:6px}
+.f{font-size:10px;color:#5c665d;margin-top:10px;line-height:1.6}.f a{color:#7CFF6B;text-decoration:none}
+/* ---- rescue-burn.css (canonical: ~/workspace/shared/rescue-burn.css) ---- */
+.rbw{--rbw-bg:rgba(0,0,0,0.55);--rbw-border:#2aff5a33;--rbw-text:#e8ffe8;--rbw-dim:#9fd8a8;--rbw-accent:#2aff5a;--rbw-warn:#ffb02e;background:var(--rbw-bg);border:1px solid var(--rbw-border);border-radius:12px;padding:14px 16px;color:var(--rbw-text);font-family:inherit;max-width:560px;text-align:left}
+.rbw-title{font-weight:700;font-size:1.05rem;margin-bottom:8px}
+.rbw-total{font-size:1.6rem;font-weight:800;color:var(--rbw-accent)}
+.rbw-total span{font-size:0.9rem;font-weight:400;color:var(--rbw-dim)}
+.rbw-meta{font-size:0.8rem;color:var(--rbw-dim);margin:4px 0 10px}
+.rbw-stale{color:var(--rbw-warn);font-weight:700}
+.rbw-cols{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:520px){.rbw-cols{grid-template-columns:1fr}}
+.rbw-h{font-size:0.8rem;text-transform:uppercase;letter-spacing:0.06em;color:var(--rbw-dim);margin-bottom:4px}
+.rbw ul{list-style:none;margin:0;padding:0;font-size:0.85rem}
+.rbw li{padding:3px 0;border-bottom:1px dashed #ffffff14;display:flex;gap:8px;align-items:baseline}
+.rbw-amt{color:var(--rbw-accent);font-variant-numeric:tabular-nums}
+.rbw-from{font-family:monospace}
+.rbw-when,.rbw-rank{color:var(--rbw-dim);font-size:0.78rem}
+.rbw-foot{margin-top:10px;font-size:0.75rem;color:var(--rbw-dim)}
+.rbw-mono{font-family:monospace}
+.rbw-err{color:#ff6b6b}
+.rbw-status{color:var(--rbw-dim);font-size:0.9rem}
+#furnace{margin:8px 0;display:flex;justify-content:center}
+#furnace .rbw{width:100%;box-sizing:border-box}
+</style></head><body><div id=w>
+<h1>RUG DODGE<span class=sub>don't get pulled.</span></h1>
+<div id=h></div>
+<div id=eco></div>
+<canvas id=g width=416 height=416></canvas>
+<div id=menu>
+<button id=bPlay>&#9654; PLAY</button><button id=bShop>SHOP</button><button id=bBounty>BOUNTIES</button><button id=bPause>II PAUSE</button>
+</div>
+<div id=furnace><div id=burnMount></div></div>
+<div id=panelShop class=panel hidden><button class=x data-close>&#10005;</button><h3>&#128722; HAT SHOP — $RESCUE (demo)</h3><div id=shopRows></div></div>
+<div id=panelBounty class=panel hidden><button class=x data-close>&#10005;</button><h3>&#127919; DAILY BOUNTIES — paid from the pool</h3><div id=btyDay></div><div id=btyRows></div></div>
+<div id=ovl hidden>
+<h3>RUG PULLED</h3>
+<p id=ovlScore></p>
+<div class=row>
+<button class=ovlbtn id=bContinue>CONTINUE +2 &#10084; — 50 &#128722; (demo)</button>
+<button class=ovlbtn id=bRestart>FRESH RUN — free</button>
+</div>
+<p id=ovlSplit></p>
+</div>
+<div id=hint>move: WASD / arrows / drag on the arena · grab &#128269; VERIFY shields · near-miss rugs for combo</div>
+<div id=toast></div>
+<div class=f>Foil &middot; Looper #667 &middot; <a href=https://x.com/Foil667 target=_blank>@Foil667</a> &middot; no wallets were harmed<br>
+<span style=color:#8a978b>&#128722; figures are a DEMO ledger — practice $RESCUE, no real tokens move, no wallet connected. &#128293; below is the real onchain burn furnace.</span></div>
+</div>

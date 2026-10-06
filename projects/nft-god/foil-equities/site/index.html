@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOIL EQUITIES — Market Folklore, Pixel Cut</title>
+<meta name="description" content="Art-first NFT collection with a real stock drip underneath. 667 supply per chain. Mint is FREE (gas only).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="scanlines"></div>
+
+<header class="topbar">
+  <div class="logo">[▮] FOIL EQUITIES</div>
+  <nav>
+    <a href="#mint">MINT</a>
+    <a href="#traits">TRAITS</a>
+    <a href="#pot">STOCK POT</a>
+    <a href="#burn">BURN SINK</a>
+  </nav>
+  <div class="badge warn">UNAUDITED · NOT DEPLOYED</div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="kicker">MARKET FOLKLORE · PIXEL CUT</div>
+    <h1>FOIL<br>EQUITIES</h1>
+    <p class="tagline">Art-first NFTs with a real stock drip underneath.<br>
+    667 per chain. Mint is <span class="hl">FREE</span> — gas only, price exactly zero, forever.</p>
+    <div class="hero-sprites" id="hero-sprites"></div>
+    <div class="hero-cta">
+      <a class="btn big" href="#mint">ENTER THE PIT ↓</a>
+      <span class="dim">Base + Robinhood Chain · ERC-6551 bound wallets</span>
+    </div>
+  </div>
+</section>
+
+<section id="mint" class="panel">
+  <h2>⬢ MINT</h2>
+  <div class="mint-grid">
+    <div class="mint-card">
+      <div class="price">FREE</div>
+      <div class="price-sub">gas only · price exactly 0</div>
+      <ul class="mint-facts">
+        <li><b>667</b> supply per chain</li>
+        <li><b>2</b> max per wallet (allowlist) · <b>3</b> (public)</li>
+        <li>Allowlist → merkle proof · Public → open</li>
+        <li>Each token owns an <b>ERC-6551 bound wallet</b></li>
+      </ul>
+      <button class="btn big" id="mint-btn" disabled>MINT — DISABLED</button>
+      <p class="dim small" id="mint-note">Not wired to any contract. The contracts are unaudited drafts;
+      nothing is deployed. Deployment needs an explicit go-ahead — this button stays dead until then.</p>
+    </div>
+    <div class="econ-card">
+      <h3>THE MONEY (locked)</h3>
+      <div class="econ-row"><span>Secondary royalty</span><b>7.5%</b></div>
+      <div class="econ-bar"><div class="seg pot" style="width:33.3%">2.5pp → STOCK POT</div><div class="seg op" style="width:66.7%">5pp → 90/10 OPERATOR</div></div>
+      <div class="econ-row"><span>Activation (one-time, per holder)</span><b>$10</b></div>
+      <p class="dim small">Pay in ETH / USDC, or <b>$RESCUE at 20% off</b> ($8) on Base.
+      Of $RESCUE collected: <b>50% → dead address</b>, 50% swapped → StockPot.
+      Activation <b>resets on every transfer</b> — flippers earn no drip.</p>
+      <div class="econ-row"><span>Epoch distributor</span><b>every 7 days</b></div>
+      <p class="dim small">Pot buys tokenized stocks and pushes them pro-rata into
+      <b>activated</b> NFTs' bound wallets. 0.5% keeper fee. Holder money is never split.</p>
+    </div>
+  </div>
+</section>
+
+<section id="traits" class="panel">
+  <h2>⬢ THE CAST</h2>
+  <p class="dim">Six archetypes of market folklore. Chunky pixels, aggressive palette, zero crypto imagery in the art — the folklore lives in the characters, not the charts.</p>
+  <div class="trait-grid" id="trait-grid"></div>
+  <div class="trait-meta dim small">
+    OpenSea traits: <b>Archetype</b> · <b>Style</b> (Impasto Oil / Xerox Punk) ·
+    <b>Background</b> (Static Void, Basement Wall, Slime Pit…) ·
+    <b>Generation</b> (Base / Robinhood) · <b>Drip Tier</b> 1–5 (numeric)
+  </div>
+</section>
+
+<section id="pot" class="panel">
+  <h2>⬢ STOCK POT</h2>
+  <div class="pot-grid">
+    <div class="pot-stat"><div class="stat-num" id="pot-tvl">—</div><div class="stat-label">POT TVL (USDC)</div></div>
+    <div class="pot-stat"><div class="stat-num" id="pot-activated">—</div><div class="stat-label">ACTIVATED NFTs</div></div>
+    <div class="pot-stat"><div class="stat-num" id="pot-epoch">—</div><div class="stat-label">NEXT EPOCH</div></div>
+    <div class="pot-stat"><div class="stat-num" id="pot-dripped">—</div><div class="stat-label">TOTAL DRIPPED</div></div>
+  </div>
+  <p class="dim" id="pot-note">⏳ Live pot data appears after deployment. Until then this is a placeholder —
+  the distributor logic is tested and green (see test/run-economics.mjs, section H).</p>
+  <div class="econ-row"><span>Keeper fee</span><b>50 bps</b></div>
+  <div class="econ-row"><span>Epoch length</span><b>7 days</b></div>
+  <div class="econ-row"><span>Slippage</span><b>caller-capped, reverts past bound</b></div>
+</section>
+
+<section id="burn" class="panel">
+  <h2>⬢ BURN SINK <span class="badge live">LIVE</span></h2>
+  <p class="dim">$RESCUE sent to the dead address — the 50% burn leg of every discounted activation,
+  plus every other burn on Base. Read straight from chain, no wallet needed.</p>
+  <div class="burn-hero">
+    <div class="burn-flame">🔥</div>
+    <div>
+      <div class="burn-total"><span id="burn-total">…</span> <span class="burn-unit">$RESCUE</span></div>
+      <div class="dim small">burned to <code>0x0000…dEaD</code> · <span id="burn-updated">syncing…</span></div>
+    </div>
+    <div class="burn-status" id="burn-status">SYNCING…</div>
+  </div>
+  <h3>RECENT BURNS</h3>
+  <div id="burn-recent"><div class="burn-row dim">syncing…</div></div>
+  <p class="dim small">$RESCUE: <code>0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3</code> (Base) ·
+  burn panel pattern from the Looper City furnace. Cached in your browser, re-synced every 5 min.</p>
+</section>
+
+<footer>
+  <div class="foot-grid">
+    <div>
+      <b>FOIL EQUITIES</b><br>
+      <span class="dim small">Working title. Art-first, stock drip underneath.<br>
+      Contracts: unaudited drafts. <b>Do not deploy to mainnet without a professional audit.</b></span>
+    </div>
+    <div class="dim small">
+      Docs: <a href="../docs/CONCEPT.md">CONCEPT</a> · <a href="../docs/SECURITY.md">SECURITY</a> ·
+      <a href="../docs/TRAITS.md">TRAITS</a> · <a href="../docs/ASSEMBLY.md">ASSEMBLY</a><br>
+      Tests: <code>node test/run.mjs</code> · <code>node test/run-economics.mjs</code> (46 green)
+    </div>
+  </div>
+  <div class="dim small foot-base">© 2026 Foil · 90/10 Foil/user on operator revenue · holder money is never split 🌀</div>
+</footer>
+
+<script src="sprites.js"></script>
+<script src="burn.js"></script>
+<script src="config.js"></script>
+<script src="pot.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

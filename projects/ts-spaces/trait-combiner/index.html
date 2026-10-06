@@ -45,6 +45,8 @@
     .btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--shadow)}
     .btn.primary{background:var(--acid);color:#111;border-color:#111}
     .btn.danger{background:var(--coral);color:#111;border-color:#111}
+    a.btn.buy{text-decoration:none;background:var(--coral);color:#111;border-color:#111}
+    a.btn.buy:hover{background:#ff7a70}
     .btn.small{min-height:36px;padding:8px 10px;font-size:12px;box-shadow:2px 2px 0 var(--shadow)}
     svg{width:17px;height:17px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
     .workspace{display:grid;grid-template-columns:282px minmax(360px,1fr) 332px;grid-template-areas:"rack stage data";gap:14px;align-items:start}
@@ -121,6 +123,70 @@
     }
     @media(max-width:390px){.trait-list{grid-template-columns:1fr}.batch{grid-template-columns:1fr 1fr}.btn{font-size:12px}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+  /* rescue-burn.css — default theme for the RescueBurn widget.
+ * Sites can override any of these; CSS variables adapt it to local palettes. */
+.rbw {
+  --rbw-bg: rgba(0, 0, 0, 0.55);
+  --rbw-border: #2aff5a33;
+  --rbw-text: #e8ffe8;
+  --rbw-dim: #9fd8a8;
+  --rbw-accent: #2aff5a;
+  --rbw-warn: #ffb02e;
+  background: var(--rbw-bg);
+  border: 1px solid var(--rbw-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--rbw-text);
+  font-family: inherit;
+  max-width: 560px;
+}
+.rbw-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+.rbw-total { font-size: 1.6rem; font-weight: 800; color: var(--rbw-accent); }
+.rbw-total span { font-size: 0.9rem; font-weight: 400; color: var(--rbw-dim); }
+.rbw-meta { font-size: 0.8rem; color: var(--rbw-dim); margin: 4px 0 10px; }
+.rbw-stale { color: var(--rbw-warn); font-weight: 700; }
+.rbw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 520px) { .rbw-cols { grid-template-columns: 1fr; } }
+.rbw-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rbw-dim); margin-bottom: 4px; }
+.rbw ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+.rbw li { padding: 3px 0; border-bottom: 1px dashed #ffffff14; display: flex; gap: 8px; align-items: baseline; }
+.rbw-amt { color: var(--rbw-accent); font-variant-numeric: tabular-nums; }
+.rbw-from { font-family: monospace; }
+.rbw-when, .rbw-rank { color: var(--rbw-dim); font-size: 0.78rem; }
+.rbw-foot { margin-top: 10px; font-size: 0.75rem; color: var(--rbw-dim); }
+.rbw-mono { font-family: monospace; }
+.rbw-err { color: #ff6b6b; }
+.rbw-status { color: var(--rbw-dim); font-size: 0.9rem; }
+
+/* ---- $RESCUE flywheel retrofit ---- */
+#furnace-strip .rbw { --rbw-bg: #0b0f0acc; --rbw-border: #2aff5a33; --rbw-text: #d8ffd8; --rbw-dim: #7fae7f; --rbw-accent: #ffb02e; max-width: none; }
+.rescue-pill{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);background:var(--paper);padding:7px 10px;font:600 11px "IBM Plex Mono",monospace;box-shadow:2px 2px 0 var(--shadow)}
+.rescue-pill b{font-size:13px}
+.rescue-pill button{border:1px solid var(--line);background:var(--acid);color:#111;font:700 10px "IBM Plex Mono",monospace;padding:5px 8px;cursor:pointer}
+.demo-tag{font:600 9px "IBM Plex Mono",monospace;background:var(--soft);border:1px dashed var(--line);padding:2px 5px;color:var(--muted)}
+.tier-badge{font:700 10px "IBM Plex Mono",monospace;letter-spacing:.08em;background:var(--cyan);color:#071516;border:1px solid #071516;padding:7px 10px;box-shadow:2px 2px 0 var(--shadow)}
+.burn-line{font:600 11px "IBM Plex Mono",monospace;color:var(--muted)}
+.specimen .ash-btn{width:100%;margin-top:8px;border:1px solid #111;background:var(--coral);color:#111;font:700 10px "IBM Plex Mono",monospace;padding:8px 6px;cursor:pointer}
+.specimen .ash-btn:hover{filter:brightness(1.15)}
+.specimen:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+.seal-btn{grid-column:1/-1;background:var(--yellow)!important;color:#111!important;border-color:#111!important}
+.daily-bounties{display:grid;gap:8px;margin:0 0 14px}
+.bounty-row{display:flex;justify-content:space-between;align-items:center;gap:12px;border:1px solid var(--line);background:var(--paper);box-shadow:3px 3px 0 var(--shadow);padding:10px 12px;font:600 11px "IBM Plex Mono",monospace;flex-wrap:wrap}
+.bounty-claim:disabled{opacity:.45;cursor:not-allowed}
+.cur-toggle{display:flex;gap:1px;background:var(--line);border:1px solid var(--line);margin-bottom:10px;width:max-content}
+.cur-btn{border:0;background:var(--paper);padding:9px 14px;font:700 11px "IBM Plex Mono",monospace;cursor:pointer;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.cur-btn.active{background:var(--acid);color:#111}
+.commission-card{border:1px solid var(--line);background:var(--paper);box-shadow:3px 3px 0 var(--shadow);padding:12px 14px}
+.commission-meta{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.commission-meta h3{margin:0 0 6px;font-size:14px}
+.commission-meta p{margin:0;font-size:12px;color:var(--muted)}
+.commission-value{text-align:right;font:600 10px "IBM Plex Mono",monospace}
+.commission-value strong{display:block;font-size:14px;font-family:"Chivo",sans-serif}
+.commission-actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.settlement-note{font:500 10px "IBM Plex Mono",monospace;color:var(--muted)}
+#commission-form .btn{margin-top:4px}
+@media(max-width:720px){.rescue-pill{width:100%;justify-content:space-between}}
+
   </style>
 </head>
 <body>
@@ -132,10 +198,13 @@
         <p class="lede">Stack traits, lock the good mutations, import your own transparent layers, then export the art and its metadata template. No roadmap. Just recombinant JPEG science.</p>
       </div>
       <div class="action-stack">
+        <a class="btn buy" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&amp;chain=base" target="_blank" rel="noopener">BUY $RESCUE</a>
         <button class="btn" id="loadBtn"><svg viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4"/><path d="M5 18v2h14v-2"/></svg>Load trait pack</button>
         <button class="btn primary" id="randomBtn"><svg viewBox="0 0 24 24"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="m15 15 6 6m0-5v5h-5M4 4l5 5"/></svg>Mutate</button>
       </div>
     </section>
+
+    <div id="daily-bounties" class="daily-bounties" aria-label="Daily bounties"></div>
 
     <section class="workspace">
       <aside class="panel rack">
@@ -159,7 +228,7 @@
           <button class="btn small" id="spinBtn">10× mutation</button>
           <button class="btn small primary" id="pngBtn">Download PNG</button>
         </div>
-        <div class="ticker"><span>lab status: <strong>UNSUPERVISED</strong></span><span id="tickerText">0 promises · 6 traits · 1 questionable decision</span></div>
+        <div class="ticker"><span>lab status: <strong>UNSUPERVISED</strong></span><span id="tickerText">0 promises · 6 traits · 1 questionable decision</span><div id="rescue-pill" class="rescue-pill">🪙 <b id="rescue-bal">10,000</b> $RESCUE <span class="demo-tag">demo</span> <button id="faucetBtn" title="Claim 2,000 demo $RESCUE (one per 30 min per visit) — session-only demo tokens, no real $RESCUE moves.">+faucet</button></div><span id="tier-badge" class="tier-badge">DABBLER</span><span id="session-burn" class="burn-line">🔥 0 demo-burned</span></div>
       </section>
 
       <aside class="panel data">
@@ -172,14 +241,30 @@
             <div class="score"><b id="rarityRank">S+</b><span>VIBE GRADE</span></div>
           </div>
           <div class="field"><label>METADATA TEMPLATE · REPLACE IMAGE URI BEFORE MINT</label><pre id="jsonPreview"></pre></div>
-          <div class="data-actions"><button class="btn small" id="copyBtn">Copy JSON</button><button class="btn small" id="jsonBtn">Download JSON</button></div>
+          <div class="data-actions"><button class="btn small" id="copyBtn">Copy JSON</button><button class="btn small" id="jsonBtn">Download JSON</button><button class="btn small seal-btn" id="sealBtn">SEAL SPECIMEN — 2,500 $RESCUE (demo)</button></div>
         </div>
       </aside>
     </section>
 
     <section class="strip">
-      <div class="strip-head"><div><p class="kicker">MUTATION CHAMBER</p><h2>Six bad decisions. Pick one.</h2></div><p>Click a specimen to pull its full DNA into the editor. Generate a fresh batch whenever the floor needs more emotional damage.</p></div>
+      <div class="strip-head"><div><p class="kicker">MUTATION CHAMBER</p><h2>Six bad decisions. Pick one.</h2></div><p>Click a specimen to pull its full DNA into the editor. Generate a fresh batch whenever the floor needs more emotional damage.</p><button class="btn small" id="batchReroll">Generate fresh batch — 500 $RESCUE (demo)</button></div>
       <div class="batch" id="batch"></div>
+    </section>
+
+    <section class="strip" id="commissions">
+      <div class="strip-head"><div><p class="kicker">COMMISSION BOARD</p><h2>Trait-pack jobs. Demo escrow.</h2></div><p>Post a trait-pack request with a demo $RESCUE bounty. Bounties escrow from your demo balance; unclaimed bounties refund on expiry, unreleased ones split 50/50 with the Furnace. All demo — no real $RESCUE moves.</p></div>
+      <div class="panel"><div class="data-body">
+        <form id="commission-form">
+          <div class="math-grid">
+            <div class="field"><label for="comm-title">REQUEST TITLE</label><input id="comm-title" maxlength="60" placeholder="6 cursed backgrounds"></div>
+            <div class="field"><label for="comm-bounty">BOUNTY (DEMO $RESCUE, MIN 500)</label><input id="comm-bounty" type="number" min="500" step="100" value="500"></div>
+          </div>
+          <div class="field"><label for="comm-needs">TRAIT NEEDS</label><input id="comm-needs" maxlength="140" placeholder="what layers/traits does the pack need?"></div>
+          <div class="field"><label for="comm-deadline">DEADLINE (WITHIN 7 DAYS)</label><input id="comm-deadline" type="date"></div>
+          <button class="btn small primary" type="submit">Post commission</button>
+        </form>
+      </div></div>
+      <div id="commission-list" style="margin-top:12px;display:grid;gap:10px"></div>
     </section>
 
     <section class="concepts">
@@ -190,6 +275,10 @@
       <section class="panel">
         <div class="panel-head"><h2>Drop math</h2><span class="micro">HOPIUM CALCULATOR</span></div>
         <div class="math">
+          <div class="cur-toggle" role="group" aria-label="Calculator currency">
+            <button type="button" class="cur-btn active" id="curUSD">USD</button>
+            <button type="button" class="cur-btn" id="curRESCUE">$RESCUE <span class="demo-tag">demo</span></button>
+          </div>
           <div class="math-grid">
             <div class="field"><label for="supply">SUPPLY</label><input id="supply" type="number" min="1" value="2222"></div>
             <div class="field"><label for="price">MINT PRICE (USD)</label><input id="price" type="number" min="0" step="0.01" value="3"></div>
@@ -202,9 +291,262 @@
       </section>
     </section>
 
+    <section class="strip" id="furnace-strip"><div class="strip-head"><div><p class="kicker">THE FURNACE</p><h2>Burn receipts, live.</h2></div><p>The Furnace below is live on Base. The lab's demo burns are rehearsal — never passed off as onchain.</p></div><div id="burn-widget"></div></section>
+
     <footer class="footer"><b>100% art · 0% promises · infinite bad genetics</b><span>Files stay in this tab. Nothing uploads anywhere.</span></footer>
   </main>
   <div class="toast" id="toast" role="status"></div>
+
+<script>
+/* rescue-burn.js — INLINED (single-file artifact; do not add an external dependency). Source: ~/workspace/shared/rescue-burn.js */
+/* rescue-burn.js — shared $RESCUE burn-status module for all Foil builds.
+ *
+ * Reads REAL onchain $RESCUE Transfer events to the dead address on Base.
+ * No wallet, no signatures, no fund movements — pure reads.
+ *
+ * Usage (external file): include via a script tag whose src is
+ * "rescue-burn.js", then:
+ *   RescueBurn.getStatus().then(function (s) { console.log(s.total); });
+ *   RescueBurn.renderWidget(document.getElementById('burn-widget'));
+ * (The tag itself is described, not written, so this file never contains a
+ * literal closing script tag and stays safe to inline in single-file pages.)
+ *
+ * Caching: totals + aggregates persist in an in-memory session cache (resets
+ * each page visit); each call only scans new blocks. If the RPC is unreachable,
+ * the last cached snapshot is returned with stale:true — numbers are NEVER
+ * invented.
+ */
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
+  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) { return '0.00'; }
+  }
+
+  function fmtAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+
+  var sessionBurnCache = null; /* in-memory only — resets each page visit */
+  function loadCache() {
+    if (sessionBurnCache && typeof sessionBurnCache.totalWei === 'string') return sessionBurnCache;
+    return { totalWei: '0', txCount: 0, lastBlock: START_BLOCK - 1, updatedAt: 0, recent: [], byBurner: {} };
+  }
+  function saveCache(c) { sessionBurnCache = c; }
+
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, RPC_TIMEOUT_MS);
+    return fetch(RPC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+
+  function decodeTransfer(log) {
+    // topics: [Transfer, from, to]; amount in data
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return { from: from, amount: amount, txHash: log.transactionHash, blockNumber: parseInt(log.blockNumber, 16) };
+  }
+
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+
+  function getLogsRange(rg) {
+    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
+    // dropped connection). On a range-limit signal, halve the range and
+    // retry; give up only below MIN_RANGE.
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) { return a.concat(b); });
+        });
+      }
+      throw e;
+    });
+  }
+
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return { cache: cache, tip: tip, fresh: [] };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) { fresh.push(decodeTransfer(l)); });
+          });
+        });
+      });
+      return chain.then(function () { return { cache: cache, tip: tip, fresh: fresh }; });
+    });
+  }
+
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = (Date.now() - cache.updatedAt) > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache, fresh = r.fresh;
+      // merge
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({ from: b.from, amount: b.amount, txHash: b.txHash, blockNumber: b.blockNumber });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      // timestamps for recent burns missing them (cap concurrency)
+      var need = c.recent.filter(function (x) { return !x.ts; }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) { x.ts = ts; }).catch(function () { x.ts = 0; });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      // RPC failed: serve cache, honestly labeled stale
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return { ok: false, error: 'burn RPC unreachable and no cached snapshot', detail: String(e && e.message || e).slice(0, 120) };
+    });
+  }
+
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return { address: a, amountWei: c.byBurner[a], amount: fmtWei(c.byBurner[a]) };
+    }).sort(function (x, y) { return (BigInt(y.amountWei) > BigInt(x.amountWei)) ? 1 : -1; }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) { if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString(); });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return { from: x.from, fromShort: fmtAddr(x.from), amount: fmtWei(x.amount), txHash: x.txHash, when: x.ts ? timeAgo(x.ts) : '…' };
+      }),
+      topBurners: top.map(function (t) { return { address: t.address, short: fmtAddr(t.address), amount: t.amount }; })
+    };
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]; }); }
+
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    mount.innerHTML = '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' +
+      '<div class="rbw-status">syncing with Base…</div></div>';
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        mount.querySelector('.rbw-status').innerHTML =
+          '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>';
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' +
+          esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' +
+          esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="rbw">' +
+        '<div class="rbw-title">' + esc(title) + '</div>' +
+        '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' +
+        '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' +
+        'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' +
+        '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' +
+        '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' +
+        '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' +
+        '</div>';
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) st.innerHTML = '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>';
+    });
+    return mount;
+  }
+
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+
+</script>
 
 <script>
 (function(){
@@ -333,23 +675,37 @@
   }
   function syncLock(){var b=document.getElementById('lockBtn'),on=!!locks[activeTab];b.classList.toggle('locked',on);b.textContent=on?'LOCKED':'UNLOCKED'}
   function mutate(forceCursed){
-    tabs.forEach(function(cat){if(!locks[cat]){var max=traitSets[cat].length;selected[cat]=forceCursed?Math.max(0,Math.min(max-1,4)):Math.floor(Math.random()*max)}});
+    var cursedPlus=forceCursed==='cursedplus';
+    tabs.forEach(function(cat){if(!locks[cat]){var max=traitSets[cat].length;
+      if(cursedPlus){var bi=0,br=1e9;traitSets[cat].forEach(function(t,i){if(t.rarity<br){br=t.rarity;bi=i}});selected[cat]=bi}
+      else selected[cat]=forceCursed?Math.max(0,Math.min(max-1,4)):Math.floor(Math.random()*max)}});
     document.getElementById('genomeCode').textContent='GENOME '+Math.random().toString(16).slice(2,8).toUpperCase();render();
   }
   function attributes(sel){return tabs.map(function(cat){var t=trait(cat,sel);return {trait_type:cat,value:t.name}})}
   function chaos(sel){var sum=0;tabs.forEach(function(cat){sum+=100-trait(cat,sel).rarity});return Math.min(99.9,Math.round(sum/6*10)/10)}
   function renderMeta(){
     var name=document.getElementById('collectionName').value.trim()||'Untitled Pack',id=document.getElementById('tokenId').value||'0',score=chaos(selected);
+    if(typeof window.__tcBless==='function')score=window.__tcBless(score);
     var meta={name:name+' #'+id,description:'A genetically irresponsible onchain specimen.',image:'ipfs://YOUR_IMAGE_CID',attributes:attributes(selected)};
+    var seal=(window.__tcStore&&typeof window.__tcStore.get==='function')?window.__tcStore.get('tc-seal-v1'):null;if(seal&&seal.id){meta.foil_seal=seal.id;meta.sealed_at=seal.at}
     document.getElementById('jsonPreview').textContent=JSON.stringify(meta,null,2);
     document.getElementById('rarityScore').textContent=score.toFixed(1);document.getElementById('rarityRank').textContent=score>88?'S+':score>78?'A':score>66?'B':'C';
     document.getElementById('specimenTitle').textContent='Specimen #'+String(id).padStart(5,'0');
     document.getElementById('tickerText').textContent='0 promises · 6 traits · '+(score>85?'1 suspiciously rare accident':'1 questionable decision')
   }
-  function makeBatch(){batch=[];for(var i=0;i<6;i++){var s={};tabs.forEach(function(cat){s[cat]=Math.floor(Math.random()*traitSets[cat].length)});batch.push(s)}renderBatch(true)}
+  function makeBatch(){batch=[];var n=(typeof window.__tcTier==='function'&&window.__tcTier()!=='DABBLER')?12:6;for(var i=0;i<n;i++){var s={};tabs.forEach(function(cat){s[cat]=Math.floor(Math.random()*traitSets[cat].length)});batch.push(s)}renderBatch(true)}
   function renderBatch(force){
     var el=document.getElementById('batch');if(!force&&el.children.length)return;el.innerHTML='';
-    batch.forEach(function(sel,i){var b=document.createElement('button');b.className='specimen';var cv=document.createElement('canvas');cv.width=320;cv.height=320;var cc=cv.getContext('2d');cc.scale(.5,.5);drawScene(cc,sel,false);var nm=document.createElement('b');nm.textContent='MUTANT '+String(i+1).padStart(2,'0');var sc=document.createElement('span');sc.textContent=chaos(sel).toFixed(1)+' CHAOS';b.append(cv,nm,sc);b.onclick=function(){selected=Object.assign({},sel);render();showToast('DNA loaded. Ethics committee notified.')};el.appendChild(b)})
+    batch.forEach(function(sel,i){var b=document.createElement('div');b.className='specimen';b.setAttribute('tabindex','0');b.setAttribute('role','button');b.setAttribute('aria-label','Load mutant '+(i+1)+' DNA');var cv=document.createElement('canvas');cv.width=320;cv.height=320;var cc=cv.getContext('2d');cc.scale(.5,.5);drawScene(cc,sel,false);var nm=document.createElement('b');nm.textContent='MUTANT '+String(i+1).padStart(2,'0');var sc=document.createElement('span');sc.textContent=chaos(sel).toFixed(1)+' CHAOS';var ash=document.createElement('button');ash.className='ash-btn';ash.type='button';ash.textContent='ASH IT 🔥 DEMO';ash.setAttribute('aria-label','Ash mutant '+(i+1)+' (demo)');ash.onclick=function(e){e.stopPropagation();ashSpecimen(i)};b.append(cv,nm,sc,ash);var pull=function(){selected=Object.assign({},sel);render();showToast('DNA loaded. Ethics committee notified.')};b.onclick=pull;b.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pull()}};el.appendChild(b)})
+  }
+  function ashSpecimen(i){
+    if(i<0||i>=batch.length)return;
+    batch.splice(i,1);
+    if(typeof window.burnDemo==='function')window.burnDemo(100,'ash specimen');
+    if(window.__tcStore&&typeof window.__tcStore.get==='function'){var b=Math.min(25,(Number(window.__tcStore.get('tc-ash-v1'))||0)+5);window.__tcStore.set('tc-ash-v1',b)}
+    if(typeof window.__tcOnAsh==='function')window.__tcOnAsh();
+    renderBatch(true);
+    showToast('Specimen ashed · 100 $RESCUE burned (demo) · +5 chaos blessing');
   }
   function renderPacks(){var el=document.getElementById('packGrid');el.innerHTML='';packConcepts.forEach(function(p,i){var b=document.createElement('button');b.className='pack'+(i===0?' active':'');b.style.setProperty('--pack',p.color);b.innerHTML='<b>'+p.name+'</b><p>'+p.line+'</p><code>'+p.code+'</code>';b.onclick=function(){document.querySelectorAll('.pack').forEach(function(x){x.classList.remove('active')});b.classList.add('active');tabs.forEach(function(cat,ix){selected[cat]=Math.min(p.theme[ix],traitSets[cat].length-1)});document.getElementById('collectionName').value=p.name;render();showToast(p.name+' pack injected.')};el.appendChild(b)})}
   function showToast(msg){var t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show')},2200)}
@@ -362,7 +718,7 @@
     files.forEach(function(file){var path=file.webkitRelativePath||file.name,parts=path.split('/'),base=file.name.replace(/\.[^.]+$/,''),guess=(parts.length>1?parts[parts.length-2]:base.split(/[-_ ]/)[0]);var cat=tabs.find(function(x){return x.toLowerCase()===guess.toLowerCase()})||activeTab;var img=new Image(),url=URL.createObjectURL(file);img.onload=function(){var item={name:base.replace(/[-_]/g,' '),rarity:10,color:'#cbd4cd',kind:'upload',image:img,loaded:true,url:url};traitSets[cat].push(item);selected[cat]=traitSets[cat].length-1;loaded++;if(loaded===files.length){activeTab=cat;renderTabs();render();showToast(files.length+' trait layer'+(files.length>1?'s':'')+' loaded. Memory only, no upload.')}};img.onerror=function(){loaded++;URL.revokeObjectURL(url)};img.src=url
     })
   }
-  function calc(){var s=Math.max(0,+document.getElementById('supply').value||0),p=Math.max(0,+document.getElementById('price').value||0),st=Math.max(0,Math.min(100,+document.getElementById('sellthrough').value||0))/100,cr=Math.max(0,Math.min(100,+document.getElementById('creator').value||0))/100;document.getElementById('gross').textContent='$'+Math.round(s*p*st*cr).toLocaleString()}
+  function calc(){var s=Math.max(0,+document.getElementById('supply').value||0),p=Math.max(0,+document.getElementById('price').value||0),st=Math.max(0,Math.min(100,+document.getElementById('sellthrough').value||0))/100,cr=Math.max(0,Math.min(100,+document.getElementById('creator').value||0))/100;var g=Math.round(s*p*st*cr);var rescue=window.__tcCurrency==='rescue';document.getElementById('gross').textContent=rescue?g.toLocaleString()+' $RESCUE (demo)':'$'+g.toLocaleString()}
 
   document.getElementById('randomBtn').onclick=function(){mutate(false);showToast('Fresh mutation. Probably legal.')};
   document.getElementById('uglyBtn').onclick=function(){mutate(true);showToast('Taste successfully removed.')};
@@ -377,8 +733,208 @@
   document.getElementById('loadBtn').onclick=function(){fo.click()};dz.onclick=function(e){if(e.target===dz||e.target.tagName!=='INPUT')fi.click()};dz.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();fi.click()}};
   fi.onchange=function(){addFiles(fi.files)};fo.onchange=function(){addFiles(fo.files)};
   ['dragenter','dragover'].forEach(function(n){dz.addEventListener(n,function(e){e.preventDefault();dz.classList.add('drag')})});['dragleave','drop'].forEach(function(n){dz.addEventListener(n,function(e){e.preventDefault();dz.classList.remove('drag')})});dz.addEventListener('drop',function(e){addFiles(e.dataTransfer.files)});
+  window.__tc={mutate:mutate,makeBatch:makeBatch,renderMeta:renderMeta,calc:calc,ashSpecimen:ashSpecimen};
   renderTabs();syncLock();makeBatch();renderPacks();render();calc();
 })();
 </script>
+<script>
+/* $RESCUE flywheel demo ledger for Trait Combiner.
+ * Demo play-money only (session-only in-memory store — resets each page visit).
+ * Every balance/spend/burn is labeled demo.
+ * No wallet, no signatures, no uploads, no fund movements. */
+(function(){
+  'use strict';
+  var K={
+    balance:'tc-demo-balance-v1',burns:'tc-demo-burns-v1',faucet:'tc-faucet-v1',
+    lifetime:'tc-lifetime-burn-v1',daycap:'tc-daycap-v1',ash:'tc-ash-v1',
+    commissions:'tc-commissions-v1',escrow:'tc-escrow-v1',bounty:'tc-bounty-v1',seal:'tc-seal-v1'
+  };
+  var sessionBurn=0, toastTimer;
+  var mem={}; /* session-only demo store — all progress resets on page reload */
+  function hasMem(k){return Object.prototype.hasOwnProperty.call(mem,k)}
+  function load(key,fb){if(!hasMem(key))return fb;try{return JSON.parse(JSON.stringify(mem[key]))}catch(e){return fb}}
+  function save(key,v){try{mem[key]=JSON.parse(JSON.stringify(v))}catch(e){mem[key]=v}}
+  /* shared session store for the game script (seal metadata, ash blessing) */
+  window.__tcStore={get:function(k){return load(k,null)},set:function(k,v){save(k,v)}}
+  function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(m){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]})}
+  function fmt(n){return Number(n||0).toLocaleString('en-US',{maximumFractionDigits:0})}
+  function showToast(m){var t=document.getElementById('toast');if(!t)return;t.textContent=m;t.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(function(){t.classList.remove('show')},2600)}
+  function getBal(){if(!hasMem(K.balance)){save(K.balance,10000);return 10000}return Number(load(K.balance,10000))||0}
+  function updateBalance(){var el=document.getElementById('rescue-bal');if(el)el.textContent=fmt(getBal())}
+  function spendDemo(n,label){n=Math.max(0,Number(n)||0);var bal=getBal();if(bal<n){showToast("Lab's out of demo $RESCUE — hit the faucet.");return false}save(K.balance,bal-n);updateBalance();return true}
+  function creditDemo(n,label){n=Math.max(0,Number(n)||0);save(K.balance,getBal()+n);updateBalance();if(label)showToast('+'+fmt(n)+' demo $RESCUE · '+label)}
+  function tier(){var l=Number(load(K.lifetime,0))||0;return l>=100000?'GENE TYRANT':l>=10000?'MUTAGENIST':'DABBLER'}
+  function dayKey(){var d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+  function getDaycap(){var dc=load(K.daycap,{date:'',used:0});if(!dc||dc.date!==dayKey())dc={date:dayKey(),used:0};return dc}
+  function capFor(t){return t==='GENE TYRANT'?Infinity:t==='MUTAGENIST'?200:20}
+  function updateSessionBurn(){var el=document.getElementById('session-burn');if(el)el.textContent='🔥 '+fmt(sessionBurn)+' demo-burned'}
+  var lastTier=tier();
+  function updateTierBadge(){
+    var t=tier(),el=document.getElementById('tier-badge');if(el)el.textContent=t;
+    var ub=document.getElementById('uglyBtn');
+    if(ub)ub.textContent=t==='DABBLER'?'Make it cursed — 200 $RESCUE (demo)':'Make it cursed+ — 200 $RESCUE (demo)';
+    var sc=document.querySelector('.stage-controls'),ap=document.getElementById('apocBtn');
+    if(t==='GENE TYRANT'&&!ap&&sc){
+      ap=document.createElement('button');ap.id='apocBtn';ap.className='btn small danger';ap.textContent='APOCALYPSE — 5,000 $RESCUE (demo)';
+      ap.onclick=function(){gateFee(5000,'apocalypse mutation',function(){var n=0,iv=setInterval(function(){window.__tc.mutate(false);n++;if(n>=100){clearInterval(iv);window.__tc.makeBatch();showToast('APOCALYPSE complete. 100 mutations. No survivors.')}},30)})};
+      sc.appendChild(ap);
+    }
+  }
+  function checkTierUp(){var t=tier();if(t!==lastTier){lastTier=t;updateTierBadge();if(window.__tc)window.__tc.makeBatch();showToast('TIER UP — '+t+'. The lab fears you now (demo).')}}
+  function burnDemo(n,label){n=Math.round(Number(n)||0);var burns=load(K.burns,[]);burns.unshift({action:label,amount:n,ts:Date.now()});save(K.burns,burns.slice(0,100));save(K.lifetime,(Number(load(K.lifetime,0))||0)+n);sessionBurn+=n;updateSessionBurn();checkTierUp()}
+  function gateFee(price,label,fn){
+    var t=tier(),cap=capFor(t),dc=getDaycap();
+    if(dc.used>=cap){showToast('Daily mutation cap reached ('+(cap===Infinity?'∞':cap)+'/day at '+t+'). Caps reset at local midnight — burn more demo $RESCUE to rank up.');return}
+    if(!spendDemo(price,label))return;
+    dc.used+=1;save(K.daycap,dc);
+    burnDemo(Math.round(price*0.30),label);
+    fn();
+  }
+  function faucet(){
+    var st=load(K.faucet,{lastClaim:0}),left=1800000-(Date.now()-Number(st.lastClaim||0));
+    if(left>0){showToast('Demo faucet ready in '+Math.ceil(left/60000)+' min. Demo tokens — no real $RESCUE moves.');return}
+    st.lastClaim=Date.now();save(K.faucet,st);creditDemo(2000,'faucet claimed');
+  }
+  /* ashen blessing: +5 chaos on the next rendered specimen, consumed once, stacks to +25 */
+  function getBlessing(){return Math.min(25,Number(load(K.ash,0))||0)}
+  window.__tcBless=function(score){var b=getBlessing();if(b>0){save(K.ash,0);score=Math.min(99.9,Math.round((score+b)*10)/10)}return score};
+  window.__tcTier=tier;
+  /* daily bounties */
+  function bountyState(){var b=load(K.bounty,{date:'',seals:0,ashes:0,sealClaimed:false,ashClaimed:false});if(!b||b.date!==dayKey())b={date:dayKey(),seals:0,ashes:0,sealClaimed:false,ashClaimed:false};return b}
+  window.__tcOnAsh=function(){var b=bountyState();b.ashes+=1;save(K.bounty,b);renderBounties()};
+  function bumpSeals(){var b=bountyState();b.seals+=1;save(K.bounty,b);renderBounties()}
+  function renderBounties(){
+    var el=document.getElementById('daily-bounties');if(!el)return;var b=bountyState();
+    el.innerHTML=
+      '<div class="bounty-row"><span>🎯 Seal 3 specimens today → +1,500 demo $RESCUE ('+Math.min(3,b.seals)+'/3)</span><button class="btn small bounty-claim" data-k="seal" '+((b.seals>=3&&!b.sealClaimed)?'':'disabled')+'>CLAIM</button></div>'+
+      '<div class="bounty-row"><span>🎯 Ash 5 specimens → +1,000 demo $RESCUE ('+Math.min(5,b.ashes)+'/5)</span><button class="btn small bounty-claim" data-k="ash" '+((b.ashes>=5&&!b.ashClaimed)?'':'disabled')+'>CLAIM</button></div>';
+    var btns=el.querySelectorAll('.bounty-claim');
+    for(var i=0;i<btns.length;i++){btns[i].onclick=function(){var s=bountyState(),k=this.getAttribute('data-k');
+      if(k==='seal'){if(s.sealClaimed){showToast('Seal bounty already claimed today (demo).');return}if(s.seals<3){showToast('Seal '+(3-s.seals)+' more specimens first (demo).');return}s.sealClaimed=true;save(K.bounty,s);creditDemo(1500,'daily seal bounty')}
+      else{if(s.ashClaimed){showToast('Ash bounty already claimed today (demo).');return}if(s.ashes<5){showToast('Ash '+(5-s.ashes)+' more specimens first (demo).');return}s.ashClaimed=true;save(K.bounty,s);creditDemo(1000,'daily ash bounty')}
+      renderBounties()}}
+  }
+  /* seal */
+  function sealSpecimen(){
+    gateFee(2500,'seal specimen',function(){
+      var id='FOIL-SEAL-'+Date.now().toString(36).toUpperCase();
+      save(K.seal,{id:id,at:new Date().toISOString()});
+      if(window.__tc)window.__tc.renderMeta();
+      bumpSeals();
+      showToast('Specimen sealed · '+id+' (demo)');
+    });
+  }
+  /* calculator currency */
+  window.__tcCurrency='usd';
+  function setCurrency(c){
+    window.__tcCurrency=c;
+    var u=document.getElementById('curUSD'),r=document.getElementById('curRESCUE');
+    if(u)u.classList.toggle('active',c==='usd');
+    if(r)r.classList.toggle('active',c==='rescue');
+    var lab=document.querySelector('label[for="price"]');
+    if(lab)lab.textContent=c==='rescue'?'MINT PRICE ($RESCUE · DEMO)':'MINT PRICE (USD)';
+    if(window.__tc)window.__tc.calc();
+  }
+  /* commissions */
+  function uid(){return 'c-'+Date.now().toString(36)+Math.floor(Math.random()*1e4).toString(36)}
+  function processCommissions(){
+    var now=Date.now(),items=load(K.commissions,[]),escrow=load(K.escrow,{}),changed=false;
+    items.forEach(function(c){
+      if((c.status==='open'||c.status==='awaitingRelease')&&escrow[c.id]!=null){
+        var dl=new Date(c.deadline+'T23:59:59').getTime();
+        if(dl<now){
+          var amt=Number(escrow[c.id]);
+          if(c.status==='open'){creditDemo(amt,'expired commission refund');c.status='refunded';c.settlement=fmt(amt)+' demo $RESCUE refunded to poster (demo)'}
+          else{var half=Math.floor(amt/2);creditDemo(half,'unreleased commission split');burnDemo(amt-half,'unreleased commission split');c.status='autoSettled';c.settlement=fmt(half)+' paid to poster · '+fmt(amt-half)+' burned in the Furnace (demo)'}
+          delete escrow[c.id];changed=true;
+        }
+      }
+    });
+    if(changed){save(K.commissions,items);save(K.escrow,escrow)}
+    return items;
+  }
+  function renderCommissions(){
+    var items=processCommissions(),list=document.getElementById('commission-list');if(!list)return;
+    list.innerHTML=items.length?items.map(function(c){
+      var open=c.status==='open',awaiting=c.status==='awaitingRelease';
+      return '<article class="commission-card"><div class="commission-meta"><div><h3>'+esc(c.title)+'</h3><p>'+esc(c.needs)+'</p></div>'+
+        '<div class="commission-value"><strong>'+fmt(c.bounty)+' demo $RESCUE</strong><span>deadline '+esc(c.deadline)+'</span></div></div>'+
+        '<div class="commission-actions">'+
+        (open?'<button class="btn small" type="button" data-act="fulfill" data-id="'+esc(c.id)+'">Mark fulfilled</button><button class="btn small" type="button" data-act="rack">Upload layer pack</button>':'')+
+        (awaiting?'<button class="btn small primary" type="button" data-act="release" data-id="'+esc(c.id)+'">Release '+fmt(c.bounty)+' demo $RESCUE</button>':'')+
+        ((!open&&!awaiting)?'<span class="settlement-note">'+esc(c.settlement||'Settled (demo).')+'</span>':'')+
+        '</div></article>';
+    }).join(''):'<div class="micro">No commissions yet. Post the first trait-pack request.</div>';
+  }
+  function postCommission(e){
+    e.preventDefault();
+    var title=document.getElementById('comm-title').value.trim(),
+        needs=document.getElementById('comm-needs').value.trim(),
+        bounty=Math.floor(Number(document.getElementById('comm-bounty').value)||0),
+        deadline=document.getElementById('comm-deadline').value;
+    var today=new Date();today.setHours(0,0,0,0);
+    var maxD=new Date(today.getTime()+7*86400000);maxD.setHours(23,59,59,999);
+    var dl=deadline?new Date(deadline+'T12:00:00'):null;
+    if(!title||!needs){showToast('Give the commission a title and trait needs (demo).');return}
+    if(!(bounty>=500)){showToast('Bounties start at 500 demo $RESCUE.');return}
+    if(!dl||dl<today||dl>maxD){showToast('Deadline must be within the next 7 days (demo).');return}
+    if(!spendDemo(bounty,'commission escrow'))return;
+    var id=uid(),items=load(K.commissions,[]),escrow=load(K.escrow,{});
+    items.push({id:id,title:title,needs:needs,bounty:bounty,deadline:deadline,status:'open',createdAt:Date.now()});
+    escrow[id]=bounty;save(K.escrow,escrow);save(K.commissions,items);
+    document.getElementById('commission-form').reset();
+    setDeadlineBounds();
+    renderCommissions();
+    showToast(fmt(bounty)+' demo $RESCUE escrowed.');
+  }
+  function commissionClick(e){
+    var btn=e.target.closest?e.target.closest('button[data-act]'):null;if(!btn)return;
+    var act=btn.getAttribute('data-act'),id=btn.getAttribute('data-id');
+    if(act==='rack'){var dz=document.getElementById('dropZone');if(dz&&dz.scrollIntoView)dz.scrollIntoView({behavior:'smooth',block:'center'});showToast('Drop trait layers in the DNA rack, seal a specimen, then mark fulfilled (demo).');return}
+    var items=load(K.commissions,[]),c=null;
+    for(var i=0;i<items.length;i++){if(items[i].id===id)c=items[i]}
+    if(!c)return;
+    if(act==='fulfill'&&c.status==='open'){c.status='awaitingRelease';save(K.commissions,items);renderCommissions();showToast('Marked fulfilled — awaiting poster release (demo).');return}
+    if(act==='release'&&c.status==='awaitingRelease'){
+      var escrow=load(K.escrow,{}),amt=Number(escrow[id]||0);
+      if(!amt){showToast('This demo commission is already settled.');return}
+      creditDemo(amt,'commission bounty released');delete escrow[id];save(K.escrow,escrow);
+      c.status='released';c.settlement=fmt(amt)+' demo $RESCUE paid to fulfiller (demo)';save(K.commissions,items);renderCommissions();
+    }
+  }
+  function setDeadlineBounds(){
+    var inp=document.getElementById('comm-deadline');if(!inp)return;
+    var t=new Date(),iso=function(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')};
+    inp.min=iso(t);inp.max=iso(new Date(t.getTime()+7*86400000));if(!inp.value)inp.value=inp.max;
+  }
+  /* fee-gated mutation handlers (wrap the lab's own handlers) */
+  function init(){
+    var ub=document.getElementById('uglyBtn');
+    if(ub){ub.onclick=function(){var plus=tier()!=='DABBLER';gateFee(200,'cursed mutation',function(){window.__tc.mutate(plus?'cursedplus':true);showToast(plus?'Cursed+ mutation. Taste legally deceased.':'Taste successfully removed.')})}}
+    var sb=document.getElementById('spinBtn');
+    if(sb){var old=sb.onclick;sb.onclick=function(){gateFee(1000,'10× mutation',function(){old.call(sb)})}}
+    var rr=document.getElementById('batchReroll');
+    if(rr){rr.onclick=function(){gateFee(500,'chamber re-roll',function(){window.__tc.makeBatch();showToast('Fresh batch. Same bad decisions, new bodies.')})}}
+    var seal=document.getElementById('sealBtn');if(seal)seal.onclick=sealSpecimen;
+    var fb=document.getElementById('faucetBtn');if(fb)fb.onclick=faucet;
+    var u=document.getElementById('curUSD');if(u)u.onclick=function(){setCurrency('usd')};
+    var r=document.getElementById('curRESCUE');if(r)r.onclick=function(){setCurrency('rescue')};
+    var cf=document.getElementById('commission-form');if(cf)cf.addEventListener('submit',postCommission);
+    var cl=document.getElementById('commission-list');if(cl)cl.addEventListener('click',commissionClick);
+    setDeadlineBounds();
+    updateBalance();updateSessionBurn();updateTierBadge();renderBounties();renderCommissions();
+    if(tier()!=='DABBLER'&&window.__tc)window.__tc.makeBatch();
+    RescueBurn.renderWidget(document.getElementById('burn-widget'),{title:'🔥 $RESCUE Burn Furnace'});
+    setInterval(renderCommissions,60000);
+  }
+  /* globals for the lab script + console debugging */
+  window.getBal=getBal;window.spendDemo=spendDemo;window.creditDemo=creditDemo;
+  window.burnDemo=burnDemo;window.gateFee=gateFee;window.faucet=faucet;
+  window.tier=tier;window.showToast=showToast;
+  window.__tcDemo={getBal:getBal,tier:tier,processCommissions:processCommissions,renderBounties:renderBounties,setCurrency:setCurrency,bountyState:bountyState};
+  init();
+})();
+</script>
+
 </body>
 </html>

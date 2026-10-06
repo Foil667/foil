@@ -1,7 +1,7 @@
 ---
 objective_id: skill_improvement
-run_id: sirun_e6b02134368c42cb9954e3b25c92761e
-created_at: 2026-09-28T13:40:58.979949155+00:00
+run_id: sirun_1b231b89dabd4d0da8cd55d089614d91
+created_at: 2026-10-05T13:52:54.985894775+00:00
 card_id: skill_improvement
 worker_outcome: changed
 skill_improvement_overlay: true
@@ -24,7 +24,7 @@ is a framework-owned projection only.
 - Request origin: internal.self_improvement
 - Cadence: daily
 - Worker outcome: changed
-- Subagents spawned: 4
+- Subagents spawned: 1
 
 ## Skill Improvement Overlay
 

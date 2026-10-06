@@ -1,0 +1,2738 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Arcade NFT Layer Generator</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f4f1e9;
+      --paper: #fffdf7;
+      --ink: #171820;
+      --muted: #62646e;
+      --line: #171820;
+      --soft-line: #d8d2c5;
+      --red: #e83b32;
+      --blue: #2d73d5;
+      --yellow: #f7c948;
+      --green: #2aa86f;
+      --shadow: 5px 5px 0 #171820;
+      --checker-a: #f4f1e9;
+      --checker-b: #e7e1d5;
+      --focus: #0a63db;
+      --danger-bg: #ffe9e6;
+      --toast: #171820;
+      --toast-ink: #fffdf7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #111319;
+        --paper: #1c1f28;
+        --ink: #f6f2e7;
+        --muted: #b8b5ad;
+        --line: #f6f2e7;
+        --soft-line: #3e4351;
+        --red: #ff6258;
+        --blue: #5b9cff;
+        --yellow: #ffd65b;
+        --green: #4ed398;
+        --shadow: 5px 5px 0 #000;
+        --checker-a: #191c24;
+        --checker-b: #222632;
+        --focus: #84b8ff;
+        --danger-bg: #412321;
+        --toast: #f6f2e7;
+        --toast-ink: #171820;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { min-width: 320px; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        linear-gradient(90deg, transparent 50%, color-mix(in srgb, var(--red) 8%, transparent) 50%) 0 0 / 18px 18px,
+        var(--bg);
+      color: var(--ink);
+      font-family: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+    }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+    }
+    .shell {
+      width: min(1480px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 24px;
+    }
+    .intro h1 {
+      margin: 0;
+      max-width: 760px;
+      font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      font-size: clamp(38px, 6vw, 78px);
+      line-height: .9;
+      letter-spacing: .01em;
+      text-transform: uppercase;
+      text-wrap: balance;
+    }
+    .intro p {
+      margin: 13px 0 0;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 1.5;
+    }
+    .status-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 12px;
+      border: 2px solid var(--line);
+      background: var(--yellow);
+      color: #171820;
+      font: 800 12px/1 "Courier New", monospace;
+      letter-spacing: .06em;
+      box-shadow: 3px 3px 0 var(--line);
+      white-space: nowrap;
+    }
+    .status-chip::before { content: ""; width: 9px; height: 9px; background: var(--green); border: 2px solid #171820; border-radius: 50%; }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(330px, .9fr) minmax(420px, 1.35fr) minmax(320px, .85fr);
+      gap: 18px;
+      align-items: start;
+    }
+    .panel {
+      background: var(--paper);
+      border: 3px solid var(--line);
+      box-shadow: var(--shadow);
+      min-width: 0;
+    }
+    .panel-head {
+      min-height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 11px 14px;
+      border-bottom: 3px solid var(--line);
+      background: var(--red);
+      color: #fff;
+    }
+    .panel:nth-child(2) .panel-head { background: var(--blue); }
+    .panel:nth-child(3) .panel-head { background: var(--yellow); color: #171820; }
+    .panel-head h2 { margin: 0; font-size: 16px; line-height: 1; font-weight: 900; letter-spacing: .015em; }
+    .step {
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      font: 900 12px/1 "Courier New", monospace;
+      flex: 0 0 auto;
+    }
+    .panel-body { padding: 16px; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .field { display: grid; gap: 6px; min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    label, .mini-label {
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    input[type="text"], input[type="number"], input[type="url"], textarea, select {
+      width: 100%;
+      border: 2px solid var(--line);
+      background: var(--bg);
+      padding: 10px 11px;
+      min-height: 42px;
+      border-radius: 0;
+    }
+    textarea { resize: vertical; min-height: 84px; line-height: 1.4; }
+    .hint { color: var(--muted); font: 700 11px/1.4 "Courier New", monospace; }
+    .token-config {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 2px 0 0;
+      padding: 12px;
+      border: 2px solid var(--line);
+      background: color-mix(in srgb, var(--green) 12%, var(--paper));
+    }
+    .token-config legend {
+      padding: 0 7px;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+    }
+    .token-config .token-contract { grid-column: 1 / -1; }
+    .token-config input[readonly] { color: var(--muted); font-family: "Courier New", monospace; font-size: 11px; }
+
+    .preview-wrap {
+      padding: 16px;
+      background-color: var(--checker-a);
+      background-image:
+        linear-gradient(45deg, var(--checker-b) 25%, transparent 25%),
+        linear-gradient(-45deg, var(--checker-b) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, var(--checker-b) 75%),
+        linear-gradient(-45deg, transparent 75%, var(--checker-b) 75%);
+      background-size: 28px 28px;
+      background-position: 0 0, 0 14px, 14px -14px, -14px 0;
+      border-bottom: 3px solid var(--line);
+    }
+    .canvas-frame {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1;
+      max-height: 64vh;
+      margin: 0 auto;
+      background: var(--paper);
+      border: 3px solid var(--line);
+      overflow: hidden;
+    }
+    canvas { display: block; width: 100%; height: 100%; image-rendering: pixelated; }
+    .empty-canvas {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      padding: 28px;
+      text-align: center;
+      pointer-events: none;
+    }
+    .empty-canvas[hidden] { display: none; }
+    .layer-mark {
+      width: 116px;
+      height: 116px;
+      margin: 0 auto 18px;
+      color: var(--red);
+    }
+    .empty-canvas strong { display: block; font-size: 20px; line-height: 1.15; }
+    .empty-canvas span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; line-height: 1.45; }
+    .preview-controls { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 14px; }
+
+    .button {
+      appearance: none;
+      border: 2px solid var(--line);
+      background: var(--paper);
+      min-height: 43px;
+      padding: 10px 13px;
+      font-weight: 900;
+      line-height: 1.15;
+      box-shadow: 3px 3px 0 var(--line);
+      transition: transform .08s ease, box-shadow .08s ease;
+    }
+    .button:hover:not(:disabled) { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--line); }
+    .button:active:not(:disabled) { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--line); }
+    .button.primary { background: var(--red); color: #fff; }
+    .button.blue { background: var(--blue); color: #fff; }
+    .button.yellow { background: var(--yellow); color: #171820; }
+    .button.green { background: var(--green); color: #0b2318; }
+    .button.small { min-height: 34px; padding: 7px 9px; font-size: 12px; box-shadow: 2px 2px 0 var(--line); }
+    .button.icon { min-width: 34px; width: 34px; padding: 6px; }
+    .button:disabled { opacity: .46; cursor: not-allowed; box-shadow: none; }
+    .button svg { width: 17px; height: 17px; display: block; margin: auto; fill: none; stroke: currentColor; stroke-width: 2.3; stroke-linecap: round; stroke-linejoin: round; }
+
+    .layers-toolbar { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .count { color: var(--muted); font: 800 12px/1 "Courier New", monospace; }
+    .layers { display: grid; gap: 10px; }
+    .layer {
+      border: 2px solid var(--line);
+      background: var(--bg);
+    }
+    .layer-top {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 8px;
+      padding: 9px;
+      border-bottom: 2px solid var(--line);
+      background: var(--paper);
+    }
+    .grip { color: var(--muted); font: 900 15px/1 "Courier New", monospace; letter-spacing: -2px; }
+    .layer-name {
+      min-height: 32px !important;
+      padding: 6px 8px !important;
+      font-weight: 850;
+    }
+    .layer-actions { display: flex; gap: 5px; }
+    .layer-assets { padding: 9px; display: grid; gap: 8px; }
+    .asset-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; }
+    .asset {
+      position: relative;
+      aspect-ratio: 1;
+      border: 2px solid var(--soft-line);
+      background: var(--paper);
+      overflow: hidden;
+    }
+    .asset.active { border-color: var(--red); box-shadow: inset 0 0 0 2px var(--red); }
+    .asset img { width: 100%; height: 100%; object-fit: contain; image-rendering: pixelated; }
+    .asset button {
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      width: 22px;
+      height: 22px;
+      border: 2px solid #171820;
+      background: var(--red);
+      color: #fff;
+      font: 900 13px/1 monospace;
+      padding: 0;
+    }
+    .upload {
+      min-height: 39px;
+      border: 2px dashed var(--line);
+      background: var(--paper);
+      padding: 7px;
+    }
+    .upload input {
+      display: block;
+      width: 100%;
+      min-height: 34px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .upload input::file-selector-button {
+      border: 2px solid var(--line);
+      background: var(--yellow);
+      color: #171820;
+      min-height: 30px;
+      margin-right: 8px;
+      padding: 5px 9px;
+      font: 900 12px/1 "Avenir Next", Avenir, sans-serif;
+      cursor: pointer;
+    }
+    .layer-empty { color: var(--muted); text-align: center; font: 700 11px/1.4 "Courier New", monospace; padding: 4px; }
+
+    .export-stack { display: grid; gap: 14px; }
+    .meter { border: 2px solid var(--line); height: 17px; background: var(--bg); overflow: hidden; }
+    .meter > span { display: block; width: 0; height: 100%; background: var(--green); transition: width .12s linear; }
+    .export-summary { display: grid; grid-template-columns: 1fr auto; gap: 8px 12px; align-items: end; }
+    .export-summary strong { font: 900 28px/1 Impact, sans-serif; letter-spacing: .02em; }
+    .export-summary span { color: var(--muted); font-size: 12px; font-weight: 750; }
+    .callout { border: 2px solid var(--line); padding: 11px; background: color-mix(in srgb, var(--yellow) 28%, var(--paper)); font-size: 12px; line-height: 1.45; font-weight: 700; }
+    .gate-access { display: grid; gap: 9px; border: 2px solid var(--line); padding: 11px; background: color-mix(in srgb, var(--green) 12%, var(--paper)); }
+    .gate-access-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .gate-state { color: var(--muted); font: 700 11px/1.4 "Courier New", monospace; }
+    .gate-state.success { color: var(--green); font-weight: 900; }
+    .gate-state.error { color: var(--red); font-weight: 900; }
+    .legend { display: grid; gap: 7px; padding-top: 4px; }
+    .legend-row { display: flex; gap: 9px; align-items: flex-start; color: var(--muted); font-size: 12px; line-height: 1.35; }
+    .legend-dot { width: 10px; height: 10px; margin-top: 3px; border: 2px solid var(--line); flex: 0 0 auto; }
+    .legend-row:nth-child(1) .legend-dot { background: var(--red); }
+    .legend-row:nth-child(2) .legend-dot { background: var(--blue); }
+    .legend-row:nth-child(3) .legend-dot { background: var(--yellow); }
+    .layer-warning { margin-top: 10px; color: var(--red); font-size: 12px; font-weight: 850; }
+    .download-row { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: calc(24px + env(safe-area-inset-bottom));
+      z-index: 20;
+      transform: translate(-50%, 20px);
+      max-width: min(420px, calc(100% - 32px));
+      background: var(--toast);
+      color: var(--toast-ink);
+      border: 2px solid var(--line);
+      padding: 11px 15px;
+      font-weight: 800;
+      font-size: 13px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .18s ease, transform .18s ease;
+    }
+    .toast.show { opacity: 1; transform: translate(-50%, 0); }
+    footer { margin-top: 22px; color: var(--muted); font-size: 12px; line-height: 1.5; font-weight: 650; text-align: center; }
+
+    @media (max-width: 1120px) {
+      .workspace { grid-template-columns: minmax(300px, .85fr) minmax(430px, 1.15fr); }
+      .panel.export { grid-column: 1 / -1; }
+      .panel.export .panel-body { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    }
+    @media (max-width: 760px) {
+      .shell { width: min(100% - 20px, 580px); padding-top: 20px; }
+      .intro { grid-template-columns: 1fr; gap: 15px; }
+      .intro h1 { font-size: clamp(42px, 14vw, 67px); }
+      .status-chip { justify-self: start; }
+      .workspace { grid-template-columns: 1fr; }
+      .panel.export { grid-column: auto; }
+      .panel.export .panel-body { display: block; }
+      .export-stack + .export-stack { margin-top: 14px; }
+      .canvas-frame { max-height: none; }
+    }
+    @media (max-width: 430px) {
+      .shell { width: min(100% - 14px, 580px); }
+      .field-grid, .preview-controls, .download-row, .token-config { grid-template-columns: 1fr; }
+      .field.full, .token-config .token-contract { grid-column: auto; }
+      .panel-body, .preview-wrap { padding: 12px; }
+      .asset-strip { grid-template-columns: repeat(3, 1fr); }
+      .layer-top { grid-template-columns: minmax(0, 1fr) auto; }
+      .grip { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+  <style data-hatch-cvm-bundle></style>
+</head>
+<body>
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div>
+        <h1 id="page-title">Build your NFT collection.</h1>
+        <p>Stack your transparent art traits, shuffle combinations, and export game-ready PNGs with NFT metadata—right in your browser.</p>
+      </div>
+      <div class="status-chip">ARCADE ART LAB</div>
+    </section>
+
+    <div class="workspace">
+      <section class="panel setup" aria-labelledby="setup-title">
+        <div class="panel-head"><h2 id="setup-title">Collection setup</h2><span class="step">1</span></div>
+        <div class="panel-body">
+          <div class="field-grid">
+            <div class="field full">
+              <label for="collection">Collection name</label>
+              <input id="collection" type="text" value="My NFT Collection" maxlength="80" />
+            </div>
+            <div class="field">
+              <label for="prefix">Item name</label>
+              <input id="prefix" type="text" value="NFT" maxlength="50" />
+            </div>
+            <div class="field">
+              <label for="symbol">Symbol</label>
+              <input id="symbol" type="text" value="NFT" maxlength="12" />
+            </div>
+            <div class="field full">
+              <label for="description">Description</label>
+              <textarea id="description" maxlength="600">A layered NFT collection assembled from original artwork.</textarea>
+            </div>
+            <div class="field">
+              <label for="edition">Edition size</label>
+              <input id="edition" type="number" min="1" max="250" value="12" inputmode="numeric" />
+            </div>
+            <div class="field">
+              <label for="chain">Blockchain</label>
+              <select id="chain">
+                <option>Base</option>
+                <option>Ethereum</option>
+                <option>Polygon</option>
+                <option>Solana</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="external">External URL</label>
+              <input id="external" type="url" placeholder="https://your-project.example" />
+            </div>
+            <div class="field full">
+              <label for="imageBase">Image base URI</label>
+              <input id="imageBase" type="text" value="ipfs://YOUR_CID/images" />
+              <span class="hint">Metadata points here. Replace YOUR_CID after uploading the images folder.</span>
+            </div>
+            <fieldset class="token-config">
+              <legend>$RESCUE utility + gate</legend>
+              <div class="field token-contract">
+                <label for="tokenContract">Base token contract</label>
+                <input id="tokenContract" type="text" value="0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3" readonly />
+              </div>
+              <div class="field">
+                <label for="gateBalance">Minimum $RESCUE</label>
+                <input id="gateBalance" type="number" min="0.000001" step="any" value="1" inputmode="decimal" />
+              </div>
+              <div class="field">
+                <label for="gateScope">Unlocks</label>
+                <select id="gateScope">
+                  <option value="mint_and_holder_perks">Mint + holder perks</option>
+                  <option value="mint_access">Mint access</option>
+                  <option value="holder_perks">Holder perks</option>
+                </select>
+              </div>
+              <span class="hint token-contract">This page verifies the connected wallet on Base before unlocking exports. The package also carries the same requirement into your mint build.</span>
+            </fieldset>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel ring" aria-labelledby="preview-title">
+        <div class="panel-head"><h2 id="preview-title">Layer preview</h2><span class="step">2</span></div>
+        <div class="preview-wrap">
+          <div class="canvas-frame">
+            <canvas id="preview" width="1024" height="1024" aria-label="Layered artwork preview"></canvas>
+            <div id="emptyCanvas" class="empty-canvas">
+              <div>
+                <svg class="layer-mark" viewBox="0 0 120 120" aria-hidden="true">
+                  <rect x="14" y="30" width="66" height="66" fill="var(--yellow)" stroke="var(--line)" stroke-width="6"/>
+                  <rect x="27" y="20" width="66" height="66" fill="var(--blue)" stroke="var(--line)" stroke-width="6"/>
+                  <rect x="40" y="10" width="66" height="66" fill="var(--paper)" stroke="var(--line)" stroke-width="6"/>
+                  <circle cx="60" cy="37" r="10" fill="var(--red)" stroke="var(--line)" stroke-width="4"/>
+                  <path d="M46 66 62 49l10 10 8-8 16 15H46Z" fill="var(--green)" stroke="var(--line)" stroke-width="4" stroke-linejoin="round"/>
+                </svg>
+                <strong>Load your first art layer</strong>
+                <span>Transparent PNGs work best. Each layer can hold multiple traits.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="preview-controls">
+          <button class="button blue" id="randomize" type="button">Randomize NFT</button>
+          <button class="button" id="downloadPreview" type="button">Download preview</button>
+        </div>
+        <div class="panel-body" style="padding-top:0">
+          <div class="layers-toolbar">
+            <span class="mini-label">Layers · back to front</span>
+            <button class="button small yellow" id="addLayer" type="button">+ Add layer</button>
+          </div>
+          <div id="layers" class="layers"></div>
+          <div id="layerWarning" class="layer-warning" role="status"></div>
+        </div>
+      </section>
+
+      <section class="panel export" aria-labelledby="export-title">
+        <div class="panel-head"><h2 id="export-title">Export cabinet</h2><span class="step">3</span></div>
+        <div class="panel-body">
+          <div class="export-stack">
+            <div class="export-summary">
+              <div><span>Possible combinations</span><br><strong id="comboCount">0</strong></div>
+              <span id="readyCount">0 layers ready</span>
+            </div>
+            <div class="field">
+              <label for="size">PNG resolution</label>
+              <select id="size">
+                <option value="512">512 × 512</option>
+                <option value="1024" selected>1024 × 1024</option>
+                <option value="2048">2048 × 2048</option>
+              </select>
+            </div>
+            <div class="callout">Your ZIP includes <strong>images</strong>, <strong>metadata</strong>, and a <strong>$RESCUE gate config</strong>. Nothing is uploaded from this page.</div>
+            <div class="gate-access" aria-labelledby="gate-access-title">
+              <div class="gate-access-head">
+                <span class="mini-label" id="gate-access-title">$RESCUE access gate</span>
+                <span class="step" aria-hidden="true">◎</span>
+              </div>
+              <div class="gate-state" id="gateStatus" role="status" aria-live="polite">Connect a Base wallet holding the configured minimum to unlock collection exports.</div>
+              <button class="button small green" id="connectWallet" type="button">Connect wallet &amp; verify</button>
+            </div>
+            <button class="button primary" id="generate" type="button" disabled>Generate collection ZIP</button>
+            <div id="progressWrap" hidden>
+              <div class="meter" aria-label="Generation progress"><span id="progress"></span></div>
+              <div class="hint" id="progressText" style="margin-top:7px">Preparing…</div>
+            </div>
+          </div>
+          <div class="export-stack">
+            <div class="mini-label">Quick downloads</div>
+            <div class="download-row">
+              <button class="button small" id="downloadJson" type="button" disabled>Preview JSON</button>
+              <button class="button small" id="downloadManifest" type="button" disabled>Trait manifest</button>
+              <button class="button small" id="downloadGate" type="button" disabled>$RESCUE gate config</button>
+            </div>
+            <div class="legend">
+              <div class="legend-row"><span class="legend-dot"></span><span>Use original artwork or assets you have permission to publish.</span></div>
+              <div class="legend-row"><span class="legend-dot"></span><span>Keep every image the same square dimensions for crisp stacking.</span></div>
+              <div class="legend-row"><span class="legend-dot"></span><span>Layer order matters: the last layer is drawn on top.</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>Built for original NFT artwork. Your layers stay in this browser session and are only packaged when you export.</footer>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+
+<script data-hatch-cvm-bundle>(() => {
+  var __defProp = Object.defineProperty;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  function __accessProp(key) {
+    return this[key];
+  }
+  var __toCommonJS = (from) => {
+    var entry = (__moduleCache ??= new WeakMap).get(from), desc;
+    if (entry)
+      return entry;
+    entry = __defProp({}, "__esModule", { value: true });
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (var key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(entry, key))
+          __defProp(entry, key, {
+            get: __accessProp.bind(from, key),
+            enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable
+          });
+    }
+    __moduleCache.set(from, entry);
+    return entry;
+  };
+  var __moduleCache;
+
+  // src/prelude.ts
+  var exports_prelude = {};
+
+  // src/tunnel-url.ts
+  var B64_CHUNK = 32768;
+  function computeSelfBaseDir(selfHref) {
+    if (!selfHref)
+      return "";
+    let h = selfHref;
+    const hash = h.indexOf("#");
+    if (hash >= 0)
+      h = h.slice(0, hash);
+    const q = h.indexOf("?");
+    if (q >= 0)
+      h = h.slice(0, q);
+    const slash = h.lastIndexOf("/");
+    return slash >= 0 ? h.slice(0, slash + 1) : "";
+  }
+  function isSelfOriginUrl(u, selfBaseDir, selfHref, objectUrls) {
+    if (!selfBaseDir || !u.startsWith(selfBaseDir))
+      return false;
+    if (u === selfHref)
+      return false;
+    return !objectUrls.has(u);
+  }
+  function isExternalUrl(u, selfBaseDir, selfHref, objectUrls) {
+    if (!u)
+      return false;
+    if (u.startsWith("#"))
+      return true;
+    if (isSelfOriginUrl(u, selfBaseDir, selfHref, objectUrls))
+      return false;
+    if (u.startsWith("data:") || u.startsWith("blob:"))
+      return true;
+    if (u.startsWith("about:") || u.startsWith("javascript:"))
+      return true;
+    if (u.startsWith("//"))
+      return true;
+    if (/^[a-z][a-z0-9+.-]*:/i.test(u)) {
+      return true;
+    }
+    return false;
+  }
+  function normalizeToRelPath(u, selfBaseDir) {
+    let s = u;
+    if (selfBaseDir && s.startsWith(selfBaseDir)) {
+      s = s.slice(selfBaseDir.length);
+    }
+    s = s.replace(/^\.\//, "");
+    s = s.replace(/^\/+/, "");
+    return s;
+  }
+  function blobInner(base, NativeURL) {
+    if (base == null)
+      return null;
+    const s = typeof base === "string" ? base : base instanceof NativeURL ? base.href : String(base);
+    return s.startsWith("blob:") ? s.slice("blob:".length) : null;
+  }
+  var OPAQUE_BLOB_ORIGIN = "https://hatch-cvm-opaque.invalid";
+  function isAbsoluteUrlString(s, NativeURL) {
+    try {
+      new NativeURL(s);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  function resolveAgainstBlobBase(u, base, NativeURL) {
+    const inner = blobInner(base, NativeURL);
+    if (inner === null)
+      return null;
+    if (isAbsoluteUrlString(inner, NativeURL)) {
+      return new NativeURL("blob:" + new NativeURL(u, inner).href);
+    }
+    const slash = inner.indexOf("/");
+    const token = slash >= 0 ? inner.slice(0, slash) : inner;
+    const path = slash >= 0 ? inner.slice(slash) : "/";
+    const resolved = new NativeURL(u, OPAQUE_BLOB_ORIGIN + path);
+    return new NativeURL("blob:" + token + resolved.pathname + resolved.search + resolved.hash);
+  }
+  function resolveTunnelUrl(url, base, selfHref, NativeURL) {
+    const u = url == null ? "" : typeof url === "string" ? url : url instanceof NativeURL ? url.href : String(url);
+    const uAbsolute = /^[a-z][a-z0-9+.-]*:/i.test(u) || u.startsWith("//");
+    if (base !== undefined && base !== null && !uAbsolute) {
+      const viaBlob = resolveAgainstBlobBase(u, base, NativeURL);
+      if (viaBlob !== null)
+        return viaBlob;
+      return new NativeURL(u, base);
+    }
+    if (!uAbsolute && selfHref) {
+      const viaBlob = resolveAgainstBlobBase(u, selfHref, NativeURL);
+      if (viaBlob !== null)
+        return viaBlob;
+    }
+    return base === undefined ? new NativeURL(u) : new NativeURL(u, base);
+  }
+  function bytesToBase64(bytes) {
+    const u8 = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
+    let s = "";
+    for (let i = 0;i < u8.length; i += B64_CHUNK) {
+      s += String.fromCharCode.apply(null, Array.from(u8.subarray(i, i + B64_CHUNK)));
+    }
+    return btoa(s);
+  }
+  function base64ToBytes(b64) {
+    const bin = atob(b64);
+    const out = new Uint8Array(bin.length);
+    for (let i = 0;i < bin.length; i++)
+      out[i] = bin.charCodeAt(i);
+    return out;
+  }
+  function importMetaUrl(selfHref, selfBaseDir) {
+    return selfBaseDir ? `${selfBaseDir}assets/cvm-bundle.js` : selfHref;
+  }
+
+  // src/download-links.ts
+  function installDownloadLinks(fetchAsset, isExternalUrl, revokeDelayMs) {
+    document.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      const anchor = event.composedPath().find((node) => node instanceof HTMLAnchorElement);
+      if (!anchor?.hasAttribute("download"))
+        return;
+      const href = anchor.getAttribute("href");
+      if (!href || isExternalUrl(href))
+        return;
+      event.preventDefault();
+      const filename = anchor.download || resourceFilename(href);
+      (async () => {
+        const response = await fetchAsset(href);
+        if (!response.ok) {
+          throw new Error(`Artifact download failed: HTTP ${response.status}`);
+        }
+        const url = URL.createObjectURL(await response.blob());
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        link.hidden = true;
+        document.body.appendChild(link);
+        try {
+          link.click();
+        } finally {
+          link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), revokeDelayMs);
+        }
+      })().catch((error) => reportError(error));
+    });
+  }
+  function resourceFilename(href) {
+    const path = new URL(href, document.baseURI).pathname;
+    const name = path.slice(path.lastIndexOf("/") + 1);
+    try {
+      return decodeURIComponent(name);
+    } catch {
+      return name;
+    }
+  }
+
+  // src/fragment-links.ts
+  function installFragmentLinks() {
+    if (!location.href.startsWith("blob:null/"))
+      return;
+    const NativeURL = URL;
+    const pushState = history.pushState.bind(history);
+    const replaceState = history.replaceState.bind(history);
+    window.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      const anchor = event.composedPath().find((node) => node instanceof HTMLAnchorElement);
+      if (!anchor || anchor.hasAttribute("download"))
+        return;
+      const targetName = anchor.getAttribute("target") ?? document.querySelector("base[target]")?.getAttribute("target") ?? "";
+      if (targetName !== "" && targetName.toLowerCase() !== "_self")
+        return;
+      const href = anchor.getAttribute("href");
+      if (!href?.startsWith("#"))
+        return;
+      const oldURL = location.href;
+      const nextURL = new NativeURL(href, oldURL);
+      event.preventDefault();
+      const changed = nextURL.href !== oldURL;
+      if (changed) {
+        pushState(null, "", nextURL.href);
+      } else {
+        replaceState(null, "", nextURL.href);
+      }
+      window.dispatchEvent(new PopStateEvent("popstate", { state: null }));
+      const target = fragmentTarget(nextURL.hash);
+      if (target) {
+        target.scrollIntoView();
+        if (target !== document.documentElement && (target instanceof HTMLElement || target instanceof SVGElement)) {
+          const hadTabIndex = target.hasAttribute("tabindex");
+          if (!hadTabIndex)
+            target.setAttribute("tabindex", "-1");
+          target.focus({ preventScroll: true });
+          if (!hadTabIndex)
+            target.removeAttribute("tabindex");
+        }
+      }
+      if (changed) {
+        queueMicrotask(() => window.dispatchEvent(new HashChangeEvent("hashchange", {
+          oldURL,
+          newURL: nextURL.href
+        })));
+      }
+    });
+  }
+  function fragmentTarget(hash) {
+    const bytes = hash.slice(1).replace(/%([0-9a-f]{2})/gi, (_match, hex) => String.fromCharCode(parseInt(hex, 16)));
+    const fragment = new TextDecoder().decode(Uint8Array.from(bytes, (byte) => byte.charCodeAt(0)));
+    if (fragment === "")
+      return document.documentElement;
+    const idTarget = document.getElementById(fragment);
+    if (idTarget)
+      return idTarget;
+    const namedTarget = Array.from(document.getElementsByName(fragment)).find((node) => node instanceof HTMLAnchorElement);
+    return namedTarget ?? (fragment.toLowerCase() === "top" ? document.documentElement : null);
+  }
+
+  // src/prelude.ts
+  (function installTunnel() {
+    installFragmentLinks();
+    let port = null;
+    let portReadyResolve = null;
+    const portReady = new Promise((res) => {
+      portReadyResolve = res;
+    });
+    const pending = new Map;
+    const openWs = new Map;
+    function newId() {
+      return Math.random().toString(36).slice(2) + "-" + Date.now().toString(36);
+    }
+    function bytesToB64(bytes) {
+      return bytesToBase64(bytes);
+    }
+    function b64ToBytes(b64) {
+      return base64ToBytes(b64);
+    }
+    async function httpReq(method, path, body, headers) {
+      const p = port ?? await portReady;
+      const id = newId();
+      const headerArr = [];
+      if (headers) {
+        const h = new Headers(headers);
+        h.forEach((v, k) => headerArr.push([k, v]));
+      }
+      let bodyB64 = "";
+      if (body != null && body !== "") {
+        let bytes;
+        if (typeof body === "string") {
+          bytes = new TextEncoder().encode(body);
+        } else if (body instanceof ArrayBuffer) {
+          bytes = new Uint8Array(body);
+        } else if (body instanceof Uint8Array) {
+          bytes = body;
+        } else if (body instanceof Blob) {
+          bytes = new Uint8Array(await body.arrayBuffer());
+        } else if (body instanceof FormData) {
+          const boundary = "----HatchBoundary" + Math.random().toString(36).slice(2);
+          let s = "";
+          for (const [k, v] of body.entries()) {
+            s += `--${boundary}\r
+Content-Disposition: form-data; name="${k}"`;
+            if (v instanceof File) {
+              s += `; filename="${v.name}"\r
+Content-Type: ${v.type || "application/octet-stream"}\r
+\r
+`;
+              const fb = new Uint8Array(await v.arrayBuffer());
+              s += new TextDecoder("latin1").decode(fb);
+            } else {
+              s += `\r
+\r
+${v}`;
+            }
+            s += `\r
+`;
+          }
+          s += `--${boundary}--\r
+`;
+          bytes = new TextEncoder().encode(s);
+          headerArr.push([
+            "content-type",
+            `multipart/form-data; boundary=${boundary}`
+          ]);
+        } else {
+          bytes = new TextEncoder().encode(String(body));
+        }
+        bodyB64 = bytesToB64(bytes);
+      }
+      return new Promise((resolve, reject) => {
+        pending.set(id, {
+          resolve: (msg) => {
+            if (msg.error) {
+              reject(new Error(msg.error.message ?? "tunnel error"));
+              return;
+            }
+            resolve({
+              status: msg.status,
+              headers: msg.headers,
+              bytes: msg.bodyB64 ? b64ToBytes(msg.bodyB64) : new Uint8Array(0)
+            });
+          },
+          reject
+        });
+        p.postMessage({
+          type: "http.req",
+          id,
+          method,
+          path,
+          headers: headerArr,
+          bodyB64
+        });
+      });
+    }
+    async function tunnelFetch(input, init) {
+      let urlStr;
+      let method = init?.method ?? "GET";
+      let headers = init?.headers;
+      let body = init?.body;
+      if (input instanceof Request) {
+        urlStr = input.url;
+        method = init?.method ?? input.method;
+        headers = init?.headers ?? input.headers;
+        if (body == null && input.body) {
+          body = await input.arrayBuffer();
+        }
+      } else {
+        urlStr = String(input);
+      }
+      if (isExternalUrl2(urlStr)) {
+        return originalFetch(input, init);
+      }
+      const relPath = normalizeToRelPath2(urlStr);
+      const r = await httpReq(method, relPath, body ?? null, headers);
+      const respHeaders = new Headers;
+      for (const [k, v] of r.headers ?? [])
+        respHeaders.set(k, v);
+      return new Response(r.bytes, {
+        status: r.status,
+        headers: respHeaders
+      });
+    }
+
+    class TunnelWebSocket extends EventTarget {
+      readyState = 0;
+      static CONNECTING = 0;
+      static OPEN = 1;
+      static CLOSING = 2;
+      static CLOSED = 3;
+      CONNECTING = 0;
+      OPEN = 1;
+      CLOSING = 2;
+      CLOSED = 3;
+      url;
+      binaryType = "blob";
+      bufferedAmount = 0;
+      protocol = "";
+      extensions = "";
+      onopen = null;
+      onmessage = null;
+      onclose = null;
+      onerror = null;
+      _id;
+      constructor(urlIn, _protocols) {
+        super();
+        const urlStr = String(urlIn);
+        this.url = urlStr;
+        this._id = newId();
+        openWs.set(this._id, this);
+        const path = normalizeToRelPath2(urlStr);
+        (async () => {
+          const p = port ?? await portReady;
+          p.postMessage({ type: "ws.open", id: this._id, path });
+        })();
+      }
+      _handle(msg) {
+        if (msg.type === "ws.opened") {
+          this.readyState = 1;
+          const ev = new Event("open");
+          this.onopen?.(ev);
+          this.dispatchEvent(ev);
+        } else if (msg.type === "ws.message") {
+          const bytes = msg.dataB64 ? b64ToBytes(msg.dataB64) : new Uint8Array(0);
+          let data;
+          if (msg.binary) {
+            data = this.binaryType === "arraybuffer" ? bytes.buffer : new Blob([bytes]);
+          } else {
+            data = new TextDecoder().decode(bytes);
+          }
+          const ev = new MessageEvent("message", { data });
+          this.onmessage?.(ev);
+          this.dispatchEvent(ev);
+        } else if (msg.type === "ws.closed") {
+          this.readyState = 3;
+          const ev = new CloseEvent("close", {
+            code: msg.code ?? 1000,
+            reason: msg.reason ?? ""
+          });
+          this.onclose?.(ev);
+          this.dispatchEvent(ev);
+          openWs.delete(this._id);
+        } else if (msg.type === "ws.error") {
+          const ev = new Event("error");
+          this.onerror?.(ev);
+          this.dispatchEvent(ev);
+        }
+      }
+      send(data) {
+        (async () => {
+          const p = port ?? await portReady;
+          let bytes;
+          let binary = false;
+          if (typeof data === "string") {
+            bytes = new TextEncoder().encode(data);
+          } else if (data instanceof Blob) {
+            bytes = new Uint8Array(await data.arrayBuffer());
+            binary = true;
+          } else if (data instanceof ArrayBuffer) {
+            bytes = new Uint8Array(data);
+            binary = true;
+          } else if (ArrayBuffer.isView(data)) {
+            bytes = new Uint8Array(data.buffer, data.byteOffset, data.byteLength);
+            binary = true;
+          } else {
+            bytes = new TextEncoder().encode(String(data));
+          }
+          p.postMessage({
+            type: "ws.send",
+            id: this._id,
+            dataB64: bytesToB64(bytes),
+            binary
+          });
+        })();
+      }
+      close(code, reason) {
+        (async () => {
+          const p = port ?? await portReady;
+          p.postMessage({ type: "ws.close", id: this._id, code, reason });
+        })();
+      }
+      addEventListener(type, listener, options) {
+        super.addEventListener(type, listener, options);
+      }
+    }
+
+    class TunnelXHR extends EventTarget {
+      static UNSENT = 0;
+      static OPENED = 1;
+      static HEADERS_RECEIVED = 2;
+      static LOADING = 3;
+      static DONE = 4;
+      UNSENT = 0;
+      OPENED = 1;
+      HEADERS_RECEIVED = 2;
+      LOADING = 3;
+      DONE = 4;
+      readyState = 0;
+      status = 0;
+      statusText = "";
+      responseText = "";
+      response = null;
+      responseType = "";
+      responseURL = "";
+      withCredentials = false;
+      timeout = 0;
+      upload = new EventTarget;
+      onreadystatechange = null;
+      onload = null;
+      onerror = null;
+      onloadend = null;
+      onabort = null;
+      onprogress = null;
+      ontimeout = null;
+      _method = "GET";
+      _url = "";
+      _reqHeaders = [];
+      _respHeaders = [];
+      _aborted = false;
+      open(method, url) {
+        this._method = method;
+        this._url = url;
+        this.readyState = 1;
+        this.onreadystatechange?.();
+      }
+      setRequestHeader(name, value) {
+        this._reqHeaders.push([name, value]);
+      }
+      getAllResponseHeaders() {
+        return this._respHeaders.map(([k, v]) => `${k}: ${v}`).join(`\r
+`);
+      }
+      getResponseHeader(name) {
+        const lc = name.toLowerCase();
+        const hit = this._respHeaders.find(([k]) => k.toLowerCase() === lc);
+        return hit ? hit[1] : null;
+      }
+      abort() {
+        this._aborted = true;
+        this.readyState = 0;
+      }
+      send(body) {
+        if (isExternalUrl2(this._url)) {
+          const real = new originalXHR;
+          real.open(this._method, this._url);
+          for (const [k, v] of this._reqHeaders)
+            real.setRequestHeader(k, v);
+          real.onload = () => {
+            this.status = real.status;
+            this.responseText = real.responseText;
+            this.response = real.response;
+            this.readyState = 4;
+            this.onreadystatechange?.();
+            this.onload?.();
+            this.onloadend?.();
+            this.dispatchEvent(new Event("load"));
+          };
+          real.onerror = () => {
+            this.onerror?.();
+            this.dispatchEvent(new Event("error"));
+          };
+          real.send(body);
+          return;
+        }
+        const relPath = normalizeToRelPath2(this._url);
+        httpReq(this._method, relPath, body ?? null, this._reqHeaders).then((r) => {
+          if (this._aborted)
+            return;
+          this.status = r.status;
+          this._respHeaders = r.headers ?? [];
+          this.responseText = new TextDecoder().decode(r.bytes);
+          if (this.responseType === "arraybuffer") {
+            this.response = r.bytes.buffer;
+          } else if (this.responseType === "blob") {
+            this.response = new Blob([r.bytes]);
+          } else if (this.responseType === "json") {
+            try {
+              this.response = JSON.parse(this.responseText);
+            } catch {
+              this.response = null;
+            }
+          } else {
+            this.response = this.responseText;
+          }
+          this.readyState = 4;
+          this.onreadystatechange?.();
+          this.onload?.();
+          this.onloadend?.();
+          this.dispatchEvent(new Event("load"));
+        }, () => {
+          if (this._aborted)
+            return;
+          this.onerror?.();
+          this.dispatchEvent(new Event("error"));
+        });
+      }
+    }
+
+    class TunnelEventSource extends EventTarget {
+      static CONNECTING = 0;
+      static OPEN = 1;
+      static CLOSED = 2;
+      readyState = 0;
+      url;
+      withCredentials = false;
+      onopen = null;
+      onmessage = null;
+      onerror = null;
+      constructor(url) {
+        super();
+        this.url = String(url);
+        (async () => {
+          try {
+            const relPath = normalizeToRelPath2(this.url);
+            const r = await httpReq("GET", relPath, null, [
+              ["accept", "text/event-stream"]
+            ]);
+            this.readyState = 1;
+            this.onopen?.(new Event("open"));
+            const text = new TextDecoder().decode(r.bytes);
+            for (const block of text.split(/\n\n/)) {
+              const data = block.split(`
+`).filter((l) => l.startsWith("data:")).map((l) => l.slice(5).trim()).join(`
+`);
+              if (data) {
+                const ev = new MessageEvent("message", { data });
+                this.onmessage?.(ev);
+                this.dispatchEvent(ev);
+              }
+            }
+            this.readyState = 2;
+          } catch {
+            this.onerror?.(new Event("error"));
+          }
+        })();
+      }
+      close() {
+        this.readyState = 2;
+      }
+    }
+    const SELF_HREF = (() => {
+      try {
+        return globalThis.location?.href ?? "";
+      } catch {
+        return "";
+      }
+    })();
+    const SELF_BASE_DIR = computeSelfBaseDir(SELF_HREF);
+    const objectUrls = new Set;
+    function isSelfOriginUrl2(u) {
+      return isSelfOriginUrl(u, SELF_BASE_DIR, SELF_HREF, objectUrls);
+    }
+    function isExternalUrl2(u) {
+      return isExternalUrl(u, SELF_BASE_DIR, SELF_HREF, objectUrls);
+    }
+    function normalizeToRelPath2(u) {
+      return normalizeToRelPath(u, SELF_BASE_DIR);
+    }
+    const URL_ATTRS = new Set([
+      "src",
+      "srcset",
+      "href",
+      "poster",
+      "action",
+      "formaction",
+      "data",
+      "background",
+      "cite",
+      "longdesc",
+      "usemap",
+      "manifest"
+    ]);
+    const URL_STYLE_PROPS = new Set([
+      "background",
+      "backgroundImage",
+      "background-image",
+      "borderImage",
+      "border-image",
+      "borderImageSource",
+      "border-image-source",
+      "listStyle",
+      "list-style",
+      "listStyleImage",
+      "list-style-image",
+      "cursor",
+      "mask",
+      "maskImage",
+      "mask-image",
+      "webkitMask",
+      "-webkit-mask",
+      "webkitMaskImage",
+      "-webkit-mask-image",
+      "content",
+      "src"
+    ]);
+    const __BLOB_CACHE_MAX = 256;
+    const __BLOB_REVOKE_DELAY_MS = 30000;
+    const blobCache = new Map;
+    const blobStats = {
+      created: 0,
+      revoked: 0,
+      hits: 0,
+      misses: 0,
+      inFlightRevokes: 0
+    };
+    function __evictIfOverCap() {
+      while (blobCache.size > __BLOB_CACHE_MAX) {
+        const oldestKey = blobCache.keys().next().value;
+        if (oldestKey === undefined)
+          break;
+        const ent = blobCache.get(oldestKey);
+        blobCache.delete(oldestKey);
+        blobStats.inFlightRevokes++;
+        const t = setTimeout(() => {
+          ent.url.then((u) => {
+            if (typeof u === "string" && u.startsWith("blob:")) {
+              try {
+                URL.revokeObjectURL(u);
+                blobStats.revoked++;
+              } catch {}
+            }
+          }).finally(() => {
+            blobStats.inFlightRevokes--;
+          });
+        }, __BLOB_REVOKE_DELAY_MS);
+        ent.pendingRevoke = t;
+      }
+    }
+    function resolveToBlobUrl(rel) {
+      if (isExternalUrl2(rel))
+        return Promise.resolve(rel);
+      const hashIdx = rel.indexOf("#");
+      const pathPart = hashIdx >= 0 ? rel.slice(0, hashIdx) : rel;
+      const frag = hashIdx >= 0 ? rel.slice(hashIdx) : "";
+      const key = normalizeToRelPath2(pathPart);
+      let ent = blobCache.get(key);
+      if (ent) {
+        if (ent.pendingRevoke != null) {
+          clearTimeout(ent.pendingRevoke);
+          ent.pendingRevoke = undefined;
+          blobStats.inFlightRevokes--;
+        }
+        blobCache.delete(key);
+        blobCache.set(key, ent);
+        blobStats.hits++;
+      } else {
+        blobStats.misses++;
+        const url = httpReq("GET", key, null).then((r) => {
+          const ctHeader = r.headers.find(([k]) => k.toLowerCase() === "content-type");
+          const ct = ctHeader?.[1] ?? "application/octet-stream";
+          const blob = new Blob([r.bytes], { type: ct });
+          blobStats.created++;
+          return URL.createObjectURL(blob);
+        });
+        ent = { url };
+        blobCache.set(key, ent);
+        __evictIfOverCap();
+      }
+      return frag ? ent.url.then((b) => b + frag) : ent.url;
+    }
+    const HATCH_PIXEL_PREFIX = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    const HATCH_FRAG = "#hatch=";
+    function isHatchPlaceholder(url) {
+      return url.indexOf(HATCH_PIXEL_PREFIX + HATCH_FRAG) === 0;
+    }
+    function unwrapHatchPlaceholder(url) {
+      if (!isHatchPlaceholder(url))
+        return null;
+      return decodeURIComponent(url.slice((HATCH_PIXEL_PREFIX + HATCH_FRAG).length));
+    }
+    async function rewriteCssTextAsync(text) {
+      const re = /url\(\s*(['"]?)([^'")]+)\1\s*\)/g;
+      const tasks = [];
+      let m;
+      while ((m = re.exec(text)) !== null) {
+        tasks.push({ match: m[0], index: m.index, url: m[2].trim() });
+      }
+      if (tasks.length === 0)
+        return text;
+      const resolved = await Promise.all(tasks.map(async (t) => {
+        if (t.url.startsWith("blob:"))
+          return t.url;
+        const unwrapped = unwrapHatchPlaceholder(t.url);
+        if (unwrapped != null) {
+          try {
+            return await resolveToBlobUrl(unwrapped);
+          } catch {
+            return t.url;
+          }
+        }
+        if (isExternalUrl2(t.url))
+          return t.url;
+        try {
+          return await resolveToBlobUrl(t.url);
+        } catch {
+          return t.url;
+        }
+      }));
+      let out = "";
+      let last = 0;
+      tasks.forEach((t, i) => {
+        out += text.slice(last, t.index);
+        out += `url("${resolved[i]}")`;
+        last = t.index + t.match.length;
+      });
+      out += text.slice(last);
+      return out;
+    }
+    function rewriteCssText(text) {
+      return rewriteCssTextAsync(text);
+    }
+    const mediaSourceLoads = new WeakMap;
+    window.addEventListener("error", (event) => {
+      const source = event.target;
+      if (!event.isTrusted || !(source instanceof HTMLSourceElement) || !(source.parentElement instanceof HTMLMediaElement) || source.hasAttribute("src"))
+        return;
+      const state = mediaSourceLoads.get(source);
+      if (state === "pending" || state === undefined && source.hasAttribute("data-hatch-src")) {
+        event.stopImmediatePropagation();
+      }
+    }, true);
+    function isElement(el) {
+      if (el instanceof Element)
+        return true;
+      const ownerWindow = el?.ownerDocument?.defaultView;
+      return ownerWindow != null && el instanceof ownerWindow.Element;
+    }
+    function setAttr(el, name, value, ...rest) {
+      if (!isElement(el)) {
+        return el.setAttribute(name, value, ...rest);
+      }
+      name = String(name);
+      if (value == null) {
+        if (name.toLowerCase() === "src" && el instanceof HTMLSourceElement) {
+          mediaSourceLoads.set(el, "settled");
+        }
+        try {
+          el.removeAttribute(name);
+        } catch {}
+        return;
+      }
+      const v = String(value);
+      const lcName = name.toLowerCase();
+      const tag = el.tagName?.toUpperCase();
+      if ((tag === "A" || tag === "BASE" || tag === "AREA") && lcName === "href") {
+        el.setAttribute(name, v);
+        return;
+      }
+      if (!URL_ATTRS.has(lcName) && lcName !== "style" && lcName !== "srcset") {
+        el.setAttribute(name, v);
+        return;
+      }
+      if (lcName === "srcset") {
+        const parts = v.split(",").map((s) => s.trim()).filter(Boolean);
+        Promise.all(parts.map(async (p) => {
+          const segs = p.split(/\s+/);
+          const url = segs[0];
+          const rest = segs.slice(1).join(" ");
+          if (isExternalUrl2(url))
+            return p;
+          const resolved = await resolveToBlobUrl(url);
+          return rest ? `${resolved} ${rest}` : resolved;
+        })).then((rebuilt) => {
+          try {
+            el.setAttribute("srcset", rebuilt.join(", "));
+          } catch {}
+        });
+        return;
+      }
+      if (URL_ATTRS.has(lcName)) {
+        const isMediaSource = tag === "SOURCE" && lcName === "src";
+        if (isExternalUrl2(v)) {
+          if (isMediaSource)
+            mediaSourceLoads.set(el, "settled");
+          el.setAttribute(name, v);
+          return;
+        }
+        if (isMediaSource)
+          mediaSourceLoads.set(el, "pending");
+        if (tag === "IMG" || tag === "VIDEO" && lcName === "poster") {
+          el.setAttribute(name, TRANSPARENT_PIXEL);
+        }
+        resolveToBlobUrl(v).then((blobUrl) => {
+          if (isMediaSource)
+            mediaSourceLoads.set(el, "settled");
+          try {
+            el.setAttribute(name, blobUrl);
+            if (isMediaSource) {
+              const media = el.parentElement;
+              if (media instanceof HTMLMediaElement && media.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
+                const nextSibling = el.nextSibling;
+                el.remove();
+                media.insertBefore(el, nextSibling);
+              }
+            }
+          } catch {}
+        }, () => {
+          if (isMediaSource) {
+            mediaSourceLoads.set(el, "settled");
+            el.dispatchEvent(new Event("error"));
+          }
+        });
+        return;
+      }
+      if (lcName === "style") {
+        setStyleAttr(el, v);
+        return;
+      }
+      el.setAttribute(name, v);
+    }
+    function setAttrNS(el, ns, name, value, ...rest) {
+      if (!isElement(el)) {
+        return el.setAttributeNS(ns, name, value, ...rest);
+      }
+      name = String(name);
+      if (value == null) {
+        try {
+          el.removeAttributeNS(ns ?? null, name);
+        } catch {}
+        return;
+      }
+      const v = String(value);
+      const lcName = name.split(":").pop().toLowerCase();
+      if (lcName === "href" && URL_ATTRS.has("href")) {
+        if (isExternalUrl2(v)) {
+          el.setAttributeNS(ns ?? null, name, v);
+          return;
+        }
+        resolveToBlobUrl(v).then((blobUrl) => {
+          try {
+            el.setAttributeNS(ns ?? null, name, blobUrl);
+          } catch {}
+        }, () => {});
+        return;
+      }
+      try {
+        el.setAttributeNS(ns ?? null, name, v);
+      } catch {}
+    }
+    function setUrlProp(el, name, value) {
+      if (isElement(el)) {
+        setAttr(el, name.toLowerCase(), value);
+      } else {
+        el[name] = value;
+      }
+      return value;
+    }
+    const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    const HTML_TAG_ATTRS = {
+      img: ["src", "srcset", "poster"],
+      image: ["href"],
+      video: ["src", "poster"],
+      audio: ["src"],
+      source: ["src", "srcset"],
+      script: ["src"],
+      link: ["href"],
+      iframe: ["src"],
+      embed: ["src"],
+      object: ["data"],
+      track: ["src"],
+      input: ["src"],
+      form: ["action"],
+      button: ["formaction"],
+      use: ["href"]
+    };
+    function rewriteHtmlString(html) {
+      return html.replace(/<([a-zA-Z][a-zA-Z0-9-]*)\b([^>]*)>/g, (m, tag, attrs) => {
+        const lc = String(tag).toLowerCase();
+        const candidates = HTML_TAG_ATTRS[lc];
+        if (!candidates)
+          return m;
+        let out = attrs;
+        for (const a of candidates) {
+          const re = new RegExp(`\\b${a}\\s*=\\s*("([^"]*)"|'([^']*)'|([^\\s>]+))`, "i");
+          const matched = out.match(re);
+          if (!matched)
+            continue;
+          const value = matched[2] ?? matched[3] ?? matched[4] ?? "";
+          if (isExternalUrl2(value))
+            continue;
+          out = out.replace(re, `data-hatch-${a}="${value.replace(/"/g, "&quot;")}"`);
+        }
+        const styleRe = /\bstyle\s*=\s*("([^"]*)"|'([^']*)')/i;
+        const sm = out.match(styleRe);
+        if (sm) {
+          const value = sm[2] ?? sm[3] ?? "";
+          if (value.includes("url(")) {
+            out = out.replace(styleRe, `data-hatch-style="${value.replace(/"/g, "&quot;")}"`);
+          }
+        }
+        return `<${tag}${out}>`;
+      });
+    }
+    const HTML_URL_ATTRS_BY_TAG = {
+      IMG: ["src", "srcset", "poster"],
+      IMAGE: ["href"],
+      VIDEO: ["src", "poster"],
+      AUDIO: ["src"],
+      SOURCE: ["src", "srcset"],
+      SCRIPT: ["src"],
+      LINK: ["href"],
+      IFRAME: ["src"],
+      EMBED: ["src"],
+      OBJECT: ["data"],
+      TRACK: ["src"],
+      INPUT: ["src"],
+      FORM: ["action"],
+      BUTTON: ["formaction"],
+      USE: ["href", "xlink:href"]
+    };
+    function rewriteSubtreeForTunnel(root) {
+      if (!root)
+        return;
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
+      let n = walker.currentNode;
+      if (root.nodeType === 1)
+        processOne(root);
+      while (n = walker.nextNode()) {
+        processOne(n);
+      }
+    }
+    function processOne(el) {
+      const tag = (el.tagName ?? "").toUpperCase();
+      const attrs = HTML_URL_ATTRS_BY_TAG[tag];
+      if (attrs) {
+        for (const a of attrs) {
+          const v = el.getAttribute(a);
+          if (v == null)
+            continue;
+          if (isExternalUrl2(v))
+            continue;
+          el.setAttribute("data-hatch-" + a, v);
+          el.removeAttribute(a);
+        }
+      }
+      const style = el.getAttribute("style");
+      if (style && style.includes("url(")) {
+        el.setAttribute("data-hatch-style", style);
+        el.removeAttribute("style");
+      }
+    }
+    function parseAndCleanHtml(html) {
+      const tpl = document.createElement("template");
+      tpl.innerHTML = html;
+      rewriteSubtreeForTunnel(tpl.content);
+      return tpl.content;
+    }
+    function setInnerHTML(el, html, which = "innerHTML") {
+      const s = html == null ? "" : String(html);
+      if (which === "innerHTML" && typeof el.tagName === "string" && el.tagName.toUpperCase() === "TEMPLATE") {
+        try {
+          el.innerHTML = s;
+        } catch {}
+        return;
+      }
+      if (which === "outerHTML") {
+        const frag = parseAndCleanHtml(s);
+        const wrap = document.createElement("div");
+        wrap.appendChild(frag);
+        try {
+          el.outerHTML = wrap.innerHTML;
+        } catch {}
+        queueMicrotask(() => processDataHatchAttrs(document.body));
+        return;
+      }
+      const frag = parseAndCleanHtml(s);
+      try {
+        while (el.firstChild)
+          el.removeChild(el.firstChild);
+        el.appendChild(frag);
+      } catch {}
+      queueMicrotask(() => processDataHatchAttrs(el));
+    }
+    function insertAdjacentHTMLT(el, position, html) {
+      const s = html == null ? "" : String(html);
+      const frag = parseAndCleanHtml(s);
+      const wrap = document.createElement("template");
+      wrap.content.appendChild(frag);
+      try {
+        el.insertAdjacentHTML(position, wrap.innerHTML);
+      } catch {}
+      queueMicrotask(() => processDataHatchAttrs(document.body));
+    }
+    function processDataHatchAttrs(root) {
+      const SELECTORS = "[data-hatch-src], [data-hatch-href], [data-hatch-srcset], [data-hatch-poster], [data-hatch-action], [data-hatch-data], [data-hatch-style]";
+      root.querySelectorAll(SELECTORS).forEach((el) => {
+        const attrs = el.getAttributeNames();
+        for (const a of attrs) {
+          if (!a.startsWith("data-hatch-"))
+            continue;
+          const real = a.slice("data-hatch-".length);
+          const value = el.getAttribute(a) ?? "";
+          el.removeAttribute(a);
+          if (real === "style")
+            setStyleAttr(el, value);
+          else
+            setAttr(el, real, value);
+        }
+      });
+    }
+    const styleProxyCache = new WeakMap;
+    function getStyle(el) {
+      if (el == null)
+        return el;
+      let real;
+      try {
+        real = el.style;
+      } catch {
+        return;
+      }
+      if (real == null || typeof real !== "object" && typeof real !== "function") {
+        return real;
+      }
+      let proxy = styleProxyCache.get(real);
+      if (proxy)
+        return proxy;
+      proxy = new Proxy(real, {
+        get(target, prop, _receiver) {
+          const v = Reflect.get(target, prop, target);
+          if (typeof v === "function")
+            return v.bind(target);
+          return v;
+        },
+        set(target, prop, value) {
+          if (typeof prop === "string") {
+            setStyle(el, prop, value);
+            return true;
+          }
+          return Reflect.set(target, prop, value, target);
+        }
+      });
+      styleProxyCache.set(real, proxy);
+      return proxy;
+    }
+    function setStyle(el, propName, value) {
+      const v = value == null ? "" : String(value);
+      if (propName.startsWith("--")) {
+        rewriteCssText(v).then((rewritten) => {
+          try {
+            el.style.setProperty(propName, rewritten);
+          } catch {}
+        });
+        return;
+      }
+      if (URL_STYLE_PROPS.has(propName) && v.includes("url(")) {
+        rewriteCssText(v).then((rewritten) => {
+          try {
+            el.style[propName] = rewritten;
+          } catch {}
+        });
+        return;
+      }
+      try {
+        el.style[propName] = v;
+      } catch {}
+    }
+    function setStyleAttr(el, attrValue) {
+      if (!attrValue.includes("url(")) {
+        el.setAttribute("style", attrValue);
+        return;
+      }
+      rewriteCssText(attrValue).then((rewritten) => {
+        try {
+          el.setAttribute("style", rewritten);
+        } catch {}
+      });
+    }
+    function setStyleText(styleEl, text) {
+      if (!(styleEl instanceof HTMLStyleElement)) {
+        try {
+          styleEl.textContent = text;
+        } catch {}
+        return;
+      }
+      if (!text.includes("url(")) {
+        styleEl.textContent = text;
+        return;
+      }
+      rewriteCssText(text).then((rewritten) => {
+        try {
+          styleEl.textContent = rewritten;
+        } catch {}
+      });
+    }
+    function tunnelImage(_w, _h) {
+      const img = new originalImage;
+      const desc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, "src");
+      if (desc?.set) {
+        const origSet = desc.set;
+        const origGet = desc.get;
+        Object.defineProperty(img, "src", {
+          configurable: true,
+          get() {
+            return origGet.call(img);
+          },
+          set(v) {
+            if (v == null)
+              return origSet.call(img, "");
+            const s = String(v);
+            if (isExternalUrl2(s))
+              return origSet.call(img, s);
+            resolveToBlobUrl(s).then((b) => origSet.call(img, b), () => origSet.call(img, s));
+          }
+        });
+      }
+      return img;
+    }
+    function tunnelSendBeacon(url, data) {
+      tunnelFetch(url, { method: "POST", body: data, keepalive: true }).catch(() => {});
+      return true;
+    }
+    function tunnelWorker(_url) {
+      throw new Error("[__tunnel] new Worker() is not supported in Muse web artifacts.");
+    }
+    function tunnelImport(spec) {
+      throw new Error("[__tunnel] dynamic import() of '" + String(spec) + "' is not supported in Muse web artifacts.");
+    }
+    function installCssObserver() {
+      try {
+        const proto = window.CSSStyleSheet?.prototype;
+        if (proto) {
+          const origInsertRule = proto.insertRule;
+          proto.insertRule = function(rule, index) {
+            if (typeof rule === "string" && rule.includes("url(")) {
+              const idx = origInsertRule.call(this, rule, index);
+              rewriteCssText(rule).then((rewritten) => {
+                if (rewritten !== rule) {
+                  try {
+                    this.deleteRule(idx);
+                    origInsertRule.call(this, rewritten, idx);
+                  } catch {}
+                }
+              });
+              return idx;
+            }
+            return origInsertRule.call(this, rule, index);
+          };
+          const origReplace = proto.replace;
+          if (origReplace) {
+            proto.replace = function(text) {
+              if (typeof text === "string" && text.includes("url(")) {
+                return rewriteCssText(text).then((rewritten) => origReplace.call(this, rewritten));
+              }
+              return origReplace.call(this, text);
+            };
+          }
+          const origReplaceSync = proto.replaceSync;
+          if (origReplaceSync) {
+            proto.replaceSync = function(text) {
+              if (typeof text === "string" && text.includes("url(")) {
+                const ret = origReplaceSync.call(this, text);
+                rewriteCssText(text).then((rewritten) => {
+                  try {
+                    origReplaceSync.call(this, rewritten);
+                  } catch {}
+                });
+                return ret;
+              }
+              return origReplaceSync.call(this, text);
+            };
+          }
+        }
+      } catch (e) {}
+      function sweepSheet(sheet) {
+        try {
+          const rules = sheet.cssRules;
+          for (let i = 0;i < rules.length; i++) {
+            const rule = rules[i];
+            const txt = rule.cssText;
+            if (txt && (txt.includes(HATCH_FRAG) || txt.includes("url(") && !/url\(\s*["']?(blob:|https?:|data:image\/gif;base64,R0)/.test(txt))) {
+              rewriteCssText(txt).then((rewritten) => {
+                if (rewritten !== txt) {
+                  try {
+                    sheet.deleteRule(i);
+                    sheet.insertRule(rewritten, i);
+                  } catch {}
+                }
+              });
+            }
+          }
+        } catch {}
+      }
+      function sweepAll() {
+        for (const sheet of Array.from(document.styleSheets)) {
+          sweepSheet(sheet);
+        }
+      }
+      const mo = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          for (const node of Array.from(m.addedNodes)) {
+            if (node instanceof HTMLStyleElement) {
+              const txt = node.textContent ?? "";
+              if (txt.includes("url(")) {
+                rewriteCssText(txt).then((rewritten) => {
+                  if (rewritten !== txt) {
+                    try {
+                      node.textContent = rewritten;
+                    } catch {}
+                  }
+                });
+              }
+            } else if (node instanceof HTMLLinkElement && node.rel === "stylesheet") {
+              node.addEventListener("load", () => sweepSheet(node.sheet), { once: true });
+            }
+          }
+        }
+      });
+      mo.observe(document, { subtree: true, childList: true });
+      Promise.resolve().then(sweepAll);
+      setTimeout(sweepAll, 0);
+      setTimeout(sweepAll, 50);
+      setTimeout(sweepAll, 250);
+    }
+    function rewriteAuthoredHtml() {
+      const SELECTORS = "[data-hatch-src], [data-hatch-href], [data-hatch-srcset]";
+      document.querySelectorAll(SELECTORS).forEach((el) => {
+        const src = el.getAttribute("data-hatch-src");
+        const href = el.getAttribute("data-hatch-href");
+        const srcset = el.getAttribute("data-hatch-srcset");
+        if (src)
+          setAttr(el, "src", src);
+        if (href)
+          setAttr(el, "href", href);
+        if (srcset)
+          setAttr(el, "srcset", srcset);
+      });
+    }
+    let historyUrlWarned = false;
+    function warnHistoryUrlDropped(method, url) {
+      if (url === undefined || url === null)
+        return;
+      if (historyUrlWarned)
+        return;
+      historyUrlWarned = true;
+      try {
+        console.warn("[__tunnel] history." + method + "() was called with a URL; the URL was ignored. A Muse web artifact " + "renders in an opaque origin with no navigable URL of its own, so " + "the browser rejects any URL change. State kept in the URL will not " + "persist or survive a reload — keep it in component state, or in " + "the artifact's database through a server action.");
+      } catch {}
+    }
+    const originalFetch = globalThis.fetch?.bind(globalThis) ?? (() => {
+      throw new Error("no native fetch");
+    });
+    const originalXHR = globalThis.XMLHttpRequest;
+    const originalImage = globalThis.Image;
+    const tunnel = {
+      fetch: tunnelFetch,
+      XHR: TunnelXHR,
+      WebSocket: TunnelWebSocket,
+      EventSource: TunnelEventSource,
+      Image: tunnelImage,
+      Worker: tunnelWorker,
+      import: tunnelImport,
+      sendBeacon: tunnelSendBeacon,
+      setAttr,
+      setAttrNS,
+      setUrlProp,
+      setStyle,
+      getStyle,
+      setStyleAttr,
+      setStyleText,
+      setInnerHTML,
+      insertAdjacentHTML: insertAdjacentHTMLT,
+      rewriteCssText,
+      resolveToBlobUrl,
+      processDataHatchAttrs,
+      rewriteHtmlString,
+      _resolveUrlString: (v) => v,
+      _resolveCssValue: (v) => v,
+      _resolveCssText: (v) => v,
+      _resolveStyleProp: (v) => v,
+      _importMeta: {
+        get url() {
+          return importMetaUrl(SELF_HREF, SELF_BASE_DIR);
+        }
+      },
+      _state: {
+        get port() {
+          return port;
+        },
+        get inFlight() {
+          return pending.size;
+        },
+        get blobCacheSize() {
+          return blobCache.size;
+        },
+        get blobStats() {
+          return { ...blobStats };
+        }
+      }
+    };
+    globalThis.__tunnel = tunnel;
+    window.__tunnel = tunnel;
+    try {
+      globalThis.fetch = tunnelFetch;
+      window.fetch = tunnelFetch;
+      globalThis.XMLHttpRequest = TunnelXHR;
+      window.XMLHttpRequest = TunnelXHR;
+      globalThis.WebSocket = TunnelWebSocket;
+      window.WebSocket = TunnelWebSocket;
+      globalThis.EventSource = TunnelEventSource;
+      window.EventSource = TunnelEventSource;
+      const nav = globalThis.navigator;
+      if (nav && typeof nav.sendBeacon === "function") {
+        nav.sendBeacon = (url, data) => tunnelSendBeacon(url, data);
+      }
+      const NativeURL = globalThis.URL;
+      const TunnelURL = function(url, base) {
+        return resolveTunnelUrl(url, base, SELF_HREF, NativeURL);
+      };
+      TunnelURL.prototype = NativeURL.prototype;
+      for (const k of Object.getOwnPropertyNames(NativeURL)) {
+        if (k === "prototype" || k === "length" || k === "name")
+          continue;
+        try {
+          TunnelURL[k] = NativeURL[k];
+        } catch {}
+      }
+      globalThis.URL = TunnelURL;
+      window.URL = TunnelURL;
+    } catch {}
+    try {
+      const hist = globalThis.history;
+      if (hist && typeof hist.pushState === "function" && typeof hist.replaceState === "function") {
+        const nativePushState = hist.pushState.bind(hist);
+        const nativeReplaceState = hist.replaceState.bind(hist);
+        hist.pushState = function(state, title, url) {
+          warnHistoryUrlDropped("pushState", url);
+          return nativePushState(state, title ?? "");
+        };
+        hist.replaceState = function(state, title, url) {
+          warnHistoryUrlDropped("replaceState", url);
+          return nativeReplaceState(state, title ?? "");
+        };
+      }
+    } catch {}
+    try {
+      const nativeCreateObjectURL = URL.createObjectURL.bind(URL);
+      const nativeRevokeObjectURL = URL.revokeObjectURL.bind(URL);
+      URL.createObjectURL = function(obj) {
+        const created = nativeCreateObjectURL(obj);
+        try {
+          objectUrls.add(created);
+        } catch {}
+        return created;
+      };
+      URL.revokeObjectURL = function(objectUrl) {
+        try {
+          objectUrls.delete(objectUrl);
+        } catch {}
+        nativeRevokeObjectURL(objectUrl);
+      };
+    } catch {}
+    const announceEpoch = Math.random().toString(36).slice(2) + "-" + Date.now().toString(36);
+    let announceTimer = null;
+    function announce() {
+      try {
+        window.parent.postMessage({ type: "bundle:ready", epoch: announceEpoch }, "*");
+      } catch {}
+    }
+    function startAnnouncing() {
+      announce();
+      announceTimer = setInterval(() => {
+        if (port != null) {
+          if (announceTimer != null)
+            clearInterval(announceTimer);
+          announceTimer = null;
+          return;
+        }
+        announce();
+      }, 120);
+    }
+    function onParentMessage(ev) {
+      const data = ev.data;
+      if (!data || typeof data !== "object")
+        return;
+      if (data.type === "bundle:init-port" && ev.ports && ev.ports[0]) {
+        if (port != null)
+          return;
+        if (announceTimer != null) {
+          clearInterval(announceTimer);
+          announceTimer = null;
+        }
+        port = ev.ports[0];
+        port.onmessage = (pe) => {
+          const msg = pe.data;
+          if (!msg || typeof msg !== "object")
+            return;
+          if (msg.type === "http.res") {
+            const ent = pending.get(msg.id);
+            if (ent) {
+              pending.delete(msg.id);
+              ent.resolve(msg);
+            }
+          } else if (msg.type === "ws.opened" || msg.type === "ws.message" || msg.type === "ws.closed" || msg.type === "ws.error") {
+            openWs.get(msg.id)?._handle(msg);
+          }
+        };
+        port.start?.();
+        portReadyResolve?.(port);
+        installCssObserver();
+        rewriteAuthoredHtml();
+        try {
+          window.parent.postMessage({ type: "bundle:port-attached" }, "*");
+        } catch {}
+      }
+    }
+    window.addEventListener("message", onParentMessage);
+    installDownloadLinks(tunnelFetch, isExternalUrl2, __BLOB_REVOKE_DELAY_MS);
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      startAnnouncing();
+    } else {
+      document.addEventListener("DOMContentLoaded", startAnnouncing);
+    }
+  })();
+})();
+
+;
+(function () {
+  "use strict";
+
+  var state = {
+    layers: [],
+    selected: {},
+    nextId: 1,
+    generating: false,
+    gateUnlocked: false,
+    wallet: null,
+    tokenBalance: null,
+    tokenDecimals: 18
+  };
+  var el = {
+    layers: document.getElementById("layers"),
+    canvas: document.getElementById("preview"),
+    empty: document.getElementById("emptyCanvas"),
+    warning: document.getElementById("layerWarning"),
+    combos: document.getElementById("comboCount"),
+    ready: document.getElementById("readyCount"),
+    generate: document.getElementById("generate"),
+    downloadJson: document.getElementById("downloadJson"),
+    downloadManifest: document.getElementById("downloadManifest"),
+    downloadGate: document.getElementById("downloadGate"),
+    downloadPreview: document.getElementById("downloadPreview"),
+    connectWallet: document.getElementById("connectWallet"),
+    gateStatus: document.getElementById("gateStatus"),
+    edition: document.getElementById("edition"),
+    size: document.getElementById("size"),
+    progressWrap: document.getElementById("progressWrap"),
+    progress: document.getElementById("progress"),
+    progressText: document.getElementById("progressText"),
+    toast: document.getElementById("toast")
+  };
+  var ctx = el.canvas.getContext("2d", {
+    alpha: true
+  });
+  var toastTimer;
+  function iconSvg(name) {
+    var paths = {
+      up: '<path d="m6 15 6-6 6 6"/>',
+      down: '<path d="m6 9 6 6 6-6"/>',
+      trash: '<path d="M4 7h16M9 7V4h6v3m3 0-1 14H7L6 7m4 4v6m4-6v6"/>',
+      upload: '<path d="M12 16V4m0 0L7 9m5-5 5 5M5 19h14"/>'
+    };
+    return '<svg viewBox="0 0 24 24" aria-hidden="true">' + paths[name] + '</svg>';
+  }
+  function addLayer(name) {
+    var id = state.nextId++;
+    state.layers.push({
+      id: id,
+      name: name || "New Layer",
+      assets: []
+    });
+    renderLayers();
+    updateAll();
+  }
+  function removeLayer(id) {
+    var layer = state.layers.find(function (item) {
+      return item.id === id;
+    });
+    if (layer) layer.assets.forEach(function (asset) {
+      URL.revokeObjectURL(asset.url);
+    });
+    state.layers = state.layers.filter(function (item) {
+      return item.id !== id;
+    });
+    delete state.selected[id];
+    renderLayers();
+    updateAll();
+  }
+  function moveLayer(id, amount) {
+    var index = state.layers.findIndex(function (item) {
+      return item.id === id;
+    });
+    var next = index + amount;
+    if (index < 0 || next < 0 || next >= state.layers.length) return;
+    var moved = state.layers.splice(index, 1)[0];
+    state.layers.splice(next, 0, moved);
+    renderLayers();
+    drawPreview();
+  }
+  function cleanTraitName(filename) {
+    return filename.replace(/\.[^.]+$/, "").replace(/[_-]+/g, " ").replace(/\s+/g, " ").trim() || "Untitled";
+  }
+  function loadAssets(id, fileList) {
+    var layer = state.layers.find(function (item) {
+      return item.id === id;
+    });
+    if (!layer) return;
+    var files = Array.prototype.slice.call(fileList).filter(function (file) {
+      return /^image\/(png|jpeg|webp)$/i.test(file.type);
+    });
+    if (!files.length) {
+      showToast("Choose PNG, JPG, or WEBP files.");
+      return;
+    }
+    Promise.all(files.map(function (file) {
+      return new Promise(function (resolve) {
+        var url = URL.createObjectURL(file);
+        var img = __tunnel.Image();
+        img.onload = function () {
+          resolve({
+            id: Date.now() + Math.random(),
+            file: file,
+            url: url,
+            img: img,
+            name: cleanTraitName(file.name)
+          });
+        };
+        img.onerror = function () {
+          URL.revokeObjectURL(url);
+          resolve(null);
+        };
+        __tunnel.setUrlProp(img, "src", url);
+      });
+    })).then(function (assets) {
+      assets.filter(Boolean).forEach(function (asset) {
+        layer.assets.push(asset);
+      });
+      if (layer.assets.length && state.selected[id] == null) state.selected[id] = 0;
+      renderLayers();
+      updateAll();
+      showToast(assets.filter(Boolean).length + " trait" + (assets.filter(Boolean).length === 1 ? "" : "s") + " added to " + layer.name + ".");
+    });
+  }
+  function removeAsset(layerId, assetId) {
+    var layer = state.layers.find(function (item) {
+      return item.id === layerId;
+    });
+    if (!layer) return;
+    var index = layer.assets.findIndex(function (asset) {
+      return asset.id === assetId;
+    });
+    if (index < 0) return;
+    URL.revokeObjectURL(layer.assets[index].url);
+    layer.assets.splice(index, 1);
+    if (!layer.assets.length) delete state.selected[layerId];else state.selected[layerId] = Math.min(state.selected[layerId] || 0, layer.assets.length - 1);
+    renderLayers();
+    updateAll();
+  }
+  function renderLayers() {
+    __tunnel.setInnerHTML(el.layers, "", "innerHTML");
+    state.layers.forEach(function (layer, index) {
+      var card = document.createElement("div");
+      card.className = "layer";
+      __tunnel.setInnerHTML(card, '<div class="layer-top">' + '<span class="grip" aria-hidden="true">⠿</span>' + '<input class="layer-name" type="text" maxlength="40" aria-label="Layer name" value="' + escapeHtml(layer.name) + '">' + '<div class="layer-actions">' + '<button class="button small icon move-up" type="button" aria-label="Move layer backward" ' + (index === 0 ? "disabled" : "") + '>' + iconSvg("up") + '</button>' + '<button class="button small icon move-down" type="button" aria-label="Move layer forward" ' + (index === state.layers.length - 1 ? "disabled" : "") + '>' + iconSvg("down") + '</button>' + '<button class="button small icon delete-layer" type="button" aria-label="Delete layer">' + iconSvg("trash") + '</button>' + '</div>' + '</div>' + '<div class="layer-assets">' + '<div class="asset-strip"></div>' + '<div class="upload"><input type="file" accept="image/png,image/jpeg,image/webp" multiple aria-label="Add trait images to ' + escapeHtml(layer.name) + '"></div>' + '</div>', "innerHTML");
+      var strip = card.querySelector(".asset-strip");
+      if (!layer.assets.length) {
+        var empty = document.createElement("div");
+        empty.className = "layer-empty";
+        __tunnel.setStyle(empty, "gridColumn", "1 / -1");
+        empty.textContent = "No traits yet";
+        strip.appendChild(empty);
+      } else {
+        layer.assets.forEach(function (asset, assetIndex) {
+          var item = document.createElement("button");
+          item.type = "button";
+          item.className = "asset" + (state.selected[layer.id] === assetIndex ? " active" : "");
+          __tunnel.setAttr(item, "aria-label", "Preview " + asset.name);
+          item.title = asset.name;
+          __tunnel.setInnerHTML(item, '<img src="' + asset.url + '" alt=""><button type="button" aria-label="Remove ' + escapeHtml(asset.name) + '">×</button>', "innerHTML");
+          item.addEventListener("click", function (event) {
+            if (event.target.tagName.toLowerCase() === "button") return;
+            state.selected[layer.id] = assetIndex;
+            renderLayers();
+            drawPreview();
+          });
+          item.querySelector("button").addEventListener("click", function (event) {
+            event.stopPropagation();
+            removeAsset(layer.id, asset.id);
+          });
+          strip.appendChild(item);
+        });
+      }
+      card.querySelector(".layer-name").addEventListener("input", function (event) {
+        layer.name = event.target.value || "Untitled Layer";
+        updateAll(false);
+      });
+      card.querySelector("input[type=file]").addEventListener("change", function (event) {
+        loadAssets(layer.id, event.target.files);
+        event.target.value = "";
+      });
+      card.querySelector(".move-up").addEventListener("click", function () {
+        moveLayer(layer.id, -1);
+      });
+      card.querySelector(".move-down").addEventListener("click", function () {
+        moveLayer(layer.id, 1);
+      });
+      card.querySelector(".delete-layer").addEventListener("click", function () {
+        removeLayer(layer.id);
+      });
+      el.layers.appendChild(card);
+    });
+  }
+  function activeLayers() {
+    return state.layers.filter(function (layer) {
+      return layer.assets.length > 0;
+    });
+  }
+  function comboCount() {
+    var ready = activeLayers();
+    if (!ready.length) return 0;
+    return ready.reduce(function (total, layer) {
+      return total * layer.assets.length;
+    }, 1);
+  }
+  function updateAll(redraw) {
+    if (redraw !== false) drawPreview();
+    var ready = activeLayers();
+    var combos = comboCount();
+    var edition = clampEdition();
+    el.combos.textContent = combos > 999999 ? combos.toExponential(2) : combos.toLocaleString();
+    el.ready.textContent = ready.length + " layer" + (ready.length === 1 ? "" : "s") + " ready";
+    el.warning.textContent = combos > 0 && edition > combos ? "Edition size exceeds the " + combos + " unique combinations available." : "";
+    var canExport = ready.length > 0 && edition <= combos && !state.generating && state.gateUnlocked;
+    el.generate.disabled = !canExport;
+    el.downloadJson.disabled = ready.length === 0 || !state.gateUnlocked;
+    el.downloadManifest.disabled = ready.length === 0 || !state.gateUnlocked;
+    el.downloadPreview.disabled = ready.length === 0 || !state.gateUnlocked;
+    el.downloadGate.disabled = !state.gateUnlocked;
+  }
+  function decimalToUnits(value, decimals) {
+    var parts = String(value).trim().split(".");
+    var whole = (parts[0] || "0").replace(/\D/g, "") || "0";
+    var fraction = (parts[1] || "").replace(/\D/g, "").slice(0, decimals).padEnd(decimals, "0");
+    return BigInt(whole) * 10n ** BigInt(decimals) + BigInt(fraction || "0");
+  }
+  function formatUnits(value, decimals) {
+    var base = 10n ** BigInt(decimals);
+    var whole = value / base;
+    var fraction = (value % base).toString().padStart(decimals, "0").slice(0, 4).replace(/0+$/, "");
+    return whole.toString() + (fraction ? "." + fraction : "");
+  }
+  function setGateStatus(message, kind) {
+    el.gateStatus.textContent = message;
+    el.gateStatus.className = "gate-state" + (kind ? " " + kind : "");
+  }
+  function resetGate(message) {
+    state.gateUnlocked = false;
+    state.tokenBalance = null;
+    el.connectWallet.textContent = state.wallet ? "Verify wallet again" : "Connect wallet & verify";
+    setGateStatus(message || "Connect a Base wallet holding the configured minimum to unlock collection exports.", "");
+    updateAll(false);
+  }
+  async function verifyGate() {
+    if (!window.ethereum || typeof window.ethereum.request !== "function") {
+      resetGate("No compatible wallet found. Open this page in a wallet browser or install an injected wallet.");
+      setGateStatus(el.gateStatus.textContent, "error");
+      return;
+    }
+    el.connectWallet.disabled = true;
+    setGateStatus("Requesting wallet access…", "");
+    try {
+      var accounts = await window.ethereum.request({
+        method: "eth_requestAccounts"
+      });
+      if (!accounts || !accounts[0]) throw new Error("No wallet account was returned.");
+      var chainId = await window.ethereum.request({
+        method: "eth_chainId"
+      });
+      if (String(chainId).toLowerCase() !== "0x2105") {
+        try {
+          await window.ethereum.request({
+            method: "wallet_switchEthereumChain",
+            params: [{
+              chainId: "0x2105"
+            }]
+          });
+        } catch (switchError) {
+          throw new Error("Switch the wallet network to Base, then verify again.");
+        }
+      }
+      var wallet = accounts[0];
+      var contract = document.getElementById("tokenContract").value.trim();
+      var decimalsResult = await window.ethereum.request({
+        method: "eth_call",
+        params: [{
+          to: contract,
+          data: "0x313ce567"
+        }, "latest"]
+      });
+      var decimals = Number(BigInt(decimalsResult || "0x12"));
+      if (!Number.isInteger(decimals) || decimals < 0 || decimals > 36) throw new Error("The configured token returned invalid decimals.");
+      var data = "0x70a08231" + wallet.slice(2).toLowerCase().padStart(64, "0");
+      var result = await window.ethereum.request({
+        method: "eth_call",
+        params: [{
+          to: contract,
+          data: data
+        }, "latest"]
+      });
+      var balance = BigInt(result || "0x0");
+      var minimum = decimalToUnits(document.getElementById("gateBalance").value, decimals);
+      state.tokenDecimals = decimals;
+      state.wallet = wallet;
+      state.tokenBalance = balance;
+      state.gateUnlocked = balance >= minimum;
+      el.connectWallet.textContent = state.gateUnlocked ? "Verified" : "Verify wallet again";
+      if (state.gateUnlocked) {
+        setGateStatus("Unlocked · " + wallet.slice(0, 6) + "…" + wallet.slice(-4) + " holds " + formatUnits(balance, decimals) + " $RESCUE.", "success");
+      } else {
+        setGateStatus("Locked · this wallet holds " + formatUnits(balance, decimals) + " $RESCUE; " + document.getElementById("gateBalance").value + " required.", "error");
+      }
+      updateAll(false);
+    } catch (error) {
+      state.gateUnlocked = false;
+      setGateStatus(error && error.message ? error.message : "Wallet verification failed. Try again.", "error");
+      updateAll(false);
+    } finally {
+      el.connectWallet.disabled = false;
+    }
+  }
+  function drawCombination(combination, targetCanvas) {
+    var target = targetCanvas || el.canvas;
+    var targetCtx = target.getContext("2d", {
+      alpha: true
+    });
+    targetCtx.clearRect(0, 0, target.width, target.height);
+    combination.forEach(function (entry) {
+      targetCtx.drawImage(entry.asset.img, 0, 0, target.width, target.height);
+    });
+  }
+  function currentCombination() {
+    return activeLayers().map(function (layer) {
+      var index = state.selected[layer.id] == null ? 0 : state.selected[layer.id];
+      return {
+        layer: layer,
+        asset: layer.assets[index]
+      };
+    });
+  }
+  function drawPreview() {
+    var combination = currentCombination();
+    drawCombination(combination, el.canvas);
+    el.empty.hidden = combination.length > 0;
+  }
+  function randomize() {
+    activeLayers().forEach(function (layer) {
+      state.selected[layer.id] = Math.floor(Math.random() * layer.assets.length);
+    });
+    renderLayers();
+    drawPreview();
+  }
+  function gateConfig() {
+    var balance = parseFloat(document.getElementById("gateBalance").value);
+    if (!Number.isFinite(balance) || balance <= 0) balance = 1;
+    return {
+      type: "erc20_balance",
+      chain: "Base",
+      token: {
+        name: "RESCUE",
+        symbol: "$RESCUE",
+        contract: document.getElementById("tokenContract").value,
+        decimals: state.tokenDecimals
+      },
+      minimum_balance: String(balance),
+      scope: document.getElementById("gateScope").value
+    };
+  }
+  function metadataFor(number, combination) {
+    var external = document.getElementById("external").value.trim();
+    var base = document.getElementById("imageBase").value.trim().replace(/\/$/, "");
+    var chain = document.getElementById("chain").value;
+    var data = {
+      name: (document.getElementById("prefix").value.trim() || "Item") + " #" + number,
+      description: document.getElementById("description").value.trim(),
+      image: (base || "images") + "/" + number + ".png",
+      attributes: combination.map(function (entry) {
+        return {
+          trait_type: entry.layer.name,
+          value: entry.asset.name
+        };
+      })
+    };
+    if (external) data.external_url = external;
+    data.properties = {
+      collection: document.getElementById("collection").value.trim(),
+      symbol: document.getElementById("symbol").value.trim(),
+      blockchain: chain,
+      utility_token: gateConfig().token,
+      token_gate: gateConfig()
+    };
+    return data;
+  }
+  function manifest() {
+    return {
+      collection: document.getElementById("collection").value.trim(),
+      symbol: document.getElementById("symbol").value.trim(),
+      generated_at: new Date().toISOString(),
+      utility_token: gateConfig().token,
+      token_gate: gateConfig(),
+      layers: state.layers.map(function (layer) {
+        return {
+          name: layer.name,
+          traits: layer.assets.map(function (asset) {
+            return asset.name;
+          })
+        };
+      })
+    };
+  }
+  function downloadBlob(blob, filename) {
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement("a");
+    __tunnel.setUrlProp(link, "href", url);
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(function () {
+      URL.revokeObjectURL(url);
+    }, 1200);
+  }
+  function canvasBlob(canvas) {
+    return new Promise(function (resolve, reject) {
+      canvas.toBlob(function (blob) {
+        blob ? resolve(blob) : reject(new Error("PNG rendering failed"));
+      }, "image/png");
+    });
+  }
+  function randomUniqueCombinations(count) {
+    var layers = activeLayers();
+    var total = comboCount();
+    var indexes = [];
+    if (count === total && total <= 10000) {
+      for (var n = 0; n < total; n++) indexes.push(n);
+      for (var i = indexes.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var swap = indexes[i];
+        indexes[i] = indexes[j];
+        indexes[j] = swap;
+      }
+      indexes = indexes.slice(0, count);
+    } else {
+      var seen = {};
+      while (indexes.length < count) {
+        var pick = Math.floor(Math.random() * total);
+        if (!seen[pick]) {
+          seen[pick] = true;
+          indexes.push(pick);
+        }
+      }
+    }
+    return indexes.map(function (value) {
+      var combo = [];
+      layers.forEach(function (layer) {
+        var selected = value % layer.assets.length;
+        value = Math.floor(value / layer.assets.length);
+        combo.push({
+          layer: layer,
+          asset: layer.assets[selected]
+        });
+      });
+      return combo;
+    });
+  }
+  var crcTable = function () {
+    var table = [];
+    for (var n = 0; n < 256; n++) {
+      var c = n;
+      for (var k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ c >>> 1 : c >>> 1;
+      table[n] = c >>> 0;
+    }
+    return table;
+  }();
+  function crc32(bytes) {
+    var crc = 0xffffffff;
+    for (var i = 0; i < bytes.length; i++) crc = crcTable[(crc ^ bytes[i]) & 0xff] ^ crc >>> 8;
+    return (crc ^ 0xffffffff) >>> 0;
+  }
+  function u16(value) {
+    return new Uint8Array([value & 255, value >>> 8 & 255]);
+  }
+  function u32(value) {
+    return new Uint8Array([value & 255, value >>> 8 & 255, value >>> 16 & 255, value >>> 24 & 255]);
+  }
+  function concat(parts) {
+    var length = parts.reduce(function (sum, part) {
+      return sum + part.length;
+    }, 0);
+    var out = new Uint8Array(length),
+      offset = 0;
+    parts.forEach(function (part) {
+      out.set(part, offset);
+      offset += part.length;
+    });
+    return out;
+  }
+  async function makeZip(entries) {
+    var encoder = new TextEncoder();
+    var locals = [],
+      centrals = [],
+      offset = 0;
+    for (var i = 0; i < entries.length; i++) {
+      var name = encoder.encode(entries[i].name);
+      var data = entries[i].data instanceof Uint8Array ? entries[i].data : new Uint8Array(await entries[i].data.arrayBuffer());
+      var crc = crc32(data);
+      var local = concat([u32(0x04034b50), u16(20), u16(0), u16(0), u16(0), u16(0), u32(crc), u32(data.length), u32(data.length), u16(name.length), u16(0), name, data]);
+      var central = concat([u32(0x02014b50), u16(20), u16(20), u16(0), u16(0), u16(0), u16(0), u32(crc), u32(data.length), u32(data.length), u16(name.length), u16(0), u16(0), u16(0), u16(0), u32(0), u32(offset), name]);
+      locals.push(local);
+      centrals.push(central);
+      offset += local.length;
+    }
+    var centralData = concat(centrals);
+    var end = concat([u32(0x06054b50), u16(0), u16(0), u16(entries.length), u16(entries.length), u32(centralData.length), u32(offset), u16(0)]);
+    return new Blob([concat(locals.concat([centralData, end]))], {
+      type: "application/zip"
+    });
+  }
+  async function generateCollection() {
+    if (state.generating) return;
+    if (!state.gateUnlocked) {
+      showToast("Verify a qualifying $RESCUE wallet first.");
+      return;
+    }
+    var count = clampEdition();
+    if (!activeLayers().length || count > comboCount()) return;
+    state.generating = true;
+    el.progressWrap.hidden = false;
+    updateAll(false);
+    var exportCanvas = document.createElement("canvas");
+    var size = parseInt(el.size.value, 10);
+    exportCanvas.width = size;
+    exportCanvas.height = size;
+    var combinations = randomUniqueCombinations(count);
+    var entries = [];
+    try {
+      for (var i = 0; i < combinations.length; i++) {
+        drawCombination(combinations[i], exportCanvas);
+        var png = await canvasBlob(exportCanvas);
+        entries.push({
+          name: "images/" + (i + 1) + ".png",
+          data: png
+        });
+        var json = JSON.stringify(metadataFor(i + 1, combinations[i]), null, 2);
+        entries.push({
+          name: "metadata/" + (i + 1) + ".json",
+          data: new TextEncoder().encode(json)
+        });
+        var percent = Math.round((i + 1) / count * 88);
+        __tunnel.setStyle(el.progress, "width", percent + "%");
+        el.progressText.textContent = "Rendering " + (i + 1) + " of " + count;
+        await new Promise(function (resolve) {
+          setTimeout(resolve, 0);
+        });
+      }
+      entries.push({
+        name: "manifest.json",
+        data: new TextEncoder().encode(JSON.stringify(manifest(), null, 2))
+      });
+      entries.push({
+        name: "token-gate.json",
+        data: new TextEncoder().encode(JSON.stringify(gateConfig(), null, 2))
+      });
+      __tunnel.setStyle(el.progress, "width", "94%");
+      el.progressText.textContent = "Packing ZIP…";
+      var zip = await makeZip(entries);
+      var slug = (document.getElementById("collection").value || "collection").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      downloadBlob(zip, (slug || "collection") + "-export.zip");
+      __tunnel.setStyle(el.progress, "width", "100%");
+      el.progressText.textContent = "Export complete";
+      showToast("Collection ZIP ready.");
+    } catch (error) {
+      el.progressText.textContent = "Export failed. Try a smaller edition or resolution.";
+      showToast("Could not finish the ZIP export.");
+    } finally {
+      state.generating = false;
+      updateAll(false);
+    }
+  }
+  function clampEdition() {
+    var value = parseInt(el.edition.value, 10);
+    if (!Number.isFinite(value)) value = 1;
+    value = Math.max(1, Math.min(250, value));
+    if (String(value) !== el.edition.value) el.edition.value = value;
+    return value;
+  }
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"]/g, function (char) {
+      return {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;"
+      }[char];
+    });
+  }
+  function showToast(message) {
+    clearTimeout(toastTimer);
+    el.toast.textContent = message;
+    el.toast.classList.add("show");
+    toastTimer = setTimeout(function () {
+      el.toast.classList.remove("show");
+    }, 2500);
+  }
+  document.getElementById("addLayer").addEventListener("click", function () {
+    addLayer("New Layer");
+  });
+  document.getElementById("randomize").addEventListener("click", function () {
+    if (!activeLayers().length) {
+      showToast("Add at least one trait image first.");
+      return;
+    }
+    randomize();
+  });
+  el.downloadPreview.addEventListener("click", async function () {
+    if (!state.gateUnlocked) {
+      showToast("Verify a qualifying $RESCUE wallet first.");
+      return;
+    }
+    if (!activeLayers().length) {
+      showToast("Add at least one trait image first.");
+      return;
+    }
+    downloadBlob(await canvasBlob(el.canvas), "nft-preview.png");
+  });
+  document.getElementById("downloadJson").addEventListener("click", function () {
+    downloadBlob(new Blob([JSON.stringify(metadataFor(1, currentCombination()), null, 2)], {
+      type: "application/json"
+    }), "1.json");
+  });
+  document.getElementById("downloadManifest").addEventListener("click", function () {
+    downloadBlob(new Blob([JSON.stringify(manifest(), null, 2)], {
+      type: "application/json"
+    }), "trait-manifest.json");
+  });
+  el.downloadGate.addEventListener("click", function () {
+    if (!state.gateUnlocked) {
+      showToast("Verify a qualifying $RESCUE wallet first.");
+      return;
+    }
+    downloadBlob(new Blob([JSON.stringify(gateConfig(), null, 2)], {
+      type: "application/json"
+    }), "token-gate.json");
+    showToast("$RESCUE gate config ready.");
+  });
+  el.connectWallet.addEventListener("click", verifyGate);
+  document.getElementById("gateBalance").addEventListener("input", function () {
+    resetGate("Gate minimum changed. Verify the connected wallet again.");
+  });
+  document.getElementById("gateBalance").addEventListener("blur", function (event) {
+    var value = parseFloat(event.target.value);
+    if (!Number.isFinite(value) || value <= 0) event.target.value = "1";
+  });
+  if (window.ethereum && typeof window.ethereum.on === "function") {
+    window.ethereum.on("accountsChanged", function () {
+      state.wallet = null;
+      resetGate("Wallet account changed. Connect and verify again.");
+    });
+    window.ethereum.on("chainChanged", function () {
+      resetGate("Wallet network changed. Verify again on Base.");
+    });
+  }
+  el.generate.addEventListener("click", generateCollection);
+  el.edition.addEventListener("input", function () {
+    clampEdition();
+    updateAll(false);
+  });
+  ["Background", "Body", "Face", "Clothing", "Accessory"].forEach(function (name) {
+    var id = state.nextId++;
+    state.layers.push({
+      id: id,
+      name: name,
+      assets: []
+    });
+  });
+  renderLayers();
+  updateAll();
+})();</script>
+</body>
+</html>

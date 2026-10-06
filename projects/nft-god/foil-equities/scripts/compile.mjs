@@ -11,6 +11,13 @@ const CONTRACTS = join(HERE, "..", "contracts");
 const NM = join(HERE, "..", "node_modules");
 
 function findImports(path) {
+  // sibling imports inside contracts/ — solc calls back with the path
+  // stripped of any leading ./ (e.g. "FoilAccount.sol"), so try both
+  // the literal path and its basename against the contracts dir.
+  for (const cand of [path, path.split("/").pop()]) {
+    const full = resolve(CONTRACTS, cand);
+    if (existsSync(full)) return { contents: readFileSync(full, "utf8") };
+  }
   const full = resolve(NM, path);
   if (existsSync(full)) return { contents: readFileSync(full, "utf8") };
   return { error: `unresolved import: ${path}` };
@@ -25,6 +32,12 @@ for (const f of files) {
     sources: { [f]: { content: readFileSync(join(CONTRACTS, f), "utf8") } },
     settings: {
       optimizer: { enabled: true, runs: 200 },
+      // Pinned: cancun. OpenZeppelin Contracts 5.6.x emits MCOPY (0x5e,
+      // Cancun) — e.g. Bytes.sol / Arrays.sol pulled in by ERC721 and ECDSA —
+      // so anything older than cancun FAILS TO COMPILE (solc TypeError).
+      // Deployment targets (Base, Robinhood Chain) are Cancun+, and the
+      // test chain is Hardhat Network @ cancun (see test/hardhat.config.cjs).
+      evmVersion: "cancun",
       outputSelection: { "*": { "*": ["abi", "evm.bytecode.object"] } },
     },
   };

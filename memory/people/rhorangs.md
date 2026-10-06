@@ -2,7 +2,7 @@
 display_name: rhorangs
 nickname: @RHOrangs
 summary: X account in the CCFF00 mint scene; @Foil667 follow directed by the user on 2026-09-21 as part of the mint-intel watch.
-rank: 27
+rank: 28
 updated: 2026-09-21
 ---
 

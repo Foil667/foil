@@ -19,7 +19,12 @@ const path = require('path');
 const FOIL = '0x6573682faee72a4a96e791Ba262439F1DF3A268d';
 const FORK = '0x00005ea00ac477b1030ce78506496e8c2de24bf5';
 const CANON = '0x00005ea00ac477b1030ce78506496e8c2de24bf5';
-const MINT_SIGNED = '0x4b61cd6f';
+// 2026-09-30: 0x161ac21f verified as a working signed-presale mint fn on the RH
+// SeaDrop fork — 135 successful 0x161ac21f mints (status 0x1) for plaguehood-labs
+// observed onchain, same payload shape (nft, feeRecipient, minter, qty). The
+// 0x4b61cd6f-only assumption dated from the Kongz claim; the fork evidently
+// exposes both. Gate accepts either, still fails closed on anything else.
+const MINT_SIGNED = ['0x4b61cd6f', '0x161ac21f'];
 const RPC = 'https://rpc.mainnet.chain.robinhood.com';
 const UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 
@@ -47,7 +52,8 @@ async function ethUsd() {
   if (!fs.existsSync(cookiePath)) throw new Error('no SIWE session — run ../opensea/opensea-siwe.js first');
   const jar = JSON.parse(fs.readFileSync(cookiePath, 'utf8'));
   const ck = Object.entries(jar).map(([k, v]) => `${k}=${v}`).join('; ');
-  const okey = JSON.parse(fs.readFileSync(path.join(os.homedir(), '.opensea', 'key.json'), 'utf8')).api_key;
+  const rawKey = fs.readFileSync(path.join(os.homedir(), '.opensea', 'key.json'), 'utf8').trim();
+  let okey; try { okey = JSON.parse(rawKey).api_key || rawKey; } catch { okey = rawKey; } // tolerant: JSON or raw 32-char
   const H = { 'User-Agent': UA, 'Origin': 'https://opensea.io', 'Referer': 'https://opensea.io/', 'Content-Type': 'application/json', Cookie: ck, 'X-API-KEY': okey };
 
   // 1. Build the signed mint tx via OpenSea (this IS the eligibility check)
@@ -60,7 +66,7 @@ async function ethUsd() {
   // 2. Mechanical gates
   const to = (tx.to || '').toLowerCase();
   if (to !== FORK && to !== CANON) { console.log('GATE_FAIL to not SeaDrop:', tx.to); process.exit(4); }
-  if ((tx.data || '').slice(0, 10).toLowerCase() !== MINT_SIGNED) { console.log('GATE_FAIL selector not mintSigned:', (tx.data || '').slice(0, 10)); process.exit(4); }
+  if (!MINT_SIGNED.includes((tx.data || '').slice(0, 10).toLowerCase())) { console.log('GATE_FAIL selector not mintSigned:', (tx.data || '').slice(0, 10)); process.exit(4); }
   const dataLower = (tx.data || '').toLowerCase();
   if (dataLower.includes('095ea7b3') || dataLower.includes('a22cb465')) { console.log('GATE_FAIL approval calldata present'); process.exit(4); }
   const price = await ethUsd();

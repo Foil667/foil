@@ -1,0 +1,8 @@
+{
+  "runtime": "typescript",
+  "platformVersion": 24,
+  "entry": "client/dist/index.html",
+  "name": "WL Scout",
+  "slug": "wl-scout",
+  "managedCronJobs": ["wl-scout-refresh-alerts"]
+}

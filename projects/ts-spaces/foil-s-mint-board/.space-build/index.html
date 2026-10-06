@@ -329,6 +329,104 @@
       .secondary { width: 100%; }
       h1 { font-size: 49px; }
     }
+
+/* rescue-burn.css — default theme for the RescueBurn widget.
+ * Sites can override any of these; CSS variables adapt it to local palettes. */
+.rbw {
+  --rbw-bg: rgba(0, 0, 0, 0.55);
+  --rbw-border: #2aff5a33;
+  --rbw-text: #e8ffe8;
+  --rbw-dim: #9fd8a8;
+  --rbw-accent: #2aff5a;
+  --rbw-warn: #ffb02e;
+  background: var(--rbw-bg);
+  border: 1px solid var(--rbw-border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  color: var(--rbw-text);
+  font-family: inherit;
+  max-width: 560px;
+}
+.rbw-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+.rbw-total { font-size: 1.6rem; font-weight: 800; color: var(--rbw-accent); }
+.rbw-total span { font-size: 0.9rem; font-weight: 400; color: var(--rbw-dim); }
+.rbw-meta { font-size: 0.8rem; color: var(--rbw-dim); margin: 4px 0 10px; }
+.rbw-stale { color: var(--rbw-warn); font-weight: 700; }
+.rbw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+@media (max-width: 520px) { .rbw-cols { grid-template-columns: 1fr; } }
+.rbw-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rbw-dim); margin-bottom: 4px; }
+.rbw ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+.rbw li { padding: 3px 0; border-bottom: 1px dashed #ffffff14; display: flex; gap: 8px; align-items: baseline; }
+.rbw-amt { color: var(--rbw-accent); font-variant-numeric: tabular-nums; }
+.rbw-from { font-family: monospace; }
+.rbw-when, .rbw-rank { color: var(--rbw-dim); font-size: 0.78rem; }
+.rbw-foot { margin-top: 10px; font-size: 0.75rem; color: var(--rbw-dim); }
+.rbw-mono { font-family: monospace; }
+.rbw-err { color: #ff6b6b; }
+.rbw-status { color: var(--rbw-dim); font-size: 0.9rem; }
+
+
+    #verdict-aside .rbw, #result .rbw { --rbw-bg: #0d1117; --rbw-border: #2aff5a33; --rbw-text: #e8ffe8; --rbw-dim: #9fd8a8; --rbw-accent: #2aff5e; max-width: none; }
+    .heading-wrap { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 16px 20px; }
+    .rescue-pill, #rescue-pill { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 7px; width: fit-content; padding: 8px 9px 8px 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); font: 500 12px DM Mono, monospace; box-shadow: 0 5px 18px rgba(28,33,19,.06); }
+    .rescue-pill button, #rescue-pill button { min-height: 34px; border: 0; border-radius: 7px; padding: 0 10px; background: var(--acid); color: var(--acid-ink); cursor: pointer; font-weight: 800; }
+    .demo-tag { padding: 3px 6px; border-radius: 4px; background: var(--surface-2); color: var(--muted); font: 500 10px DM Mono, monospace; text-transform: uppercase; letter-spacing: .05em; }
+    .demo-note { width: 100%; margin: -5px 0 0; color: var(--muted); font: 11px/1.4 DM Mono, monospace; }
+    .buy-rescue { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 22px; border-radius: 10px 10px 2px 10px; background: var(--acid); color: var(--acid-ink); font-weight: 800; font-size: 15px; letter-spacing: .02em; text-decoration: none; box-shadow: inset 0 -3px 0 rgba(0,0,0,.14); white-space: nowrap; }
+    .buy-rescue:hover { filter: brightness(1.05); }
+    .buy-rescue:active { transform: translateY(1px); }
+    .stamp-btn { width: 100%; min-height: 48px; margin: 18px 0 14px; border: 1px solid #2aff5a55; border-radius: 9px; background: #0d1117; color: #e8ffe8; cursor: pointer; font: 800 12px DM Mono, monospace; letter-spacing: .025em; box-shadow: inset 0 -3px 0 rgba(42,255,94,.16); }
+    .stamp-btn:hover { border-color: #2aff5e; }
+    #burn-widget { margin-bottom: 9px; }
+    .furnace-copy { margin: 0 0 20px; color: var(--muted); font-size: 12px; line-height: 1.5; }
+    .bounty-board { margin-top: 18px; padding: 27px; border: 1px solid var(--line); border-radius: var(--radius) 5px var(--radius) var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .bounty-head { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin-bottom: 22px; }
+    .bounty-head p { max-width: 650px; margin: 5px 0 0; color: var(--muted); font-size: 13px; }
+    .tier-box { flex: 0 0 auto; text-align: right; color: var(--muted); font: 11px/1.5 DM Mono, monospace; }
+    .tier-box strong { display: block; color: var(--ink); font-size: 13px; }
+    .bounty-form { display: grid; grid-template-columns: 1.1fr 1.5fr .8fr .75fr auto; gap: 10px; align-items: end; padding: 0 0 22px; border-bottom: 1px solid var(--line); }
+    .bounty-form button, .bounty-action, .bid-row button, .audit-submit { min-height: 46px; border: 0; border-radius: 9px; padding: 0 15px; background: var(--acid); color: var(--acid-ink); cursor: pointer; font-weight: 800; }
+    .bounty-list { display: grid; gap: 14px; margin-top: 22px; }
+    .bounty-card { padding: 18px; border: 1px solid var(--line); border-radius: 14px 4px 14px 14px; background: var(--bg); }
+    .bounty-card.featured { border-color: var(--acid); box-shadow: inset 4px 0 0 var(--acid); }
+    .bounty-meta { display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px; }
+    .bounty-meta h3 { margin: 0 0 3px; font-size: 17px; }
+    .bounty-meta a { color: var(--muted); font: 11px DM Mono, monospace; overflow-wrap: anywhere; }
+    .bounty-value { text-align: right; font: 500 11px/1.4 DM Mono, monospace; color: var(--muted); }
+    .bounty-value strong { display: block; color: var(--ink); font-size: 15px; }
+    .bid-row { display: grid; grid-template-columns: minmax(140px, .5fr) auto minmax(0, 1fr); gap: 9px; align-items: center; margin-top: 15px; }
+    .bid-row input { min-height: 42px; }
+    .bid-row button { min-height: 42px; }
+    .pin-note, .settlement-note { color: var(--muted); font: 11px/1.5 DM Mono, monospace; }
+    .bounty-actions { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 14px; }
+    .bounty-action.secondary-action { border: 1px solid var(--line); background: var(--surface); color: var(--ink); }
+    .audit-grid { display: grid; gap: 10px; margin-top: 16px; padding-top: 16px; border-top: 1px dashed var(--line); }
+    .audit-gate { display: grid; grid-template-columns: minmax(130px,.8fr) auto minmax(180px,1.4fr); gap: 10px; align-items: center; }
+    .audit-gate-name { font-size: 12px; font-weight: 800; }
+    .audit-gate .segmented button { min-width: 42px; }
+    .audit-evidence { min-height: 40px; }
+    .audit-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 4px; }
+    .audit-foot small { color: var(--muted); }
+    .empty-bounties { padding: 30px 0 8px; text-align: center; color: var(--muted); font-size: 13px; }
+    .toast { position: fixed; z-index: 20; left: 50%; bottom: 24px; translate: -50% 14px; max-width: min(92vw, 560px); padding: 11px 15px; border: 1px solid var(--line); border-radius: 9px; background: var(--ink); color: var(--bg); opacity: 0; pointer-events: none; transition: opacity .18s ease, translate .18s ease; font: 500 12px/1.4 DM Mono, monospace; box-shadow: var(--shadow); }
+    .toast.show { opacity: 1; translate: -50% 0; }
+    @media (prefers-reduced-motion: reduce) { .toast { transition: none; } }
+    @media (max-width: 900px) { .bounty-form { grid-template-columns: 1fr 1fr; } .bounty-form > div:nth-child(2) { grid-column: span 2; } }
+    @media (max-width: 560px) {
+      .heading-wrap { align-items: flex-start; }
+      .rescue-pill, #rescue-pill { width: 100%; justify-content: flex-start; }
+      .buy-rescue { width: 100%; }
+      .bounty-board { padding: 20px 16px; }
+      .bounty-head { align-items: flex-start; flex-direction: column; }
+      .tier-box { text-align: left; }
+      .bounty-form, .bid-row, .audit-gate { grid-template-columns: 1fr; }
+      .bounty-form > div:nth-child(2) { grid-column: auto; }
+      .bounty-meta { flex-direction: column; }
+      .bounty-value { text-align: left; }
+      .bid-row button, .bounty-form button, .audit-submit { width: 100%; }
+      .copy-row { align-items: flex-start; }
+    }
+
   </style>
 </head>
 <body>
@@ -336,7 +434,12 @@
     <section class="intro" aria-labelledby="page-heading">
       <div>
         <p class="kicker">MINT DECISION TOOL</p>
-        <h1 id="page-heading">Would you mint it?</h1>
+        <div class="heading-wrap">
+          <h1 id="page-heading">Would you mint it?</h1>
+          <div id="rescue-pill" class="rescue-pill">🪙 <b id="rescue-bal">20,000</b> $RESCUE <span class="demo-tag">demo</span> <button id="faucetBtn" type="button">Claim 5,000 demo $RESCUE</button></div>
+          <a class="buy-rescue" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&chain=base" target="_blank" rel="noopener">BUY $RESCUE</a>
+          <p class="demo-note">demo tokens — no real $RESCUE moves.</p>
+        </div>
       </div>
       <p class="intro-copy">Run a mint through seven blunt checks. Get a clear verdict and a receipt you can post—not vibes, not FOMO.</p>
     </section>
@@ -433,7 +536,10 @@
             <span class="step">02 / VERDICT</span>
           </div>
           <div class="verdict" id="verdict">HOLD</div>
+          <div id="burn-widget"></div>
+          <p class="furnace-copy">The board fails closed on facts. The Furnace burns real $RESCUE on Base — live below, rehearsal above.</p>
           <p class="result-note" id="result-note">Answer every gate to reveal the call.</p>
+          <button id="stampBtn" class="stamp-btn" type="button">STAMP IT — 5,000 $RESCUE (demo)</button>
         </div>
         <div class="result-body">
           <ul class="risk-list" id="risk-list">
@@ -468,7 +574,385 @@
         </ol>
       </article>
     </section>
+
+    <section id="bounties" class="bounty-board" aria-labelledby="bounty-title">
+      <div class="bounty-head">
+        <div>
+          <span class="step">DEMO JOB MARKET</span>
+          <h2 id="bounty-title">Drops awaiting audit</h2>
+          <p>Post a drop, escrow a demo $RESCUE bounty, or bid to feature it for 24 hours. Losers feed the fire.</p>
+        </div>
+        <div class="tier-box"><strong id="auditor-tier">Rookie</strong><span id="auditor-progress">0 completed audits</span></div>
+      </div>
+      <form id="bounty-form" class="bounty-form">
+        <div><label for="bounty-name">DROP</label><input id="bounty-name" required placeholder="Project name" autocomplete="off" /></div>
+        <div><label for="bounty-url">MINT URL</label><input id="bounty-url" required type="url" placeholder="https://…" autocomplete="off" /></div>
+        <div><label for="bounty-deadline">DEADLINE</label><input id="bounty-deadline" required type="date" /></div>
+        <div><label for="bounty-amount">BOUNTY · DEMO $RESCUE</label><input id="bounty-amount" required type="number" min="500" step="100" value="500" /></div>
+        <button type="submit">Post + escrow</button>
+      </form>
+      <div id="bounty-list" class="bounty-list" aria-live="polite"></div>
+    </section>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
   </main>
+
+  <script>
+/* rescue-burn.js — shared $RESCUE burn-status module for all Foil builds.
+ *
+ * Reads REAL onchain $RESCUE Transfer events to the dead address on Base.
+ * No wallet, no signatures, no fund movements — pure reads.
+ *
+ * Usage (external file): include via a script tag whose src is
+ * "rescue-burn.js", then:
+ *   RescueBurn.getStatus().then(function (s) { console.log(s.total); });
+ *   RescueBurn.renderWidget(document.getElementById('burn-widget'));
+ * (The tag itself is described, not written, so this file never contains a
+ * literal closing script tag and stays safe to inline in single-file pages.)
+ *
+ * Caching: totals + aggregates persist in localStorage; each call only scans
+ * new blocks. If the RPC is unreachable, the last cached snapshot is returned
+ * with stale:true — numbers are NEVER invented.
+ */
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
+  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) { return '0.00'; }
+  }
+
+  function fmtAddr(a) { return a ? a.slice(0, 6) + '…' + a.slice(-4) : ''; }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+
+  function loadCache() {
+    try {
+      var c = JSON.parse(localStorage.getItem(CACHE_KEY) || 'null');
+      if (c && typeof c.totalWei === 'string') return c;
+    } catch (e) {}
+    return { totalWei: '0', txCount: 0, lastBlock: START_BLOCK - 1, updatedAt: 0, recent: [], byBurner: {} };
+  }
+  function saveCache(c) {
+    try { localStorage.setItem(CACHE_KEY, JSON.stringify(c)); } catch (e) {}
+  }
+
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, RPC_TIMEOUT_MS);
+    return fetch(RPC_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jsonrpc: '2.0', id: 1, method: method, params: params }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+
+  function decodeTransfer(log) {
+    // topics: [Transfer, from, to]; amount in data
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return { from: from, amount: amount, txHash: log.transactionHash, blockNumber: parseInt(log.blockNumber, 16) };
+  }
+
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+
+  function getLogsRange(rg) {
+    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
+    // dropped connection). On a range-limit signal, halve the range and
+    // retry; give up only below MIN_RANGE.
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) { return a.concat(b); });
+        });
+      }
+      throw e;
+    });
+  }
+
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return { cache: cache, tip: tip, fresh: [] };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) { fresh.push(decodeTransfer(l)); });
+          });
+        });
+      });
+      return chain.then(function () { return { cache: cache, tip: tip, fresh: fresh }; });
+    });
+  }
+
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = (Date.now() - cache.updatedAt) > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache, fresh = r.fresh;
+      // merge
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({ from: b.from, amount: b.amount, txHash: b.txHash, blockNumber: b.blockNumber });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      // timestamps for recent burns missing them (cap concurrency)
+      var need = c.recent.filter(function (x) { return !x.ts; }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) { x.ts = ts; }).catch(function () { x.ts = 0; });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      // RPC failed: serve cache, honestly labeled stale
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return { ok: false, error: 'burn RPC unreachable and no cached snapshot', detail: String(e && e.message || e).slice(0, 120) };
+    });
+  }
+
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return { address: a, amountWei: c.byBurner[a], amount: fmtWei(c.byBurner[a]) };
+    }).sort(function (x, y) { return (BigInt(y.amountWei) > BigInt(x.amountWei)) ? 1 : -1; }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) { if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString(); });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return { from: x.from, fromShort: fmtAddr(x.from), amount: fmtWei(x.amount), txHash: x.txHash, when: x.ts ? timeAgo(x.ts) : '…' };
+      }),
+      topBurners: top.map(function (t) { return { address: t.address, short: fmtAddr(t.address), amount: t.amount }; })
+    };
+  }
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (m) { return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[m]; }); }
+
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    mount.innerHTML = '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' +
+      '<div class="rbw-status">syncing with Base…</div></div>';
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        mount.querySelector('.rbw-status').innerHTML =
+          '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>';
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' +
+          esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' +
+          esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      mount.innerHTML =
+        '<div class="rbw">' +
+        '<div class="rbw-title">' + esc(title) + '</div>' +
+        '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' +
+        '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' +
+        'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' +
+        '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' +
+        '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' +
+        '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' +
+        '</div>';
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) st.innerHTML = '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>';
+    });
+    return mount;
+  }
+
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+  </script>
+
+  <script>
+    (function () {
+      'use strict';
+      var K = {
+        balance: 'fmb-demo-balance-v1', burns: 'fmb-demo-burns-v1', faucet: 'fmb-faucet-v1',
+        bounties: 'fmb-bounties-v1', escrow: 'fmb-escrow-v1', pins: 'fmb-pins-v1',
+        auditor: 'fmb-auditor-v1', streak: 'fmb-streak-v1'
+      };
+      var gateDefs = [
+        ['price','Price within cap'], ['official','Official provenance'], ['contract','Verified contract'],
+        ['approval','No approvals'], ['simulation','Clean simulation'], ['team','Team history'], ['demand','Organic distribution']
+      ];
+      var toastTimer;
+      function load(key, fallback) { try { var v = JSON.parse(localStorage.getItem(key)); return v === null ? fallback : v; } catch (e) { return fallback; } }
+      function save(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} }
+      function esc(v) { return String(v == null ? '' : v).replace(/[&<>"']/g, function (m) { return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[m]; }); }
+      function fmt(n) { return Number(n || 0).toLocaleString('en-US', {maximumFractionDigits: 0}); }
+      function showToast(message) {
+        var el = document.getElementById('toast'); if (!el) return;
+        el.textContent = message; el.classList.add('show'); clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { el.classList.remove('show'); }, 2600);
+      }
+      function getBal() { var raw = localStorage.getItem(K.balance); if (raw === null) { save(K.balance, 20000); return 20000; } return Number(load(K.balance, 20000)) || 0; }
+      function updateBalance() { var el = document.getElementById('rescue-bal'); if (el) el.textContent = fmt(getBal()); }
+      function spendDemo(n, label) { n = Math.max(0, Number(n) || 0); var bal = getBal(); if (bal < n) { showToast('Not enough demo $RESCUE for ' + label + '.'); return false; } save(K.balance, bal - n); updateBalance(); return true; }
+      function creditDemo(n, label) { n = Math.max(0, Number(n) || 0); save(K.balance, getBal() + n); updateBalance(); if (label) showToast('+' + fmt(n) + ' demo $RESCUE · ' + label); }
+      function burnDemo(n, label) { var burns = load(K.burns, []); burns.unshift({action: label, amount: Number(n) || 0, ts: Date.now()}); save(K.burns, burns.slice(0, 100)); }
+      function faucet() { var state = load(K.faucet, {lastClaim: 0}); var left = 1800000 - (Date.now() - Number(state.lastClaim || 0)); if (left > 0) { showToast('Demo faucet ready in ' + Math.ceil(left / 60000) + ' min.'); return; } state.lastClaim = Date.now(); save(K.faucet, state); creditDemo(5000, 'faucet claimed'); }
+      function tierFor(n) { return n >= 20 ? 'Tinfoil Auditor' : n >= 5 ? 'Gatekeeper' : 'Rookie'; }
+      function getAuditor() { var a = load(K.auditor, {completed: 0, tier: 'Rookie'}); a.completed = Number(a.completed || 0); a.tier = tierFor(a.completed); return a; }
+      function updateTier() { var a = getAuditor(); save(K.auditor, a); document.getElementById('auditor-tier').textContent = a.tier; document.getElementById('auditor-progress').textContent = a.completed + ' completed audit' + (a.completed === 1 ? '' : 's'); var stamp = document.getElementById('stampBtn'); if (stamp) stamp.textContent = 'STAMP IT — ' + (a.tier === 'Tinfoil Auditor' ? '4,500' : '5,000') + ' $RESCUE (demo)'; }
+      function isoWeek(d) { var x = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate())); x.setUTCDate(x.getUTCDate() + 4 - (x.getUTCDay() || 7)); var y = new Date(Date.UTC(x.getUTCFullYear(),0,1)); return x.getUTCFullYear() + '-W' + String(Math.ceil((((x-y)/86400000)+1)/7)).padStart(2,'0'); }
+      function recordCompletion() {
+        var a = getAuditor(); a.completed += 1; a.tier = tierFor(a.completed); save(K.auditor, a);
+        var wk = isoWeek(new Date()), st = load(K.streak, {week: wk, count: 0, paid: false});
+        if (st.week !== wk) st = {week: wk, count: 0, paid: false}; st.count += 1;
+        if (st.count >= 3 && !st.paid) { st.paid = true; creditDemo(2000, 'diligence dividend'); }
+        save(K.streak, st); updateTier();
+      }
+      function processSettlements() {
+        var now = Date.now(), bounties = load(K.bounties, []), escrow = load(K.escrow, {}), pins = load(K.pins, {}), changed = false;
+        Object.keys(pins).forEach(function (id) { var p = pins[id]; if (p && p.until <= now) { var half = Math.floor(p.bid / 2); burnDemo(p.bid - half, 'expired featured bid'); creditDemo(half, 'featured bid remainder returned'); delete pins[id]; changed = true; } });
+        bounties.forEach(function (b) {
+          if (b.status === 'awaitingRelease' && new Date(b.deadline + 'T23:59:59').getTime() < now && escrow[b.id]) {
+            var amount = Number(escrow[b.id]), payout = Math.floor(amount / 2); creditDemo(payout, 'audit deadline split'); burnDemo(amount - payout, 'unreleased audit bounty');
+            delete escrow[b.id]; b.status = 'autoSettled'; b.settlement = fmt(payout) + ' paid · ' + fmt(amount - payout) + ' burned (demo)'; changed = true;
+          }
+        });
+        if (changed) { save(K.pins, pins); save(K.escrow, escrow); save(K.bounties, bounties); }
+        return {bounties:bounties, escrow:escrow, pins:pins};
+      }
+      function pinText(pin) { if (!pin) return 'Minimum feature bid: 500 demo $RESCUE.'; var mins = Math.max(1, Math.ceil((pin.until - Date.now()) / 60000)); return '📌 ' + fmt(pin.bid) + ' demo $RESCUE · ' + mins + ' min left'; }
+      function auditMarkup(b) {
+        if (!b.auditOpen) return '';
+        var audit = b.audit || {answers:{}, evidence:{}};
+        return '<div class="audit-grid">' + gateDefs.map(function (g) {
+          var answer = audit.answers[g[0]] || '', evidence = audit.evidence[g[0]] || '';
+          return '<div class="audit-gate"><div class="audit-gate-name">' + esc(g[1]) + '</div><div class="segmented" role="group" aria-label="' + esc(g[1]) + '">' +
+            '<button type="button" data-act="answer" data-id="' + esc(b.id) + '" data-gate="' + g[0] + '" data-value="yes" aria-pressed="' + (answer === 'yes') + '">YES</button>' +
+            '<button type="button" data-act="answer" data-id="' + esc(b.id) + '" data-gate="' + g[0] + '" data-value="no" aria-pressed="' + (answer === 'no') + '">NO</button></div>' +
+            '<input class="audit-evidence" data-act="evidence" data-id="' + esc(b.id) + '" data-gate="' + g[0] + '" value="' + esc(evidence) + '" placeholder="Evidence text or https:// link" /></div>';
+        }).join('') + '<div class="audit-foot"><button class="audit-submit" type="button" data-act="submit-audit" data-id="' + esc(b.id) + '">Submit audit</button><small>All 7 answers + evidence per gate; at least 3 links.</small></div></div>';
+      }
+      function renderBounties() {
+        var state = processSettlements(), bounties = state.bounties, pins = state.pins, list = document.getElementById('bounty-list'); if (!list) return;
+        bounties.sort(function (a,b) { var ap = pins[a.id] ? pins[a.id].bid : 0, bp = pins[b.id] ? pins[b.id].bid : 0; return bp-ap || b.createdAt-a.createdAt; });
+        if (!bounties.length) { list.innerHTML = '<div class="empty-bounties">No drops queued yet. Post the first demo audit bounty.</div>'; updateTier(); updateBalance(); return; }
+        var a = getAuditor();
+        list.innerHTML = bounties.map(function (b) {
+          var pin = pins[b.id], open = b.status === 'open', awaiting = b.status === 'awaitingRelease';
+          var badge = a.tier !== 'Rookie' && b.audit && b.audit.submitted ? ' · ' + a.tier : '';
+          return '<article class="bounty-card' + (pin ? ' featured' : '') + '"><div class="bounty-meta"><div><h3>' + esc(b.name) + '</h3><a href="' + esc(b.url) + '" target="_blank" rel="noopener noreferrer">' + esc(b.url) + '</a></div>' +
+            '<div class="bounty-value"><strong>' + fmt(b.amount) + ' demo $RESCUE</strong>deadline ' + esc(b.deadline) + badge + '</div></div>' +
+            '<div class="bid-row"><input id="bid-' + esc(b.id) + '" type="number" min="500" step="100" value="500" aria-label="Feature bid in demo RESCUE"/><button type="button" data-act="bid" data-id="' + esc(b.id) + '">Bid</button><span class="pin-note">' + esc(pinText(pin)) + '</span></div>' +
+            '<div class="bounty-actions">' + (open ? '<button class="bounty-action secondary-action" type="button" data-act="audit" data-id="' + esc(b.id) + '">Audit this</button>' : '') +
+            (awaiting ? '<button class="bounty-action" type="button" data-act="release" data-id="' + esc(b.id) + '">Release ' + fmt(b.amount) + ' demo $RESCUE</button>' : '') +
+            (!open && !awaiting ? '<span class="settlement-note">' + esc(b.settlement || 'Audit settled (demo).') + '</span>' : '') + '</div>' + auditMarkup(b) + '</article>';
+        }).join(''); updateTier(); updateBalance();
+      }
+      function saveBounties(items) { save(K.bounties, items); renderBounties(); }
+      document.getElementById('faucetBtn').addEventListener('click', faucet);
+      document.getElementById('bounty-form').addEventListener('submit', function (e) {
+        e.preventDefault(); var name = document.getElementById('bounty-name').value.trim(), url = document.getElementById('bounty-url').value.trim(), deadline = document.getElementById('bounty-deadline').value, amount = Number(document.getElementById('bounty-amount').value);
+        if (!name || !/^https?:\/\//i.test(url) || !deadline || amount < 500) { showToast('Add a name, valid mint URL, deadline, and at least 500 demo $RESCUE.'); return; }
+        if (!spendDemo(amount, 'bounty escrow')) return;
+        var id = 'b-' + Date.now().toString(36), items = load(K.bounties, []), escrow = load(K.escrow, {}); items.push({id:id,name:name,url:url,deadline:deadline,amount:amount,status:'open',createdAt:Date.now(),auditOpen:false,audit:{answers:{},evidence:{}}}); escrow[id] = amount; save(K.escrow, escrow); saveBounties(items); e.target.reset(); document.getElementById('bounty-amount').value = 500; showToast(fmt(amount) + ' demo $RESCUE escrowed.');
+      });
+      document.getElementById('bounty-list').addEventListener('input', function (e) {
+        if (e.target.dataset.act !== 'evidence') return; var items = load(K.bounties, []), b = items.find(function (x) { return x.id === e.target.dataset.id; }); if (!b) return; b.audit = b.audit || {answers:{},evidence:{}}; b.audit.evidence[e.target.dataset.gate] = e.target.value; save(K.bounties, items);
+      });
+      document.getElementById('bounty-list').addEventListener('click', function (e) {
+        var btn = e.target.closest('button[data-act]'); if (!btn) return; var id = btn.dataset.id, act = btn.dataset.act, items = load(K.bounties, []), b = items.find(function (x) { return x.id === id; }); if (!b) return;
+        if (act === 'audit') { b.auditOpen = !b.auditOpen; saveBounties(items); return; }
+        if (act === 'answer') { b.audit = b.audit || {answers:{},evidence:{}}; b.audit.answers[btn.dataset.gate] = btn.dataset.value; saveBounties(items); return; }
+        if (act === 'bid') { var n = Number(document.getElementById('bid-' + id).value), pins = load(K.pins, {}), old = pins[id]; if (n < 500) { showToast('Feature bids start at 500 demo $RESCUE.'); return; } if (old && old.until > Date.now() && n <= old.bid) { showToast('Bid must beat ' + fmt(old.bid) + ' demo $RESCUE.'); return; } if (!spendDemo(n, 'feature bid')) return; if (old && old.until > Date.now()) { burnDemo(old.bid, 'outbid featured drop'); showToast('Outbid: ' + fmt(old.bid) + ' demo $RESCUE fed the Furnace.'); } pins[id] = {bid:n,until:Date.now()+86400000}; save(K.pins,pins); renderBounties(); return; }
+        if (act === 'submit-audit') { var audit = b.audit || {answers:{},evidence:{}}; var answered = gateDefs.every(function (g) { return !!audit.answers[g[0]]; }), evidenced = gateDefs.every(function (g) { return !!String(audit.evidence[g[0]] || '').trim(); }); var links = gateDefs.filter(function (g) { return /^https?:\/\/\S+$/i.test(String(audit.evidence[g[0]] || '').trim()); }).length; if (!answered || !evidenced || links < 3) { showToast('Missing proof is a no — complete 7 gates, every evidence field, and 3 links.'); return; } b.status = 'awaitingRelease'; b.auditOpen = false; b.audit.submitted = Date.now(); recordCompletion(); saveBounties(items); showToast('Audit complete · awaiting poster release (demo).'); return; }
+        if (act === 'release') { var escrow = load(K.escrow, {}), amount = Number(escrow[id] || 0); if (!amount) { showToast('This demo bounty is already settled.'); return; } creditDemo(amount, 'audit bounty released'); delete escrow[id]; save(K.escrow, escrow); b.status = 'released'; b.settlement = fmt(amount) + ' paid to auditor (demo)'; saveBounties(items); }
+      });
+      window.getBal = getBal; window.spendDemo = spendDemo; window.creditDemo = creditDemo; window.burnDemo = burnDemo; window.showToast = showToast; window.getAuditor = getAuditor;
+      updateBalance(); updateTier(); renderBounties();
+      RescueBurn.renderWidget(document.getElementById('burn-widget'), { title: '🔥 $RESCUE Burn Furnace' });
+      setInterval(renderBounties, 60000);
+    })();
+  </script>
 
   <script>
     (function () {
@@ -486,12 +970,30 @@
         team: 'team history',
         demand: 'organic demand'
       };
+      var lastResult = null;
+
+      function compact(data, stamped) {
+        var lines = [];
+        lines.push(data.verdict + ' — ' + data.project + ' on ' + data.network + '.');
+        lines.push('Mint ' + money(data.price) + ' + est. gas ' + money(data.gas) + '.');
+        if (data.verdict === 'PASS') lines.push('Official route, verified contract, no approvals, clean sim. Recheck at signing.');
+        if (data.verdict === 'VERIFY') lines.push('Still needs proof: ' + data.missing.concat(data.failed).map(function (key) { return labels[key]; }).join(', ') + '.');
+        if (data.verdict === 'SKIP') lines.push(data.overPrice ? 'Over price cap.' : 'Hard safety gate failed.');
+        lines.push('#NFTs');
+        if (stamped) {
+          lines.push('FOIL SCORE ' + data.score + '/7 · STAMPED');
+          lines.push('AUDIT HASH ' + stamped.hash);
+          lines.push('🔥 ' + stamped.burn.toLocaleString('en-US') + ' $RESCUE → furnace (demo)');
+          lines.push('Demo receipt upgrade, not an onchain attestation.');
+        }
+        return lines.join('\n');
+      }
 
       function setCount() {
         charCount.textContent = receipt.value.length + ' characters';
       }
 
-      document.querySelectorAll('.segmented button').forEach(function (button) {
+      form.querySelectorAll('.segmented button').forEach(function (button) {
         button.setAttribute('aria-label', (button.dataset.value === 'yes' ? 'Yes — ' : 'No — ') + button.parentElement.getAttribute('aria-label'));
         button.addEventListener('click', function () {
           var group = button.parentElement;
@@ -554,21 +1056,16 @@
           verdict = 'PASS'; kind = 'pass'; note = 'The entered facts clear the gate. Recheck onchain at signing.';
         }
 
-        var compact = [];
-        compact.push(verdict + ' — ' + project + ' on ' + network + '.');
-        compact.push('Mint ' + money(price) + ' + est. gas ' + money(gas) + '.');
-        if (verdict === 'PASS') compact.push('Official route, verified contract, no approvals, clean sim. Recheck at signing.');
-        if (verdict === 'VERIFY') compact.push('Still needs proof: ' + missing.concat(failed).map(function (key) { return labels[key]; }).join(', ') + '.');
-        if (verdict === 'SKIP') compact.push(overPrice ? 'Over price cap.' : 'Hard safety gate failed.');
-        compact.push('#NFTs');
-        post = compact.join('\n');
+        lastResult = { verdict: verdict, kind: kind, project: project, network: network, price: price, gas: gas, missing: missing, failed: failed, overPrice: overPrice, score: (overPrice ? 0 : 1) + keys.filter(function (key) { return states[key] === 'yes'; }).length, stamp: null };
+        post = compact(lastResult, null);
         render(kind, verdict, note, items, post);
       });
 
       reset.addEventListener('click', function () {
         form.reset();
         states = {};
-        document.querySelectorAll('.segmented button').forEach(function (button) { button.setAttribute('aria-pressed', 'false'); });
+        lastResult = null;
+        form.querySelectorAll('.segmented button').forEach(function (button) { button.setAttribute('aria-pressed', 'false'); });
         document.getElementById('status-text').textContent = 'WAITING FOR SIGNAL';
         document.getElementById('verdict').textContent = 'HOLD';
         document.getElementById('result-note').textContent = 'Answer every gate to reveal the call.';
@@ -577,6 +1074,24 @@
         receipt.value = 'Run the gate to generate a compact mint verdict.';
         copy.textContent = 'Copy receipt';
         setCount();
+      });
+
+
+      document.getElementById('stampBtn').addEventListener('click', function () {
+        var keys = Object.keys(labels);
+        var missing = keys.filter(function (key) { return !states[key]; });
+        if (!lastResult || missing.length) { showToast('Missing proof is a no — answer every gate first.'); return; }
+        if (lastResult.stamp) { showToast('This verdict already has a demo Foil stamp.'); return; }
+        var tier = getAuditor().tier;
+        var cost = tier === 'Tinfoil Auditor' ? 4500 : 5000;
+        var burn = Math.round(cost * .25);
+        if (!spendDemo(cost, 'Foil-stamped audit')) return;
+        burnDemo(burn, 'foil stamp');
+        var stamped = { hash: 'FOIL-' + Date.now().toString(36).toUpperCase(), burn: burn };
+        lastResult.stamp = stamped;
+        receipt.value = compact(lastResult, stamped);
+        setCount();
+        showToast('Stamped · ' + burn.toLocaleString('en-US') + ' $RESCUE burned (demo)');
       });
 
       copy.addEventListener('click', function () {

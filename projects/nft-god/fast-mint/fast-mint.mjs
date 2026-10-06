@@ -19,6 +19,17 @@
  *   --mint-url <url>           mint page URL — runs the Tinfoil Scan gate
  *                              (claim-with-tinfoil.sh) before ANY verification.
  *                              Required by standing rule whenever a mint URL exists.
+ *                              NOTE: the mint URL is NOT official-route evidence.
+ *   --route-x <@handle>        official project X handle — satisfies the
+ *                              fail-closed OFFICIAL-ROUTE gate (checked at
+ *                              startup, before everything). Aggregator/platform
+ *                              handles never pass.
+ *   --route-site <url>         official project site URL — satisfies the route
+ *                              gate when its host is not an aggregator/marketplace/
+ *                              explorer. Aggregator URLs never pass.
+ *                              Route evidence may instead be recorded on the
+ *                              project's pipeline entry (route_x/route_site +
+ *                              route_verified:true).
  *   --wallets <path>           JSON array of {label, apiKeyEnvVar, address}: fans the
  *                              SAME verified claim out across wallets in parallel.
  *                              Default: single wallet (Foil's funded wallet, Bankr key
@@ -30,9 +41,9 @@
  *                              CCFF00 square #4429.
  *   --dry                      verification + calldata + gas estimate ONLY.
  *                              NEVER signs, NEVER submits, NEVER spends.
- *   --max-price-usd <n>        max mint price in USD (default 0 = free only).
- *                              Standing rule (user 2026-09-26): pass 0.10 to
- *                              allow paid mints under $0.10. Gated at verify
+ *   --max-price-usd <n>        max mint price in USD (default 0.22 (standing lane cap)).
+ *                              Standing rule (user 2026-09-26): pass 0.22 to
+ *                              allow paid mints under $0.22. Gated at verify
  *                              time AND re-checked on the built tx; tx value is
  *                              exactly price x qty, never more.
  *
@@ -79,6 +90,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import { execFileSync } from 'node:child_process';
+import { checkRoute } from './route-gate.mjs';
 
 // ---------------------------------------------------------------- constants
 const RPC_PRIMARY = 'https://rpc.mainnet.chain.robinhood.com';
@@ -104,7 +116,7 @@ const TINFOIL_GATE = os.homedir() + '/workspace/nft-god/claim-with-tinfoil.sh';
 
 // ---------------------------------------------------------------- arg parsing
 function parseArgs(argv) {
-  const a = { nft: null, qty: null, priorityGwei: 2, pollRpcs: [...DEFAULT_RPCS], confirmTimeoutMs: 120000, earlyMs: 750, preEncodeMins: 10, mintUrl: null, walletsPath: null, dry: false, maxPriceUsd: 0 };
+  const a = { nft: null, qty: null, priorityGwei: 2, pollRpcs: [...DEFAULT_RPCS], confirmTimeoutMs: 120000, earlyMs: 750, preEncodeMins: 10, mintUrl: null, routeX: null, routeSite: null, walletsPath: null, dry: false, maxPriceUsd: 0.22 } // standing user order 2026-09-26: claim lane cap $0.22; explicit flag overrides};
   const rest = [];
   for (let i = 2; i < argv.length; i++) {
     const t = argv[i];
@@ -115,6 +127,8 @@ function parseArgs(argv) {
     else if (t === '--early-ms') a.earlyMs = Number(argv[++i]);
     else if (t === '--pre-encode-mins') a.preEncodeMins = Number(argv[++i]);
     else if (t === '--mint-url') a.mintUrl = argv[++i];
+    else if (t === '--route-x') a.routeX = argv[++i];
+    else if (t === '--route-site') a.routeSite = argv[++i];
     else if (t === '--wallets') a.walletsPath = argv[++i];
     else if (t === '--max-price-usd') a.maxPriceUsd = Number(argv[++i]);
     else rest.push(t);
@@ -128,7 +142,7 @@ function blocked(reason) { console.error(`BLOCKED: ${reason}`); process.exit(1);
 /**
  * Price gate: mint price must be <= maxPriceUsd (USD via static ETH_USD).
  * Default 0 = free mints only. User order 2026-09-26 13:01 CDT: allow paid
- * mints under $0.10 (pass --max-price-usd 0.10). Aborts on ANY overage.
+ * mints under $0.22 (pass --max-price-usd 0.22). Aborts on ANY overage.
  */
 function priceCheck(drop, label, maxPriceUsd) {
   const priceUsd = Number(drop.price) / 1e18 * ETH_USD;
@@ -404,6 +418,20 @@ async function waitReceipt(hash, urls, timeoutMs, label) {
   if (!Number.isFinite(a.preEncodeMins) || a.preEncodeMins < 0) fail('--pre-encode-mins must be >= 0');
   if (!Number.isFinite(a.maxPriceUsd) || a.maxPriceUsd < 0) fail('--max-price-usd must be >= 0');
   if (a.pollRpcs.length === 0) fail('--poll-rpcs needs at least one RPC URL');
+
+  // ---- gate R: OFFICIAL-ROUTE (fail-closed, 2026-10-01).
+  // No claim may proceed without project-owned route evidence: the project's
+  // official X handle or official site, recorded in the pipeline entry
+  // (route_x/route_site + route_verified:true) or passed via
+  // --route-x @handle / --route-site https://.... OpenSea/aggregator metadata
+  // alone NEVER passes. The mint-url Tinfoil scan is a SEPARATE gate; the
+  // opensea-platform exception covers scan noise only, never the route.
+  try {
+    const ev = checkRoute({ nft: a.nft, x: a.routeX, site: a.routeSite });
+    console.log(`[ROUTE] official route verified (x=${ev.x || '-'} site=${ev.site || '-'} via ${ev.sources.join(', ')})`);
+  } catch (e) {
+    blocked(`OFFICIAL-ROUTE gate: ${e.message}`);
+  }
 
   const wallets = loadWallets(a.walletsPath);
   console.log(`fast-mint: ${a.nft} x${qty} ${a.dry ? '(DRY RUN)' : '(LIVE)'} chainId=${CHAIN_ID} maxPriceUsd=$${a.maxPriceUsd.toFixed(2)} wallets=[${wallets.map(w => `${w.label}:${w.address}`).join(', ')}]`);

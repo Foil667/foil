@@ -1,0 +1,8 @@
+{
+  "entry": "index.html",
+  "managedCronJobs": [],
+  "name": "NFT Layered Generator",
+  "platformVersion": 15,
+  "runtime": "static",
+  "slug": "nintendo-luchador-generator"
+}

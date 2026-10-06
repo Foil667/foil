@@ -2,7 +2,7 @@
   "schema_version": "hatch.probe_ui_session.v1",
   "socket": "/home/hatch/workspace/ts-spaces/vibe-pak-opener/.harness/probe-ui/sock",
   "slug": "vibe-pak-opener",
-  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-b57abd3e-62f6-4b8c-837c-360dacf8c571/",
-  "audit_session_id": "99987ef7-b901-4816-b00a-40eeafcd9140",
-  "pid": 3259
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-7be1d5a8-53a3-4916-8a28-b4bd87257ea2/",
+  "audit_session_id": "96688876-ce08-4b7a-9206-2b9008dfd36f",
+  "pid": 24308
 }

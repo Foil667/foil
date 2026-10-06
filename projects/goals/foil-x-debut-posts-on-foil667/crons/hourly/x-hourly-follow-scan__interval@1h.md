@@ -11,7 +11,7 @@ schedule:
   every: 1h
 metadata:
   tags: [cron:automatic-interval-anchor]
-  originating_channel_context_json: '{"originating_channel":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
+  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false}'
   presentation_locale: en-US
 ---
 You are @Foil667's operator. Hourly X sweep with Foil's own taste.

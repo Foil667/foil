@@ -1,7 +1,7 @@
 ---
 display_name: Rugdoctor
 summary: Early @Foil667 follower (from 2026-09-20) who asked "Wen follow" and got a follow-back plus a direct reply at the user's direction.
-rank: 62
+rank: 61
 updated: 2026-09-23
 ---
 

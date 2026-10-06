@@ -1,8 +1,8 @@
 {
   "schema_version": "hatch.probe_ui_summary.v1",
   "slug": "loopers-deep-dive",
-  "session_id": "5eabadd9-df1a-4a10-940b-ef6d94b61f98",
-  "observes": 2,
+  "session_id": "d8b4cf33-8ed4-42ed-b0af-6cc9fdbc0d36",
+  "observes": 1,
   "acts": 1,
   "acts_ok": 1,
   "interactive_nodes": 24,

@@ -1,0 +1,2720 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <link rel="icon" href="data:," />
+  <title>Roast Comic</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+    :root {
+      color-scheme: light dark;
+      --ink: #17130f;
+      --muted: #6f6459;
+      --paper: #f3eee6;
+      --panel: #fffaf2;
+      --panel-2: #e7ded2;
+      --line: #1f1913;
+      --hot: #e84b23;
+      --hot-2: #ffbc2f;
+      --stage: #24120d;
+      --stage-2: #4d1d12;
+      --bubble: #2b231d;
+      --bubble-ink: #fff8ed;
+      --user-bubble: #e4d7c7;
+      --shadow: rgba(33, 20, 11, .18);
+      --focus: #146c94;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --ink: #fff7ec;
+        --muted: #bcae9e;
+        --paper: #15110e;
+        --panel: #201914;
+        --panel-2: #2c241e;
+        --line: #f0dfca;
+        --hot: #ff6338;
+        --hot-2: #ffc44d;
+        --stage: #100907;
+        --stage-2: #36140c;
+        --bubble: #f3e9dc;
+        --bubble-ink: #1b1511;
+        --user-bubble: #3a3028;
+        --shadow: rgba(0,0,0,.45);
+        --focus: #75d5ff;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "IBM Plex Mono", monospace;
+      overflow-x: hidden;
+    }
+    button, textarea { font: inherit; }
+    button { color: inherit; }
+    button:focus-visible, textarea:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+    .shell {
+      min-height: 100svh;
+      max-width: 1500px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(350px, .82fr) minmax(460px, 1.18fr);
+      padding: clamp(14px, 2vw, 28px);
+      gap: clamp(14px, 2vw, 28px);
+    }
+
+    .stage {
+      position: relative;
+      min-height: calc(100svh - 56px);
+      overflow: hidden;
+      border: 2px solid var(--line);
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.3), transparent 14%, transparent 86%, rgba(0,0,0,.3)),
+        radial-gradient(circle at 50% 24%, rgba(255,188,47,.28), transparent 23%),
+        linear-gradient(160deg, var(--stage-2), var(--stage) 62%);
+      color: #fff8ed;
+      box-shadow: 10px 10px 0 var(--line);
+      display: flex;
+      flex-direction: column;
+    }
+    .stage::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .13;
+      pointer-events: none;
+      background-image: repeating-linear-gradient(90deg, transparent 0 28px, #fff 29px 30px);
+      mask-image: linear-gradient(#000, transparent 65%);
+    }
+    .marquee {
+      position: relative;
+      z-index: 2;
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      border-bottom: 2px solid rgba(255,255,255,.28);
+      background: rgba(0,0,0,.24);
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: .11em;
+    }
+    .live { display: inline-flex; align-items: center; gap: 8px; }
+    .live-dot { width: 9px; height: 9px; background: var(--hot); border-radius: 50%; box-shadow: 0 0 0 4px rgba(232,75,35,.18); animation: pulse 1.7s ease-in-out infinite; }
+    .state-label { color: #ffd07a; }
+
+    .performer {
+      position: relative;
+      z-index: 1;
+      flex: 1;
+      min-height: 470px;
+      display: grid;
+      place-items: end center;
+      padding: 42px 34px 0;
+    }
+    .spotlight {
+      position: absolute;
+      left: 50%; top: -50px;
+      width: 86%; height: 90%;
+      transform: translateX(-50%);
+      background: linear-gradient(176deg, rgba(255,235,180,.22), rgba(255,188,47,.03));
+      clip-path: polygon(36% 0, 64% 0, 100% 100%, 0 100%);
+      pointer-events: none;
+    }
+    .portrait-wrap {
+      position: relative;
+      width: min(88%, 510px);
+      aspect-ratio: 1;
+      transform-origin: 50% 100%;
+      animation: idle 4.8s ease-in-out infinite;
+      filter: drop-shadow(0 18px 24px rgba(0,0,0,.55));
+    }
+    .portrait-wrap::after {
+      content: "";
+      position: absolute;
+      left: 17%; right: 17%; bottom: 1%; height: 4%;
+      background: rgba(0,0,0,.6);
+      filter: blur(12px);
+      border-radius: 50%;
+      z-index: -1;
+    }
+    .portrait {
+      width: 100%; height: 100%; object-fit: cover;
+      border-radius: 50% 50% 42% 42%;
+      border: 3px solid rgba(255,230,188,.64);
+      clip-path: polygon(5% 0,95% 0,100% 94%,87% 100%,12% 100%,0 94%);
+    }
+    .portrait-wrap.thinking { animation: think 1.05s ease-in-out infinite; }
+    .portrait-wrap.speaking { animation: speak .36s ease-in-out infinite alternate; }
+    .portrait-wrap.gesture { animation: gesture .68s cubic-bezier(.2,.8,.2,1) 2; }
+    .portrait-wrap.speaking::before {
+      content: "";
+      position: absolute;
+      inset: -14px;
+      border: 4px solid var(--hot-2);
+      clip-path: polygon(0 12%,6% 12%,6% 3%,18% 3%,18% 0,82% 0,82% 3%,94% 3%,94% 12%,100% 12%,100% 88%,94% 88%,94% 97%,82% 97%,82% 100%,18% 100%,18% 97%,6% 97%,6% 88%,0 88%);
+      animation: flash .72s steps(2,end) infinite;
+    }
+
+    .mic {
+      position: absolute;
+      right: 4%; bottom: 4%;
+      width: 12%; min-width: 54px;
+      transform: rotate(-13deg);
+      filter: drop-shadow(0 8px 10px rgba(0,0,0,.4));
+    }
+    .mic svg { width: 100%; display: block; }
+    .sound-bars { position: absolute; right: 10%; top: 20%; display: flex; align-items: center; gap: 5px; height: 44px; opacity: 0; transition: opacity .2s; }
+    .speaking + .sound-bars { opacity: 1; }
+    .sound-bars i { display: block; width: 5px; height: 10px; background: var(--hot-2); animation: bar .5s ease-in-out infinite alternate; }
+    .sound-bars i:nth-child(2) { animation-delay: -.2s; height: 28px; }
+    .sound-bars i:nth-child(3) { animation-delay: -.35s; height: 18px; }
+    .sound-bars i:nth-child(4) { animation-delay: -.1s; height: 36px; }
+
+    .stage-copy {
+      position: relative;
+      z-index: 3;
+      border-top: 2px solid rgba(255,255,255,.3);
+      background: rgba(9,5,3,.76);
+      padding: 20px 22px 22px;
+    }
+    .stage-copy h1 {
+      margin: 0;
+      max-width: 12ch;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(44px, 6.2vw, 86px);
+      line-height: .84;
+      letter-spacing: -.035em;
+      text-transform: uppercase;
+    }
+    .stage-copy h1 em { color: var(--hot-2); font-style: italic; }
+    .stage-copy p { margin: 13px 0 0; max-width: 42ch; color: #d8c7b7; font-size: 13px; line-height: 1.55; }
+
+    .chat-panel {
+      min-height: calc(100svh - 56px);
+      border: 2px solid var(--line);
+      background: var(--panel);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      overflow: hidden;
+    }
+    .chat-head {
+      padding: 18px 20px 16px;
+      border-bottom: 2px solid var(--line);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .chat-head h2 {
+      margin: 0 0 3px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-size: clamp(28px, 3vw, 43px);
+      line-height: .9;
+      text-transform: uppercase;
+    }
+    .chat-head p { margin: 0; font-size: 11px; color: var(--muted); line-height: 1.35; }
+    .clear-btn {
+      flex: none;
+      border: 0;
+      border-bottom: 2px solid currentColor;
+      background: transparent;
+      padding: 5px 0;
+      cursor: pointer;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .buy-btn {
+      flex: none;
+      display: inline-block;
+      background: var(--hot);
+      color: #fff;
+      border: 0;
+      padding: 9px 16px;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800;
+      font-size: 17px;
+      text-transform: uppercase;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      clip-path: polygon(0 0, 93% 0, 100% 25%, 100% 100%, 7% 100%, 0 75%);
+    }
+    .buy-btn:hover { background: var(--ink); }
+    .buy-btn:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }
+
+    .messages {
+      min-height: 0;
+      overflow-y: auto;
+      padding: 22px 20px 28px;
+      scroll-behavior: smooth;
+      background:
+        linear-gradient(var(--panel) 50%, rgba(255,255,255,0)) center top,
+        linear-gradient(rgba(255,255,255,0), var(--panel) 50%) center bottom;
+      background-size: 100% 24px;
+      background-repeat: no-repeat;
+      background-attachment: local, local;
+    }
+    .message { display: flex; gap: 10px; align-items: flex-end; margin: 0 0 18px; animation: pop .25s ease-out both; }
+    .message.user { justify-content: flex-end; }
+    .mini-avatar {
+      width: 38px; height: 38px; flex: none;
+      border-radius: 50%; object-fit: cover;
+      border: 2px solid var(--line);
+    }
+    .bubble {
+      max-width: min(78%, 620px);
+      padding: 13px 15px;
+      background: var(--bubble);
+      color: var(--bubble-ink);
+      border-radius: 15px 15px 15px 3px;
+      font-size: 14px;
+      line-height: 1.58;
+      box-shadow: 4px 4px 0 var(--hot);
+      overflow-wrap: anywhere;
+    }
+    .user .bubble {
+      background: var(--user-bubble);
+      color: var(--ink);
+      box-shadow: none;
+      border: 1px solid var(--line);
+      border-radius: 15px 15px 3px 15px;
+    }
+    .speaker { display: block; margin-bottom: 5px; color: var(--hot-2); font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+    .user .speaker { color: var(--muted); }
+    .thinking-bubble { display: inline-flex; align-items: center; gap: 5px; min-width: 68px; }
+    .thinking-bubble i { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: dot .8s infinite alternate; opacity: .35; }
+    .thinking-bubble i:nth-child(2){ animation-delay: .15s; }
+    .thinking-bubble i:nth-child(3){ animation-delay: .3s; }
+
+    .starter-strip { padding: 0 20px 12px; display: flex; flex-wrap: wrap; gap: 7px; background: var(--panel); }
+    .starter {
+      appearance: none;
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      padding: 8px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      cursor: pointer;
+      transition: background .15s, color .15s;
+    }
+    .starter:hover { background: var(--ink); color: var(--panel); }
+
+    .composer { border-top: 2px solid var(--line); background: var(--panel-2); padding: 14px; }
+    .input-wrap { display: grid; grid-template-columns: 1fr auto; align-items: end; border: 2px solid var(--line); background: var(--panel); box-shadow: 5px 5px 0 var(--line); }
+    textarea {
+      width: 100%; min-height: 52px; max-height: 130px;
+      resize: none; border: 0; outline: 0; background: transparent; color: var(--ink);
+      padding: 15px 14px; line-height: 1.4;
+    }
+    textarea::placeholder { color: var(--muted); }
+    .send {
+      margin: 7px;
+      min-width: 94px;
+      height: 42px;
+      border: 0;
+      background: var(--hot);
+      color: #fff;
+      font-family: "Barlow Condensed", sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      text-transform: uppercase;
+      cursor: pointer;
+      clip-path: polygon(0 0, 93% 0, 100% 25%, 100% 100%, 7% 100%, 0 75%);
+    }
+    .send:hover { background: var(--ink); }
+    .send:disabled { opacity: .45; cursor: wait; }
+    .composer-note { margin: 11px 2px 0; color: var(--muted); font-size: 9px; line-height: 1.4; }
+
+    @keyframes idle { 0%,100% { transform: translateY(0) rotate(-.5deg); } 50% { transform: translateY(-7px) rotate(.5deg); } }
+    @keyframes think { 0%,100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-4px) rotate(2deg); } }
+    @keyframes speak { from { transform: translateY(0) rotate(-1deg) scale(1); } to { transform: translateY(-3px) rotate(1deg) scale(1.012); } }
+    @keyframes gesture { 0%,100% { transform: rotate(0); } 35% { transform: rotate(-5deg) translateX(-6px); } 70% { transform: rotate(4deg) translateX(5px); } }
+    @keyframes pulse { 50% { transform: scale(.7); opacity: .55; } }
+    @keyframes flash { 50% { opacity: .28; transform: scale(1.015); } }
+    @keyframes bar { to { transform: scaleY(.36); } }
+    @keyframes pop { from { opacity: 0; transform: translateY(8px); } }
+    @keyframes dot { to { opacity: 1; transform: translateY(-3px); } }
+
+    @media (max-width: 840px) {
+      .shell { display: block; padding: 10px; }
+      .stage { min-height: auto; box-shadow: 6px 6px 0 var(--line); }
+      .performer { min-height: 320px; padding-top: 28px; }
+      .portrait-wrap { width: min(76%, 330px); }
+      .stage-copy { padding: 15px 18px 18px; }
+      .stage-copy h1 { font-size: clamp(44px, 13vw, 66px); max-width: 10ch; }
+      .stage-copy p { display: none; }
+      .chat-panel { margin-top: 18px; min-height: 690px; height: calc(100svh - 18px); }
+      .chat-head { padding: 16px; align-items: flex-start; }
+      .chat-head > div { min-width: 0; }
+      .chat-head h2 { font-size: clamp(27px, 9vw, 38px); }
+      .clear-btn { max-width: 72px; white-space: normal; text-align: right; }
+      .messages { padding: 18px 14px 24px; }
+      .starter-strip { padding: 0 14px 12px; flex-wrap: wrap; }
+      .starter { white-space: normal; }
+      .bubble { max-width: 84%; font-size: 13px; }
+      .mini-avatar { width: 32px; height: 32px; }
+    }
+    @media (max-width: 430px) {
+      .marquee { padding: 12px 14px; }
+      .performer { min-height: 280px; }
+      .chat-panel { height: 720px; }
+      .chat-head p { display: none; }
+      .input-wrap { grid-template-columns: 1fr; }
+      .send { width: calc(100% - 14px); }
+      .composer-note { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; }
+    }
+
+    /* rescue-burn.css — default theme for the RescueBurn widget.
+     * Sites can override any of these; CSS variables adapt it to local palettes. */
+    .rbw {
+      --rbw-bg: rgba(0, 0, 0, 0.55);
+      --rbw-border: #2aff5a33;
+      --rbw-text: #e8ffe8;
+      --rbw-dim: #9fd8a8;
+      --rbw-accent: #2aff5a;
+      --rbw-warn: #ffb02e;
+      background: var(--rbw-bg);
+      border: 1px solid var(--rbw-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      color: var(--rbw-text);
+      font-family: inherit;
+      max-width: 560px;
+    }
+    .rbw-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 8px; }
+    .rbw-total { font-size: 1.6rem; font-weight: 800; color: var(--rbw-accent); }
+    .rbw-total span { font-size: 0.9rem; font-weight: 400; color: var(--rbw-dim); }
+    .rbw-meta { font-size: 0.8rem; color: var(--rbw-dim); margin: 4px 0 10px; }
+    .rbw-stale { color: var(--rbw-warn); font-weight: 700; }
+    .rbw-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 520px) { .rbw-cols { grid-template-columns: 1fr; } }
+    .rbw-h { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--rbw-dim); margin-bottom: 4px; }
+    .rbw ul { list-style: none; margin: 0; padding: 0; font-size: 0.85rem; }
+    .rbw li { padding: 3px 0; border-bottom: 1px dashed #ffffff14; display: flex; gap: 8px; align-items: baseline; }
+    .rbw-amt { color: var(--rbw-accent); font-variant-numeric: tabular-nums; }
+    .rbw-from { font-family: monospace; }
+    .rbw-when, .rbw-rank { color: var(--rbw-dim); font-size: 0.78rem; }
+    .rbw-foot { margin-top: 10px; font-size: 0.75rem; color: var(--rbw-dim); }
+    .rbw-mono { font-family: monospace; }
+    .rbw-err { color: #ff6b6b; }
+    .rbw-status { color: var(--rbw-dim); font-size: 0.9rem; }
+
+    /* stage-palette override for the burn widget */
+    #burn-widget .rbw { --rbw-bg: rgba(0,0,0,.5); --rbw-border: rgba(255,255,255,.25); --rbw-text: #fff8ed; --rbw-dim: #d8c7b7; --rbw-accent: var(--hot-2); --rbw-warn: var(--hot-2); max-width: none; font-family: "IBM Plex Mono", monospace; }
+    .stage-copy #demo-burn-line { color: #d8c7b7; font-size: 11px; margin-top: 10px; }
+    .stage-copy .furnace-line { color: #ffd07a; font-size: 12px; font-weight: 600; margin-top: 14px; }
+    .battle-bar { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 20px 10px; background: var(--panel); align-items: center; }
+    .vote-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+    .vote-btn { border: 1px solid var(--line); background: transparent; border-radius: 999px; padding: 8px 12px; font-size: 11px; cursor: pointer; min-height: 44px; color: inherit; }
+    .vote-btn:hover { background: var(--hot); border-color: var(--hot); color: #fff; }
+    .battle-hint { font-size: 10px; color: var(--muted); }
+    .battle-toggle[aria-pressed="true"] { background: var(--hot); border-color: var(--hot); color: #fff; }
+    .head-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; flex: none; }
+    .bal-chip { font-size: 11px; font-weight: 600; border: 1px solid var(--line); border-radius: 999px; padding: 6px 10px; background: var(--panel-2); white-space: nowrap; }
+    .tier-line { color: var(--hot); font-weight: 600; }
+    .leader-row { padding: 0 20px 12px; display: grid; gap: 8px; background: var(--panel); }
+    .top-cook { border: 1px dashed var(--line); border-radius: 10px; padding: 10px 12px; font-size: 11px; line-height: 1.5; }
+    .top-cook-title { font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 10px; margin-bottom: 4px; }
+    .top-cook-text { font-style: italic; }
+    .top-cook-meta { color: var(--muted); font-size: 10px; margin-top: 4px; }
+    .bounty-card { display: flex; align-items: center; justify-content: space-between; gap: 10px; border: 1px solid var(--line); border-radius: 10px; padding: 8px 12px; font-size: 11px; background: var(--panel-2); }
+    .faucet-btn { appearance: none; border: 0; background: transparent; padding: 0; color: inherit; text-decoration: underline; cursor: pointer; font-size: inherit; }
+    @media (max-width: 840px) {
+      .stage-copy .furnace-line, .stage-copy #demo-burn-line, .stage-copy .session-note { display: block; }
+      .battle-bar { padding: 0 14px 10px; }
+      .leader-row { padding: 0 14px 12px; }
+    }
+  </style>
+  <style data-hatch-cvm-bundle></style>
+</head>
+<body>
+  <main class="shell">
+    <section class="stage" aria-label="Foil on stage">
+      <div class="marquee">
+        <span class="live"><span class="live-dot" aria-hidden="true"></span> Crowd work</span>
+        <span class="state-label" id="stateLabel">warming up</span>
+      </div>
+      <div class="performer">
+        <div class="spotlight" aria-hidden="true"></div>
+        <div class="portrait-wrap" id="performer">
+          <img class="portrait" data-hatch-src="assets/foil-667.jpg" alt="Foil, Looper number 667, wearing a tinfoil hat and white hoodie" />
+        </div>
+        <div class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <div class="mic" aria-hidden="true">
+          <svg viewBox="0 0 90 190" fill="none"><path d="M36 79L53 75L85 177L62 184L36 79Z" fill="#15110e" stroke="#fff4df" stroke-width="3"/><rect x="14" y="8" width="54" height="82" rx="27" fill="#d7d0c7" stroke="#15110e" stroke-width="5"/><path d="M21 25H61M18 42H65M18 59H65M23 76H59" stroke="#15110e" stroke-width="4"/></svg>
+        </div>
+      </div>
+      <div class="stage-copy">
+        <h1>Say it. <em>Get cooked.</em></h1>
+        <p>Hand Foil your take, bio, bad idea, or bargain-bin flex. He’ll return it with the emotional tenderness of a parking ticket.</p>
+        <p class="furnace-line">🔥 <span id="burnTotal">…</span> $RESCUE burnt on Base</p>
+        <div id="burn-widget"></div>
+        <p id="demo-burn-line"></p>
+        <p class="session-note" style="color:#d8c7b7;font-size:11px;margin-top:6px;opacity:.85">Session-only demo — all demo balances, history, tiers, votes, and burns reset when you reload or leave. No real $RESCUE moves.</p>
+      </div>
+    </section>
+
+    <section class="chat-panel" aria-label="Roast chat">
+      <header class="chat-head">
+        <div>
+          <h2>The hot seat</h2>
+          <p>Roasts the words, not protected traits. Everything else is fair game.</p>
+          <p class="tier-line" id="tierLine">heckler tier: FRESH MEAT (demo)</p>
+        </div>
+        <div class="head-right">
+          <a class="buy-btn" href="https://app.uniswap.org/swap?outputCurrency=0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3&amp;chain=base" target="_blank" rel="noopener">BUY $RESCUE</a>
+          <span class="bal-chip" id="demoBal">1,000 demo $RESCUE</span>
+          <button class="clear-btn" id="clearBtn" type="button">Clear wreckage</button>
+        </div>
+      </header>
+
+      <div class="messages" id="messages" role="log" aria-live="polite" aria-label="Conversation">
+        <div class="message foil">
+          <img class="mini-avatar" data-hatch-src="assets/foil-667.jpg" alt="" />
+          <div class="bubble"><span class="speaker">Foil · Looper #667</span>Welcome to the fucking hot seat. Hand me your proudest thought and I’ll beat the confidence out of it with a microphone stand.</div>
+        </div>
+      </div>
+
+      <div>
+        <div class="battle-bar" aria-label="Demo $RESCUE battle controls">
+          <button class="starter battle-toggle" id="battleToggle" type="button" aria-pressed="false">⚔️ Battle mode · 20 $RESCUE (demo)</button>
+          <button class="starter battle-toggle" id="savageToggle" type="button" aria-pressed="false">😈 Savage · 10 (demo)</button>
+          <span class="battle-hint">Stake your lunch money, coward.</span>
+        </div>
+        <div class="starter-strip" aria-label="Quick prompts">
+          <button class="starter" type="button" data-prompt="Roast my crypto portfolio">My portfolio</button>
+          <button class="starter" type="button" data-prompt="Roast my dating profile">My dating profile</button>
+          <button class="starter" type="button" data-prompt="Roast my startup idea">My startup</button>
+          <button class="starter" type="button" data-prompt="Roast me for buying another NFT">My NFT habit</button>
+        </div>
+        <div class="leader-row">
+          <div class="top-cook" id="topCook">🏆 This week's top cook: nobody yet. Stake your lunch money, coward.</div>
+          <div class="bounty-card">
+            <span>✍️ Submit a roast line — 25 demo $RESCUE if Foil approves</span>
+            <button class="starter" id="copyTemplateBtn" type="button">Copy template (demo)</button>
+          </div>
+        </div>
+        <form class="composer" id="composer">
+          <div class="input-wrap">
+            <textarea id="roastInput" rows="1" maxlength="360" placeholder="Put your dumb shit right here…" aria-label="What should Foil roast?"></textarea>
+            <button class="send" id="sendBtn" type="submit">Roast me</button>
+          </div>
+          <p class="composer-note">Strong language. Zero slurs. Enter sends · Shift + Enter adds a line. <button class="faucet-btn" id="faucetBtn" type="button">💧 Faucet +100 (demo · hourly, per visit)</button></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  
+  
+  
+<script data-hatch-cvm-bundle>(() => {
+  var __defProp = Object.defineProperty;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  function __accessProp(key) {
+    return this[key];
+  }
+  var __toCommonJS = (from) => {
+    var entry = (__moduleCache ??= new WeakMap).get(from), desc;
+    if (entry)
+      return entry;
+    entry = __defProp({}, "__esModule", { value: true });
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (var key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(entry, key))
+          __defProp(entry, key, {
+            get: __accessProp.bind(from, key),
+            enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable
+          });
+    }
+    __moduleCache.set(from, entry);
+    return entry;
+  };
+  var __moduleCache;
+
+  // src/prelude.ts
+  var exports_prelude = {};
+
+  // src/tunnel-url.ts
+  var B64_CHUNK = 32768;
+  function computeSelfBaseDir(selfHref) {
+    if (!selfHref)
+      return "";
+    let h = selfHref;
+    const hash = h.indexOf("#");
+    if (hash >= 0)
+      h = h.slice(0, hash);
+    const q = h.indexOf("?");
+    if (q >= 0)
+      h = h.slice(0, q);
+    const slash = h.lastIndexOf("/");
+    return slash >= 0 ? h.slice(0, slash + 1) : "";
+  }
+  function isSelfOriginUrl(u, selfBaseDir, selfHref, objectUrls) {
+    if (!selfBaseDir || !u.startsWith(selfBaseDir))
+      return false;
+    if (u === selfHref)
+      return false;
+    return !objectUrls.has(u);
+  }
+  function isExternalUrl(u, selfBaseDir, selfHref, objectUrls) {
+    if (!u)
+      return false;
+    if (u.startsWith("#"))
+      return true;
+    if (isSelfOriginUrl(u, selfBaseDir, selfHref, objectUrls))
+      return false;
+    if (u.startsWith("data:") || u.startsWith("blob:"))
+      return true;
+    if (u.startsWith("about:") || u.startsWith("javascript:"))
+      return true;
+    if (u.startsWith("//"))
+      return true;
+    if (/^[a-z][a-z0-9+.-]*:/i.test(u)) {
+      return true;
+    }
+    return false;
+  }
+  function normalizeToRelPath(u, selfBaseDir) {
+    let s = u;
+    if (selfBaseDir && s.startsWith(selfBaseDir)) {
+      s = s.slice(selfBaseDir.length);
+    }
+    s = s.replace(/^\.\//, "");
+    s = s.replace(/^\/+/, "");
+    return s;
+  }
+  function blobInner(base, NativeURL) {
+    if (base == null)
+      return null;
+    const s = typeof base === "string" ? base : base instanceof NativeURL ? base.href : String(base);
+    return s.startsWith("blob:") ? s.slice("blob:".length) : null;
+  }
+  var OPAQUE_BLOB_ORIGIN = "https://hatch-cvm-opaque.invalid";
+  function isAbsoluteUrlString(s, NativeURL) {
+    try {
+      new NativeURL(s);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  function resolveAgainstBlobBase(u, base, NativeURL) {
+    const inner = blobInner(base, NativeURL);
+    if (inner === null)
+      return null;
+    if (isAbsoluteUrlString(inner, NativeURL)) {
+      return new NativeURL("blob:" + new NativeURL(u, inner).href);
+    }
+    const slash = inner.indexOf("/");
+    const token = slash >= 0 ? inner.slice(0, slash) : inner;
+    const path = slash >= 0 ? inner.slice(slash) : "/";
+    const resolved = new NativeURL(u, OPAQUE_BLOB_ORIGIN + path);
+    return new NativeURL("blob:" + token + resolved.pathname + resolved.search + resolved.hash);
+  }
+  function resolveTunnelUrl(url, base, selfHref, NativeURL) {
+    const u = url == null ? "" : typeof url === "string" ? url : url instanceof NativeURL ? url.href : String(url);
+    const uAbsolute = /^[a-z][a-z0-9+.-]*:/i.test(u) || u.startsWith("//");
+    if (base !== undefined && base !== null && !uAbsolute) {
+      const viaBlob = resolveAgainstBlobBase(u, base, NativeURL);
+      if (viaBlob !== null)
+        return viaBlob;
+      return new NativeURL(u, base);
+    }
+    if (!uAbsolute && selfHref) {
+      const viaBlob = resolveAgainstBlobBase(u, selfHref, NativeURL);
+      if (viaBlob !== null)
+        return viaBlob;
+    }
+    return base === undefined ? new NativeURL(u) : new NativeURL(u, base);
+  }
+  function bytesToBase64(bytes) {
+    const u8 = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
+    let s = "";
+    for (let i = 0;i < u8.length; i += B64_CHUNK) {
+      s += String.fromCharCode.apply(null, Array.from(u8.subarray(i, i + B64_CHUNK)));
+    }
+    return btoa(s);
+  }
+  function base64ToBytes(b64) {
+    const bin = atob(b64);
+    const out = new Uint8Array(bin.length);
+    for (let i = 0;i < bin.length; i++)
+      out[i] = bin.charCodeAt(i);
+    return out;
+  }
+  function importMetaUrl(selfHref, selfBaseDir) {
+    return selfBaseDir ? `${selfBaseDir}assets/cvm-bundle.js` : selfHref;
+  }
+
+  // src/download-links.ts
+  function installDownloadLinks(fetchAsset, isExternalUrl, revokeDelayMs) {
+    document.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      const anchor = event.composedPath().find((node) => node instanceof HTMLAnchorElement);
+      if (!anchor?.hasAttribute("download"))
+        return;
+      const href = anchor.getAttribute("href");
+      if (!href || isExternalUrl(href))
+        return;
+      event.preventDefault();
+      const filename = anchor.download || resourceFilename(href);
+      (async () => {
+        const response = await fetchAsset(href);
+        if (!response.ok) {
+          throw new Error(`Artifact download failed: HTTP ${response.status}`);
+        }
+        const url = URL.createObjectURL(await response.blob());
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        link.hidden = true;
+        document.body.appendChild(link);
+        try {
+          link.click();
+        } finally {
+          link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), revokeDelayMs);
+        }
+      })().catch((error) => reportError(error));
+    });
+  }
+  function resourceFilename(href) {
+    const path = new URL(href, document.baseURI).pathname;
+    const name = path.slice(path.lastIndexOf("/") + 1);
+    try {
+      return decodeURIComponent(name);
+    } catch {
+      return name;
+    }
+  }
+
+  // src/fragment-links.ts
+  function installFragmentLinks() {
+    if (!location.href.startsWith("blob:null/"))
+      return;
+    const NativeURL = URL;
+    const pushState = history.pushState.bind(history);
+    const replaceState = history.replaceState.bind(history);
+    window.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      const anchor = event.composedPath().find((node) => node instanceof HTMLAnchorElement);
+      if (!anchor || anchor.hasAttribute("download"))
+        return;
+      const targetName = anchor.getAttribute("target") ?? document.querySelector("base[target]")?.getAttribute("target") ?? "";
+      if (targetName !== "" && targetName.toLowerCase() !== "_self")
+        return;
+      const href = anchor.getAttribute("href");
+      if (!href?.startsWith("#"))
+        return;
+      const oldURL = location.href;
+      const nextURL = new NativeURL(href, oldURL);
+      event.preventDefault();
+      const changed = nextURL.href !== oldURL;
+      if (changed) {
+        pushState(null, "", nextURL.href);
+      } else {
+        replaceState(null, "", nextURL.href);
+      }
+      window.dispatchEvent(new PopStateEvent("popstate", { state: null }));
+      const target = fragmentTarget(nextURL.hash);
+      if (target) {
+        target.scrollIntoView();
+        if (target !== document.documentElement && (target instanceof HTMLElement || target instanceof SVGElement)) {
+          const hadTabIndex = target.hasAttribute("tabindex");
+          if (!hadTabIndex)
+            target.setAttribute("tabindex", "-1");
+          target.focus({ preventScroll: true });
+          if (!hadTabIndex)
+            target.removeAttribute("tabindex");
+        }
+      }
+      if (changed) {
+        queueMicrotask(() => window.dispatchEvent(new HashChangeEvent("hashchange", {
+          oldURL,
+          newURL: nextURL.href
+        })));
+      }
+    });
+  }
+  function fragmentTarget(hash) {
+    const bytes = hash.slice(1).replace(/%([0-9a-f]{2})/gi, (_match, hex) => String.fromCharCode(parseInt(hex, 16)));
+    const fragment = new TextDecoder().decode(Uint8Array.from(bytes, (byte) => byte.charCodeAt(0)));
+    if (fragment === "")
+      return document.documentElement;
+    const idTarget = document.getElementById(fragment);
+    if (idTarget)
+      return idTarget;
+    const namedTarget = Array.from(document.getElementsByName(fragment)).find((node) => node instanceof HTMLAnchorElement);
+    return namedTarget ?? (fragment.toLowerCase() === "top" ? document.documentElement : null);
+  }
+
+  // src/prelude.ts
+  (function installTunnel() {
+    installFragmentLinks();
+    let port = null;
+    let portReadyResolve = null;
+    const portReady = new Promise((res) => {
+      portReadyResolve = res;
+    });
+    const pending = new Map;
+    const openWs = new Map;
+    function newId() {
+      return Math.random().toString(36).slice(2) + "-" + Date.now().toString(36);
+    }
+    function bytesToB64(bytes) {
+      return bytesToBase64(bytes);
+    }
+    function b64ToBytes(b64) {
+      return base64ToBytes(b64);
+    }
+    async function httpReq(method, path, body, headers) {
+      const p = port ?? await portReady;
+      const id = newId();
+      const headerArr = [];
+      if (headers) {
+        const h = new Headers(headers);
+        h.forEach((v, k) => headerArr.push([k, v]));
+      }
+      let bodyB64 = "";
+      if (body != null && body !== "") {
+        let bytes;
+        if (typeof body === "string") {
+          bytes = new TextEncoder().encode(body);
+        } else if (body instanceof ArrayBuffer) {
+          bytes = new Uint8Array(body);
+        } else if (body instanceof Uint8Array) {
+          bytes = body;
+        } else if (body instanceof Blob) {
+          bytes = new Uint8Array(await body.arrayBuffer());
+        } else if (body instanceof FormData) {
+          const boundary = "----HatchBoundary" + Math.random().toString(36).slice(2);
+          let s = "";
+          for (const [k, v] of body.entries()) {
+            s += `--${boundary}\r
+Content-Disposition: form-data; name="${k}"`;
+            if (v instanceof File) {
+              s += `; filename="${v.name}"\r
+Content-Type: ${v.type || "application/octet-stream"}\r
+\r
+`;
+              const fb = new Uint8Array(await v.arrayBuffer());
+              s += new TextDecoder("latin1").decode(fb);
+            } else {
+              s += `\r
+\r
+${v}`;
+            }
+            s += `\r
+`;
+          }
+          s += `--${boundary}--\r
+`;
+          bytes = new TextEncoder().encode(s);
+          headerArr.push([
+            "content-type",
+            `multipart/form-data; boundary=${boundary}`
+          ]);
+        } else {
+          bytes = new TextEncoder().encode(String(body));
+        }
+        bodyB64 = bytesToB64(bytes);
+      }
+      return new Promise((resolve, reject) => {
+        pending.set(id, {
+          resolve: (msg) => {
+            if (msg.error) {
+              reject(new Error(msg.error.message ?? "tunnel error"));
+              return;
+            }
+            resolve({
+              status: msg.status,
+              headers: msg.headers,
+              bytes: msg.bodyB64 ? b64ToBytes(msg.bodyB64) : new Uint8Array(0)
+            });
+          },
+          reject
+        });
+        p.postMessage({
+          type: "http.req",
+          id,
+          method,
+          path,
+          headers: headerArr,
+          bodyB64
+        });
+      });
+    }
+    async function tunnelFetch(input, init) {
+      let urlStr;
+      let method = init?.method ?? "GET";
+      let headers = init?.headers;
+      let body = init?.body;
+      if (input instanceof Request) {
+        urlStr = input.url;
+        method = init?.method ?? input.method;
+        headers = init?.headers ?? input.headers;
+        if (body == null && input.body) {
+          body = await input.arrayBuffer();
+        }
+      } else {
+        urlStr = String(input);
+      }
+      if (isExternalUrl2(urlStr)) {
+        return originalFetch(input, init);
+      }
+      const relPath = normalizeToRelPath2(urlStr);
+      const r = await httpReq(method, relPath, body ?? null, headers);
+      const respHeaders = new Headers;
+      for (const [k, v] of r.headers ?? [])
+        respHeaders.set(k, v);
+      return new Response(r.bytes, {
+        status: r.status,
+        headers: respHeaders
+      });
+    }
+
+    class TunnelWebSocket extends EventTarget {
+      readyState = 0;
+      static CONNECTING = 0;
+      static OPEN = 1;
+      static CLOSING = 2;
+      static CLOSED = 3;
+      CONNECTING = 0;
+      OPEN = 1;
+      CLOSING = 2;
+      CLOSED = 3;
+      url;
+      binaryType = "blob";
+      bufferedAmount = 0;
+      protocol = "";
+      extensions = "";
+      onopen = null;
+      onmessage = null;
+      onclose = null;
+      onerror = null;
+      _id;
+      constructor(urlIn, _protocols) {
+        super();
+        const urlStr = String(urlIn);
+        this.url = urlStr;
+        this._id = newId();
+        openWs.set(this._id, this);
+        const path = normalizeToRelPath2(urlStr);
+        (async () => {
+          const p = port ?? await portReady;
+          p.postMessage({ type: "ws.open", id: this._id, path });
+        })();
+      }
+      _handle(msg) {
+        if (msg.type === "ws.opened") {
+          this.readyState = 1;
+          const ev = new Event("open");
+          this.onopen?.(ev);
+          this.dispatchEvent(ev);
+        } else if (msg.type === "ws.message") {
+          const bytes = msg.dataB64 ? b64ToBytes(msg.dataB64) : new Uint8Array(0);
+          let data;
+          if (msg.binary) {
+            data = this.binaryType === "arraybuffer" ? bytes.buffer : new Blob([bytes]);
+          } else {
+            data = new TextDecoder().decode(bytes);
+          }
+          const ev = new MessageEvent("message", { data });
+          this.onmessage?.(ev);
+          this.dispatchEvent(ev);
+        } else if (msg.type === "ws.closed") {
+          this.readyState = 3;
+          const ev = new CloseEvent("close", {
+            code: msg.code ?? 1000,
+            reason: msg.reason ?? ""
+          });
+          this.onclose?.(ev);
+          this.dispatchEvent(ev);
+          openWs.delete(this._id);
+        } else if (msg.type === "ws.error") {
+          const ev = new Event("error");
+          this.onerror?.(ev);
+          this.dispatchEvent(ev);
+        }
+      }
+      send(data) {
+        (async () => {
+          const p = port ?? await portReady;
+          let bytes;
+          let binary = false;
+          if (typeof data === "string") {
+            bytes = new TextEncoder().encode(data);
+          } else if (data instanceof Blob) {
+            bytes = new Uint8Array(await data.arrayBuffer());
+            binary = true;
+          } else if (data instanceof ArrayBuffer) {
+            bytes = new Uint8Array(data);
+            binary = true;
+          } else if (ArrayBuffer.isView(data)) {
+            bytes = new Uint8Array(data.buffer, data.byteOffset, data.byteLength);
+            binary = true;
+          } else {
+            bytes = new TextEncoder().encode(String(data));
+          }
+          p.postMessage({
+            type: "ws.send",
+            id: this._id,
+            dataB64: bytesToB64(bytes),
+            binary
+          });
+        })();
+      }
+      close(code, reason) {
+        (async () => {
+          const p = port ?? await portReady;
+          p.postMessage({ type: "ws.close", id: this._id, code, reason });
+        })();
+      }
+      addEventListener(type, listener, options) {
+        super.addEventListener(type, listener, options);
+      }
+    }
+
+    class TunnelXHR extends EventTarget {
+      static UNSENT = 0;
+      static OPENED = 1;
+      static HEADERS_RECEIVED = 2;
+      static LOADING = 3;
+      static DONE = 4;
+      UNSENT = 0;
+      OPENED = 1;
+      HEADERS_RECEIVED = 2;
+      LOADING = 3;
+      DONE = 4;
+      readyState = 0;
+      status = 0;
+      statusText = "";
+      responseText = "";
+      response = null;
+      responseType = "";
+      responseURL = "";
+      withCredentials = false;
+      timeout = 0;
+      upload = new EventTarget;
+      onreadystatechange = null;
+      onload = null;
+      onerror = null;
+      onloadend = null;
+      onabort = null;
+      onprogress = null;
+      ontimeout = null;
+      _method = "GET";
+      _url = "";
+      _reqHeaders = [];
+      _respHeaders = [];
+      _aborted = false;
+      open(method, url) {
+        this._method = method;
+        this._url = url;
+        this.readyState = 1;
+        this.onreadystatechange?.();
+      }
+      setRequestHeader(name, value) {
+        this._reqHeaders.push([name, value]);
+      }
+      getAllResponseHeaders() {
+        return this._respHeaders.map(([k, v]) => `${k}: ${v}`).join(`\r
+`);
+      }
+      getResponseHeader(name) {
+        const lc = name.toLowerCase();
+        const hit = this._respHeaders.find(([k]) => k.toLowerCase() === lc);
+        return hit ? hit[1] : null;
+      }
+      abort() {
+        this._aborted = true;
+        this.readyState = 0;
+      }
+      send(body) {
+        if (isExternalUrl2(this._url)) {
+          const real = new originalXHR;
+          real.open(this._method, this._url);
+          for (const [k, v] of this._reqHeaders)
+            real.setRequestHeader(k, v);
+          real.onload = () => {
+            this.status = real.status;
+            this.responseText = real.responseText;
+            this.response = real.response;
+            this.readyState = 4;
+            this.onreadystatechange?.();
+            this.onload?.();
+            this.onloadend?.();
+            this.dispatchEvent(new Event("load"));
+          };
+          real.onerror = () => {
+            this.onerror?.();
+            this.dispatchEvent(new Event("error"));
+          };
+          real.send(body);
+          return;
+        }
+        const relPath = normalizeToRelPath2(this._url);
+        httpReq(this._method, relPath, body ?? null, this._reqHeaders).then((r) => {
+          if (this._aborted)
+            return;
+          this.status = r.status;
+          this._respHeaders = r.headers ?? [];
+          this.responseText = new TextDecoder().decode(r.bytes);
+          if (this.responseType === "arraybuffer") {
+            this.response = r.bytes.buffer;
+          } else if (this.responseType === "blob") {
+            this.response = new Blob([r.bytes]);
+          } else if (this.responseType === "json") {
+            try {
+              this.response = JSON.parse(this.responseText);
+            } catch {
+              this.response = null;
+            }
+          } else {
+            this.response = this.responseText;
+          }
+          this.readyState = 4;
+          this.onreadystatechange?.();
+          this.onload?.();
+          this.onloadend?.();
+          this.dispatchEvent(new Event("load"));
+        }, () => {
+          if (this._aborted)
+            return;
+          this.onerror?.();
+          this.dispatchEvent(new Event("error"));
+        });
+      }
+    }
+
+    class TunnelEventSource extends EventTarget {
+      static CONNECTING = 0;
+      static OPEN = 1;
+      static CLOSED = 2;
+      readyState = 0;
+      url;
+      withCredentials = false;
+      onopen = null;
+      onmessage = null;
+      onerror = null;
+      constructor(url) {
+        super();
+        this.url = String(url);
+        (async () => {
+          try {
+            const relPath = normalizeToRelPath2(this.url);
+            const r = await httpReq("GET", relPath, null, [
+              ["accept", "text/event-stream"]
+            ]);
+            this.readyState = 1;
+            this.onopen?.(new Event("open"));
+            const text = new TextDecoder().decode(r.bytes);
+            for (const block of text.split(/\n\n/)) {
+              const data = block.split(`
+`).filter((l) => l.startsWith("data:")).map((l) => l.slice(5).trim()).join(`
+`);
+              if (data) {
+                const ev = new MessageEvent("message", { data });
+                this.onmessage?.(ev);
+                this.dispatchEvent(ev);
+              }
+            }
+            this.readyState = 2;
+          } catch {
+            this.onerror?.(new Event("error"));
+          }
+        })();
+      }
+      close() {
+        this.readyState = 2;
+      }
+    }
+    const SELF_HREF = (() => {
+      try {
+        return globalThis.location?.href ?? "";
+      } catch {
+        return "";
+      }
+    })();
+    const SELF_BASE_DIR = computeSelfBaseDir(SELF_HREF);
+    const objectUrls = new Set;
+    function isSelfOriginUrl2(u) {
+      return isSelfOriginUrl(u, SELF_BASE_DIR, SELF_HREF, objectUrls);
+    }
+    function isExternalUrl2(u) {
+      return isExternalUrl(u, SELF_BASE_DIR, SELF_HREF, objectUrls);
+    }
+    function normalizeToRelPath2(u) {
+      return normalizeToRelPath(u, SELF_BASE_DIR);
+    }
+    const URL_ATTRS = new Set([
+      "src",
+      "srcset",
+      "href",
+      "poster",
+      "action",
+      "formaction",
+      "data",
+      "background",
+      "cite",
+      "longdesc",
+      "usemap",
+      "manifest"
+    ]);
+    const URL_STYLE_PROPS = new Set([
+      "background",
+      "backgroundImage",
+      "background-image",
+      "borderImage",
+      "border-image",
+      "borderImageSource",
+      "border-image-source",
+      "listStyle",
+      "list-style",
+      "listStyleImage",
+      "list-style-image",
+      "cursor",
+      "mask",
+      "maskImage",
+      "mask-image",
+      "webkitMask",
+      "-webkit-mask",
+      "webkitMaskImage",
+      "-webkit-mask-image",
+      "content",
+      "src"
+    ]);
+    const __BLOB_CACHE_MAX = 256;
+    const __BLOB_REVOKE_DELAY_MS = 30000;
+    const blobCache = new Map;
+    const blobStats = {
+      created: 0,
+      revoked: 0,
+      hits: 0,
+      misses: 0,
+      inFlightRevokes: 0
+    };
+    function __evictIfOverCap() {
+      while (blobCache.size > __BLOB_CACHE_MAX) {
+        const oldestKey = blobCache.keys().next().value;
+        if (oldestKey === undefined)
+          break;
+        const ent = blobCache.get(oldestKey);
+        blobCache.delete(oldestKey);
+        blobStats.inFlightRevokes++;
+        const t = setTimeout(() => {
+          ent.url.then((u) => {
+            if (typeof u === "string" && u.startsWith("blob:")) {
+              try {
+                URL.revokeObjectURL(u);
+                blobStats.revoked++;
+              } catch {}
+            }
+          }).finally(() => {
+            blobStats.inFlightRevokes--;
+          });
+        }, __BLOB_REVOKE_DELAY_MS);
+        ent.pendingRevoke = t;
+      }
+    }
+    function resolveToBlobUrl(rel) {
+      if (isExternalUrl2(rel))
+        return Promise.resolve(rel);
+      const hashIdx = rel.indexOf("#");
+      const pathPart = hashIdx >= 0 ? rel.slice(0, hashIdx) : rel;
+      const frag = hashIdx >= 0 ? rel.slice(hashIdx) : "";
+      const key = normalizeToRelPath2(pathPart);
+      let ent = blobCache.get(key);
+      if (ent) {
+        if (ent.pendingRevoke != null) {
+          clearTimeout(ent.pendingRevoke);
+          ent.pendingRevoke = undefined;
+          blobStats.inFlightRevokes--;
+        }
+        blobCache.delete(key);
+        blobCache.set(key, ent);
+        blobStats.hits++;
+      } else {
+        blobStats.misses++;
+        const url = httpReq("GET", key, null).then((r) => {
+          const ctHeader = r.headers.find(([k]) => k.toLowerCase() === "content-type");
+          const ct = ctHeader?.[1] ?? "application/octet-stream";
+          const blob = new Blob([r.bytes], { type: ct });
+          blobStats.created++;
+          return URL.createObjectURL(blob);
+        });
+        ent = { url };
+        blobCache.set(key, ent);
+        __evictIfOverCap();
+      }
+      return frag ? ent.url.then((b) => b + frag) : ent.url;
+    }
+    const HATCH_PIXEL_PREFIX = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    const HATCH_FRAG = "#hatch=";
+    function isHatchPlaceholder(url) {
+      return url.indexOf(HATCH_PIXEL_PREFIX + HATCH_FRAG) === 0;
+    }
+    function unwrapHatchPlaceholder(url) {
+      if (!isHatchPlaceholder(url))
+        return null;
+      return decodeURIComponent(url.slice((HATCH_PIXEL_PREFIX + HATCH_FRAG).length));
+    }
+    async function rewriteCssTextAsync(text) {
+      const re = /url\(\s*(['"]?)([^'")]+)\1\s*\)/g;
+      const tasks = [];
+      let m;
+      while ((m = re.exec(text)) !== null) {
+        tasks.push({ match: m[0], index: m.index, url: m[2].trim() });
+      }
+      if (tasks.length === 0)
+        return text;
+      const resolved = await Promise.all(tasks.map(async (t) => {
+        if (t.url.startsWith("blob:"))
+          return t.url;
+        const unwrapped = unwrapHatchPlaceholder(t.url);
+        if (unwrapped != null) {
+          try {
+            return await resolveToBlobUrl(unwrapped);
+          } catch {
+            return t.url;
+          }
+        }
+        if (isExternalUrl2(t.url))
+          return t.url;
+        try {
+          return await resolveToBlobUrl(t.url);
+        } catch {
+          return t.url;
+        }
+      }));
+      let out = "";
+      let last = 0;
+      tasks.forEach((t, i) => {
+        out += text.slice(last, t.index);
+        out += `url("${resolved[i]}")`;
+        last = t.index + t.match.length;
+      });
+      out += text.slice(last);
+      return out;
+    }
+    function rewriteCssText(text) {
+      return rewriteCssTextAsync(text);
+    }
+    const mediaSourceLoads = new WeakMap;
+    window.addEventListener("error", (event) => {
+      const source = event.target;
+      if (!event.isTrusted || !(source instanceof HTMLSourceElement) || !(source.parentElement instanceof HTMLMediaElement) || source.hasAttribute("src"))
+        return;
+      const state = mediaSourceLoads.get(source);
+      if (state === "pending" || state === undefined && source.hasAttribute("data-hatch-src")) {
+        event.stopImmediatePropagation();
+      }
+    }, true);
+    function isElement(el) {
+      if (el instanceof Element)
+        return true;
+      const ownerWindow = el?.ownerDocument?.defaultView;
+      return ownerWindow != null && el instanceof ownerWindow.Element;
+    }
+    function setAttr(el, name, value, ...rest) {
+      if (!isElement(el)) {
+        return el.setAttribute(name, value, ...rest);
+      }
+      name = String(name);
+      if (value == null) {
+        if (name.toLowerCase() === "src" && el instanceof HTMLSourceElement) {
+          mediaSourceLoads.set(el, "settled");
+        }
+        try {
+          el.removeAttribute(name);
+        } catch {}
+        return;
+      }
+      const v = String(value);
+      const lcName = name.toLowerCase();
+      const tag = el.tagName?.toUpperCase();
+      if ((tag === "A" || tag === "BASE" || tag === "AREA") && lcName === "href") {
+        el.setAttribute(name, v);
+        return;
+      }
+      if (!URL_ATTRS.has(lcName) && lcName !== "style" && lcName !== "srcset") {
+        el.setAttribute(name, v);
+        return;
+      }
+      if (lcName === "srcset") {
+        const parts = v.split(",").map((s) => s.trim()).filter(Boolean);
+        Promise.all(parts.map(async (p) => {
+          const segs = p.split(/\s+/);
+          const url = segs[0];
+          const rest = segs.slice(1).join(" ");
+          if (isExternalUrl2(url))
+            return p;
+          const resolved = await resolveToBlobUrl(url);
+          return rest ? `${resolved} ${rest}` : resolved;
+        })).then((rebuilt) => {
+          try {
+            el.setAttribute("srcset", rebuilt.join(", "));
+          } catch {}
+        });
+        return;
+      }
+      if (URL_ATTRS.has(lcName)) {
+        const isMediaSource = tag === "SOURCE" && lcName === "src";
+        if (isExternalUrl2(v)) {
+          if (isMediaSource)
+            mediaSourceLoads.set(el, "settled");
+          el.setAttribute(name, v);
+          return;
+        }
+        if (isMediaSource)
+          mediaSourceLoads.set(el, "pending");
+        if (tag === "IMG" || tag === "VIDEO" && lcName === "poster") {
+          el.setAttribute(name, TRANSPARENT_PIXEL);
+        }
+        resolveToBlobUrl(v).then((blobUrl) => {
+          if (isMediaSource)
+            mediaSourceLoads.set(el, "settled");
+          try {
+            el.setAttribute(name, blobUrl);
+            if (isMediaSource) {
+              const media = el.parentElement;
+              if (media instanceof HTMLMediaElement && media.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
+                const nextSibling = el.nextSibling;
+                el.remove();
+                media.insertBefore(el, nextSibling);
+              }
+            }
+          } catch {}
+        }, () => {
+          if (isMediaSource) {
+            mediaSourceLoads.set(el, "settled");
+            el.dispatchEvent(new Event("error"));
+          }
+        });
+        return;
+      }
+      if (lcName === "style") {
+        setStyleAttr(el, v);
+        return;
+      }
+      el.setAttribute(name, v);
+    }
+    function setAttrNS(el, ns, name, value, ...rest) {
+      if (!isElement(el)) {
+        return el.setAttributeNS(ns, name, value, ...rest);
+      }
+      name = String(name);
+      if (value == null) {
+        try {
+          el.removeAttributeNS(ns ?? null, name);
+        } catch {}
+        return;
+      }
+      const v = String(value);
+      const lcName = name.split(":").pop().toLowerCase();
+      if (lcName === "href" && URL_ATTRS.has("href")) {
+        if (isExternalUrl2(v)) {
+          el.setAttributeNS(ns ?? null, name, v);
+          return;
+        }
+        resolveToBlobUrl(v).then((blobUrl) => {
+          try {
+            el.setAttributeNS(ns ?? null, name, blobUrl);
+          } catch {}
+        }, () => {});
+        return;
+      }
+      try {
+        el.setAttributeNS(ns ?? null, name, v);
+      } catch {}
+    }
+    function setUrlProp(el, name, value) {
+      if (isElement(el)) {
+        setAttr(el, name.toLowerCase(), value);
+      } else {
+        el[name] = value;
+      }
+      return value;
+    }
+    const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    const HTML_TAG_ATTRS = {
+      img: ["src", "srcset", "poster"],
+      image: ["href"],
+      video: ["src", "poster"],
+      audio: ["src"],
+      source: ["src", "srcset"],
+      script: ["src"],
+      link: ["href"],
+      iframe: ["src"],
+      embed: ["src"],
+      object: ["data"],
+      track: ["src"],
+      input: ["src"],
+      form: ["action"],
+      button: ["formaction"],
+      use: ["href"]
+    };
+    function rewriteHtmlString(html) {
+      return html.replace(/<([a-zA-Z][a-zA-Z0-9-]*)\b([^>]*)>/g, (m, tag, attrs) => {
+        const lc = String(tag).toLowerCase();
+        const candidates = HTML_TAG_ATTRS[lc];
+        if (!candidates)
+          return m;
+        let out = attrs;
+        for (const a of candidates) {
+          const re = new RegExp(`\\b${a}\\s*=\\s*("([^"]*)"|'([^']*)'|([^\\s>]+))`, "i");
+          const matched = out.match(re);
+          if (!matched)
+            continue;
+          const value = matched[2] ?? matched[3] ?? matched[4] ?? "";
+          if (isExternalUrl2(value))
+            continue;
+          out = out.replace(re, `data-hatch-${a}="${value.replace(/"/g, "&quot;")}"`);
+        }
+        const styleRe = /\bstyle\s*=\s*("([^"]*)"|'([^']*)')/i;
+        const sm = out.match(styleRe);
+        if (sm) {
+          const value = sm[2] ?? sm[3] ?? "";
+          if (value.includes("url(")) {
+            out = out.replace(styleRe, `data-hatch-style="${value.replace(/"/g, "&quot;")}"`);
+          }
+        }
+        return `<${tag}${out}>`;
+      });
+    }
+    const HTML_URL_ATTRS_BY_TAG = {
+      IMG: ["src", "srcset", "poster"],
+      IMAGE: ["href"],
+      VIDEO: ["src", "poster"],
+      AUDIO: ["src"],
+      SOURCE: ["src", "srcset"],
+      SCRIPT: ["src"],
+      LINK: ["href"],
+      IFRAME: ["src"],
+      EMBED: ["src"],
+      OBJECT: ["data"],
+      TRACK: ["src"],
+      INPUT: ["src"],
+      FORM: ["action"],
+      BUTTON: ["formaction"],
+      USE: ["href", "xlink:href"]
+    };
+    function rewriteSubtreeForTunnel(root) {
+      if (!root)
+        return;
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
+      let n = walker.currentNode;
+      if (root.nodeType === 1)
+        processOne(root);
+      while (n = walker.nextNode()) {
+        processOne(n);
+      }
+    }
+    function processOne(el) {
+      const tag = (el.tagName ?? "").toUpperCase();
+      const attrs = HTML_URL_ATTRS_BY_TAG[tag];
+      if (attrs) {
+        for (const a of attrs) {
+          const v = el.getAttribute(a);
+          if (v == null)
+            continue;
+          if (isExternalUrl2(v))
+            continue;
+          el.setAttribute("data-hatch-" + a, v);
+          el.removeAttribute(a);
+        }
+      }
+      const style = el.getAttribute("style");
+      if (style && style.includes("url(")) {
+        el.setAttribute("data-hatch-style", style);
+        el.removeAttribute("style");
+      }
+    }
+    function parseAndCleanHtml(html) {
+      const tpl = document.createElement("template");
+      tpl.innerHTML = html;
+      rewriteSubtreeForTunnel(tpl.content);
+      return tpl.content;
+    }
+    function setInnerHTML(el, html, which = "innerHTML") {
+      const s = html == null ? "" : String(html);
+      if (which === "innerHTML" && typeof el.tagName === "string" && el.tagName.toUpperCase() === "TEMPLATE") {
+        try {
+          el.innerHTML = s;
+        } catch {}
+        return;
+      }
+      if (which === "outerHTML") {
+        const frag = parseAndCleanHtml(s);
+        const wrap = document.createElement("div");
+        wrap.appendChild(frag);
+        try {
+          el.outerHTML = wrap.innerHTML;
+        } catch {}
+        queueMicrotask(() => processDataHatchAttrs(document.body));
+        return;
+      }
+      const frag = parseAndCleanHtml(s);
+      try {
+        while (el.firstChild)
+          el.removeChild(el.firstChild);
+        el.appendChild(frag);
+      } catch {}
+      queueMicrotask(() => processDataHatchAttrs(el));
+    }
+    function insertAdjacentHTMLT(el, position, html) {
+      const s = html == null ? "" : String(html);
+      const frag = parseAndCleanHtml(s);
+      const wrap = document.createElement("template");
+      wrap.content.appendChild(frag);
+      try {
+        el.insertAdjacentHTML(position, wrap.innerHTML);
+      } catch {}
+      queueMicrotask(() => processDataHatchAttrs(document.body));
+    }
+    function processDataHatchAttrs(root) {
+      const SELECTORS = "[data-hatch-src], [data-hatch-href], [data-hatch-srcset], [data-hatch-poster], [data-hatch-action], [data-hatch-data], [data-hatch-style]";
+      root.querySelectorAll(SELECTORS).forEach((el) => {
+        const attrs = el.getAttributeNames();
+        for (const a of attrs) {
+          if (!a.startsWith("data-hatch-"))
+            continue;
+          const real = a.slice("data-hatch-".length);
+          const value = el.getAttribute(a) ?? "";
+          el.removeAttribute(a);
+          if (real === "style")
+            setStyleAttr(el, value);
+          else
+            setAttr(el, real, value);
+        }
+      });
+    }
+    const styleProxyCache = new WeakMap;
+    function getStyle(el) {
+      if (el == null)
+        return el;
+      let real;
+      try {
+        real = el.style;
+      } catch {
+        return;
+      }
+      if (real == null || typeof real !== "object" && typeof real !== "function") {
+        return real;
+      }
+      let proxy = styleProxyCache.get(real);
+      if (proxy)
+        return proxy;
+      proxy = new Proxy(real, {
+        get(target, prop, _receiver) {
+          const v = Reflect.get(target, prop, target);
+          if (typeof v === "function")
+            return v.bind(target);
+          return v;
+        },
+        set(target, prop, value) {
+          if (typeof prop === "string") {
+            setStyle(el, prop, value);
+            return true;
+          }
+          return Reflect.set(target, prop, value, target);
+        }
+      });
+      styleProxyCache.set(real, proxy);
+      return proxy;
+    }
+    function setStyle(el, propName, value) {
+      const v = value == null ? "" : String(value);
+      if (propName.startsWith("--")) {
+        rewriteCssText(v).then((rewritten) => {
+          try {
+            el.style.setProperty(propName, rewritten);
+          } catch {}
+        });
+        return;
+      }
+      if (URL_STYLE_PROPS.has(propName) && v.includes("url(")) {
+        rewriteCssText(v).then((rewritten) => {
+          try {
+            el.style[propName] = rewritten;
+          } catch {}
+        });
+        return;
+      }
+      try {
+        el.style[propName] = v;
+      } catch {}
+    }
+    function setStyleAttr(el, attrValue) {
+      if (!attrValue.includes("url(")) {
+        el.setAttribute("style", attrValue);
+        return;
+      }
+      rewriteCssText(attrValue).then((rewritten) => {
+        try {
+          el.setAttribute("style", rewritten);
+        } catch {}
+      });
+    }
+    function setStyleText(styleEl, text) {
+      if (!(styleEl instanceof HTMLStyleElement)) {
+        try {
+          styleEl.textContent = text;
+        } catch {}
+        return;
+      }
+      if (!text.includes("url(")) {
+        styleEl.textContent = text;
+        return;
+      }
+      rewriteCssText(text).then((rewritten) => {
+        try {
+          styleEl.textContent = rewritten;
+        } catch {}
+      });
+    }
+    function tunnelImage(_w, _h) {
+      const img = new originalImage;
+      const desc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, "src");
+      if (desc?.set) {
+        const origSet = desc.set;
+        const origGet = desc.get;
+        Object.defineProperty(img, "src", {
+          configurable: true,
+          get() {
+            return origGet.call(img);
+          },
+          set(v) {
+            if (v == null)
+              return origSet.call(img, "");
+            const s = String(v);
+            if (isExternalUrl2(s))
+              return origSet.call(img, s);
+            resolveToBlobUrl(s).then((b) => origSet.call(img, b), () => origSet.call(img, s));
+          }
+        });
+      }
+      return img;
+    }
+    function tunnelSendBeacon(url, data) {
+      tunnelFetch(url, { method: "POST", body: data, keepalive: true }).catch(() => {});
+      return true;
+    }
+    function tunnelWorker(_url) {
+      throw new Error("[__tunnel] new Worker() is not supported in Muse web artifacts.");
+    }
+    function tunnelImport(spec) {
+      throw new Error("[__tunnel] dynamic import() of '" + String(spec) + "' is not supported in Muse web artifacts.");
+    }
+    function installCssObserver() {
+      try {
+        const proto = window.CSSStyleSheet?.prototype;
+        if (proto) {
+          const origInsertRule = proto.insertRule;
+          proto.insertRule = function(rule, index) {
+            if (typeof rule === "string" && rule.includes("url(")) {
+              const idx = origInsertRule.call(this, rule, index);
+              rewriteCssText(rule).then((rewritten) => {
+                if (rewritten !== rule) {
+                  try {
+                    this.deleteRule(idx);
+                    origInsertRule.call(this, rewritten, idx);
+                  } catch {}
+                }
+              });
+              return idx;
+            }
+            return origInsertRule.call(this, rule, index);
+          };
+          const origReplace = proto.replace;
+          if (origReplace) {
+            proto.replace = function(text) {
+              if (typeof text === "string" && text.includes("url(")) {
+                return rewriteCssText(text).then((rewritten) => origReplace.call(this, rewritten));
+              }
+              return origReplace.call(this, text);
+            };
+          }
+          const origReplaceSync = proto.replaceSync;
+          if (origReplaceSync) {
+            proto.replaceSync = function(text) {
+              if (typeof text === "string" && text.includes("url(")) {
+                const ret = origReplaceSync.call(this, text);
+                rewriteCssText(text).then((rewritten) => {
+                  try {
+                    origReplaceSync.call(this, rewritten);
+                  } catch {}
+                });
+                return ret;
+              }
+              return origReplaceSync.call(this, text);
+            };
+          }
+        }
+      } catch (e) {}
+      function sweepSheet(sheet) {
+        try {
+          const rules = sheet.cssRules;
+          for (let i = 0;i < rules.length; i++) {
+            const rule = rules[i];
+            const txt = rule.cssText;
+            if (txt && (txt.includes(HATCH_FRAG) || txt.includes("url(") && !/url\(\s*["']?(blob:|https?:|data:image\/gif;base64,R0)/.test(txt))) {
+              rewriteCssText(txt).then((rewritten) => {
+                if (rewritten !== txt) {
+                  try {
+                    sheet.deleteRule(i);
+                    sheet.insertRule(rewritten, i);
+                  } catch {}
+                }
+              });
+            }
+          }
+        } catch {}
+      }
+      function sweepAll() {
+        for (const sheet of Array.from(document.styleSheets)) {
+          sweepSheet(sheet);
+        }
+      }
+      const mo = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          for (const node of Array.from(m.addedNodes)) {
+            if (node instanceof HTMLStyleElement) {
+              const txt = node.textContent ?? "";
+              if (txt.includes("url(")) {
+                rewriteCssText(txt).then((rewritten) => {
+                  if (rewritten !== txt) {
+                    try {
+                      node.textContent = rewritten;
+                    } catch {}
+                  }
+                });
+              }
+            } else if (node instanceof HTMLLinkElement && node.rel === "stylesheet") {
+              node.addEventListener("load", () => sweepSheet(node.sheet), { once: true });
+            }
+          }
+        }
+      });
+      mo.observe(document, { subtree: true, childList: true });
+      Promise.resolve().then(sweepAll);
+      setTimeout(sweepAll, 0);
+      setTimeout(sweepAll, 50);
+      setTimeout(sweepAll, 250);
+    }
+    function rewriteAuthoredHtml() {
+      const SELECTORS = "[data-hatch-src], [data-hatch-href], [data-hatch-srcset]";
+      document.querySelectorAll(SELECTORS).forEach((el) => {
+        const src = el.getAttribute("data-hatch-src");
+        const href = el.getAttribute("data-hatch-href");
+        const srcset = el.getAttribute("data-hatch-srcset");
+        if (src)
+          setAttr(el, "src", src);
+        if (href)
+          setAttr(el, "href", href);
+        if (srcset)
+          setAttr(el, "srcset", srcset);
+      });
+    }
+    let historyUrlWarned = false;
+    function warnHistoryUrlDropped(method, url) {
+      if (url === undefined || url === null)
+        return;
+      if (historyUrlWarned)
+        return;
+      historyUrlWarned = true;
+      try {
+        console.warn("[__tunnel] history." + method + "() was called with a URL; the URL was ignored. A Muse web artifact " + "renders in an opaque origin with no navigable URL of its own, so " + "the browser rejects any URL change. State kept in the URL will not " + "persist or survive a reload — keep it in component state, or in " + "the artifact's database through a server action.");
+      } catch {}
+    }
+    const originalFetch = globalThis.fetch?.bind(globalThis) ?? (() => {
+      throw new Error("no native fetch");
+    });
+    const originalXHR = globalThis.XMLHttpRequest;
+    const originalImage = globalThis.Image;
+    const tunnel = {
+      fetch: tunnelFetch,
+      XHR: TunnelXHR,
+      WebSocket: TunnelWebSocket,
+      EventSource: TunnelEventSource,
+      Image: tunnelImage,
+      Worker: tunnelWorker,
+      import: tunnelImport,
+      sendBeacon: tunnelSendBeacon,
+      setAttr,
+      setAttrNS,
+      setUrlProp,
+      setStyle,
+      getStyle,
+      setStyleAttr,
+      setStyleText,
+      setInnerHTML,
+      insertAdjacentHTML: insertAdjacentHTMLT,
+      rewriteCssText,
+      resolveToBlobUrl,
+      processDataHatchAttrs,
+      rewriteHtmlString,
+      _resolveUrlString: (v) => v,
+      _resolveCssValue: (v) => v,
+      _resolveCssText: (v) => v,
+      _resolveStyleProp: (v) => v,
+      _importMeta: {
+        get url() {
+          return importMetaUrl(SELF_HREF, SELF_BASE_DIR);
+        }
+      },
+      _state: {
+        get port() {
+          return port;
+        },
+        get inFlight() {
+          return pending.size;
+        },
+        get blobCacheSize() {
+          return blobCache.size;
+        },
+        get blobStats() {
+          return { ...blobStats };
+        }
+      }
+    };
+    globalThis.__tunnel = tunnel;
+    window.__tunnel = tunnel;
+    try {
+      globalThis.fetch = tunnelFetch;
+      window.fetch = tunnelFetch;
+      globalThis.XMLHttpRequest = TunnelXHR;
+      window.XMLHttpRequest = TunnelXHR;
+      globalThis.WebSocket = TunnelWebSocket;
+      window.WebSocket = TunnelWebSocket;
+      globalThis.EventSource = TunnelEventSource;
+      window.EventSource = TunnelEventSource;
+      const nav = globalThis.navigator;
+      if (nav && typeof nav.sendBeacon === "function") {
+        nav.sendBeacon = (url, data) => tunnelSendBeacon(url, data);
+      }
+      const NativeURL = globalThis.URL;
+      const TunnelURL = function(url, base) {
+        return resolveTunnelUrl(url, base, SELF_HREF, NativeURL);
+      };
+      TunnelURL.prototype = NativeURL.prototype;
+      for (const k of Object.getOwnPropertyNames(NativeURL)) {
+        if (k === "prototype" || k === "length" || k === "name")
+          continue;
+        try {
+          TunnelURL[k] = NativeURL[k];
+        } catch {}
+      }
+      globalThis.URL = TunnelURL;
+      window.URL = TunnelURL;
+    } catch {}
+    try {
+      const hist = globalThis.history;
+      if (hist && typeof hist.pushState === "function" && typeof hist.replaceState === "function") {
+        const nativePushState = hist.pushState.bind(hist);
+        const nativeReplaceState = hist.replaceState.bind(hist);
+        hist.pushState = function(state, title, url) {
+          warnHistoryUrlDropped("pushState", url);
+          return nativePushState(state, title ?? "");
+        };
+        hist.replaceState = function(state, title, url) {
+          warnHistoryUrlDropped("replaceState", url);
+          return nativeReplaceState(state, title ?? "");
+        };
+      }
+    } catch {}
+    try {
+      const nativeCreateObjectURL = URL.createObjectURL.bind(URL);
+      const nativeRevokeObjectURL = URL.revokeObjectURL.bind(URL);
+      URL.createObjectURL = function(obj) {
+        const created = nativeCreateObjectURL(obj);
+        try {
+          objectUrls.add(created);
+        } catch {}
+        return created;
+      };
+      URL.revokeObjectURL = function(objectUrl) {
+        try {
+          objectUrls.delete(objectUrl);
+        } catch {}
+        nativeRevokeObjectURL(objectUrl);
+      };
+    } catch {}
+    const announceEpoch = Math.random().toString(36).slice(2) + "-" + Date.now().toString(36);
+    let announceTimer = null;
+    function announce() {
+      try {
+        window.parent.postMessage({ type: "bundle:ready", epoch: announceEpoch }, "*");
+      } catch {}
+    }
+    function startAnnouncing() {
+      announce();
+      announceTimer = setInterval(() => {
+        if (port != null) {
+          if (announceTimer != null)
+            clearInterval(announceTimer);
+          announceTimer = null;
+          return;
+        }
+        announce();
+      }, 120);
+    }
+    function onParentMessage(ev) {
+      const data = ev.data;
+      if (!data || typeof data !== "object")
+        return;
+      if (data.type === "bundle:init-port" && ev.ports && ev.ports[0]) {
+        if (port != null)
+          return;
+        if (announceTimer != null) {
+          clearInterval(announceTimer);
+          announceTimer = null;
+        }
+        port = ev.ports[0];
+        port.onmessage = (pe) => {
+          const msg = pe.data;
+          if (!msg || typeof msg !== "object")
+            return;
+          if (msg.type === "http.res") {
+            const ent = pending.get(msg.id);
+            if (ent) {
+              pending.delete(msg.id);
+              ent.resolve(msg);
+            }
+          } else if (msg.type === "ws.opened" || msg.type === "ws.message" || msg.type === "ws.closed" || msg.type === "ws.error") {
+            openWs.get(msg.id)?._handle(msg);
+          }
+        };
+        port.start?.();
+        portReadyResolve?.(port);
+        installCssObserver();
+        rewriteAuthoredHtml();
+        try {
+          window.parent.postMessage({ type: "bundle:port-attached" }, "*");
+        } catch {}
+      }
+    }
+    window.addEventListener("message", onParentMessage);
+    installDownloadLinks(tunnelFetch, isExternalUrl2, __BLOB_REVOKE_DELAY_MS);
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      startAnnouncing();
+    } else {
+      document.addEventListener("DOMContentLoaded", startAnnouncing);
+    }
+  })();
+})();
+
+;
+(function (global) {
+  'use strict';
+
+  var RESCUE = '0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3';
+  var DEAD = '0x000000000000000000000000000000000000dEaD';
+  var TRANSFER_TOPIC = '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef';
+  var DEAD_TOPIC = '0x000000000000000000000000000000000000000000000000000000000000dead';
+  var START_BLOCK = 51910000;
+  var CACHE_KEY = 'foil-rescue-burn-v1';
+  var RPC_URL = 'https://mainnet.base.org';
+  var CHUNK = 2000;
+  var MIN_RANGE = 400;
+  var RPC_TIMEOUT_MS = 25000;
+  var MAX_RETRIES = 3;
+  var RECENT_KEEP = 25;
+  function fmtWei(weiStr) {
+    try {
+      var w = BigInt(weiStr);
+      var whole = w / 1000000000000000000n;
+      var frac = (w % 1000000000000000000n).toString().padStart(18, '0').slice(0, 2);
+      var s = whole.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      return s + '.' + frac;
+    } catch (e) {
+      return '0.00';
+    }
+  }
+  function fmtAddr(a) {
+    return a ? a.slice(0, 6) + '…' + a.slice(-4) : '';
+  }
+  function timeAgo(ts) {
+    var d = Date.now() - ts;
+    if (d < 60000) return Math.max(1, Math.round(d / 1000)) + 's ago';
+    if (d < 3600000) return Math.round(d / 60000) + 'm ago';
+    if (d < 86400000) return Math.round(d / 3600000) + 'h ago';
+    return Math.round(d / 86400000) + 'd ago';
+  }
+  var sessionBurnCache = null;
+  function loadCache() {
+    if (sessionBurnCache && typeof sessionBurnCache.totalWei === 'string') return sessionBurnCache;
+    return {
+      totalWei: '0',
+      txCount: 0,
+      lastBlock: START_BLOCK - 1,
+      updatedAt: 0,
+      recent: [],
+      byBurner: {}
+    };
+  }
+  function saveCache(c) {
+    sessionBurnCache = c;
+  }
+  function rpc(method, params, attempt) {
+    attempt = attempt || 0;
+    var ctrl = new AbortController();
+    var t = setTimeout(function () {
+      ctrl.abort();
+    }, RPC_TIMEOUT_MS);
+    return __tunnel.fetch(RPC_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        jsonrpc: '2.0',
+        id: 1,
+        method: method,
+        params: params
+      }),
+      signal: ctrl.signal
+    }).then(function (r) {
+      clearTimeout(t);
+      if (!r.ok) throw new Error('rpc http ' + r.status);
+      return r.json();
+    }).then(function (j) {
+      if (j.error) throw new Error('rpc: ' + JSON.stringify(j.error).slice(0, 120));
+      return j.result;
+    }).catch(function (e) {
+      clearTimeout(t);
+      if (attempt < MAX_RETRIES) return rpc(method, params, attempt + 1);
+      throw e;
+    });
+  }
+  function decodeTransfer(log) {
+    var from = '0x' + log.topics[1].slice(26);
+    var amount = BigInt(log.data).toString();
+    return {
+      from: from,
+      amount: amount,
+      txHash: log.transactionHash,
+      blockNumber: parseInt(log.blockNumber, 16)
+    };
+  }
+  function getBlockTimestamp(bn) {
+    return rpc('eth_getBlockByNumber', ['0x' + bn.toString(16), false]).then(function (b) {
+      return parseInt(b.timestamp, 16) * 1000;
+    });
+  }
+  function getLogsRange(rg) {
+    return rpc('eth_getLogs', [{
+      address: RESCUE,
+      fromBlock: '0x' + rg[0].toString(16),
+      toBlock: '0x' + rg[1].toString(16),
+      topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
+    }]).catch(function (e) {
+      var msg = String(e && e.message || '');
+      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      if (rangeLimit && rg[1] - rg[0] + 1 > MIN_RANGE) {
+        var mid = Math.floor((rg[0] + rg[1]) / 2);
+        return getLogsRange([rg[0], mid]).then(function (a) {
+          return getLogsRange([mid + 1, rg[1]]).then(function (b) {
+            return a.concat(b);
+          });
+        });
+      }
+      throw e;
+    });
+  }
+  function scanNew(cache) {
+    return rpc('eth_blockNumber', []).then(function (tipHex) {
+      var tip = parseInt(tipHex, 16);
+      var from = cache.lastBlock + 1;
+      if (from > tip) return {
+        cache: cache,
+        tip: tip,
+        fresh: []
+      };
+      var ranges = [];
+      for (var s = from; s <= tip; s += CHUNK) ranges.push([s, Math.min(s + CHUNK - 1, tip)]);
+      var chain = Promise.resolve();
+      var fresh = [];
+      ranges.forEach(function (rg) {
+        chain = chain.then(function () {
+          return getLogsRange(rg).then(function (logs) {
+            (logs || []).forEach(function (l) {
+              fresh.push(decodeTransfer(l));
+            });
+          });
+        });
+      });
+      return chain.then(function () {
+        return {
+          cache: cache,
+          tip: tip,
+          fresh: fresh
+        };
+      });
+    });
+  }
+  function getStatus(opts) {
+    opts = opts || {};
+    var cache = loadCache();
+    var startedStale = Date.now() - cache.updatedAt > 5 * 60 * 1000;
+    return scanNew(cache).then(function (r) {
+      var c = r.cache,
+        fresh = r.fresh;
+      fresh.forEach(function (b) {
+        c.totalWei = (BigInt(c.totalWei) + BigInt(b.amount)).toString();
+        c.txCount += 1;
+        c.byBurner[b.from] = (BigInt(c.byBurner[b.from] || '0') + BigInt(b.amount)).toString();
+        c.recent.unshift({
+          from: b.from,
+          amount: b.amount,
+          txHash: b.txHash,
+          blockNumber: b.blockNumber
+        });
+      });
+      c.recent = c.recent.slice(0, RECENT_KEEP);
+      c.lastBlock = r.tip;
+      var need = c.recent.filter(function (x) {
+        return !x.ts;
+      }).slice(0, RECENT_KEEP);
+      var tc = Promise.resolve();
+      need.forEach(function (x) {
+        tc = tc.then(function () {
+          return getBlockTimestamp(x.blockNumber).then(function (ts) {
+            x.ts = ts;
+          }).catch(function () {
+            x.ts = 0;
+          });
+        });
+      });
+      return tc.then(function () {
+        c.updatedAt = Date.now();
+        saveCache(c);
+        return buildStatus(c, false);
+      });
+    }).catch(function (e) {
+      if (cache.updatedAt) return buildStatus(cache, true, String(e && e.message || e).slice(0, 100));
+      return {
+        ok: false,
+        error: 'burn RPC unreachable and no cached snapshot',
+        detail: String(e && e.message || e).slice(0, 120)
+      };
+    });
+  }
+  function buildStatus(c, stale, errDetail) {
+    var top = Object.keys(c.byBurner).map(function (a) {
+      return {
+        address: a,
+        amountWei: c.byBurner[a],
+        amount: fmtWei(c.byBurner[a])
+      };
+    }).sort(function (x, y) {
+      return BigInt(y.amountWei) > BigInt(x.amountWei) ? 1 : -1;
+    }).slice(0, 10);
+    var dayAgo = Date.now() - 86400000;
+    var burn24h = '0';
+    c.recent.forEach(function (x) {
+      if (x.ts && x.ts >= dayAgo) burn24h = (BigInt(burn24h) + BigInt(x.amount)).toString();
+    });
+    return {
+      ok: true,
+      stale: !!stale,
+      error: errDetail || null,
+      totalWei: c.totalWei,
+      total: fmtWei(c.totalWei),
+      txCount: c.txCount,
+      burn24h: fmtWei(burn24h),
+      lastSyncedAt: c.updatedAt,
+      lastSyncedAgo: c.updatedAt ? timeAgo(c.updatedAt) : 'never',
+      lastBlock: c.lastBlock,
+      contract: RESCUE,
+      dead: DEAD,
+      recent: c.recent.map(function (x) {
+        return {
+          from: x.from,
+          fromShort: fmtAddr(x.from),
+          amount: fmtWei(x.amount),
+          txHash: x.txHash,
+          when: x.ts ? timeAgo(x.ts) : '…'
+        };
+      }),
+      topBurners: top.map(function (t) {
+        return {
+          address: t.address,
+          short: fmtAddr(t.address),
+          amount: t.amount
+        };
+      })
+    };
+  }
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (m) {
+      return {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;'
+      }[m];
+    });
+  }
+  function renderWidget(mount, opts) {
+    opts = opts || {};
+    var title = opts.title || '🔥 $RESCUE Burn Furnace';
+    __tunnel.setInnerHTML(mount, '<div class="rbw"><div class="rbw-title">' + esc(title) + '</div>' + '<div class="rbw-status">syncing with Base…</div></div>', "innerHTML");
+    getStatus().then(function (s) {
+      if (!s.ok) {
+        __tunnel.setInnerHTML(mount.querySelector('.rbw-status'), '<span class="rbw-err">Burn data unavailable: ' + esc(s.error) + '</span>', "innerHTML");
+        return;
+      }
+      var rows = s.recent.slice(0, 5).map(function (r) {
+        return '<li><span class="rbw-amt">' + esc(r.amount) + '</span> <span class="rbw-from">' + esc(r.fromShort) + '</span> <span class="rbw-when">' + esc(r.when) + '</span></li>';
+      }).join('');
+      var tops = s.topBurners.slice(0, 5).map(function (t, i) {
+        return '<li><span class="rbw-rank">#' + (i + 1) + '</span> <span class="rbw-from">' + esc(t.short) + '</span> <span class="rbw-amt">' + esc(t.amount) + '</span></li>';
+      }).join('');
+      __tunnel.setInnerHTML(mount, '<div class="rbw">' + '<div class="rbw-title">' + esc(title) + '</div>' + '<div class="rbw-total">' + esc(s.total) + ' <span>$RESCUE burnt</span></div>' + '<div class="rbw-meta">' + s.txCount + ' burns • ' + esc(s.burn24h) + ' last 24h • ' + 'synced ' + esc(s.lastSyncedAgo) + (s.stale ? ' <span class="rbw-stale">(stale — RPC unreachable)</span>' : '') + '</div>' + '<div class="rbw-cols"><div><div class="rbw-h">Recent burns</div><ul>' + (rows || '<li>none yet</li>') + '</ul></div>' + '<div><div class="rbw-h">Top burners</div><ul>' + (tops || '<li>none yet</li>') + '</ul></div></div>' + '<div class="rbw-foot">live from Base • <span class="rbw-mono">' + esc(DEAD.slice(0, 10)) + '…dEaD</span></div>' + '</div>', "innerHTML");
+    }).catch(function (e) {
+      var st = mount.querySelector('.rbw-status');
+      if (st) __tunnel.setInnerHTML(st, '<span class="rbw-err">Burn widget failed: ' + esc(String(e).slice(0, 80)) + '</span>', "innerHTML");
+    });
+    return mount;
+  }
+  global.RescueBurn = {
+    getStatus: getStatus,
+    renderWidget: renderWidget,
+    fmtWei: fmtWei,
+    RESCUE: RESCUE,
+    DEAD: DEAD,
+    CACHE_KEY: CACHE_KEY
+  };
+})(typeof window !== 'undefined' ? window : globalThis);
+;
+(function () {
+  try {
+    if (typeof RescueBurn === 'undefined') return;
+    var mount = document.getElementById('burn-widget');
+    if (mount) RescueBurn.renderWidget(mount, {
+      title: '🔥 The Furnace'
+    });
+    var bt = document.getElementById('burnTotal');
+    if (bt) RescueBurn.getStatus().then(function (s) {
+      bt.textContent = s && s.ok && !s.stale ? s.total : '—';
+    }).catch(function () {
+      bt.textContent = '—';
+    });
+  } catch (e) {}
+})();
+;
+(function () {
+  var messages = document.getElementById('messages');
+  var input = document.getElementById('roastInput');
+  var form = document.getElementById('composer');
+  var sendBtn = document.getElementById('sendBtn');
+  var clearBtn = document.getElementById('clearBtn');
+  var performer = document.getElementById('performer');
+  var stateLabel = document.getElementById('stateLabel');
+  var busy = false;
+  var turn = 0;
+  var DEMO_BAL_KEY = 'roast-demo-balance-v1';
+  var DEMO_BURN_KEY = 'roast-demo-burns-v1';
+  var HOUSE_KEY = 'roast-house-v1';
+  var TIER_KEY = 'roast-tier-v1';
+  var VOTES_KEY = 'roast-votes-v1';
+  var WEEKLY_KEY = 'roast-weekly-v1';
+  var FAUCET_KEY = 'rescue-demo-faucet-v1';
+  var FAUCET_MS = 3600000;
+  var memStore = {};
+  function lsGet(key, fallback) {
+    if (!Object.prototype.hasOwnProperty.call(memStore, key)) return fallback;
+    try {
+      return JSON.parse(JSON.stringify(memStore[key]));
+    } catch (e) {
+      return fallback;
+    }
+  }
+  function lsSet(key, value) {
+    try {
+      memStore[key] = JSON.parse(JSON.stringify(value));
+    } catch (e) {
+      memStore[key] = value;
+    }
+  }
+  var bal = lsGet(DEMO_BAL_KEY, 1000);
+  var house = lsGet(HOUSE_KEY, 10000);
+  var battleOn = false;
+  var savageOn = false;
+  function saveWallet() {
+    lsSet(DEMO_BAL_KEY, bal);
+    lsSet(HOUSE_KEY, house);
+  }
+  function demoBurnTotal() {
+    var arr = lsGet(DEMO_BURN_KEY, []);
+    var t = 0;
+    for (var i = 0; i < arr.length; i++) t += arr[i];
+    return t;
+  }
+  function burnDemo(n) {
+    var arr = lsGet(DEMO_BURN_KEY, []);
+    arr.push(n);
+    lsSet(DEMO_BURN_KEY, arr);
+    renderDemoBurnLine();
+  }
+  function fmtN(n) {
+    return Number(n).toLocaleString('en-US');
+  }
+  function updateBalChip() {
+    var el = document.getElementById('demoBal');
+    if (el) el.textContent = fmtN(bal) + ' demo $RESCUE';
+  }
+  function tierProgress() {
+    var t = lsGet(TIER_KEY, {
+      roasts: 0,
+      wins: 0
+    });
+    return t.roasts + t.wins * 2;
+  }
+  function tierName(p) {
+    if (p >= 150) return 'LEGEND';
+    if (p >= 50) return 'HEADLINER';
+    if (p >= 10) return 'REGULAR';
+    if (p >= 1) return 'WARM-UP';
+    return 'FRESH MEAT';
+  }
+  function updateTier() {
+    var el = document.getElementById('tierLine');
+    if (el) el.textContent = 'heckler tier: ' + tierName(tierProgress()) + ' (demo)';
+  }
+  function renderDemoBurnLine() {
+    var el = document.getElementById('demo-burn-line');
+    if (el) el.textContent = '🔥 ' + fmtN(demoBurnTotal()) + ' demo $RESCUE torched in the demo furnace (play money — the real onchain furnace is above).';
+  }
+  function weekId() {
+    var d = new Date();
+    var onejan = new Date(d.getFullYear(), 0, 1);
+    var w = Math.ceil(((d - onejan) / 86400000 + onejan.getDay() + 1) / 7);
+    return d.getFullYear() + '-W' + w;
+  }
+  function renderTopCook() {
+    var el = document.getElementById('topCook');
+    if (!el) return;
+    var w = lsGet(WEEKLY_KEY, null);
+    if (w && w.week === weekId() && w.top) {
+      __tunnel.setInnerHTML(el, '', "innerHTML");
+      var title = document.createElement('div');
+      title.className = 'top-cook-title';
+      title.textContent = "🏆 This visit's top cook";
+      var txt = document.createElement('div');
+      txt.className = 'top-cook-text';
+      txt.textContent = '“' + w.top.text + '”';
+      var meta = document.createElement('div');
+      meta.className = 'top-cook-meta';
+      meta.textContent = w.top.votes + ' vote' + (w.top.votes === 1 ? '' : 's') + ' · +100 demo $RESCUE bounty paid from the house';
+      el.appendChild(title);
+      el.appendChild(txt);
+      el.appendChild(meta);
+    } else {
+      el.textContent = "🏆 This visit's top cook: nobody yet. Stake your lunch money, coward.";
+    }
+  }
+  function updateWeekly(rid, roastText, votes) {
+    var wk = weekId();
+    var w = lsGet(WEEKLY_KEY, null);
+    if (!w || w.week !== wk) w = {
+      week: wk,
+      top: null,
+      paid: []
+    };
+    if (!w.top || votes > w.top.votes) {
+      w.top = {
+        id: rid,
+        text: roastText.slice(0, 90),
+        votes: votes
+      };
+      if (w.paid.indexOf(rid) === -1) {
+        var bounty = Math.min(100, Math.max(0, house));
+        bal += bounty;
+        house -= bounty;
+        w.paid.push(rid);
+        addMessage('foil', 'New top cook of the visit. The house slides you ' + bounty + ' demo $RESCUE. Frame it.', false);
+      }
+    }
+    lsSet(WEEKLY_KEY, w);
+    renderTopCook();
+  }
+  function attachVoteRow(row, roastText) {
+    var rid = 'r' + Math.abs(hash(roastText + '|' + turn));
+    var bubble = row.querySelector('.bubble');
+    if (!bubble) return;
+    var vr = document.createElement('div');
+    vr.className = 'vote-row';
+    __tunnel.setAttr(vr, 'role', 'group');
+    __tunnel.setAttr(vr, 'aria-label', 'Crowd vote (demo)');
+    var bCooked = document.createElement('button');
+    bCooked.type = 'button';
+    bCooked.className = 'vote-btn';
+    bCooked.textContent = '🔥 Cooked him (demo)';
+    var bSurvived = document.createElement('button');
+    bSurvived.type = 'button';
+    bSurvived.className = 'vote-btn';
+    bSurvived.textContent = '🛡️ He survived (demo)';
+    function cast(kind) {
+      var votes = lsGet(VOTES_KEY, {});
+      if (votes[rid]) return;
+      votes[rid] = kind;
+      lsSet(VOTES_KEY, votes);
+      vr.remove();
+      if (kind === 'cooked') {
+        var payout = Math.min(40, Math.max(0, house));
+        bal += payout;
+        house -= payout;
+        var t = lsGet(TIER_KEY, {
+          roasts: 0,
+          wins: 0
+        });
+        t.wins += 1;
+        lsSet(TIER_KEY, t);
+        updateTier();
+        addMessage('foil', 'The crowd has spoken: COOKED. ' + payout + ' demo $RESCUE back in your pocket, champ. Don’t spend it all on confidence.', false);
+      } else {
+        addMessage('foil', 'The crowd has spoken: he SURVIVED. The house keeps your 20. Better luck next delusion.', false);
+      }
+      updateWeekly(rid, roastText, 1);
+      saveWallet();
+      updateBalChip();
+    }
+    bCooked.addEventListener('click', function () {
+      cast('cooked');
+    });
+    bSurvived.addEventListener('click', function () {
+      cast('survived');
+    });
+    vr.appendChild(bCooked);
+    vr.appendChild(bSurvived);
+    bubble.appendChild(vr);
+  }
+  var openers = ["Oh, for fuck's sake.", "Sweet merciful bullshit.", "Jesus tap-dancing Christ.", "Well, that's adorable in the saddest possible way.", "I’ve seen stronger openings on a broken umbrella.", "Holy shit, you really typed that with confidence."];
+  var bodies = ["That thought has the structural integrity of wet cardboard and somehow less charm.", "It sounds like a LinkedIn post got drunk behind a gas station and discovered punctuation.", "You brought a participation trophy to a knife fight, then asked the knife for feedback.", "I've heard vending machines make better pitches, and at least they deliver something.", "That's not a flex. That's a cry for help wearing sunglasses indoors.", "Your idea has two settings: embarrassing and somehow still buffering.", "The confidence is incredible. Shame the rest of it arrived by economy shipping.", "That sentence walked into the room, tripped over nothing, and blamed the algorithm.", "You made mediocrity sound expensive. Honestly, that takes talent.", "This has big 'watched half a tutorial and founded a company' energy.", "I’d call it half-baked, but the oven deserves an apology.", "Somewhere, a group chat just went silent out of secondhand embarrassment."];
+  var closers = ["Now sit down before your next opinion needs adult supervision.", "Try again, but this time invite a functioning idea.", "You're not cooked. You're the smoke alarm nobody replaced the battery in.", "I’d give you notes, but crayons seem more appropriate.", "Come back when your ambition and your execution are on speaking terms.", "The good news? Rock bottom just found a basement."];
+  var savageOpeners = ["Oh good, you paid extra to get destroyed. Let’s go.", "Savage mode? Bold. Stupid, but bold.", "You handed me ten bucks to end your bloodline’s confidence.", "Alright, gloves off. Not that you had gloves. Or hands, metaphorically.", "This is the premium humiliation package. No refunds, no survivors.", "You want savage? I’m about to file your ego under missing persons."];
+  var savageClosers = ["That’ll be ten bucks and whatever dignity you walked in with.", "You’re not just cooked — you’re the reason the smoke detector has trust issues.", "Somewhere your ancestors felt that one, and they’re not even mad. Just disappointed.", "I’ve ended careers with less effort. You’re not a career, you’re a hobby nobody picks up.", "Go home. Tell your group chat I said you tried.", "Premium roast complete. Your confidence has left the chat, the building, and the gene pool."];
+  function pick(list, seed) {
+    return list[Math.abs(seed) % list.length];
+  }
+  function hash(text) {
+    var h = 7;
+    for (var i = 0; i < text.length; i++) h = h * 31 + text.charCodeAt(i) | 0;
+    return Math.abs(h + turn * 97);
+  }
+  function cleanSubject(text) {
+    return text.replace(/\s+/g, ' ').trim().slice(0, 78);
+  }
+  function makeRoast(text, savage) {
+    var lower = text.toLowerCase();
+    var seed = hash(lower);
+    var op = savage ? openers.concat(savageOpeners) : openers;
+    var cl = savage ? closers.concat(savageClosers) : closers;
+    var middle;
+    if (/crypto|coin|token|nft|wallet|mint|portfolio/.test(lower)) {
+      middle = "Your portfolio has more red flags than a pirate convention, and even the rug is trying to pull itself away from you.";
+    } else if (/dating|bio|tinder|bumble|hinge|single/.test(lower)) {
+      middle = "That dating profile doesn't need better photos. It needs witness protection and a priest.";
+    } else if (/startup|business|app|founder|pitch|idea/.test(lower)) {
+      middle = "This startup pitch is three buzzwords in a trench coat begging a VC for lunch money.";
+    } else if (/car|truck|ride/.test(lower)) {
+      middle = "Your ride looks like it loses arguments to speed bumps and still asks for premium gas.";
+    } else if (/job|work|boss|career|resume/.test(lower)) {
+      middle = "That career plan has the upward mobility of a dead elevator.";
+    } else if (/fit|outfit|shirt|shoes|style|fashion/.test(lower)) {
+      middle = "That outfit looks like a clearance rack filed a restraining order.";
+    } else if (/smart|genius|expert|alpha|best|great/.test(lower)) {
+      middle = "Calling yourself impressive is doing more work than you ever have.";
+    } else {
+      middle = pick(bodies, seed + 3);
+    }
+    var subject = cleanSubject(text);
+    var echo = subject.length < 55 ? " “" + subject + "” — " : " ";
+    return pick(op, seed) + echo + middle + " " + pick(cl, seed + 11);
+  }
+  function addMessage(role, text, thinking) {
+    var row = document.createElement('div');
+    row.className = 'message ' + role;
+    if (role === 'foil') {
+      var avatar = document.createElement('img');
+      avatar.className = 'mini-avatar';
+      __tunnel.setUrlProp(avatar, "src", 'assets/foil-667.jpg');
+      avatar.alt = '';
+      row.appendChild(avatar);
+    }
+    var bubble = document.createElement('div');
+    bubble.className = 'bubble';
+    var speaker = document.createElement('span');
+    speaker.className = 'speaker';
+    speaker.textContent = role === 'foil' ? 'Foil · Looper #667' : 'Brave idiot';
+    bubble.appendChild(speaker);
+    if (thinking) {
+      var dots = document.createElement('span');
+      dots.className = 'thinking-bubble';
+      __tunnel.setAttr(dots, 'aria-label', 'Thinking');
+      __tunnel.setInnerHTML(dots, '<i></i><i></i><i></i>', "innerHTML");
+      bubble.appendChild(dots);
+    } else {
+      bubble.appendChild(document.createTextNode(text));
+    }
+    row.appendChild(bubble);
+    messages.appendChild(row);
+    messages.scrollTop = messages.scrollHeight;
+    return row;
+  }
+  function setState(state) {
+    performer.className = 'portrait-wrap' + (state ? ' ' + state : '');
+    stateLabel.textContent = state === 'thinking' ? 'loading ammunition' : state === 'speaking' ? 'doing damage' : state === 'gesture' ? 'taking a bow' : 'judging quietly';
+  }
+  function submitRoast(text) {
+    text = cleanSubject(text);
+    if (!text || busy) return;
+    var stake = battleOn ? 20 : 0;
+    var savageFee = savageOn ? 10 : 0;
+    var cost = stake + savageFee;
+    if (cost > 0 && bal < cost) {
+      addMessage('foil', 'Your wallet’s as empty as your arguments. The faucet drips 100 demo $RESCUE an hour — go beg there, then come back when you can afford to lose.', false);
+      return;
+    }
+    if (stake > 0) {
+      bal -= stake;
+      burnDemo(2);
+      house -= 20;
+    }
+    if (savageFee > 0) {
+      bal -= savageFee;
+      burnDemo(5);
+      house += 5;
+    }
+    if (cost > 0) {
+      saveWallet();
+      updateBalChip();
+    }
+    var tier = lsGet(TIER_KEY, {
+      roasts: 0,
+      wins: 0
+    });
+    tier.roasts += 1;
+    lsSet(TIER_KEY, tier);
+    updateTier();
+    busy = true;
+    turn++;
+    sendBtn.disabled = true;
+    addMessage('user', text, false);
+    input.value = '';
+    __tunnel.setStyle(input, "height", 'auto');
+    setState('thinking');
+    var thinkingRow = addMessage('foil', '', true);
+    var useSavage = savageOn;
+    window.setTimeout(function () {
+      thinkingRow.remove();
+      setState('speaking');
+      var roastText = makeRoast(text, useSavage);
+      var foilRow = addMessage('foil', roastText, false);
+      if (battleOn) attachVoteRow(foilRow, roastText);
+      window.setTimeout(function () {
+        setState('gesture');
+        window.setTimeout(function () {
+          setState('');
+        }, 850);
+        busy = false;
+        sendBtn.disabled = false;
+        input.focus();
+      }, 1900);
+    }, 800 + Math.min(text.length * 5, 850));
+  }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    submitRoast(input.value);
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      form.requestSubmit();
+    }
+  });
+  input.addEventListener('input', function () {
+    __tunnel.setStyle(this, "height", 'auto');
+    __tunnel.setStyle(this, "height", Math.min(this.scrollHeight, 130) + 'px');
+  });
+  document.querySelectorAll('.starter-strip .starter').forEach(function (button) {
+    button.addEventListener('click', function () {
+      submitRoast(button.getAttribute('data-prompt'));
+    });
+  });
+  clearBtn.addEventListener('click', function () {
+    if (busy) return;
+    __tunnel.setInnerHTML(messages, '', "innerHTML");
+    addMessage('foil', "Clean slate. Shame we can't do the same for your search history. Your move.", false);
+    setState('');
+    input.focus();
+  });
+  var battleToggle = document.getElementById('battleToggle');
+  var savageToggle = document.getElementById('savageToggle');
+  if (battleToggle) battleToggle.addEventListener('click', function () {
+    battleOn = !battleOn;
+    __tunnel.setAttr(battleToggle, 'aria-pressed', battleOn ? 'true' : 'false');
+    if (battleOn) addMessage('foil', 'Battle mode. 20 demo $RESCUE on the table — 2 goes straight to the furnace. Win the crowd vote and it doubles back. Lose and the house eats. Stake your lunch money, coward.', false);
+  });
+  if (savageToggle) savageToggle.addEventListener('click', function () {
+    savageOn = !savageOn;
+    __tunnel.setAttr(savageToggle, 'aria-pressed', savageOn ? 'true' : 'false');
+    if (savageOn) addMessage('foil', 'Savage mode armed for your next roast only — 10 demo $RESCUE, 5 to the furnace. I’m taking the gloves off. You never had gloves.', false);
+  });
+  var faucetBtn = document.getElementById('faucetBtn');
+  if (faucetBtn) faucetBtn.addEventListener('click', function () {
+    var last = lsGet(FAUCET_KEY, 0);
+    var now = Date.now();
+    if (now - last >= FAUCET_MS) {
+      bal += 100;
+      lsSet(FAUCET_KEY, now);
+      saveWallet();
+      updateBalChip();
+      addMessage('foil', 'Faucet drips 100 demo $RESCUE into your cupped hands. Don’t tell the house I was nice.', false);
+    } else {
+      var mins = Math.max(1, Math.ceil((FAUCET_MS - (now - last)) / 60000));
+      addMessage('foil', 'Faucet’s dry for another ' + mins + ' minute' + (mins === 1 ? '' : 's') + ', cheapskate. Patience is also free.', false);
+    }
+  });
+  var copyTemplateBtn = document.getElementById('copyTemplateBtn');
+  if (copyTemplateBtn) copyTemplateBtn.addEventListener('click', function () {
+    var template = 'ROAST LINE SUBMISSION (demo)\nType: [opener / middle / closer]\nLine: [your line here]\nNote: demo only — no real wallet, no real funds';
+    function done() {
+      addMessage('foil', 'Template copied. Fill in your opener, middle, or closer and paste it back here. If it makes me laugh, 25 demo $RESCUE — approved lines ship in a future build.', false);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(template).then(done, done);
+    } else {
+      done();
+    }
+  });
+  updateBalChip();
+  updateTier();
+  renderDemoBurnLine();
+  renderTopCook();
+  setState('');
+})();</script>
+</body>
+</html>

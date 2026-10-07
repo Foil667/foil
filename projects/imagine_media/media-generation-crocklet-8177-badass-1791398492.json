@@ -1,0 +1,4 @@
+{
+  "text": "{\"error_format_version\":1,\"error\":{\"code\":\"media_handle_invalid\",\"retryable\":false,\"detail\":\"The media handle is not valid.\",\"downstream_status\":400,\"attempt_id\":\"c0ee537d-b12c-4a33-9899-e5ca5094a727\",\"origin_stage\":\"input_resolution\",\"root_cause_known\":true,\"fallback_emitted\":true,\"source_error_code\":\"media_handle_invalid\",\"failure_kind\":\"media_handle_invalid\"}}",
+  "attachments": []
+}

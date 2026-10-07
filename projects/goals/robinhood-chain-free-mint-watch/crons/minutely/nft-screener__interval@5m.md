@@ -1,7 +1,7 @@
 ---
 id: nft-screener
 title: NFT watchdog screener (5-min detect + score)
-enabled: true
+enabled: false
 owner: goal:robinhood-chain-free-mint-watch
 mode: task
 schedule:

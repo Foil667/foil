@@ -1,7 +1,7 @@
 ---
 id: foilbox-ccff00-watch
 title: Foilbox — always-on mint sniper + instant claim (5m)
-enabled: true
+enabled: false
 owner: goal:robinhood-chain-free-mint-watch
 mode: task
 schedule:

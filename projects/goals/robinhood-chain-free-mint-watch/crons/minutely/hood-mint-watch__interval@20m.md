@@ -1,7 +1,7 @@
 ---
 id: hood-mint-watch
 title: Robinhood Chain mint watch (Spaces, free mints, ccff00)
-enabled: true
+enabled: false
 owner: goal:robinhood-chain-free-mint-watch
 mode: task
 schedule:

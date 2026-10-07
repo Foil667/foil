@@ -2,7 +2,7 @@
 display_name: winmunk
 nickname: @winmunk
 summary: Ran the $MUNK airdrop @Foil667 entered 2026-10-05 at the user's direction with Foil's Solana address.
-rank: 200
+rank: 201
 updated: 2026-10-05
 ---
 

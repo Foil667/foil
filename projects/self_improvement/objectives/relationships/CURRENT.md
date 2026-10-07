@@ -1,7 +1,7 @@
 ---
 objective_id: relationships
-run_id: sirun_1d26beec3638490a9be9c3e2f1ade5b2
-created_at: 2026-10-06T03:19:46.007377872+00:00
+run_id: sirun_c89c6c1fe4d6403581537031ff24e2b6
+created_at: 2026-10-07T16:58:38.025829150+00:00
 card_id: relationships
 worker_outcome: changed
 ---
@@ -18,4 +18,4 @@ is a framework-owned projection only.
 - Request origin: internal.self_improvement
 - Cadence: hourly
 - Worker outcome: changed
-- Subagents spawned: 3
+- Subagents spawned: 2

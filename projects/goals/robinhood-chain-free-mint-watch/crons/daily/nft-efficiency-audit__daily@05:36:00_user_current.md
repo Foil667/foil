@@ -11,7 +11,7 @@ schedule:
 timeout_secs: 1200
 metadata:
   tags: [cron:flexible-time]
-  originating_channel_context_json: '{"originating_channel":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
+  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
   presentation_locale: en-US
 ---
 ## NFT Watchdog 24h efficiency audit

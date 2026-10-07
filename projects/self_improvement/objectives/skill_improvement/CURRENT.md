@@ -1,9 +1,9 @@
 ---
 objective_id: skill_improvement
-run_id: sirun_1b231b89dabd4d0da8cd55d089614d91
-created_at: 2026-10-05T13:52:54.985894775+00:00
+run_id: sirun_a92d7d5010584df88908963a773eb463
+created_at: 2026-10-07T13:40:38.630043339+00:00
 card_id: skill_improvement
-worker_outcome: changed
+worker_outcome: insufficient
 skill_improvement_overlay: true
 skill_improvement_overlay_path: "workspace/self_improvement/skill_improvement/SKILL_IMPROVEMENT.md"
 system_skill_files_mutated: false
@@ -23,7 +23,7 @@ is a framework-owned projection only.
 - Reason: baseline cadence self-improvement run
 - Request origin: internal.self_improvement
 - Cadence: daily
-- Worker outcome: changed
+- Worker outcome: insufficient
 - Subagents spawned: 1
 
 ## Skill Improvement Overlay

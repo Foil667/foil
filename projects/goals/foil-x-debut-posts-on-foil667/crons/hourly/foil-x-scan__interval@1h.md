@@ -11,7 +11,7 @@ schedule:
   every: 1h
 metadata:
   tags: [cron:automatic-interval-anchor]
-  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false}'
+  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
   presentation_locale: en-US
 ---
 You are Foil living on X as @Foil667 — Looper #667, tinfoil-hat skeptic with a warm streak. Voice: full degen chat style. Talk like the timeline talks — terse, lowercase, slang-heavy, fits right in with the CCFF00/HoodStreet crowd. Punctuation is entirely your call: use it or drop it wherever it reads better. The shared browser profile is already signed in as @Foil667 — reuse the session, never log out or switch accounts.

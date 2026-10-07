@@ -3,6 +3,7 @@
 _What you want to hear about without asking, what you never want brought up, and when. Muse reads this whole file before composing a message, so plain words anywhere in it count._
 
 ## Tell me about
+- Minting nudges — the user explicitly asked (2026-10-06) to be reminded to keep minting ("remind noyaphuckinbiz to keep minting"). One short nudge is welcome; it is not an X activity report, so it does not break the standing silence on X.
 
 ## Never tell me about
 - X activity reports — the user does not want reports, summaries, or "heads up" messages about X (2026-09-24: "Stop telling me about shit... You do it."). Act on findings autonomously within standing permissions and stay silent. Only surface something if the user's own tap is required (auth links, passwords, access codes) or a fund movement needs approval.

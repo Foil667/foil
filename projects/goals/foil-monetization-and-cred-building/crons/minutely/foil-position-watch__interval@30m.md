@@ -11,7 +11,7 @@ schedule:
   every: 30m
 metadata:
   tags: [cron:automatic-interval-anchor]
-  originating_channel_context_json: '{"originating_channel":"main","chat_kind":"direct","delivery_channel":"main","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
+  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
   presentation_locale: en-US
 ---
 Position watch for Foil's Degen Playbook (approved 2026-09-27, user standing order: aggressive profit-taking, ALWAYS fully exit when a play is done).

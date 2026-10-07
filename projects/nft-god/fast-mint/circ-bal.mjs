@@ -1,0 +1,11 @@
+import { ethers } from 'ethers';
+const provider = new ethers.JsonRpcProvider('https://rpc.mainnet.chain.robinhood.com');
+const nft = '0x39a47a94941639de9b43636015774db03b8ba51c';
+const foil = '0x6573682faee72a4a96e791ba262439f1df3a268d';
+const iface = new ethers.Interface(['function balanceOf(address) view returns (uint256)']);
+const bal = await provider.call({to:nft, data: iface.encodeFunctionData('balanceOf',[foil])});
+const tx = await provider.getTransaction('0x72bd2d8b976e10b0fe7821457616f9efb8a5de6ca63267162d78ad7f3b51687a');
+console.log('balanceOf(Foil):', BigInt(bal).toString());
+console.log('tx to:', tx.to, '| value:', tx.value.toString(), '| status check via receipt...');
+const rc = await provider.getTransactionReceipt('0x72bd2d8b976e10b0fe7821457616f9efb8a5de6ca63267162d78ad7f3b51687a');
+console.log('receipt status:', rc.status, 'block:', rc.blockNumber, 'gasUsed:', rc.gasUsed.toString());

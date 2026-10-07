@@ -1,21 +1,20 @@
 import { ethers } from 'ethers';
-const RPC = 'https://rpc.mainnet.chain.robinhood.com';
+const RPC = process.env.RPC || 'https://robinhood-rpc.publicnode.com';
 const CANON = '0x00005EA00Ac477B1030CE78506496e8C2dE24bf5';
 const FORK = '0x00005ea00ac477b1030ce78506496e8c2de24bf5';
 const provider = new ethers.JsonRpcProvider(RPC);
 const coder = new ethers.AbiCoder();
 const PUB = '0xbc6a629c', ROOT = '0x32bf11f5';
-const targets = JSON.parse(process.argv[2]);
-for (const [label, nft] of targets) {
+for (const [label, nft] of JSON.parse(process.argv[2])) {
+  const out = { label };
   for (const [sname, saddr] of [['canon', CANON], ['fork', FORK]]) {
     try {
       const raw = await provider.call({ to: saddr, data: PUB + coder.encode(['address'],[nft]).slice(2) });
       const d = coder.decode(['uint256','uint256','uint256','uint256','uint256','uint256'], raw);
-      const [price, start, end, maxW, feeBps, restrict] = d.map(x=>x.toString());
-      const now = Math.floor(Date.now()/1000);
-      const live = (+start <= now && now < +end) ? 'LIVE' : (+end <= now ? 'ended' : 'upcoming');
       const root = await provider.call({ to: saddr, data: ROOT + coder.encode(['address'],[nft]).slice(2) });
-      console.log(`${label} [${sname}] ${live}: price=${price} start=${start} end=${end} maxW=${maxW} allowRoot=${root.slice(0,10)}...`);
-    } catch (e) { console.log(label, sname, 'ERR', (e.shortMessage||e.message||'').slice(0,80)); }
+      const [price, start, end, maxW] = d.map(x=>x.toString());
+      out[sname] = { price, start, end, maxW, root };
+    } catch (e) { out[sname] = 'ERR:'+(e.shortMessage||e.message).slice(0,80); }
   }
+  console.log(JSON.stringify(out));
 }

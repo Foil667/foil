@@ -28,6 +28,9 @@ query MintActionTimelineQuery(
       ... on TransactionAction {
         transactionSubmissionData { to data value chain { networkId identifier } }
       }
+      ... on MintAction {
+        transactionSubmissionData { to data value chain { networkId identifier } }
+      }
     }
     errors { __typename }
   }
@@ -62,7 +65,7 @@ const swap = j.data && j.data.swap;
 if (!swap) { console.log('NO_SWAP', JSON.stringify(j).slice(0, 400)); process.exit(2); }
 console.log('errors:', JSON.stringify(swap.errors || []));
 for (const a of (swap.actions || [])) {
-  if (a.__typename !== 'TransactionAction') { console.log('action:', a.__typename); continue; }
+  if (a.__typename !== 'TransactionAction' && a.__typename !== 'MintAction') { console.log('action:', a.__typename); continue; }
   const t = a.transactionSubmissionData;
   console.log('to:', t.to);
   console.log('value:', t.value);

@@ -1984,5 +1984,101 @@
     "contract": "0xae4ccbc46058668d9548f0601403860153d6e746",
     "reason": "heuristic:owner-controlled-mint; heuristic:owner-withdraw-sweep",
     "ts": "2026-10-05T22:55:15.677Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x05442220c1fda9e0edff7cb3c61f9f7dc3a4d2d2",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T05:33:09.459Z"
+  },
+  {
+    "chainId": "8453",
+    "contract": "0x177f79bacf30c86bc60f9d73a753259ee8aee8c3",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T07:48:03.390Z"
+  },
+  {
+    "chainId": "8453",
+    "contract": "0x48efc213aa69a345432a67431cd6f90cd1560d35",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T08:04:31.210Z"
+  },
+  {
+    "chainId": "8453",
+    "contract": "0x52e8d7e18c890eeece3d2130fa580f0bf74a0271",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T08:22:52.804Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0xf2cf9e3efa0a55ee594ad5424f9eefcfcc60f38d",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T10:28:29.190Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x2dc2c2fdf17ede225353ec3445759eef5af8c75c",
+    "reason": "slither:tx-origin; heuristic:public-free-mint",
+    "ts": "2026-10-06T10:48:08.244Z"
+  },
+  {
+    "chainId": "8453",
+    "contract": "0xd7b8717be45e1ebe4c09baabf11ba009cfed13ff",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T11:08:24.735Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0xe705bf79ecce0f5bebe5ebfed4b0f2ca4a0d2ecc",
+    "reason": "heuristic:public-free-mint; heuristic:owner-controlled-mint",
+    "ts": "2026-10-06T11:36:15.503Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0xf0dceb9d262947bc7f0b85bab11598867d1225b9",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T14:54:31.415Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x38e078f4d2dcd04f67240e0490a2e7ea2360477b",
+    "reason": "heuristic:public-free-mint",
+    "ts": "2026-10-06T17:43:24.922Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x555392be73c91b0303e279b0c69616c12d5bfa44",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T19:28:00.865Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x7d6b060186fab000ad9c54d56fce447cc22942b7",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-06T19:28:30.858Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x4c579b4a1ab9054b8e44f5ee37e79d73ebdabcb7",
+    "reason": "bytecode:DELEGATECALL",
+    "ts": "2026-10-07T02:39:26.977Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x73a84d4528c422847ec870c27368fbb6e0b62d1b",
+    "reason": "heuristic:owner-controlled-mint; heuristic:owner-withdraw-sweep",
+    "ts": "2026-10-07T04:50:30.294Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0x9f889b931f82aa3dbf95a260b86f984412ed3973",
+    "reason": "heuristic:public-free-mint",
+    "ts": "2026-10-07T16:28:40.734Z"
+  },
+  {
+    "chainId": "4663",
+    "contract": "0xf3e7dcd9ec154e94d76819e1ddbae35d2afc8c4c",
+    "reason": "heuristic:public-free-mint",
+    "ts": "2026-10-07T16:28:47.235Z"
   }
 ]

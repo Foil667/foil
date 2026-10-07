@@ -2,7 +2,7 @@
 display_name: sbuasma
 nickname: @sbuasma
 summary: Verified X account pushing a fake $CRED claim portal (crypto-k8h.netlify.app) — scam-flagged 2026-10-05; zero engagement.
-rank: 203
+rank: 204
 updated: 2026-10-05
 ---
 

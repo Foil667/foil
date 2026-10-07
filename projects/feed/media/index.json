@@ -40,6 +40,14 @@
       "version": "1a07835420e126b29975723c6d5c33b34dba1f60b5d034628d26d5a45d5cfb50",
       "source_url": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/02073931/Porsche-ends-web3-project-800x420.jpg"
     },
+    "0ba0a47cca85cab9900d1d9fbdc61f9f61c9c2b4be25a84e49e163848c42d0d7": {
+      "path": "workspace/feed/media/3p/f3134daeb2eec05e8286d2644d3388255b49677af7494ad00ccc21ae3c9e20c8/hero.webp",
+      "mime_type": "image/webp",
+      "size_bytes": 40634,
+      "modified_ms": 1791296796566,
+      "version": "9115ce738602937067c514b2bb1ca7827dfe8819455f6f56b3e0354b7fbd5afc",
+      "source_url": "https://www.coindesk.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fs3y3vcno%2Fproduction%2F5e4e537f6b4b9712d3d5ff9f2ea241c1129999cc-1524x832.png%3Frect%3D23%2C0%2C1479%2C832%26w%3D1920%26h%3D1080%26auto%3Dformat&w=3840&q=75"
+    },
     "0ecbec015f3cb5e78b03f9345ea4a29f7623b58b0b1a582e5f1600aa1888bffb": {
       "path": "workspace/feed/media/3p/f9dce1c1ea19115d6dbc5384be7e4fe2b47187b5c4cab3d62c72a9c04e153c7d/hero.png",
       "mime_type": "image/png",
@@ -120,14 +128,6 @@
       "version": "11422f25925b38234f15a12274395bde3e83a6641080b2fe608a8dd9e55536d2",
       "source_url": "https://unchainedcrypto.com/wp-content/uploads/2026/10/robinhood-7912af5f-bd10-46dd-85af-a0b9f88427fc-22-1024x576.png"
     },
-    "30da5bdead76931bbc2287c45416db40ad4435916870b40610260637d1b85cc5": {
-      "path": "workspace/feed/media/3p/3b5d2f3bbcb3c3d101a014ccd63fbd338f668e17d77b8421c944d7a545408e56/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 53692,
-      "modified_ms": 1790713531758,
-      "version": "0780d09f2eb59d9a53c266ad5c1b456885f8f018b56cea1c58df82de55cf3393",
-      "source_url": "https://substackcdn.com/image/fetch/$s_!goA-!,w_1200,h_675,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fce2bef0f-cc74-402f-b7ab-3cf6efc33c89_1184x531.png"
-    },
     "360ccee2e50d04fcf28cee5b5ba6ded468b5f5dc3fd4a5db88e856f30f68aa0f": {
       "path": "workspace/feed/media/3p/f472cef76c1b1ef2ed8d9ef0c89dd2307f25cb4ecb87d0016ff57060b11f1673/hero.jpg",
       "mime_type": "image/jpeg",
@@ -176,13 +176,13 @@
       "version": "c29eb073bf8e4a8c9ce9b9f3a63c1adc3a5eb06e70a1b840de96ab5e2f6d4ad1",
       "source_url": "https://media.crypto.news/2026/10/Screenshot-2026-10-03-113550.webp"
     },
-    "57d934dc16e5ca1f1033e4b73aa66019e721f5f66d6244a19e728ee768f54ead": {
-      "path": "workspace/feed/media/3p/7b6c7d234035d3a73347976299ba43e6cbb0028b8705f4f9c8ffc8d955907620/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 25630,
-      "modified_ms": 1790737082648,
-      "version": "4058a6dc119d8a6814b856de3eea20d78bb1cf16f257d9abf86a8b6272868b48",
-      "source_url": "https://www.coindesk.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fs3y3vcno%2Fproduction%2Fa92db287f1805105761bc517860540b2fdd5b741-2600x1302.png%3Frect%3D143%2C0%2C2315%2C1302%26w%3D1920%26h%3D1080%26auto%3Dformat&w=3840&q=75"
+    "5a65a10cbfeecb88e070dcbff1caa92a266ae07a29e524db3aafff823d9dd841": {
+      "path": "workspace/feed/media/3p/f6cb245310bb5f8f15b923dbfb96774dae1d2d45a1c3c1f941515e90fdcfe564/hero.png",
+      "mime_type": "image/png",
+      "size_bytes": 176504,
+      "modified_ms": 1791342828474,
+      "version": "e2693227f929c68c43010f0047832f00ee8bbfa3718c68c1130fb9b85c1fb0c8",
+      "source_url": "https://blogger.googleusercontent.com/img/a/AVvXsEhZgsRbQePRjXFq4tkiHpPSGIhwzo_lBz4IVAhYgK6NPgvkHt_8mtUMnoLBOhia3ADjAv7aB5vxs8vQLsNbwzR_BrxI_DLa-M1ao2V0F05oZo1ZcQn0yFwWigglpTh3JvGXF7EiHNMXPlp_yg6vZvDuaO0j2T1OPs6xr0uL4HJPDzIx73PB2yXQwJkFpPY=w640-h336"
     },
     "5af3401124d0ceb352f25140af2a5a0808f491944ffbf8b49a8c07b230fd1b53": {
       "path": "workspace/feed/media/3p/3bb168f8dd1eea21910017612439f2d279bb8ba9859a0f5eb44f768202c0014d/hero.jpg",
@@ -191,14 +191,6 @@
       "modified_ms": 1791255571206,
       "version": "744fc2c443ef25921d5f5351ca75067e1c7a2e636bcbd71c8944866d5d4fdb79",
       "source_url": "https://www.ledgerinsights.com/wp-content/uploads/2026/10/okx-ICE-tokenized-securities-venue-tsv-810x524.jpg"
-    },
-    "5e694f6dc071ba44ee66fb7f3adb3dd7f10b3605330e0758f9afda837f0f4b2a": {
-      "path": "workspace/feed/media/3p/af57501d4c656fdc2a80e8499d3b86f38c1e9b6fd7378a0cb5b4d16c754c9cad/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 62557,
-      "modified_ms": 1790691757496,
-      "version": "8b9ba0e28f57ae040eec94723249929cb860f04a71dfd06c8946f3672f33a9c0",
-      "source_url": "https://oceanalt.com/en/articles/deep-auto-muh7iezj-0uti/opengraph-image-14ahr9?a09118ab77a28d92"
     },
     "5e69b70c8c05566cd38a3e59ea8a8ae178b4aeed3f352659064983a1602bb8fe": {
       "path": "workspace/feed/media/3p/70131b37076c1edbb3db4e107c2e8c584dc363db50dfe669da032faee6ae6c07/hero.webp",
@@ -280,6 +272,14 @@
       "version": "938b6b10b994b6193de1e895079a44daa1b23986b48e43615d4d3bae7ac3dcd6",
       "source_url": "https://memeburn.com/wp-content/uploads/2026/09/Elon-Musk-reacts-to-Grok-Coinbase-trading-lead.jpg"
     },
+    "9c754a1544b812ae24d23d320f00e500899109cf35aedf0c30d6196ccd73feb4": {
+      "path": "workspace/feed/media/3p/0c23db8399a2108c0a8805539f428979eef3dbacc3a0ebc3276a489bede00b43/hero.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 242216,
+      "modified_ms": 1791377426259,
+      "version": "70913b3df38bcefdedbc170a3c90ecf0a6253776a08c47965f15e36295aa1522",
+      "source_url": "https://www.coindesk.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fs3y3vcno%2Fproduction%2Fccb0a7f8972de23193d198e8aacaf34f5df00b00-1920x1440.jpg%3Frect%3D0%2C180%2C1920%2C1080%26w%3D1920%26h%3D1080%26auto%3Dformat&w=3840&q=75"
+    },
     "9dfa5f2207c9184245d4d8f85d1b7d3c8a64e15104134e1bab35e6af4f503ae2": {
       "path": "workspace/feed/media/3p/006017747848331f8112a9a792e392bddc9b1b0188ac2ffc90fd91fc852c1cde/hero.jpg",
       "mime_type": "image/jpeg",
@@ -295,14 +295,6 @@
       "modified_ms": 1791140281172,
       "version": "4e82614635d0bcdd6a6462986e3a725b87a3b039d84d4a8bb23a2701f3f308b8",
       "source_url": "https://coinlook.net/wp-content/uploads/2026/10/int-ebf1a091de928d3f8d5434a4ef8b05da-mmro0e4y.jpg"
-    },
-    "ac6cb9ede6cd4a27f3dfc1fd991f667fc8f1eb02fc2c2214b16f845e68612087": {
-      "path": "workspace/feed/media/3p/b73f5a9cd96b800f0681d9801fda752f0ab99f9b372e68704ccccdf72bc4ba9e/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 46518,
-      "modified_ms": 1790605263305,
-      "version": "de45b15dc5231183f1ffee3cbacf6d25fa028611e91b9d0e2b6a6983599163e9",
-      "source_url": "https://media.crypto.news/2026/09/Screenshot-2026-09-26-114531.webp"
     },
     "b052bcd6963f329fed7458b47384f7f37910b1ae5981f06319095744cd30d238": {
       "path": "workspace/feed/media/3p/0f2b1716bcf4fd6ec98cbcc4db713a1c248ef1006c810b8bc23e7664b8908091/hero.png",
@@ -368,6 +360,14 @@
       "version": "d068ea8a7f90ce52ccecd3fd3e00a5c8a873385fcd0389c3557b596694f8ebc7",
       "source_url": "https://www.coindesk.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fs3y3vcno%2Fproduction%2F030d61604f4bdf32cd4013015de2ad6a80a15e24-7200x4800.jpg%3Frect%3D0%2C375%2C7200%2C4050%26w%3D1920%26h%3D1080%26auto%3Dformat&w=3840&q=75"
     },
+    "ca7794d7ed8bb005e7dbb84d48edb1539effddf4239ce457e1d359b5ef4392ca": {
+      "path": "workspace/feed/media/3p/1894ee6b021db82f61afd2b9664c9291359164c7ebd73b09713d4603c19a5f07/hero.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 72477,
+      "modified_ms": 1791274564578,
+      "version": "2f8acf7b65173b9988098ce6740864d52d3c7c9996100784575b5ff6305901e2",
+      "source_url": "https://en.cryptonomist.ch/wp-content/uploads/2026/10/stablecoin-payments.jpeg"
+    },
     "dd94057a642ef439d34a6399888dbcbc5b0d70f6cfaa2f5ea971047174ca0315": {
       "path": "workspace/feed/media/3p/04484186f18e471e71e8c6a78daa6bc51d33acabe68d0a38b1141c1671d9f5a9/hero.png",
       "mime_type": "image/png",
@@ -408,13 +408,13 @@
       "version": "468b2c5ac364aff2faf344017364afbb0e279cd7f2ff1387378e65f3c5e879c2",
       "source_url": "https://www.thecoinrepublic.com/wp-content/uploads/2026/10/1Jmemmd8JpaKeF8ac1XLDK9QbTbmKOxTH.jpeg"
     },
-    "eb7821e6dd37fea2f7ccd951536a3107df9d5ee60d0d88d3fa51e67f8090570f": {
-      "path": "workspace/feed/media/3p/7e0e1496f0acd9b650089ed4d59d4cd810c06b0705149ccc52fe1995bac435e5/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 50418,
-      "modified_ms": 1790605263307,
-      "version": "d87d718e249940c1338124cd5c7984a8948cf06087658d01de10b635fd51b2bc",
-      "source_url": "https://media.crypto.news/2026/09/Screenshot-2026-09-26-114518.webp"
+    "faae756eb1d585e2e657c99c7c1bafbaf8590fac6c5f7745cd91d6bb29caa8e1": {
+      "path": "workspace/feed/media/3p/52eed1bacea2cd0dc7ec0c9b00a19ffd8ae60d2660abc26992a5ddf71de41ef7/hero.png",
+      "mime_type": "image/png",
+      "size_bytes": 107181,
+      "modified_ms": 1791377426265,
+      "version": "463c4440e547fcc3a44ee679c380a9cc4ac967fa836d4e82464e6af1a6e35986",
+      "source_url": "https://s3-images.ctmedia.io/media/content/2026/10/01M4AW469YCP6F33KKGQYF9GC4/pasted-image-2772.png"
     },
     "feb595fdb56e7678ab3467a18401615f1c89d07e7e5bff10348364fcc2fadb87": {
       "path": "workspace/feed/media/3p/4b62bf736c938c1b0f7a7726a3e99711549ba9ceb4331a29230704885dd64f84/hero.jpg",
@@ -423,14 +423,6 @@
       "modified_ms": 1790989809805,
       "version": "e334b620db9ea98a05b18e019db6afe050f0aba47d2a104769669ab21036bdba",
       "source_url": "https://media.cybernews.com/images/featured-big/2026/10/AI-begging-20.jpg"
-    },
-    "feb6614942b63b9a784ddda7ee0d9a3874fef4e5ea37f98b43b126d3dbb13475": {
-      "path": "workspace/feed/media/3p/616f010cdadb33881a7fe6ba4c113f1b2b0963835e42325a53517a3041b7d200/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 272994,
-      "modified_ms": 1790626767703,
-      "version": "8625a70478eea3d24f14a38fad076318f29abc299f6c9c1af755ae0daa98309f",
-      "source_url": "https://www.cryptotimes.io/wp-content/uploads/2026/09/BlackRock-Says-AI-Agents-Could-Become-Cryptos-Next-Demand-Engine.jpg"
     }
   }
 }

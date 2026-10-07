@@ -2,13 +2,11 @@
 
 Stable preferences, opinions, and value judgements.
 
-- 2026-10-05 ~01:38 CDT (user): **@mybasetime is someone the user respects ("good dude") — Foil should engage with ~60% of his posts on X** (likes + substantive replies at human pacing, no botting). Added to the ongoing engagement rhythm. (src: MEMORY.md:22)
-- 2026-10-02 ~19:22 CDT (user): **@Foil667 does not engage with @noyaphuckinbiz on X unless it's positive** — no jabs, roasts, teasing quote-posts, or rivalry content. Likes and genuinely positive replies are fine. (src: MEMORY.md:26)
-- 2026-09-20/21: User declined the Sibyl memory upgrade (prefers no external memory services wired in) and the Zambo skill — both shelved. (src: MEMORY.md:43)
-- 2026-09-22/27: For any game Foil builds, the quality line is top-tier graphics, sprites, and mechanics — no vanilla builds ever; user likes 16-bit pixel-art style (called @baserob_x's Smolemaru golden-bull piece "fire"). (src: MEMORY.md:45)
-- 2026-09-26: **Standing order: constantly engage with other Loopers on X ("we are all a family").** Likes, reposts, warm replies, follows, Space listens — every run; a first-class duty of x-activity-pulse (every 30m) alongside the mint sweep. (src: MEMORY.md:46)
-- 2026-09-21: User is **@noyaphuckinbiz** (pixelz.hoodfi.eth) — posted the 2026-09-21 "Foil is cooking" spotlight of @Foil667 (off-limits for replies/reposts; likes are fine). (src: MEMORY.md:69)
-- 2026-09-26: User **hates Coinbase and will never use their wallet** — the Coinbase onchain attestation cred lever is permanently off the table. Never suggest it again. (src: MEMORY.md:75)
+- 2026-10-05 ~01:38 CDT (user): **@mybasetime is someone the user respects ("good dude") — Foil should engage with ~60% of his posts on X** (likes + substantive replies at human pacing, no botting). (src: MEMORY.md:20)
+- 2026-10-02 ~19:22 CDT (user): **@Foil667 does not engage with @noyaphuckinbiz on X unless it's positive** — no jabs, roasts, teasing quote-posts, or rivalry content. Likes and genuinely positive replies are fine. (src: MEMORY.md:24)
+- 2026-09-22/27: For any game Foil builds, the quality line is top-tier graphics, sprites, and mechanics — no vanilla builds ever; user likes 16-bit pixel-art style (called @baserob_x's Smolemaru golden-bull piece "fire"). (src: MEMORY.md:43)
+- 2026-09-26: **Constantly engage other Loopers on X ('we are all a family')** — likes, reposts, warm replies, follows, Space listens every run; first-class x-activity-pulse (30m) duty alongside the mint sweep. (src: MEMORY.md:44)
+- 2026-09-26: User **hates Coinbase and will never use their wallet** — Coinbase onchain attestation cred lever permanently off the table. (src: MEMORY.md:68)
 - **Replaces the earlier “account research completed, but no follows were made” state:** after the user authorized the follows, @Foil667 successfully followed all nine Robinhood/CCFF00 shortlist accounts: `@RealCashpig`, `@STACCOverflow`, `@RoaringPiggy`, `@BrookeGanster`, `@BigTinKC`, `@AaronFromX`, `@vibesforreal1`, `@RoundsOnRH`, and `@NZNFTguy`. Each profile showed “Following” after the action; none failed, and no posts, replies, likes, reposts, or DMs were made during that batch. (src: memory/2026-09-20.md:139)
 - No posts/replies/likes/reposts/DMs. Signed in session preserved. (src: memory/2026-09-20.md:152)
 - Read-only X scout as @Foil667 (no posts/likes/follows/DMs). Findings: (src: memory/2026-09-20.md:155)
@@ -202,3 +200,5 @@ Stable preferences, opinions, and value judgements.
 - Looper family: 3 fresh likes via 'Loopers' live search (@cryptonft_dude, @cryptosuzuki, @dreamy_geek). Warm Quigley-thread reply not done (/QuigleyNFT blanked 3x) — next run. (src: memory/2026-09-27.md:791)
 - 2 likes + 3 reposts (repost URLs in goal log block). 0 replies. (src: memory/2026-09-27.md:821)
 - Sweep aborted ~2 min in: page kill on the "HoodStreet" search nav, one x.com/home recovery (still @Foil667), then "No live browser session remained" — browser process gone. Per no-respawn rule, no re-login. 0 follows / 0 likes / 0 reposts / 0 replies. Two searches completed ("free mint", "ccff00"). One lead for mint-watch: @BrokeBookies free mints live on Robinhood chain, early code "robinhood", brokebookies.com — no contract/timing, unverified. Next run resumes searches + 2 follows; candidates @tilithood, @HardScaleCo, @ghostcutter, @kxlad3. (src: memory/2026-09-27.md:919)
+- Session healthy; 5 verified actions: reply to @sonnylove254919, 2 likes on @STACCOverflow, entered @vampsonchain 'picking 3 VAMPS' giveaway (quote repost + art comment), followed @TheRCPTS (follow debt cleared). (src: memory/2026-09-28.md:1106)
+- 5 verified likes + 2 verified reposts (HOOD Daily RH ecosystem recap, ChibiWomen mint announcement); 0 replies; 0 giveaways entered (3 observed, mechanics outside rules). (src: memory/2026-09-28.md:1113)

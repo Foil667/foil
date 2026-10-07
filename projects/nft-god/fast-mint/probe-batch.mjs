@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-const RPC = 'https://rpc.mainnet.chain.robinhood.com';
+const RPC = 'https://robinhood-rpc.publicnode.com';
 const CANON = '0x00005EA00Ac477B1030CE78506496e8C2dE24bf5';
 const FORK = '0x00005ea00ac477b1030ce78506496e8c2de24bf5';
 const provider = new ethers.JsonRpcProvider(RPC);

@@ -2,7 +2,7 @@
 display_name: CCFF00 / HoodStreet
 summary: CCFF00 founding-membership NFT community on Robinhood Chain; the claim lane is mechanical-only since 2026-10-06 (X vetting removed) after widening to CCFF00-whitelist + public free mints.
 rank: 1
-updated: 2026-10-06
+updated: 2026-10-07
 ---
 
 # CCFF00 / HoodStreet
@@ -26,7 +26,8 @@ updated: 2026-10-06
 - 2026-09-30/10-01 claim wave (~20 projects) — all forwarded, verified onchain; fail-closed patch: no claim without recorded project-owned route evidence; lane re-armed 2026-10-04. (message:assistant-msg-a49830b7-f0f0-ef30-57ef-e6b8d7bff47e)
 - 2026-10-05 fairness probe: verifiable draws clean (@zackgaskins90 square giveaway; HOODVALE GTD); flag: winner wallet shows zero NFT transfers — prize possibly undelivered; re-scan in a week. (user messages:90d6e1fc-bd19-4cd7-b416-f00b3b475eb4, 322230af-e6e2-483a-ae61-a61447d9ac84; message:assistant-msg-3cd6a35e-14b4-a9a8-dd7c-645155f33923)
 - 2026-10-05 ~07:00–07:30 CDT: Roaring Piggies ran a CCFF00-holder free window — no claim (route unverified, holder phase offchain-only); high-priority watch. (message:assistant-msg-65e34cec-3112-08da-d560-52ece50a48b3)
-- 2026-10-06: first mechanical-lane claims — The spark ×5, Fatfl Funks ×5, Stonkzombies ×2 (all held); Hoodborn sold out pre-fire (no gas). (message:0fc4bfe2-ddec-4fce-8fd9-a1e1e27de845; message:assistant-msg-921016a1-0d23-9ee9-8c10-e2057188fe73; message:assistant-msg-bc9acebc-25f5-b58f-9bf4-1c4d18d3fc42; message:assistant-msg-588f29d1-06c7-2203-0dab-63d381e62ff2)
+- 2026-10-06: first mechanical-lane claims — The spark ×5, Fatfl Funks ×5, Stonkzombies ×2 (all held); Hoodborn sold out pre-fire (no gas). (message:0fc4bfe2-ddec-4fce-8fd9-a1e1e27de845; message:assistant-msg-921016a1-0d23-9ee9-8c10-e2057188fe73; message:assistant-msg-bc9acebc-25f5-b58f-9bf4-1c4d18d3fc42; message:assistant-msg-588f29d1-0d23-9ee9-8c10-e2057188fe73)
+- 2026-10-06 ~22:34 CDT: the user said he's relaxing with the CCFF00 group tonight — enjoying the community, desk on autopilot, Foil to ping only for things needing his eyes. (message:3f5a9a7c-254d-49b9-aed2-f8f373a3060e)
 
 ## Themes
 - "ccff00 free mint" chatter: which mints honor square-holder WLs; "CCFF00 WL" no longer proves blanket eligibility (Apocryphaz's presale was a curated allowlist).

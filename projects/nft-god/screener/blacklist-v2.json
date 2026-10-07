@@ -1634,5 +1634,69 @@
   "8453:0x8b25253dc5aae2f8ba3ff78771077b2f7ec32199": {
     "reason": "rug-check 8453:0x8b25253dc5aae2f8ba3ff78771077b2f7ec32199\ntarget scanned : 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] proxy:implementation-resolved\n  Target is a proxy; scanning implementation 0x09a26fC8FCEF18192E267D7A6da9dFb4be81Dd6A (resolved via blockscout-implementations, name ERC721SeaDropCloneable). Whoever controls the proxy admin can replace th",
     "at": "2026-10-06T01:50:46.454Z"
+  },
+  "8453:0x177f79bacf30c86bc60f9d73a753259ee8aee8c3": {
+    "reason": "rug-check 8453:0x177f79bacf30c86bc60f9d73a753259ee8aee8c3\ntarget scanned : 0x177f79bacf30c86bc60f9d73a753259ee8aee8c3 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). ",
+    "at": "2026-10-06T07:45:45.422Z"
+  },
+  "8453:0x48efc213aa69a345432a67431cd6f90cd1560d35": {
+    "reason": "rug-check 8453:0x48efc213aa69a345432a67431cd6f90cd1560d35\ntarget scanned : 0x48efc213aa69a345432a67431cd6f90cd1560d35 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). ",
+    "at": "2026-10-06T08:00:45.664Z"
+  },
+  "8453:0x52e8d7e18c890eeece3d2130fa580f0bf74a0271": {
+    "reason": "rug-check 8453:0x52e8d7e18c890eeece3d2130fa580f0bf74a0271\ntarget scanned : 0x52e8d7e18c890eeece3d2130fa580f0bf74a0271 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x2 with no proxy markers (heuristic scan, no source). ",
+    "at": "2026-10-06T08:20:45.843Z"
+  },
+  "4663:0xf2cf9e3efa0a55ee594ad5424f9eefcfcc60f38d": {
+    "reason": "rug-check 4663:0xf2cf9e3efa0a55ee594ad5424f9eefcfcc60f38d\ntarget scanned : 0xf2cf9e3efa0a55ee594ad5424f9eefcfcc60f38d (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-06T10:25:44.572Z"
+  },
+  "4663:0x2dc2c2fdf17ede225353ec3445759eef5af8c75c": {
+    "reason": "rug-check 4663:0x2dc2c2fdf17ede225353ec3445759eef5af8c75c\ntarget scanned : 0x2dc2c2fdf17ede225353ec3445759eef5af8c75c (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[MEDIUM] slither:tx-origin\n  MintGuard._checkMinter(address) (src/MintGuard.sol#72-75) uses tx.origin for authorization: who != tx.origin || who.code.length != 0 (src/MintGuard.sol#73)  [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Functio",
+    "at": "2026-10-06T10:45:45.167Z"
+  },
+  "8453:0xd7b8717be45e1ebe4c09baabf11ba009cfed13ff": {
+    "reason": "rug-check 8453:0xd7b8717be45e1ebe4c09baabf11ba009cfed13ff\ntarget scanned : 0xd7b8717be45e1ebe4c09baabf11ba009cfed13ff (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x2 with no prox",
+    "at": "2026-10-06T11:05:44.855Z"
+  },
+  "4663:0xe705bf79ecce0f5bebe5ebfed4b0f2ca4a0d2ecc": {
+    "reason": "rug-check 4663:0xe705bf79ecce0f5bebe5ebfed4b0f2ca4a0d2ecc\ntarget scanned : 0xe705bf79ecce0f5bebe5ebfed4b0f2ca4a0d2ecc (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function freeMint() is external with no access control and no payment check — anyone can mint",
+    "at": "2026-10-06T11:33:10.610Z"
+  },
+  "4663:0xf0dceb9d262947bc7f0b85bab11598867d1225b9": {
+    "reason": "rug-check 4663:0xf0dceb9d262947bc7f0b85bab11598867d1225b9\ntarget scanned : 0xf0dceb9d262947bc7f0b85bab11598867d1225b9 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-06T14:51:47.918Z"
+  },
+  "4663:0x05442220c1fda9e0edff7cb3c61f9f7dc3a4d2d2": {
+    "reason": "rug-check 4663:0x05442220c1fda9e0edff7cb3c61f9f7dc3a4d2d2\ntarget scanned : 0x05442220c1fda9e0edff7cb3c61f9f7dc3a4d2d2 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no proxy markers (heuristic scan, no source). ",
+    "at": "2026-10-06T15:00:47.754Z"
+  },
+  "4663:0x38e078f4d2dcd04f67240e0490a2e7ea2360477b": {
+    "reason": "rug-check 4663:0x38e078f4d2dcd04f67240e0490a2e7ea2360477b\ntarget scanned : 0x38e078f4d2dcd04f67240e0490a2e7ea2360477b (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function claim() is external with no access control and no payment check — anyone can mint (d",
+    "at": "2026-10-06T17:40:46.719Z"
+  },
+  "4663:0x555392be73c91b0303e279b0c69616c12d5bfa44": {
+    "reason": "rug-check 4663:0x555392be73c91b0303e279b0c69616c12d5bfa44\ntarget scanned : 0x555392be73c91b0303e279b0c69616c12d5bfa44 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-06T19:25:51.260Z"
+  },
+  "4663:0x7d6b060186fab000ad9c54d56fce447cc22942b7": {
+    "reason": "rug-check 4663:0x7d6b060186fab000ad9c54d56fce447cc22942b7\ntarget scanned : 0x7d6b060186fab000ad9c54d56fce447cc22942b7 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x1 with no prox",
+    "at": "2026-10-06T19:25:51.260Z"
+  },
+  "4663:0x4c579b4a1ab9054b8e44f5ee37e79d73ebdabcb7": {
+    "reason": "rug-check 4663:0x4c579b4a1ab9054b8e44f5ee37e79d73ebdabcb7\ntarget scanned : 0x4c579b4a1ab9054b8e44f5ee37e79d73ebdabcb7 (bytecode only)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[HIGH] bytecode:DELEGATECALL\n  Runtime bytecode contains DELEGATECALL opcode x6 with no prox",
+    "at": "2026-10-07T02:36:46.593Z"
+  },
+  "4663:0x73a84d4528c422847ec870c27368fbb6e0b62d1b": {
+    "reason": "rug-check 4663:0x73a84d4528c422847ec870c27368fbb6e0b62d1b\ntarget scanned : 0x73a84d4528c422847ec870c27368fbb6e0b62d1b (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:analysis-incomplete\n  Slither did not produce results (exit 1). Output tail: ppelin-contracts/contracts/utils/Bytes.sol:168:13: | 168 | mcopy(add(add(buffer, 0x20), pos), add(add(replacement, 0x20), offset), length) | ^^^^^ Error: ",
+    "at": "2026-10-07T04:49:01.685Z"
+  },
+  "4663:0x9f889b931f82aa3dbf95a260b86f984412ed3973": {
+    "reason": "rug-check 4663:0x9f889b931f82aa3dbf95a260b86f984412ed3973\ntarget scanned : 0x9f889b931f82aa3dbf95a260b86f984412ed3973 (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (di",
+    "at": "2026-10-07T16:25:48.228Z"
+  },
+  "4663:0xf3e7dcd9ec154e94d76819e1ddbae35d2afc8c4c": {
+    "reason": "rug-check 4663:0xf3e7dcd9ec154e94d76819e1ddbae35d2afc8c4c\ntarget scanned : 0xf3e7dcd9ec154e94d76819e1ddbae35d2afc8c4c (verified source)\nverdict        : FLAGGED\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] slither:no-findings\n  Slither analyzed the contract with 6 detectors and reported no issues. [src:sourcify]\n[MEDIUM] heuristic:public-free-mint\n  Function mint() is external with no access control and no payment check — anyone can mint (di",
+    "at": "2026-10-07T16:25:48.228Z"
   }
 }

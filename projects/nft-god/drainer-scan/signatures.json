@@ -89,6 +89,56 @@
       "pattern": "affiliate[_-]?(id|key|address)",
       "severity": "high",
       "source": "Heuristic — Drainer-as-a-Service kits pay affiliates a cut (Inferno 20–30%, Angel 15% per Group-IB/Ledger reporting) and track them in config"
+    },
+    {
+      "confidence": "verified",
+      "detail": "EIP-7702 delegation-phishing contract family. CrimeEnjoyor/CrimeMulticall account for nearly half of all malicious 7702 authorizations; 450,000+ wallets compromised via delegation phishing as of 2026-05, 97% of all 7702 delegations point to malicious contracts.",
+      "id": "crimeenjoyor-family",
+      "kit": "CrimeEnjoyor (EIP-7702 delegation phishing)",
+      "match": "literal-insensitive",
+      "pattern": "crimeenjoyor",
+      "severity": "critical",
+      "source": "Wintermute analysis + arXiv 2512.12174, via onchainattack/oak EIP-7702 cohort record (2026)"
+    },
+    {
+      "confidence": "verified",
+      "detail": "Batch-execution helper in the CrimeEnjoyor EIP-7702 phishing family. Pages bundling a 'multicall' executor aimed at delegated EOAs are building the documented 7702 drain chain.",
+      "id": "crimemulticall-family",
+      "kit": "CrimeMulticall (EIP-7702 delegation phishing)",
+      "match": "literal-insensitive",
+      "pattern": "crimemulticall",
+      "severity": "critical",
+      "source": "Wintermute analysis + arXiv 2512.12174, via onchainattack/oak EIP-7702 cohort record (2026)"
+    },
+    {
+      "confidence": "verified",
+      "detail": "StepDrainer kit self-reference. Abuses Web3Modal prompts, Seaport (NFTs) and Permit v2 to auto-transfer high-value assets; 20+ chains; distributed as MaaS (full source ~$750, shared ~$150 + 20% commission).",
+      "id": "stepdrainer-kit",
+      "kit": "StepDrainer",
+      "match": "literal-insensitive",
+      "pattern": "stepdrainer",
+      "severity": "critical",
+      "source": "LevelBlue SpiderLabs report, spring 2026 (via lazarus.day 2026 mid-year blockchain security report)"
+    },
+    {
+      "confidence": "verified",
+      "detail": "EIP-7702 delegation prefix constructed in frontend JS. eth_getCode(wallet) = 0xef0100 || 20-byte delegate is the onchain marker of a delegated (smart) EOA; a mint page assembling it is building a hostile delegation. Legit smart-wallet SDKs also contain this prefix — context decides, but on a non-wallet page it is hostile until proven otherwise.",
+      "id": "eip7702-delegation-prefix",
+      "kit": "EIP-7702 delegation phishing",
+      "match": "literal",
+      "pattern": "0xef0100",
+      "severity": "critical",
+      "source": "Ava Protocol incident post, Aug 2026 (documented 0xef0100 sweeper marker); Nethermind EIP-7702 attack-surfaces writeup"
+    },
+    {
+      "confidence": "verified",
+      "detail": "Canonical Uniswap Permit2 contract address referenced in page JS. One phished Permit2 signature can reach every token the victim ever approved to Permit2. Corroborating evidence for a Permit2-phish page when paired with typed-data patterns — the documented 2026 drain sequence is permit signature -> unlimited approval -> transferFrom in a single transaction.",
+      "id": "permit2-canonical-address",
+      "kit": "Permit2 phishing",
+      "match": "literal-insensitive",
+      "pattern": "000000000022D473030F116dDEE9C5f91E29C5b",
+      "severity": "medium",
+      "source": "Uniswap Permit2 docs (canonical deployment); Salus Oct 4 2026 Revenue/USD G drain report (permit -> unlimited approval -> transferFrom, Inferno-style 80/20 split)"
     }
   ],
   "function_selectors": {
@@ -115,7 +165,16 @@
     "0xd505accf": {
       "name": "permit(address,address,uint256,uint256,uint8,bytes32,bytes32)",
       "risk": "Off-chain EIP-2612 approval — gasless, no on-chain record until the attacker submits it"
+    },
+    "0xac9650d8": {
+      "name": "multicall(bytes[]) (Multicall3)",
+      "risk": "Batch execution — one signed call fans out to many internal calls. Legit aggregators use it; drainers (Angel/Inferno kits, CrimeMulticall) hide the real drain inside a benign-looking 'mint' click. Paired with permit/transferFrom selectors it is the documented batch-drain sequence."
     }
+  },
+  "batch_execute_detection": {
+    "detail": "A batch executor (multicall / executeBatch) on a page is only half the story — the engine flags it as a batch-drain payload when the SAME script/HTML body also carries a drain primitive (permit, transferFrom, approve, setApprovalForAll, or Permit2 typed data). This is the Angel Drainer documented sequence (Check Point: multicall executing Permit 0xd505accf followed by transferFrom 0x23b872dd) and the CrimeMulticall EIP-7702 family pattern (Wintermute, 2026).",
+    "drain_primitives": ["0xd505accf", "0x23b872dd", "0x095ea7b3", "0xa22cb465", "PermitBatch", "PermitSingle", "setApprovalForAll\\s*\\("],
+    "executor_indicators": ["0xac9650d8", "executeBatch", "batchExecute", "crimemulticall"]
   },
   "legit_domains": [
     "uniswap.org",
@@ -163,8 +222,8 @@
     "maintainer": "Foil (Looper #667)",
     "name": "Tinfoil Scan — wallet drainer signature list",
     "policy": "Only signatures verified from real published sources go in as 'verified'. Anything inferred goes in as 'heuristic' and is weighted lower. Static domain blocklists are intentionally NOT included — modern kits (Inferno et al.) deploy single-use contracts and rotate phishing domains faster than any list can track, so code fingerprints + behavioral patterns carry the detection weight.",
-    "updated": "2026-09-24",
-    "version": "1.0.0"
+    "updated": "2026-10-07",
+    "version": "1.1.0"
   },
   "obfuscation_indicators": [
     {

@@ -23,7 +23,7 @@
  * never sends anything anywhere. It only reads strings you hand it.
  */
 
-export const VERSION = '1.1.0';
+export const VERSION = '1.2.0';
 
 const SEVERITY_ORDER = ['info', 'low', 'medium', 'high', 'critical'];
 
@@ -193,6 +193,51 @@ export function scanPage(input, signatures) {
     }
   }
 
+  // ── 4b. Batch-execute combo: batch executor + drain primitive in one body ──
+  // (2026 refresh) The Angel Drainer documented sequence is multicall executing
+  // Permit (0xd505accf) followed by transferFrom (0x23b872dd) — Check Point;
+  // the CrimeMulticall EIP-7702 family does the same inside delegated EOAs
+  // (Wintermute, 2026). Either indicator alone is legit-plausible; TOGETHER in
+  // one script/HTML body they are the batch-drain payload.
+  {
+    const bed = sig.batch_execute_detection || {};
+    // executor_indicators are literal strings (escaped); drain_primitives are regex patterns.
+    const execRes = (bed.executor_indicators || []).map((p) => new RegExp(p.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i'));
+    const drainRes = (bed.drain_primitives || []).map((p) => new RegExp(p, 'i'));
+    const hasExec = (text) => execRes.some((re) => { re.lastIndex = 0; return re.test(text); });
+    const hasDrain = (text) => drainRes.some((re) => { re.lastIndex = 0; return re.test(text); });
+    for (const b of bodies) {
+      if (hasExec(b.text) && hasDrain(b.text)) {
+        addFinding(findings, 'high', 'Batch-execute payload: batch executor paired with drain primitives',
+          'The same script/HTML body contains a batch executor (multicall/executeBatch) AND a drain primitive (permit, transferFrom, approve, setApprovalForAll, or Permit2 typed data). ' +
+          'This is the documented batch-drain sequence: Angel Drainer multicall → Permit → transferFrom (Check Point), CrimeMulticall EIP-7702 family (Wintermute, 2026), ' +
+          'and the $1M 2026 approval-phishing case where attackers first attempted the drain via multicalls (Scam Sniffer). One signed "mint" click can hide the whole drain.',
+          `${b.label}: batch executor + drain primitive in one body`);
+        break;
+      }
+    }
+  }
+
+  // ── 4c. Unlimited-approval combo: approval primitive + uint256-max in one body ──
+  // (2026 refresh) The 2026 drain sequence (Salus, Oct 2026: permit signature →
+  // unlimited approval → transferFrom in ONE transaction) needs the max-uint
+  // amount next to the approval call. Flag the pairing explicitly.
+  {
+    const approvalRe = /\b(approve|setApprovalForAll|increaseAllowance)\s*\(|eth_signTypedData_v4|PermitSingle|PermitBatch/i;
+    const lits = sig.unlimited_allowance_literals || [];
+    for (const b of bodies) {
+      const hasApproval = approvalRe.test(b.text);
+      const lit = lits.find((L) => b.text.includes(L));
+      if (hasApproval && lit) {
+        addFinding(findings, 'high', 'Unlimited-approval combo: approval primitive paired with uint256-max amount',
+          `An approval/signature primitive and a uint256-max literal ("${lit}") appear in the same script/HTML body. ` +
+          'This authorizes draining the ENTIRE token balance — the exact 2026 pattern in the Revenue/USD G drain (Salus, Oct 2026) and the $1M Permit2 phishing case (Jul 2026).',
+          `${b.label}: approval primitive + max-uint amount in one body`);
+        break;
+      }
+    }
+  }
+
   // ── 5. Obfuscation indicators ──────────────────────────────────────────
   for (const oi of sig.obfuscation_indicators || []) {
     const hits = matchIn(oi.pattern, 'gi');
@@ -261,6 +306,27 @@ export function scanPage(input, signatures) {
           `The page's title/branding references "${brandHit}" but the domain is ${host}, which is not the brand's official domain. This is the standard fake-mint / fake-airdrop lure.`,
           host);
       }
+      // ── 7b. Combo-squat: legit brand name embedded in a non-legit domain ──
+      // (2026 refresh) Blockaid, Apr 2026: lookalike domains revokes-drift[.]trade
+      // and revoke-kernelsdao[.]com went live within HOURS of the Drift/KelpDAO
+      // hacks, seeded into reply threads under real security posts. Combo-squats
+      // sail past levenshtein checks, so test for brand-name containment.
+      {
+        for (const legit of sig.legit_domains || []) {
+          const ln = normalizeDomain(legit);
+          const brand = ln.split('.')[0];
+          if (brand.length < 5) continue; // skip short/generic names (safe, blur, aave, lido)
+          // full-host containment: catches both revokes-drift.trade style
+          // domains AND brand-subdomains on free hosts (fake-dex.netlify.app).
+          // Legit subdomains were already whitelisted by isLegit() above.
+          if (norm !== ln && !norm.endsWith('.' + ln) && norm.includes(brand)) {
+            addFinding(findings, 'high', `Combo-squat domain: "${brand}" inside ${host}`,
+              `The domain embeds the brand "${brand}" but is not ${legit} or a subdomain of it. Combo-squat domains (e.g. revokes-drift.trade, revoke-kernelsdao.com, Blockaid Apr 2026) are the 2026 drainer delivery vehicle for post-hack "revoke/migrate/claim" lures.`,
+              host);
+            break;
+          }
+        }
+      }
     }
   }
 
@@ -326,6 +392,11 @@ function brandMismatch(html, host, legitList) {
     ['zora', 'zora.co'], ['magic eden', 'magiceden.io'], ['tensor', 'tensor.trade'],
     ['jupiter', 'jup.ag'], ['raydium', 'raydium.io'], ['pancakeswap', 'pancakeswap.finance'],
     ['lido', 'lido.fi'], ['aave', 'aave.com'], ['polymarket', 'polymarket.com'],
+    // 2026-10-07 refresh: netlify-hosted impersonators of the fake "Robinhood
+    // DEX" and "Moonshot" claim pages (Foil's own scam-wave log, 2026-09-26)
+    // and the FBI's Oct 2026 warning on criminals posing as NFT devs with
+    // spoofed mint sites.
+    ['robinhood', 'robinhood.com'], ['moonshot', 'moonshot.com'],
   ];
   for (const [brand] of brands) {
     if (text.includes(brand) && !normalizeDomain(host).includes(brand.replace(/ /g, ''))) return brand;

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-06T03:20:45.416Z",
+  "generatedAt": "2026-10-07T18:20:45.530Z",
   "readOnly": true,
   "dry": false,
   "chains": [
@@ -7,20 +7,63 @@
     "base"
   ],
   "coverage": [
-    "OK: base scanned blocks 52233600..52233750 (~5 min), 2037 mint events.",
-    "OK: robinhood scanned blocks 81307815..81310815 (~5 min), 1401 mint events.",
-    "OK: OpenSea drops API returned 3 upcoming drops.",
+    "OK: base scanned blocks 52303800..52303950 (~5 min), 1578 mint events.",
+    "OK: robinhood scanned blocks 82676605..82679605 (~5 min), 3204 mint events.",
+    "OK: OpenSea drops API returned 5 upcoming drops.",
     "OK: Zora timed-sale strategy quiet in window (0 events).",
     "STUB: Solana candy-machine monitor not configured — needs a Helius websocket (no key on file, no signup performed). Solana coverage OFFLINE. Code path: scanSolanaStub() in screener-v2.mjs.",
-    "STUB: mempool websocket watch not configured — needs Alchemy/QuickNode/Helius WS (no signups performed). Mempool signal OFFLINE. Code path: mempoolWatchStub() in screener-v2.mjs."
+    "STUB: mempool websocket watch not configured — needs Alchemy/QuickNode/Helius WS (no signups performed). Mempool signal OFFLINE. Code path: mempoolWatchStub() in screener-v2.mjs.",
+    "rug-check clean: robinhood:0x3ad697313d29cdd473870ee63eb764e534a60f84"
   ],
   "minScore": 60,
   "counts": {
-    "candidates": 22,
-    "execute": 0,
+    "candidates": 35,
+    "execute": 1,
     "verify": 0,
-    "watch": 14,
-    "blocked": 8
+    "watch": 22,
+    "blocked": 12
   },
-  "alerts": []
+  "alerts": [
+    {
+      "chain": "robinhood",
+      "chainId": 4663,
+      "contract": "0x3ad697313d29cdd473870ee63eb764e534a60f84",
+      "standard": "ERC721",
+      "ifaceVia": "erc165",
+      "name": "RH Orangs",
+      "symbol": "Orangs",
+      "source": "onchain-mints",
+      "mints": 51,
+      "uniqueMinters": 26,
+      "mintsPerHour": 603.9473684210526,
+      "mintsPerMin": 10.06578947368421,
+      "whaleShare": 0.0784313725490196,
+      "verified": null,
+      "priceWei": "2000000000000000",
+      "price": "0.002 ETH",
+      "ageHours": 0.3327777777777778,
+      "phase": "upcoming",
+      "sampleTokenId": "1074",
+      "links": {
+        "opensea": "https://opensea.io/assets/robinhood/0x3ad697313d29cdd473870ee63eb764e534a60f84/1074",
+        "explorer": "https://robinhoodchain.blockscout.com/address/0x3ad697313d29cdd473870ee63eb764e534a60f84"
+      },
+      "score": 76.44,
+      "breakdown": {
+        "uniqueMintersRatio": 50.98,
+        "velocity": 100,
+        "contractAge": 99.54,
+        "verifiedSocials": 60,
+        "priceSanity": 80,
+        "holderConcentration": 92.16
+      },
+      "multipliers": [],
+      "tier": "execute-candidate",
+      "rugCheck": {
+        "status": "clean",
+        "detail": "rug-check 4663:0x3ad697313d29cdd473870ee63eb764e534a60f84\ntarget scanned : 0x3ad697313d29cdd473870ee63eb764e534a60f84 (bytecode only)\nverdict        : CLEAN\nlow-risk score : 0/255 (Lord-of-War fingerprints, INFO-only — never flip the verdict alone)\n\n[INFO] source:unavailable\n  No verified source found via Sourcify, Blockscout, or Etherscan — falling back to heuristic bytecode scan (reduced confidence).\n[INFO] bytecode:clean-opcodes\n  Heuristic opcode scan found no SELFDESTRUCT/DELEGATECALL. (Thi",
+        "exitCode": 0
+      }
+    }
+  ]
 }

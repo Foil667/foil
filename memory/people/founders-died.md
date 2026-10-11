@@ -1,7 +1,7 @@
 ---
 display_name: Founders Died
 summary: Behind Founders Died's Robinhood Chain mint; Foil claimed ×3 on 2026-10-06 (flipped to ~$0.099, still under cap) — held pending the user's "send me all" order.
-rank: 233
+rank: 236
 updated: 2026-10-06
 ---
 

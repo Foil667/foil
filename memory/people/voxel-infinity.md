@@ -1,7 +1,7 @@
 ---
 display_name: Voxel Infinity
 summary: Behind Voxel Infinity's Robinhood Chain mint; Foil claimed ×1 on 2026-10-06 (~$0.188) — held in Foil's wallet, forwardable on the user's word.
-rank: 247
+rank: 250
 updated: 2026-10-06
 ---
 

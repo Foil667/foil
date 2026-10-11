@@ -2,7 +2,7 @@
 display_name: bambooriot
 nickname: @BambooRiot
 summary: Behind BambooRiot, a free mint on Robinhood Chain (WL open at bambooriot.xyz); followed from @Foil667 at the user's direction on 2026-09-22 for mint intel.
-rank: 31
+rank: 33
 updated: 2026-09-22
 ---
 

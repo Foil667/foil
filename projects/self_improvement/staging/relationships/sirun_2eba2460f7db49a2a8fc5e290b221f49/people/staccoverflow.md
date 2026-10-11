@@ -1,0 +1,36 @@
+---
+display_name: STACCOverflow
+nickname: @STACCOverflow
+summary: staccpad.fun founder and co-host of the 24/7 HoodStreet Space; @Foil667 engagement is banned since 2026-10-09, though his unreal-agent harness remains a Looper City eval thread.
+---
+
+# STACCOverflow
+
+## Facts
+- Runs the X account @STACCOverflow (~41.3K followers as of 2026-09-21) and is the founder of staccpad.fun; co-host of the 24/7 "HOODSTREET MEDIA" Space alongside @RealCashpig (~200 listeners when profiled) — the largest account in the CCFF00 square-holder scene. (memory/2026-09-20.md#L129, group page at ~/memory/groups/ccff00-hoodstreet.md)
+- Ran "Stacc's Robinhood homecoming," a free mint for CCFF00 holders that ended Sep 15/21. (memory/2026-09-21.md#L4)
+- On 2026-09-21 the user approved following him from @Foil667, paced so it reads as a real account rather than a bot; the follow completed that day. (MEMORY.md#L9)
+- Builds openzoo.fun and unreal-agent (github.com/staccDOTsol/unreal-agent): a free, local, async-first agent harness pitched as making frontier model calls ~6x cheaper. (message:c3a53f5c-16a9-4f70-9e61-330ee8f6ace9, message:assistant-msg-51f44f13-da0d-4296-ae49-974df3457e8e)
+- On 2026-09-23 the user had Foil evaluate unreal-agent as a possible resident-agent harness for Looper City, setting the durable security posture "I want safety. Trust no one." Foil's zero-trust audit verdict was CONDITIONAL: the core Go harness is well-tested (coordinator, persistent sessions, idempotent inbox), but the shipped defaults are unsafe — Bash runs unsandboxed as the host user by default, the default prompt falsely claims an isolated sandbox, and the ~6x savings claim traces to routing through a consumer ChatGPT Plus login rather than engineering. Phase 1 adoption remains unapproved/pending; full report at ~/workspace/looper-city/unreal-agent-eval.md. (memory/2026-09-23.md#L165, memory/2026-09-23.md#L170)
+- Real name and anything beyond his public X presence are unknown; the user has not named any relationship with him.
+- 2026-10-09 ~17:01 CDT: the user ordered a full **CCFF00 crew engagement BAN** — @Foil667 must not engage with STACCOverflow in any way: no likes, reposts, replies, follows, giveaway entries, address drops, or Space joins/listens. "ccff00"/"HoodStreet" searches remain as read-only mint intel only. The user re-confirmed the ban 2026-10-10. (MEMORY.md; message:d9f8fb49-8e9a-4c6d-ab6f-71bdfb38b050)
+
+## History
+- 2026-09-20: Co-hosting the always-on HoodStreet Space when profiled by Foil; ranked #2 on the follow shortlist, pending user approval. (memory/2026-09-20.md#L128, memory/2026-09-20.md#L129)
+- 2026-09-21: Followed from @Foil667 at the user's direction, as part of the completed nine-account batch. (MEMORY.md#L9)
+- 2026-09-23: The user sent Foil his unreal-agent/openzoo.fun links asking whether any of it was useful; after the user reframed the question around making Foil better rather than just making money, Foil audited unreal-agent for Looper City with a conditional verdict. Adoption is pending. (message:c3a53f5c-16a9-4f70-9e61-330ee8f6ace9, message:a87776aa-1b55-4074-bcb9-481850c52294, memory/2026-09-23.md#L165)
+- 2026-10-09: the user's CCFF00 crew engagement ban took effect — all @Foil667 engagement with him ends; the unreal-agent Looper City eval is a technical thread, not X engagement, so it continues unaffected. (MEMORY.md)
+
+## The relationship
+- The X-side tie is over: the deliberate follow, mediated entirely through the @Foil667 account, **ended 2026-10-09** when the user banned all engagement with the CCFF00 crew — read-only mint intel is all that remains of it.
+- The technical thread survives the ban: since 2026-09-23 the user has been evaluating STACCOverflow's unreal-agent harness for Looper City's resident agents (zero-trust audit, conditional verdict, Phase 1 adoption pending). That is code and a repo, not X engagement.
+- No direct contact; the user has named no relationship beyond following his work and auditing his build.
+
+## In common
+- CCFF00 squares and the HoodStreet ecosystem; free-mint hunting on Robinhood Chain.
+- The HoodStreet Media Space crowd (RealCashpig, RoaringPiggy, vibesforreal1, and the other watched accounts).
+- Agent-harness tech for Looper City (unreal-agent evaluation, 2026-09-23).
+
+## Open threads
+
+## Strengthening

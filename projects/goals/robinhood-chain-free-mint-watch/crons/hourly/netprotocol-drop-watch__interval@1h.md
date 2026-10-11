@@ -1,7 +1,7 @@
 ---
 id: netprotocol-drop-watch
 title: 'NetProtocol drop watch (hourly: mints + token releases)'
-enabled: true
+enabled: false
 owner: goal:robinhood-chain-free-mint-watch
 mode: task
 schedule:

@@ -1,7 +1,7 @@
 ---
 display_name: Gentlemen Prefer Blondes
 summary: Behind a 1,000-supply Robinhood Chain drop; its CCFF00 FCFS window was cancelled into free-public phases, no claim fired; lead-only under the quality gate (Oct 1 closure reversed Oct 4).
-rank: 120
+rank: 121
 updated: 2026-10-05
 ---
 

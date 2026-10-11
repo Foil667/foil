@@ -2,7 +2,7 @@
 display_name: TobiSync
 nickname: @TobiSync
 summary: Verified X account behind the EmptyHands whitelist giveaway on 2026-09-23, which @Foil667 entered at the user's direction.
-rank: 44
+rank: 46
 updated: 2026-09-23
 ---
 

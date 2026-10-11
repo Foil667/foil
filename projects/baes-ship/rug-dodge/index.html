@@ -107,8 +107,8 @@ canvas{width:100%;border:2px solid #3a2d2c;border-radius:8px;background:#0b0e0c;
   var START_BLOCK = 51910000; // $RESCUE first had code at 51910062 (2026-09-28); rounded down
   var CACHE_KEY = 'foil-rescue-burn-v1';
   var RPC_URL = 'https://mainnet.base.org';
-  var CHUNK = 2000;            // blocks per eth_getLogs call (mainnet.base.org 413s wider filtered ranges)
-  var MIN_RANGE = 400;        // adaptive-split floor: never split below this
+  var CHUNK = 450;            // blocks per eth_getLogs call (mainnet.base.org caps filtered ranges at 500 blocks)
+  var MIN_RANGE = 100;        // adaptive-split floor: never split below this (must stay under the RPC cap)
   var RPC_TIMEOUT_MS = 25000;
   var MAX_RETRIES = 3;
   var RECENT_KEEP = 25;
@@ -180,9 +180,10 @@ canvas{width:100%;border:2px solid #3a2d2c;border-radius:8px;background:#0b0e0c;
   }
 
   function getLogsRange(rg) {
-    // mainnet.base.org rejects wide topic-filtered ranges (HTTP 413 or a
-    // dropped connection). On a range-limit signal, halve the range and
-    // retry; give up only below MIN_RANGE.
+    // mainnet.base.org caps eth_getLogs topic-filtered ranges at 500 blocks
+    // (HTTP 413, dropped connection, or "eth_getLogs is limited to a 500 range").
+    // On a range-limit signal, halve the range and retry; give up only below
+    // MIN_RANGE.
     return rpc('eth_getLogs', [{
       address: RESCUE,
       fromBlock: '0x' + rg[0].toString(16),
@@ -190,7 +191,7 @@ canvas{width:100%;border:2px solid #3a2d2c;border-radius:8px;background:#0b0e0c;
       topics: [TRANSFER_TOPIC, null, DEAD_TOPIC]
     }]).catch(function (e) {
       var msg = String(e && e.message || '');
-      var rangeLimit = /413|Payload Too Large|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
+      var rangeLimit = /413|Payload Too Large|block range|exceeds.*range|limited to a\s*\d+\s*range|closed connection|RemoteDisconnected|empty reply|socket hang up/i.test(msg);
       if (rangeLimit && (rg[1] - rg[0] + 1) > MIN_RANGE) {
         var mid = Math.floor((rg[0] + rg[1]) / 2);
         return getLogsRange([rg[0], mid]).then(function (a) {

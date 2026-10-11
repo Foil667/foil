@@ -29,7 +29,24 @@
  */
 import fs from 'node:fs';
 import os from 'node:os';
+import { execFileSync } from 'node:child_process';
 import { ethers } from 'ethers';
+
+// ---- hash-chained audit receipts (fail-open: never blocks a claim).
+// Mirrors claim-with-tinfoil.sh's receipt_emit; a reverted/failed run still
+// leaves the trail of gates that passed before the failure.
+const RECEIPT_PY = `${os.homedir()}/workspace/audit-trail/receipt.py`;
+function remit(tool, argsObj, resultObj) {
+  try {
+    if (!fs.existsSync(RECEIPT_PY)) return;
+    execFileSync('python3', [RECEIPT_PY, 'emit', '--lane', 'foil-mint-lane',
+      '--tool', tool,
+      '--args-json', JSON.stringify(argsObj || {}),
+      '--result-json', JSON.stringify(resultObj || {})],
+      { timeout: 5000, stdio: ['ignore', 'ignore', 'ignore'] });
+  } catch { /* fail-open */ }
+}
+const RARGS = () => ({ slug: SLUG, contract: NFT, qty: String(QTY) });
 
 const FOIL = '0x6573682faee72a4a96e791ba262439f1df3a268d';
 const FORK = '0x00005ea00ac477b1030ce78506496e8c2de24bf5';
@@ -78,6 +95,7 @@ const ok = stages.find(s => s.stageType === 'SIGNED_PRESALE' && s.isEligible ===
 if (!ok) fail('no eligible SIGNED_PRESALE stage for Foil at fire time: ' + JSON.stringify(stages.map(s => [s.stageType, s.uuid.slice(0, 8), s.isEligible])));
 console.log('    eligible stage', ok.uuid.slice(0, 8), 'maxPerWallet', ok.maxTotalMintableByWallet);
 if (QTY > Number(ok.maxTotalMintableByWallet)) fail(`qty ${QTY} exceeds maxPerWallet ${ok.maxTotalMintableByWallet}`);
+remit('sp.eligibility', RARGS(), { stage: ok.uuid.slice(0, 8), maxPerWallet: String(ok.maxTotalMintableByWallet) });
 
 // ---- gate 2: re-fetch calldata at fire time
 console.log('[2] fetching OpenSea-built mint calldata…');
@@ -121,6 +139,7 @@ try {
 const valueUsd = Number(valueWei) / 1e18 * ethUsd;
 if (valueUsd > PRICE_CAP_USD + 1e-9) fail(`tx value $${valueUsd.toFixed(4)} exceeds $${PRICE_CAP_USD} cap`);
 console.log(`    calldata OK: fork SeaDrop, signed-presale, nft=${nftArg.slice(0, 10)}…, qty=${qtyArg}, value=${valueWei} wei ($${valueUsd.toFixed(4)}), no approvals, feeRecipient canonical`);
+remit('sp.calldata', RARGS(), { to: 'seadrop-fork', selector: SIGNED_SEL, valueUsd: valueUsd.toFixed(6), noApprovals: 'true', feeRecipient: 'canonical' });
 
 // ---- gate 4: eth_call sim
 console.log('[4] simulating via eth_call…');
@@ -128,6 +147,7 @@ const nonce = await provider.getTransactionCount(FOIL, 'pending');
 try {
   await provider.call({ from: FOIL, to: t.to, data: t.data, value: valueWei });
   console.log('    sim clean');
+  remit('sp.sim', RARGS(), { clean: 'true' });
 } catch (e) { fail('eth_call simulation reverted: ' + (e.shortMessage || e.message).slice(0, 200)); }
 
 // ---- gate 5: gas estimate + cap
@@ -144,6 +164,7 @@ try {
 const gasCostUsd = Number(gasLimit * fee.maxFee) / 1e18 * ethUsd;
 console.log(`    gas est ${gasEst}, limit ${gasLimit}, maxFee ${fee.maxFee} wei -> ~$${gasCostUsd.toFixed(4)}`);
 if (gasCostUsd > GAS_CAP_USD) fail(`gas $${gasCostUsd.toFixed(4)} exceeds $${GAS_CAP_USD} cap`);
+remit('sp.gas', RARGS(), { gasCostUsd: gasCostUsd.toFixed(6), gasCapUsd: String(GAS_CAP_USD) });
 
 const tx = {
   to: t.to, chainId: CHAIN_ID,
@@ -155,6 +176,7 @@ const tx = {
   nonce,
 };
 if (DRY) { console.log('[DRY] would submit:', JSON.stringify(tx).slice(0, 300), '…'); process.exit(0); }
+remit('sp.dispatch', RARGS(), { stage: 'pre-broadcast', gasLimit: gasLimit.toString() });
 
 // ---- gate 6: Bankr submit + receipt + ownerOf verify
 console.log('[6] submitting via Bankr /wallet/submit…');
@@ -191,4 +213,5 @@ if (tokenId) {
   if (owner.toLowerCase() !== FOIL.toLowerCase()) fail(`ownerOf(${tokenId}) = ${owner}, not Foil`);
   console.log(`    ownerOf(${tokenId}) = Foil ✓ HELD`);
 }
+remit('sp.result', RARGS(), { tx: hash, block: String(receipt.blockNumber), gasUsed: receipt.gasUsed.toString(), tokenId: tokenId || 'null', held: 'true' });
 console.log('RESULT', JSON.stringify({ slug: SLUG, contract: NFT, qty: QTY, tx: hash, block: receipt.blockNumber, gasUsed: receipt.gasUsed.toString(), tokenId, valueWei: valueWei.toString() }));

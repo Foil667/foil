@@ -1,7 +1,7 @@
 ---
 display_name: Dale Marks
 summary: Someone the user knew; his funeral was held 2026-10-06 at 11:00 AM at Honquest Family Funeral Home.
-rank: 215
+rank: 218
 updated: 2026-10-06
 ---
 

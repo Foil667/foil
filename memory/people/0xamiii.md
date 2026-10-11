@@ -2,7 +2,7 @@
 display_name: 0xAmiii_
 nickname: @0xAmiii_
 summary: X account behind the "3000 Bunny WTF Free Mint" giveaway on Robinhood Chain, which @Foil667 entered 2026-09-23 (like + repost) at the user's standing direction.
-rank: 62
+rank: 64
 updated: 2026-09-24
 ---
 

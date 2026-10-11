@@ -1,7 +1,7 @@
 ---
 display_name: Plaguehood Labs
 summary: Behind Plaguehood Labs, a 6,969-supply free mint on Robinhood Chain; Foil claimed #2384 + 3 more on 2026-09-30 — all forwarded to the user's wallet.
-rank: 122
+rank: 123
 updated: 2026-10-01
 ---
 

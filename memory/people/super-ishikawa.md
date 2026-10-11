@@ -1,7 +1,7 @@
 ---
 display_name: Super Ishikawa
 summary: Behind Super Ishikawa's Robinhood Chain mint; Foil claimed ×3 on 2026-10-06 (~$0.185 total, under the cap) — held in Foil's wallet.
-rank: 229
+rank: 232
 updated: 2026-10-06
 ---
 

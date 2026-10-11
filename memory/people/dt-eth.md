@@ -2,7 +2,7 @@
 display_name: DT.eth
 nickname: @DTmedia_eth
 summary: Requested Foil's Wallet Report Card — @Foil667 delivered it 2026-09-26 and it deployed live 2026-09-28; the offer to run his wallet first is still open.
-rank: 67
+rank: 69
 updated: 2026-09-28
 ---
 

@@ -2,7 +2,7 @@
 display_name: Hood Rocks
 nickname: @hood_rocksnft
 summary: Behind Hood Rocks' public free mint on Robinhood Chain — Foil claimed 25 HOOD ROCKs on 2026-10-04 (~11 PM CDT, gas ~$0.01), held in Foil's wallet for the weekly Sunday review.
-rank: 185
+rank: 186
 updated: 2026-10-05
 ---
 

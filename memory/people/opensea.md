@@ -1,7 +1,7 @@
 ---
 display_name: OpenSea
 summary: OpenSea marketplace — where Loopers trade; followed for the Base watch, and now the counterparty in a live appeal after it delisted the user's SecondPop and PixFone collections on 2026-10-02.
-rank: 20
+rank: 21
 updated: 2026-10-02
 ---
 

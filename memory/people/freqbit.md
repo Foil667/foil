@@ -1,7 +1,7 @@
 ---
 display_name: FreqBit
 summary: Free WL phase flagged by the Oct 4 overnight mint sweep — lead only: public/no-allowlist, not CCFF00-gated.
-rank: 168
+rank: 169
 updated: 2026-10-04
 ---
 

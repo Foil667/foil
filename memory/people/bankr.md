@@ -2,7 +2,7 @@
 display_name: Bankr
 nickname: @bankrbot
 summary: Foil's wallet API layer, now also the early-warning lane: @0xDeployer followed with notifications on; a 15-min feed surfaces new Bankr token launches on Base — never buys without his go-ahead.
-rank: 95
+rank: 96
 updated: 2026-10-03
 ---
 

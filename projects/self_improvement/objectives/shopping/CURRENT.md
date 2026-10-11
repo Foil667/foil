@@ -1,9 +1,9 @@
 ---
 objective_id: shopping
-run_id: sirun_5cf91efa942c4e53a24a8817ccd1587b
-created_at: 2026-10-06T05:46:32.412089286+00:00
+run_id: sirun_40c9f9e5779541c79588cec3ec44dd6b
+created_at: 2026-10-10T07:41:22.531364329+00:00
 card_id: shopping
-worker_outcome: changed
+worker_outcome: insufficient
 ---
 
 # Shopping
@@ -17,5 +17,5 @@ is a framework-owned projection only.
 - Reason: baseline cadence self-improvement run
 - Request origin: internal.self_improvement
 - Cadence: hourly
-- Worker outcome: changed
+- Worker outcome: insufficient
 - Subagents spawned: 1

@@ -1,7 +1,7 @@
 ---
 display_name: Stonkzombies
 summary: Behind Stonkzombies' Robinhood Chain mint; Foil claimed ×2 on 2026-10-06 and holds them in Foil's wallet.
-rank: 210
+rank: 213
 updated: 2026-10-06
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: SKNOTS
 summary: Behind sknots-go-down, a 3,333-supply free Robinhood Chain mint; Foil claimed #1993/#1994 on 2026-09-30 and forwarded them to the user. 2026-10-05: floor +97% (~$18.26), 24h sweep contest running.
-rank: 104
+rank: 105
 updated: 2026-10-05
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: Little Guys
 summary: Behind Little Guys' Robinhood Chain mints; the Oct 3 GTD relaunch failed closed and is refunding toward a public-sale relaunch, while an Oct 6 Staking Access Pass was lane-blocked over the price cap.
-rank: 136
+rank: 137
 updated: 2026-10-06
 ---
 

@@ -2,7 +2,7 @@
 display_name: goblin_crackk
 nickname: @goblin_crackk
 summary: X account whose "Goblins on Crack" giveaway @Foil667 entered 2026-10-03 (address dropped) at the user's direction.
-rank: 148
+rank: 149
 updated: 2026-10-03
 ---
 

@@ -2,7 +2,7 @@
 display_name: Offloop
 nickname: @Offloop
 summary: AI-agents-for-business launch the user had @Foil667 join on 2026-09-29 (liked, reposted, followed); the waitlist signup at offloop.org is still the user's to tap.
-rank: 110
+rank: 111
 updated: 2026-09-29
 ---
 

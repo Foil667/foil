@@ -2,7 +2,7 @@
 display_name: Base
 nickname: @base
 summary: Official Base chain X account; followed from @Foil667 at the user's direction as part of the Loopers/Base watch.
-rank: 48
+rank: 50
 updated: 2026-09-23
 ---
 

@@ -2,7 +2,7 @@
 display_name: Champs by Neo
 nickname: @ChampsByNeo
 summary: Behind Champs by Neo's Robinhood Chain mint; @Foil667 followed them and entered their 2026-09-27 WL giveaway, and Foil claimed Champs #830 on 2026-10-02 at the user's order — forwarded to his wallet.
-rank: 129
+rank: 130
 updated: 2026-10-03
 ---
 

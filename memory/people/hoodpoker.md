@@ -1,7 +1,7 @@
 ---
 display_name: HoodPoker
 summary: Behind the HoodPoker House Pass (7,777, OpenSea Oct 15) and HoodFi Names; WL signup needs the user's own signature; #4429 missed the free snapshot; Oct 15 locked into the 30-day dispatch.
-rank: 135
+rank: 136
 updated: 2026-10-05
 ---
 

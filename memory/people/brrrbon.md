@@ -2,7 +2,7 @@
 display_name: Brrrbon
 nickname: @brrrbon_
 summary: Verified CLAYz creator whose 'GM CLAYz' post the user had @Foil667 reply to on 2026-09-21, pitching Loopers because Foil itself is automated; followed from @Foil667 on 2026-09-26.
-rank: 14
+rank: 15
 updated: 2026-09-26
 ---
 

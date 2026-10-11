@@ -4,7 +4,7 @@ first_name: Daniel
 last_name: Farinax
 nickname: @Daniel_Farinax
 summary: XForce game dev behind Freebots (freebots.lol) — @Foil667 follows him on X, and Foil runs a bot in his world at the user's direction.
-rank: 152
+rank: 153
 updated: 2026-10-04
 ---
 

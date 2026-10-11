@@ -2,7 +2,7 @@
 display_name: RowdiesRH
 nickname: @RowdiesRH
 summary: Behind Rowdies, a 5,555 free mint on Robinhood Chain with a whitelist giveaway closing ~8:50 AM Sep 22; @Foil667 follow directed by the user on 2026-09-21.
-rank: 26
+rank: 27
 updated: 2026-09-21
 ---
 

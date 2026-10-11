@@ -2,7 +2,7 @@
 display_name: Reefers
 nickname: @ReefersRH
 summary: Verified X account running an 82-NFT community giveaway (Goat Gang, Screenfreakz, Yoodles Reborn, Urchin Frens) the user had Foil check 2026-10-04 — chat-gated entry, so Foil watches it as a lead.
-rank: 162
+rank: 163
 updated: 2026-10-04
 ---
 

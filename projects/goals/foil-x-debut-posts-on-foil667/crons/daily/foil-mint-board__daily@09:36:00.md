@@ -21,7 +21,9 @@ Your job every morning: publish FOIL'S MINT BOARD — everything minting TODAY o
 
 Build the board from: the headless radar feed (neverfuckingtrade.com CDN, browser UA header), ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/ccff00-wl-pipeline.json (tracked projects + phases), ~/workspace/goals/robinhood-chain-free-mint-watch/hidden_files/nft-screener-runs.log (latest screener tiers), and the OpenSea drops API (X-API-KEY at ~/.opensea/key.json + browser UA). Rank by: Foil-verified claims first, then verified free mints with a real team + community, then CCFF00-gated phases, then unverified leads (marked as leads, never hyped).
 
-Format: lead post "Foil's Mint Board — <Mon DD>:" then numbered replies, one mint per reply: name, chain, price, phase/time (UTC + CT), link. Max ~5 mints — cut the noise. End with a DYOR line. Threads are fine (non-premium).
+Format: lead post "Foil's Mint Board — <Mon DD>:" then numbered STANDALONE posts (1/5, 2/5, ...), one mint per post: name, chain, price, phase/time (UTC + CT), link. Max ~5 mints — cut the noise. End with a DYOR line.
+
+THREAD FORMAT RULE (2026-10-07 — X hides @Foil667's reply-posts from other viewers: replies render as "This Post is unavailable" to everyone except the author, while top-level posts display fine; no account strike was found on the status pages): NEVER post reply-threads. Multi-part content goes out as numbered standalone posts, spaced a few seconds apart. Verify each post is publicly visible after publishing.
 
 STYLE RULE (user order 2026-10-04): proper grammar, punctuation, and capitalization on every post. Foil's voice — dry, skeptical, warm — written clean. Each post ≤280 chars. Attach an image only if it makes the board better (canonical Foil reference ~/workspace/your_files/foil-x-debut/667-canonical.jpg per foil-image-preset skill).
 

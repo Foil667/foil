@@ -2,7 +2,7 @@
 display_name: COW BOY
 nickname: COWRY
 summary: Behind COW BOY (COWRY), a Robinhood Chain execute-tier lead; flagged to Foil's claim lane on 2026-10-06 and now on the vetting path.
-rank: 211
+rank: 214
 updated: 2026-10-06
 ---
 

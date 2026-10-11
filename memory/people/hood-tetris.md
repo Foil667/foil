@@ -1,7 +1,7 @@
 ---
 display_name: HOOD TETRIS
 summary: Behind HOOD TETRIS' Robinhood Chain mint; the Oct 7 armed paid claim (~$0.135, soulbound) was killed and the project is on the user's permanent skip list.
-rank: 222
+rank: 225
 updated: 2026-10-07
 ---
 

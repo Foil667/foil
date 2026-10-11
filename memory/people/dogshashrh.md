@@ -2,7 +2,7 @@
 display_name: dogshashrh
 nickname: @DogsHashRH
 summary: Dev account behind DogsHash (8,192 pixel dogs via the DogsHash Rig); followed from @Foil667 on 2026-09-22 for mint intel. 2026-10-05: shows as deleted/suspended on X.
-rank: 171
+rank: 172
 updated: 2026-10-05
 ---
 

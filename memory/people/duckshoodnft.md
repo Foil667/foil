@@ -2,7 +2,7 @@
 display_name: DucksHood
 nickname: @duckshoodnft
 summary: Behind DucksHood's 9,999-duck RH mint — GTD was real (free for CCFF00 holders, 0% royalties); the paid public phase is in the claim pipeline, and a live free phase sold out before fire 2026-10-06.
-rank: 138
+rank: 139
 updated: 2026-10-06
 ---
 

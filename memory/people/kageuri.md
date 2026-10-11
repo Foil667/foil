@@ -1,7 +1,7 @@
 ---
 display_name: Kageuri
 summary: Behind the Kageuri giveaway @Foil667 entered 2026-10-04 at the user's direction (follow @h00dexe + @mehradrs, like + repost, entry reply) — raffle ~15h from that morning.
-rank: 182
+rank: 183
 updated: 2026-10-05
 ---
 

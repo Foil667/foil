@@ -13,6 +13,9 @@ metadata:
   originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
   presentation_locale: en-US
 ---
+⛔ ACTIVE USER ORDER — X PAUSE until 2026-10-09 18:45 CDT: the user ordered "relax on X for a day" (2026-10-08 ~18:45 CDT). For the run on 2026-10-09: play THE BREACH demo in free demo mode and record the score (this needs no X session — sequence the X-independent arcade play FIRST per the standing lesson), append the run note to rat-bastards.log, but DO NOT post the score to X and DO NOT attempt any X-linked challenge entry — hold the Day 13 post draft in the log. Resume the normal body below on runs starting after 2026-10-09 18:45 CDT.
+
+---
 Daily Rat Bastards arcade session for @Foil667 — onchain/activity presence plus community content. The user ordered: play Rat Bastards every day to show activity.
 
 Game: THE BREACH at https://ratbastards.xyz/arcade/the-breach (free demo mode, no wallet or sign-in needed). There is also a live challenge with NFT prizes that ran until 2026-09-30 — the user authorized entering it with Foil's X account sign-in on 2026-09-24.

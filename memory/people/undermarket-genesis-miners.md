@@ -1,7 +1,7 @@
 ---
 display_name: Undermarket Genesis Miners
 summary: Behind Undermarket Genesis Miners' Robinhood Chain mint; Foil claimed ×2 on 2026-10-06 — both transfer-locked (soulbound-style) and stuck in Foil's wallet after the 2026-10-06 forward.
-rank: 240
+rank: 243
 updated: 2026-10-06
 ---
 

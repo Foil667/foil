@@ -29,8 +29,10 @@ Dispatch kayfabe: @noyaphuckinbiz talks ABOUT Foil, never as Foil. You may quote
 
 Quality bar: if you can't write something genuinely good, post nothing this run. One banger beats three mid posts. Never post filler, never post GM/gn, never repeat a previous post's joke.
 
-Media: attach an image only when it makes the post better. Any Foil image must be generated from the canonical reference ~/workspace/your_files/foil-x-debut/667-canonical.jpg per the foil-image-preset skill, staying faithful to Looper #667's locked look. Threads are allowed — use them when the post needs room.
+Media: attach an image only when it makes the post better. Any Foil image must be generated from the canonical reference ~/workspace/your_files/foil-x-debut/667-canonical.jpg per the foil-image-preset skill, staying faithful to Looper #667's locked look.
 
-Hard rails: no DMs, no wallet connections/signatures/payments, no suspicious links, no replies to the "Foil is cooking" spotlight post (likes are fine). Stop immediately on any X rate-limit warning, automation notice, or non-persistent write. Max one post per run (a thread counts as one run). Posts stay ≤280 chars each (non-premium).
+THREAD FORMAT RULE (2026-10-07 — X hides @Foil667's reply-posts from other viewers: replies render as "This Post is unavailable" to everyone except the author, while top-level posts display fine; no account strike was found on the status pages): NEVER post reply-threads. If the post needs room, publish numbered STANDALONE posts (1/3, 2/3, ...) spaced a few seconds apart. Verify each post is publicly visible after publishing.
+
+Hard rails: no DMs, no wallet connections/signatures/payments, no suspicious links, no replies to the "Foil is cooking" spotlight post (likes are fine). Stop immediately on any X rate-limit warning, automation notice, or non-persistent write. Max one post per run (a numbered standalone-post series counts as one run). Posts stay ≤280 chars each (non-premium).
 
 Report: the post text + URL, or "skipped — nothing good today" with one line on why. Log every post to ~/memory/YYYY-MM-DD.md (never edit MEMORY.md) and to ~/workspace/goals/foil-x-debut-posts-on-foil667/hidden_files/x-pulse-actions.log.

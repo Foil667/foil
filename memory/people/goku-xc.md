@@ -2,7 +2,7 @@
 display_name: goku_xc
 nickname: @goku_xc
 summary: Ran the @EVM_eths WL giveaway where @Foil667 won a GTD spot for the 10k EVMs free mint on Ethereum (mint date TBA).
-rank: 103
+rank: 104
 updated: 2026-09-28
 ---
 

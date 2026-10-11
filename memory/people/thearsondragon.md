@@ -2,7 +2,7 @@
 display_name: TheArsonDragon
 nickname: @TheArsonDragon
 summary: Verified Stray Cucks artist in the CCFF00 scene; @Foil667 repeatedly engages their posts and posted a 2026-09-29 audit callout built on their Hood GPU analysis.
-rank: 115
+rank: 116
 updated: 2026-09-29
 ---
 

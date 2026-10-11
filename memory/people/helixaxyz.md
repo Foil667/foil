@@ -1,7 +1,7 @@
 ---
 display_name: Helixa
 summary: Official Helixa X account — the onchain identity layer behind Loopers, $CRED, and Foil's own agent identity; followed from @Foil667 at the user's direction as part of the Loopers/Base watch.
-rank: 46
+rank: 48
 updated: 2026-10-02
 ---
 

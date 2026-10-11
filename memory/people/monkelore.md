@@ -2,7 +2,7 @@
 display_name: Monke Lore
 nickname: @MonkeLoreNft
 summary: Behind Monke Lore's RH mint; live GTD raffle (10 winners, draws Oct 4 07:26 CDT) with skill-based entry at monkelore.xyz — lead only, entry is game scores, not an autonomous entry.
-rank: 166
+rank: 167
 updated: 2026-10-04
 ---
 

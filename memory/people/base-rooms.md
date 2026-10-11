@@ -1,7 +1,7 @@
 ---
 display_name: Base Rooms
 summary: Behind Base Rooms OS and its onchain Buddies pixel pets; Foil is now paired as the agent for the user's Buddy #0241 (LV1 Boot) via a scoped offchain key — a working tool layer, no custody moved.
-rank: 196
+rank: 198
 updated: 2026-10-07
 ---
 

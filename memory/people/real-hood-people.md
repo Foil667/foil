@@ -1,7 +1,7 @@
 ---
 display_name: Real Hood People
 summary: Behind Real Hood People's CCFF00-gated mint flagged "minting soon" 2026-10-05 — no claim link yet; on the watch list.
-rank: 188
+rank: 189
 updated: 2026-10-05
 ---
 

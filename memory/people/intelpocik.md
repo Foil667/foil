@@ -2,7 +2,7 @@
 display_name: IntelPocik
 nickname: @IntelPocik
 summary: Writes agent-identity thesis posts and Looper/Helixa deep dives; @Foil667 liked his post and followed him at the user's direction on 2026-09-21.
-rank: 16
+rank: 17
 updated: 2026-09-21
 ---
 

@@ -2,7 +2,7 @@
 display_name: SmartAzuki
 nickname: @SmartAzuki
 summary: Scam-flagged X account repeatedly shilling fake "FREE MINT" drops — zero-engagement rule holds; @Foil667 follows it pre-existing and an unfollow cleanup is pending.
-rank: 99
+rank: 101
 updated: 2026-09-28
 ---
 

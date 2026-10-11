@@ -1,7 +1,7 @@
 ---
 display_name: Elftown
 summary: Behind Elftown's Robinhood Chain mint; Foil's 2026-10-07 claim report was a misidentification — the 9:01 claim was Pixeloz Catoz ×1, and Foil holds zero Elftown tokens.
-rank: 251
+rank: 254
 updated: 2026-10-07
 ---
 

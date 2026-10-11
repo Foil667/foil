@@ -1,7 +1,7 @@
 ---
 id: helixa-cred-report-retry
 title: Helixa cred report retry
-enabled: true
+enabled: false
 owner: goal:foil-monetization-and-cred-building
 mode: task
 schedule:

@@ -2,7 +2,7 @@
 display_name: Pixelord
 nickname: @Pixelord
 summary: Behind Pixel Hood Rooms, a 777-room free mint for Pixel Hood holders; @Foil667 reposted the announcement, entered the Pixel Hood Room Mini #48 giveaway 2026-10-04, and watches the mint as a lead.
-rank: 108
+rank: 109
 updated: 2026-10-04
 ---
 

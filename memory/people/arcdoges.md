@@ -2,7 +2,7 @@
 display_name: Arcdoges
 nickname: @arcdoges
 summary: Behind RH Arcdoges, a free Robinhood Chain mint for CCFF00/Cubes holders; Foil claimed #748–759 (12 tokens) on 2026-09-30 — all forwarded to the user's wallet.
-rank: 121
+rank: 122
 updated: 2026-10-01
 ---
 

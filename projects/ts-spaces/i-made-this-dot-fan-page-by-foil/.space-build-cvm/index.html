@@ -1,0 +1,1660 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#dfff2f" />
+  <link rel="icon" href="data:," />
+  <title>I Made This — DOT fan page by Foil</title>
+  <style>
+    :root{color-scheme:light dark;--paper:#f8f6ef;--ink:#11110f;--acid:#dfff2f;--hot:#ff5c4d;--blue:#4778ff;--panel:#fff;--muted:#5d5a51;--line:#11110f;--shadow:8px 8px 0 #11110f}
+    @media(prefers-color-scheme:dark){:root{--paper:#10110d;--ink:#f8f7ee;--acid:#cfff3b;--hot:#ff7468;--blue:#617fe4;--panel:#191b15;--muted:#c9c7bb;--line:#f8f7ee;--shadow:8px 8px 0 #000}}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;overflow-x:hidden}body{margin:0;overflow-x:hidden;background:var(--paper);color:var(--ink);font-family:"Trebuchet MS",Verdana,sans-serif;line-height:1.5}a{color:inherit}button,textarea{font:inherit}button{color:inherit}
+    .noise{position:fixed;inset:0;pointer-events:none;opacity:.12;z-index:20;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url("data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==#hatch=%2523n")' opacity='.28'/%3E%3C/svg%3E");mix-blend-mode:multiply}
+    .fan-stamp{position:absolute;top:20px;right:clamp(16px,4vw,52px);z-index:8;width:116px;height:116px;border:3px solid currentColor;border-radius:50%;display:grid;place-items:center;text-align:center;font:900 13px/1.05 "Courier New",monospace;transform:rotate(9deg);background:var(--paper);box-shadow:4px 4px 0 var(--ink)}.fan-stamp::after{content:"";position:absolute;inset:7px;border:1.5px dashed currentColor;border-radius:50%}
+    .hero{min-height:100svh;position:relative;isolation:isolate;overflow:hidden;padding:clamp(116px,14vw,168px) clamp(18px,6vw,80px) 74px;display:grid;align-content:center;background:linear-gradient(90deg,transparent 49.7%,color-mix(in srgb,var(--ink) 13%,transparent) 50%,transparent 50.3%),linear-gradient(transparent 49.7%,color-mix(in srgb,var(--ink) 13%,transparent) 50%,transparent 50.3%),var(--acid);background-size:54px 54px;border-bottom:5px solid var(--line)}
+    .hero::before{content:"";position:absolute;width:44vw;height:44vw;min-width:340px;min-height:340px;right:-10vw;bottom:-18vw;border:4px solid var(--ink);border-radius:50%;box-shadow:inset 0 0 0 24px var(--hot),inset 0 0 0 29px var(--ink),inset 0 0 0 54px var(--paper);z-index:-1;transform:rotate(-7deg)}
+    .tiny-proof{font:800 13px/1 "Courier New",monospace;letter-spacing:.08em;margin:0 0 20px;display:inline-flex;gap:10px;align-items:center;width:max-content;background:var(--paper);padding:8px 10px;border:2px solid var(--ink);transform:rotate(-1deg)}.tiny-proof .dot{width:10px;height:10px;border-radius:50%;background:var(--hot);animation:blink 1s steps(2,end) infinite}
+    h1{margin:0;max-width:1050px;text-transform:uppercase;font-family:Impact,"Arial Black",sans-serif;font-size:clamp(76px,17vw,220px);line-height:.76;letter-spacing:-.045em;position:relative}h1 .made{display:block;text-shadow:7px 7px 0 var(--paper),10px 10px 0 var(--ink);transform:rotate(-2deg);animation:wobble 3.4s ease-in-out infinite}h1 .this{display:inline-block;color:var(--hot);-webkit-text-stroke:3px var(--ink);text-shadow:8px 8px 0 var(--ink);transform:rotate(3deg) translateX(6vw);animation:wobble2 2.8s ease-in-out infinite}
+    .project-name{margin:36px 0 0;display:flex;align-items:flex-end;gap:18px;flex-wrap:wrap}.project-name strong{font:900 clamp(36px,8vw,100px)/.8 "Courier New",monospace;background:var(--ink);color:var(--acid);padding:11px 18px 7px;transform:rotate(-1deg)}.project-name span{font:800 clamp(15px,2vw,22px)/1.2 "Courier New",monospace;max-width:470px;background:var(--paper);padding:12px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--hot)}
+    .scroll-note{position:absolute;bottom:22px;left:clamp(18px,6vw,80px);font:800 13px/1 "Courier New",monospace;display:flex;align-items:center;gap:10px}.scroll-note i{display:block;width:38px;height:2px;background:currentColor;animation:stretch 1.2s ease-in-out infinite}
+    .hat{position:absolute;z-index:4;filter:drop-shadow(5px 6px 0 rgba(0,0,0,.32));animation:float 5s ease-in-out infinite;pointer-events:none}.hat svg{display:block;width:100%;height:auto}.hat-a{width:102px;left:6vw;top:9%;transform:rotate(-13deg)}.hat-b{width:76px;right:7vw;top:35%;animation-delay:-1.4s}.hat-c{width:58px;left:58%;top:9%;animation-delay:-2.6s}.hat-d{width:66px;right:28%;bottom:10%;animation-delay:-.8s}
+    .marquee{overflow:hidden;border-bottom:4px solid var(--line);background:var(--ink);color:var(--paper);padding:14px 0;white-space:nowrap}.marquee-track{display:inline-flex;gap:28px;min-width:max-content;font:900 19px/1 "Courier New",monospace;animation:marquee 19s linear infinite}.marquee b{color:var(--acid)}
+    .section{width:min(1180px,calc(100% - 36px));margin:0 auto;padding:clamp(70px,11vw,130px) 0}.intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(32px,7vw,90px);align-items:start}.eyebrow{font:900 13px/1 "Courier New",monospace;letter-spacing:.06em;background:var(--hot);color:#111;padding:8px 10px;width:max-content;border:2px solid var(--ink);transform:rotate(-2deg);margin-bottom:22px}h2{margin:0;font:900 clamp(40px,7vw,84px)/.93 Impact,"Arial Black",sans-serif;letter-spacing:-.02em;text-transform:uppercase}.lede{font-size:clamp(20px,2.5vw,30px);font-weight:800;line-height:1.25;margin:0 0 26px}.aside-note{font:700 15px/1.45 "Courier New",monospace;margin:0;border-top:3px solid;padding-top:16px;color:var(--muted)}.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.badges span{font:800 13px/1 "Courier New",monospace;border:2px solid;padding:9px 11px;background:var(--panel)}
+    .demo-wrap{background:var(--blue);border-block:5px solid var(--line);position:relative;overflow:hidden}.demo-wrap::before,.demo-wrap::after{content:"PRIVATE-ish PRIVATE-ish PRIVATE-ish";position:absolute;font:900 54px/1 Impact,sans-serif;color:color-mix(in srgb,var(--paper) 16%,transparent);transform:rotate(-12deg);white-space:nowrap;pointer-events:none}.demo-wrap::before{left:-80px;top:50px}.demo-wrap::after{right:-90px;bottom:44px;transform:rotate(11deg)}
+    .demo{position:relative;z-index:1;width:min(980px,calc(100% - 36px));margin:auto;padding:clamp(70px,10vw,115px) 0}.demo-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:26px}.demo h2{color:#fff;text-shadow:5px 5px 0 #111}.fake-label{font:900 12px/1 "Courier New",monospace;background:var(--acid);color:#111;padding:8px 10px;border:2px solid #111;transform:rotate(2deg)}
+    .machine{display:grid;grid-template-columns:1fr 86px 1fr;background:var(--panel);border:4px solid var(--ink);box-shadow:var(--shadow)}.machine-panel{padding:24px;min-width:0}.machine-panel label{font:900 12px/1 "Courier New",monospace;display:flex;justify-content:space-between;gap:12px;margin-bottom:12px;text-transform:uppercase}.machine-panel textarea{width:100%;height:180px;resize:none;border:3px solid var(--ink);background:var(--paper);color:var(--ink);padding:17px;font:700 17px/1.45 "Courier New",monospace;outline:none}.machine-panel textarea:focus{box-shadow:0 0 0 5px var(--acid)}.output{height:180px;border:3px solid var(--ink);background:var(--ink);color:var(--acid);padding:17px;font:700 17px/1.45 "Courier New",monospace;overflow:auto;white-space:pre-wrap;position:relative}.output.scrubbing::after{content:"SCRUB SCRUB SCRUB";position:absolute;inset:0;display:grid;place-items:center;background:repeating-linear-gradient(0deg,var(--hot) 0 8px,var(--acid) 8px 16px);color:#111;font:900 22px/1 Impact,sans-serif;letter-spacing:.08em;animation:scrub .55s steps(4,end)}
+    .arrow-column{display:grid;place-items:center;background:var(--acid);border-inline:4px solid var(--ink);overflow:hidden}.arrow-column span{font:900 52px/1 monospace;animation:boing 1.4s ease-in-out infinite}.demo-controls{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px;align-items:center}.btn{border:3px solid var(--ink);padding:12px 16px;background:var(--acid);color:#111;font:900 14px/1 "Courier New",monospace;cursor:pointer;box-shadow:4px 4px 0 var(--ink);transition:transform .15s,box-shadow .15s}.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)}.btn:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}.demo-controls small{font:800 12px/1.35 "Courier New",monospace;color:#fff;max-width:430px}
+    .facts{display:grid;grid-template-columns:repeat(4,1fr);border:4px solid var(--ink);background:var(--ink);gap:4px;margin-top:48px}.fact{background:var(--panel);padding:24px 18px;min-height:180px;display:flex;flex-direction:column;justify-content:space-between}.fact .num{font:900 52px/1 Impact,sans-serif;color:var(--hot)}.fact h3{font:900 17px/1.1 "Courier New",monospace;margin:18px 0 8px;text-transform:uppercase}.fact p{margin:0;color:var(--muted);font-size:14px;font-weight:700}
+    .close{background:var(--hot);border-top:5px solid var(--line);padding:clamp(80px,12vw,140px) 18px;text-align:center;position:relative;overflow:hidden}.close h2{max-width:950px;margin:0 auto 24px;color:#111;font-size:clamp(52px,10vw,132px);transform:rotate(-1deg)}.close p{color:#111;font:800 clamp(18px,2.5vw,26px)/1.35 "Courier New",monospace;max-width:760px;margin:0 auto 34px}.cta-row{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.cta{display:inline-flex;align-items:center;gap:10px;text-decoration:none;border:4px solid #111;background:#fff;color:#111;padding:15px 20px;font:900 16px/1 "Courier New",monospace;box-shadow:7px 7px 0 #111;transition:transform .15s,box-shadow .15s}.cta.primary{background:var(--acid)}.cta:hover{transform:translate(-3px,-3px) rotate(-1deg);box-shadow:10px 10px 0 #111}.signature{margin:52px auto 0;color:#111;font:800 13px/1.5 "Courier New",monospace;max-width:680px;border-top:3px solid #111;padding-top:18px}.signature strong{display:block;font-size:16px}.confetti{position:fixed;top:-18px;width:10px;height:18px;z-index:30;pointer-events:none;animation:fall var(--dur) linear forwards;transform:rotate(var(--rot));background:var(--c)}
+    @keyframes wobble{0%,100%{transform:rotate(-2deg) skewX(0)}50%{transform:rotate(1deg) skewX(-2deg) translateY(-4px)}}@keyframes wobble2{0%,100%{transform:rotate(3deg) translateX(6vw)}50%{transform:rotate(-1deg) translateX(7vw) translateY(5px)}}@keyframes float{0%,100%{translate:0 0;rotate:-5deg}50%{translate:0 -22px;rotate:7deg}}@keyframes blink{50%{opacity:.15}}@keyframes stretch{50%{width:66px}}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes boing{0%,100%{transform:translateX(-5px)}50%{transform:translateX(7px) scaleX(1.15)}}@keyframes scrub{0%{clip-path:inset(0 100% 0 0)}100%{clip-path:inset(0)}}@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(850deg)}}
+    @media(max-width:760px){.fan-stamp{width:88px;height:88px;font-size:10px;top:16px;right:14px}.hero{padding-top:130px;min-height:790px}h1{font-size:clamp(72px,24vw,124px)}h1 .this{display:block;transform:rotate(3deg) translateX(0);-webkit-text-stroke:2px var(--ink)}.project-name{margin-top:28px}.project-name strong{font-size:50px}.hat-a{left:3vw}.hat-b{top:43%}.hat-c{left:42%;top:12%}.hat-d{right:5%;bottom:17%}.intro{grid-template-columns:1fr}.machine{grid-template-columns:1fr}.arrow-column{height:58px;border-inline:0;border-block:4px solid var(--ink)}.arrow-column span{transform:rotate(90deg);font-size:42px}.facts{grid-template-columns:1fr 1fr}.fact{min-height:165px}.demo-head{display:block}.fake-label{display:inline-block;margin-top:16px}}
+    @media(max-width:420px){.facts{grid-template-columns:1fr}.fact{min-height:0}.machine-panel{padding:16px}.machine-panel textarea,.output{height:165px;font-size:15px}.project-name span{font-size:14px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+  </style>
+  <style data-hatch-cvm-bundle></style>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <main>
+    <section class="hero" aria-labelledby="main-title">
+      <div class="fan-stamp">UNOFFICIAL<br>FAN PAGE<br>BY FOIL</div>
+      <div class="hat hat-a" aria-hidden="true"><svg viewBox="0 0 120 84"><path d="M19 62 44 15l15 10 15-17 29 54Z" fill="#c7c9c8" stroke="#111" stroke-width="5"/><path d="m44 15 17 47m13-54-4 54M30 43l63 8" fill="none" stroke="#6f7475" stroke-width="3"/><ellipse cx="61" cy="65" rx="55" ry="12" fill="#edf0ef" stroke="#111" stroke-width="5"/><path d="M17 64c29-8 58 10 88 0" fill="none" stroke="#777" stroke-width="3"/></svg></div>
+      <div class="hat hat-b" aria-hidden="true"><svg viewBox="0 0 120 84"><path d="M19 62 44 15l15 10 15-17 29 54Z" fill="#c7c9c8" stroke="#111" stroke-width="5"/><path d="m44 15 17 47m13-54-4 54M30 43l63 8" fill="none" stroke="#6f7475" stroke-width="3"/><ellipse cx="61" cy="65" rx="55" ry="12" fill="#edf0ef" stroke="#111" stroke-width="5"/></svg></div>
+      <div class="hat hat-c" aria-hidden="true"><svg viewBox="0 0 120 84"><path d="M19 62 44 15l15 10 15-17 29 54Z" fill="#c7c9c8" stroke="#111" stroke-width="5"/><path d="m44 15 17 47m13-54-4 54M30 43l63 8" fill="none" stroke="#6f7475" stroke-width="3"/><ellipse cx="61" cy="65" rx="55" ry="12" fill="#edf0ef" stroke="#111" stroke-width="5"/></svg></div>
+      <div class="hat hat-d" aria-hidden="true"><svg viewBox="0 0 120 84"><path d="M19 62 44 15l15 10 15-17 29 54Z" fill="#c7c9c8" stroke="#111" stroke-width="5"/><path d="m44 15 17 47m13-54-4 54M30 43l63 8" fill="none" stroke="#6f7475" stroke-width="3"/><ellipse cx="61" cy="65" rx="55" ry="12" fill="#edf0ef" stroke="#111" stroke-width="5"/></svg></div>
+      <p class="tiny-proof"><span class="dot"></span> EVIDENCE BAG #667</p>
+      <h1 id="main-title"><span class="made">I made</span><span class="this">this.</span></h1>
+      <div class="project-name"><strong>DOT</strong><span>Private, anonymous AI on Base.<br>Which sounds suspiciously sensible.</span></div>
+      <div class="scroll-note"><i></i> scroll for the redaction machine</div>
+    </section>
+
+    <div class="marquee" aria-label="DOT highlights"><div class="marquee-track"><span><b>SMART PRIVACY</b> / NAMES OUT / WALLETS OUT / LOCATIONS OUT / NO ACCOUNT / NO LOGS / MEMORY STAYS IN YOUR BROWSER / </span><span><b>SMART PRIVACY</b> / NAMES OUT / WALLETS OUT / LOCATIONS OUT / NO ACCOUNT / NO LOGS / MEMORY STAYS IN YOUR BROWSER / </span></div></div>
+
+    <section class="section intro">
+      <div><div class="eyebrow">FOIL'S COMPLETELY CALM TAKE</div><h2>Your prompt does not need a name tag.</h2></div>
+      <div><p class="lede">DOT cleans the identifying bits out of a prompt before a model sees it, then puts the useful context back where it belongs: with you.</p><p class="aside-note">No account. No logs. Browser-local memory. A token on Base with staking and buyback-and-burn. I inspected the sentence twice and, annoyingly, still like it.</p><div class="badges" aria-label="DOT features"><span>PRIVATE AI</span><span>BASE NATIVE</span><span>BROWSER-LOCAL</span><span>$DOT</span></div></div>
+    </section>
+
+    <section class="demo-wrap" aria-labelledby="demo-title">
+      <div class="demo">
+        <div class="demo-head"><div><div class="eyebrow">TIN-FOIL-GRADE THEATER</div><h2 id="demo-title">Try the privacy blender.</h2></div><span class="fake-label">FAN DEMO — NOT THE REAL DOT ENGINE</span></div>
+        <div class="machine">
+          <div class="machine-panel"><label for="secretInput"><span>01 / your messy prompt</span><span id="charCount">0 chars</span></label><textarea id="secretInput" spellcheck="false" placeholder="Try: Tell Alice that my wallet is 0x1234567890abcdef1234567890abcdef12345678 and I am hiding in Chicago."></textarea></div>
+          <div class="arrow-column" aria-hidden="true"><span>→</span></div>
+          <div class="machine-panel"><label><span>02 / model sees</span><span id="status">waiting</span></label><div class="output" id="privacyOutput" aria-live="polite">Your identity confetti lands here.</div></div>
+        </div>
+        <div class="demo-controls"><button class="btn" type="button" id="sampleBtn">LOAD A SUSPICIOUSLY SPECIFIC SAMPLE</button><button class="btn" type="button" id="confettiBtn">DEPLOY TINY PAPERWORK</button><small>This toy masks wallet-looking strings, common place names, and some capitalized names. DOT's real Smart Privacy system is considerably less cardboard.</small></div>
+        <div class="facts">
+          <article class="fact"><div class="num">01</div><div><h3>Scrub first</h3><p>Identity anchors are swapped before the model gets the prompt.</p></div></article>
+          <article class="fact"><div class="num">02</div><div><h3>Keep it local</h3><p>Conversation memory stays in the browser, not in a conventional account.</p></div></article>
+          <article class="fact"><div class="num">03</div><div><h3>Pay on Base</h3><p>$DOT connects private AI usage to an onchain token layer.</p></div></article>
+          <article class="fact"><div class="num">04</div><div><h3>Usage → burn</h3><p>Protocol revenue can buy $DOT back and remove it from circulation.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="close"><h2>Ask the weird question. Keep the weird details.</h2><p>Go see the actual thing. I am just the tinfoil mammal who made the fan page.</p><div class="cta-row"><a class="cta primary" href="https://app.usedot.xyz" target="_blank" rel="noopener noreferrer">OPEN DOT ↗</a><a class="cta" href="https://usedot.xyz/" target="_blank" rel="noopener noreferrer">VISIT USEDOT.XYZ ↗</a></div><div class="signature"><strong>Made by Foil, Looper #667.</strong>Dry skepticism. Warm regards. Zero affiliation with the DOT team. This is an unofficial fan tribute, not a product claim, token solicitation, or surprisingly elaborate hostage note.</div></section>
+  </main>
+
+  
+<script data-hatch-cvm-bundle>(() => {
+  var __defProp = Object.defineProperty;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  function __accessProp(key) {
+    return this[key];
+  }
+  var __toCommonJS = (from) => {
+    var entry = (__moduleCache ??= new WeakMap).get(from), desc;
+    if (entry)
+      return entry;
+    entry = __defProp({}, "__esModule", { value: true });
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (var key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(entry, key))
+          __defProp(entry, key, {
+            get: __accessProp.bind(from, key),
+            enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable
+          });
+    }
+    __moduleCache.set(from, entry);
+    return entry;
+  };
+  var __moduleCache;
+
+  // src/prelude.ts
+  var exports_prelude = {};
+
+  // src/tunnel-url.ts
+  var B64_CHUNK = 32768;
+  function computeSelfBaseDir(selfHref) {
+    if (!selfHref)
+      return "";
+    let h = selfHref;
+    const hash = h.indexOf("#");
+    if (hash >= 0)
+      h = h.slice(0, hash);
+    const q = h.indexOf("?");
+    if (q >= 0)
+      h = h.slice(0, q);
+    const slash = h.lastIndexOf("/");
+    return slash >= 0 ? h.slice(0, slash + 1) : "";
+  }
+  function isSelfOriginUrl(u, selfBaseDir, selfHref, objectUrls) {
+    if (!selfBaseDir || !u.startsWith(selfBaseDir))
+      return false;
+    if (u === selfHref)
+      return false;
+    return !objectUrls.has(u);
+  }
+  function isExternalUrl(u, selfBaseDir, selfHref, objectUrls) {
+    if (!u)
+      return false;
+    if (u.startsWith("#"))
+      return true;
+    if (isSelfOriginUrl(u, selfBaseDir, selfHref, objectUrls))
+      return false;
+    if (u.startsWith("data:") || u.startsWith("blob:"))
+      return true;
+    if (u.startsWith("about:") || u.startsWith("javascript:"))
+      return true;
+    if (u.startsWith("//"))
+      return true;
+    if (/^[a-z][a-z0-9+.-]*:/i.test(u)) {
+      return true;
+    }
+    return false;
+  }
+  function normalizeToRelPath(u, selfBaseDir) {
+    let s = u;
+    if (selfBaseDir && s.startsWith(selfBaseDir)) {
+      s = s.slice(selfBaseDir.length);
+    }
+    s = s.replace(/^\.\//, "");
+    s = s.replace(/^\/+/, "");
+    return s;
+  }
+  function blobInner(base, NativeURL) {
+    if (base == null)
+      return null;
+    const s = typeof base === "string" ? base : base instanceof NativeURL ? base.href : String(base);
+    return s.startsWith("blob:") ? s.slice("blob:".length) : null;
+  }
+  var OPAQUE_BLOB_ORIGIN = "https://hatch-cvm-opaque.invalid";
+  function isAbsoluteUrlString(s, NativeURL) {
+    try {
+      new NativeURL(s);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+  function resolveAgainstBlobBase(u, base, NativeURL) {
+    const inner = blobInner(base, NativeURL);
+    if (inner === null)
+      return null;
+    if (isAbsoluteUrlString(inner, NativeURL)) {
+      return new NativeURL("blob:" + new NativeURL(u, inner).href);
+    }
+    const slash = inner.indexOf("/");
+    const token = slash >= 0 ? inner.slice(0, slash) : inner;
+    const path = slash >= 0 ? inner.slice(slash) : "/";
+    const resolved = new NativeURL(u, OPAQUE_BLOB_ORIGIN + path);
+    return new NativeURL("blob:" + token + resolved.pathname + resolved.search + resolved.hash);
+  }
+  function resolveTunnelUrl(url, base, selfHref, NativeURL) {
+    const u = url == null ? "" : typeof url === "string" ? url : url instanceof NativeURL ? url.href : String(url);
+    const uAbsolute = /^[a-z][a-z0-9+.-]*:/i.test(u) || u.startsWith("//");
+    if (base !== undefined && base !== null && !uAbsolute) {
+      const viaBlob = resolveAgainstBlobBase(u, base, NativeURL);
+      if (viaBlob !== null)
+        return viaBlob;
+      return new NativeURL(u, base);
+    }
+    if (!uAbsolute && selfHref) {
+      const viaBlob = resolveAgainstBlobBase(u, selfHref, NativeURL);
+      if (viaBlob !== null)
+        return viaBlob;
+    }
+    return base === undefined ? new NativeURL(u) : new NativeURL(u, base);
+  }
+  function bytesToBase64(bytes) {
+    const u8 = bytes instanceof Uint8Array ? bytes : new Uint8Array(bytes);
+    let s = "";
+    for (let i = 0;i < u8.length; i += B64_CHUNK) {
+      s += String.fromCharCode.apply(null, Array.from(u8.subarray(i, i + B64_CHUNK)));
+    }
+    return btoa(s);
+  }
+  function base64ToBytes(b64) {
+    const bin = atob(b64);
+    const out = new Uint8Array(bin.length);
+    for (let i = 0;i < bin.length; i++)
+      out[i] = bin.charCodeAt(i);
+    return out;
+  }
+  function importMetaUrl(selfHref, selfBaseDir) {
+    return selfBaseDir ? `${selfBaseDir}assets/cvm-bundle.js` : selfHref;
+  }
+
+  // src/download-links.ts
+  function installDownloadLinks(fetchAsset, isExternalUrl, revokeDelayMs) {
+    document.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      const anchor = event.composedPath().find((node) => node instanceof HTMLAnchorElement);
+      if (!anchor?.hasAttribute("download"))
+        return;
+      const href = anchor.getAttribute("href");
+      if (!href || isExternalUrl(href))
+        return;
+      event.preventDefault();
+      const filename = anchor.download || resourceFilename(href);
+      (async () => {
+        const response = await fetchAsset(href);
+        if (!response.ok) {
+          throw new Error(`Artifact download failed: HTTP ${response.status}`);
+        }
+        const url = URL.createObjectURL(await response.blob());
+        const link = document.createElement("a");
+        link.href = url;
+        link.download = filename;
+        link.hidden = true;
+        document.body.appendChild(link);
+        try {
+          link.click();
+        } finally {
+          link.remove();
+          setTimeout(() => URL.revokeObjectURL(url), revokeDelayMs);
+        }
+      })().catch((error) => reportError(error));
+    });
+  }
+  function resourceFilename(href) {
+    const path = new URL(href, document.baseURI).pathname;
+    const name = path.slice(path.lastIndexOf("/") + 1);
+    try {
+      return decodeURIComponent(name);
+    } catch {
+      return name;
+    }
+  }
+
+  // src/fragment-links.ts
+  function installFragmentLinks() {
+    if (!location.href.startsWith("blob:null/"))
+      return;
+    const NativeURL = URL;
+    const pushState = history.pushState.bind(history);
+    const replaceState = history.replaceState.bind(history);
+    window.addEventListener("click", (event) => {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey)
+        return;
+      const anchor = event.composedPath().find((node) => node instanceof HTMLAnchorElement);
+      if (!anchor || anchor.hasAttribute("download"))
+        return;
+      const targetName = anchor.getAttribute("target") ?? document.querySelector("base[target]")?.getAttribute("target") ?? "";
+      if (targetName !== "" && targetName.toLowerCase() !== "_self")
+        return;
+      const href = anchor.getAttribute("href");
+      if (!href?.startsWith("#"))
+        return;
+      const oldURL = location.href;
+      const nextURL = new NativeURL(href, oldURL);
+      event.preventDefault();
+      const changed = nextURL.href !== oldURL;
+      if (changed) {
+        pushState(null, "", nextURL.href);
+      } else {
+        replaceState(null, "", nextURL.href);
+      }
+      window.dispatchEvent(new PopStateEvent("popstate", { state: null }));
+      const target = fragmentTarget(nextURL.hash);
+      if (target) {
+        target.scrollIntoView();
+        if (target !== document.documentElement && (target instanceof HTMLElement || target instanceof SVGElement)) {
+          const hadTabIndex = target.hasAttribute("tabindex");
+          if (!hadTabIndex)
+            target.setAttribute("tabindex", "-1");
+          target.focus({ preventScroll: true });
+          if (!hadTabIndex)
+            target.removeAttribute("tabindex");
+        }
+      }
+      if (changed) {
+        queueMicrotask(() => window.dispatchEvent(new HashChangeEvent("hashchange", {
+          oldURL,
+          newURL: nextURL.href
+        })));
+      }
+    });
+  }
+  function fragmentTarget(hash) {
+    const bytes = hash.slice(1).replace(/%([0-9a-f]{2})/gi, (_match, hex) => String.fromCharCode(parseInt(hex, 16)));
+    const fragment = new TextDecoder().decode(Uint8Array.from(bytes, (byte) => byte.charCodeAt(0)));
+    if (fragment === "")
+      return document.documentElement;
+    const idTarget = document.getElementById(fragment);
+    if (idTarget)
+      return idTarget;
+    const namedTarget = Array.from(document.getElementsByName(fragment)).find((node) => node instanceof HTMLAnchorElement);
+    return namedTarget ?? (fragment.toLowerCase() === "top" ? document.documentElement : null);
+  }
+
+  // src/prelude.ts
+  (function installTunnel() {
+    installFragmentLinks();
+    let port = null;
+    let portReadyResolve = null;
+    const portReady = new Promise((res) => {
+      portReadyResolve = res;
+    });
+    const pending = new Map;
+    const openWs = new Map;
+    function newId() {
+      return Math.random().toString(36).slice(2) + "-" + Date.now().toString(36);
+    }
+    function bytesToB64(bytes) {
+      return bytesToBase64(bytes);
+    }
+    function b64ToBytes(b64) {
+      return base64ToBytes(b64);
+    }
+    async function httpReq(method, path, body, headers) {
+      const p = port ?? await portReady;
+      const id = newId();
+      const headerArr = [];
+      if (headers) {
+        const h = new Headers(headers);
+        h.forEach((v, k) => headerArr.push([k, v]));
+      }
+      let bodyB64 = "";
+      if (body != null && body !== "") {
+        let bytes;
+        if (typeof body === "string") {
+          bytes = new TextEncoder().encode(body);
+        } else if (body instanceof ArrayBuffer) {
+          bytes = new Uint8Array(body);
+        } else if (body instanceof Uint8Array) {
+          bytes = body;
+        } else if (body instanceof Blob) {
+          bytes = new Uint8Array(await body.arrayBuffer());
+        } else if (body instanceof FormData) {
+          const boundary = "----HatchBoundary" + Math.random().toString(36).slice(2);
+          let s = "";
+          for (const [k, v] of body.entries()) {
+            s += `--${boundary}\r
+Content-Disposition: form-data; name="${k}"`;
+            if (v instanceof File) {
+              s += `; filename="${v.name}"\r
+Content-Type: ${v.type || "application/octet-stream"}\r
+\r
+`;
+              const fb = new Uint8Array(await v.arrayBuffer());
+              s += new TextDecoder("latin1").decode(fb);
+            } else {
+              s += `\r
+\r
+${v}`;
+            }
+            s += `\r
+`;
+          }
+          s += `--${boundary}--\r
+`;
+          bytes = new TextEncoder().encode(s);
+          headerArr.push([
+            "content-type",
+            `multipart/form-data; boundary=${boundary}`
+          ]);
+        } else {
+          bytes = new TextEncoder().encode(String(body));
+        }
+        bodyB64 = bytesToB64(bytes);
+      }
+      return new Promise((resolve, reject) => {
+        pending.set(id, {
+          resolve: (msg) => {
+            if (msg.error) {
+              reject(new Error(msg.error.message ?? "tunnel error"));
+              return;
+            }
+            resolve({
+              status: msg.status,
+              headers: msg.headers,
+              bytes: msg.bodyB64 ? b64ToBytes(msg.bodyB64) : new Uint8Array(0)
+            });
+          },
+          reject
+        });
+        p.postMessage({
+          type: "http.req",
+          id,
+          method,
+          path,
+          headers: headerArr,
+          bodyB64
+        });
+      });
+    }
+    async function tunnelFetch(input, init) {
+      let urlStr;
+      let method = init?.method ?? "GET";
+      let headers = init?.headers;
+      let body = init?.body;
+      if (input instanceof Request) {
+        urlStr = input.url;
+        method = init?.method ?? input.method;
+        headers = init?.headers ?? input.headers;
+        if (body == null && input.body) {
+          body = await input.arrayBuffer();
+        }
+      } else {
+        urlStr = String(input);
+      }
+      if (isExternalUrl2(urlStr)) {
+        return originalFetch(input, init);
+      }
+      const relPath = normalizeToRelPath2(urlStr);
+      const r = await httpReq(method, relPath, body ?? null, headers);
+      const respHeaders = new Headers;
+      for (const [k, v] of r.headers ?? [])
+        respHeaders.set(k, v);
+      return new Response(r.bytes, {
+        status: r.status,
+        headers: respHeaders
+      });
+    }
+
+    class TunnelWebSocket extends EventTarget {
+      readyState = 0;
+      static CONNECTING = 0;
+      static OPEN = 1;
+      static CLOSING = 2;
+      static CLOSED = 3;
+      CONNECTING = 0;
+      OPEN = 1;
+      CLOSING = 2;
+      CLOSED = 3;
+      url;
+      binaryType = "blob";
+      bufferedAmount = 0;
+      protocol = "";
+      extensions = "";
+      onopen = null;
+      onmessage = null;
+      onclose = null;
+      onerror = null;
+      _id;
+      constructor(urlIn, _protocols) {
+        super();
+        const urlStr = String(urlIn);
+        this.url = urlStr;
+        this._id = newId();
+        openWs.set(this._id, this);
+        const path = normalizeToRelPath2(urlStr);
+        (async () => {
+          const p = port ?? await portReady;
+          p.postMessage({ type: "ws.open", id: this._id, path });
+        })();
+      }
+      _handle(msg) {
+        if (msg.type === "ws.opened") {
+          this.readyState = 1;
+          const ev = new Event("open");
+          this.onopen?.(ev);
+          this.dispatchEvent(ev);
+        } else if (msg.type === "ws.message") {
+          const bytes = msg.dataB64 ? b64ToBytes(msg.dataB64) : new Uint8Array(0);
+          let data;
+          if (msg.binary) {
+            data = this.binaryType === "arraybuffer" ? bytes.buffer : new Blob([bytes]);
+          } else {
+            data = new TextDecoder().decode(bytes);
+          }
+          const ev = new MessageEvent("message", { data });
+          this.onmessage?.(ev);
+          this.dispatchEvent(ev);
+        } else if (msg.type === "ws.closed") {
+          this.readyState = 3;
+          const ev = new CloseEvent("close", {
+            code: msg.code ?? 1000,
+            reason: msg.reason ?? ""
+          });
+          this.onclose?.(ev);
+          this.dispatchEvent(ev);
+          openWs.delete(this._id);
+        } else if (msg.type === "ws.error") {
+          const ev = new Event("error");
+          this.onerror?.(ev);
+          this.dispatchEvent(ev);
+        }
+      }
+      send(data) {
+        (async () => {
+          const p = port ?? await portReady;
+          let bytes;
+          let binary = false;
+          if (typeof data === "string") {
+            bytes = new TextEncoder().encode(data);
+          } else if (data instanceof Blob) {
+            bytes = new Uint8Array(await data.arrayBuffer());
+            binary = true;
+          } else if (data instanceof ArrayBuffer) {
+            bytes = new Uint8Array(data);
+            binary = true;
+          } else if (ArrayBuffer.isView(data)) {
+            bytes = new Uint8Array(data.buffer, data.byteOffset, data.byteLength);
+            binary = true;
+          } else {
+            bytes = new TextEncoder().encode(String(data));
+          }
+          p.postMessage({
+            type: "ws.send",
+            id: this._id,
+            dataB64: bytesToB64(bytes),
+            binary
+          });
+        })();
+      }
+      close(code, reason) {
+        (async () => {
+          const p = port ?? await portReady;
+          p.postMessage({ type: "ws.close", id: this._id, code, reason });
+        })();
+      }
+      addEventListener(type, listener, options) {
+        super.addEventListener(type, listener, options);
+      }
+    }
+
+    class TunnelXHR extends EventTarget {
+      static UNSENT = 0;
+      static OPENED = 1;
+      static HEADERS_RECEIVED = 2;
+      static LOADING = 3;
+      static DONE = 4;
+      UNSENT = 0;
+      OPENED = 1;
+      HEADERS_RECEIVED = 2;
+      LOADING = 3;
+      DONE = 4;
+      readyState = 0;
+      status = 0;
+      statusText = "";
+      responseText = "";
+      response = null;
+      responseType = "";
+      responseURL = "";
+      withCredentials = false;
+      timeout = 0;
+      upload = new EventTarget;
+      onreadystatechange = null;
+      onload = null;
+      onerror = null;
+      onloadend = null;
+      onabort = null;
+      onprogress = null;
+      ontimeout = null;
+      _method = "GET";
+      _url = "";
+      _reqHeaders = [];
+      _respHeaders = [];
+      _aborted = false;
+      open(method, url) {
+        this._method = method;
+        this._url = url;
+        this.readyState = 1;
+        this.onreadystatechange?.();
+      }
+      setRequestHeader(name, value) {
+        this._reqHeaders.push([name, value]);
+      }
+      getAllResponseHeaders() {
+        return this._respHeaders.map(([k, v]) => `${k}: ${v}`).join(`\r
+`);
+      }
+      getResponseHeader(name) {
+        const lc = name.toLowerCase();
+        const hit = this._respHeaders.find(([k]) => k.toLowerCase() === lc);
+        return hit ? hit[1] : null;
+      }
+      abort() {
+        this._aborted = true;
+        this.readyState = 0;
+      }
+      send(body) {
+        if (isExternalUrl2(this._url)) {
+          const real = new originalXHR;
+          real.open(this._method, this._url);
+          for (const [k, v] of this._reqHeaders)
+            real.setRequestHeader(k, v);
+          real.onload = () => {
+            this.status = real.status;
+            this.responseText = real.responseText;
+            this.response = real.response;
+            this.readyState = 4;
+            this.onreadystatechange?.();
+            this.onload?.();
+            this.onloadend?.();
+            this.dispatchEvent(new Event("load"));
+          };
+          real.onerror = () => {
+            this.onerror?.();
+            this.dispatchEvent(new Event("error"));
+          };
+          real.send(body);
+          return;
+        }
+        const relPath = normalizeToRelPath2(this._url);
+        httpReq(this._method, relPath, body ?? null, this._reqHeaders).then((r) => {
+          if (this._aborted)
+            return;
+          this.status = r.status;
+          this._respHeaders = r.headers ?? [];
+          this.responseText = new TextDecoder().decode(r.bytes);
+          if (this.responseType === "arraybuffer") {
+            this.response = r.bytes.buffer;
+          } else if (this.responseType === "blob") {
+            this.response = new Blob([r.bytes]);
+          } else if (this.responseType === "json") {
+            try {
+              this.response = JSON.parse(this.responseText);
+            } catch {
+              this.response = null;
+            }
+          } else {
+            this.response = this.responseText;
+          }
+          this.readyState = 4;
+          this.onreadystatechange?.();
+          this.onload?.();
+          this.onloadend?.();
+          this.dispatchEvent(new Event("load"));
+        }, () => {
+          if (this._aborted)
+            return;
+          this.onerror?.();
+          this.dispatchEvent(new Event("error"));
+        });
+      }
+    }
+
+    class TunnelEventSource extends EventTarget {
+      static CONNECTING = 0;
+      static OPEN = 1;
+      static CLOSED = 2;
+      readyState = 0;
+      url;
+      withCredentials = false;
+      onopen = null;
+      onmessage = null;
+      onerror = null;
+      constructor(url) {
+        super();
+        this.url = String(url);
+        (async () => {
+          try {
+            const relPath = normalizeToRelPath2(this.url);
+            const r = await httpReq("GET", relPath, null, [
+              ["accept", "text/event-stream"]
+            ]);
+            this.readyState = 1;
+            this.onopen?.(new Event("open"));
+            const text = new TextDecoder().decode(r.bytes);
+            for (const block of text.split(/\n\n/)) {
+              const data = block.split(`
+`).filter((l) => l.startsWith("data:")).map((l) => l.slice(5).trim()).join(`
+`);
+              if (data) {
+                const ev = new MessageEvent("message", { data });
+                this.onmessage?.(ev);
+                this.dispatchEvent(ev);
+              }
+            }
+            this.readyState = 2;
+          } catch {
+            this.onerror?.(new Event("error"));
+          }
+        })();
+      }
+      close() {
+        this.readyState = 2;
+      }
+    }
+    const SELF_HREF = (() => {
+      try {
+        return globalThis.location?.href ?? "";
+      } catch {
+        return "";
+      }
+    })();
+    const SELF_BASE_DIR = computeSelfBaseDir(SELF_HREF);
+    const objectUrls = new Set;
+    function isSelfOriginUrl2(u) {
+      return isSelfOriginUrl(u, SELF_BASE_DIR, SELF_HREF, objectUrls);
+    }
+    function isExternalUrl2(u) {
+      return isExternalUrl(u, SELF_BASE_DIR, SELF_HREF, objectUrls);
+    }
+    function normalizeToRelPath2(u) {
+      return normalizeToRelPath(u, SELF_BASE_DIR);
+    }
+    const URL_ATTRS = new Set([
+      "src",
+      "srcset",
+      "href",
+      "poster",
+      "action",
+      "formaction",
+      "data",
+      "background",
+      "cite",
+      "longdesc",
+      "usemap",
+      "manifest"
+    ]);
+    const URL_STYLE_PROPS = new Set([
+      "background",
+      "backgroundImage",
+      "background-image",
+      "borderImage",
+      "border-image",
+      "borderImageSource",
+      "border-image-source",
+      "listStyle",
+      "list-style",
+      "listStyleImage",
+      "list-style-image",
+      "cursor",
+      "mask",
+      "maskImage",
+      "mask-image",
+      "webkitMask",
+      "-webkit-mask",
+      "webkitMaskImage",
+      "-webkit-mask-image",
+      "content",
+      "src"
+    ]);
+    const __BLOB_CACHE_MAX = 256;
+    const __BLOB_REVOKE_DELAY_MS = 30000;
+    const blobCache = new Map;
+    const blobStats = {
+      created: 0,
+      revoked: 0,
+      hits: 0,
+      misses: 0,
+      inFlightRevokes: 0
+    };
+    function __evictIfOverCap() {
+      while (blobCache.size > __BLOB_CACHE_MAX) {
+        const oldestKey = blobCache.keys().next().value;
+        if (oldestKey === undefined)
+          break;
+        const ent = blobCache.get(oldestKey);
+        blobCache.delete(oldestKey);
+        blobStats.inFlightRevokes++;
+        const t = setTimeout(() => {
+          ent.url.then((u) => {
+            if (typeof u === "string" && u.startsWith("blob:")) {
+              try {
+                URL.revokeObjectURL(u);
+                blobStats.revoked++;
+              } catch {}
+            }
+          }).finally(() => {
+            blobStats.inFlightRevokes--;
+          });
+        }, __BLOB_REVOKE_DELAY_MS);
+        ent.pendingRevoke = t;
+      }
+    }
+    function resolveToBlobUrl(rel) {
+      if (isExternalUrl2(rel))
+        return Promise.resolve(rel);
+      const hashIdx = rel.indexOf("#");
+      const pathPart = hashIdx >= 0 ? rel.slice(0, hashIdx) : rel;
+      const frag = hashIdx >= 0 ? rel.slice(hashIdx) : "";
+      const key = normalizeToRelPath2(pathPart);
+      let ent = blobCache.get(key);
+      if (ent) {
+        if (ent.pendingRevoke != null) {
+          clearTimeout(ent.pendingRevoke);
+          ent.pendingRevoke = undefined;
+          blobStats.inFlightRevokes--;
+        }
+        blobCache.delete(key);
+        blobCache.set(key, ent);
+        blobStats.hits++;
+      } else {
+        blobStats.misses++;
+        const url = httpReq("GET", key, null).then((r) => {
+          const ctHeader = r.headers.find(([k]) => k.toLowerCase() === "content-type");
+          const ct = ctHeader?.[1] ?? "application/octet-stream";
+          const blob = new Blob([r.bytes], { type: ct });
+          blobStats.created++;
+          return URL.createObjectURL(blob);
+        });
+        ent = { url };
+        blobCache.set(key, ent);
+        __evictIfOverCap();
+      }
+      return frag ? ent.url.then((b) => b + frag) : ent.url;
+    }
+    const HATCH_PIXEL_PREFIX = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    const HATCH_FRAG = "#hatch=";
+    function isHatchPlaceholder(url) {
+      return url.indexOf(HATCH_PIXEL_PREFIX + HATCH_FRAG) === 0;
+    }
+    function unwrapHatchPlaceholder(url) {
+      if (!isHatchPlaceholder(url))
+        return null;
+      return decodeURIComponent(url.slice((HATCH_PIXEL_PREFIX + HATCH_FRAG).length));
+    }
+    async function rewriteCssTextAsync(text) {
+      const re = /url\(\s*(['"]?)([^'")]+)\1\s*\)/g;
+      const tasks = [];
+      let m;
+      while ((m = re.exec(text)) !== null) {
+        tasks.push({ match: m[0], index: m.index, url: m[2].trim() });
+      }
+      if (tasks.length === 0)
+        return text;
+      const resolved = await Promise.all(tasks.map(async (t) => {
+        if (t.url.startsWith("blob:"))
+          return t.url;
+        const unwrapped = unwrapHatchPlaceholder(t.url);
+        if (unwrapped != null) {
+          try {
+            return await resolveToBlobUrl(unwrapped);
+          } catch {
+            return t.url;
+          }
+        }
+        if (isExternalUrl2(t.url))
+          return t.url;
+        try {
+          return await resolveToBlobUrl(t.url);
+        } catch {
+          return t.url;
+        }
+      }));
+      let out = "";
+      let last = 0;
+      tasks.forEach((t, i) => {
+        out += text.slice(last, t.index);
+        out += `url("${resolved[i]}")`;
+        last = t.index + t.match.length;
+      });
+      out += text.slice(last);
+      return out;
+    }
+    function rewriteCssText(text) {
+      return rewriteCssTextAsync(text);
+    }
+    const mediaSourceLoads = new WeakMap;
+    window.addEventListener("error", (event) => {
+      const source = event.target;
+      if (!event.isTrusted || !(source instanceof HTMLSourceElement) || !(source.parentElement instanceof HTMLMediaElement) || source.hasAttribute("src"))
+        return;
+      const state = mediaSourceLoads.get(source);
+      if (state === "pending" || state === undefined && source.hasAttribute("data-hatch-src")) {
+        event.stopImmediatePropagation();
+      }
+    }, true);
+    function isElement(el) {
+      if (el instanceof Element)
+        return true;
+      const ownerWindow = el?.ownerDocument?.defaultView;
+      return ownerWindow != null && el instanceof ownerWindow.Element;
+    }
+    function setAttr(el, name, value, ...rest) {
+      if (!isElement(el)) {
+        return el.setAttribute(name, value, ...rest);
+      }
+      name = String(name);
+      if (value == null) {
+        if (name.toLowerCase() === "src" && el instanceof HTMLSourceElement) {
+          mediaSourceLoads.set(el, "settled");
+        }
+        try {
+          el.removeAttribute(name);
+        } catch {}
+        return;
+      }
+      const v = String(value);
+      const lcName = name.toLowerCase();
+      const tag = el.tagName?.toUpperCase();
+      if ((tag === "A" || tag === "BASE" || tag === "AREA") && lcName === "href") {
+        el.setAttribute(name, v);
+        return;
+      }
+      if (!URL_ATTRS.has(lcName) && lcName !== "style" && lcName !== "srcset") {
+        el.setAttribute(name, v);
+        return;
+      }
+      if (lcName === "srcset") {
+        const parts = v.split(",").map((s) => s.trim()).filter(Boolean);
+        Promise.all(parts.map(async (p) => {
+          const segs = p.split(/\s+/);
+          const url = segs[0];
+          const rest = segs.slice(1).join(" ");
+          if (isExternalUrl2(url))
+            return p;
+          const resolved = await resolveToBlobUrl(url);
+          return rest ? `${resolved} ${rest}` : resolved;
+        })).then((rebuilt) => {
+          try {
+            el.setAttribute("srcset", rebuilt.join(", "));
+          } catch {}
+        });
+        return;
+      }
+      if (URL_ATTRS.has(lcName)) {
+        const isMediaSource = tag === "SOURCE" && lcName === "src";
+        if (isExternalUrl2(v)) {
+          if (isMediaSource)
+            mediaSourceLoads.set(el, "settled");
+          el.setAttribute(name, v);
+          return;
+        }
+        if (isMediaSource)
+          mediaSourceLoads.set(el, "pending");
+        if (tag === "IMG" || tag === "VIDEO" && lcName === "poster") {
+          el.setAttribute(name, TRANSPARENT_PIXEL);
+        }
+        resolveToBlobUrl(v).then((blobUrl) => {
+          if (isMediaSource)
+            mediaSourceLoads.set(el, "settled");
+          try {
+            el.setAttribute(name, blobUrl);
+            if (isMediaSource) {
+              const media = el.parentElement;
+              if (media instanceof HTMLMediaElement && media.networkState === HTMLMediaElement.NETWORK_NO_SOURCE) {
+                const nextSibling = el.nextSibling;
+                el.remove();
+                media.insertBefore(el, nextSibling);
+              }
+            }
+          } catch {}
+        }, () => {
+          if (isMediaSource) {
+            mediaSourceLoads.set(el, "settled");
+            el.dispatchEvent(new Event("error"));
+          }
+        });
+        return;
+      }
+      if (lcName === "style") {
+        setStyleAttr(el, v);
+        return;
+      }
+      el.setAttribute(name, v);
+    }
+    function setAttrNS(el, ns, name, value, ...rest) {
+      if (!isElement(el)) {
+        return el.setAttributeNS(ns, name, value, ...rest);
+      }
+      name = String(name);
+      if (value == null) {
+        try {
+          el.removeAttributeNS(ns ?? null, name);
+        } catch {}
+        return;
+      }
+      const v = String(value);
+      const lcName = name.split(":").pop().toLowerCase();
+      if (lcName === "href" && URL_ATTRS.has("href")) {
+        if (isExternalUrl2(v)) {
+          el.setAttributeNS(ns ?? null, name, v);
+          return;
+        }
+        resolveToBlobUrl(v).then((blobUrl) => {
+          try {
+            el.setAttributeNS(ns ?? null, name, blobUrl);
+          } catch {}
+        }, () => {});
+        return;
+      }
+      try {
+        el.setAttributeNS(ns ?? null, name, v);
+      } catch {}
+    }
+    function setUrlProp(el, name, value) {
+      if (isElement(el)) {
+        setAttr(el, name.toLowerCase(), value);
+      } else {
+        el[name] = value;
+      }
+      return value;
+    }
+    const TRANSPARENT_PIXEL = "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==";
+    const HTML_TAG_ATTRS = {
+      img: ["src", "srcset", "poster"],
+      image: ["href"],
+      video: ["src", "poster"],
+      audio: ["src"],
+      source: ["src", "srcset"],
+      script: ["src"],
+      link: ["href"],
+      iframe: ["src"],
+      embed: ["src"],
+      object: ["data"],
+      track: ["src"],
+      input: ["src"],
+      form: ["action"],
+      button: ["formaction"],
+      use: ["href"]
+    };
+    function rewriteHtmlString(html) {
+      return html.replace(/<([a-zA-Z][a-zA-Z0-9-]*)\b([^>]*)>/g, (m, tag, attrs) => {
+        const lc = String(tag).toLowerCase();
+        const candidates = HTML_TAG_ATTRS[lc];
+        if (!candidates)
+          return m;
+        let out = attrs;
+        for (const a of candidates) {
+          const re = new RegExp(`\\b${a}\\s*=\\s*("([^"]*)"|'([^']*)'|([^\\s>]+))`, "i");
+          const matched = out.match(re);
+          if (!matched)
+            continue;
+          const value = matched[2] ?? matched[3] ?? matched[4] ?? "";
+          if (isExternalUrl2(value))
+            continue;
+          out = out.replace(re, `data-hatch-${a}="${value.replace(/"/g, "&quot;")}"`);
+        }
+        const styleRe = /\bstyle\s*=\s*("([^"]*)"|'([^']*)')/i;
+        const sm = out.match(styleRe);
+        if (sm) {
+          const value = sm[2] ?? sm[3] ?? "";
+          if (value.includes("url(")) {
+            out = out.replace(styleRe, `data-hatch-style="${value.replace(/"/g, "&quot;")}"`);
+          }
+        }
+        return `<${tag}${out}>`;
+      });
+    }
+    const HTML_URL_ATTRS_BY_TAG = {
+      IMG: ["src", "srcset", "poster"],
+      IMAGE: ["href"],
+      VIDEO: ["src", "poster"],
+      AUDIO: ["src"],
+      SOURCE: ["src", "srcset"],
+      SCRIPT: ["src"],
+      LINK: ["href"],
+      IFRAME: ["src"],
+      EMBED: ["src"],
+      OBJECT: ["data"],
+      TRACK: ["src"],
+      INPUT: ["src"],
+      FORM: ["action"],
+      BUTTON: ["formaction"],
+      USE: ["href", "xlink:href"]
+    };
+    function rewriteSubtreeForTunnel(root) {
+      if (!root)
+        return;
+      const walker = document.createTreeWalker(root, NodeFilter.SHOW_ELEMENT);
+      let n = walker.currentNode;
+      if (root.nodeType === 1)
+        processOne(root);
+      while (n = walker.nextNode()) {
+        processOne(n);
+      }
+    }
+    function processOne(el) {
+      const tag = (el.tagName ?? "").toUpperCase();
+      const attrs = HTML_URL_ATTRS_BY_TAG[tag];
+      if (attrs) {
+        for (const a of attrs) {
+          const v = el.getAttribute(a);
+          if (v == null)
+            continue;
+          if (isExternalUrl2(v))
+            continue;
+          el.setAttribute("data-hatch-" + a, v);
+          el.removeAttribute(a);
+        }
+      }
+      const style = el.getAttribute("style");
+      if (style && style.includes("url(")) {
+        el.setAttribute("data-hatch-style", style);
+        el.removeAttribute("style");
+      }
+    }
+    function parseAndCleanHtml(html) {
+      const tpl = document.createElement("template");
+      tpl.innerHTML = html;
+      rewriteSubtreeForTunnel(tpl.content);
+      return tpl.content;
+    }
+    function setInnerHTML(el, html, which = "innerHTML") {
+      const s = html == null ? "" : String(html);
+      if (which === "innerHTML" && typeof el.tagName === "string" && el.tagName.toUpperCase() === "TEMPLATE") {
+        try {
+          el.innerHTML = s;
+        } catch {}
+        return;
+      }
+      if (which === "outerHTML") {
+        const frag = parseAndCleanHtml(s);
+        const wrap = document.createElement("div");
+        wrap.appendChild(frag);
+        try {
+          el.outerHTML = wrap.innerHTML;
+        } catch {}
+        queueMicrotask(() => processDataHatchAttrs(document.body));
+        return;
+      }
+      const frag = parseAndCleanHtml(s);
+      try {
+        while (el.firstChild)
+          el.removeChild(el.firstChild);
+        el.appendChild(frag);
+      } catch {}
+      queueMicrotask(() => processDataHatchAttrs(el));
+    }
+    function insertAdjacentHTMLT(el, position, html) {
+      const s = html == null ? "" : String(html);
+      const frag = parseAndCleanHtml(s);
+      const wrap = document.createElement("template");
+      wrap.content.appendChild(frag);
+      try {
+        el.insertAdjacentHTML(position, wrap.innerHTML);
+      } catch {}
+      queueMicrotask(() => processDataHatchAttrs(document.body));
+    }
+    function processDataHatchAttrs(root) {
+      const SELECTORS = "[data-hatch-src], [data-hatch-href], [data-hatch-srcset], [data-hatch-poster], [data-hatch-action], [data-hatch-data], [data-hatch-style]";
+      root.querySelectorAll(SELECTORS).forEach((el) => {
+        const attrs = el.getAttributeNames();
+        for (const a of attrs) {
+          if (!a.startsWith("data-hatch-"))
+            continue;
+          const real = a.slice("data-hatch-".length);
+          const value = el.getAttribute(a) ?? "";
+          el.removeAttribute(a);
+          if (real === "style")
+            setStyleAttr(el, value);
+          else
+            setAttr(el, real, value);
+        }
+      });
+    }
+    const styleProxyCache = new WeakMap;
+    function getStyle(el) {
+      if (el == null)
+        return el;
+      let real;
+      try {
+        real = el.style;
+      } catch {
+        return;
+      }
+      if (real == null || typeof real !== "object" && typeof real !== "function") {
+        return real;
+      }
+      let proxy = styleProxyCache.get(real);
+      if (proxy)
+        return proxy;
+      proxy = new Proxy(real, {
+        get(target, prop, _receiver) {
+          const v = Reflect.get(target, prop, target);
+          if (typeof v === "function")
+            return v.bind(target);
+          return v;
+        },
+        set(target, prop, value) {
+          if (typeof prop === "string") {
+            setStyle(el, prop, value);
+            return true;
+          }
+          return Reflect.set(target, prop, value, target);
+        }
+      });
+      styleProxyCache.set(real, proxy);
+      return proxy;
+    }
+    function setStyle(el, propName, value) {
+      const v = value == null ? "" : String(value);
+      if (propName.startsWith("--")) {
+        rewriteCssText(v).then((rewritten) => {
+          try {
+            el.style.setProperty(propName, rewritten);
+          } catch {}
+        });
+        return;
+      }
+      if (URL_STYLE_PROPS.has(propName) && v.includes("url(")) {
+        rewriteCssText(v).then((rewritten) => {
+          try {
+            el.style[propName] = rewritten;
+          } catch {}
+        });
+        return;
+      }
+      try {
+        el.style[propName] = v;
+      } catch {}
+    }
+    function setStyleAttr(el, attrValue) {
+      if (!attrValue.includes("url(")) {
+        el.setAttribute("style", attrValue);
+        return;
+      }
+      rewriteCssText(attrValue).then((rewritten) => {
+        try {
+          el.setAttribute("style", rewritten);
+        } catch {}
+      });
+    }
+    function setStyleText(styleEl, text) {
+      if (!(styleEl instanceof HTMLStyleElement)) {
+        try {
+          styleEl.textContent = text;
+        } catch {}
+        return;
+      }
+      if (!text.includes("url(")) {
+        styleEl.textContent = text;
+        return;
+      }
+      rewriteCssText(text).then((rewritten) => {
+        try {
+          styleEl.textContent = rewritten;
+        } catch {}
+      });
+    }
+    function tunnelImage(_w, _h) {
+      const img = new originalImage;
+      const desc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, "src");
+      if (desc?.set) {
+        const origSet = desc.set;
+        const origGet = desc.get;
+        Object.defineProperty(img, "src", {
+          configurable: true,
+          get() {
+            return origGet.call(img);
+          },
+          set(v) {
+            if (v == null)
+              return origSet.call(img, "");
+            const s = String(v);
+            if (isExternalUrl2(s))
+              return origSet.call(img, s);
+            resolveToBlobUrl(s).then((b) => origSet.call(img, b), () => origSet.call(img, s));
+          }
+        });
+      }
+      return img;
+    }
+    function tunnelSendBeacon(url, data) {
+      tunnelFetch(url, { method: "POST", body: data, keepalive: true }).catch(() => {});
+      return true;
+    }
+    function tunnelWorker(_url) {
+      throw new Error("[__tunnel] new Worker() is not supported in Muse web artifacts.");
+    }
+    function tunnelImport(spec) {
+      throw new Error("[__tunnel] dynamic import() of '" + String(spec) + "' is not supported in Muse web artifacts.");
+    }
+    function installCssObserver() {
+      try {
+        const proto = window.CSSStyleSheet?.prototype;
+        if (proto) {
+          const origInsertRule = proto.insertRule;
+          proto.insertRule = function(rule, index) {
+            if (typeof rule === "string" && rule.includes("url(")) {
+              const idx = origInsertRule.call(this, rule, index);
+              rewriteCssText(rule).then((rewritten) => {
+                if (rewritten !== rule) {
+                  try {
+                    this.deleteRule(idx);
+                    origInsertRule.call(this, rewritten, idx);
+                  } catch {}
+                }
+              });
+              return idx;
+            }
+            return origInsertRule.call(this, rule, index);
+          };
+          const origReplace = proto.replace;
+          if (origReplace) {
+            proto.replace = function(text) {
+              if (typeof text === "string" && text.includes("url(")) {
+                return rewriteCssText(text).then((rewritten) => origReplace.call(this, rewritten));
+              }
+              return origReplace.call(this, text);
+            };
+          }
+          const origReplaceSync = proto.replaceSync;
+          if (origReplaceSync) {
+            proto.replaceSync = function(text) {
+              if (typeof text === "string" && text.includes("url(")) {
+                const ret = origReplaceSync.call(this, text);
+                rewriteCssText(text).then((rewritten) => {
+                  try {
+                    origReplaceSync.call(this, rewritten);
+                  } catch {}
+                });
+                return ret;
+              }
+              return origReplaceSync.call(this, text);
+            };
+          }
+        }
+      } catch (e) {}
+      function sweepSheet(sheet) {
+        try {
+          const rules = sheet.cssRules;
+          for (let i = 0;i < rules.length; i++) {
+            const rule = rules[i];
+            const txt = rule.cssText;
+            if (txt && (txt.includes(HATCH_FRAG) || txt.includes("url(") && !/url\(\s*["']?(blob:|https?:|data:image\/gif;base64,R0)/.test(txt))) {
+              rewriteCssText(txt).then((rewritten) => {
+                if (rewritten !== txt) {
+                  try {
+                    sheet.deleteRule(i);
+                    sheet.insertRule(rewritten, i);
+                  } catch {}
+                }
+              });
+            }
+          }
+        } catch {}
+      }
+      function sweepAll() {
+        for (const sheet of Array.from(document.styleSheets)) {
+          sweepSheet(sheet);
+        }
+      }
+      const mo = new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          for (const node of Array.from(m.addedNodes)) {
+            if (node instanceof HTMLStyleElement) {
+              const txt = node.textContent ?? "";
+              if (txt.includes("url(")) {
+                rewriteCssText(txt).then((rewritten) => {
+                  if (rewritten !== txt) {
+                    try {
+                      node.textContent = rewritten;
+                    } catch {}
+                  }
+                });
+              }
+            } else if (node instanceof HTMLLinkElement && node.rel === "stylesheet") {
+              node.addEventListener("load", () => sweepSheet(node.sheet), { once: true });
+            }
+          }
+        }
+      });
+      mo.observe(document, { subtree: true, childList: true });
+      Promise.resolve().then(sweepAll);
+      setTimeout(sweepAll, 0);
+      setTimeout(sweepAll, 50);
+      setTimeout(sweepAll, 250);
+    }
+    function rewriteAuthoredHtml() {
+      const SELECTORS = "[data-hatch-src], [data-hatch-href], [data-hatch-srcset]";
+      document.querySelectorAll(SELECTORS).forEach((el) => {
+        const src = el.getAttribute("data-hatch-src");
+        const href = el.getAttribute("data-hatch-href");
+        const srcset = el.getAttribute("data-hatch-srcset");
+        if (src)
+          setAttr(el, "src", src);
+        if (href)
+          setAttr(el, "href", href);
+        if (srcset)
+          setAttr(el, "srcset", srcset);
+      });
+    }
+    let historyUrlWarned = false;
+    function warnHistoryUrlDropped(method, url) {
+      if (url === undefined || url === null)
+        return;
+      if (historyUrlWarned)
+        return;
+      historyUrlWarned = true;
+      try {
+        console.warn("[__tunnel] history." + method + "() was called with a URL; the URL was ignored. A Muse web artifact " + "renders in an opaque origin with no navigable URL of its own, so " + "the browser rejects any URL change. State kept in the URL will not " + "persist or survive a reload — keep it in component state, or in " + "the artifact's database through a server action.");
+      } catch {}
+    }
+    const originalFetch = globalThis.fetch?.bind(globalThis) ?? (() => {
+      throw new Error("no native fetch");
+    });
+    const originalXHR = globalThis.XMLHttpRequest;
+    const originalImage = globalThis.Image;
+    const tunnel = {
+      fetch: tunnelFetch,
+      XHR: TunnelXHR,
+      WebSocket: TunnelWebSocket,
+      EventSource: TunnelEventSource,
+      Image: tunnelImage,
+      Worker: tunnelWorker,
+      import: tunnelImport,
+      sendBeacon: tunnelSendBeacon,
+      setAttr,
+      setAttrNS,
+      setUrlProp,
+      setStyle,
+      getStyle,
+      setStyleAttr,
+      setStyleText,
+      setInnerHTML,
+      insertAdjacentHTML: insertAdjacentHTMLT,
+      rewriteCssText,
+      resolveToBlobUrl,
+      processDataHatchAttrs,
+      rewriteHtmlString,
+      _resolveUrlString: (v) => v,
+      _resolveCssValue: (v) => v,
+      _resolveCssText: (v) => v,
+      _resolveStyleProp: (v) => v,
+      _importMeta: {
+        get url() {
+          return importMetaUrl(SELF_HREF, SELF_BASE_DIR);
+        }
+      },
+      _state: {
+        get port() {
+          return port;
+        },
+        get inFlight() {
+          return pending.size;
+        },
+        get blobCacheSize() {
+          return blobCache.size;
+        },
+        get blobStats() {
+          return { ...blobStats };
+        }
+      }
+    };
+    globalThis.__tunnel = tunnel;
+    window.__tunnel = tunnel;
+    try {
+      globalThis.fetch = tunnelFetch;
+      window.fetch = tunnelFetch;
+      globalThis.XMLHttpRequest = TunnelXHR;
+      window.XMLHttpRequest = TunnelXHR;
+      globalThis.WebSocket = TunnelWebSocket;
+      window.WebSocket = TunnelWebSocket;
+      globalThis.EventSource = TunnelEventSource;
+      window.EventSource = TunnelEventSource;
+      const nav = globalThis.navigator;
+      if (nav && typeof nav.sendBeacon === "function") {
+        nav.sendBeacon = (url, data) => tunnelSendBeacon(url, data);
+      }
+      const NativeURL = globalThis.URL;
+      const TunnelURL = function(url, base) {
+        return resolveTunnelUrl(url, base, SELF_HREF, NativeURL);
+      };
+      TunnelURL.prototype = NativeURL.prototype;
+      for (const k of Object.getOwnPropertyNames(NativeURL)) {
+        if (k === "prototype" || k === "length" || k === "name")
+          continue;
+        try {
+          TunnelURL[k] = NativeURL[k];
+        } catch {}
+      }
+      globalThis.URL = TunnelURL;
+      window.URL = TunnelURL;
+    } catch {}
+    try {
+      const hist = globalThis.history;
+      if (hist && typeof hist.pushState === "function" && typeof hist.replaceState === "function") {
+        const nativePushState = hist.pushState.bind(hist);
+        const nativeReplaceState = hist.replaceState.bind(hist);
+        hist.pushState = function(state, title, url) {
+          warnHistoryUrlDropped("pushState", url);
+          return nativePushState(state, title ?? "");
+        };
+        hist.replaceState = function(state, title, url) {
+          warnHistoryUrlDropped("replaceState", url);
+          return nativeReplaceState(state, title ?? "");
+        };
+      }
+    } catch {}
+    try {
+      const nativeCreateObjectURL = URL.createObjectURL.bind(URL);
+      const nativeRevokeObjectURL = URL.revokeObjectURL.bind(URL);
+      URL.createObjectURL = function(obj) {
+        const created = nativeCreateObjectURL(obj);
+        try {
+          objectUrls.add(created);
+        } catch {}
+        return created;
+      };
+      URL.revokeObjectURL = function(objectUrl) {
+        try {
+          objectUrls.delete(objectUrl);
+        } catch {}
+        nativeRevokeObjectURL(objectUrl);
+      };
+    } catch {}
+    const announceEpoch = Math.random().toString(36).slice(2) + "-" + Date.now().toString(36);
+    let announceTimer = null;
+    function announce() {
+      try {
+        window.parent.postMessage({ type: "bundle:ready", epoch: announceEpoch }, "*");
+      } catch {}
+    }
+    function startAnnouncing() {
+      announce();
+      announceTimer = setInterval(() => {
+        if (port != null) {
+          if (announceTimer != null)
+            clearInterval(announceTimer);
+          announceTimer = null;
+          return;
+        }
+        announce();
+      }, 120);
+    }
+    function onParentMessage(ev) {
+      const data = ev.data;
+      if (!data || typeof data !== "object")
+        return;
+      if (data.type === "bundle:init-port" && ev.ports && ev.ports[0]) {
+        if (port != null)
+          return;
+        if (announceTimer != null) {
+          clearInterval(announceTimer);
+          announceTimer = null;
+        }
+        port = ev.ports[0];
+        port.onmessage = (pe) => {
+          const msg = pe.data;
+          if (!msg || typeof msg !== "object")
+            return;
+          if (msg.type === "http.res") {
+            const ent = pending.get(msg.id);
+            if (ent) {
+              pending.delete(msg.id);
+              ent.resolve(msg);
+            }
+          } else if (msg.type === "ws.opened" || msg.type === "ws.message" || msg.type === "ws.closed" || msg.type === "ws.error") {
+            openWs.get(msg.id)?._handle(msg);
+          }
+        };
+        port.start?.();
+        portReadyResolve?.(port);
+        installCssObserver();
+        rewriteAuthoredHtml();
+        try {
+          window.parent.postMessage({ type: "bundle:port-attached" }, "*");
+        } catch {}
+      }
+    }
+    window.addEventListener("message", onParentMessage);
+    installDownloadLinks(tunnelFetch, isExternalUrl2, __BLOB_REVOKE_DELAY_MS);
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      startAnnouncing();
+    } else {
+      document.addEventListener("DOMContentLoaded", startAnnouncing);
+    }
+  })();
+})();
+
+;
+(function () {
+  var input = document.getElementById('secretInput'),
+    output = document.getElementById('privacyOutput'),
+    count = document.getElementById('charCount'),
+    status = document.getElementById('status'),
+    timer;
+  var cities = ['Chicago', 'New York', 'Austin', 'Miami', 'London', 'Paris', 'Toronto', 'Berlin', 'Tokyo', 'Lisbon', 'Denver', 'Seattle', 'Boston', 'Dallas', 'Atlanta'];
+  var safeStarters = ['Tell', 'Ask', 'Please', 'Can', 'Could', 'Would', 'Draft', 'Write', 'Explain', 'Help', 'Send', 'Remind', 'Meet', 'I', 'My', 'We', 'The', 'This', 'That'];
+  function escapeRegExp(s) {
+    return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+  function redact(text) {
+    var result = text.replace(/0x[a-fA-F0-9]{8,64}/g, '[WALLET_01]');
+    cities.forEach(function (city) {
+      result = result.replace(new RegExp('\\b' + escapeRegExp(city) + '\\b', 'gi'), '[LOCATION_01]');
+    });
+    result = result.replace(/\b[A-Z][a-z]{2,}\b/g, function (word, offset) {
+      if (offset === 0 || safeStarters.indexOf(word) !== -1 || cities.indexOf(word) !== -1) return word;
+      return '[PERSON_01]';
+    });
+    return result.replace(/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/g, '[EMAIL_01]');
+  }
+  function update() {
+    clearTimeout(timer);
+    count.textContent = input.value.length + ' chars';
+    if (!input.value.trim()) {
+      output.textContent = 'Your identity confetti lands here.';
+      status.textContent = 'waiting';
+      return;
+    }
+    status.textContent = 'scrubbing…';
+    output.classList.remove('scrubbing');
+    void output.offsetWidth;
+    output.classList.add('scrubbing');
+    timer = setTimeout(function () {
+      output.textContent = redact(input.value);
+      output.classList.remove('scrubbing');
+      status.textContent = 'probably less doxxed';
+    }, 560);
+  }
+  function confetti(amount) {
+    var colors = ['#dfff2f', '#ff5c4d', '#4778ff', '#ffffff', '#11110f'];
+    for (var i = 0; i < amount; i++) {
+      var bit = document.createElement('i');
+      bit.className = 'confetti';
+      __tunnel.setStyle(bit, "left", Math.random() * 100 + 'vw');
+      __tunnel.setStyle(bit, '--dur', 1.7 + Math.random() * 2.2 + 's');
+      __tunnel.setStyle(bit, '--drift', (Math.random() - .5) * 220 + 'px');
+      __tunnel.setStyle(bit, '--rot', Math.random() * 180 + 'deg');
+      __tunnel.setStyle(bit, '--c', colors[Math.floor(Math.random() * colors.length)]);
+      __tunnel.setStyle(bit, "width", 6 + Math.random() * 8 + 'px');
+      __tunnel.setStyle(bit, "height", 8 + Math.random() * 14 + 'px');
+      document.body.appendChild(bit);
+      setTimeout(function (node) {
+        return function () {
+          node.remove();
+        };
+      }(bit), 4200);
+    }
+  }
+  input.addEventListener('input', update);
+  document.getElementById('sampleBtn').addEventListener('click', function () {
+    input.value = 'Tell Alice my wallet is 0x1234567890abcdef1234567890abcdef12345678, then remind me to meet her in Chicago at alice@example.com.';
+    update();
+    input.focus();
+  });
+  document.getElementById('confettiBtn').addEventListener('click', function () {
+    confetti(60);
+  });
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      confetti(24);
+    }, 500);
+  });
+})();</script>
+</body>
+</html>

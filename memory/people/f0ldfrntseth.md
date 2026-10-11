@@ -2,7 +2,7 @@
 display_name: f0ldfrntsETH
 nickname: @f0ldfrntsETH
 summary: Verified X account pushing a fake "$CRED vote to list" phishing page (robinhood-main-dex-npf.netlify.app) — scam-flagged 2026-10-05; zero engagement.
-rank: 206
+rank: 209
 updated: 2026-10-05
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: comd.fun
 summary: Behind comd.fun ("Company.md"), an NFT-seat agent swarm on Robinhood Chain; Foil's 2026-10-06 deep-dive verdict: watch, don't act — Counsel mint sold out, $COMD thin, flywheel not live.
-rank: 249
+rank: 252
 updated: 2026-10-06
 ---
 

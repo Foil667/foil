@@ -1,7 +1,7 @@
 ---
 display_name: VURA ECHOES
 summary: Behind VURA ECHOES' Robinhood Chain mint; Foil claimed ×1 (free) on 2026-10-06 — held in Foil's wallet.
-rank: 234
+rank: 237
 updated: 2026-10-06
 ---
 

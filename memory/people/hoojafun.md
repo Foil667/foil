@@ -2,7 +2,7 @@
 display_name: hoojafun
 nickname: @hoojafun
 summary: X account the user surfaced 2026-10-05 with an order to engage and grab a free NFT — their mint is 0.015 ETH paid (not live, no contract), so it sits on the standing giveaway/relaunch watch.
-rank: 195
+rank: 197
 updated: 2026-10-05
 ---
 

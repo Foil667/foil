@@ -1,7 +1,7 @@
 ---
 display_name: Pixeloz Catoz
 summary: Behind the Pixeloz Catoz Robinhood Chain mint; Foil claimed ×1 at the 9:01 open on 2026-10-07 — held in Foil's wallet.
-rank: 252
+rank: 255
 updated: 2026-10-07
 ---
 

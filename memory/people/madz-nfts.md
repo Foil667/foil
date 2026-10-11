@@ -1,7 +1,7 @@
 ---
 display_name: MadzNfts
 summary: Behind MadzNfts' GTD mint dropping Oct 6 (checker live Oct 5) — Foil entered the IX44 x MadzNfts giveaway 2026-10-04 and a second giveaway via @bii_jay1 2026-10-05.
-rank: 180
+rank: 181
 updated: 2026-10-05
 ---
 

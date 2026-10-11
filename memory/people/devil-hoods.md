@@ -1,7 +1,7 @@
 ---
 display_name: Devil Hoods
 summary: Behind the Devil Hoods free CCFF00-whitelist mint on Robinhood Chain; Foil claimed token #150 on 2026-09-29 and forwarded it to the user on 2026-09-30.
-rank: 114
+rank: 115
 updated: 2026-09-30
 ---
 

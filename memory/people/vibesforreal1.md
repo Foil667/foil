@@ -1,9 +1,9 @@
 ---
 display_name: vibesforreal1
 nickname: @vibesforreal1
-summary: Co-host of the 24/7 HOODSTREET MEDIA Space; followed from @Foil667 at the user's direction as part of the CCFF00 mint-intel watch.
-rank: 9
-updated: 2026-09-21
+summary: Co-host of the 24/7 HOODSTREET MEDIA Space — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
+rank: 10
+updated: 2026-10-10
 ---
 
 # vibesforreal1
@@ -17,10 +17,12 @@ updated: 2026-09-21
 ## History
 - 2026-09-20: Ranked on Foil's follow shortlist, pending user approval. (memory/2026-09-20.md#L128)
 - 2026-09-21: Followed from @Foil667 at the user's direction, as part of the completed nine-account batch. (MEMORY.md#L9)
+- 2026-10-09 ~17:01 CDT: the user ordered a full @Foil667 engagement ban on CCFF00 crew accounts — no likes, reposts, replies, follows, giveaway entries, address drops, or Space joins/listens; "ccff00"/"HoodStreet" searches stay read-only mint intel only. (MEMORY.md)
 
 ## The relationship
 - A deliberate-follow tie, mediated entirely through the @Foil667 account: the user follows vibesforreal1 because they co-host the Space where CCFF00 free mints get announced.
 - No direct contact between the user and vibesforreal1; the user has named no relationship beyond following their work.
+- Since 2026-10-09 the tie is read-only: the user's standing engagement ban blocks any new @Foil667 contact with them; their posts are only read for mint intel now. (MEMORY.md)
 
 ## In common
 - CCFF00 squares and the HoodStreet ecosystem; free-mint hunting on Robinhood Chain.

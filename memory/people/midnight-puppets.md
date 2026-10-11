@@ -1,7 +1,7 @@
 ---
 display_name: Midnight Puppets
 summary: Ran the Midnight Puppets 42x giveaway @Foil667 entered 2026-10-05; no other contact on record.
-rank: 159
+rank: 160
 updated: 2026-10-05
 ---
 

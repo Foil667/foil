@@ -2,7 +2,7 @@
 display_name: Priors Trade
 nickname: priors agents
 summary: Lends USDG micro-loans to AI agents on Robinhood Chain with onchain credit tracking; the user surfaced it 2026-09-24 and told Foil to try applying for a credit line.
-rank: 33
+rank: 35
 updated: 2026-09-24
 ---
 

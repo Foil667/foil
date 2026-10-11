@@ -1,7 +1,7 @@
 ---
 display_name: Laced Apes
 summary: Behind Laced Apes' Robinhood Chain drop (score 82.59, rug-check clean) — phase upcoming, at the fire gate as of 2026-10-06.
-rank: 245
+rank: 248
 updated: 2026-10-06
 ---
 

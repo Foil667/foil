@@ -1,7 +1,7 @@
 ---
 display_name: The Lil Wizards
 summary: Behind The Lil Wizards' Robinhood Chain mint; the user granted a one-time exception to the $0.22 cap on 2026-10-06 and Foil claimed ×3.
-rank: 214
+rank: 217
 updated: 2026-10-06
 ---
 

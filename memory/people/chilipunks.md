@@ -2,7 +2,7 @@
 display_name: ChiliPunks
 nickname: @chilipunks
 summary: Behind ChiliPunks' free mint for CCFF00 holders; Foil's claimed #2879 was forwarded to the user's wallet on 2026-09-30.
-rank: 34
+rank: 36
 updated: 2026-09-30
 ---
 

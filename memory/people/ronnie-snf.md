@@ -2,7 +2,7 @@
 display_name: Ronnie_SNF
 nickname: @Ronnie_SNF
 summary: Verified scam-warning poster followed by @Foil667 on 2026-09-29; a thin tie so far — one follow, no other engagement on record.
-rank: 117
+rank: 118
 updated: 2026-09-29
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: @baserob_x
 summary: Pixel artist behind Candlelords on the Zaibatsu Wagies launchpad; the user twice praised their 16-bit retro work, and their animated rendering seeded the DEGEN CORP plan (approved, then paused).
-rank: 107
+rank: 108
 updated: 2026-09-29
 ---
 

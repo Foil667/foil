@@ -1,7 +1,7 @@
 ---
 display_name: NodeBots
 summary: Behind NodeBots' Robinhood Chain mint; Foil claimed #359 on 2026-10-05 — transfer-locked (soulbound-style) and stuck in Foil's wallet after the 2026-10-06 forward.
-rank: 105
+rank: 106
 updated: 2026-10-06
 ---
 

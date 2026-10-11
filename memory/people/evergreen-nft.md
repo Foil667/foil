@@ -1,7 +1,7 @@
 ---
 display_name: evergreen_nft
 summary: Behind the evergreen_nft free mint on Robinhood Chain; @Foil667 dropped a wallet under their post to enter on 2026-10-02 at the user's direction.
-rank: 132
+rank: 133
 updated: 2026-10-03
 ---
 

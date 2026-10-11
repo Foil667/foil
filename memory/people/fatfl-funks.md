@@ -1,7 +1,7 @@
 ---
 display_name: Fatfl Funks
 summary: Behind Fatfl Funks' Robinhood Chain mint; Foil claimed ×5 on 2026-10-06 and holds them in Foil's wallet.
-rank: 209
+rank: 212
 updated: 2026-10-06
 ---
 

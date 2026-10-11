@@ -1,7 +1,7 @@
 ---
 display_name: re-credit
 summary: Behind re-credit's Robinhood Chain mint; Foil claimed ×10 (free) on 2026-10-06 — held in Foil's wallet.
-rank: 236
+rank: 239
 updated: 2026-10-06
 ---
 

@@ -2,7 +2,7 @@
 display_name: Parker_Smith_1
 nickname: @parker_smith_1
 summary: Verified X account running a CCFF00-holder giveaway (1x Jigglette, 1x Stray Cuck, 1x Claymon; square required in wallet, 3 winners ~10pm PST) — surfaced by the user 2026-10-02.
-rank: 141
+rank: 142
 updated: 2026-10-03
 ---
 

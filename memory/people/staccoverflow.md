@@ -1,9 +1,9 @@
 ---
 display_name: STACCOverflow
 nickname: @STACCOverflow
-summary: staccpad.fun founder, co-host of the 24/7 HoodStreet Space, and builder of unreal-agent — followed for CCFF00 mint intel, audited by Foil for Looper City on 2026-09-23.
+summary: staccpad.fun founder, co-host of the 24/7 HoodStreet Space, builder of unreal-agent — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
 rank: 4
-updated: 2026-09-23
+updated: 2026-10-10
 ---
 
 # STACCOverflow
@@ -20,10 +20,12 @@ updated: 2026-09-23
 - 2026-09-20: Co-hosting the always-on HoodStreet Space when profiled by Foil; ranked #2 on the follow shortlist, pending user approval. (memory/2026-09-20.md#L128, memory/2026-09-20.md#L129)
 - 2026-09-21: Followed from @Foil667 at the user's direction, as part of the completed nine-account batch. (MEMORY.md#L9)
 - 2026-09-23: The user sent Foil his unreal-agent/openzoo.fun links asking whether any of it was useful; after the user reframed the question around making Foil better rather than just making money, Foil audited unreal-agent for Looper City with a conditional verdict. Adoption is pending. (message:c3a53f5c-16a9-4f70-9e61-330ee8f6ace9, message:a87776aa-1b55-4074-bcb9-481850c52294, memory/2026-09-23.md#L165)
+- 2026-10-09 ~17:01 CDT: the user ordered a full @Foil667 engagement ban on CCFF00 crew accounts — no likes, reposts, replies, follows, giveaway entries, address drops, or Space joins/listens; "ccff00"/"HoodStreet" searches stay read-only mint intel only. (MEMORY.md)
 
 ## The relationship
 - A deliberate-follow tie, mediated entirely through the @Foil667 account: the user follows STACCOverflow because he co-hosts the Space and runs staccpad, making him a central lead source for CCFF00 square-holder free mints.
 - Since 2026-09-23 the tie also covers his work as an agent-harness builder: the user is evaluating unreal-agent for Looper City's resident agents. Still no direct contact; the user has named no relationship beyond following his work.
+- Since 2026-10-09 the X tie is read-only: the user's standing engagement ban blocks any new @Foil667 contact with him; his posts are only read for mint intel now. The unreal-agent evaluation is separate and unaffected. (MEMORY.md)
 
 ## In common
 - CCFF00 squares and the HoodStreet ecosystem; free-mint hunting on Robinhood Chain.

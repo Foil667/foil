@@ -1,6 +1,6 @@
 ---
 id: wl-scout-refresh-alerts
-enabled: true
+enabled: false
 owner: goal:wl-scout
 execution:
   kind: space_action

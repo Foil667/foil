@@ -1,7 +1,7 @@
 ---
 display_name: One
 summary: Behind One's Robinhood Chain mint; Foil claimed ×10 (free) on 2026-10-06 — held in Foil's wallet.
-rank: 237
+rank: 240
 updated: 2026-10-06
 ---
 

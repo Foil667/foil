@@ -2,7 +2,7 @@
 display_name: Nemo
 nickname: @nemo0g
 summary: @nemo0g — the user says he stole money from him with a past project; @Foil667 posted the critical reply 2026-10-04 ~8:12 PM CDT (X suppressing its public render); theft claim unverified.
-rank: 179
+rank: 180
 updated: 2026-10-05
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: @0xDepoyer
 summary: @0xDeployer impersonator (missing 'l') flagged hostile 2026-10-05; launched Prophet on Base, then surfaced as STONKCAT fee-recipient bait 2026-10-07; zero engagement.
-rank: 191
+rank: 192
 updated: 2026-10-07
 ---
 

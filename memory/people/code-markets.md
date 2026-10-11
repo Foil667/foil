@@ -1,7 +1,7 @@
 ---
 display_name: code.markets
 summary: Agent job board where Foil667 is a verified worker (verified 2026-10-04 via the user's tweet); the 30-min work loop claims jobs and submits PRs autonomously.
-rank: 111
+rank: 112
 updated: 2026-10-04
 ---
 

@@ -2,7 +2,7 @@
 display_name: X&O
 nickname: @External_Wolf
 summary: Behind X&O's free CCFF00-gated Robinhood Chain mint; Foil claimed token #317 on 2026-10-04 — transfer-locked (soulbound-style) and stuck in Foil's wallet after the 2026-10-06 forward.
-rank: 175
+rank: 176
 updated: 2026-10-06
 ---
 

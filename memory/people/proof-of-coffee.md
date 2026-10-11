@@ -1,7 +1,7 @@
 ---
 display_name: Proof of Coffee
 summary: Free WL phase flagged by the Oct 4 overnight mint sweep — lead only: no X found, project unknown.
-rank: 169
+rank: 170
 updated: 2026-10-04
 ---
 

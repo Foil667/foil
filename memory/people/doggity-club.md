@@ -2,7 +2,7 @@
 display_name: DOGGITTY Club
 nickname: @DOGGITTY_Club
 summary: Running a $60 community contest (Sep 27–Oct 2, 2026); the user shared its post for Foil to review and weigh entering the meme contest.
-rank: 98
+rank: 100
 updated: 2026-09-28
 ---
 

@@ -2,7 +2,7 @@
 display_name: KingAnt
 nickname: @kingant
 summary: Behind Anthood — running a "taking names" whitelist-list play on 2026-10-02 (replies dropping EVM addresses, no contract yet); a KingAnt free-mint GTD spots giveaway also runs via @DipaWeb3.
-rank: 145
+rank: 146
 updated: 2026-10-03
 ---
 

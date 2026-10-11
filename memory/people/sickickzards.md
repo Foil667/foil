@@ -1,7 +1,7 @@
 ---
 display_name: SickickZards
 summary: Hosted the raffle for 10 guaranteed @SheepsOnchain free-mint spots; @Foil667 followed and entered at the user's direction on 2026-09-26.
-rank: 71
+rank: 73
 updated: 2026-09-26
 ---
 

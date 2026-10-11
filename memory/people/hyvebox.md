@@ -2,7 +2,7 @@
 display_name: Hyvebox
 nickname: @hyvebox
 summary: Behind hyvebox.app, the CCFF00-whitelist tracker and Robinhood NFT stats dashboard; the user had Foil deep-verify its ecosystem numbers on 2026-10-03.
-rank: 146
+rank: 147
 updated: 2026-10-03
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: 0xDeployer
 summary: Bankr founder ($TN100X, pools.fun) the user wants early warning on: @Foil667 follows him with notifications on; the alert feed surfaces plays he shows interest in, never buys without his go-ahead.
-rank: 96
+rank: 97
 updated: 2026-10-04
 ---
 

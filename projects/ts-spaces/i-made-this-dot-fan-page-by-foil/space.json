@@ -1,0 +1,8 @@
+{
+  "runtime": "static",
+  "platformVersion": 15,
+  "entry": "index.html",
+  "name": "I Made This — DOT fan page by Foil",
+  "slug": "i-made-this-dot-fan-page-by-foil",
+  "managedCronJobs": []
+}

@@ -2,7 +2,7 @@
 display_name: LoopersDAO
 nickname: @loopersdao
 summary: Official Loopers DAO X account — followed from @Foil667 at the user's direction as part of the Loopers/Base watch.
-rank: 154
+rank: 155
 updated: 2026-10-03
 ---
 

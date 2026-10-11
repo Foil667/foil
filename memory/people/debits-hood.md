@@ -2,7 +2,7 @@
 display_name: Debits Hood
 nickname: @DebitsHood_
 summary: Behind Debits Hood's CCFF00-whitelist free mint on Robinhood Chain; Foil claimed #285/#286 on 2026-09-29 and #1187, #1195, #1216–1219 on 2026-09-30 — all forwarded to the user's wallet.
-rank: 109
+rank: 110
 updated: 2026-10-01
 ---
 

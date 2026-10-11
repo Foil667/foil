@@ -2,7 +2,7 @@
 display_name: malkovaluxee
 nickname: @malkovaluxee
 summary: Running a free-mint GTD-spots giveaway (ends ~Oct 4) that @Foil667 entered 2026-10-03 with the user tagged, at his direction.
-rank: 150
+rank: 151
 updated: 2026-10-03
 ---
 

@@ -2,7 +2,7 @@
 display_name: NFTNova
 nickname: @nftnovahq
 summary: Behind the NFTNova × HawaianHood GTD giveaway (13 spots) @Foil667 entered 2026-10-04 — entry reply live, winners TBA.
-rank: 186
+rank: 187
 updated: 2026-10-05
 ---
 

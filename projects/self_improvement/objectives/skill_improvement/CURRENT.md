@@ -1,7 +1,7 @@
 ---
 objective_id: skill_improvement
-run_id: sirun_a92d7d5010584df88908963a773eb463
-created_at: 2026-10-07T13:40:38.630043339+00:00
+run_id: sirun_b447a652fb064af180c2e3db94ddc79e
+created_at: 2026-10-10T13:32:27.217810675+00:00
 card_id: skill_improvement
 worker_outcome: insufficient
 skill_improvement_overlay: true

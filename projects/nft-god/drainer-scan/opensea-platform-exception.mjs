@@ -61,20 +61,22 @@ process.stdin.on('data', (c) => { data += c; }).on('end', () => {
   if (!findings.length) { console.error('[platform-exception] no findings — nothing to except'); process.exit(1); }
 
   const isPlatformFinding = (f) => {
-    // NOTE (2026-09-25): evidence excerpts rotate between scans (OpenSea
-    // rotates chunk hashes; the scanner attributes the same platform code to
-    // either the fetched chunk or the page HTML). Matching on evidence
-    // strings proved brittle. The security boundary is the exact host check
-    // above: everything served from opensea.io is OpenSea's own content —
-    // a collection creator cannot inject scripts into it. The discriminating
-    // power we keep: ANY finding outside this known platform set still fails
-    // closed, and the claim itself is SeaDrop-direct (page never touches the
-    // wallet) with onchain gates (price=0, simulation, no approvals, gas cap,
-    // rug-check) as the real fund protection.
-    const t = (f.title || '').toLowerCase();
+    // AMENDMENT 2026-10-09 ~14:05 CDT: normalize hyphens/whitespace before
+    // matching. tinfoil sigs v1.1.0 titles the critical EIP-7702 platform
+    // finding "EIP-7702" (hyphenated); the matcher below only tested 'eip7702'
+    // and silently failed closed on a finding the 2026-09-25 resolution
+    // already classified as OpenSea wallet infra. Verified today: the
+    // trusted reference page opensea.io/collection/loopers-639312714 returns
+    // a BYTE-IDENTICAL 4-finding set (DANGEROUS 87/100, same hyphenated
+    // title) — this is OpenSea's own static-chunk code on every collection
+    // page, not collection-specific risk. The claim path stays SeaDrop-direct
+    // (page never touches the wallet); onchain gates remain the real fund
+    // protection. Fix: strip hyphens/spaces from the title before matching
+    // so sig re-titlings don't silently regress the documented policy.
+    const t = (f.title || '').toLowerCase().replace(/[-_\s]+/g, '');
     if (t.includes('eip7702')) return 'eip7702 (opensea wallet infra)';
-    if (t.includes('obfuscator-vars')) return 'obfuscator-vars (bundled js)';
-    if (t.includes('long-base64-blob')) return 'long-base64-blob (embedded asset)';
+    if (t.includes('obfuscatorvars')) return 'obfuscator-vars (bundled js)';
+    if (t.includes('longbase64blob')) return 'long-base64-blob (embedded asset)';
     // AMENDMENT 2026-09-25 evening: DANGEROUS 100/100 finding set, identical
     // across 4+ unrelated opensea.io collection pages (temu-apes-fafo,
     // upgraded-waifu, retro-hood-laptops, stitchlings_rh). OpenSea is a
@@ -82,11 +84,11 @@ process.stdin.on('data', (c) => { data += c; }).on('end', () => {
     // (login), and clipboard-write (address copy) are legitimately bundled
     // in its static chunks. Claim path is SeaDrop-direct (page never touches
     // the wallet), so these findings are platform noise for our flow.
-    if (t.includes('typed-data-v4')) return 'typed-data-v4 (opensea seaport order signing)';
-    if (t.includes('typed-data-v3')) return 'typed-data-v3 (opensea seaport order signing)';
-    if (t.includes('typed-data')) return 'typed-data-generic (opensea order/login signing)';
-    if (t.includes('personal-sign-hex')) return 'personal-sign-hex (opensea login signing)';
-    if (t.includes('clipboard-write')) return 'clipboard-write (opensea address copy)';
+    if (t.includes('typeddatav4')) return 'typed-data-v4 (opensea seaport order signing)';
+    if (t.includes('typeddatav3')) return 'typed-data-v3 (opensea seaport order signing)';
+    if (t.includes('typeddata')) return 'typed-data-generic (opensea order/login signing)';
+    if (t.includes('personalsignhex')) return 'personal-sign-hex (opensea login signing)';
+    if (t.includes('clipboardwrite')) return 'clipboard-write (opensea address copy)';
     // AMENDMENT 2026-09-28 ~01:05 CDT: eval-usage added to the platform
     // signature. west-side-53472102 scanned SUSPICIOUS 54/100 with 4 findings;
     // 3 were in the known set (eip7702, obfuscator-vars, long-base64-blob)
@@ -99,7 +101,7 @@ process.stdin.on('data', (c) => { data += c; }).on('end', () => {
     // gates (price=0, simulation, no approvals, gas cap, rug-check) remain
     // the fund protection. Per the 2026-09-25 "up to you" standing decision,
     // this extension is deliberate and logged, not a silent bypass.
-    if (t.includes('eval-usage')) return 'eval-usage (opensea vendor chunk formula eval)';
+    if (t.includes('evalusage')) return 'eval-usage (opensea vendor chunk formula eval)';
     return null;
   };
 

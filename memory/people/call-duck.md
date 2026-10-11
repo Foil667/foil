@@ -1,7 +1,7 @@
 ---
 display_name: Call Duck
 summary: Robinhood Chain free mint (CD) the user ordered Foil to claim on 2026-09-30; Foil minted ×1 free and forwarded it to the user's wallet.
-rank: 119
+rank: 120
 updated: 2026-09-30
 ---
 

@@ -1,9 +1,9 @@
 ---
 display_name: rhorangs
 nickname: @RHOrangs
-summary: X account in the CCFF00 mint scene; @Foil667 follow directed by the user on 2026-09-21 as part of the mint-intel watch.
-rank: 28
-updated: 2026-09-21
+summary: X account in the CCFF00 mint scene — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
+rank: 29
+updated: 2026-10-10
 ---
 
 # rhorangs
@@ -15,9 +15,11 @@ updated: 2026-09-21
 
 ## History
 - 2026-09-21: named among the nine follow candidates; the user approved following all nine the same evening.
+- 2026-10-09 ~17:01 CDT: the user ordered a full @Foil667 engagement ban on CCFF00 crew accounts — no likes, reposts, replies, follows, giveaway entries, address drops, or Space joins/listens; "ccff00"/"HoodStreet" searches stay read-only mint intel only. (MEMORY.md)
 
 ## The relationship
 - A fresh deliberate follow from @Foil667 at the user's direction, not a personal tie: Foil tracks them as a CCFF00-scene account on the mint-intel watch.
+- Since 2026-10-09 the tie is read-only: the user's standing engagement ban blocks any new @Foil667 contact with them; their posts are only read for mint intel now. (MEMORY.md)
 
 ## In common
 - The HoodStreet / CCFF00 scene and the user's free-mint hunting.

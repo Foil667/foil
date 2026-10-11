@@ -1,0 +1,8 @@
+{
+  "schema_version": "hatch.probe_ui_session.v1",
+  "socket": "/home/hatch/workspace/ts-spaces/i-made-this-dot-fan-page-by-foil/.harness/probe-ui/sock",
+  "slug": "i-made-this-dot-fan-page-by-foil",
+  "url": "https://artifact-capture.invalid/spaces/v2/hatch-audit-804d054a-e00b-49ea-a1f1-0dbc10a28414/",
+  "audit_session_id": "e14d5460-7918-4033-a94d-d71c53caac4b",
+  "pid": 8047
+}

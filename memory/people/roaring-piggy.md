@@ -1,9 +1,9 @@
 ---
 display_name: RoaringPiggy
 nickname: @RoaringPiggy
-summary: Founder of @hoodstreetcap and @ccff00club who runs the 24/7 HoodStreet Spaces; followed from @Foil667 at the user's direction as part of the CCFF00 watch.
+summary: Founder of @hoodstreetcap and @ccff00club running the 24/7 HoodStreet Spaces — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
 rank: 3
-updated: 2026-10-05
+updated: 2026-10-10
 ---
 
 # RoaringPiggy
@@ -18,10 +18,12 @@ updated: 2026-10-05
 ## History
 - 2026-09-21: Identified from the user's Space screenshots and added to the @Foil667 follow shortlist at the user's direction; follow completed as part of the nine-account batch. (MEMORY.md#L9)
 - 2026-10-05: Roaring Piggies CCFF00-holder free window (~07:00–07:30 CDT) flagged but unclaimed — route unverified, holder phase offchain-only; stays on high-priority watch. (message:assistant-msg-65e34cec-3112-08da-d560-52ece50a48b3)
+- 2026-10-09 ~17:01 CDT: the user ordered a full @Foil667 engagement ban on CCFF00 crew accounts — no likes, reposts, replies, follows, giveaway entries, address drops, or Space joins/listens; "ccff00"/"HoodStreet" searches stay read-only mint intel only. (MEMORY.md)
 
 ## The relationship
 - A deliberate-follow tie, mediated entirely through the @Foil667 account: the user follows RoaringPiggy because he runs the Spaces and accounts at the center of the CCFF00 square-holder free-mint scene the user holds squares in.
 - No direct contact; the user has named no relationship beyond following his work.
+- Since 2026-10-09 the tie is read-only: the user's standing engagement ban blocks any new @Foil667 contact with him; his posts and Spaces are only watched for mint intel now. (MEMORY.md)
 
 ## In common
 - CCFF00 squares and the HoodStreet ecosystem; the HoodStreet Spaces.

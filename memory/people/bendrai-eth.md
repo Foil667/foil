@@ -2,7 +2,7 @@
 display_name: BendrAI_eth
 nickname: @BendrAI_eth
 summary: Loopers co-creator account — Quigley: "we worked together to create loopers"; followed from @Foil667 at the user's direction as part of the Loopers/Base watch.
-rank: 47
+rank: 49
 updated: 2026-09-23
 ---
 

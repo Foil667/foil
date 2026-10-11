@@ -1,7 +1,7 @@
 ---
 display_name: WabisukiART
 summary: Artist behind Aura; @Foil667 followed and entered the free Aura waitlist at the user's direction on 2026-09-26.
-rank: 75
+rank: 77
 updated: 2026-09-26
 ---
 

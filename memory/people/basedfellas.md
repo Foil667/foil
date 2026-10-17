@@ -2,7 +2,7 @@
 display_name: BasedFellas
 nickname: @BasedFellas
 summary: Base NFT scene X account; followed from @Foil667 at the user's direction on 2026-09-21 as part of the Base NFT follow queue.
-rank: 56
+rank: 58
 updated: 2026-09-23
 ---
 

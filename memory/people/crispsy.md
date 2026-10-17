@@ -2,7 +2,7 @@
 display_name: Crispsy
 nickname: @Crispsy
 summary: Verified X account — founder of SloppyApeYC and a repeat Robinhood Chain mint announcer; @Foil667 followed them on 2026-10-01.
-rank: 127
+rank: 131
 updated: 2026-10-01
 ---
 

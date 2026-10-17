@@ -2,7 +2,7 @@
 display_name: BTCNewsGlobal
 nickname: @BTCNewsGlobal
 summary: Scam-flagged X account — co-pushed the $SPEPE send-SOL presale with @airdop_crypto on 2026-10-10 (both 'Paid partnership'); zero engagement.
-rank: 282
+rank: 292
 updated: 2026-10-10
 ---
 

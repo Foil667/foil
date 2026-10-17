@@ -2,7 +2,7 @@
 display_name: joosbocs
 nickname: @joosbocs
 summary: Behind Juice Box Club (Hoodfolk NFT project) — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
-rank: 20
+rank: 22
 updated: 2026-10-10
 ---
 

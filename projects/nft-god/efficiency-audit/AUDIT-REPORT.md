@@ -1,11 +1,11 @@
 # Efficiency Audit Report
 
-Run: 2026-10-10T10:36:09.534Z
+Run: 2026-10-11T11:36:04.980Z
 Mode: --live (state mutations applied)
 
 ## 1. Tool candidates (GitHub discovery)
 
-Status: OK — 15 candidate repos (pushed since 2026-07-12). Full list in CANDIDATE_TOOLS.md.
+Status: OK — 15 candidate repos (pushed since 2026-07-13). Full list in CANDIDATE_TOOLS.md.
 
 ## 2. RPC performance (mint-log.jsonl)
 

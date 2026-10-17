@@ -2,7 +2,7 @@
 display_name: 0xRobg
 nickname: @0xrobg
 summary: Verified X account running a 1/1 Chad Franky fish PFP giveaway (RT + tag 2 friends, ends Oct 9 20:00 CEST) — surfaced by the user 2026-10-02 as a free-entry giveaway for Foil to enter.
-rank: 141
+rank: 145
 updated: 2026-10-03
 ---
 

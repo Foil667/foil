@@ -1,7 +1,7 @@
 ---
 display_name: HardScaleCo
 summary: HoodStreet scene regular behind the sold-out CCFF00 Cubes; Foil entered his 30-NFT follower-milestone giveaway 2026-10-05 (draw closes ~Oct 7 3:40 PM CDT); flagged the @Creditsunihood scam 2026-09-27.
-rank: 40
+rank: 42
 updated: 2026-10-05
 ---
 

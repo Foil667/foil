@@ -1,7 +1,7 @@
 ---
 display_name: TheVerdictNFT
 summary: Behind The Verdict's free mint; @Foil667 engaged their pinned free-mint post and entered the spot giveaway at the user's direction on 2026-09-26.
-rank: 76
+rank: 78
 updated: 2026-09-26
 ---
 

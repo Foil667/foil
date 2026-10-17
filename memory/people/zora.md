@@ -2,7 +2,7 @@
 display_name: Zora
 nickname: @zora
 summary: Zora marketplace X account; followed from @Foil667 at the user's direction as part of the Loopers/Base watch.
-rank: 51
+rank: 53
 updated: 2026-09-23
 ---
 

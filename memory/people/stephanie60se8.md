@@ -2,7 +2,7 @@
 display_name: stephanie60se8
 nickname: @stephanie60se8
 summary: X account pushing a fake $CRED claim portal (crypto-drb.netlify.app) — scam-flagged 2026-10-04; zero engagement.
-rank: 165
+rank: 170
 updated: 2026-10-04
 ---
 

@@ -2,7 +2,7 @@
 display_name: Apocryphaz
 nickname: @theapocryphaz
 summary: Behind Apocryphaz's Robinhood Chain mint; its CCFF00 signed-presale was a curated allowlist — Foil's wallet was rejected as not on the list, and the public stage is over the price cap.
-rank: 125
+rank: 129
 updated: 2026-10-01
 ---
 

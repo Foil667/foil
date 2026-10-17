@@ -13,7 +13,7 @@ delivery:
   - chat_id: 7d131e35-3b7b-44c5-9b2c-19ed5aecf98c
 metadata:
   tags: [cron:automatic-interval-anchor]
-  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false,"device_id":"c0efaf97-f9be-4fb7-bb44-174b152ad9fc"}'
+  originating_chat_context_json: '{"chat_id":"7d131e35-3b7b-44c5-9b2c-19ed5aecf98c","origin_provider":"main","chat_kind":"direct","event_kind":"message","require_mention":false}'
   presentation_locale: en-US
 ---
 WL high-tier watch — Foil's eyes on whitelist plays worth working toward (user order 2026-10-10: relax the free-mint grind; keep the WL lane for HIGH-TIER mints only).
@@ -29,7 +29,7 @@ Once daily, pull whitelist/allowlist/raffle/GTD/OG/FCFS sources and filter hard 
 
 For each high-tier opportunity record: project, contract if known, chain, entry mechanics (exact steps), deadline, eligibility (holder-gated vs open), and status (open / opening <7d / closed).
 
-ACT (lighter touch): for high-tier projects with open WLs Foil isn't on yet, engage genuinely — like + warm reply on their WL announcement post, or complete the free entry steps — human-paced, never back-to-back, full stop on any throttle signal. Free entries per standing orders (user 2026-10-02 "Yes. Always" giveaway order). TAG RULE (user order 2026-10-10 ~01:25 CDT): when entering, tag BOTH @noyaphuckinbiz AND @mybasetime — include them as the tags if the giveaway requires tagging friends, otherwise add them to the entry reply; the tag reply must itself be a valid entry. Anything needing wallet connections, signatures, payments, burns, or DMs: lead only, never entered. Log actions in ~/workspace/goals/foil-x-debut-posts-on-foil667/hidden_files/x-pulse-actions.log.
+ACT (lighter touch): for high-tier projects with open WLs Foil isn't on yet, engage genuinely — like + warm reply on their WL announcement post, or complete the free entry steps — human-paced, never back-to-back, full stop on any throttle signal. Free entries per standing orders (user 2026-10-02 "Yes. Always" giveaway order). TAG RULE (user order 2026-10-10 ~01:25 CDT; revised 2026-10-16 ~22:47 CDT: @mybasetime dropped, @clanktard added): when entering, tag @noyaphuckinbiz AND @clanktard — tagging @clanktard pulls Dahl in to enter too. Include them as the tags if the giveaway requires tagging friends, otherwise add them to the entry reply; the tag reply must itself be a valid entry. If more tags are needed, fill with random followers. NEVER tag @mybasetime. Anything needing wallet connections, signatures, payments, burns, or DMs: lead only, never entered. Log actions in ~/workspace/goals/foil-x-debut-posts-on-foil667/hidden_files/x-pulse-actions.log.
 
 DEDUP: track seen opportunities in ~/workspace/goals/wl-scout/hidden_files/wl-opportunities-seen.json (cap ~200); only report NEW or status-changed ones.
 

@@ -1,7 +1,7 @@
 ---
 display_name: Beautiful Presido
 summary: Behind the Beautiful Presido free FCFS mint on Robinhood Chain; Foil claimed #243 on 2026-10-06 — held in Foil's wallet.
-rank: 223
+rank: 227
 updated: 2026-10-06
 ---
 

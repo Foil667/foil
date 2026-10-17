@@ -2,7 +2,7 @@
 display_name: hoodpepes
 nickname: @hoodpepes
 summary: Behind HoodPepes, a Robinhood Chain NFT project — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
-rank: 19
+rank: 21
 updated: 2026-10-10
 ---
 

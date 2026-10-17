@@ -2,7 +2,7 @@
 display_name: CCFF00 Folks
 nickname: @CCFF00Folks
 summary: Behind CCFF00 Folks, whose 2,500-supply free mint drops Thu Sep 24 8:30 AM CDT — flagged by the mint watch on 2026-09-23.
-rank: 37
+rank: 39
 updated: 2026-09-23
 ---
 

@@ -28,7 +28,7 @@
         if (note) {
           note.innerHTML =
             '⛔ <b>Still disabled.</b> Minting goes live only after: ' +
-            '(1) professional audit of all 6 contracts, (2) timelock + multisig on ' +
+            '(1) professional audit of all 7 contracts, (2) timelock + multisig on ' +
             'owner functions, (3) the user\u2019s explicit per-action deployment approval. ' +
             'No wallet will ever be asked to connect before then.';
           note.style.color = '#ffd60a';

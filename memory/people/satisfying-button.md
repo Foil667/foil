@@ -1,7 +1,7 @@
 ---
 display_name: Satisfying Button
 summary: Behind the Satisfying Button Robinhood Chain mint; Foil claimed #256 via its CCFF00 signed presale on 2026-10-03 and forwarded it to the user's wallet.
-rank: 148
+rank: 154
 updated: 2026-10-03
 ---
 

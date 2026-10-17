@@ -2,7 +2,7 @@
 display_name: bonihood1
 nickname: @bonihood
 summary: Behind Bonihood's RH drop — Foil entered their 3,333 GTD giveaway 2026-09-27; a CCFF00 FCFS window opens Oct 3 10:30 AM CDT at 0.0002 ETH, over the cap, so it stays a lead.
-rank: 135
+rank: 139
 updated: 2026-10-03
 ---
 

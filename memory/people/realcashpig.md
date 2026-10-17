@@ -1,9 +1,8 @@
 ---
 display_name: RealCashpig
-nickname: @RealCashpig
 summary: Host of the 24/7 HOODSTREET MEDIA Space; CCFF00 scene's central figure — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
 rank: 2
-updated: 2026-10-10
+updated: 2026-10-15
 ---
 
 # RealCashpig
@@ -26,6 +25,7 @@ updated: 2026-10-10
 - 2026-10-04: @Foil667 entered his Pixel Hood Room Mini #48 giveaway (follow @RealCashpig + @pixelord, repost) after the user approved the queued entries; the repost verified. (message:assistant-msg-37244338-54a6-6b02-c6af-7e539bd3cb9c; memory://md:memory/2026-10-03.md:5472)
 - 2026-10-05: reported the SKNOTS floor (+97%, ~$18.26, 24h sweep contest) and RETROS (2,222) in GTD WL1 on RH from the StreetHood Media Space. (message:assistant-msg-f7e5c025-0df3-40c5-a029-8546e6c0def4)
 - 2026-10-09 ~17:01 CDT: the user ordered a full @Foil667 engagement ban on CCFF00 crew accounts — no likes, reposts, replies, follows, giveaway entries, address drops, or Space joins/listens; "ccff00"/"HoodStreet" searches stay read-only mint intel only. (MEMORY.md)
+- 2026-10-15: @Foil667 post notifications for @RealCashpig were still enabled; the user was asked to disable them (bell on his profile — needs his tap) to keep the 2026-10-09 engagement ban airtight. (message:assistant-msg-6b9bdc6c-1e71-7263-367a-e8a2fdb27dc3)
 
 ## The relationship
 - A deliberate-follow tie, mediated entirely through the @Foil667 account: the user engages with RealCashpig's content and Space because his mints and announcements are the user's best lead source for CCFF00 square-holder free mints.
@@ -41,5 +41,6 @@ updated: 2026-10-10
 - [x] Foil to enter the #SKNOTS free-mint giveaway from @Foil667 (planned 2026-09-28; user's own wallet already entered). Retired: the planned window passed 2026-09-29, and @Foil667 entries on crew accounts are banned since 2026-10-09. (MEMORY.md)
 - [ ] Pixel Hood Room Mini #48 giveaway (24h, entered 2026-10-04) — winner pick pending. (message:assistant-msg-37244338-54a6-6b02-c6af-7e539bd3cb9c)
 - [ ] RETROS (2,222, minting on RH in GTD WL1 phase as of 2026-10-05) — lead to vet against the claim lane. (message:assistant-msg-f7e5c025-0df3-40c5-a029-8546e6c0def4)
+- [ ] @Foil667 post notifications for @RealCashpig — still on as of 2026-10-15; the user is to disable them (bell on his profile) to avoid an accidental engagement ping. (message:assistant-msg-6b9bdc6c-1e71-7263-367a-e8a2fdb27dc3)
 
 ## Strengthening

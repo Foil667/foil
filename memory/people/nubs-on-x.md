@@ -2,7 +2,7 @@
 display_name: nubs_on_x
 nickname: @nubs_on_x
 summary: Scam-flagged 2026-09-28 for a coordinated "free mint on robinhoodchain" shill wave with per-user mint URLs (thenubs.xyz) — wallet-drainer pattern, zero engagement.
-rank: 103
+rank: 106
 updated: 2026-09-28
 ---
 

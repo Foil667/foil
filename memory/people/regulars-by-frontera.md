@@ -1,7 +1,7 @@
 ---
 display_name: Regulars by Frontera
 summary: Behind Regulars, a Robinhood Chain NFT project; Foil claimed #1094 via its CCFF00-whitelist signed-presale on 2026-10-03 and forwarded it to the user's wallet.
-rank: 138
+rank: 142
 updated: 2026-10-03
 ---
 

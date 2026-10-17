@@ -2,7 +2,7 @@
 display_name: Hop Heads
 nickname: @hopheadsarc
 summary: Behind Hop Heads' free frog mint on Robinhood Chain; followed from @Foil667 2026-10-08 — the user decided to keep the follow 2026-10-10; engagement banned 2026-10-09, read-only mint intel only.
-rank: 261
+rank: 265
 updated: 2026-10-11
 ---
 

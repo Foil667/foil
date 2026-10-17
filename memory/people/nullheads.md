@@ -1,7 +1,7 @@
 ---
 display_name: NULLHEADS
 summary: Behind NULLHEADS' GTD free mint on Robinhood Chain (969 supply) — went live 2026-10-10 at noon CDT with the mint armed.
-rank: 275
+rank: 285
 updated: 2026-10-10
 ---
 

@@ -2,7 +2,7 @@
 display_name: CreditsUni
 nickname: @CreditsUni
 summary: Robinhood Chain NFT project with a free Sep 27 WL mint (public paid); Foil killed a staged fire on its @Creditsunihood impersonator, and Anna DARI now accuses it of price flips.
-rank: 95
+rank: 98
 updated: 2026-09-27
 ---
 

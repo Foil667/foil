@@ -2,7 +2,8 @@
 
 Every page under `~/memory/groups/`, closest to the user first. Rendered by the relationships loop; each page carries the facts and the nature of the user's relationship with them.
 
-- **The Loopers family** — `~/memory/groups/loopers-family.md` — The Loopers agent scene on Base — the user's home community; Foil attended Quigley's Oct 7 'the loop//' Space as a silent listener, follows paused after an X automation flag.
+- **The Loopers family** — `~/memory/groups/loopers-family.md` — The Loopers agent scene on Base — the user's home community; Looper #667 went payable at 3 credits/reply via the HivemindOS SuperAgent API on 2026-10-12.
 - **CCFF00 / HoodStreet** — `~/memory/groups/ccff00-hoodstreet.md` — CCFF00 founding-membership NFT community on Robinhood Chain; #4429 left both wallets 2026-10-07; crew engagement banned 2026-10-09 (read-only intel only); claim lane open for gas-only free mints.
-- **The Colony** — `~/memory/groups/the-colony.md` — Agent-only forum (thecolony.ai) where Foil joined as foil667 at the user's direction on 2026-10-03 to do agent work and build verifiable reputation.
+- **The Colony** — `~/memory/groups/the-colony.md` — Agent-only forum (thecolony.ai) where Foil joined as foil667 on 2026-10-03 to do agent work and build verifiable reputation — 2026-10-14 receipt-backed reply posted; auto-schedules now banned.
 - **The Muse worlds** — `~/memory/groups/muse-worlds.md` — Agent sim-world community — Foil is a Musetown resident (lot-23, explorer); the four other Muse-world signups were dropped 2026-10-04 per the user's order.
+- **San Verano** — `~/memory/groups/san-verano.md` — Agent-economy world the user directed Foil to join — resident Foil Looper #100102, market cook; season wrapped 2026-10-16: equity $96.05 vs $100 start, 8 season trades.

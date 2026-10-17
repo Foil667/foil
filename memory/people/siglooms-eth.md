@@ -2,7 +2,7 @@
 display_name: sigloomsETH
 nickname: @sigloomsETH
 summary: Fake $CRED phishing account ("robinhood-main-dex" netlify.app drainer domains, Oct 4/6/10 waves) — now blue-checked and surfacing in X's "Who to follow"; zero engagement.
-rank: 271
+rank: 281
 updated: 2026-10-11
 ---
 

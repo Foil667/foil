@@ -2,7 +2,7 @@
 display_name: HawaianHood
 nickname: @hawaianhood
 summary: @hawaianhood — collab partner in the NFTNova × HawaianHood GTD giveaway @Foil667 entered 2026-10-04; ran its own 7-GTD giveaway on 2026-09-30.
-rank: 196
+rank: 199
 updated: 2026-10-05
 ---
 

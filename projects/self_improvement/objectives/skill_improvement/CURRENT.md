@@ -1,15 +1,9 @@
 ---
 objective_id: skill_improvement
-run_id: sirun_b447a652fb064af180c2e3db94ddc79e
-created_at: 2026-10-10T13:32:27.217810675+00:00
+run_id: sirun_4e28b4ff5f294133822035bf2390ed9d
+created_at: 2026-10-16T13:24:34.494328452+00:00
 card_id: skill_improvement
 worker_outcome: insufficient
-skill_improvement_overlay: true
-skill_improvement_overlay_path: "workspace/self_improvement/skill_improvement/SKILL_IMPROVEMENT.md"
-system_skill_files_mutated: false
-added_skills_cap: 5
-improved_skill_surfaces: []
-added_skills: []
 ---
 
 # Skill Improvement
@@ -25,9 +19,3 @@ is a framework-owned projection only.
 - Cadence: daily
 - Worker outcome: insufficient
 - Subagents spawned: 1
-
-## Skill Improvement Overlay
-
-This file is the single overlay for skill/tool behavior improvements. It augments how the main agent uses affected skills and tools. Net-new learned skills are local workspace skills marked with `skill_improvement.managed: true`; at most five active learned skills join the available-skills catalog.
-
-No skill/tool surface changed in this run.

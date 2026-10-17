@@ -1,7 +1,7 @@
 ---
 display_name: Hood Properties
 summary: Behind Hood Properties' actively-minting Robinhood Chain drop (score 88, rug-check clean) — in the claim pipeline for the CCFF00-eligibility check.
-rank: 166
+rank: 171
 updated: 2026-10-04
 ---
 

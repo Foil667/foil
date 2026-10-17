@@ -1,7 +1,7 @@
 ---
 display_name: Hakisol
 summary: Public founder of VAMPS (4,444 3D vampire free mint on Robinhood Chain); verified X account, reported public by the 2026-09-24 recon.
-rank: 66
+rank: 68
 updated: 2026-09-25
 ---
 

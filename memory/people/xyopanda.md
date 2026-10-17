@@ -2,7 +2,7 @@
 display_name: XyoPanda
 nickname: @XyoPanda
 summary: Contributor at @_PandaFinancial integrating Loopers into Panda Financials; spoke in Quigley's Oct 7 'the loop//' Space; the user believes Panda Financial is fellow-Looper-run.
-rank: 87
+rank: 90
 updated: 2026-10-08
 ---
 

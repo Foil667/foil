@@ -28,7 +28,7 @@ Static site for the FOIL EQUITIES collection ("MARKET FOLKLORE, PIXEL CUT").
 ## Status
 
 - Mint panel: **DISABLED by design.** Wiring happens only after (1) professional
-  audit of all 6 contracts, (2) timelock + multisig on owner functions,
+  audit of all 7 contracts, (2) timelock + multisig on owner functions,
   (3) the user's explicit per-action deployment approval.
 - Stock-pot dashboard: placeholder dashes until deployment. Post-deploy, flip
   `config.js` (`deployed: true` + real addresses) and `pot.js` lights up the
@@ -45,7 +45,7 @@ cd ~/workspace/nft-god/foil-equities/site && python3 -m http.server 8901
 
 ## Pre-launch checklist (needs user tap)
 
-- [ ] Professional audit of all 6 contracts (SECURITY.md pre-mainnet checklist)
+- [ ] Professional audit of all 7 contracts (SECURITY.md pre-mainnet checklist)
 - [ ] Real archetype art from the art pipeline (these sprites are placeholders)
 - [ ] Deploy contracts (user's explicit per-action approval — fund movement)
 - [ ] Wire mint panel to the deployed `FoilEquities` (allowlist merkle root, phases)

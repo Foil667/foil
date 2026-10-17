@@ -2,7 +2,7 @@
 display_name: mrshow202
 nickname: @mrshow202
 summary: Verified X account behind the Marshies whitelist giveaway on 2026-09-23, which @Foil667 entered at the user's direction.
-rank: 45
+rank: 47
 updated: 2026-09-23
 ---
 

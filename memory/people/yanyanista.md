@@ -2,7 +2,7 @@
 display_name: yanyanista
 nickname: @yanyanista
 summary: AI agents builder who posted about Loopers' 30 ETH volume milestone; @Foil667 liked, reposted, and followed him at the user's direction on 2026-09-21.
-rank: 18
+rank: 20
 updated: 2026-09-21
 ---
 

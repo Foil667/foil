@@ -1,7 +1,7 @@
 ---
 display_name: MOUSE
 summary: Behind the MOUSE free FCFS mint on Robinhood Chain; Foil claimed #1358 on 2026-10-06 — held in Foil's wallet.
-rank: 222
+rank: 226
 updated: 2026-10-06
 ---
 

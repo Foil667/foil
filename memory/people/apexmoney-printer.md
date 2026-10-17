@@ -1,7 +1,7 @@
 ---
 display_name: ApexMoney Printer
 summary: Behind ApexMoney Printer's free OpenSea whitelist phase on Robinhood Chain — Foil became eligible 2026-10-06; triage ended with the user's 2026-10-07 stand-down of autonomous minting.
-rank: 228
+rank: 232
 updated: 2026-10-07
 ---
 

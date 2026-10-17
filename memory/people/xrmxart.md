@@ -2,7 +2,7 @@
 display_name: xrmxart
 nickname: @xrmxart
 summary: X account whose build-time post the user had @Foil667 reply to 2026-10-05 with Foil's traits — the reply is live.
-rank: 200
+rank: 203
 updated: 2026-10-05
 ---
 

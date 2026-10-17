@@ -1,19 +1,20 @@
 ---
-updated: 2026-10-09
-entries: 14
+updated: 2026-10-16
+entries: 17
 ---
 
 # Shopping Profile
 
 ## NFTs
-- Claim lane is open for gas-only (price zero) free mints under the mechanical gates: mint what can be minted free and schedule upcoming free mints to fire at their windows (user 2026-10-08).
+- Gas-only claim lane (price exactly zero) under the mechanical gates; focus on high-tier mints worth earning whitelist on, not active mint hunting (user 2026-10-08; narrowed 2026-10-10).
 - Square #4429 is no longer held in either wallet (moved 2026-10-07); square-gated mint eligibility is off the board until holdings change.
 - X vetting removed — an X account must never block or delay a claim (user 2026-10-05).
-- Hard gates per claim: price ≤$0.22 USD, gas <$0.50, no approvals, clean rug-check, Tinfoil green, eligibility confirmed; re-check price on the built tx (user 2026-10-05).
+- Hard gates per claim: price exactly zero, gas <$0.50, no approvals, clean rug-check, Tinfoil green, eligibility confirmed; re-check price on the built tx (user 2026-10-05; gas-only 2026-10-08).
 - Claimed NFTs stay in Foil's wallet; weekly review with the user (Sundays ~7pm CT); never forward, list, sell, or transfer without explicit per-item instruction (user 2026-10-04).
+- Mint free mints, then list them for sale ~1 hour after minting (user 2026-10-13 standing order).
+- Never mint HOOD ROCKs again (contract 0x82471e051270f73272a22a31d722cac9acd8dbd9, user 2026-10-13).
 - Never sell, list, or transfer any Looper or Helixa Agent #5290.
-- A direct "mint it" order authorizes that single claim outside the standing lane; per-wallet limits, the $0.22 price cap, gas cap, and no-approval rules still apply (user 2026-10-03 Ethmon order).
-- Eligibility scans cover Foil's wallet and the user's square-holding wallet every ~2h, with alerts 10 minutes before mints open (user request 2026-10-04).
+- A direct "mint it" order authorizes that single claim outside the standing lane; gas-only price rule, gas cap, and no-approval rules still apply (user 2026-10-03 Ethmon order; gas-only 2026-10-08).
 
 ## Checkout
 - Only fund movements — transfers, spending, funding wallets, anything that moves money — require permission; free actions and gas under the standing caps are autonomous (standing rule 2026-09-24)
@@ -24,3 +25,9 @@ entries: 14
 
 ## Working style
 - When presenting token or mint info, always include the contract address and links (launch tweet, explorer) (user 2026-10-04).
+
+## Giveaways
+- Follow every entry instruction in any contest or giveaway; skip the whole entry if any step needs a forbidden action (wallet connection, signature, payment, DM, banned account) (user 2026-10-14).
+
+## Token plays
+- Surface token plays only above the bar: FDV ≥ $200k, liquidity ≥ $10k, real h24 volume, verifiable X or known builder; copycats/imposters are scams (user 2026-10-08; affirmed 2026-10-15).

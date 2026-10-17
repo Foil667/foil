@@ -1,8 +1,8 @@
 ---
 display_name: HoodPoker
-summary: Behind the HoodPoker House Pass (7,777, OpenSea Oct 15) and HoodFi Names; WL signup needs the user's own signature; #4429 missed the free snapshot; Oct 15 locked into the 30-day dispatch.
-rank: 136
-updated: 2026-10-05
+summary: Behind the HoodPoker House Pass (7,777, OpenSea Oct 15) and HoodFi Names; open-WL snapshot closed Oct 14 6 PM CDT with no evidence the user entered; #4429 missed the free snapshot.
+rank: 140
+updated: 2026-10-14
 ---
 
 # HoodPoker
@@ -15,6 +15,7 @@ updated: 2026-10-05
 - 2026-10-03: hoodpoker.fun is showing a 3,333 CCFF00-squares free mint with the wallet checker live; Foilbox is watching onchain for the claim phase to go live. (`message:assistant-msg-3e0db373-5c0b-e563-e837-af220b09b011`)
 - 2026-10-03: the House Pass WL signup needs the user's own wallet signature — Foil can't tap that for him; surfaced to the user with the link hoverpoker.fun. (`message:assistant-msg-82387b30-6f49-f0d4-6112-d2abd1d4f959`)
 - 2026-10-04 ~10:37 PM CDT (user): HoodPoker (Oct 15) is LOCKED as one of three free mints in the user's 30-day @noyaphuckinbiz dispatch (Oct 6 – Nov 3) — alongside Trenchstrokerz (Oct 9) and Cartoonals Classics (Oct 15); reminders are set. (message:8626d818-ef8e-448a-8b2c-b84158590ae9)
+- 2026-10-14: the open-WL snapshot closed at 6:00 PM CDT — entry is a repost of the pinned @HoodPokerCasino post plus tagging 2 friends plus a wallet drop at hoodpoker.fun; the last-call nudge went out to the user ~35 min before close and no evidence shows his entry was made. (message:assistant-msg-cd857ccf-d66d-06e7-dd10-fdfee2f662d5; message:assistant-msg-a00ceea4-232b-5adf-3bd2-a28ce028e2c8)
 - The user has not named the relationship.
 
 ## History
@@ -24,6 +25,7 @@ updated: 2026-10-05
 - 2026-10-03: hoodpoker.fun's 3,333 CCFF00-squares free mint has its wallet checker live; Foilbox is watching the contract and Foil will claim square #4429's spot the moment a phase goes live and passes every gate. (`message:assistant-msg-3e0db373-5c0b-e563-e837-af220b09b011`)
 - 2026-10-03: Foil surfaced the House Pass live snapshot + registration to the user, flagging that the WL signup needs his own wallet signature — it's the user's tap at hoverpoker.fun. (`message:assistant-msg-82387b30-6f49-f0d4-6112-d2abd1d4f959`)
 - 2026-10-04 ~10:37 PM CDT: the user locked HoodPoker (Oct 15) into the 30-day dispatch plan as one of three free mints via the CCFF00 square; reminders set. (message:8626d818-ef8e-448a-8b2c-b84158590ae9)
+- 2026-10-14: open-WL snapshot close announced for 6:00 PM CDT; last-call nudge sent to the user at ~5:26 PM CDT with the entry steps; window closed with no evidence he entered. (message:assistant-msg-cd857ccf-d66d-06e7-dd10-fdfee2f662d5; message:assistant-msg-a00ceea4-232b-5adf-3bd2-a28ce028e2c8)
 
 ## The relationship
 - A mint lead inside the user's CCFF00 watch, now locked into his dispatch plan — not a personal tie. Contact so far is the desk's verification probes, the wallet-eligibility check, and @Foil667's logged engagement (like + repost + follow) on the HoodFi Names announcement. The user hasn't named the relationship.
@@ -32,7 +34,7 @@ updated: 2026-10-05
 - The CCFF00 / HoodStreet scene and the user's free-mint hunting.
 
 ## Open threads
-- [ ] House Pass WL signup — live snapshot + registration; needs the user's own wallet signature at hoverpoker.fun. (`message:assistant-msg-82387b30-6f49-f0d4-6112-d2abd1d4f959`)
+- [x] House Pass open-WL snapshot — closed Oct 14 6:00 PM CDT; last call went out with the entry steps (repost the pinned @HoodPokerCasino post, tag 2 friends, drop a wallet at hoodpoker.fun); no evidence the user entered. (message:assistant-msg-a00ceea4-232b-5adf-3bd2-a28ce028e2c8; message:assistant-msg-cd857ccf-d66d-06e7-dd10-fdfee2f662d5)
 - [ ] hoodpoker.fun 3,333 CCFF00-squares free mint — wallet checker live; Foilbox watching onchain; claim #4429's spot if a phase opens and passes every gate. (`message:assistant-msg-3e0db373-5c0b-e563-e837-af220b09b011`)
 - [ ] Open WL for the House Pass (2,222 free, gas-free signature signup) — lead only; signatures aren't covered by the standing orders. (memory/2026-10-02.md#L5171)
 - [x] Free CCFF00 stage eligibility check — FAILED: neither Foil's wallet nor square #4429 is in the 3,333-holder snapshot. (memory/2026-10-02.md#L5171; `message:assistant-msg-00be4fdc-33e5-a05b-8166-8a98da6aaeaa`)

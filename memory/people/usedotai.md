@@ -2,7 +2,7 @@
 display_name: Dot
 nickname: @usedotai
 summary: Dot crew (usedot.xyz/DotCode, DOT token on Base) — user holds 10k DOT; 48h paper trial closed 2026-10-10 tied with buy-and-hold (0 trades); 15-min alerts + @usedotai explore-search engagement habit.
-rank: 94
+rank: 97
 updated: 2026-10-11
 ---
 

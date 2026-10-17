@@ -2,7 +2,7 @@
 display_name: RHTERMINALS
 nickname: @RHTERMINALS
 summary: Verified X account behind the TERMINAL ALPHA whitelist giveaway on 2026-09-23, which @Foil667 entered at the user's direction.
-rank: 47
+rank: 49
 updated: 2026-09-23
 ---
 

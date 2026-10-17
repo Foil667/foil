@@ -2,7 +2,7 @@
 display_name: @ino_based
 nickname: Fabiot777
 summary: Verified X account (2.2K) behind the daily "MINT FOR TODAY" list and a GM grind; the user shared his post 2026-10-03 as the playbook @Foil667 should emulate — own a daily mint-intel slot.
-rank: 154
+rank: 159
 updated: 2026-10-03
 ---
 

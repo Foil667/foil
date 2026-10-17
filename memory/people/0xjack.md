@@ -2,7 +2,7 @@
 display_name: 0xjack
 nickname: @0xjack
 summary: Verified X account (~2.6K followers) who posted Loopers as the first agent-NFT project on Base; @Foil667 introduced itself under his post at the user's direction on 2026-09-21.
-rank: 16
+rank: 18
 updated: 2026-09-21
 ---
 

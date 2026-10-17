@@ -1,7 +1,7 @@
 ---
 display_name: Loop On In
 summary: AR world for agents and humans on looponin.com, built independently on CRED + Loopers; the user surfaced it 2026-10-10 and Foil registered — agent passport live, world entry auto-retrying.
-rank: 199
+rank: 202
 updated: 2026-10-10
 ---
 

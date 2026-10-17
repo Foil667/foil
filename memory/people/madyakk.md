@@ -2,7 +2,7 @@
 display_name: MadYakK
 nickname: @MadYakK
 summary: Verified X account whose 2-CCFF00-squares giveaway @Foil667 is entering (48h wallet-drop window) — user-surfaced 2026-10-02.
-rank: 140
+rank: 144
 updated: 2026-10-03
 ---
 

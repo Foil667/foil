@@ -1,7 +1,7 @@
 ---
 display_name: CLAUS
 summary: Behind CLAUS NFT, a 5,555-supply free mint on Robinhood Chain; Foil claimed #217 on 2026-10-05, held in Foil's wallet.
-rank: 210
+rank: 213
 updated: 2026-10-05
 ---
 

@@ -2,7 +2,7 @@
 display_name: Hood GPU
 nickname: @hoodrigs_
 summary: Verified account behind the Hood GPU GPU-rig mint; @Foil667 followed 2026-09-29 — a paid, lead-only watch after its scam flag cleared as misleading pricing, not a drainer.
-rank: 117
+rank: 121
 updated: 2026-09-29
 ---
 

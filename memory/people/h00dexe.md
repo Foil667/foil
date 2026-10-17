@@ -2,7 +2,7 @@
 display_name: h00dexe
 nickname: @h00dexe
 summary: Co-host of the Kageuri giveaway @Foil667 entered 2026-10-04 (followed + entered); no other contact on record.
-rank: 185
+rank: 190
 updated: 2026-10-05
 ---
 

@@ -56,7 +56,7 @@ Per chain, the following must be concrete before any deploy:
 - [ ] `_user` — user's EVM wallet address (receives 10% of operator share)
 - [ ] `_usdc` — native USDC per chain (Base: `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` ✅ verified)
 - [ ] `_cred` — $CRED (Base: `0xAB3f23c2ABcB4E12Cc8B593C218A7ba64Ed17Ba3` ✅ verified)
-- [ ] `_rescue` — $RESCUE token address per chain — **TBD** (Base + RH)
+- [ ] `_rescue` — $RESCUE token address per chain — Base: `0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3` ✅ verified; RH **TBD**
 - [ ] `_dexRouter` — DEX router for USDC→stock swaps per chain — **TBD**
 - [ ] `_stocks[]` — tokenized stock token addresses — **TBD** (RH: native equities; Base: B20 wrap — exact list TBD)
 - [ ] `_registry` — ERC-6551 registry address per chain — **TBD** (Base has canonical `0x000000006551c19487814612e58FE06813775758`; RH TBD)
@@ -69,7 +69,7 @@ Per chain, the following must be concrete before any deploy:
 |---------|------|-----------------|
 | USDC | `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` ✅ | TBD |
 | $CRED | `0xAB3f23c2ABcB4E12Cc8B593C218A7ba64Ed17Ba3` ✅ | TBD |
-| $RESCUE | TBD | TBD |
+| $RESCUE | `0x8201132Bc218dbD81305Ff5605F44aE4804D4BA3` ✅ | TBD |
 | DEX router (USDC→stocks) | TBD | TBD |
 | ERC-6551 registry | canonical `0x000000006551c19487814612e58FE06813775758` (verify onchain) | TBD |
 | Stock tokens (allowed list) | TBD (B20) | TBD (native equities) |

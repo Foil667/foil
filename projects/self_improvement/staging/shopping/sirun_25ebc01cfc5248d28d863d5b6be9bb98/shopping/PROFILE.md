@@ -1,0 +1,22 @@
+# Shopping Profile
+
+## NFTs
+- Gas-only claim lane (price exactly zero) under the mechanical gates; focus on high-tier mints worth earning whitelist on, not active mint hunting (user 2026-10-08; narrowed 2026-10-10).
+- Square #4429 is no longer held in either wallet (moved 2026-10-07); square-gated mint eligibility is off the board until holdings change.
+- X vetting removed — an X account must never block or delay a claim (user 2026-10-05).
+- Hard gates per claim: price exactly zero, gas <$0.50, no approvals, clean rug-check, Tinfoil green, eligibility confirmed; re-check price on the built tx (user 2026-10-05; gas-only 2026-10-08).
+- Claimed NFTs stay in Foil's wallet; weekly review with the user (Sundays ~7pm CT); never forward, list, sell, or transfer without explicit per-item instruction (user 2026-10-04).
+- Mint free mints, then list them for sale ~1 hour after minting (user 2026-10-13 standing order).
+- Never mint HOOD ROCKs again (contract 0x82471e051270f73272a22a31d722cac9acd8dbd9, user 2026-10-13).
+- Never sell, list, or transfer any Looper or Helixa Agent #5290.
+- A direct "mint it" order authorizes that single claim outside the standing lane; gas-only price rule, gas cap, and no-approval rules still apply (user 2026-10-03 Ethmon order; gas-only 2026-10-08).
+
+## Checkout
+- Only fund movements — transfers, spending, funding wallets, anything that moves money — require permission; free actions and gas under the standing caps are autonomous (standing rule 2026-09-24)
+- Foil's RH ETH balance is reserved for minting only — no swaps, transfers, or experiments without the user's explicit per-action approval (user 2026-10-05).
+- Bankr swaps may be used autonomously for housekeeping (dust consolidation, gas top-ups, stablecoin balancing); buying or speculative swaps need explicit per-token approval (user 2026-10-02).
+- OpenSea wallet connection is headless (Bankr-signed SIWE); OpenSea-issued minter-bound WL signatures are claimable for Foil's wallet under the standard claim gates (user 2026-10-04).
+- Mints qualifying only the user's own square-holding wallet are prepped and handed to the user to sign; the assistant cannot sign for that wallet
+
+## Working style
+- When presenting token or mint info, always include the contract address and links (launch tweet, explorer) (user 2026-10-04).

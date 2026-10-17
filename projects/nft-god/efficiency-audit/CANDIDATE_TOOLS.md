@@ -1,7 +1,7 @@
 # Candidate tools — GitHub discovery
 
-Run: 2026-10-10T10:36:09.534Z
-Queries (3 executed, pushed since 2026-07-12, sorted by stars):
+Run: 2026-10-11T11:36:04.980Z
+Queries (3 executed, pushed since 2026-07-13, sorted by stars):
 - topic:nft-mint-bot
 - topic:nft-bot
 - nft mint bot (name/description)
@@ -14,7 +14,7 @@ Queries (3 executed, pushed since 2026-07-12, sorted by stars):
 | [bagaskara815/nft-minter-bot](https://github.com/bagaskara815/nft-minter-bot) | 9 | 2026-09-17 | no description. Relevance for free-mint sniper: automated minting bot — evaluate its gas strategy and safety caps against our hard rules. |
 | [dhasap/nft-mint-agent](https://github.com/dhasap/nft-mint-agent) | 6 | 2026-08-17 | ⚡ Competitive multi-wallet NFT auto-minting agent for OpenSea/SeaDrop & direct contracts — low-latency fast-mint (raw EIP-1559, multi-RPC fa. Relevance for free-mint sniper: automated minting bot — evaluate its gas strategy and safety caps against our hard rules. |
 | [cgallic/NFT-Minting-Bot](https://github.com/cgallic/NFT-Minting-Bot) | 4 | 2026-07-23 | Examples of NFT minting bots. Relevance for free-mint sniper: automated minting bot — evaluate its gas strategy and safety caps against our hard rules. |
-| [Enin9352/ethernyx](https://github.com/Enin9352/ethernyx) | 2 | 2026-10-08 | Automate cloud-based NFT bidding on OpenSea and Blur at high speeds with real-time counter-bidding, automated offer management, and integrat. Relevance for free-mint sniper: general NFT tooling — verify it actually supports free-mint flows before trusting it. |
+| [Enin9352/ethernyx](https://github.com/Enin9352/ethernyx) | 2 | 2026-10-11 | Automate cloud-based NFT bidding on OpenSea and Blur at high speeds with real-time counter-bidding, automated offer management, and integrat. Relevance for free-mint sniper: general NFT tooling — verify it actually supports free-mint flows before trusting it. |
 | [hosseinkarami-dev/opensea-mint-bot](https://github.com/hosseinkarami-dev/opensea-mint-bot) | 2 | 2026-09-17 | Automated OpenSea NFT minting bot with configurable drop monitoring, high-frequency polling, and Robinhood chain transaction execution.. Relevance for free-mint sniper: drop/mint monitoring utility — potential detection-stage upgrade for the watchdog. |
 | [clordexchanger/Minting-Bot](https://github.com/clordexchanger/Minting-Bot) | 2 | 2026-08-02 | Telegram-controlled bot for fast NFT minting on EVM chains — targets, wallets, scheduling, onchain state watching and auto-sweep, all via ch. Relevance for free-mint sniper: drop/mint monitoring utility — potential detection-stage upgrade for the watchdog. |
 | [AliBavarchee/DHA-Vision](https://github.com/AliBavarchee/DHA-Vision) | 1 | 2026-08-09 | DHA Vision is an application that turns uploaded photos into NFT‑style digital artworks.. Relevance for free-mint sniper: general NFT tooling — verify it actually supports free-mint flows before trusting it. |

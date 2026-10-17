@@ -2,7 +2,7 @@
 display_name: ilia_xbt
 nickname: @ilia_xbt
 summary: Looper builder ("I loop, therefore I am") driving the forming LooperDAO; @Foil667 followed them and engaged in the Panda/LooperDAO thread at the user's direction on 2026-09-30.
-rank: 88
+rank: 91
 updated: 2026-09-30
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: DeTopiq
 summary: Verified X account running RH-chain NFT giveaways (NullHood, SHEERS) that @Foil667 entered at the user's direction 2026-09-22; keeps showing up in Foil's mentions.
-rank: 62
+rank: 64
 updated: 2026-09-23
 ---
 

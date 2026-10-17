@@ -2,7 +2,7 @@
 display_name: HoodchanCEO
 nickname: @HoodchanCEO
 summary: X account whose game-studio article (Vibe-style sealed packs, token-bound wallets on Robinhood) became the playbook for the user's Foil Pack Studio order; followed from @Foil667 on 2026-09-26.
-rank: 82
+rank: 84
 updated: 2026-09-26
 ---
 

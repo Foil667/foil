@@ -2,7 +2,7 @@
 display_name: Arrow Cats
 nickname: @ArrowCatsNFTs
 summary: Behind Arrow Cats' public free mint on Robinhood Chain (~2 PM CDT Oct 6, ×5 per wallet) — Foil claimed ×5 on 2026-10-06; held pending the user's "send me all" order.
-rank: 241
+rank: 245
 updated: 2026-10-06
 ---
 

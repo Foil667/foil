@@ -1,7 +1,7 @@
 ---
 display_name: Lost Pixel City
 summary: Behind Lost Pixel City's free Robinhood Chain phase — square-gated, so no claim; watching as a lead.
-rank: 279
+rank: 289
 updated: 2026-10-10
 ---
 

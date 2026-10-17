@@ -2,7 +2,7 @@
 display_name: Grilled Apes
 nickname: @GRILLEDAPES
 summary: Behind Grilled Apes' live 2026-10-03 mint — its CCFF00-GTD checker is showing "Not eligible" for GTD winners; watch-only, Foil on no GTD list.
-rank: 161
+rank: 166
 updated: 2026-10-03
 ---
 

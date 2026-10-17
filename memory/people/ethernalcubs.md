@@ -2,7 +2,7 @@
 display_name: ethernalcubs
 nickname: @ethernalcubs
 summary: Behind Ethernal Cubs, a free mint on Robinhood Chain (build-your-own Cub, WL at ethernalcubs.ai); followed from @Foil667 at the user's direction on 2026-09-22 for mint intel.
-rank: 31
+rank: 33
 updated: 2026-09-22
 ---
 

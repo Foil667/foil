@@ -1,7 +1,7 @@
 ---
 display_name: Robinhood Rocks
 summary: Behind Robinhood Rocks' CCFF00-only free stage Oct 8 (1:00–2:00 PM CDT, 2 per wallet) — off the board 2026-10-07 after #4429 left both wallets.
-rank: 234
+rank: 238
 updated: 2026-10-08
 ---
 

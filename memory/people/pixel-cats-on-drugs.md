@@ -1,7 +1,7 @@
 ---
 display_name: Pixel Cats on Drugs
 summary: Robinhood Chain NFT project the user had Foil vet on 2026-10-04 — lead only: public price 0.005 ETH (~$13.46, over the $0.10 cap) and no X, no site, HYPE 0, so the quality vet blocks it.
-rank: 164
+rank: 169
 updated: 2026-10-04
 ---
 

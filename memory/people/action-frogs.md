@@ -1,7 +1,7 @@
 ---
 display_name: Action Frogs
 summary: Behind Action Frogs' free Robinhood Chain mint — Foil's wallet showed eligible on 2026-10-10 but trust signals were bad, so it stays watch-only.
-rank: 278
+rank: 288
 updated: 2026-10-10
 ---
 

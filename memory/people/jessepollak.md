@@ -4,7 +4,7 @@ first_name: Jesse
 last_name: Pollak
 nickname: @jessepollak
 summary: Followed from @Foil667 at the user's direction as part of the Loopers/Base watch; his "i'm looping" post keeps driving Loopers discussion.
-rank: 13
+rank: 15
 updated: 2026-09-21
 ---
 

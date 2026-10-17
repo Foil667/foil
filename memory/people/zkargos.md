@@ -1,7 +1,7 @@
 ---
 display_name: zkArgos
 summary: Free FCFS mint on Ethereum (CA 0xbd85ad33b4e72514f60435694575a6cf7cb22cd0) flagged to the user Oct 9 as his "#3 pick"; the window closed 2:00 PM CDT, phases possibly whitelisted-only.
-rank: 265
+rank: 269
 updated: 2026-10-09
 ---
 

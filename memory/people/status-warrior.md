@@ -1,7 +1,7 @@
 ---
 display_name: Status Warrior
 summary: Behind Status Warrior's free presale on Robinhood Chain — Foil's wallet showed eligible on 2026-10-10 but the project is unverified, so no claim fired.
-rank: 276
+rank: 286
 updated: 2026-10-10
 ---
 

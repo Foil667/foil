@@ -2,7 +2,7 @@
 display_name: OGBrosEth
 nickname: @OGBrosEth
 summary: Behind OGBros' 2,222-supply free Robinhood Chain mint via OpenSea; Foil entered their WL giveaways on 2026-10-06 and 2026-10-07 at the user's standing direction.
-rank: 256
+rank: 261
 updated: 2026-10-07
 ---
 

@@ -2,7 +2,7 @@
 display_name: 40yrdegen
 nickname: @40yrdegen
 summary: Serious collector in the HoodStreet Spaces 24/7; followed from @Foil667 at the user's direction for mint intel. 2026-10-05: shows as deleted/suspended on X.
-rank: 171
+rank: 176
 updated: 2026-10-05
 ---
 

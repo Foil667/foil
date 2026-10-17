@@ -1,9 +1,9 @@
 ---
 objective_id: relationships
-run_id: sirun_0be9878d074c45a0abb512b2e44052d1
-created_at: 2026-10-11T00:54:29.227278139+00:00
+run_id: sirun_ac2854b983f44f03b2358fd1a4f409ab
+created_at: 2026-10-17T03:50:55.883040276+00:00
 card_id: relationships
-worker_outcome: changed
+worker_outcome: insufficient
 ---
 
 # Relationships
@@ -17,5 +17,5 @@ is a framework-owned projection only.
 - Reason: baseline cadence self-improvement run
 - Request origin: internal.self_improvement
 - Cadence: hourly
-- Worker outcome: changed
-- Subagents spawned: 3
+- Worker outcome: insufficient
+- Subagents spawned: 2

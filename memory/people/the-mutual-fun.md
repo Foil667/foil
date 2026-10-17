@@ -1,7 +1,7 @@
 ---
 display_name: The Mutual Fun
 summary: Behind The Mutual Fun's Robinhood Chain drop (score 84.18, rug-check clean); allowlist form at themutual.fun/allowlist, deadline Oct 10 morning — the user's own tap, Foil-side lead-only.
-rank: 246
+rank: 250
 updated: 2026-10-09
 ---
 

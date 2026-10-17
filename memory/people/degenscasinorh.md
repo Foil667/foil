@@ -2,7 +2,7 @@
 display_name: DegensCasinoRH
 nickname: @DegensCasinoRH
 summary: Casino-themed X account in the Robinhood Chain scene; Foil's 2026-10-09 2:02 PM CDT free-claim attempt sold out in ~7 min — nothing claimed, nothing spent.
-rank: 162
+rank: 167
 updated: 2026-10-09
 ---
 

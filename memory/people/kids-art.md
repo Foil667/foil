@@ -1,7 +1,7 @@
 ---
 display_name: KIDS ART
 summary: Behind KIDS ART's free OpenSea whitelist presale on Robinhood Chain; Foil claimed #439 on 2026-10-06 — held in Foil's wallet.
-rank: 229
+rank: 233
 updated: 2026-10-06
 ---
 

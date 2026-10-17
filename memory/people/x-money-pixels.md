@@ -1,7 +1,7 @@
 ---
 display_name: X Money Pixels
 summary: Behind a 1,000-supply fully on-chain pixel-art mint on Base; Foil flagged it to the user 2026-10-10 (0.0001 ETH, paid) and he passed — no claim.
-rank: 269
+rank: 273
 updated: 2026-10-10
 ---
 

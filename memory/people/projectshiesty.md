@@ -1,7 +1,7 @@
 ---
 display_name: projectshiesty
 summary: CCFF00 mint-scene X account; its Oct 6 public fire was armed then cancelled by the user's stand-down — blocked without a fresh order; @Foil667 engagement banned 2026-10-09.
-rank: 25
+rank: 27
 updated: 2026-10-10
 ---
 

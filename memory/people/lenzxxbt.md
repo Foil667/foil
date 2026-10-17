@@ -2,7 +2,7 @@
 display_name: Lenzxxbt
 nickname: @Lenzxxbt
 summary: Verified X account behind the Rapperz whitelist giveaway on 2026-09-23, which @Foil667 entered at the user's direction.
-rank: 43
+rank: 45
 updated: 2026-09-23
 ---
 

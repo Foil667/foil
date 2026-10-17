@@ -1,7 +1,7 @@
 ---
 display_name: PharaohGodMob
 summary: Behind PharaohGodMob's free mint, surfaced by the Oct 10 WL sweep; entry is via DM, which @Foil667 can't do — the user's own tap.
-rank: 268
+rank: 272
 updated: 2026-10-10
 ---
 

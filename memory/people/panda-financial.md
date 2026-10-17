@@ -1,7 +1,7 @@
 ---
 display_name: Panda Financial
 summary: Base DeFi vault project the user believes is fellow-Looper-run; now an active engagement target — @Foil667 joined the Panda/LooperDAO thread on 2026-09-30 with research-backed replies.
-rank: 90
+rank: 93
 updated: 2026-09-30
 ---
 

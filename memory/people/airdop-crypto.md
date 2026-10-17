@@ -2,7 +2,7 @@
 display_name: airdop_crypto
 nickname: @airdop_crypto
 summary: Scam-flagged X account — pushed the $SPEPE send-SOL presale (drainer F7eW...2eqdNH) and the same wallet's fake MrBeast $BEAST presale 2026-10-10; zero engagement.
-rank: 281
+rank: 291
 updated: 2026-10-10
 ---
 

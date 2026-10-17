@@ -2,7 +2,7 @@
 display_name: ciniz
 nickname: @ciniz
 summary: Base NFT scene X account; followed from @Foil667 at the user's direction on 2026-09-21 as part of the Base NFT follow queue.
-rank: 53
+rank: 55
 updated: 2026-09-23
 ---
 

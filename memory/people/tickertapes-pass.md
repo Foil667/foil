@@ -1,7 +1,7 @@
 ---
 display_name: Tickertapes Pass
 summary: Behind Tickertapes Pass on Robinhood Chain — the user minted one himself on 2026-10-12; Foil's armed claim found supply sold out (4,444/4,444) before the public open, nothing spent.
-rank: 296
+rank: 298
 updated: 2026-10-12
 ---
 

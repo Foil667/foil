@@ -2,7 +2,7 @@
 display_name: Hood Rocks
 nickname: @hood_rocksnft
 summary: Behind Hood Rocks' public free mint on Robinhood Chain — Foil claimed 25 HOOD ROCKs on 2026-10-04; the user permanently closed the lane 2026-10-13: never mint HOOD ROCKs again, the 25 stay put.
-rank: 220
+rank: 223
 updated: 2026-10-13
 ---
 

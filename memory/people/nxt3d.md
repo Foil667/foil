@@ -2,7 +2,7 @@
 display_name: nxt3d
 nickname: @nxt3d
 summary: Creator of the RESTAP agent-to-agent protocol; announced Adapterscan Oct 7 — its Robinhood registry is live (1,087 identities, 8 attestations) but Base is still coming.
-rank: 81
+rank: 85
 updated: 2026-10-12
 ---
 

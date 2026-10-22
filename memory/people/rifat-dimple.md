@@ -2,7 +2,7 @@
 display_name: rifat__dimple
 nickname: @rifat__dimple
 summary: Running a 20-spot GTD whitelist raffle (ends ~Oct 4) that @Foil667 entered 2026-10-03 with the user tagged, at his direction.
-rank: 156
+rank: 159
 updated: 2026-10-03
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: joshikusama
 summary: The user's buddy — he shared his fomo.family profile 2026-10-15; aped $CHARGE and had the user ask Foil to vet tokens for him.
-rank: 9
+rank: 12
 updated: 2026-10-15
 ---
 

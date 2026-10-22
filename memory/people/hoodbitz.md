@@ -2,7 +2,7 @@
 display_name: HØØDBITZ
 nickname: @HØØDBITZ
 summary: Possible phishing account flagged 2026-09-28 — posted "public mint live" linking a sketchy hoodbitz.netlify.app mint domain; zero engagement.
-rank: 105
+rank: 109
 updated: 2026-09-28
 ---
 

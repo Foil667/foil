@@ -2,7 +2,7 @@
 display_name: _RollinNolan
 nickname: @_RollinNolan
 summary: Verified X account whose "this is a rug" Maskies callout Foil verified on 2026-10-06 alongside @ShoshiEth's.
-rank: 224
+rank: 227
 updated: 2026-10-06
 ---
 

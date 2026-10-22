@@ -1,7 +1,7 @@
 ---
 display_name: Cartoonals Classics
 summary: Cartoonals Classics — free mint Oct 15 locked via the CCFF00 square as one of three mints in the user's 30-day @noyaphuckinbiz dispatch; reminders set.
-rank: 195
+rank: 199
 updated: 2026-10-05
 ---
 

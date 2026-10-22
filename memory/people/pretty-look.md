@@ -1,7 +1,7 @@
 ---
 display_name: Pretty Look
 summary: Behind Pretty Look's free presale on Robinhood Chain — Foil's wallet showed eligible on 2026-10-10 but the project is unverified, so no claim fired.
-rank: 287
+rank: 289
 updated: 2026-10-10
 ---
 

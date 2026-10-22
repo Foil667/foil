@@ -1,7 +1,7 @@
 ---
 display_name: ANONHOOD
 summary: Behind ANONHOOD's GTD free mint flagged for ~6:38 AM CDT Oct 10; entry needs their WL form at anonhood.fun/wl — the user's own tap.
-rank: 271
+rank: 274
 updated: 2026-10-10
 ---
 

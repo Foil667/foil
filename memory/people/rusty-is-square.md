@@ -2,7 +2,7 @@
 display_name: Rusty_is_Square
 nickname: @Rusty_is_Square
 summary: Behind Cube Twist (Square Apes); the Oct 2 2:00–3:00 PM CDT CCFF00-squares Crayon window ran while Foil stayed fail-closed on the rug-check flag — surveillance only, no claim.
-rank: 85
+rank: 89
 updated: 2026-10-02
 ---
 

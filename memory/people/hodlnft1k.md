@@ -2,7 +2,7 @@
 display_name: HodlNFT1K
 nickname: @HodlNFT1K
 summary: Verified X account behind the BUNNY WTF GTD whitelist giveaway on 2026-09-23, which @Foil667 entered at the user's direction.
-rank: 44
+rank: 48
 updated: 2026-09-23
 ---
 

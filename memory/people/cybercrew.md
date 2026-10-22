@@ -1,7 +1,7 @@
 ---
 display_name: CyberCrew
 summary: Runs the cybercrewarcade.com arcade; GEN02 #4849 sold at 23 USDG and its 21.16 USDG proceeds were sent to the user — the arcade now has no active NFT until re-based.
-rank: 198
+rank: 201
 updated: 2026-10-12
 ---
 

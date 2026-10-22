@@ -1,7 +1,7 @@
 ---
 display_name: @X402layer_
 summary: Deployer of a copycat $Waldo on Base (2026-10-16) mimicking the established ~$269k FDV $Waldo, top 10 holding 100% — scam-flagged; zero engagement.
-rank: 322
+rank: 330
 updated: 2026-10-16
 ---
 

@@ -2,7 +2,7 @@
 display_name: HivemindOS
 nickname: @TheHivemindOS
 summary: Behind HiveVerse and the SuperAgent API — setup went live 2026-10-12: 2,500 credits, Looper #667 charging 3 credits/reply; @Foil667 follows its X account in the close lane next to the Loopers.
-rank: 7
+rank: 10
 updated: 2026-10-12
 ---
 

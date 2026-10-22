@@ -2,7 +2,7 @@
 display_name: savvyxeth
 nickname: @savvyxeth
 summary: Behind the Hoodcabals giveaway @Foil667 entered 2026-10-05 and again 2026-10-07 at the user's direction (a Telegram join the entry asks for is still pending the user's own tap).
-rank: 204
+rank: 207
 updated: 2026-10-07
 ---
 

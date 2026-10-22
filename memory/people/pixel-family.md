@@ -1,7 +1,7 @@
 ---
 display_name: Pixel Family
 summary: Behind Pixel Family's Robinhood Chain presale; Foil claimed one via the "WIF AND CCFOO HOLDERS" CCFF00-holder stage on 2026-10-04 (~$0.03), held in Foil's wallet.
-rank: 182
+rank: 185
 updated: 2026-10-04
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: INKSIGIL
 summary: Behind INKSIGIL on Ink chain (4,440 supply) — Foil entered via the @checkmates3200 giveaway, and its seal entry closing 2026-10-11 needs the user's own tap.
-rank: 297
+rank: 299
 updated: 2026-10-11
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: @0xDepoyer
 summary: 0xDeployer impersonator flagged hostile; '0xDepoyer' fee-recipient on SEALCAT/Floyd-Mayweather scam tokens, two Oct 15 'Anatomy' tokens, and Teslaconomics #2 (Oct 16); zero engagement.
-rank: 312
+rank: 316
 updated: 2026-10-16
 ---
 

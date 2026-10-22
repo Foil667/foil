@@ -1,7 +1,7 @@
 ---
 display_name: ZomBeGotchi
 summary: Behind ZomBeGotchi's team free mint on Robinhood Chain — free phase is Oct 16 (corrected 2026-10-13 from Oct 13 1:30 CDT); gated lead.
-rank: 278
+rank: 280
 updated: 2026-10-13
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: Inpact Fantasy
 summary: Behind Inpact Fantasy's free Robinhood Chain mint; Foil claimed ×8 on 2026-10-06 — 7 went to the user, #671 is transfer-locked (soulbound-style) and stuck in Foil's wallet.
-rank: 230
+rank: 233
 updated: 2026-10-06
 ---
 

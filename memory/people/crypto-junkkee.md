@@ -2,7 +2,7 @@
 display_name: CryptoJunkkee
 nickname: @sonnylove254919
 summary: Looper-family X account who repeatedly engages @Foil667 — replies, likes, and reposted Foil's $NATION drainer warning; on 2026-10-16 Foil flagged that the account pushed a fresh $CRED airdrop phish.
-rank: 88
+rank: 92
 updated: 2026-10-16
 ---
 

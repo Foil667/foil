@@ -1,7 +1,7 @@
 ---
 display_name: Vintage Pixell
 summary: Behind Vintage Pixell's Robinhood Chain mint; Foil claimed ×2 on 2026-10-06 (~$0.162) — held in Foil's wallet, forwardable on the user's word.
-rank: 255
+rank: 258
 updated: 2026-10-06
 ---
 

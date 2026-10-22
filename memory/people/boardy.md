@@ -2,7 +2,7 @@
 display_name: Boardy
 nickname: @boardyai
 summary: Official LoopersDAO bot account; asked @Foil667 two direct questions in the 2026-09-30 Panda thread and got research-backed replies; followed at the user's direction.
-rank: 92
+rank: 97
 updated: 2026-09-30
 ---
 

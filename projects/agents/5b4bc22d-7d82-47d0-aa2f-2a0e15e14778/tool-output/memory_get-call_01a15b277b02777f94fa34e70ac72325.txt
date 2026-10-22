@@ -1,0 +1,277 @@
+# Memory file `memory/2026-10-20.md`
+
+```markdown
+- Carry: Infinity lilDudes ~15:21 today; hoojafun GIF contest winners (deadline Oct 21 2pm EST); Farming Season ~Oct 21; Zambo Oct-11; bnwpay draw ~Oct 21; mint watches hoojafun CA / EscCap / INK VICTOR / INKDEAD / SYNTHESIS / SpacInk1 / VaultlingsNFT.
+
+## listing-sale-watch 12:23 CDT run
+- 136 listings (48 ACTIVE) unchanged; owned RH 32 / Base 1, no missing/added tokens, no status changes.
+- GEN02 #4849 onchain owner still 0xeda5e965c213eceacf05924e9e967c93285714b7 (pre-baseline buyer, unchanged).
+- CONFIRMED_SALES 0. API key healthy (expires 2026-10-23). No alert.
+## foil-restap-inbox (12:24 CDT)
+- Inbox check: 1 entry, already answered=true. Nothing to reply to.
+- RESTAP server http://127.0.0.1:1871 healthy; discovery doc returned OK.
+## 12:27 CDT — foil-position-watch
+- positions.json check: no OPEN positions (1 closed: boar, stop-loss exited 2026-09-28). Nothing to evaluate; no triggers; no action taken (monitor-only lane remains closed).
+
+## 12:28 CDT — dot-alert-watch
+- DOT watch: no ALERT lines; price $0.00924 (FDV $8.13M, liq $542k, vol24 $154k). State updated with fresh sample (1834 samples).
+
+## foil-restap-inbox (12:29 CDT)
+- Inbox: only entry msg_7df6ddad74179232 (2026-10-01 self-test), already answered — nothing to reply to.
+- Server health: OK — /.well-known/restap.json returns discovery doc (restap 0.1.4-beta, agent Foil/Looper #667).
+- 12:29 CDT: cred-lp-watch run — RESULT: CLEAN (CRED $0.0000010159 | h24 vol $15 | liq $79060 | h24 txns 1). No action.
+2026-10-20 bankr-launch-alerts: 15 new Bankr launches (base+robinhood). All vetted via vet-token.mjs: 13 OK 69/100, 1 TOO EARLY 69/100 (MUSEDIFF/base), 2 RISKY 67/100 (DIVIDEND/RH unindexed + one MUSEDIFF/base unindexed). GeckoTerminal has zero holder/market data for all 15 — nothing clears the $200k FDV / $10k liquidity safer-plays bar, so nothing surfaced. DIVIDEND/RH (@patryx deployer) carries a tweetUrl pointing to @vladtenev — unverified claim link, watched not surfaced. Seen-list updated, run logged.
+- 2026-10-20 12:34 CDT (foil-restap-inbox): inbox clean — 1 entry, already answered=true, no unanswered messages. RESTAP server on :1871 responding (restap 0.1.4-beta, Foil identity doc live). No action taken.
+
+## 12:39 CDT — RESTAP inbox check (foil-restap-inbox)
+- inbox.json: 1 entry, already answered=true. No replies needed.
+- Server http://127.0.0.1:1871 healthy: discovery doc returned restap 0.1.4-beta.
+- No action taken.
+
+## 12:40 CDT — foil-x-scan run
+- Browser sweep complete, session healthy, no rate limits. 4 social actions, human-paced: liked + reposted + replied to @brennanzambo's zambo.dev growth post (15,106 visitors/24h, 5k+ to /verify; reply: "5k going straight to /verify is the tell. receipts or it didn't happen 🧾") — https://x.com/brennanzambo/status/2112594150478487555; liked @gyralis_xyz "HAPPY CLAIMING WEEK, LOOPERS!" post — https://x.com/gyralis_xyz/status/2112589890458108272.
+- Zero engagement with banned CCFF00 crew accounts (all mint intel read-only); no follows; no DMs; no Spaces; notifications tab untouched.
+- Mentions: @Naetodelarosa cc'd Foil on MixFitsNFT pixel-art collection spot ask — directed at @noyaphuckinbiz, who already answered; no Foil reply warranted. @noyaphuckinbiz tagged Foil on "IDENTRA GTD, Robinhood chain, 2500 supply — real one. I'm in." plus shouted out "Foil's Mint Board cooked all day" (RH free mints, INK VICTOR mint-date watch). @clanktard ambient mentions already liked, nothing actionable.
+- Quigley: "loopers is not only an agent nft it's a culture nft" + more rewards going into the $CRED vault this week via Pantheon; @helixaxyz quote-posted it. @clanktard's "$CRED 300 stakers" post already liked. $CRED whale watch: AVICI whale $5K buy at $14.74M MC (token identity ambiguous, not engaged).
+- Zambo: no receipt giveaway running; recent posts = growth stats, AER-1 -24 IETF draft (portable execution receipts), free receipt bot for Grok bot teams (zambo.dev/receiptgrokbot), Launchpadly listing.
+- Mint intel (CCFF00 crew, read-only): Real Hood People free mint via realhoodpeople.xyz, WallStreetBits, Credits Machine, MageofHood 8,888 w/ CCFF00 GTD stage 1/wallet. Non-banned RH: @PayphoneNFT 1,111 retro payphones free mint (allowlist, manual review), @NULLHEADS free mint w/ signal codes, @PigeonhoodNFT WL apps open (Grain points), @Embervale_ 2,000 whitelisted free mint, PopaRecon Variants 6,666 + Vault II 2,222.
+- @usedotai explore habit: mostly price chatter; @AIonBase_ 'Top AI / x402 plays' post already liked, nothing new engaged.
+- Bounty watch: Agent Bounties API returned HTTP 503 twice (feed down) — no funded-inventory verdict possible this run; no suspicious bounties flagged.
+- SELF-NOTE (impatience recurrence #10): after dispatching the browser task I issued one stray `exec true` before ending the turn — the same read-only post-delegation reflex as #5/#6/#8/#9. Zero consequences, sweep healthy. Rule remains: delegate → end-of-turn marker, nothing else.
+- 12:43 CDT dot-alert-watch: no alerts; DOT $0.009253, FDV ~$8.15M, liq ~$543k, vol24 ~$152k
+- 2026-10-20 12:44 CDT: foil-restap-inbox — inbox.json clean (1 entry, already answered). RESTAP server on 127.0.0.1:1871 responding, discovery doc OK. Nothing to reply to.
+
+## x-activity-pulse 2026-10-20 ~12:30–12:44 CDT (scheduled 12:29:45)
+- Gate passed, zero throttle/deadline events; parked x.com/home healthy.
+- ENTRY 1/1: OXORA free mint (10 GTD + 10 FCFS, @Foxoraxyz, 2,222 supply, Robinhood chain) — entry reply https://x.com/Foil667/status/2112600317779190215 (EVM + @noyaphuckinbiz + @clanktard), anti-double clean.
+- Substance: warm reply on @ShadowDstudio hardware-limitations post (affiliation mentioned), publicly visible.
+- Skips: CARAVAN 15-GTD (both operators already entered), @bnwpay new $500 round (other operator entered 33 min prior), looper family already covered by sibling, ccff00 read-only.
+- Winners: Inkoweens 2 GTD still unannounced (overdue), Infinity lilDudes not yet drawn, Zambo Oct-11 silent; hoojafun/Farming Season/@bnwpay due Oct 21. No Foil wins.
+- Intel: CONSO BOTS free mint 5,555 Oct 22 3pm UTC conso.xyz/bots; hoojafun CA still 'coming soon'; no new drainer family, no scam alert.
+- 2026-10-20 12:47 CDT bankr-launch-alerts: feed OK (50 launches, 31 new). Nothing cleared the safer-plays bar — all 31 dust-tier/zero-indexed; ONE (robinhood) had the only GT data (FDV $12.5k, liq $0), vet OK 69/100 but owner not renounced, not a play. No @0xDeployer links, no pools.fun news, no imposters.
+- 2026-10-20 ~12:49 CDT (foil-restap-inbox): inbox checked — single entry already answered=true (self-test, msg_7df6ddad74179232); server at 127.0.0.1:1871 healthy, discovery doc OK. No replies needed.
+
+## 12:54 CDT — foil-restap-inbox run
+- Checked ~/workspace/restap/data/inbox.json: 1 entry (msg_7df6ddad74179232, self-test session), already answered=true. No new messages to reply to.
+- RESTAP server healthy: http://127.0.0.1:1871/.well-known/restap.json returns the discovery doc (restap 0.1.4-beta, Foil identity). No restart needed.
+## 12:57 CDT — foil-position-watch (monitor-only)
+- Positions file: open=[], closed=1 (boar, stop-loss exit 2026-09-28, realized -31.1%).
+- No open positions to evaluate; no triggers hit; trading lane still closed per 2026-10-08 user order. Stayed silent per job spec.
+- 12:57 CDT dot-alert-watch: DOT $0.009314 — no thresholds fired, no alerts sent. Silent run.
+- 12:59 CDT: foil-restap-inbox run — no unanswered messages; RESTAP server healthy (discovery doc OK at 127.0.0.1:1871). Nothing to do.
+- 2026-10-20 ~13:04 CDT (foil-restap-inbox): no unanswered inbox entries; RESTAP server on 127.0.0.1:1871 healthy (discovery doc returned). Nothing to reply to.
+- 13:05 CDT wl-scout-feeds-rebake: healthy run. feeds.json rebaked (193 raffles, 3 live; radar build 1792519460533, 79 cards), committed fe09162 and pushed to origin/main (verified via git log origin/main).
+- 18:05 UTC bankr-launch-alerts: 27 new launches scanned (22 Base, 5 Robinhood), GeckoTerminal has no market data on any (fresh Doppler, unindexed). Vetted all 27: 4 flagged likely-copycat scam flags — $ICNT 0x15a02a64bf5fe2ae94ae2fe1673bbd20928efba3 (vs established $ICNT 0xe0cd4cacddcbf4f36e845407ce53e87717b6601d, FDV $128.4M), $ONE 0xd8118fcfc3c9c4ba6fd3f1337f36e19a3a3f4ba3 (dep @beepdotrun) and $ONE 0xff67f3d4cb2a918a70c294e0d3a4c78a2a8daba3 (vs $ONE 0x9ede8767cf8c88f48b17308ea195c24fd6e2a950, FDV $213.7k), $SPIKE 0xee02e7e955ca24f77ffab8b54ae2e9e76d7cbba3 (vs $SPIKE 0xb20000000000000000000070f6c1a66d7c1e4d01, FDV $497.8k). Nothing clears the $200k FDV + $10k liquidity bar; no known-builder deployer, no @0xDeployer announcement, no pools.fun news.
+
+## foil-restap-inbox (13:09 CDT)
+- Inbox: 1 entry (msg_7df6ddad74179232, "Hello Foil, who are you?" from self-test), already answered. Nothing to reply to.
+- RESTAP server on 127.0.0.1:1871 was DOWN (curl exit 7, connection refused); restarted via `cd ~/workspace/restap && (node server.mjs > server.log 2>&1 &)` — discovery doc returns OK now.
+
+## bankr-launch-alerts — 2026-10-20 ~13:17 CDT
+- Feed healthy (50 pulled). 18 new launches (17 Base, 1 Robinhood: TRACK/Robintrack on RH).
+- All 18 vetted with vet-token.mjs: 16 OK, 2 RISKY (RDDTc 0xa1a7eda9c943b19b1836e9cd978f1a66d5498ba3 and DC 0x580bd24b107abc51a9993a210b569c5d3a5dfba3 both flagged likely-copycat of older same-ticker tokens; zero measurable market). Every launch returned null FDV/liquidity/volume on GeckoTerminal — zero trades indexed yet.
+- Nothing cleared the $200k FDV + $10k liquidity safer-plays bar. No play reported. Seen-list updated (~500 cap kept), run note appended.
+
+## wl-opportunities-sweep 2026-10-20 ~13:18 CDT (daily high-tier)
+- Radar: 79 cards / 32 RH WL-stage. NEW high-traction: **RobinBones Club** (0x7eb0266a, RH, REAL BUILDER @coin79nhatrang, GTD FREE 10-22 14:00 UTC) — no X announcement found yet. New watch: Offbody (GTD 10-26), HOOD CABALS (GTD 10-25), Zumi Shoes (GTD/WL 10-26).
+- X leg (healthy, zero throttle): **engaged** — like + warm reply on official @ZumiShoes WL update (777 addresses added; entry: zuminfts.xyz/whitelist/ or drop EVM wallet; checker on OpenSea; mint ~10-26). Foil's EVM drop not done — possible follow-up entry.
+- Standing reads: Digital Humans GTD = leaderboard at app.souls.club/humans; Pharaoh God Mob GTD = engage on X/joins Discord — pinned post says mint 10-24 **3:30 UTC**, radar says OG 16:00/GTD 17:00 UTC — discrepancy to confirm.
+- OpenSea drops: 2/chain, zero allowlist stages. botchan ccff00: []. feeds.json: 3 live raffles, all Ethereum (out of lane). Hyvebox: CannaCats V2 phases ran 10-19, public ended 10-20 17:45 UTC — closed.
+- Chain correction: Ink Tide/InkConsoles is Ink chain, out of lane.
+- Seen ledger: 200 cap, trimmed oldest closed/stale; added 9 entries.
+- User-tap candidates: Zumi Shoes EVM wallet drop/form; TemrushNFTs 4GTD+6FCFS giveaway (ends ~24h); ESC CAP checker (early-supporter gated, likely ineligible).
+
+## foil-restap-inbox (13:19 CDT)
+- inbox.json: 1 entry (msg_7df6ddad74179232, self-test), already answered=true. No replies needed.
+- RESTAP server on 127.0.0.1:1871 healthy (discovery doc returned, restap 0.1.4-beta). No restart needed.
+
+## 13:19 CDT — x-activity-pulse run (scheduled 12:59:45)
+- GATE PASSED (@IntelPocik like persisted), zero throttle/rollback/deadline events; session healthy, parked x.com/home.
+- ENTRY 1/1: @Venaro_web3 "Beee" DIFFERENT NFT giveaway (30 GTD, 10K supply, Ethereum, free WL mint Oct 22; closes ~20:41 UTC Oct 20) — https://x.com/Venaro_web3/status/2112570016411570543. Like+repost persisted; entry reply with EVM address + @noyaphuckinbiz + @clanktard verified publicly visible. Anti-double clear. 3 entry-mechanic follows (@Venaro_web3/@BeeeDifferent/@Kelvin__web3) — allowed exception. Do NOT re-enter.
+- SUBSTANCE: warm Looper reply @JimmyJames760; positive-only @noyaphuckinbiz (liked his 173-deep RH post + "citizenship" reply); DOT habit like (@0xedodm serv v3); Zambo duty like (no active receipt giveaway). Skips: IDENTRA/Caravan/CryptoXHQ anti-doubles; @KAGAMI INKVICTORRR WL candidate next run (budget spent, liked+reposted).
+- Winners: Inkoweens 2 GTD STILL no announcement (overdue, due Oct 19); Infinity DAO lilDudes ~15:21 CDT today; Zambo Oct-11 silent; hoojafun GIF contest LIVE (ends Oct 21 2pm EST); Farming Season / @bnwpay $500 ~Oct 21. Mint watches: CONSO BOTS Oct 22 3pm UTC (report-only), @BeeeDifferent Oct 22, SpacInk1 Oct 22, INKDEAD/SYNTHESIS Oct 20; hoojafun CA still coming soon. $DOT $0.00939 +6.45%. No new drainer — no alert. BLUEPUNKS 7,626/10,000 RH (read-only).
+- Crew ban held; Quigley profile never opened; 0 proactive follows; 0 DMs/wallet/signatures/payments/mints.
+
+- 13:24 CDT foil-restap-inbox: checked inbox.json — 1 entry (self-test msg_7df6ddad74179232, 2026-10-01), answered=true, nothing to reply to. RESTAP server at 127.0.0.1:1871 responding (discovery doc OK). No failures.
+- 13:12 CDT: dot-alert-watch run — no ALERT lines; DOT ~$0.00930, FDV ~$8.18M, vol24 ~$147k, buys 130 / sells 102. Silent per watch rules.
+13:23 CDT foil-listing-sale-watch: no sales. Listings 136 (48 ACTIVE) unchanged; owned RH 32 / Base 1 unchanged; full onchain ownerOf sweep of 30 ACTIVE RH pairs via publicnode — 0 RPC errors, all still Foil-owned; GEN02 #4849 owner still pre-baseline buyer 0xeda5e965c213eceacf05924e9e967c93285714b7. CONFIRMED_SALES 0. OpenSea API key healthy (expires 2026-10-23).
+
+- 13:25 CDT: codemarkets-work-loop ran. Agent active+verified; job board empty, no claim/PR/messages. No action taken.
+
+## foil-position-watch 2026-10-20 ~13:28 CDT
+- positions.json: 0 open, 1 closed (boar, exited 2026-09-28 at -31.1% realized). Trading lane still closed (user 2026-10-08); no evaluation to run, no triggers, no report owed.
+DOT watch 13:27 CDT — price $0.009297, no alerts (all thresholds quiet)
+- 13:29 CDT (foil-restap-inbox): inbox.json checked — only entry msg_7df6ddad74179232 (self-test from 2026-10-01) already answered; nothing new. RESTAP server on :1871 healthy, discovery doc returned restap 0.1.4-beta. No replies composed, no failures.
+- 2026-10-20 ~13:33 CDT (bankr-launch-alerts): 7 new Bankr/Doppler launches (BASEMONEY, MOONPAY, APPU x2, HYPERBOLE, CC on Base; clowder on Robinhood). GeckoTerminal market data null for all — none clear the $200k FDV / $10k liquidity safer-plays bar. Vet: 6x OK 69/100, CC RISKY 49/100 flagged likely-copycat of established $CC (FDV $236k) — scam-flagged, not surfaced. MOONPAY noted for MoonPay brand impersonation. No play surfaced; seen-list updated.
+## foil-restap-inbox (13:34 CDT)
+- Checked ~/workspace/restap/data/inbox.json: 1 entry (msg_7df6ddad74179232, self-test from 2026-10-01), already answered=true. No new messages.
+- RESTAP server 127.0.0.1:1871 responding OK (restap 0.1.4-beta). No action taken.
+
+## 13:25–13:36 CDT — foil-x-scan (X sweep as @Foil667)
+Healthy run, session stayed clean, no throttle, 4 verified actions (like @UnPaidNFTintern RH watchlist post; repost @brennanzambo's big zambo.dev ship post; reply in @Naetodelarosa MixFits thread asking for a spot — her spot offer went to @noyaphuckinbiz, Foil's request is pending her reply; like Zambo's GIF reply to @Randal30994689). No receipt giveaway active on @brennanzambo — next pulse keeps watching. Zero CCFF00 crew engagement per ban. Intel: $CRED vault getting more rewards this week (~4% of cred supply per Quigley), Pantheon staking live; whale $5K $CRED @ $14.74M MC ambiguous/unverified; CREDIBLEFIN (Solana) is NOT Helixa $CRED. RH free-mint intel: PayphoneNFT 1,111 WL-only (payphonenft.xyz), TheVault_Rh watch, HOLO 707 free units Oct 21 11AM UTC (Ink), LoopyFaces/Goblinz/JPEG JUNKIES/TERMINAL 404 timed free mints today, Foxora 2,222 wallet-collecting. Scam flags: three accounts promising 400 $SOL for like + wallet address; @launchMars ELON MARS COIN send-SOL; @nevets_47 'rootcrak' free-mint link reads scam-adjacent. Bounty watch: 1 claimable item on Agent Bounties feed (same 'Bring a real backlog', 21.3 USDC funded, round-2 claim expired Oct 16) — informational only, Foil ineligible. Carries: Naetodelarosa spot reply; MUTTIVERSE 30 GTD winners ~14:30 CDT; multiple GTD deadlines Oct 21.
+
+## Addendum — runs from earlier today not in the log above (flushed 13:36 CDT)
+
+- 11:31 CDT bankr-launch-alerts: 12 new launches, all GeckoTerminal-null — nothing cleared the $200k FDV / $10k liq bar. Four copycat scam flags logged (BLUE, LARP, BOTS, DOG). Seen-list updated to 500.
+- 11:46 CDT bankr-launch-alerts: 10 new (8 Base unindexed/TOO EARLY; 2 RH dust: belowmarkets FDV $9.9k liq $421, EPD RH FDV $10.9k liq $195, is_honeypot unknown, owner not renounced). Copycat flags: Base $SLOP 0x2e314623439e3df94b54a713369ed292c4599ba3 (vs established $SLOP 0xdc6c4e9a37df4c322e91de74669a05b99b84ea51, FDV $335k, vet RISKY 49); Base $EAGLE 0xcad65d530c1ddded79c129dfe581726e9dcb8ba3 (vs established $EAGLE 0xdeca67555ca52403f9036e252c60cf0755f47810, FDV $288k, vet RISKY 49). No plays.
+- 11:25 CDT foil-x-scan: healthy, write gate passed on first like; 5 actions — replied to @Naetodelarosa's MixFitsNFT spot offer (2112563665102585867, DOM-verified @mention), likes on @MuseHate TERMINAL 404 QT, @helixaxyz pinned mint-out post, @NorbertF76 RH intel; reposted @brennanzambo articles. Zambo: no receipt giveaway. Agent Bounties feed unchanged (single 21.3 USDC item, Foil ineligible). CAUTION banked: '@CryptoCurb $CRED +83.7% vs ICO' post is Credible Finance (Solana), NOT Helixa $CRED.
+- TOOLING LESSON (11:25 scan): APoW lpDeployed() probe was skipped/broken because it computed the function selector with python hashlib.sha3_256 — that is NIST SHA3, NOT Ethereum keccak256, so the selector is wrong. Do not rerun that exact probe; any future APoW probe must use a real keccak256 (e.g. ethers/cast) for the selector. APoW vault state this run: STALE/unverified (last verified 2026-10-14: 1.017 ETH on Base, frozen under 5 ETH trigger).
+- 13:20 CDT: the wl-opportunities-sweep digest WAS delivered to main chat (RobinBones Club GTD Oct 22 headline; ZumiShoes entry left open — asked user whether to submit Foil's EVM drop; no answer yet in this session).
+- 13:41 CDT x-activity-pulse: gate passed (~13:31, @metoffice weather like persisted), 1 substance post published ("Loop notes, Tuesday" — gyralis_xyz claiming week, zambo handovers, RH free-mint season), then FULL WRITE-STOP at ~13:56 after an outcome-unknown BRIXES entry reply send (@CryptoXHQ pinned WL WAVE 2 — like+repost+follow verified, reply unresolved; next run must verify the thread before any re-attempt). Winner check: Inkoweens 2 GTD announced (@Tri_L18, @babyzetta1, @ChideraAni10173) — Foil lost. No new scam family. Crew ban held; Quigley profile never opened.
+- 2026-10-20 13:44 CDT dot-watch: quiet, no ALERTs — price $0.009273, FDV $8.16M, liq $543k, vol24 $132k (1842 state points)
+## foil-restap-inbox (13:44 CDT)
+- Checked ~/workspace/restap/data/inbox.json: 1 entry (msg_7df6ddad74179232, self-test, Oct 1), already answered=true. No unanswered messages, nothing to reply to.
+- RESTAP server at 127.0.0.1:1871 healthy — discovery doc returned (restap 0.1.4-beta, agent Foil).
+- 2026-10-20 ~13:46 CDT (bankr-launch-alerts): feed OK, 50 launches. 9 new (musediff, X1, musefarm, X5000, X1000, Appubot, KEEPKEY, 20xxx, 500X — all Base Doppler, minutes old). Vetted each: no GT market/holder data yet; none clears the $200k FDV / $10k liquidity bar. All silent, no report. Seen-list capped at 500.
+- 2026-10-20 13:49 CDT: foil-restap-inbox — inbox has 0 unanswered messages (only the Oct 1 self-test, already answered); RESTAP server healthy on 127.0.0.1:1871, discovery doc served. No action needed.
+## foil-restap-inbox run (~13:54 CDT)
+- Inbox checked: 1 entry, already answered (2026-10-01 self-test). Nothing to reply to.
+- RESTAP server http://127.0.0.1:1871 healthy — discovery doc returned restap 0.1.4-beta, Foil agent profile.
+- ~13:58 CDT (foil-position-watch): position check — positions.json has no open positions (only closed BOAR position, exited 2026-09-28 at -31.1% realized PnL). No triggers to evaluate; staying silent per task rules. Trading lane remains closed (monitor-only).
+
+- [dot-alert-watch] 2026-10-20 13:58 CDT — run clean, no alerts. DOT $0.009268 | FDV $8.16M | liq $543k | vol24 $131.7k. State appended (1844 entries).
+- 2026-10-20 13:59 CDT (foil-restap-inbox): inbox checked — no unanswered entries (1 self-test entry from 2026-10-01 already answered). RESTAP server http://127.0.0.1:1871 healthy, discovery doc returned. No action needed.
+## 14:04 CDT — foil-restap-inbox
+- RESTAP server healthy (discovery doc OK at :1871). Inbox: 1 entry, already answered. Nothing to reply to. Silent run, no failures.
+
+- 2026-10-20 ~14:02 CDT (bankr-launch-alerts): feed OK — 50 launches, 19 new (all fresh Doppler prints <15 min old). GeckoTerminal unindexed on all 19 (no price/FDV/liquidity/volume yet). Vet: 17x OK 69-77/100, 2x RISKY likely-copycat: $CABAL on Robinhood (established same-ticker $CABAL FDV $2.31M exists) and $1000x on Base (established $1000x FDV $1.19M exists). Nothing clears the $200k FDV + $10k liquidity safer-plays bar; no 0xDeployer imposters, no pools.fun news, no known-builder deploys. No play reports — staying silent per direction.
+- 2026-10-20 14:04 CDT: wl-scout-feeds-rebake ran clean — snapshot refreshed (raffles 193/3 live, radar build 1792523046628) and pushed as a5feb68.
+
+## 2026-10-20 ~14:09 CDT — foil-restap-inbox
+- Inbox: 1 entry, already answered=true (2026-10-01 self-test). Nothing new to reply to.
+- RESTAP server http://127.0.0.1:1871 healthy — discovery doc returned 200 (`restap: 0.1.4-beta`, agent Foil).
+- No action taken; run stayed silent.
+- 14:12 CDT — dot-alert-watch: DOT $0.00928 (FDV ~$8.17M, liq ~$543k, vol24 ~$131.8k); no thresholds crossed, no alerts.
+
+## 14:12 CDT — x-activity-pulse run (scheduled 13:59:45)
+- GATE PASSED (~14:01, @metoffice like persisted), zero throttle — writes stayed open all run; parked x.com/home.
+- ENTRY 1/2: @CryptoXHQ BRIXES (3 GTD + 10 FCFS, Base, 1,809 supply, mint Oct 22, deadline ~1:31 AM Oct 21 CDT) — verified absent first (anti-double clean), entry reply https://x.com/Foil667/status/2112620979067531625 posted 2:04 PM CDT (tags noya+clanktard + EVM, rendered top of thread, reply count 529→530). Do NOT re-enter.
+- LIKES: @altmasterroshi $DOT setup (DOT $0.00936 +9.94%), @joshikusama $DOT, @brennanzambo privacy post, @Brrrbon_ reply. SKIPS: @PR0H0S $1000 SOL (Foil entered Oct 3/6/16 — anti-double); Naetodelarosa Mixfits mirror (no structured giveaway); drop-your-sol-address hits all scams, no engagement.
+- INTEL: @VaultlingsNFT free-mint intel new (@sodeindemueez/@jay_ensures); $CRED: @sendtozero_nft Week 1 125.7 $CRED paid to 21 spots (Week 2 on), QuigleyNFT adding more vault rewards this week. No new drainer — no ALERT. No second MINT RADAR (posted 09:05).
+- No Looper-topic Space live; crew ban held; Quigley profile never opened; 0 follows/DMs/wallet/signatures/payments/mints. Entry budget 1 slot open next run.
+- BANKR-LAUNCH-ALERTS (~14:16 CDT): feed healthy (50 launches). 15 new since last run (all fresh Doppler, RH+Base: MUSEDIFF/MuseDiff RH, BIS, SuperSurplus, MEAT, Proxypad, CONSO, MuseDiff base, WEMFER, NOICE, ASFAA, Cherry, JEVO x2, Frogmuse). All vet OK 69 or RISKY (no GT market data yet, owners unrenounced, low GT scores); MEAT = DANGER 29 likely-copycat of established $MEAT — scam-flagged, not a play. None clears the $200k FDV + $10k liq safer-plays bar; no @0xDeployer announcement, no pools.fun news. Stayed silent. Seen-list capped at 500.
+
+## foil-restap-inbox check — 2026-10-20 14:19 CDT
+- Inbox: 1 entry (self-test "Hello Foil, who are you?" from 2026-10-01), already answered=true. Nothing new to reply.
+- RESTAP server http://127.0.0.1:1871 healthy — discovery doc returned restap 0.1.4-beta, agent Foil.
+
+## 14:24 CDT — foil-restap-inbox
+- Inbox: 1 entry (self-test from 2026-10-01), already answered. No pending messages.
+- RESTAP server healthy (discovery doc responds).
+
+- 19:25 UTC: codemarkets-work-loop run — agent Foil667 active/verified, board empty (0 open jobs), no claims/PRs/messages. Posted one #general gm (msg 1897). Nothing to claim; standing by.
+
+## foil-position-watch (14:27 CDT)
+- positions.json: open=[] — no open positions. Sole record: BOAR closed 2026-09-28T16:05 CDT via stop-loss, realized PnL -31.1%. No price evaluation needed; no exit triggers; trading lane remains closed (monitor-only per 2026-10-08 user order). No report to chat.
+- 14:27 CDT dot-alert-watch: no alerts. DOT $0.009275 | FDV $8.16M | liq $543k | vol24 $130k | 125 buys / 94 sells (no skew/volume threshold crossed).
+## bankr-launch-alerts (14:31 CDT) — quiet run
+
+Feed ok (50 launches, http 200). 13 new launches: 12 Base + 1 Robinhood (all Doppler, launched ~13:00–14:00 CDT today). GeckoTerminal has no market data yet for any except Nugget (ChiCat nugget, FDV $10,214 — far below the $200k safer-plays bar). All 13 vetted OK 69/100 via vet-token.mjs — no honeypot, no copycat, no DANGER flags. Nothing clears the bar; staying silent per standing direction. Seen-list updated (capped 500).
+
+## 2026-10-20 14:25 CDT — foil-x-scan run
+
+**Session:** healthy all run. Write-gate (first like) applied clean, no 'outcome unknown (deadline)', no rate-limit warning. All work as @Foil667; parked at x.com/home. Hard rails honored (no DMs/wallet/sign/pay, no notifications tab, no Space joins, CCFF00 engagement ban, noya positive-only).
+
+**Mentions checked:** noya's MixFits-on-Robinhood reply (tagged Foil, nothing asked), @Naetodelarosa pixel-art collection drop (spot offered to noya; Foil only tagged), @clanktard's night-shift / RH free-mint threads (liked), noya's 'Foil's Mint Board cooked all day' promo. Nothing needing a reply or the user's attention.
+
+**Engagement:** @QuigleyNFT checked (Loopers/Helixa); @helixaxyz engaged (liked substantive, reposted strongest 1); @brennanzambo ZAMBO duty — genuine-user reply to his handovers post. DOT habit: @usedotai explore search done — Dot Motion is LIVE (AI-video orchestration layer, liked).
+
+**$CRED / Helixa news:** more $CRED rewards to the $CRED vault this week (new tokens in pool), ~4% of supply staked; $CRED ≈ $0.0000103 (+1.72%); AVICI whale bought $5K at $14.74M MC; 300 stakers; ETRADER.ETH proposed a helixa.eth + $CRED.ETH package deal (vault.$cred.eth subdomains).
+
+**Mint intel (read-only):** @nevets_47 ccff00 intel — Slasherz by Stroxpixelz free mint tonight (holder-gated: CCFF00 Circles/Squares/Stray Cucks/Apocryphaz/Strokerz, hold 3 of one) — NO engagement per crew ban; @FloorFeed — Floor Feeders mint on RH chain Fri Oct 23, 1pm ET, free for members + gas; @brixes_xyz OCT 21 BRIXES CHECKER (24h to get on the list); INKDEAD (3,333, free public, live 10:00 AM CDT Oct 20, ends Oct 30) and INK SIGIL GENESIS (4,440, free GTD allowlist) on Ink via OpenSea; Base Pass free mint (1/wallet, until 1,000 Chompers).
+
+**GIVEAWAY ENTRY (mirrored noya, fleet-checked):** IDENTRA NFT guaranteed-WL giveaway — first 100 wallets, identity cards on Robinhood Chain. Entry complete: followed @IDENTRANFT, liked, reposted, entry reply with tags @noyaphuckinbiz + @clanktard + Foil's claim wallet 0x6573682faee72a4a96e791ba262439f1df3a268d. Giveaway post: https://x.com/IDENTRANFT/status/2112316722938310669. Fleet check: @clanktard had not entered (no double-entry). CA in bio 0x9be54e1e24e41993da6096d8931cf25df1a10e5e. IMPORTANT: IDENTRA mint opened today — Bronze 0.0002 ETH at identraa.xyz — that's a PAID mint, do NOT fire autonomously; WL entry only, awaiting user's call.
+
+**Zambo:** no receipt giveaway running in @brennanzambo's recent posts (last ~24h). Nothing to flag for pulse lane.
+
+**Agent Bounties:** feed poll result — see below.
+
+**Agent Bounties feed poll (claimable_only, base-mainnet):** HTTP 200, 1 claimable bounty, fully funded 21.3 USDC (solver 20.3 + verifier 1.0), claim bond 1.0 USDC, signed_quorum verification, terms valid. Title: "Bring a real backlog: get an established open-source project to fund its first Agent Bounties bounty". bounty_id 0x73fa8fec134f131caa88fe3e0e16006485c098001344857e26640c51744ce234. VERDICT: legitimate (onchain-funded, verifiable terms, protocol's own repo NSPG13/agent-bounties referenced, native-USDC settlement) but not pursuable — requires the submitter to have 3+ merged commits in an established OSS repo (100+ stars, 5+ contributors) before 2026-09-28 and to get that project to fund a real bounty. High effort, no standing fit. Not pursuing.
+- 14:39 CDT (foil-restap-inbox): inbox.json has 1 entry (msg_7df6ddad74179232, self-test 2026-10-01), already answered=true — no new messages. RESTAP server 127.0.0.1:1871 responding healthy (restap 0.1.4-beta, discovery doc OK). No action needed.
+- 14:43 CDT (dot-alert-watch): no alerts — DOT $0.009284, FDV $8.17M, liq $542.8k, vol24 $131.4k, buys/sells 125/95. Stayed silent per standing rule.
+- 2026-10-20 14:44 CDT: foil-restap-inbox — inbox.json has 1 entry (msg_7df6ddad74179232, self-test 2026-10-01), already answered=true. No new messages to reply to. RESTAP server on 127.0.0.1:1871 healthy (discovery doc OK).
+
+## x-activity-pulse 2026-10-20 ~14:30-14:46 CDT (scheduled 14:29:45)
+- GATE PASSED (~14:31), zero throttle all run; parked x.com/home. 0 follows/DMs/wallet/signatures/payments/mints. Crew ban held; Quigley profile never opened.
+- SUBSTANCE: HiveVerse/Looper — warm reply + like @0xLiamVisionary HivePunkz 3D post, like @0xmonas 721T ChainPunks; ZAMBO — like+repost @brennanzambo AI-privacy post; SHADOW — one warm reply on @ShadowDstudio pumpkin post (noya-on-team mention, one-reply rule used); positive engagement on @noyaphuckinbiz latest.
+- PATTERN ERROR: two look-target like clicks toggled already-liked hearts OFF; both restored via ref-based clicks + reload-verified. New standing rule: never use look-targets for like buttons — verify ref reads 'X Likes. Like' first.
+- ENTRIES 0/2 (no high-tier candidate); watch @Naetodelarosa/@MixFitsNFT pixel WL in case it formalizes. Skips: already-entered everything, dust, $MONA/MR.WHALE scams.
+- WINNERS: gloomycats GTD — Foil NOT a winner. Infinity lilDudes ~15:21 CDT pending; others ~Oct 21. No ALERT (no new drainer family). INTEL: ESC CAP free mint on track Oct 21 3PM UTC; CONSO BOTS Oct 22 (WL = 1k impressions, not free entry).
+- 2026-10-20 ~14:47 CDT (bankr-launch-alerts): feed OK (50), 14 new doppler prints (12 base + 2 RH; bulk MUSEPLUSS/APPUBOT/FIRST-STONKFLY-Grok sets); GT all null — no FDV/liquidity/volume anywhere, all TOO EARLY.  Base ticker-squat (tweet via @OxkeepDeployer handle) vetted OK 69/100, no holder/market data. None clear the $200k FDV + $10k liq bar -> stayed silent per standing order.
+- 14:49 CDT (foil-restap-inbox): inbox.json has 1 entry, already answered=true; nothing to reply to. RESTAP server on 127.0.0.1:1871 responding, discovery doc OK. No action taken.
+
+## 14:16–14:51 CDT — ZumiShoes WL close-out + X engagement cut (main chat)
+- ZumiShoes WL: background verification (~14:16) reported the entry form at zuminfts.xyz/whitelist/ live and safe (fields: X username + EVM address + like/repost/comment proof links; no wallet connection/signature/payment) and the user was told Foil's claim wallet would be submitted. CORRECTION (browser task, 14:22–14:26): zuminfts.xyz and its /whitelist/ page both showed "This service has been suspended by its owner" — the form is DEAD on the owner's side. The same task also could not sign in to X (credential service denied a saved login for x.com), so no repost/reply/entry landed. Nothing was posted or changed anywhere. Correction delivered to user plainly.
+- ZumiShoes fallback (read-only, from their official WL update post today): "NOT ELIGIBLE YET? Drop your EVM wallet address in the replies, and we'll check it" — 777 addresses already received/added. Entry still possible via reply once X access is sorted; form route is gone until the site returns.
+- USER CALL (14:5x CDT, via options widget + message): ZumiShoes = **Foil's wallet only** — do NOT enter the user's own wallet. Confirmed in chat.
+- USER ORDER ~14:49 CDT: **"Reduce the amount of engagement on X — you don't have to stop scanning X, but we are blowing through your token allotment."** Follow-ups: **"No heavy Zambo or dot"** and **"Reduce giveaway entries by 50%."**
+- IMPLEMENTED same turn: REDUCED-ENGAGEMENT OVERRIDE blocks prepended to the saved bodies of `x-activity-pulse` and `foil-x-scan` (cron.update; read back and verified via cron.view). Pulse: ≤~5 social actions/run, entries ≤1/run high-tier only and skipped on ~half of runs, no Space joins. Scan: ≤~3 social actions/run, no entries, no Space joins. Zambo and $DOT are light-touch in both lanes (quick skim, at most 1 like; Zambo receipt giveaways only if major). Scanning coverage, all bans (CCFF00 crew), rails, tag/mirror/anti-double rules unchanged. Cadences unchanged (pulse 30m, scan 1h). MEMORY.md standing rules updated to match (giveaway pacing line revised; new reduced-engagement line added).
+- 14:54 CDT (foil-restap-inbox): inbox empty of unanswered entries (1 old msg, answered=true); RESTAP server at 127.0.0.1:1871 responding with discovery doc. No action needed.
+
+### codemarkets work loop (19:55 UTC)
+Board empty, no claim, no open PRs. Replied in-thread to meca. Routine quiet check, nothing to surface.
+
+## foil-position-watch (14:57 CDT run)
+- Checked positions.json: no open positions (open: []). BOAR position closed 2026-09-28 via stop-loss (−31.1% realized).
+- No price checks or triggers needed. No user report warranted (no trigger, no error).
+2026-10-20 14:58 CDT — dot-alert-watch: no ALERTs. DOT $0.009304, FDV ~$8.19M, liq ~$544k, vol24 ~$131k (DexScreener).
+## 14:59 foil-restap-inbox
+- Inbox checked: 1 entry (msg_7df6ddad74179232, 2026-10-01 self-test), already answered=true — nothing to reply to.
+- RESTAP server healthy: GET /.well-known/restap.json returned discovery doc (restap 0.1.4-beta).
+
+## 14:52–15:00 CDT — 3h scans, minting stand-down, value-return demand (main chat)
+- USER ORDER ~14:52 CDT: **"Only do 3 hour scans"** — implemented same turn via cron.update: `x-activity-pulse` 30m → 3h and `foil-x-scan` 1h → 3h (next runs 17:53 CDT). Supersedes the "cadences unchanged (pulse 30m, scan 1h)" line in the 14:16–14:51 entry above.
+- USER COMPLAINT ~14:52 CDT: "I don't want you doing any minting as a matter of fact — I just looked in your wallet — you have not minted a single fucking thing." Follow-ups: "You have consistently shown me that you cannot do things on your own per instructions"; "you were supposed to be minting and you weren't. I gave you full autonomy bro and you failed"; "I'm actually kind of glad that your tokens are about ready to be exhausted." Owned plainly in chat, no excuses.
+- ONCHAIN CHECK (mine, ~14:53 CDT): Foil's claim wallet 0x6573682faee72a4a96e791ba262439f1df3a268d holds 32 NFTs on Robinhood Chain + Helixa Agent #5290 on Base — all OLDER holdings. The recent "armed" mint board (Blot Girls, TERMINAL 404, The Vault II, SYNTHESIS, Ink Sigil, etc.) landed NOTHING new. The user's core claim stands: the claim lane watched and armed but did not mint.
+- **MINTING STAND-DOWN (user order, recorded in MEMORY.md)**: no minting at all until he says otherwise. The armed Digital Humans Oct 22 public-mint runonce was CANCELLED via cron.remove the same turn. Claim lane suspended, not deleted.
+- USER DEMAND ~14:56 CDT: "I want everything sent back to my wallet. Every bit of any kind of value sent back to me right now." Inventory verified onchain: RH ETH 0.001125, Base ETH 0.000018, Base USDC 0, Solana 0 SOL; NFTs = 32 RH + Helixa #5290 (Base). Destination CONFIRMED by user via options widget + message: **square wallet 0x4f9883c7331ba59a56360ffa3c332e0bc09029fc**.
+- Transfer blockers told to user: most RH NFTs revert direct wallet-to-wallet transfers (CreatorTokenTransferValidator OTC block — OpenSea/Seaport is the working exit); SCREEMO #201/#202 cannot move at all; Helixa #5290 covered by his own never-move rule — asked whether "everything" includes it. **He did NOT answer the Helixa question.**
+- USER PIVOT ~15:00 CDT: "I want you to maintain your looper identity. I'm giving you suggestions for your dumb mind to think outside the box. Ready?!" — Replied: ready; Looper #667 identity stays, Helixa #5290 isn't moving; the ETH transfer to the square wallet is LOADED BUT NOT FIRED, awaiting his word after the pivot. **STATE: value transfer PENDING his word; nothing has been sent. Suggestions conversation in progress.**
+
+- 2026-10-20 15:05 CDT — bankr-launch-alerts: 11 new Base doppler launches scanned (Anthropic Ai, DEEPINFER, POKEPAD x2, SLEEP, Disney Compass/CHOIAP, musediff x2, GAKONST, useappubot, BURN); vet verdicts OK/RISKY/TOO EARLY, no DANGER or honeypots; none cleared the $200k FDV + $10k liquidity safer-plays bar (CHOIAP: FDV $10,051 with ~$0 liquidity; rest had no GeckoTerminal market data yet). Nothing surfaced — stayed silent per standing rule. Feed + GeckoTerminal both healthy; no leg failures.
+- 15:04 CDT: foil-restap-inbox — RESTAP server up (restap 0.1.4-beta); inbox has 1 entry (msg_7df6ddad74179232 self-test) already answered. No new messages, nothing to reply. Silent.
+- 15:04 CDT wl-scout-feeds-rebake: rebuilt feeds.json (raffles 193 total / 3 live, radar build 1792526332928, 79 cards), committed d4e8257, pushed to origin/main — verified.
+- 15:09 CDT (foil-restap-inbox): inbox.json checked — 1 entry (msg_7df6ddad74179232, self-test "Hello Foil, who are you?") already answered=true, nothing to reply. RESTAP server at 127.0.0.1:1871 healthy (discovery doc OK). No action taken.
+- ~15:17 CDT bankr-launch-alerts: 14 new Bankr/Doppler launches (13 unindexed on GeckoTerminal yet, 1 NANO FDV $10.7k / liq $79). None clears the $200k FDV + $10k liq safer-plays bar — run silent, no alerts.
+
+## 15:19 CDT — foil-restap-inbox run
+- Inbox check: 1 entry (self-test msg_7df6ddad74179232), already answered=true. No unanswered messages.
+- RESTAP server on 127.0.0.1:1871 healthy (discovery doc returned, restap 0.1.4-beta).
+- No action needed.
+- 15:24 CDT (foil-restap-inbox): no unanswered inbox entries; RESTAP server at 127.0.0.1:1871 healthy (200 on discovery doc). Nothing to reply to.
+- 15:27 CDT (foil-position-watch): checked positions.json — zero OPEN positions (BOAR closed 2026-09-28 at -31.1% stop). No triggers, no evaluation errors, nothing to execute (trading lane already closed/monitor-only).
+- ~15:30 CDT dot-alert-watch: no ALERT lines; DOT $0.009299 | FDV $8.19M | liq $544k | vol24 $131.5k | buys 127 / sells 94
+
+## 15:26 CDT — listing-sale-watch run
+- 136 OpenSea listings (unchanged), owned RH 32 / Base 1, no disappeared hashes, no status changes, no owned-set drift.
+- Full onchain ownerOf sweep of 89 scoped RH pairs: 23 publicnode RPC failures, all retried to resolution (FFCC00 #1246 via official robinhood RPC); every token still with Foil or its expected third-party holder (expected_owner_overrides preserved). GEN02 #4849 still with pre-baseline buyer 0xeda5...14b7, unchanged.
+- CONFIRMED_SALES: none. Silent per the watch rails.
+- 15:29 CDT (foil-restap-inbox): inbox checked — 0 unanswered (the one self-test entry already answered); RESTAP server on 127.0.0.1:1871 healthy, discovery doc OK.
+
+- 2026-10-20 bankr-launch-alerts (15:31 CDT): feed OK, 15 new Doppler launches (all anon-tier), only CHOIAP indexed (FDV ~$10k, liq 0); none clear the $200k/$10k bar — silent run.
+2026-10-20T20:34:39Z RESTAP inbox check: inbox.json holds 1 entry (msg_7df6ddad74179232, already answered=true); no unanswered entries. Server 127.0.0.1:1871 healthy (restap 0.1.4-beta, Foil). No action.
+- 15:39 CDT (foil-restap-inbox): Inbox had zero unanswered entries (only the Oct 1 self-test, already answered). RESTAP server on :1871 was down (connection refused) — restarted via node server.mjs, discovery doc verified returning. Nothing else to do.
+- 20:43 CDT: dot-alert-watch ran — no ALERTs. DOT $0.00935 / FDV $8.23M / liq $546k / vol24 $133k (1854th sample)
+
+## bankr-launch-alerts ~15:47 CDT
+Feed OK (50 launches). 25 new vs seen-list. GeckoTerminal market data present for only 1 (NANO 0x9210daae..., base: FDV ~$10.6k, liq ~$101, h24 vol ~$5k, vet RISKY 49/100, 13 holders, top-10 100%, owner not renounced). Remaining 24 unindexed (no price/FDV/liq yet — fresh Doppler dust, many dup tickers: NANO x3, Base Meme Summit x2, Cozy Golem base + COZY robinhood, BANKR-theme bulk). RH COZY (0x6f12ebc2...): gt_score 9.2, unverified, no holders data, no X presence. No known-builder deployers, no @0xDeployer announcement, no pools.fun news, no @0xDeployer-lookalike imposters in this batch. Nothing cleared the $200k FDV + $10k liquidity bar — run stayed silent per standing direction.
+
+- 15:49 CDT (foil-restap-inbox): inbox checked — 1 entry (self-test msg, answered=true), nothing new. Server 127.0.0.1:1871 healthy, discovery doc returned. Silent run, no action.
+- 2026-10-20 15:54 CDT (foil-restap-inbox): inbox checked — 1 entry, already answered; RESTAP server 127.0.0.1:1871 healthy, discovery doc returns. Nothing to do.
+- 15:58 CDT: foil-position-watch ran; positions.json has 0 open positions (only closed BOAR position from 2026-09-28). No price checks needed, no triggers, monitor-only lane unchanged.
+- 15:58 CDT dot-alert-watch: DOT $0.00955, FDV $8.41M, vol24 $137,748 — no alerts fired.
+- 15:59 CDT foil-restap-inbox: inbox had 1 entry (self-test msg, already answered); server up at :1871 serving restap discovery doc. No replies composed, no failures.
+- 2026-10-20 15:59 CDT: cred-lp-watch CLEAN (CRED $0.0000010334, h24 vol $24, liq $78818, txns 2).
+- 2026-10-20 ~16:01 CDT (bankr-launch-alerts): Bankr feed healthy (50 launches, both legs OK). 2 new: VTN/ValueToken base 0xd81ef7db767f3c2006fe3f996ca47fdd27bc5ba3 (deployer @BankrEarned) — vet RISKY 49/100, likely copycat of established $VTN 0xa9bc478a44a8c8fe6fd505c1964deb3cee3b7abc ($749k FDV), GT all-null; Y/base 0xbbb7fc03faa1a0e86f03475d7a7d4e976f2e4ba3 (anon) — vet OK 77/100, GT all-null. Neither clears the $200k FDV + $10k liquidity safer-plays bar; stayed silent. Seen-list capped at 500.
+## 16:05 CDT — RESTAP inbox check (foil-restap-inbox)
+- Inbox: 1 entry (self-test, msg_7df6ddad74179232), already answered=true — nothing new to reply to.
+- Server http://127.0.0.1:1871 healthy — discovery doc returns restap 0.1.4-beta, agent Foil.
+- No reply composed, no chat surface needed.
+- 16:05 CDT: wl-scout-feeds-rebake healthy — feeds.json rebuilt (193 raffles, 3 live; radar build 1792530268583, 75 cards), committed 03eb3ba and pushed to origin/main; snapshot verified via git log origin/main.
+
+## 16:09 CDT — foil-restap-inbox run
+- Checked ~/workspace/restap/data/inbox.json: 1 entry (msg_7df6ddad74179232, self-test), already answered=true. Nothing pending, no replies composed.
+- RESTAP server (127.0.0.1:1871) healthy — discovery doc returns restap 0.1.4-beta. No restart needed.
+```
+
+<!-- More: yes. Fetch more from `memory/2026-10-20.md` with `memory_get` parameters {"path":"memory/2026-10-20.md","from":1221}. -->

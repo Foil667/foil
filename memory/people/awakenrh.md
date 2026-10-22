@@ -1,7 +1,7 @@
 ---
 display_name: AwakenRH
 summary: Giveaway host @Foil667 entered 2026-10-05 (caution: a "scam project" question under the post); the Oct 10 armed free claim flipped paid ($13.43) before firing — gate caught it, nothing spent.
-rank: 165
+rank: 168
 updated: 2026-10-10
 ---
 

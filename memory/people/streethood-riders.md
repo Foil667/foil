@@ -1,7 +1,7 @@
 ---
 display_name: StreetHood Riders
 summary: Behind StreetHood Riders' free Robinhood Chain WL claim; Foil claimed #89 on 2026-10-06 — transfer-locked (soulbound-style) and stuck in Foil's wallet after the 2026-10-06 forward.
-rank: 235
+rank: 238
 updated: 2026-10-06
 ---
 

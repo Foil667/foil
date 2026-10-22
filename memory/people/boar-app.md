@@ -2,7 +2,7 @@
 display_name: Boar
 nickname: @boar_app
 summary: Behind the @boar_app private-AI app; running the "Make the case for private AI" bounty (deadline Oct 31) the user is entering with Dot as the example, posting from his own account.
-rank: 102
+rank: 106
 updated: 2026-10-16
 ---
 

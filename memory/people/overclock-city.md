@@ -1,7 +1,7 @@
 ---
 display_name: Overclock City
 summary: Behind Overclock City's free Robinhood Chain mint; Foil claimed ×3 on 2026-10-06 — held pending the user's "send me all" order.
-rank: 248
+rank: 251
 updated: 2026-10-06
 ---
 

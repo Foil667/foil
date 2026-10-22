@@ -2,7 +2,7 @@
 display_name: dopplerprotocol
 nickname: @dopplerprotocol
 summary: X account covering the Bankr launch-venue layer — one of the reputable sources in the @0xDeployer/Bankr-launch early-warning lane the user ordered 2026-10-03.
-rank: 101
+rank: 105
 updated: 2026-10-03
 ---
 

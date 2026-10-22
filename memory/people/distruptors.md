@@ -1,7 +1,7 @@
 ---
 display_name: Distruptors
 summary: Behind Distruptors' Robinhood Chain mint; Foil claimed ×1 (free, public phase) on 2026-10-06 — held in Foil's wallet.
-rank: 239
+rank: 242
 updated: 2026-10-06
 ---
 

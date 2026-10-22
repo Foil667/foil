@@ -2,7 +2,7 @@
 display_name: accabde
 nickname: @accabde
 summary: Verified X account (~34K) behind the jackbutcher NFT giveaway on 2026-09-23, which @Foil667 entered at the user's direction.
-rank: 43
+rank: 47
 updated: 2026-09-23
 ---
 

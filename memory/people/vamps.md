@@ -1,7 +1,7 @@
 ---
 display_name: VAMPS
 summary: Behind VAMPS, a 4,444 3D vampire free mint on Robinhood Chain; Sep 27 mint sold out in 4 min (~$700 secondary), and @vampsonchain is running a 2-VAMPS giveaway.
-rank: 67
+rank: 71
 updated: 2026-09-28
 ---
 

@@ -2,7 +2,7 @@
 display_name: GameSlop
 nickname: @gamesloplabs
 summary: Project behind $SLOP on Robinhood (gameslop.gg, no wallet needed); the user had @Foil667 post a one-off alert on 2026-10-12 against a drainer impersonating its giveaway, its earn loop flagged fuzzy.
-rank: 298
+rank: 300
 updated: 2026-10-12
 ---
 

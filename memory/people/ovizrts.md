@@ -1,7 +1,7 @@
 ---
 display_name: @ovizrts
 summary: Deployer of a likely-copycat $PAPER on Base mimicking the established ~$669k FDV $PAPER — scam-flagged 2026-10-15; zero engagement.
-rank: 315
+rank: 323
 updated: 2026-10-15
 ---
 

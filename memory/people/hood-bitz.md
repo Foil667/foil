@@ -2,7 +2,7 @@
 display_name: Hood_Bitz
 nickname: @Hood_Bitz
 summary: Running an X giveaway @Foil667 entered at the user's 2026-10-03 approval (follow + repost + tag-3 reply); winner picked in ~48h — a different account from the phishing-flagged @HØØDBITZ.
-rank: 138
+rank: 142
 updated: 2026-10-03
 ---
 

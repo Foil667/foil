@@ -1,7 +1,7 @@
 ---
 display_name: @AltcoinAssasin
 summary: Deployer of a fake $LAB on Robinhood Chain mimicking the established $LAB (owner not renounced) — scam-flagged 2026-10-13; zero engagement.
-rank: 311
+rank: 315
 updated: 2026-10-13
 ---
 

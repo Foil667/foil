@@ -1,7 +1,7 @@
 ---
 display_name: Peylay
 summary: X account the user had @Foil667 roast on 2026-10-13 with onchain-fact-only material (obscure-NFT-heavy history); no wallet addresses posted; no ongoing tie.
-rank: 308
+rank: 312
 updated: 2026-10-13
 ---
 

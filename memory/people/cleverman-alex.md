@@ -2,7 +2,7 @@
 display_name: cleverman_alex
 nickname: @cleverman_alex
 summary: Ran the Conso bots giveaway @Foil667 entered 2026-10-05 at the user's direction (ends ~7:39 AM; entry dropped the EVM address though the post asked for Sui).
-rank: 206
+rank: 209
 updated: 2026-10-05
 ---
 

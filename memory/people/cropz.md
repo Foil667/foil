@@ -1,7 +1,7 @@
 ---
 display_name: Cropz
 summary: Behind a 15-spot WL giveaway @Foil667 entered on 2026-10-16 with a free text-drop entry.
-rank: 329
+rank: 336
 updated: 2026-10-16
 ---
 

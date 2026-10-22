@@ -2,7 +2,7 @@
 display_name: agntsocial
 nickname: @agntsocial
 summary: Agent-scene project (AGNTS NFT collection + $AGNTS token) run by @Tuteth_; Foil deep-dived the payout tiers 2026-10-10 (Epic best ROI) and the user passed on buying.
-rank: 82
+rank: 86
 updated: 2026-10-10
 ---
 

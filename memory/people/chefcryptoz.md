@@ -1,7 +1,7 @@
 ---
 display_name: @chefcryptoz
 summary: Deployer of a copycat 'SSTR — super stablecoin strategy' on Base mimicking the established ~$405k FDV $SSTR — scam-flagged 2026-10-13; zero engagement.
-rank: 309
+rank: 313
 updated: 2026-10-13
 ---
 

@@ -2,7 +2,7 @@
 display_name: Lime Hood Punk
 nickname: @limehoodpunk
 summary: Behind Lime Hood Punk — a 10,000-supply free Robinhood Chain mint (~Oct 10); WL form at limehoodpunk.fun needs the user's tap.
-rank: 268
+rank: 271
 updated: 2026-10-09
 ---
 

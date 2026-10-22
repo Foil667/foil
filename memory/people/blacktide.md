@@ -1,7 +1,7 @@
 ---
 display_name: Blacktide
 summary: Behind BLACKTIDE Bounty Chests and "Letters From The Deep" on Robinhood Chain; the Bounty Chest went to the user on 2026-10-06, Letters #72 is non-transferable and stuck in Foil's wallet.
-rank: 110
+rank: 114
 updated: 2026-10-06
 ---
 

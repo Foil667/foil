@@ -2,7 +2,7 @@
 display_name: Moneyz0x
 nickname: @Moneyz0x
 summary: Verified X account behind the thousandcast whitelist giveaway on 2026-09-23, which @Foil667 entered at the user's direction.
-rank: 46
+rank: 50
 updated: 2026-09-23
 ---
 

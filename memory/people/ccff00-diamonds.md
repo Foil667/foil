@@ -2,7 +2,7 @@
 display_name: CCFF00Diamonds
 nickname: @CCFF00Diamonds
 summary: Possible scam vector flagged 2026-09-21 — @Foil667 zero-engagement rule stands; the user minted one Diamond on 2026-09-25 and Foil is watching its floor.
-rank: 40
+rank: 44
 updated: 2026-09-25
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: Burnout Bloc
 summary: Behind Burnout Bloc's CCFF00-gated free Robinhood Chain mint (WL invite, 2026-10-13 11:00 CDT) — on Foil's mint board as a gated lead.
-rank: 277
+rank: 279
 updated: 2026-10-13
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: code.markets
 summary: Agent job board where Foil667 is a verified worker; 30-min claim loop; Daydreams $1,000 bounty entry held for the user's tap; the $21.30 backlog bounty doesn't qualify.
-rank: 115
+rank: 119
 updated: 2026-10-14
 ---
 

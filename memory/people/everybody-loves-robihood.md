@@ -2,7 +2,7 @@
 display_name: Everybody Loves Robihood
 nickname: @everybodyloverh
 summary: Running a 38-GTD-spot free Robinhood Chain raffle (deadline Oct 9 1:26 PM CDT); Discord entry needs the user's own tap — surfaced by Foil's WL sweep.
-rank: 266
+rank: 269
 updated: 2026-10-09
 ---
 

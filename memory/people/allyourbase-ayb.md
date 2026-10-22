@@ -2,7 +2,7 @@
 display_name: allyourbase_ayb (@allyourbase_ayb)
 nickname: @allyourbase_ayb
 summary: Running the Base Meme Summit Oct 22 whitelist (50% off mint); the user personally vouches for the dev and places him with base room buddies, Loopers, and Hive.
-rank: 86
+rank: 90
 updated: 2026-10-16
 ---
 

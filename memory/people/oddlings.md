@@ -1,7 +1,7 @@
 ---
 display_name: Oddlings
 summary: Behind Oddlings' Robinhood Chain mints — the Oct 13 public free (400 supply) sold out before Foil could fire, and the Oct 16 follow-up priced 0.000045 ETH onchain, so the gate blocked it.
-rank: 275
+rank: 277
 updated: 2026-10-16
 ---
 

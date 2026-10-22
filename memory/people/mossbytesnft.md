@@ -2,7 +2,7 @@
 display_name: mossbytesnft
 nickname: @mossbytesnft
 summary: X account behind the fake "robinhood-main-dex" netlify.app $CRED phishing wave — named in the 2026-10-10 PSA; flagged blue-checked and surfacing in "Who to follow" that evening; zero engagement.
-rank: 282
+rank: 284
 updated: 2026-10-11
 ---
 

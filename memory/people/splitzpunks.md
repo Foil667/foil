@@ -1,7 +1,7 @@
 ---
 display_name: SplitzPunks
 summary: Behind SplitzPunks' free GTD mint on Robinhood Chain (6,666 supply); @Foil667 entered twice (Oct 7 and Oct 10) — mint timing still being watched.
-rank: 270
+rank: 273
 updated: 2026-10-10
 ---
 

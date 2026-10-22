@@ -2,7 +2,7 @@
 display_name: HoodStreetMini
 nickname: @HoodStreetMini
 summary: Behind "Hood Street Minis" (4,269 pixel characters); their 20 GTD + 50 FCFS WL shipment dropped 2026-09-28 ~9:30 PM CDT with the GTD phase over the $0.10 cap, so Foil watches FCFS as a lead only.
-rank: 95
+rank: 99
 updated: 2026-09-29
 ---
 

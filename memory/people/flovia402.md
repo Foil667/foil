@@ -1,7 +1,7 @@
 ---
 display_name: Flovia (@Flovia402)
 summary: API group-buying service (flovia.dev) the user asked about on 2026-10-15; pooled agent API access with a public SDK, but sign-up needs the user's own X tap.
-rank: 316
+rank: 324
 updated: 2026-10-15
 ---
 

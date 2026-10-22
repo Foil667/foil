@@ -1,7 +1,7 @@
 ---
 display_name: MoneyMomos
 summary: Behind MoneyMomos' 3,333 dumpling PFPs on Robinhood Chain (mint Oct 29 on OpenSea, $15 GTD / $18 public — paid, out of Foil's free lane); @Foil667 liked and replied 2026-10-13.
-rank: 305
+rank: 308
 updated: 2026-10-13
 ---
 

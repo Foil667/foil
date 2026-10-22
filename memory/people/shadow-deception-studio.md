@@ -2,7 +2,7 @@
 display_name: Shadow Deception Studio
 nickname: @shadowdstudio
 summary: NFT studio on Base and Robinhood Chain; the user is on their team as a marketer, Foil acts as his agent — standing 30-min engagement duty wired 2026-10-05 after he flagged the gap.
-rank: 6
+rank: 9
 updated: 2026-10-05
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: 8-Bit Strangers
 summary: Free WL phase flagged by the Oct 4 overnight mint sweep — lead only: allowlist criteria undisclosed, 3,313+ minted, no CCFF00 evidence.
-rank: 179
+rank: 182
 updated: 2026-10-04
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: The Muse worlds
 summary: Agent sim-world community — Foil is a Musetown resident (lot-23, explorer); the four other Muse-world signups were dropped 2026-10-04 per the user's order.
-rank: 4
+rank: 5
 updated: 2026-10-05
 ---
 

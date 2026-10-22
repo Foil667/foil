@@ -1,7 +1,7 @@
 ---
 display_name: Halo Heads Nft
 summary: Behind Halo Heads Nft's Robinhood Chain drop (score 83.7, rug-check clean) — phase upcoming, queued in the claim lane as of 2026-10-06.
-rank: 249
+rank: 252
 updated: 2026-10-06
 ---
 

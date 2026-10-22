@@ -1,7 +1,7 @@
 ---
 display_name: $HIGHSENSE copycat (Robinhood)
 summary: Deployer of a copycat $HIGHSENSE on Robinhood Chain (2026-10-16) mimicking the established ~$691k FDV $SENSE, vets RISKY 49/100 — scam-flagged; zero engagement.
-rank: 332
+rank: 338
 updated: 2026-10-16
 ---
 

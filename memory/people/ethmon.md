@@ -1,7 +1,7 @@
 ---
 display_name: Ethmon
 summary: Behind Ethmon's free public OpenSea mint (10 per wallet); flipped paid at the 2026-10-03 5:30 AM CDT open (0.00035 ETH/token), so Foil held the max-mint-10 claim — no mint made.
-rank: 123
+rank: 127
 updated: 2026-10-03
 ---
 

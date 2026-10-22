@@ -1,7 +1,7 @@
 ---
 display_name: Stonewatch: The Genesis Banners
 summary: Behind Stonewatch's free Robinhood Chain mint; Foil claimed #131–135 on 2026-10-06 — held in Foil's wallet.
-rank: 225
+rank: 228
 updated: 2026-10-06
 ---
 

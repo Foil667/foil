@@ -2,7 +2,7 @@
 display_name: Pigeon Crew
 nickname: @pigeoncrew_nft
 summary: Behind Pigeon Crew, a 1,111-supply free mint on Robinhood Chain — followed 2026-10-01; on 2026-10-12 Foil was ineligible for its gated stages, nothing claimed.
-rank: 299
+rank: 301
 updated: 2026-10-12
 ---
 

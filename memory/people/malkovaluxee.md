@@ -2,7 +2,7 @@
 display_name: malkovaluxee
 nickname: @malkovaluxee
 summary: Announced the @Unknowns_RH GTD winners list (10 winners) 2026-10-14 — the user made the list; earlier ran a free-mint GTD-spots giveaway @Foil667 entered 2026-10-03 at his direction.
-rank: 149
+rank: 152
 updated: 2026-10-15
 ---
 

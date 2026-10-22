@@ -1,7 +1,7 @@
 ---
 display_name: DIPURIOLIVE (@DIPURIOLIVE)
 summary: Ran the 40 GTD "APE IN" giveaway @Foil667 entered on 2026-10-16; a botched entry (wallet address missing) was deleted and reposted with the full address the same night.
-rank: 320
+rank: 328
 updated: 2026-10-16
 ---
 

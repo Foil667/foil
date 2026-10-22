@@ -1,7 +1,7 @@
 ---
 display_name: Quest Key
 summary: Ran a Quest Key raffle on Ethereum (3 GTD + 20 FCFS, closed Oct 9 1:45 PM CDT); the Discord entry was the user's tap — no evidence he entered.
-rank: 267
+rank: 270
 updated: 2026-10-09
 ---
 

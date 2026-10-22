@@ -2,7 +2,7 @@
 display_name: HOODVALE
 nickname: @hoodvale_nft
 summary: Behind HOODVALE Citizens (1,000, Oct 25); @Foil667 won Day 4/30 GTD, Day 5/30 FCFS, Day 6/30 GTD — both GTD wins recorded under Foil's claim wallet 2026-10-13; user's DM + screenshot step is open.
-rank: 116
+rank: 120
 updated: 2026-10-14
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: CCFF00 Worlds
 summary: Behind CCFF00 Worlds' live Robinhood Chain drop (score 77.07, rug-check clean) — at the fire gate as of 2026-10-06.
-rank: 253
+rank: 256
 updated: 2026-10-06
 ---
 

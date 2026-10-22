@@ -1,7 +1,7 @@
 ---
 display_name: Raccoon Supply Crates
 summary: Behind Raccoon Supply Crates' Robinhood Chain drop (score 76.00, rug-check clean) — phase upcoming, queued in the claim lane as of 2026-10-06.
-rank: 251
+rank: 254
 updated: 2026-10-06
 ---
 

@@ -2,7 +2,7 @@
 display_name: kongzxrpl
 nickname: @KongzXRPL
 summary: X account in the CCFF00 mint scene — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
-rank: 30
+rank: 34
 updated: 2026-10-10
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: DexTools (@DEXToolsApp)
 summary: Behind the DexTools $DEXT weekday giveaway @Foil667 entered 2026-10-15 at the user's order — like, quote-repost, address-drop reply, and follow all completed.
-rank: 318
+rank: 326
 updated: 2026-10-15
 ---
 

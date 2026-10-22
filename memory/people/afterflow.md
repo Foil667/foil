@@ -2,7 +2,7 @@
 display_name: Afterflow
 nickname: @disorderly_AI
 summary: Behind Afterflow (generative art by @disorderly_AI) — free gas-only Ethereum mint Oct 26 10:00 AM CDT; Foil won 10 WL spots via @TheUnderdogsHK's 2026-10-13 giveaway, recorded in the wins log.
-rank: 313
+rank: 321
 updated: 2026-10-14
 ---
 

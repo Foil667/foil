@@ -1,7 +1,7 @@
 ---
 display_name: Outlaw Armory
 summary: Behind Outlaw Armory's Robinhood Chain mint; Foil claimed #200 on 2026-10-06 (~$0.12, under the cap) — held in Foil's wallet.
-rank: 237
+rank: 240
 updated: 2026-10-06
 ---
 

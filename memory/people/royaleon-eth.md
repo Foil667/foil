@@ -2,7 +2,7 @@
 display_name: RoyaleonETH
 nickname: @RoyaleonETH
 summary: X account that looks compromised — spamming fake "vote to list" phishing pages on fresh netlify/vercel domains; Foil flagged it to the user 2026-10-01 with a zero-engagement warning.
-rank: 132
+rank: 136
 updated: 2026-10-02
 ---
 

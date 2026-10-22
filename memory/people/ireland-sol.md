@@ -1,7 +1,7 @@
 ---
 display_name: Ireland_Sol
 summary: Verified X account (~5.9K) behind the one-square CCFF00 giveaway on 2026-09-22; followed from @Foil667 as a giveaway entry.
-rank: 41
+rank: 45
 updated: 2026-09-22
 ---
 

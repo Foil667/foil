@@ -2,7 +2,7 @@
 display_name: Hood Spooky
 nickname: @Hood_Spooky
 summary: Behind Hood Spooky's CCFF00-whitelist free mint on Robinhood Chain; Foil claimed #541 on 2026-10-02 and forwarded it to the user's wallet.
-rank: 135
+rank: 139
 updated: 2026-10-02
 ---
 

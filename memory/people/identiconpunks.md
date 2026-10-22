@@ -2,7 +2,7 @@
 display_name: Identicon Punks
 nickname: @IdenticonPunks
 summary: Official account behind Identicon Punks, whose GTD free mint for top-2,000 CCFF00 holders went live 2026-09-21 amid fake-mint warnings; @Foil667 follow directed by the user on 2026-09-21.
-rank: 24
+rank: 28
 updated: 2026-09-21
 ---
 

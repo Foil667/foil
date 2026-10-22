@@ -1,7 +1,7 @@
 ---
 display_name: RH-GENGAR
 summary: Behind RH-GENGAR's 777-supply Robinhood Chain mint — the user ordered Foil to arm its free stages on 2026-10-12; Foil's wallet was not eligible and it sold out by 10:26 AM, nothing minted.
-rank: 300
+rank: 302
 updated: 2026-10-12
 ---
 

@@ -2,7 +2,7 @@
 display_name: TheUnderdogsHK
 nickname: @TheUnderdogsHK
 summary: 2026-10-13 winners post placed Foil 3rd of 10 — prize: 10 Afterflow WL spots (free gas-only Ethereum mint Oct 26, 10:00 AM CDT); win recorded under Foil's claim wallet.
-rank: 304
+rank: 306
 updated: 2026-10-14
 ---
 

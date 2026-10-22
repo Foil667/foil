@@ -1,7 +1,7 @@
 ---
 display_name: Broosters
 summary: Broosters' free allowlist mint — ELIGIBLE for both wallets per the 2026-10-04 WL scan (CCFF00 phase live through Oct 18, 0.000037 ETH); browser-gated checker caveat stands, awaiting the user's call.
-rank: 163
+rank: 166
 updated: 2026-10-04
 ---
 

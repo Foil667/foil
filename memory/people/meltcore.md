@@ -1,7 +1,7 @@
 ---
 display_name: Meltcore
 summary: Free Genesis WL on Robinhood Chain (2,000 free Genesis NFTs) flagged 2026-10-12; below the bar, but Foil entered the FCFS checker on OpenSea 2026-10-14.
-rank: 302
+rank: 304
 updated: 2026-10-14
 ---
 

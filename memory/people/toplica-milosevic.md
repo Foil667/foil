@@ -1,7 +1,7 @@
 ---
 display_name: Toplica Milosevic
 summary: Deployer of a copycat $SHIB on Base (2026-10-16) mimicking the established $SHIB, vets RISKY 49/100 — scam-flagged; zero engagement.
-rank: 333
+rank: 339
 updated: 2026-10-16
 ---
 

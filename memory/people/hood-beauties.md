@@ -1,7 +1,7 @@
 ---
 display_name: Hood Beauties
 summary: Behind Hood Beauties' Robinhood Chain drop — lead only: flagged by the screener 2026-10-05 but failed the quality vet (no X presence); sister project Invisible Hoods has a scam warning; no claim.
-rank: 184
+rank: 188
 updated: 2026-10-05
 ---
 

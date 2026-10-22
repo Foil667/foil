@@ -2,7 +2,7 @@
 display_name: Meowz
 nickname: @Meowznfts
 summary: Behind Meowz's 5,555-supply free mint — CCFF00 top-3,000 GTD phase 5:00–6:00 PM CDT Oct 3 via OpenSea's GTD checker; the claim desk had it watchlisted to fire if #4429 passed.
-rank: 157
+rank: 160
 updated: 2026-10-03
 ---
 

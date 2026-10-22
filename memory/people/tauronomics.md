@@ -1,7 +1,7 @@
 ---
 display_name: Tauronomics
 summary: Running a free raffle (4 GTD + 20 FCFS, 123 entrants, entries closed 2026-10-13 11:43 AM CDT) — Discord entry was the user's own tap.
-rank: 280
+rank: 282
 updated: 2026-10-13
 ---
 

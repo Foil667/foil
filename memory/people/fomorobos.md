@@ -2,7 +2,7 @@
 display_name: FomoRobos
 nickname: @FomoRobos
 summary: Behind FomoRobos' free allowlist mint — the Oct 4 9:30 AM CDT window fired and failed the gates (no CCFF00 phase, wallet-connection checker, public over cap); stays a watch lead, no claim.
-rank: 164
+rank: 167
 updated: 2026-10-04
 ---
 

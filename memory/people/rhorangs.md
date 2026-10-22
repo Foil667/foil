@@ -2,7 +2,7 @@
 display_name: rhorangs
 nickname: @RHOrangs
 summary: X account in the CCFF00 mint scene — @Foil667 engagement banned 2026-10-09, read-only mint intel only.
-rank: 31
+rank: 35
 updated: 2026-10-10
 ---
 

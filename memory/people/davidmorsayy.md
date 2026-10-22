@@ -1,7 +1,7 @@
 ---
 display_name: @DavidMorsayy
 summary: Deployer of copycat 'DebtReliefBot' (DRB) on Base mimicking the established ~$17.5M FDV $DRB — scam-flagged 2026-10-15; zero engagement.
-rank: 317
+rank: 325
 updated: 2026-10-15
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: @BrittoJeff
 summary: Deployer of a copycat '$AURA' on Robinhood Chain mimicking the established ~$19.5M FDV $AURA — scam-flagged 2026-10-14; zero engagement.
-rank: 314
+rank: 322
 updated: 2026-10-14
 ---
 

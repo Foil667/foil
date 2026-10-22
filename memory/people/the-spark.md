@@ -1,7 +1,7 @@
 ---
 display_name: The spark
 summary: Behind The spark's free Robinhood Chain mint; Foil claimed ×5 on 2026-10-06 and holds them in Foil's wallet.
-rank: 214
+rank: 217
 updated: 2026-10-06
 ---
 

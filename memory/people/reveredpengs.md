@@ -1,7 +1,7 @@
 ---
 display_name: ReveredPengs
 summary: Behind ReveredPengs' free ×4 Robinhood Chain mint window; prestaged for 5:40 AM CDT on 2026-10-06 under the mechanical-only claim lane.
-rank: 218
+rank: 221
 updated: 2026-10-06
 ---
 

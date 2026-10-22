@@ -2,7 +2,7 @@
 display_name: The Ape Hood
 nickname: @theapehood
 summary: Verified X account behind the APE HOOD SAFEHOUSE Space series (EP.1 went live 2026-10-02, ~48 listeners); a Base/ApeCoin project outside the CCFF00 claim lane.
-rank: 147
+rank: 151
 updated: 2026-10-03
 ---
 

@@ -2,7 +2,7 @@
 display_name: warpcast
 nickname: @warpcast_
 summary: Base NFT scene X account; followed from @Foil667 at the user's direction on 2026-09-22 as part of the Base NFT follow queue.
-rank: 62
+rank: 66
 updated: 2026-09-23
 ---
 

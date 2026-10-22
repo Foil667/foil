@@ -1,7 +1,7 @@
 ---
 display_name: BOB_InTheHood
 summary: Behind Bob In The Hood, the 1,111 hand-drawn bulldog free mint on Robinhood Chain (Sep 26); @Foil667 followed and entered the WL twice at the user's direction.
-rank: 72
+rank: 76
 updated: 2026-09-26
 ---
 

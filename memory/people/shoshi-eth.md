@@ -2,7 +2,7 @@
 display_name: ShoshiEth
 nickname: @ShoshiEth
 summary: Verified X scam-watcher whose Maskies rug callout Foil verified on 2026-10-06, killing the staged claim.
-rank: 223
+rank: 226
 updated: 2026-10-06
 ---
 

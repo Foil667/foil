@@ -2,7 +2,7 @@
 display_name: The Damned
 nickname: @The__Damned__
 summary: NFT project on Robinhood Chain whose OpenSea Mint Monitor is made by the CCFF00 dev (user-confirmed 2026-10-02); trusted mint-intel source — their own mint launches Oct 13 9 PM EST (2,222, GTD+FCFS).
-rank: 130
+rank: 134
 updated: 2026-10-12
 ---
 

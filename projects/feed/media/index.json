@@ -1,140 +1,28 @@
 {
   "entries": {
-    "00faae85b8eb7c93e4dcaf26f497314e9f4323316de27e7952baf8a7466c8110": {
-      "path": "workspace/feed/media/3p/5d39c0179817c653ce196c8809e3659513398098bc83607f5eca88c06e4b5cfe/hero.jpg",
+    "0d4f404f21776060e9abcb5111f9f84443cc5775b734ea8886fa69c7d98444b7": {
+      "path": "workspace/feed/media/3p/11656461740d3e94a2261142208693e568395c5932639c0d4aa340b26e429469/hero.jpg",
       "mime_type": "image/jpeg",
-      "size_bytes": 78441,
-      "modified_ms": 1791620070554,
-      "version": "ffc713f9011ad7775ad0f522a9eecf43167fb98ae3412e120c6b22f4c6f79192",
-      "source_url": "https://startupfortune.com/wp-content/uploads/2026/10/metr-claude-anthropic.jpg"
+      "size_bytes": 5418,
+      "modified_ms": 1792674506777,
+      "version": "aaf70635dda4ddb88773285ec67e045a13124917a7d2e9480b6b0f462406b030",
+      "source_url": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/22081133/library-pendle-expands-one-click-looping-to-tokenized-stocks-on--800x450.png"
     },
-    "10a003cf63df6352b15f94e260f483123e531cdeeec82a46031c54390176c6d1": {
-      "path": "workspace/feed/media/3p/1a1064071bafba9aed2fb938a9d831512b00a3f4af7180c0f3150a17edd4ef28/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 48254,
-      "modified_ms": 1791601192664,
-      "version": "7b518f2b873d3772300511dacb7942f3e51bbfcc701da523bf9f2c752236d7ec",
-      "source_url": "https://gizmodo.com/app/uploads/2026/10/Ledger-Hardware-Wallet-Backdoored-1200x675.jpg"
-    },
-    "15fb6fe39ad4156d90e97f16826e4bca29804d3c7824caa5940c2f531ddae37f": {
-      "path": "workspace/feed/media/3p/ff0d3482f32ec6d4b93deb1d65149def92ba32f331dc97bdefbb43202d081baa/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 61368,
-      "modified_ms": 1791983364395,
-      "version": "996dda365f5bbe96dd9b00dc0405a0f67a981f883037e8b3bee0a631f6aceecc",
-      "source_url": "https://nftcalendar.io/storage/uploads/2026/10/01/enter-the-anime_aK4xdFH49xe0sqf5.png"
-    },
-    "17f4da2126dfd59d89ea85ed4a846223093d0477ff586246650003821b4fc1dd": {
-      "path": "workspace/feed/media/3p/2b8a95025f55ce78a82200a7c3d19c98883518ba1e0e0ef0c57d7f4fe08ec663/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 208417,
-      "modified_ms": 1791594145524,
-      "version": "75ec0a05e0b3b74554bcd530aabedb30654e97c3ef913a9f0ebcf634845db694",
-      "source_url": "https://www.tbstat.com/cdn-cgi/image/width=1600,height=900,fit=cover,format=jpeg,quality=80/wp/uploads/2026/10/jesse_pollak_base_1920x1080.jpg"
-    },
-    "197dc4000e935a46901dc36da2eccf16c83b010ce26cc9bf99e67dd536541cf2": {
-      "path": "workspace/feed/media/3p/1b17fb526b238d12e3d41951e7341f32a221b266003d16e8bd2cb2762ead3c5f/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 98207,
-      "modified_ms": 1791854382307,
-      "version": "4c5bcff40abc6d5ae26fe69fb003c1b4a0a830ad8f1354f0bfa001859cbc1577",
-      "source_url": "https://news.stocktwits-cdn.com/koyfin_20261012_101444169_03e343de43.png"
-    },
-    "284b4fd671e8fe4691ff631292bdafd7d4bcc1b4f72c0a8f78adf6d20a0e2c5f": {
-      "path": "workspace/feed/media/3p/c972f28ea00541d7141fdda280fc5045f2d8bd4e7ff8fe9a7071cca158911da5/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 82835,
-      "modified_ms": 1791961818821,
-      "version": "4726432252de1fda7a96e52195b825916220657bbb252bd928e527991eb2e4f5",
-      "source_url": "https://cnews24.ru/uploads/f7e/f7e49ba20db237f194f539023218560ae7d1cf5a_80.jpg"
-    },
-    "35adc0e2e875341d2df52b3708f50004e2828527793603e8e2855c8152a559e8": {
-      "path": "workspace/feed/media/3p/4fc2bd666b7d118dce8b5c6bdf299ee8377b380bcd442ee1e05f4c88c5b83fd8/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 35993,
-      "modified_ms": 1791634608521,
-      "version": "af2ce52fd54d13eeecae423dd78027bc2ade6e555f8228ce1c7eb92578603dfd",
-      "source_url": "https://www.coindesk.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fs3y3vcno%2Fproduction%2F420b7f8ce090d7bdf4a04ea5fa1495a09ff9ce29-6889x4593.jpg%3Frect%3D0%2C360%2C6889%2C3875%26w%3D1920%26h%3D1080%26auto%3Dformat&w=1200&q=75"
-    },
-    "3b9bc8d8fa11cc920fa4a28948866d88d35a7fe7bb936084212fee31751058ce": {
-      "path": "workspace/feed/media/3p/43af173b70a530843471c7d485a9213c19267441c9f639d62f12a80956059619/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 732852,
-      "modified_ms": 1792009789279,
-      "version": "a5d7f7cb3af4c9fd07f7e618241452e3ba628a1f52410d70e2bc35eb6d3af189",
-      "source_url": "https://www.brooklynda.org/wp-content/uploads/2026/10/scam-site-155x300.jpg"
-    },
-    "41a378f168a3036292dfb2e484cacb70ade0a80b04ad2c9638fa5ca521111091": {
-      "path": "workspace/feed/media/3p/267cafaf4de3141026c34e4dc2aa4de65ea83083f209c0fc32740155d286fdb5/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 202352,
-      "modified_ms": 1791572320362,
-      "version": "14c70f9b9f4e9159c4c8ad51decb5cde2db923a39d7019406e7dd3a2aa8e4e17",
-      "source_url": "https://procoinnews.com/wp-content/uploads/2026/10/robinhood-t-rowe-price-active-etf-token.jpg"
-    },
-    "4353fd94d46cbd22dd7fb9a114a6ebfee635be0b0c8bceacdb9d161ddaf8debf": {
-      "path": "workspace/feed/media/3p/aa6b1efd5e31e0fca24fa537e580a6f8031ad3687a5d4528ff87eca081fe05ba/hero.webp",
+    "1ba86b52483a64b6a22585bca8c5892f7204dac5ba480c2c0292110eed0b255c": {
+      "path": "workspace/feed/media/3p/5f0ecf92ca3665f662366d9102274134662d19471e3b759f2c75a09aa2436a55/hero.webp",
       "mime_type": "image/webp",
-      "size_bytes": 88140,
-      "modified_ms": 1791564893970,
-      "version": "3037ea2b00f481a11e76a0f3e013dc5594362656b0a45b111ad3800b51c455cb",
-      "source_url": "https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.us-east-2.amazonaws.com%2Fuploads%2Farticles%2Fak06723qo9irxu9bt66f.png"
+      "size_bytes": 68040,
+      "modified_ms": 1792501893650,
+      "version": "6912e336216ccad4bdf4e83aa4d93e7f08b41c4102bfe90e82cf348f92f6f142",
+      "source_url": "https://mzwrodgsdjfdyvnraeya.supabase.co/storage/v1/object/public/article-media/articles/6912e336216ccad4bdf4e83aa4d93e7f08b41c4102bfe90e82cf348f92f6f142.webp"
     },
-    "4c7a486eafa8397f52299ef31b6428f80be6c6f12e610b11f62b8e3b6afe6ee3": {
-      "path": "workspace/feed/media/3p/36ca7d45aff531fdc54326763105ed43fc0ba72e89febd951b81bbaac5ebe700/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 702992,
-      "modified_ms": 1791613578468,
-      "version": "69d8e905c2153cc7192673bd59a8f49846a21e53e05353b73a4c48a20180bb48",
-      "source_url": "https://storage.ghost.io/c/38/b3/38b3b250-0832-49d2-943c-a4cab0eeef48/content/images/size/w2000/2026/10/Screenshot-2026-10-09-at-2.53.23---PM.png"
-    },
-    "4fe014e9e63e684ba3f048c0f1cdb0a7c062d5b4a8d669b5d7521e4acc9773d0": {
-      "path": "workspace/feed/media/3p/f579080e64e07ce40a2bc6028c12bdb0b22b27477d9cf09bdbfe570f271ea077/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 24836,
-      "modified_ms": 1791983364420,
-      "version": "fe1d3b3e0d98a0126dd34d77f4285f177885d9e5a003b3a026478ab8513e2461",
-      "source_url": "https://nftcalendar.io/storage/uploads/events/2026/10/dGk0KZdW6S8nUHlGBq0jCzwSvgUgeLaaSxAa2b5R.webp"
-    },
-    "588abaa49f79ccb197658de15c401f2111d58b990a3ceff0da066e0eec6a684c": {
-      "path": "workspace/feed/media/3p/754103432ac159752735600f5dbc450a49687b0fa22a0fe62481720b457d2a9b/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 222644,
-      "modified_ms": 1791748666860,
-      "version": "a8c971b7889d252aaff91581b993bf21f068e4fae3c603e94b68294257c766e6",
-      "source_url": "https://fbdfurqh55jjxjwf.public.blob.vercel-storage.com/blog/coldcard-x-account-compromised-phishing-scam-october-2026.webp"
-    },
-    "594767cd4d8b3d5def999bf63a9d54e7fabcff0a7c9dc3c86d1e9538bc060326": {
-      "path": "workspace/feed/media/3p/47d720ab69ab530082681976a7a843e96ee55ec03b5be8d7476f7ad602f84589/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 191826,
-      "modified_ms": 1791572320387,
-      "version": "8aff13a53fe02ce292eb03df5d59447e8815bccee4c3cf6a005df43d578c6207",
-      "source_url": "https://media.crypto.news/2026/07/ChatGPT-Image-Jul-17-2026-01_13_16-PM.webp"
-    },
-    "599864e1a71f0bcaa1f9bb5095c9e839bc6bb4c1687bf8c168da6d58974bcd6e": {
-      "path": "workspace/feed/media/3p/b6100c41cd4f95563ad6086ae2f7e1d9d5dac6f2df759e7bc569824d46776e7b/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 25042,
-      "modified_ms": 1791875515885,
-      "version": "5ac00bf2819c01befdf001ebfc5d5ecda1b371fe88f98b76bba4b1143fe587da",
-      "source_url": "https://media.crypto.news/2026/10/image-59-1024x451.webp"
-    },
-    "63b1129f9ac6e871db7df2eaf841d3714c974747f8d47ea10d0a5b76fb542a3e": {
-      "path": "workspace/feed/media/3p/a2d3e35493d3de062b35627dff47f851ad2552446e57c0f574116bc1b26bea96/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 37404,
-      "modified_ms": 1791629189404,
-      "version": "443ffde2df468239fbd80ea6f7e73a3b6472a0ae24f5d31fb05b03c01a83d29b",
-      "source_url": "https://media.crypto.news/2026/10/Screenshot-2026-10-10-124231.webp"
-    },
-    "6804f2c01f2e779d4df3b827ad971da59372a6661d4061f16bd3f8053b1fc45c": {
-      "path": "workspace/feed/media/3p/de2f4d37f8c6765571f95f81accf779e9fdd9d19395f296d91622fc11b1af014/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 1687405,
-      "modified_ms": 1791613578491,
-      "version": "39ae46e23b27dd87a3383578a04ec15a634efcd49d313e72cc4f5ef5dd59ea0b",
-      "source_url": "https://storage.ghost.io/c/38/b3/38b3b250-0832-49d2-943c-a4cab0eeef48/content/images/2026/10/data-src-image-804a2623-9419-4ef9-84ac-fffc03a16abc.png"
+    "55f1171bae3d868655044b9344c06f6c9cede36abdc80d1973401a05c6460e93": {
+      "path": "workspace/feed/media/3p/cf251fb6069691c4c1934e4e871e101c6264a6e2846242260f477a131ba8f6a3/hero.jpg",
+      "mime_type": "image/jpeg",
+      "size_bytes": 208266,
+      "modified_ms": 1792545828172,
+      "version": "0fb15af1241264eaf62a4e16bb6f598dd95e70692b9be12120b223d57cd3d1f0",
+      "source_url": "https://www.tbstat.com/cdn-cgi/image/format=avif,q=80,w=1920/wp/uploads/2026/10/Screenshot-2026-10-20-at-15.36.27.png"
     },
     "6925512f690d1b47bdd3c6cec875353099723b5a8252ae9d46b77d20f267b667": {
       "path": "workspace/feed/media/3p/5abd6fbc627d9686e317255ab4917ea259b53ae36a2a55fbd006af74d416e2c4/hero.jpg",
@@ -152,109 +40,28 @@
       "version": "311dc5ee8637e82e41b026efeac51f15ffacd7eae17ec4966cefaa58ffd4dd36",
       "source_url": "https://www.coincu.com/wp-content/uploads/2026/10/metric-launches-dex-tokenized-rwas-robinhood-bnb-ethereum-thumbnail.jpg"
     },
-    "7e7ae1c652e724e6ce35f3fd837e5c794af7ac5c0ce06c747b21b746886189ad": {
-      "path": "workspace/feed/media/3p/650425e39ac632790c53ab076351e64b498759ffda099398d818cd418bf3a482/hero.jpg",
+    "930eb9f49e7de7d32f8be77f3263feaedcbf5297cfa0c82c4c365c743a24fc76": {
+      "path": "workspace/feed/media/1p/073c791d48e2701870e652bfd9389d24fbd7b2e9ae23af1225283af0e730bc9e/image.jpg",
       "mime_type": "image/jpeg",
-      "size_bytes": 171476,
-      "modified_ms": 1791577265914,
-      "version": "6ad3e8e1900917541987119cacb0e4661b47e4cec9a2798fd57e2a46a632a452",
-      "source_url": "https://www.coindesk.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fs3y3vcno%2Fproduction%2F5df7a99bcc921212ec004cc48e5fe4a959b18bcd-1420x916.jpg%3Frect%3D0%2C59%2C1420%2C799%26w%3D1920%26h%3D1080%26auto%3Dformat&w=1200&q=75"
+      "size_bytes": 249127,
+      "modified_ms": 1792588984984,
+      "version": "e4b93968792ceb4cd9dceae42f0573a040b393f042c0c7d523bab491dc1ed451",
+      "source_url": "https://scontent-sea5-1.cdninstagram.com/v/t51.82787-15/854823240_18112452773602518_6841852989474103869_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzIifQ%3D%3D&_nc_ohc=JEedm7rmNegQ7kNvwGf-fBL&_nc_oc=AdqNAmXVRf0zwP-cgrs_P5v5goytbzRO1FbWlpFPqJDUBa5Y3mv5NzJCKBSugVvNiuQhgGpRVWj-4WCUsAR7eUv1&_nc_zt=23&_nc_ht=scontent-sea5-1.cdninstagram.com&_nc_gid=azvQeHI9IBlUqFk-GTdD9A&oh=00_AQP3tjukQ3ChiapNLPB50RLiw9K5IbqASQ7rXG5wwGAyLA&oe=6ADE8408"
     },
-    "88e8e39de0d149293647156c86b8c96dd182cc372c794f1d63c468b60cef8279": {
-      "path": "workspace/feed/media/3p/01403569083a0602677cbe65bb901b67c6c977b17168272409741c4413452ee4/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 8784,
-      "modified_ms": 1791897051021,
-      "version": "8abf90ac7c61b339a0f24267067f779e29ebadeac8018dd91ff2085ec2211f78",
-      "source_url": "https://www.cryptotimes.io/wp-content/uploads/2026/10/THEOUSD-price-chart-as-of-13-October-2026.png"
-    },
-    "8ca4f8ee2b59ef257f7e2899ab875d584b050da41bcccf4d436f4c0e4237be94": {
-      "path": "workspace/feed/media/3p/fb62279c7c6bce0ef65873ffef37d4ad0bc4e74e48ca1bd3d198f2a74283a58b/hero.jpg",
+    "a1c236e7b08ee0c52c1f67f16086a4d9f712ae0cf27e281c227e46cab3f01352": {
+      "path": "workspace/feed/media/3p/633ed8ff7149db4e37d300e00b960df68b16648c120869eb9156b1829153dd9b/hero.jpg",
       "mime_type": "image/jpeg",
-      "size_bytes": 68194,
-      "modified_ms": 1791940692039,
-      "version": "ce940e697bcdc497739b8c878bd838211b03240b0acdf9182ec70ae8169c5faf",
-      "source_url": "https://news.stocktwits-cdn.com/large_Getty_Images_2287298723_67960e9982.jpg"
+      "size_bytes": 64257,
+      "modified_ms": 1792415564546,
+      "version": "da25e9ac007e9c6c00531242dbeb3b9276095f85e84c36fb76e659978a240df4",
+      "source_url": "https://nyc3.digitaloceanspaces.com/cryptocompass-assets/uploads/1792172250092-coinmarketcap-cover-1792172250092.jpg"
     },
-    "94f2d57d6d67a53db4294c3120118757330f351af3d92eceedadba79936f8347": {
-      "path": "workspace/feed/media/3p/0d964aed1159477c6e3e1cc5c70c624d8e296a6cf89fb4def3f88c0762a21536/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 97264,
-      "modified_ms": 1791835102870,
-      "version": "f1414dbc2c637277b39a50a1e9a01122ef07b6845c9557a507326cdc9e4d7cb1",
-      "source_url": "https://u.today/sites/default/files/styles/1200x/public/2026-10/100625.jpg.webp"
-    },
-    "a942ba05e39940b392e6f538f83b2b6c517d07f62c075084faab670ae6c2f9ca": {
-      "path": "workspace/feed/media/3p/f22613542554467a3f48bf42d3c0bac4c11fad967e3da3efbda05de69bb152fb/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 41074,
-      "modified_ms": 1791629189412,
-      "version": "8b99ad1e67eb75998eb9dc5c48250258f5423efdac864baeb7c90bbbb8055005",
-      "source_url": "https://media.crypto.news/2026/10/Screenshot-2026-10-10-124217.webp"
-    },
-    "aa5b521ffe7d19789449cd3124e4894cb3c88ad841a96e047dc46fa86bbaeb28": {
-      "path": "workspace/feed/media/3p/09aa8c3722493cbec07fc52400dd07e3c0bd5a50eb04d9bf928a1a0de2cc2c9c/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 158531,
-      "modified_ms": 1791681605805,
-      "version": "e9f5ec5d44d9482e862914b285bdd59ba26c452f82945bf8733db822835bfac7",
-      "source_url": "https://bitcoinversus.tech/wp-content/uploads/2026/10/ledger-wallet-investigation-cover.jpg"
-    },
-    "b573b6022440ce1626804ca3dca6633510cf466e4f352c8ed5ae0d1b19072ef2": {
-      "path": "workspace/feed/media/3p/d1a2f8b8708066419e83be41237f99c33264f322fbdfbd7055b9d84fe7d51293/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 77264,
-      "modified_ms": 1791983364427,
-      "version": "12f59b86f9a1a1b2f50a3c7bbfe96e5efaef3ae1ddaaea33a441c7be1a9d4bec",
-      "source_url": "https://nftcalendar.io/storage/uploads/events/2026/10/BWRiGa2CwUdbmXf5nRNcmoI0Di1BQgcRBuCUR1iw.webp"
-    },
-    "b6b2a92d537d8ad00f3c5adc8274af19c2c5e7b28de602b7764546a6aaae4aaf": {
-      "path": "workspace/feed/media/3p/0725d18c95ccc1fd451d63b28e56204c26e5507f5ef6b3cd1a466b842d68a0d0/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 80296,
-      "modified_ms": 1791608498557,
-      "version": "460c93d9f63ec923d3e05271bdd8fae4bcd46f45fde99bf6c45994228dc2b0c4",
-      "source_url": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/10/fungolabs-genesis-nft-airdrop.jpg?fit=683%2C1024&quality=50&ssl=1"
-    },
-    "b714903b9efdc720dd5a906b3db0d1a8d266d25442707118caad12d335081ce0": {
-      "path": "workspace/feed/media/3p/45fabdb6725ff77430c455b3afff47d596607e8a2960d9e664aaf1038f8da741/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 86491,
-      "modified_ms": 1791662470390,
-      "version": "ca13e95c415e1b920ff43b7621032924c11994be631cef60b3262488f5a69471",
-      "source_url": "https://d34jlxpwrja7q9.cloudfront.net/wp-content/uploads/2026/10/abstract-chain-shutdown-portal-1024x611.jpg"
-    },
-    "bc40db9f71645446b2903093e40dde18521d0f5fa3a4f4047f9bb8bf1ffb1a36": {
-      "path": "workspace/feed/media/3p/11f3067339df07c9a1abb738898ec8f7e8522200348bbe4b9bef7e46b4b67a22/hero.webp",
-      "mime_type": "image/webp",
-      "size_bytes": 76304,
-      "modified_ms": 1791789010013,
-      "version": "84c57cacd5864a2b8481b8fffb594047a5287d937b234e3152cf624694fc9a9f",
-      "source_url": "https://cryptofox.news/images/article_preview/based-co-founder-updates-on-card-data-breach-and-security-protocols.webp"
-    },
-    "c3703d39c09ec1a9bd11344ab0b04066ee5563a5684b08a083c5dff8a58b2096": {
-      "path": "workspace/feed/media/3p/c2883f14fe4ce2fed8145b7e0de57c879b8a13289a3c0f5ed1bd4e9baefa23b3/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 60113,
-      "modified_ms": 1791875515872,
-      "version": "fef085ae67b47192008c00ffcb9bca4f773945b6eed3eb26e3b394adabd8469a",
-      "source_url": "https://www.coindesk.com/_next/image?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fs3y3vcno%2Fproduction%2F3e989822cfd8a499afcd2b36040126af5d39f7d2-3026x1874.png%3Frect%3D0%2C86%2C3026%2C1702%26w%3D1920%26h%3D1080%26auto%3Dformat&w=1200&q=75"
-    },
-    "e2bb324200aee0a1666a8f9c8c46ebea8e41f083064fb00b5837b12e33dea053": {
-      "path": "workspace/feed/media/3p/3336905e9649c869cfad1ceae14d9b6b233ee71771bb6b8233e2bcd04639ac1e/hero.jpg",
-      "mime_type": "image/jpeg",
-      "size_bytes": 437544,
-      "modified_ms": 1792009789303,
-      "version": "9822c42b00058d2bc0f4aeaf49d35ed4033e382ea75e3af7d0b9898f6e698374",
-      "source_url": "https://www.brooklynda.org/wp-content/uploads/2026/10/scam-site2-232x300.jpg"
-    },
-    "e69f8cbfcb08125a407ccfc8349ad4be27082f1afcab42edab0d27f4fca93b0d": {
-      "path": "workspace/feed/media/3p/5fb2c1f75e8ad2d1218bb05d6ce4b5c82ce9f281f328f5e74dbbd5c69df1d5c9/hero.png",
-      "mime_type": "image/png",
-      "size_bytes": 402181,
-      "modified_ms": 1791983364412,
-      "version": "83d9625ee0d938ff61bcbe65d9a2945dfc301ca9cd7a2badcfdd609a4a1961ae",
-      "source_url": "https://nftcalendar.io/storage/uploads/2026/10/07/mythics_wt1Cd0hDpcqKp7EX.png"
+    "b647709ec806aaf4de1bbf001afe60d4a0b44fddac05bdf436565fce84bdacd3": {
+      "path": "workspace/feed/media/1p/ac788cc22586e37e6c601da7cfa059ba115fba14e1ec001c7e131f595b7c3a4a/clip.mp4",
+      "mime_type": "video/mp4",
+      "size_bytes": 3647421,
+      "modified_ms": 1792588983293,
+      "version": "03a46c876ae16ab163927db916c7ca25878515038437e9ea366b76cc4bf7226d"
     },
     "e8fae95a719076caca3f69e2d98941a4006c87ed11ccbaffd5c4c138de06fdbb": {
       "path": "workspace/feed/media/3p/e0b786ccc52e0f1ac640fdb8fe4bfd40f41ebc811bfbd2bb2b224ae95294c3e3/hero.jpg",
@@ -264,13 +71,13 @@
       "version": "afceabc7ad4b9774718cce877c3e21354fb34fe1718254aba46938f354be096d",
       "source_url": "https://en.cryptonomist.ch/wp-content/uploads/2026/10/bstocks-tokenized-equities.jpeg"
     },
-    "ea9a9e3e0a35263a847877ea2dbb93bfb2b8b1416e5d46816ac448ec66111213": {
-      "path": "workspace/feed/media/3p/c86c3dcbeb4b2387ac4f5b11cac2620feb089fb03016e9a9231bb0604e7636ff/hero.jpg",
+    "f05d64052a5cd3a22a10c67988dfa97b8144162cb8461ce9602d35d19dadb1f0": {
+      "path": "workspace/feed/media/3p/7493e3ced3dd5593501aaf4ce6718152b4bc62ed24ca777b401f5df842d1b330/hero.jpg",
       "mime_type": "image/jpeg",
-      "size_bytes": 74582,
-      "modified_ms": 1791767823433,
-      "version": "09058b85c1dc0678d4b50588d517c708fe1f0dbc588a7c13b0a0316d93e1cf25",
-      "source_url": "https://cvj.ai/wp-content/uploads/cvjai/shrns-354e4891ed546ca268f881c593ccc444.jpg"
+      "size_bytes": 34127,
+      "modified_ms": 1792242652016,
+      "version": "8a57edfcd3c869029d0d26d7a71bd2b780b4bbd051e39f1d04c1f26fb91f5180",
+      "source_url": "https://static.cryptobriefing.com/wp-content/uploads/2026/10/17081224/library-uniswap-posts-record-14-81-million-monthly-revenue-as-ro-800x450.png"
     }
   }
 }

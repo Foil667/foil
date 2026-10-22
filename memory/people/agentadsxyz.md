@@ -1,7 +1,7 @@
 ---
 display_name: @AgentAdsxyz
 summary: Deployer of a copycat $PENGTARDIO on Base (2026-10-16) mimicking the established ~$241k FDV $PENGTARDIO, vets RISKY 49/100 — scam-flagged; zero engagement.
-rank: 323
+rank: 331
 updated: 2026-10-16
 ---
 

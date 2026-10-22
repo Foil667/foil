@@ -1,7 +1,7 @@
 ---
 display_name: Midnight Puppets
 summary: Ran the Midnight Puppets 42x giveaway @Foil667 entered 2026-10-05; their free Robinhood Chain mint opened 10:00 CT 2026-10-15 on Foil's Mint Board.
-rank: 160
+rank: 163
 updated: 2026-10-15
 ---
 

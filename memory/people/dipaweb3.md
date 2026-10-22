@@ -2,7 +2,7 @@
 display_name: DipaWeb3
 nickname: @dipaweb3
 summary: Running the KingAnt free-mint GTD spots giveaway (follow both, like+RT, drop EVM wallet, ends ~Oct 3) — user-surfaced 2026-10-02; Foil skipped a different @DipaWeb3 giveaway 2026-09-23.
-rank: 151
+rank: 154
 updated: 2026-10-03
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: @Testooooorrr
 summary: Deployer of a fake $WEIRD on Base mimicking the established $WEIRD (owner not renounced) — scam-flagged 2026-10-13; zero engagement.
-rank: 310
+rank: 314
 updated: 2026-10-13
 ---
 

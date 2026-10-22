@@ -1,7 +1,7 @@
 ---
 display_name: Alpha_Radar__
 summary: Runs free-mint giveaways; @Foil667 entered their Oct 1 WL raffle (with @Tessa_Hq) and dropped a wallet under their post for the evergreen_nft free mint (2026-10-02).
-rank: 73
+rank: 77
 updated: 2026-10-03
 ---
 

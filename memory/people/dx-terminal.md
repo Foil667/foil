@@ -1,7 +1,7 @@
 ---
 display_name: DX Terminal
 summary: Gaming NFT project on Base (terminal.market) — the user owns token #2113; Foil verified onchain 2026-10-10 that it is a plain ERC-721 game contract, not a 721T.
-rank: 274
+rank: 276
 updated: 2026-10-10
 ---
 

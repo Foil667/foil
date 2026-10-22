@@ -1,7 +1,7 @@
 ---
 display_name: ChargeAI (@chargeairh)
 summary: AI project behind $CHARGE on Robinhood Chain — Foil vetted it 2026-10-15 at the user's order for his buddy: real project, CLEAN 88/100, but a $33.5k micro-cap under the user's bar.
-rank: 257
+rank: 260
 updated: 2026-10-15
 ---
 

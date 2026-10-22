@@ -1,7 +1,7 @@
 ---
 display_name: hue-nft
 summary: hue-nft — CCFF00-holder OG Mint, free ×2 per wallet, opened 10:30 PM CDT Oct 5; failed the quality vet (no official X, metadata unreachable), so it's lead-only, never a claim.
-rank: 196
+rank: 200
 updated: 2026-10-05
 ---
 

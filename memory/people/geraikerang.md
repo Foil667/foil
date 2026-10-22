@@ -1,7 +1,7 @@
 ---
 display_name: @GeraiKerang
 summary: Deployer of a likely-copycat $QING on Base mimicking the established $QING — scam-flagged 2026-10-15; zero engagement.
-rank: 319
+rank: 327
 updated: 2026-10-15
 ---
 

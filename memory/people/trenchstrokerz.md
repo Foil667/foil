@@ -1,7 +1,7 @@
 ---
 display_name: Trenchstrokerz
 summary: RH mint whose CCFF00 free window closed Oct 9/10; the public phase opened paid at 0.0004 ETH — outside the claim lane, no auto-mint.
-rank: 180
+rank: 183
 updated: 2026-10-10
 ---
 

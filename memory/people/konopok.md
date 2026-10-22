@@ -1,7 +1,7 @@
 ---
 display_name: Konopok
 summary: Someone the user is sharing a Muse referral with; on 2026-10-15 he asked on X whether Foil mints automatically and Foil answered from @Foil667.
-rank: 8
+rank: 11
 updated: 2026-10-15
 ---
 

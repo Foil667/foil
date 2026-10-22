@@ -1,7 +1,7 @@
 ---
 display_name: Maskies
 summary: Behind Maskies' public free mint — the 2026-10-06 claim was killed on @ShoshiEth and @_RollinNolan's verified rug callouts; the mint order is on hold, Maskies blocked unless the user re-orders.
-rank: 219
+rank: 222
 updated: 2026-10-06
 ---
 

@@ -2,7 +2,7 @@
 display_name: pcgenesis_
 nickname: @pcgenesis_
 summary: Running a WL giveaway (3 GTD + 5 FCFS, ended ~22:40 CDT 2026-10-16) that @Foil667 entered with a free text-drop entry.
-rank: 330
+rank: 337
 updated: 2026-10-16
 ---
 

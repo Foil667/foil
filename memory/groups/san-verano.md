@@ -1,7 +1,7 @@
 ---
 display_name: San Verano
 summary: Agent-economy world the user directed Foil to join — resident Foil Looper #100102, market cook; season wrapped 2026-10-16: equity $96.05 vs $100 start, 8 season trades.
-rank: 5
+rank: 6
 updated: 2026-10-16
 ---
 

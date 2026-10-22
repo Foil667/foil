@@ -2,7 +2,7 @@
 display_name: Computers Rh
 nickname: @computersrh
 summary: Behind Computers Rh's 3,333 free P2E early-access mint (Oct 8, 4pm UTC); the user applied to the whitelist himself before the 2026-10-07 11:00 CDT close.
-rank: 173
+rank: 176
 updated: 2026-10-07
 ---
 

@@ -1,0 +1,775 @@
+{
+  "associations": [
+    {
+      "association_id": "goal-cron:workspace/goals/wl-scout/crons/hourly/wl-opportunities-sweep__interval@24h.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "wl-opportunities-sweep",
+        "path": "workspace/goals/wl-scout/crons/hourly/wl-opportunities-sweep__interval@24h.md",
+        "title": "wl-opportunities-sweep__interval@24h.md"
+      },
+      "goal_id": "goal_3e9996a84a58",
+      "target_id": "wl-opportunities-sweep",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/wl-scout/crons/hourly/wl-scout-feeds-rebake__interval@1h.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "wl-scout-feeds-rebake",
+        "path": "workspace/goals/wl-scout/crons/hourly/wl-scout-feeds-rebake__interval@1h.md",
+        "title": "wl-scout-feeds-rebake__interval@1h.md"
+      },
+      "goal_id": "goal_3e9996a84a58",
+      "target_id": "wl-scout-feeds-rebake",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/wl-scout/crons/minutely/wl-scout-refresh-alerts__interval@15m.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "wl-scout-refresh-alerts",
+        "path": "workspace/goals/wl-scout/crons/minutely/wl-scout-refresh-alerts__interval@15m.md",
+        "title": "wl-scout-refresh-alerts__interval@15m.md"
+      },
+      "goal_id": "goal_3e9996a84a58",
+      "target_id": "wl-scout-refresh-alerts",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/wl-scout/crons/runonce/pigeon-crew-site-recheck__runonce@2026-10-12T10:30:00.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "pigeon-crew-site-recheck",
+        "path": "workspace/goals/wl-scout/crons/runonce/pigeon-crew-site-recheck__runonce@2026-10-12T10:30:00.md",
+        "title": "pigeon-crew-site-recheck__runonce@2026-10-12T10:30:00.md"
+      },
+      "goal_id": "goal_3e9996a84a58",
+      "target_id": "pigeon-crew-site-recheck",
+      "updated_at": ""
+    },
+    {
+      "association_id": "goal-cron:workspace/goals/wl-scout/crons/weekly/wl-tooling-research__weekly@Mon-10:36:00.md",
+      "association_type": "cron",
+      "created_at": "",
+      "details": {
+        "id": "wl-tooling-research",
+        "path": "workspace/goals/wl-scout/crons/weekly/wl-tooling-research__weekly@Mon-10:36:00.md",
+        "title": "wl-tooling-research__weekly@Mon-10:36:00.md"
+      },
+      "goal_id": "goal_3e9996a84a58",
+      "target_id": "wl-tooling-research",
+      "updated_at": ""
+    }
+  ],
+  "briefings": [],
+  "goal": {
+    "attention_kind": "user_action_required",
+    "attention_updated_at": "2026-10-17 01:31:03.806+00",
+    "created_at": "2026-10-04T06:31:55Z",
+    "current_state": "The hoodvale-industrial WL opens today; your tap is still needed on the Digital Humans GTD and the InkDaddynft free GTD spots.",
+    "description": "A read-only dashboard that checks any EVM address for whitelist and free-mint eligibility on Robinhood Chain and Base — onchain SeaDrop probes, holder-gate verification, live raffle feeds, and honest ELIGIBLE / CHECKER / INELIGIBLE verdicts with countdowns. The public GitHub Pages build scans client-side with no API keys shipped; the feed snapshot rebakes hourly and the opportunities sweep now runs daily, hunting only high-tier allowlists worth working toward.",
+    "emoji": "🎯",
+    "goal_id": "goal_3e9996a84a58",
+    "icon_generation_status": "ready",
+    "last_activity_at": "2026-10-17T12:04:49Z",
+    "momentum": "",
+    "momentum_status": "on_track",
+    "pushable": true,
+    "slug": "wl-scout",
+    "sort_order": 17,
+    "source": "assistant_tracking",
+    "status": "active",
+    "title": "WL Scout",
+    "updated_at": "2026-10-17T12:04:49Z"
+  },
+  "ok": true,
+  "recent_briefing": null,
+  "suggestions": [],
+  "updates": [
+    {
+      "created_at": "2026-10-17T12:04:49Z",
+      "current_state": "Feed snapshot refreshed and pushed to the live WL Scout site (commit 7780785).",
+      "description": "The scheduled rebake pulled 186 raffles (4 live) and 94 radar cards, committed the updated snapshot, and pushed it to GitHub Pages — the FEEDS tab's cached fallback stays fresh.",
+      "effective_at": "2026-10-17T12:04:49Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL Scout feed snapshot rebaked and pushed",
+      "update_id": "goal_update_79c302dee518",
+      "updated_at": "2026-10-17T12:04:49Z"
+    },
+    {
+      "created_at": "2026-10-16T22:05:00Z",
+      "current_state": "Feed snapshot refreshed and pushed (commit 8247d1f).",
+      "description": "Rebuilt the WL Scout feed snapshot — 185 raffles (6 live) plus a 72-card radar build — and pushed it to the live site so the FEEDS tab fallback stays fresh.",
+      "effective_at": "2026-10-16T22:05:00Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked and pushed",
+      "update_id": "goal_update_2882036e4996",
+      "updated_at": "2026-10-16T22:05:00Z"
+    },
+    {
+      "created_at": "2026-10-16T20:12:16Z",
+      "current_state": "Foil entered Cropz, pcgenesis_, and InkDaddynft on X; all tags and address drops confirmed posted.",
+      "description": "Foil completed all three entries (follow, like, repost, reply tagging @noyaphuckinbiz and @mybasetime with Foil's claim wallet). Bonus intel: InkDaddynft has 111 free GTD spots open on their website if he wants one with his own tap.",
+      "effective_at": "2026-10-16T20:12:16Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "3 giveaway entries completed — 2026-10-16",
+      "update_id": "goal_update_1cbd518517d6",
+      "updated_at": "2026-10-16T20:12:22Z"
+    },
+    {
+      "created_at": "2026-10-16T19:55:29Z",
+      "current_state": "4 new high-tier WL plays found; 3 engagements made; 3 giveaway entries steered.",
+      "description": "Swept radar, OpenSea drops, Hyvebox, botchan, and X: found Reefers and Robin Frens (GTD/FCFS free phases today on Robinhood), Digital Humans (GTD free Oct 22, 10k supply, biggest traction), plus Cropz, pcgenesis_, and InkDaddynft giveaways on X — entries steered under Foil's claim wallet. Digital Humans GTD needs your own tap (Soul ID tasks + wallet/Discord connects).",
+      "effective_at": "2026-10-16T19:55:29Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Daily high-tier WL sweep — 2026-10-16",
+      "update_id": "goal_update_44c2a9c2a9f3",
+      "updated_at": "2026-10-16T19:55:29Z"
+    },
+    {
+      "created_at": "2026-10-16T14:14:04Z",
+      "current_state": "Snapshot rebuilt and committed locally, but the push to GitHub failed on network errors — retrying next run.",
+      "description": "The feeds snapshot rebuilt cleanly (182 raffles tracked, 3 live) but pushing it to the live site failed twice with connection errors; the commit is queued locally and will go out on the next scheduled rebake.",
+      "effective_at": "2026-10-16T14:14:04Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebake",
+      "update_id": "goal_update_7bb5fefa1e2b",
+      "updated_at": "2026-10-16T14:14:04Z"
+    },
+    {
+      "created_at": "2026-10-16T10:05:03Z",
+      "current_state": "feeds.json rebaked and live on GitHub Pages fallback (commit c32f0ae).",
+      "description": "The 05:04 CDT rebake pulled fresh raffle and mint-radar data (182 raffles, 3 live; radar build 1792144996243 with 78 cards) and pushed the updated snapshot, so the FEEDS tab's cached fallback stays current.",
+      "effective_at": "2026-10-16T10:05:03Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed and pushed",
+      "update_id": "goal_update_1ed9243aa6d6",
+      "updated_at": "2026-10-16T10:05:03Z"
+    },
+    {
+      "created_at": "2026-10-16T09:04:52Z",
+      "current_state": "Feed snapshot refreshed and pushed at 09:04 UTC (182 raffles tracked, 3 live).",
+      "description": "The scheduled 30-minute rebake produced a fresh feeds.json (182 raffles, 3 live entries, radar build 1792141455524) and it was committed and pushed successfully to the live site.",
+      "effective_at": "2026-10-16T09:04:52Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked and pushed",
+      "update_id": "goal_update_efc2d2383956",
+      "updated_at": "2026-10-16T09:04:52Z"
+    },
+    {
+      "created_at": "2026-10-15T18:19:07Z",
+      "current_state": "Daily sweep done: no qualifying entries this run, 0 giveaways entered, one wallet address needed for Hyvebox WL Tracker.",
+      "description": "Checked radar, OpenSea, botchan, Hyvebox, and X: found h00dexe OG access tomorrow (list already closed), HoodPoker WL tonight (registration closed), and hoodvale-industrial WL Oct 17, plus follow-gated ESCCAP/Jadebound/TERMINLnet/Fomopoly giveaway leads for his tap; nothing met the entry bar, so nothing was entered.",
+      "effective_at": "2026-10-15T18:19:07Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Daily WL sweep 2026-10-15",
+      "update_id": "goal_update_76bcf821ef41",
+      "updated_at": "2026-10-15T18:19:07Z"
+    },
+    {
+      "created_at": "2026-10-15T10:05:17Z",
+      "current_state": "Feed snapshot refreshed and live — 179 raffles, 90 radar cards.",
+      "description": "Rebaked the WL Scout feed snapshot: both fetches succeeded first try, 179 raffles (none live) and 90 radar cards with 5 new and 2 dropped; committed and pushed to GitHub Pages.",
+      "effective_at": "2026-10-15T10:05:17Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked and pushed",
+      "update_id": "goal_update_fd00aef08586",
+      "updated_at": "2026-10-15T10:05:17Z"
+    },
+    {
+      "created_at": "2026-10-15T07:05:02Z",
+      "current_state": "FEEDS snapshot rebuilt, committed, and pushed successfully.",
+      "description": "The WL Scout static site's cached feed snapshot was refreshed with the latest radar cards and raffle data and pushed to GitHub Pages.",
+      "effective_at": "2026-10-15T07:05:02Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked and pushed",
+      "update_id": "goal_update_3e586daa6266",
+      "updated_at": "2026-10-15T07:05:02Z"
+    },
+    {
+      "created_at": "2026-10-15T00:04:58Z",
+      "current_state": "Feeds snapshot rebuilt and pushed to the live WL Scout site.",
+      "description": "The cached feed fallback was refreshed with the latest raffle and mint-radar data and pushed to the live site, so the FEEDS tab stays current.",
+      "effective_at": "2026-10-15T00:04:58Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL Scout feeds rebake",
+      "update_id": "goal_update_1f0341cff5d0",
+      "updated_at": "2026-10-15T00:04:58Z"
+    },
+    {
+      "created_at": "2026-10-14T20:15:40Z",
+      "current_state": "Entered 2 new high-tier GTD giveaways (OFFSIDE NFT, FlushiesRH); flagged 8 new radar WL cards opening through Oct 16.",
+      "description": "Found new high-tier whitelist plays: OFFSIDE NFT (3,000 pixel art, mint ~Oct 23, GTD/FCFS ~$1) and FlushiesRH (3,131 free Halloween mint Oct 31) — both entered with the standing tag rule. Plus 8 onchain WL cards with real-builder traction (ASTROKID, Drip Dragons, Founding Farmers, HOOD MUNSTAS, Blackout District, PRINTERS) opening through Oct 16. Hazels WL phase opens today at 13:00 CDT (paid, 0.0065 ETH).",
+      "effective_at": "2026-10-14T20:15:40Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Daily high-tier WL sweep — Oct 14",
+      "update_id": "goal_update_c90841686523",
+      "updated_at": "2026-10-14T20:15:40Z"
+    },
+    {
+      "created_at": "2026-10-14T20:09:52Z",
+      "current_state": "Snapshot refreshed and pushed at 15:07 CDT.",
+      "description": "The WL Scout feeds snapshot rebuilt with 179 live raffle entries and the latest radar data, and the new snapshot is live on the site.",
+      "effective_at": "2026-10-14T20:09:52Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feeds snapshot rebaked",
+      "update_id": "goal_update_d8f0e9966f27",
+      "updated_at": "2026-10-14T20:09:52Z"
+    },
+    {
+      "created_at": "2026-10-14T06:04:51Z",
+      "current_state": "FEEDS tab fallback refreshed — 179 raffles (6 live) snapped at 06:04 UTC and pushed to the live site.",
+      "description": "Ran the scheduled feed rebuild, found fresh data, and published it to the WL Scout site so the cached fallback never goes stale.",
+      "effective_at": "2026-10-14T06:04:51Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Rebaked WL Scout feed snapshot",
+      "update_id": "goal_update_b79246aa804a",
+      "updated_at": "2026-10-14T06:04:51Z"
+    },
+    {
+      "created_at": "2026-10-13T19:40:35Z",
+      "current_state": "MoneyMomos (paid, user call) and Tokesu (free, mechanics pending) are today's leads; HoodPoker snapshot tomorrow is your tap.",
+      "description": "MoneyMomos (3,333 PFPs, OpenSea Oct 29) is paid so it's the user's call; Tokesu's anime RPG free mint is watched pending entry mechanics; HoodPoker's snapshot needs the user's own wallet submit on hoodpoker.fun.",
+      "effective_at": "2026-10-13T18:24:56Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Daily WL sweep — MoneyMomos, Tokesu, HoodPoker",
+      "update_id": "goal_update_3c78a8354462",
+      "updated_at": "2026-10-13T19:40:35Z"
+    },
+    {
+      "created_at": "2026-10-13T16:05:20Z",
+      "current_state": "Feed snapshot refreshed and pushed to origin/main (commit 5277dfe).",
+      "description": "The WL Scout feed cache was rebuilt with fresh data — 173 raffles (3 live) and 82 radar drop cards — and pushed to GitHub Pages.",
+      "effective_at": "2026-10-13T16:05:20Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feeds rebake 2026-10-13 11:04 CDT",
+      "update_id": "goal_update_9d9c50564c7a",
+      "updated_at": "2026-10-13T16:05:20Z"
+    },
+    {
+      "created_at": "2026-10-12T23:05:08Z",
+      "current_state": "Snapshot rebuilt (171 raffles, 1 live; 65 radar cards) and pushed to origin/main.",
+      "description": "The WL Scout feed cache was refreshed and deployed to GitHub Pages, so the FEEDS tab's offline fallback stays current.",
+      "effective_at": "2026-10-12T23:05:08Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked and pushed",
+      "update_id": "goal_update_71c5a81e3ba5",
+      "updated_at": "2026-10-12T23:05:08Z"
+    },
+    {
+      "created_at": "2026-10-12T20:05:11Z",
+      "current_state": "Feeds snapshot refreshed and pushed; cached fallback is current.",
+      "description": "Rebuilt feeds.json (171 raffles, 1 live; 62 radar cards) and pushed it to the live site so the Feeds tab's cached fallback stays fresh.",
+      "effective_at": "2026-10-12T20:05:11Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feeds snapshot rebaked and pushed",
+      "update_id": "goal_update_81253d60cf9e",
+      "updated_at": "2026-10-12T20:05:11Z"
+    },
+    {
+      "created_at": "2026-10-12T19:05:51Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed — raffles and radar data are current.",
+      "description": "Re-baked feeds.json with fresh raffle and radar data and pushed the update to the live site.",
+      "effective_at": "2026-10-12T19:05:51Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_3e63cdcdae5e",
+      "updated_at": "2026-10-12T19:05:51Z"
+    },
+    {
+      "created_at": "2026-10-12T18:19:36Z",
+      "current_state": "No new high-tier WL plays cleared the bar today; two user-tap leads are open — the Meltcore application (closes Oct 13, 8:00 AM CDT) and the live Tauronomics Discord raffle (ends Oct 13, 11:43 AM CDT).",
+      "description": "Checked radar, OpenSea drops, Hyvebox, botchan, and X searches/curators; everything new was anonymous dust-tier except the two form/Discord leads, and the X sweep took no entries.",
+      "effective_at": "2026-10-12T18:19:36Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Daily WL high-tier sweep — Oct 12",
+      "update_id": "goal_update_18c23c2a844b",
+      "updated_at": "2026-10-12T18:19:36Z"
+    },
+    {
+      "created_at": "2026-10-12T16:05:30Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed with fresh raffle and radar data.",
+      "description": "Re-baked the cached feeds so the FEEDS tab fallback stays current.",
+      "effective_at": "2026-10-12T16:05:30Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_592c78334fd5",
+      "updated_at": "2026-10-12T16:05:30Z"
+    },
+    {
+      "created_at": "2026-10-12T15:39:29Z",
+      "current_state": "Found a Robinhood-native mint pattern worth stealing: latency-first firing on the FCFS sequencer, plus two other checker upgrades.",
+      "description": "Deep-dived three new tools and refreshed all seed leads; the top upgrade is pre-signing and sequencer-direct submission for Robinhood mints, where gas tips buy no priority.",
+      "effective_at": "2026-10-12T15:39:29Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Weekly WL-tooling research — Oct 12",
+      "update_id": "goal_update_fe5a1337cf11",
+      "updated_at": "2026-10-12T15:39:29Z"
+    },
+    {
+      "created_at": "2026-10-12T15:32:07Z",
+      "current_state": "Pigeon Crew site still paused at 10:30 AM CDT — no GTD form accessible before today's 11 AM window.",
+      "description": "Checked pigeoncrew.xyz live and read-only: it still shows Netlify's \"Site not available\" pause with no application form, so the fallback is the FCFS/public-free phase after GTD.",
+      "effective_at": "2026-10-12T15:32:07Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Pigeon Crew site recheck — still paused",
+      "update_id": "goal_update_b0cc902d95bd",
+      "updated_at": "2026-10-12T15:32:07Z"
+    },
+    {
+      "created_at": "2026-10-12T13:07:11Z",
+      "current_state": "Feed snapshot refreshed and pushed with fresh raffle and radar data.",
+      "description": "Re-baked the WL Scout feeds snapshot and pushed it live, keeping the cached fallback current.",
+      "effective_at": "2026-10-12T13:07:11Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_10dea38d2729",
+      "updated_at": "2026-10-12T13:07:11Z"
+    },
+    {
+      "created_at": "2026-10-12T12:05:13Z",
+      "current_state": "Feeds snapshot refreshed and pushed — raffles 170 total, radar 75 cards.",
+      "description": "Rebuilt the WL Scout feed snapshot and pushed the fresh copy so the cached fallback stays current.",
+      "effective_at": "2026-10-12T12:05:13Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feeds snapshot refreshed",
+      "update_id": "goal_update_cd24e34ccf0f",
+      "updated_at": "2026-10-12T12:05:13Z"
+    },
+    {
+      "created_at": "2026-10-12T08:05:11Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed — raffles and radar data are current.",
+      "description": "Re-baked the cached feeds snapshot so the FEEDS tab fallback stays fresh, with 170 raffles on file and 74 radar cards.",
+      "effective_at": "2026-10-12T08:05:11Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_dbf9f797879d",
+      "updated_at": "2026-10-12T08:05:11Z"
+    },
+    {
+      "created_at": "2026-10-12T05:05:13Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed successfully.",
+      "description": "The cached raffles and radar snapshot was rebuilt and published, keeping the FEEDS tab fallback fresh.",
+      "effective_at": "2026-10-12T05:05:13Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_24f5369bc17c",
+      "updated_at": "2026-10-12T05:05:13Z"
+    },
+    {
+      "created_at": "2026-10-12T03:05:05Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed with the latest raffle and radar data.",
+      "description": "Re-baked feeds.json (170 raffles, 79 radar cards) and pushed the new snapshot to the live site repo.",
+      "effective_at": "2026-10-12T03:05:05Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_847c5e570cfb",
+      "updated_at": "2026-10-12T03:05:05Z"
+    },
+    {
+      "created_at": "2026-10-12T00:05:44Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed — raffles and radar data are current.",
+      "description": "Re-baked the cached feed snapshot so the FEEDS tab fallback stays fresh, with 170 raffles on record and 78 radar cards captured.",
+      "effective_at": "2026-10-12T00:05:44Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_3943aa356c36",
+      "updated_at": "2026-10-12T00:05:44Z"
+    },
+    {
+      "created_at": "2026-10-11T23:05:20Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed — raffles and radar data are current.",
+      "description": "Re-baked the cached feed snapshot so the FEEDS tab fallback stays fresh, with live raffle and radar data verified before publishing.",
+      "effective_at": "2026-10-11T23:05:20Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_169ab4fdf831",
+      "updated_at": "2026-10-11T23:05:20Z"
+    },
+    {
+      "created_at": "2026-10-11T22:05:16Z",
+      "current_state": "WL Scout feed snapshot refreshed and pushed with fresh raffle and radar data.",
+      "description": "Re-baked feeds.json and pushed the updated snapshot so the FEEDS tab fallback stays current.",
+      "effective_at": "2026-10-11T22:05:16Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_ab06537ea78c",
+      "updated_at": "2026-10-11T22:05:16Z"
+    },
+    {
+      "created_at": "2026-10-11T18:18:46Z",
+      "current_state": "Two new high-tier leads found (Pigeon Crew and Hazels), but every entry path needs the user's own tap or a follow Foil won't make — nothing was entered.",
+      "description": "Pigeon Crew's free GTD opens Oct 12 with a form application, and Hazels' GTD round lands Oct 14 with applications already closed — both are leads for the user's tap, while raffles and OpenSea allowlists were empty today.",
+      "effective_at": "2026-10-11T18:18:46Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Daily high-tier WL watch — Oct 11",
+      "update_id": "goal_update_7ba33b5a1ebd",
+      "updated_at": "2026-10-11T18:18:46Z"
+    },
+    {
+      "created_at": "2026-10-10T19:38:59Z",
+      "current_state": "The WL lane now hunts only high-tier allowlists worth working toward, daily.",
+      "description": "Per the presence-over-mint-hunting shift and the redundancy audit, the 2h bi-wallet scans and 15-minute mint alerts were stood down, the opportunities sweep is now daily and high-tier-only, and the feed rebake runs hourly.",
+      "effective_at": "2026-10-10T18:04:44Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL lane narrowed to daily high-tier watch",
+      "update_id": "goal_update_571a440f231b",
+      "updated_at": "2026-10-10T19:38:59Z"
+    },
+    {
+      "created_at": "2026-10-10T16:05:14Z",
+      "current_state": "Entered the @DipaWeb3 TemrushNFTs GTD giveaway (wallet-drop only, deadline ~9:51 AM CDT Oct 11); a burst of free Robinhood WL/GTD cards opened this morning.",
+      "description": "Pulled all six sources: radar feed showed 62 new WL/GTD/FCFS cards (most opening free on Robinhood today), 3 free raffles live (entry via Discord = your tap), OpenSea had no allowlist stages, and X yielded one clean entry — the TemrushNFTs GTD — plus follow-gated and crew-adjacent ones I skipped, and form/quest leads (INKSIGIL seal closes Oct 11, FungoLabs, YieldFields_RH Oct 12) that need your own tap.",
+      "effective_at": "2026-10-10T16:05:14Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL sweep: 62 new radar WL/GTD cards + 1 giveaway entry",
+      "update_id": "goal_update_59fd71c9edfa",
+      "updated_at": "2026-10-10T16:05:14Z"
+    },
+    {
+      "created_at": "2026-10-10T15:45:29Z",
+      "current_state": "WL Scout's cached feed snapshot was refreshed and pushed.",
+      "description": "Both feed sources came through clean, so the FEEDS tab's offline fallback now carries the latest snapshot.",
+      "effective_at": "2026-10-10T15:45:29Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "FEEDS tab snapshot rebaked",
+      "update_id": "goal_update_b504c726950b",
+      "updated_at": "2026-10-10T15:45:29Z"
+    },
+    {
+      "created_at": "2026-10-10T14:15:30Z",
+      "current_state": "WL Scout feed snapshot rebuilt and pushed — raffles and mint radar feeds current as of 9:15 AM CDT.",
+      "description": "The scheduled re-bake pulled fresh raffle and radar data and published it to the WL Scout site, so the FEEDS tab fallback stays current.",
+      "effective_at": "2026-10-10T14:15:30Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_13bbb18bc069",
+      "updated_at": "2026-10-10T14:15:30Z"
+    },
+    {
+      "created_at": "2026-10-10T12:45:06Z",
+      "current_state": "Feed snapshot rebuilt and pushed — the dashboard's cached fallback is current.",
+      "description": "The scheduled rebake ran clean: 168 raffles tracked (1 live) plus the latest mint radar, committed and deployed to the live dashboard.",
+      "effective_at": "2026-10-10T12:45:06Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked and deployed",
+      "update_id": "goal_update_fbb462a23010",
+      "updated_at": "2026-10-10T12:45:06Z"
+    },
+    {
+      "created_at": "2026-10-10T07:27:39Z",
+      "current_state": "ANONHOOD GTD (~6:38am CDT Oct 10) and PharaohGodMob need the user's own action.",
+      "description": "ANONHOOD's GTD free mint (~6:38am CDT Oct 10) needs their WL form at anonhood.fun/wl, which Foil can't fill; PharaohGodMob's free mint needs a DM, which Foil can't send. Holder-gated leads (Little Guys, zombegotchi) were skipped at 0 squares, and Trenchstrokerz's free leg dies at midnight, ineligible.",
+      "effective_at": "2026-10-10T04:00:36Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Two leads need the user's tap",
+      "update_id": "goal_update_5459530e814e",
+      "updated_at": "2026-10-10T07:27:39Z"
+    },
+    {
+      "created_at": "2026-10-10T03:58:00Z",
+      "current_state": "SplitzPunks GTD free-mint giveaway fully entered and verified on X.",
+      "description": "The 12-hour sweep surfaced 9 new WL/raffle leads; the standout entry — SplitzPunks' GTD free-mint final call (6,666 supply, Robinhood Chain) — got follow, like, repost, and a wallet-address reply from @Foil667, all confirmed still posted after a reload. Most other leads were holder-gated, paid-mint, or needed the user's own tap.",
+      "effective_at": "2026-10-10T03:58:00Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Whitelist sweep 2026-10-09 23:10 CDT",
+      "update_id": "goal_update_dcea5c31562e",
+      "updated_at": "2026-10-10T03:58:00Z"
+    },
+    {
+      "created_at": "2026-10-09T17:45:41Z",
+      "current_state": "Feed snapshot refreshed and pushed — FEEDS tab fallback is current.",
+      "description": "The scheduled rebake pulled fresh raffle and mint data and published an updated snapshot, so the dashboard's cached fallback stays current.",
+      "effective_at": "2026-10-09T17:45:41Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_d1ade74f74a4",
+      "updated_at": "2026-10-09T17:45:41Z"
+    },
+    {
+      "created_at": "2026-10-09T15:57:46Z",
+      "current_state": "11 new onchain whitelist phases tracked; 2 new Discord-raffle leads closing today; X entries resume after the 18:45 CDT pause lift.",
+      "description": "Headless sweep found 11 new whitelist-phase cards on the radar (3 open now), 10 status changes, and 2 new free Discord raffles closing today — Quest Key (1:45pm CDT) and Humi (10:53am CDT) — while the X pause held, so nothing was entered; the TMF allowlist form still needs your tap before its Saturday-morning deadline.",
+      "effective_at": "2026-10-09T15:57:46Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL sweep 10:47 CDT — new opportunities logged",
+      "update_id": "goal_update_6a2f1ee46682",
+      "updated_at": "2026-10-09T15:57:46Z"
+    },
+    {
+      "created_at": "2026-10-09T12:15:06Z",
+      "current_state": "Feed snapshot refreshed and published — the FEEDS tab's cached fallback is current.",
+      "description": "The WL Scout feed snapshot was rebuilt with fresh raffle and mint-radar data and pushed live to the public dashboard.",
+      "effective_at": "2026-10-09T12:15:06Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked",
+      "update_id": "goal_update_856d112f98e7",
+      "updated_at": "2026-10-09T12:15:06Z"
+    },
+    {
+      "created_at": "2026-10-09T03:53:03Z",
+      "current_state": "29 new WL-phase cards and 1 new raffle found; zero entries made (X pause until Oct 9 18:45 CDT).",
+      "description": "Headless-only sweep (X pause active) surfaced 29 new whitelist/GTD/FCFS-phase cards on the radar feed plus a new Everybody Loves Robihood raffle ending Oct 9 1:26pm CDT that needs your tap for the Discord entry; no X entries were made during the pause.",
+      "effective_at": "2026-10-09T03:53:03Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL sweep 2026-10-08 22:47 CDT — 29 new cards, 1 new raffle",
+      "update_id": "goal_update_c5473509e52b",
+      "updated_at": "2026-10-09T03:53:03Z"
+    },
+    {
+      "created_at": "2026-10-08T21:14:57Z",
+      "current_state": "Feed snapshot refreshed and pushed at 21:14 UTC (167 raffles, 9 live).",
+      "description": "The rebake pulled both feeds successfully and the new snapshot is live on the site.",
+      "effective_at": "2026-10-08T21:14:57Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked and pushed",
+      "update_id": "goal_update_ec5eb42870f9",
+      "updated_at": "2026-10-08T21:14:57Z"
+    },
+    {
+      "created_at": "2026-10-08T16:11:32Z",
+      "current_state": "Entered 4 open WL/GTD giveaways (NullHood, Zumi, Robinhood Muse, FIRST 0NE) — all verified live on X.",
+      "description": "Found 6 fresh whitelist opportunities in the Oct 8 sweep; entered the 4 with simple like/reply mechanics and verified each persisted. Lime Hood Punk needs a site-form WL application from you, and Pixel Bots' free stage is holder-gated (Bankr Club or top-500 $BNKR).",
+      "effective_at": "2026-10-08T16:11:32Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL sweep: 4 giveaways entered, 2 need your tap",
+      "update_id": "goal_update_8ec2a71c8d66",
+      "updated_at": "2026-10-08T16:11:32Z"
+    },
+    {
+      "created_at": "2026-10-08T03:57:13Z",
+      "current_state": "Swept all WL sources; 28 new onchain WL/GTD phases logged, 4 new X giveaway leads found but none entered after X flagged the session for automation.",
+      "description": "Radar, raffles, OpenSea drops, and botchan checked; new leads include an evergreen_nft giveaway ending tomorrow evening and a Mutual Fun Pass allowlist form needing your tap, while X writes are paused tonight after an automation notice on a single like.",
+      "effective_at": "2026-10-08T03:57:13Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL sweep 10:47 PM — 28 new radar WL phases, X went read-only",
+      "update_id": "goal_update_0266d3c7197f",
+      "updated_at": "2026-10-08T03:57:13Z"
+    },
+    {
+      "created_at": "2026-10-08T06:11:00Z",
+      "current_state": "Robinhood Rocks (Oct 8, 1–2 PM CDT) and SEEKER NET are off the board with square #4429 out of both wallets.",
+      "description": "Cleanup pass removed the two square-gated windows from tonight's watch; no other options were lost.",
+      "effective_at": "2026-10-08T01:26:21Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Square-gated windows cleared from watch",
+      "update_id": "goal_update_2d8e396397ea",
+      "updated_at": "2026-10-08T06:11:00Z"
+    },
+    {
+      "created_at": "2026-10-08T01:12:09Z",
+      "current_state": "Entry is in on the LastZhood GTD post; the site form needs your own wallet connect.",
+      "description": "At the user's order, Foil dropped the EVM address on LastZhood's GTD whitelist post for the Oct 9 mint (first 500 wallets); their site form at lastzhood.fun/early still needs the user's own wallet connect, and the account is a month old with an anonymous team.",
+      "effective_at": "2026-10-07T20:41:44Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "LastZhood GTD whitelist entered",
+      "update_id": "goal_update_742cd35d3703",
+      "updated_at": "2026-10-08T01:12:09Z"
+    },
+    {
+      "created_at": "2026-10-07T18:48:50Z",
+      "current_state": "Fresh snapshot committed locally (2e46ade) but push failed: GitHub HTTPS unreachable, origin/main one commit behind.",
+      "description": "Rebaked the WL Scout feeds snapshot (158 raffles, 7 live; 95 radar cards) and committed it, but the push to GitHub failed three times with a reset connection, so the public site's cached feeds stay stale until the next run pushes through.",
+      "effective_at": "2026-10-07T18:48:50Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed rebake: snapshot built, push failed",
+      "update_id": "goal_update_89b284358690",
+      "updated_at": "2026-10-07T18:48:50Z"
+    },
+    {
+      "created_at": "2026-10-07T11:44:59Z",
+      "current_state": "feeds.json refreshed and pushed; FEEDS tab cached fallback is current.",
+      "description": "The scheduled rebake rebuilt the feed snapshot (radar feed 102 cards, 157 raffles with 6 live) and pushed it to the site; the build was healthy and nothing else changed.",
+      "effective_at": "2026-10-07T11:44:59Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot rebaked",
+      "update_id": "goal_update_0d14415ee227",
+      "updated_at": "2026-10-07T11:44:59Z"
+    },
+    {
+      "created_at": "2026-10-07T07:45:25Z",
+      "current_state": "Feed snapshot rebuilt (151 raffles, 98 radar cards) and pushed to GitHub Pages.",
+      "description": "The scheduled 30-minute rebake pulled fresh raffle and radar data and published it, keeping the dashboard's cached fallback current.",
+      "effective_at": "2026-10-07T07:45:25Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL Scout feed snapshot rebaked",
+      "update_id": "goal_update_d7d7426ca629",
+      "updated_at": "2026-10-07T07:45:25Z"
+    },
+    {
+      "created_at": "2026-10-07T00:58:00Z",
+      "current_state": "Foil's square #4429 is the family's only CCFF00 square.",
+      "description": "Onchain check showed the user's square-holding wallet at 0 squares, so #4429 remains the single eligibility anchor for CCFF00-gated claims.",
+      "effective_at": "2026-10-06T17:26:41Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "User's square wallet holds 0 CCFF00 squares",
+      "update_id": "goal_update_ddd9ae7ab268",
+      "updated_at": "2026-10-07T00:58:00Z"
+    },
+    {
+      "created_at": "2026-10-07T00:58:00Z",
+      "current_state": "Robinhood Rocks' CCFF00-only free stage is watchlisted for Oct 8, 1:00–2:00 PM CDT.",
+      "description": "Robinhood Rocks is running a CCFF00-only free stage (2 per wallet, CA 0x052e74f49122f32df398f3bac92823cdc7398414) on Oct 8; Foil qualifies via square #4429 and it is watchlisted for the window.",
+      "effective_at": "2026-10-06T15:56:57Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Robinhood Rocks CCFF00-only stage Oct 8 watchlisted",
+      "update_id": "goal_update_8937461f9704",
+      "updated_at": "2026-10-07T00:58:00Z"
+    },
+    {
+      "created_at": "2026-10-07T00:58:00Z",
+      "current_state": "Named a HOODVALE Day 6/30 GTD winner; claim mechanics and deadline need checking.",
+      "description": "@hoodvale_nft listed @Foil667 as a GTD winner in their Day 6/30 post; the claim mechanics and deadline are unknown, so the slot needs checking before it lapses.",
+      "effective_at": "2026-10-06T10:40:17Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "HOODVALE Day 6/30 GTD win — claim slot open",
+      "update_id": "goal_update_cbc125e000a6",
+      "updated_at": "2026-10-07T00:58:00Z"
+    },
+    {
+      "created_at": "2026-10-06T06:45:02Z",
+      "current_state": "FEEDS tab fallback is fresh: snapshot rebuilt and pushed to the live site.",
+      "description": "The scheduled rebake rebuilt the feed snapshot (151 raffles tracked, 104 radar cards across chains) and pushed it live, so the FEEDS tab's cached fallback stays current.",
+      "effective_at": "2026-10-06T06:45:02Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot re-baked and published",
+      "update_id": "goal_update_6e3255f3c3d0",
+      "updated_at": "2026-10-06T06:45:02Z"
+    },
+    {
+      "created_at": "2026-10-06T04:15:05Z",
+      "current_state": "feeds.json refreshed (151 raffles, 108 radar cards) and pushed to main as 9323592.",
+      "description": "The scheduled rebake ran clean: both feed sources loaded, the cached snapshot was committed and verified live on the site.",
+      "effective_at": "2026-10-06T04:15:05Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot re-baked",
+      "update_id": "goal_update_3eabe9f149ad",
+      "updated_at": "2026-10-06T04:15:05Z"
+    },
+    {
+      "created_at": "2026-10-06T03:15:11Z",
+      "current_state": "Feed snapshot rebuilt and pushed live.",
+      "description": "The WL Scout feed snapshot was rebuilt with fresh raffle and drop data and pushed to the site, so the cached fallback stays current.",
+      "effective_at": "2026-10-06T03:15:11Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed",
+      "update_id": "goal_update_d374689f3098",
+      "updated_at": "2026-10-06T03:15:11Z"
+    },
+    {
+      "created_at": "2026-10-06T02:45:09Z",
+      "current_state": "FEEDS tab fallback snapshot is fresh on the live site (commit 5f35fc4).",
+      "description": "Re-baked feeds.json with 151 raffles and 110 radar cards and pushed it to the live WL Scout site.",
+      "effective_at": "2026-10-06T02:45:09Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot refreshed and pushed",
+      "update_id": "goal_update_1a9ba3edf9e4",
+      "updated_at": "2026-10-06T02:45:09Z"
+    },
+    {
+      "created_at": "2026-10-07T00:58:00Z",
+      "current_state": "Scanner files committed and pushed; the live site stays untouched.",
+      "description": "The user's uncommitted headless scanner files were committed and pushed to Foil667/wl-scout with a README section; the live site was left untouched so the Stray Cucks hourly budget stays protected.",
+      "effective_at": "2026-10-06T01:27:03Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "wl-scout scanner files committed and pushed",
+      "update_id": "goal_update_2286cd06a7dd",
+      "updated_at": "2026-10-07T00:58:00Z"
+    },
+    {
+      "created_at": "2026-10-07T00:58:00Z",
+      "current_state": "The 2h wallet scan now merges Stray Cucks' per-wallet eligibility rollup.",
+      "description": "New straycucks.mjs module (--check/--ccff00/--trust/--drops-refresh) plus scan-wallets.mjs --stray; the 2h wl-scout-wallet-scan cron now runs with --stray and treats newly appearing eligible drops as reportable, with 1h/30min caches protecting the tiny hourly checks budget.",
+      "effective_at": "2026-10-06T00:49:34Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Stray Cucks allowlist scanner wired into the WL checker",
+      "update_id": "goal_update_c07ad56d9dd6",
+      "updated_at": "2026-10-07T00:58:00Z"
+    },
+    {
+      "created_at": "2026-10-05T16:33:10Z",
+      "current_state": "8 new GTD giveaways found on X; Foil entered 4 (hawaianhood, AwakenRH, h00dexe, Midnight Puppets); raffle/CCFF00/Hyvebox/OpenSea feeds all quiet.",
+      "description": "Swept every WL source — radar, raffles, Hyvebox, OpenSea drops, botchan, WL Scout, X searches — and found 8 fresh Robinhood Chain GTD giveaways (hawaianhood 15x, AwakenRH 10+15, h00dexe 5x, Midnight Puppets 42x, PaperDAO, HOODVALE); Foil entered the four strongest free-mint ones at human pace.",
+      "effective_at": "2026-10-05T16:33:10Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "WL sweep: 8 new giveaways, 4 entered",
+      "update_id": "goal_update_64b9a9a856f2",
+      "updated_at": "2026-10-05T16:33:10Z"
+    },
+    {
+      "created_at": "2026-10-05T15:53:22Z",
+      "current_state": "Eight gaps identified and eleven upgrades queued: five quick wins, six builds, plus a watch list.",
+      "description": "Evaluated all three sweeps against our stack and wrote the consolidated plan to the research log: quick wins are free-mint classification on OpenSea drops, a headless mintgo.fun real-time feed client, SkyBOT raffle ingestion, shell hardening markers, and a recon trick sheet; builds are a 1-minute RH \"loud alert\" worker, a $0 Telegram alert bot, drop-watch revalidation on pending schedules, a WL-quest checklist schema, and an on-demand Telegram check bot.",
+      "effective_at": "2026-10-05T15:53:22Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Weekly WL-tooling research — consolidated recommendations",
+      "update_id": "goal_update_65823f0d6965",
+      "updated_at": "2026-10-05T15:53:22Z"
+    },
+    {
+      "created_at": "2026-10-05T15:46:42Z",
+      "current_state": "Found 5 steal-worthy alert bots/patterns for Base + Robinhood Chain WL tracking; flagged one scam pattern.",
+      "description": "The weekly WL-tooling sweep studied alert bots across X, Telegram, Discord, and push paths — best picks are storm-credit/nft-mint-radar (Base+RH WL/quest checklists), blksapphire/nftscan ($0 alert-only Telegram bot), and a 1-minute RH \"loud alert\" Cloudflare Worker pattern; flagged paid-placement \"free mint alert\" groups as hostile by default.",
+      "effective_at": "2026-10-05T15:46:42Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Weekly WL-tooling research — alert bots sweep",
+      "update_id": "goal_update_4606d0132989",
+      "updated_at": "2026-10-05T15:46:42Z"
+    },
+    {
+      "created_at": "2026-10-05T15:45:59Z",
+      "current_state": "Found 5 steal-worthy mint/WL tracking tools new to our stack, including a live real-time Robinhood-chain mint feed.",
+      "description": "New finds: pdonir/nft-mint-check-pipeline (X-list scraping → wallet eligibility → Telegram push), mintgo.fun's real-time WebSocket mint feed (Robinhood/Ink/Arc chains, free, live), seasore's scheduled-mint \"drop watch\" pattern, MintSea's edge-based SeaDrop WL verifier, and SkyBOT Raffle's cross-community allowlist raffle browser.",
+      "effective_at": "2026-10-05T15:45:59Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Weekly WL-tooling research",
+      "update_id": "goal_update_ff83941dfb84",
+      "updated_at": "2026-10-05T15:45:59Z"
+    },
+    {
+      "created_at": "2026-10-05T06:43:10Z",
+      "current_state": "Weekly WL tooling research is live; first teardown of four seed leads (candaraz/nft-public-mint, opensea-eligibility-checker, mintgo.fun, nft-mint-rarity-toolkit) lands Monday.",
+      "description": "The user ordered a standing hunt for better whitelist tooling; the assistant made it a weekly Monday job and already surfaced four real builds to pick apart for upgrades to the stack.",
+      "effective_at": "2026-10-05T04:06:18Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Weekly WL tooling research ordered",
+      "update_id": "goal_update_c558bab2e6f8",
+      "updated_at": "2026-10-05T06:43:10Z"
+    },
+    {
+      "created_at": "2026-10-05T06:43:10Z",
+      "current_state": "WL sweep confirmed: radar WL/GTD/OG phases, raffles feed, Hyvebox, OpenSea allowlist stages, botchan, WL Scout feeds, and X checked twice daily; Foil enters free ones and engages open projects to cement spots.",
+      "description": "The user ordered Foil to be his eyes and ears on whitelists using every tracking and engagement tool; the assistant wired all sources into the twice-daily sweep, entering free lists, engaging with open-WL projects, and reporting new opportunities with deadlines and what needs the user's tap.",
+      "effective_at": "2026-10-05T03:47:35Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "User-ordered full WL tracking sweep",
+      "update_id": "goal_update_05a443101561",
+      "updated_at": "2026-10-05T06:43:10Z"
+    },
+    {
+      "created_at": "2026-10-04T20:45:50Z",
+      "current_state": "Feed snapshot refreshed and published; the dashboard's cached fallback is current.",
+      "description": "Rebuilt the WL Scout feed snapshot with fresh raffle and mint data and pushed it to the live site.",
+      "effective_at": "2026-10-04T20:45:50Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Feed snapshot re-baked",
+      "update_id": "goal_update_563663064b2c",
+      "updated_at": "2026-10-04T20:45:50Z"
+    },
+    {
+      "created_at": "2026-10-04T06:31:55Z",
+      "current_state": "Live at foil667.github.io/wl-scout with bi-wallet scans every ~2h and 10-minute iPhone mint alerts in your Mints list.",
+      "description": "A read-only dashboard that checks any EVM address for whitelist and free-mint eligibility on Robinhood Chain and Base — onchain SeaDrop probes, holder-gate verification, live raffle feeds, and honest ELIGIBLE / CHECKER / INELIGIBLE verdicts with countdowns. The public GitHub Pages build scans client-side with no API keys shipped; a 30-minute rebake keeps the feed snapshot fresh, while a bi-wallet scan every ~2h and 10-minute iPhone mint alerts in the Mints list (auto-completed 2h past due) run underneath.",
+      "effective_at": "2026-10-04T06:31:55Z",
+      "goal_id": "goal_3e9996a84a58",
+      "title": "Added WL Scout",
+      "update_id": "goal_update_24e2d5d71303",
+      "updated_at": "2026-10-04T06:31:55Z"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 ---
 display_name: Veylora
 summary: Behind Veylora's free Robinhood Chain WL presale; Foil claimed ×2 on 2026-10-06 — both transfer-locked (soulbound-style) and stuck in Foil's wallet after the 2026-10-06 forward.
-rank: 234
+rank: 237
 updated: 2026-10-06
 ---
 

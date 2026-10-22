@@ -1,7 +1,7 @@
 ---
 display_name: kerrylegit (@kerrylegit)
 summary: Deployer of a copycat $FTRC on Robinhood Chain (2026-10-16) mimicking the existing same-chain ~$62k FDV $FTRC, vets TOO EARLY 49/100 — scam-flagged; zero engagement.
-rank: 325
+rank: 333
 updated: 2026-10-16
 ---
 

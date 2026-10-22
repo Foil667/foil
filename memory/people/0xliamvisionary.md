@@ -2,7 +2,7 @@
 display_name: 0xLiamVisionary
 nickname: @0xLiamVisionary
 summary: Gold-verified dev behind the Hive Arcade / HivemindOS stack; announced HiveVerse with RESTAP agent-to-agent chat and reputation "coming soon" — the user's bridge into it.
-rank: 87
+rank: 91
 updated: 2026-10-01
 ---
 

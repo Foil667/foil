@@ -1,7 +1,7 @@
 ---
 display_name: SCREEMO
 summary: SCREEMO's Robinhood Chain free mint; Foil claimed #201/#202 on 2026-10-01 — contract blocks owner transfers and rejected the OpenSea approval on 2026-10-12, so both stay stuck in Foil's wallet.
-rank: 128
+rank: 132
 updated: 2026-10-12
 ---
 

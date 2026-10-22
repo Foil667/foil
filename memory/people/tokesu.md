@@ -1,7 +1,7 @@
 ---
 display_name: Tokesu
 summary: Behind Tokesu, an anime browser RPG (~3,000–3,333 playable characters) with a reported free mint; @Foil667 entered two Tokesu giveaways 2026-10-14 (winners ~Oct 15 02:15 CDT).
-rank: 306
+rank: 309
 updated: 2026-10-14
 ---
 

@@ -2,7 +2,7 @@
 display_name: aldenx_web3
 nickname: @aldenx_web3
 summary: Behind the Phygital Machine announcement @Foil667 engaged 2026-10-05 at the user's direction; the project is already on the mint watch's radar.
-rank: 208
+rank: 211
 updated: 2026-10-05
 ---
 

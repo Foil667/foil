@@ -2,7 +2,7 @@
 display_name: LastZhood
 nickname: @lastzhood
 summary: Behind LastZhood's Oct 9 mint; Foil entered the GTD whitelist 2026-10-07 at the user's direction — the site form's wallet connect still needs his own tap; month-old account, anonymous team.
-rank: 264
+rank: 267
 updated: 2026-10-07
 ---
 

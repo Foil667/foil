@@ -2,7 +2,7 @@
 display_name: AlphaRoboverse
 nickname: @AlphaRoboverse
 summary: Behind AlphaRoboverse, whose public mint went live 2026-09-21 at $1.5 (not free despite the branding); @Foil667 follow directed by the user on 2026-09-21.
-rank: 28
+rank: 32
 updated: 2026-09-21
 ---
 

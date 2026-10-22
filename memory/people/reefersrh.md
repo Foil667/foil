@@ -2,7 +2,7 @@
 display_name: Reefers
 nickname: @ReefersRH
 summary: Verified X account (@ReefersRH) — user had Foil check their 82-NFT giveaway 2026-10-04 (chat-gated, lead-only); 2026-10-16 their GTD free mint window passed (14:30), OpenSea checker live.
-rank: 168
+rank: 171
 updated: 2026-10-16
 ---
 

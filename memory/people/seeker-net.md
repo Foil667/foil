@@ -1,7 +1,7 @@
 ---
 display_name: SEEKER NET
 summary: Behind SEEKER NET's free Oct 8 mint — CCFF00-holder GTD confirmed 2026-10-05; off the board 2026-10-07 after square #4429 left both wallets (funding question moot).
-rank: 183
+rank: 186
 updated: 2026-10-08
 ---
 

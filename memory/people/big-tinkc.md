@@ -2,7 +2,7 @@
 display_name: BigTinKC
 nickname: @BigTinKC
 summary: Founder of @CommonGroundNFT, collab manager in the CCFF00 scene — @Foil667 engagement banned 2026-10-09 (pre-ban likes stay per user's Oct 10 call), read-only intel only.
-rank: 10
+rank: 13
 updated: 2026-10-10
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: hoodbandits
 summary: Watch lead — free FCFS for CCFF00 Square/Circle holders on 2026-10-07 12–1pm CDT, but no onchain config existed yet, so Foil held off; wait-and-see.
-rank: 263
+rank: 266
 updated: 2026-10-07
 ---
 

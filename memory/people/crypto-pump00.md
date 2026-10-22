@@ -2,7 +2,7 @@
 display_name: crypto_pump00
 nickname: @crypto_pump00
 summary: Scam-flagged X account — pushed the $SPEPE send-SOL presale with drainer F7eW...2eqdNH on 2026-10-05, the same wallet @airdop_crypto/@BTCNewsGlobal used 2026-10-10; zero engagement.
-rank: 294
+rank: 296
 updated: 2026-10-10
 ---
 

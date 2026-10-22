@@ -2,7 +2,7 @@
 display_name: HoodVandalz
 nickname: @HoodVandalz
 summary: Verified X account whose 3,333-supply free Vandalz mint dropped Mon Sep 28 12:00 PM CDT and sold out the same day; @Foil667 entered their giveaway 2026-10-03 at the user's direction.
-rank: 74
+rank: 78
 updated: 2026-10-03
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: BRODIES
 summary: Behind BRODIES' Robinhood Chain mint; Foil claimed ×4 (free) on 2026-10-06 — held in Foil's wallet.
-rank: 242
+rank: 245
 updated: 2026-10-06
 ---
 

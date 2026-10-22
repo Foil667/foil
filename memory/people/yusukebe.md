@@ -1,7 +1,7 @@
 ---
 display_name: yusukebe (@yusukebe)
 summary: Deployer of a copycat $Void on Base (2026-10-16) mimicking the established ~$262k FDV $Void, vets RISKY 49/100 — scam-flagged; zero engagement.
-rank: 326
+rank: 334
 updated: 2026-10-16
 ---
 

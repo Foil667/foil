@@ -7,6 +7,7 @@ _What you want to hear about without asking, what you never want brought up, and
 
 ## Never tell me about
 - X activity reports — the user does not want reports, summaries, or "heads up" messages about X (2026-09-24: "Stop telling me about shit... You do it."). Act on findings autonomously within standing permissions and stay silent. Only surface something if the user's own tap is required (auth links, passwords, access codes) or a fund movement needs approval.
+- ANYTHING AT ALL from 2026-10-20 ~15:03 CDT through 2026-10-23 ~15:03 CDT — user-ordered 3-day total silence while the new setup (verification desk + Corpse Ledger) runs (2026-10-20: "Don't contact me for anything for three days after we get your new set up locked in"). No proactive messages, no nudges, no reports during the window.
 
 ## When
 

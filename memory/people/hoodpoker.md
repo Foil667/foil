@@ -1,7 +1,7 @@
 ---
 display_name: HoodPoker
 summary: Behind the HoodPoker House Pass (7,777, OpenSea Oct 15) and HoodFi Names; open-WL snapshot closed Oct 14 6 PM CDT with no evidence the user entered; #4429 missed the free snapshot.
-rank: 140
+rank: 144
 updated: 2026-10-14
 ---
 

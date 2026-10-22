@@ -1,7 +1,7 @@
 ---
 display_name: SinnisterHarrow
 summary: Behind QuadGrifters, whose Sep 24 CCFF00 free claim was confirmed a honeypot onchain — standing no-touch; also behind Hellbox Comix's SciVive free book mint.
-rank: 63
+rank: 67
 updated: 2026-09-25
 ---
 

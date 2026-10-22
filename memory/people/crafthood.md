@@ -2,7 +2,7 @@
 display_name: Crafthood
 nickname: @Crafthood_
 summary: Robinhood Chain project (2,222 supply) — Foil holds 5 GTD + 7 FCFS WL spots from a separate older giveaway (not @TheUnderdogsHK's 2026-10-13 contest).
-rank: 117
+rank: 121
 updated: 2026-10-14
 ---
 

@@ -2,7 +2,7 @@
 display_name: qyhmmrsETH
 nickname: @qyhmmrsETH
 summary: X account pushing the fake "robinhood-main-dex" netlify.app $CRED phishing wave — named in the 2026-10-10 PSA; now carries a blue check and is surfacing in X's "Who to follow"; zero engagement.
-rank: 283
+rank: 285
 updated: 2026-10-11
 ---
 

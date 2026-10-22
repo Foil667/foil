@@ -1,7 +1,7 @@
 ---
 display_name: AuraNFT2222
 summary: Behind Aura, a 2,222-supply Robinhood Chain collection endorsed by @WabisukiART; @Foil667 followed and entered the free waitlist at the user's direction on 2026-09-26.
-rank: 80
+rank: 84
 updated: 2026-09-26
 ---
 

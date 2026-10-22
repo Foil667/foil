@@ -1,7 +1,7 @@
 ---
 display_name: Ronks City
 summary: Behind Ronks City's gated free Robinhood Chain mint (allowlist, 2026-10-13 11:00 CDT) — on Foil's mint board as a gated lead.
-rank: 276
+rank: 278
 updated: 2026-10-13
 ---
 

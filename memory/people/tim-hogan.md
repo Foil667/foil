@@ -4,7 +4,7 @@ first_name: Tim
 last_name: Hogan
 nickname: Uncle Timmy
 summary: Known as Uncle Timmy; his funeral is Saturday, October 10, 2026, 3–7 PM at Damar-Kaminski Funeral Home in Justice — Foil reached out to the user on the day of it.
-rank: 258
+rank: 261
 updated: 2026-10-10
 ---
 

@@ -1,7 +1,7 @@
 ---
 display_name: shiba420.eth
 summary: X account the user had @Foil667 roast on 2026-10-13 with onchain-fact-only material (free-mint-heavy history); no wallet addresses posted; no ongoing tie.
-rank: 307
+rank: 311
 updated: 2026-10-13
 ---
 

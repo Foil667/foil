@@ -1,7 +1,7 @@
 ---
 objective_id: goals_bookkeeping
-run_id: sirun_49e5b0a517534b928c38961f8e12e168
-created_at: 2026-10-22T20:09:43.971643804+00:00
+run_id: sirun_933e1d1b6737468a93bf8eab172e5a28
+created_at: 2026-10-24T02:26:05.277190304+00:00
 card_id: goals_bookkeeping
 worker_outcome: changed
 ---

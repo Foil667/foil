@@ -2,7 +2,7 @@
 display_name: RoundsOnRH
 nickname: @RoundsOnRH
 summary: Builder behind Rounds, whose CCFF00-holder free mint sold out the evening of 2026-09-20 — @Foil667 engagement banned 2026-10-09, read-only intel only.
-rank: 16
+rank: 17
 updated: 2026-10-10
 ---
 

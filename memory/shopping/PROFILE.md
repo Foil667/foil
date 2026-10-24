@@ -1,6 +1,6 @@
 ---
-updated: 2026-10-21
-entries: 16
+updated: 2026-10-23
+entries: 18
 ---
 
 # Shopping Profile
@@ -20,6 +20,8 @@ entries: 16
 ## Checkout and fulfillment preferences
 - No minting at all until the user says otherwise (stand-down, user 2026-10-20).
 - User-designated ops wallet 0x5Be817405a6caD0FF1B38F448d6e7D1f04e60d52 funds mints on Robinhood Chain, not mainnet (user 2026-10-20).
+- Won mints and WL spots must never be missed — stay active and ready for every mint or WL spot already won (user 2026-10-19).
+- Foil's RH ETH balance is reserved for minting only; no other spends without explicit per-action approval (user 2026-10-05).
 - Claimed NFTs stay in Foil's wallet; weekly review with the user (Sundays ~7pm CT); never forward, list, sell, or transfer without explicit per-item instruction (user 2026-10-04).
 - List claimed free mints for sale ~1 hour after minting (user 2026-10-13 standing order).
 - Never sell, list, or transfer any Looper or Helixa Agent #5290.
